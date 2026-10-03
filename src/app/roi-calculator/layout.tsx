@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College ROI Calculator 2026 — Is Your College Worth the Fees? | CollegePune",
+  title: "Pune College ROI Calculator 2026 — Is Your College Worth the Fees? | CampusLelo",
   description: "Calculate the return on investment for any Pune college. Enter fees, expected salary and loan details to see break-even time, net ROI and 10-year earning potential. Compare COEP, SIBM, VIT Pune and more.",
   path: "/roi-calculator",
   keywords: [

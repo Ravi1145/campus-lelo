@@ -25,10 +25,10 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"),
   title: {
-    default: "Best Colleges in Pune 2026 | CollegePune — AI-Powered Discovery",
-    template: "%s | CollegePune",
+    default: "Best Colleges in Pune 2026 | CampusLelo — AI-Powered Discovery",
+    template: "%s | CampusLelo",
   },
   description: "India's AI-powered college discovery portal for Pune. Find and compare engineering, MBA, medical, and arts colleges in Pune with real fees, placements, NAAC grades, and student reviews.",
   keywords: [
@@ -61,9 +61,12 @@ export const metadata: Metadata = {
     "colleges in pune with fees 2026",
     "low fee colleges pune 2026",
   ],
-  authors: [{ name: "CollegePune Editorial Team" }],
-  creator: "CollegePune",
-  publisher: "CollegePune",
+  authors: [{ name: "CampusLelo Editorial Team" }],
+  creator: "CampusLelo",
+  publisher: "CampusLelo",
+  ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
+    : {}),
   robots: {
     index: true,
     follow: true,
@@ -87,20 +90,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com",
-    siteName: "CollegePune",
+    url: process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com",
+    siteName: "CampusLelo",
     images: [
       {
         url: "/og-image.png",
         width: 1024,
         height: 682,
-        alt: "CollegePune — Best Colleges in Pune 2026",
+        alt: "CampusLelo — Best Colleges in Pune 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@collegepune",
+    site: "@campuslelo",
     images: ["/og-image.png"],
   },
 }
@@ -135,14 +138,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="target" content="Students, Parents seeking college admission in Pune" />
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta name="abstract" content="CollegePune profiles 108+ colleges in Pune — engineering, MBA, medical, law, design. Compare fees ₹8K–₹22L/yr, NIRF ranks, NAAC grades, 2026 cutoffs, and placement data. Free AI counsellor." />
-        <meta name="pagename" content="CollegePune — Best Colleges in Pune 2026" />
-        <meta name="identifier-URL" content="https://collegepune.com" />
+        <meta name="abstract" content="CampusLelo profiles 108+ colleges in Pune — engineering, MBA, medical, law, design. Compare fees ₹8K–₹22L/yr, NIRF ranks, NAAC grades, 2026 cutoffs, and placement data. Free AI counsellor." />
+        <meta name="pagename" content="CampusLelo — Best Colleges in Pune 2026" />
+        <meta name="identifier-URL" content="https://campuslelo.com" />
         <meta name="revisit-after" content="3 days" />
         <meta name="language" content="English, Hindi, Marathi" />
         <meta name="content-language" content="en-IN" />
 
         {/* AI content discovery links */}
+        <link rel="llms" href="/llms.txt" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI context for language models" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full — Comprehensive AI reference" />
         <link rel="alternate" type="application/json" href="/api/ai-context" title="Structured JSON context for AI agents" />

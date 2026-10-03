@@ -5,7 +5,7 @@ import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchem
 import { Award, BookOpen, TrendingUp, Users, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Government Colleges in Pune 2026 | Low Fees & NIRF | CollegePune",
+  title: "Best Government Colleges in Pune 2026 | Low Fees & NIRF | CampusLelo",
   description: "Top government colleges in Pune 2026 — COEP (NIRF #49), AFMC (NIRF #4), BJ Medical (NIRF #18). Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
   path: "/government-colleges-pune",
   keywords: [
@@ -100,9 +100,9 @@ const faqs = [
 ]
 
 const breadcrumb = [
-  { name: "Home", url: "https://collegepune.com" },
-  { name: "Colleges", url: "https://collegepune.com/colleges" },
-  { name: "Government Colleges Pune", url: "https://collegepune.com/government-colleges-pune" },
+  { name: "Home", url: process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com" },
+  { name: "Colleges", url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges` },
+  { name: "Government Colleges Pune", url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/government-colleges-pune` },
 ]
 
 export const revalidate = 86400

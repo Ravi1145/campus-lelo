@@ -46,7 +46,7 @@ export default function MbbsCollegesPunePage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 

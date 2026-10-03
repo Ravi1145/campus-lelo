@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityLabel   = city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, " ")
   const streamLabel = STREAM_LABELS[stream] ?? stream
   return genMeta({
-    title: `Best ${streamLabel} Colleges in ${cityLabel} 2026 — Fees, Cutoff & Admissions | CollegePune`,
+    title: `Best ${streamLabel} Colleges in ${cityLabel} 2026 — Fees, Cutoff & Admissions | CampusLelo`,
     description: `Explore top ${streamLabel} colleges in ${cityLabel}, Maharashtra. Compare fees, NAAC grades, placements and get free counseling. Updated 2026.`,
     path: `/city/${city}/${stream}`,
   })

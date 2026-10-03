@@ -46,7 +46,7 @@ export default function CollegesPuneFeesPage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 
@@ -91,7 +91,7 @@ export default function CollegesPuneFeesPage() {
         ]}
         faqs={faqs}
         ctaHeading="Plan Your College Budget with Our Free Fee Calculator"
-        ctaSubtext="Use CollegePune's fee calculator to estimate your 4-year education cost including scholarships, loans, and living expenses for any Pune college."
+        ctaSubtext="Use CampusLelo's fee calculator to estimate your 4-year education cost including scholarships, loans, and living expenses for any Pune college."
       relatedGuides={[
         { label: "NAAC A+ Colleges in Pune", href: "/naac-a-plus-colleges-pune", icon: "⭐" },
         { label: "Low Fee Colleges in Pune", href: "/low-fee-colleges-pune", icon: "💰" },

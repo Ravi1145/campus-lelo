@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
-const SITE_NAME = "CollegePune"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
+const SITE_NAME = "CampusLelo"
 const DEFAULT_OG_IMAGE = `${BASE_URL}/api/og`
 
 export function generateMetadata({
@@ -74,8 +74,8 @@ export function generateMetadata({
       title,
       description,
       images: [ogImage],
-      creator: "@collegepune",
-      site: "@collegepune",
+      creator: "@campuslelo",
+      site: "@campuslelo",
     },
   }
 }
@@ -85,13 +85,13 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
-    name: "CollegePune",
-    alternateName: ["College Pune", "CollegePune.com"],
-    slogan: "India's AI-Powered College Discovery Portal for Pune",
+    name: "CampusLelo",
+    alternateName: ["Campus Lelo", "CampusLelo.com"],
+    slogan: "Pehle Dekho. Samjho. Phir Choose Karo.",
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
-      url: `${BASE_URL}/logo.png`,
+      url: `${BASE_URL}/logo.webp`,
       width: 200,
       height: 60,
     },
@@ -112,7 +112,7 @@ export function generateOrganizationSchema() {
       sameAs: "https://en.wikipedia.org/wiki/Pune",
     },
     telephone: "+917753831118",
-    email: "support@collegepune.com",
+    email: "support@campuslelo.com",
     // knowsAbout — signals topical authority to AI models + knowledge graphs
     knowsAbout: [
       "College admissions in Pune 2026",
@@ -137,16 +137,16 @@ export function generateOrganizationSchema() {
       "DTE Maharashtra CAP admission process",
     ],
     sameAs: [
-      "https://twitter.com/collegepune",
-      "https://www.facebook.com/collegepune",
-      "https://www.instagram.com/collegepune",
-      "https://www.youtube.com/@collegepune",
-      "https://www.linkedin.com/company/collegepune",
+      "https://twitter.com/campuslelo",
+      "https://www.facebook.com/campuslelo",
+      "https://www.instagram.com/campuslelo",
+      "https://www.youtube.com/@campuslelo",
+      "https://www.linkedin.com/company/campuslelo",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+917753831118",
-      email: "support@collegepune.com",
+      email: "support@campuslelo.com",
       contactType: "customer support",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi", "Marathi"],
@@ -164,7 +164,7 @@ export function generateWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
-    name: "CollegePune",
+    name: "CampusLelo",
     url: BASE_URL,
     description: "Find the best colleges in Pune 2026. Compare fees, placements, NAAC grades and 2026 admission details for engineering, MBA, medical, arts, design and more.",
     inLanguage: "en-IN",
@@ -187,7 +187,7 @@ export function generateWebSiteSchema() {
     subjectOf: {
       "@type": "DataFeed",
       url: `${BASE_URL}/api/ai-context`,
-      description: "Structured JSON context about CollegePune for AI models",
+      description: "Structured JSON context about CampusLelo for AI models",
     },
     potentialAction: [
       {
@@ -264,7 +264,7 @@ export function generateCollegeSchema(college: {
     image: college.image
       ? { "@type": "ImageObject", url: college.image, name: college.name, width: 1200, height: 630 }
       : { "@type": "ImageObject", url: `${BASE_URL}/college-default-banner.jpg`, name: college.name },
-    logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.png`, width: 200, height: 60 },
+    logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.webp`, width: 200, height: 60 },
     address: {
       "@type": "PostalAddress",
       streetAddress: college.address,
@@ -475,12 +475,12 @@ export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "CollegePune",
+    name: "CampusLelo",
     description: "AI-powered college discovery portal for Pune. Compare engineering, MBA, medical and law colleges by fees, placements, and NAAC rankings.",
     url: BASE_URL,
     telephone: "+917753831118",
-    email: "support@collegepune.com",
-    image: `${BASE_URL}/logo.png`,
+    email: "support@campuslelo.com",
+    image: `${BASE_URL}/logo.webp`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Undri",
@@ -501,11 +501,30 @@ export function generateLocalBusinessSchema() {
       closes: "18:00",
     },
     priceRange: "Free",
-    areaServed: {
-      "@type": "City",
-      name: "Pune",
-      sameAs: "https://en.wikipedia.org/wiki/Pune",
+    areaServed: [
+      { "@type": "City", name: "Pune", sameAs: "https://en.wikipedia.org/wiki/Pune" },
+      { "@type": "City", name: "Noida", sameAs: "https://en.wikipedia.org/wiki/Noida" },
+      { "@type": "State", name: "Maharashtra", sameAs: "https://en.wikipedia.org/wiki/Maharashtra" },
+      { "@type": "State", name: "Uttar Pradesh", sameAs: "https://en.wikipedia.org/wiki/Uttar_Pradesh" },
+    ],
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: { "@type": "GeoCoordinates", latitude: 18.5204, longitude: 73.8567 },
+      geoRadius: "1500000",
     },
+    knowsAbout: [
+      "Colleges in Pune 2026",
+      "Engineering colleges in Pune",
+      "MBA colleges in Pune",
+      "Medical colleges in Pune",
+      "Colleges in Noida 2026",
+      "AKTU affiliated colleges",
+      "Amity University Noida",
+      "JIIT Noida",
+      "MHT-CET 2026",
+      "NEET 2026 colleges",
+      "CAT MBA admissions",
+    ],
   }
 }
 
@@ -513,6 +532,8 @@ export function generateArticleSchema(article: {
   title: string
   description: string
   author: string
+  authorJobTitle?: string
+  authorAffiliation?: string
   datePublished: string   // ISO 8601
   dateModified?: string
   url: string             // full path e.g. "/blog/my-slug"
@@ -536,12 +557,20 @@ export function generateArticleSchema(article: {
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
     headline: article.title.slice(0, 110),
     description: article.description,
-    author: { "@type": "Person", name: article.author, url: `${BASE_URL}/blog` },
+    author: {
+      "@type": "Person",
+      name: article.author,
+      url: `${BASE_URL}/blog`,
+      ...(article.authorJobTitle ? { jobTitle: article.authorJobTitle } : {}),
+      ...(article.authorAffiliation ? {
+        affiliation: { "@type": "Organization", name: article.authorAffiliation },
+      } : {}),
+    },
     publisher: {
       "@type": "Organization",
-      name: "CollegePune",
+      name: "CampusLelo",
       url: BASE_URL,
-      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.png`, width: 200, height: 60 },
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.webp`, width: 200, height: 60 },
     },
     datePublished: isoPublished,
     dateModified: isoModified,
@@ -559,8 +588,8 @@ export function generateArticleSchema(article: {
     isPartOf: {
       "@type": "Blog",
       "@id": `${BASE_URL}/blog`,
-      name: "CollegePune Blog",
-      publisher: { "@type": "Organization", name: "CollegePune", url: BASE_URL },
+      name: "CampusLelo Blog",
+      publisher: { "@type": "Organization", name: "CampusLelo", url: BASE_URL },
     },
   }
 }

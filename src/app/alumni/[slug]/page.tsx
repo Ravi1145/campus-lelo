@@ -124,7 +124,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { name, course, college } = alumni
   return genMeta({
-    title: `${name} — ${course} at ${college} | CollegePune Alumni`,
+    title: `${name} — ${course} at ${college} | CampusLelo Alumni`,
     description: `${name} graduated from ${college} with ${course} (${alumni.year}). Now at ${alumni.company}. Read highlights and connect with verified Pune alumni.`,
     path: `/alumni/${slug}`,
     keywords: [
@@ -263,7 +263,7 @@ export default async function AlumniProfilePage({ params }: Props) {
             {/* Verified badge */}
             <div className="flex items-center gap-2 text-sm text-green-700 font-semibold">
               <CheckCircle className="w-4 h-4" />
-              Verified CollegePune Alumni
+              Verified CampusLelo Alumni
             </div>
           </div>
 

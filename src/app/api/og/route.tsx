@@ -52,8 +52,8 @@ export async function GET(req: NextRequest) {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}>C</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: "0px", fontSize: "22px", fontWeight: 800, letterSpacing: "-0.5px" }}>
-                <span style={{ color: "white" }}>College</span>
-                <span style={{ color: "#ff5a14" }}>Pune</span>
+                <span style={{ color: "white" }}>Campus</span>
+                <span style={{ color: "#ff5a14" }}>Lelo</span>
               </div>
             </div>
             {category && (
@@ -103,7 +103,7 @@ export async function GET(req: NextRequest) {
               borderRadius: "8px",
               padding: "8px 16px",
               fontSize: "14px", color: "#94a3b8",
-            }}>collegepune.com</div>
+            }}>campuslelo.com</div>
           </div>
         </div>
       </div>

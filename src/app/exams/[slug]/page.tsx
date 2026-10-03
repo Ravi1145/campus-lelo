@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exam = exams.find(e => e.name.toLowerCase().replace(/\s+/g, "-") === slug)
   if (!exam) return {}
   return genMeta({
-    title: `${exam.name} 2026 — Dates, Eligibility & Colleges | CollegePune`,
+    title: `${exam.name} 2026 — Dates, Eligibility & Colleges | CampusLelo`,
     description: `${exam.fullName} (${exam.name}) 2026: Application date ${exam.applicationDate}, Exam date ${exam.examDate}. Eligibility, syllabus overview, and top Maharashtra colleges accepting ${exam.name}.`,
     path: `/exams/${slug}`,
   })

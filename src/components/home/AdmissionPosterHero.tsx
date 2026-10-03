@@ -163,7 +163,7 @@ export default function AdmissionPosterHero() {
           <Link href="/counselling" className="bg-[#0A1628] hover:bg-[#0f2340] text-white rounded-2xl p-6 text-center font-black text-xl transition-colors">
             📞 TALK TO OUR ADMISSION EXPERTS<br />
             <span className="text-orange-500 text-2xl font-black">7318538887</span>
-            <div className="text-sm font-bold mt-2">www.collegepune.com</div>
+            <div className="text-sm font-bold mt-2">www.campuslelo.com</div>
           </Link>
         </div>
 

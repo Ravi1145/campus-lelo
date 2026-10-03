@@ -7,7 +7,7 @@ import { getAllCutoffParams } from "@/data/cutoffs"
 import { seoPages as seoPageData } from "@/data/seoPages"
 import { createClient } from "@supabase/supabase-js"
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages â€" lastModified reflects when content was meaningfully last changed
@@ -111,6 +111,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/pune-college-placement-comparator`,         lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.75 },
     // New content pages
     { url: `${BASE_URL}/scholarships`,                              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/events`,                                    lastModified: new Date(), changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${BASE_URL}/placements`,                                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
+    { url: `${BASE_URL}/admission-guide`,                           lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
     { url: `${BASE_URL}/news`,                                      lastModified: new Date(), changeFrequency: "daily",   priority: 0.85 },
     { url: `${BASE_URL}/qa`,                                        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/ask`,                                       lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.7 },
@@ -225,6 +228,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/colleges-baner-pune`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/colleges-kharadi-pune`,                    lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/colleges-nigdi-pune`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
+    // ── Noida / UP pages ──────────────────────────────────────────────────────
+    { url: `${BASE_URL}/colleges-in-noida`,                        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE_URL}/engineering-colleges-noida`,               lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE_URL}/mba-colleges-noida`,                       lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
+    { url: `${BASE_URL}/bca-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/bba-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/law-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/design-colleges-noida`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/medical-colleges-greater-noida`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/government-colleges-noida`,                lastModified: new Date(), changeFrequency: "monthly", priority: 0.88 },
+    { url: `${BASE_URL}/aktu-colleges-noida`,                      lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
+    { url: `${BASE_URL}/colleges-noida-with-hostel`,               lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/pune-vs-noida-colleges`,                   lastModified: new Date(), changeFrequency: "monthly", priority: 0.88 },
   ]
 
   // Cutoff pages â€" one per [exam, college] pair

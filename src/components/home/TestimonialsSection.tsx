@@ -21,7 +21,7 @@ const staticTestimonials: Testimonial[] = [
     course: "B.Tech Computer Engineering",
     year: "2024",
     rating: 5,
-    text: "CollegePune helped me find COEP's exact MHT-CET cutoff category-wise. The counsellor called within 2 hours and explained the entire CAP process. Got into COEP CSE with 99.2 percentile!",
+    text: "CampusLelo helped me find COEP's exact MHT-CET cutoff category-wise. The counsellor called within 2 hours and explained the entire CAP process. Got into COEP CSE with 99.2 percentile!",
     initials: "RD",
     color: "bg-blue-600",
   },
@@ -32,7 +32,7 @@ const staticTestimonials: Testimonial[] = [
     course: "MBA Marketing",
     year: "2024",
     rating: 5,
-    text: "I was confused between SIBM and SCMHRD. The comparison tool on CollegePune showed me fees, placement, SNAP cutoffs side-by-side. Enrolled in SIBM — best decision ever. Placed at ₹26 LPA.",
+    text: "I was confused between SIBM and SCMHRD. The comparison tool on CampusLelo showed me fees, placement, SNAP cutoffs side-by-side. Enrolled in SIBM — best decision ever. Placed at ₹26 LPA.",
     initials: "PK",
     color: "bg-orange-500",
   },
@@ -54,7 +54,7 @@ const staticTestimonials: Testimonial[] = [
     course: "MBBS",
     year: "2023",
     rating: 5,
-    text: "AFMC cutoffs are hard to find anywhere. CollegePune had NEET category-wise cutoffs going back to 2020. The team also helped me prepare my AFMC entrance test application. Forever grateful!",
+    text: "AFMC cutoffs are hard to find anywhere. CampusLelo had NEET category-wise cutoffs going back to 2020. The team also helped me prepare my AFMC entrance test application. Forever grateful!",
     initials: "SP",
     color: "bg-red-600",
   },
@@ -65,7 +65,7 @@ const staticTestimonials: Testimonial[] = [
     course: "B.Tech Mechanical",
     year: "2024",
     rating: 4,
-    text: "Was worried about hostel availability. CollegePune showed VIT Pune hostel fees, capacity, and application process clearly. The WhatsApp alert for admission deadline saved me from missing the cutoff date.",
+    text: "Was worried about hostel availability. CampusLelo showed VIT Pune hostel fees, capacity, and application process clearly. The WhatsApp alert for admission deadline saved me from missing the cutoff date.",
     initials: "KM",
     color: "bg-purple-600",
   },
@@ -76,7 +76,7 @@ const staticTestimonials: Testimonial[] = [
     course: "MBA Finance",
     year: "2025",
     rating: 5,
-    text: "Got a scholarship of ₹2L through the MahaDBT guide on CollegePune. The step-by-step application walkthrough was incredibly helpful. The team is super responsive on WhatsApp too!",
+    text: "Got a scholarship of ₹2L through the MahaDBT guide on CampusLelo. The step-by-step application walkthrough was incredibly helpful. The team is super responsive on WhatsApp too!",
     initials: "AJ",
     color: "bg-teal-600",
   },
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
               Real Students. Real Results.
             </h2>
             <p className="text-gray-500 mt-2 text-sm max-w-lg">
-              Join 50,000+ students who found their college with CollegePune — free, fast, and personalised.
+              Join 50,000+ students who found their college with CampusLelo — free, fast, and personalised.
             </p>
           </div>
           {/* Aggregate rating */}

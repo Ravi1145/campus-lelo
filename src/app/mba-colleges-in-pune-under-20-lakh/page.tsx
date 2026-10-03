@@ -5,7 +5,7 @@ import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
 
 export const metadata: Metadata = genMeta({
-  title: "Mba Colleges In Pune Under 20 Lakh | CollegePune 2026",
+  title: "Mba Colleges In Pune Under 20 Lakh | CampusLelo 2026",
   description: "Complete guide to Mba Colleges In Pune Under 20 Lakh in Pune 2026. Fees, cutoffs, placements and admission process for Pune MBA colleges.",
   path: "/mba-colleges-in-pune-under-20-lakh",
   keywords: ["mba colleges in pune under 20 lakh", "mba colleges pune 2026", "mba admission pune"],

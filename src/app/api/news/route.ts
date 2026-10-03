@@ -21,7 +21,7 @@ function blogsAsNews(limit: number): NewsItem[] {
     id:           b.slug,
     title:        b.title,
     url:          `/blog/${b.slug}`,
-    source:       "CollegePune Blog",
+    source:       "CampusLelo Blog",
     category:     b.category ?? "general",
     published_at: b.publishedAt ?? new Date().toISOString(),
     summary:      b.excerpt ?? null,

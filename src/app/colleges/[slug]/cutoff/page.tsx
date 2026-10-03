@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Cutoff 2025 | MHT-CET & JEE Cutoff | CollegePune`,
+    title: `${col.name} Cutoff 2025 | MHT-CET & JEE Cutoff | CampusLelo`,
     description: `${col.name} cutoff 2025 for MHT-CET and JEE Main. Branch-wise opening and closing percentile/rank for ${col.courses.join(", ")} admission 2025-26.`,
     path: `/colleges/${slug}/cutoff`,
     keywords: [`${col.shortName} cutoff`, `${col.name} cutoff 2025`, `${col.shortName} mht cet cutoff`, `${col.shortName} jee cutoff`, `${col.shortName} opening closing percentile`],

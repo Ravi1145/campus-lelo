@@ -91,12 +91,14 @@ export default function SearchModal() {
     return (
       <button
         onClick={openModal}
-        className="hidden sm:flex items-center gap-2 px-3 py-1.5 text-sm text-gray-500 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 hover:border-gray-300 transition-colors"
+        className="hidden sm:flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-400 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all"
         aria-label="Search colleges (Ctrl+K)"
       >
-        <Search className="w-3.5 h-3.5" />
-        <span>Search colleges…</span>
-        <kbd className="ml-1 px-1.5 py-0.5 text-[10px] font-mono bg-white border border-gray-200 rounded text-gray-400">⌘K</kbd>
+        <Search className="w-4 h-4 shrink-0 text-gray-400" />
+        <span className="flex-1 text-left text-gray-400">Search colleges, guides...</span>
+        <kbd className="shrink-0 flex items-center gap-1 px-2 py-1 text-[10px] font-mono bg-gray-50 border border-gray-200 rounded text-gray-400">
+          ⌘K
+        </kbd>
       </button>
     )
   }

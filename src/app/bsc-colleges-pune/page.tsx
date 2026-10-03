@@ -4,7 +4,7 @@ import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchem
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
 
 export const metadata: Metadata = genMeta({
-  title: "BSc Colleges in Pune 2025-26 | Fees, Courses & Admission | CollegePune",
+  title: "BSc Colleges in Pune 2025-26 | Fees, Courses & Admission | CampusLelo",
   description: "Best BSc colleges in Pune 2025-26. BSc Physics, Chemistry, CS, IT, Biotech, Data Science. Compare fees (₹12K–2L/yr), NAAC grades, placements and admission process.",
   path: "/bsc-colleges-pune",
   keywords: ["bsc colleges in pune", "bsc colleges pune 2025", "bsc admission pune", "bsc computer science pune", "bsc biotechnology pune", "best bsc college pune"],

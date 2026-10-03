@@ -4,7 +4,7 @@ import { Home, Search, GraduationCap, BookOpen, PhoneCall } from "lucide-react"
 import GoBackButton from "@/components/ui/GoBackButton"
 
 export const metadata: Metadata = {
-  title: "Page Not Found — CollegePune",
+  title: { absolute: "Page Not Found | CampusLelo" },
   description: "Sorry, the page you are looking for doesn't exist. Find the best colleges in Pune — engineering, MBA, medical, and more.",
   robots: { index: false, follow: true },
 }
@@ -96,7 +96,7 @@ export default function NotFound() {
       {/* Quick links */}
       <div className="max-w-4xl mx-auto px-4 py-12 w-full">
         <h2 className="text-lg font-bold text-gray-900 mb-5 text-center">
-          Popular Pages on CollegePune
+          Popular Pages on CampusLelo
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
           {QUICK_LINKS.map(({ icon, label, href }) => (
@@ -155,7 +155,7 @@ export default function NotFound() {
           <p className="text-xs text-blue-600 flex items-start gap-2">
             <BookOpen className="w-4 h-4 mt-0.5 shrink-0" />
             <span>
-              <strong>Looking for colleges in Pune?</strong> CollegePune covers 100+ engineering, MBA, medical, arts, and design colleges in Pune with 2026 fees, placements, NAAC grades, and admission details. Visit our{" "}
+              <strong>Looking for colleges in Pune?</strong> CampusLelo covers 100+ engineering, MBA, medical, arts, and design colleges in Pune with 2026 fees, placements, NAAC grades, and admission details. Visit our{" "}
               <Link href="/colleges" className="underline font-semibold">colleges directory</Link> or use the{" "}
               <Link href="/ai-finder" className="underline font-semibold">AI finder</Link> to get matched instantly.
             </span>

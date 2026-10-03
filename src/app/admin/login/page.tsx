@@ -1,7 +1,7 @@
 import { loginAction } from './actions'
 
 export const metadata = {
-  title: 'Admin Login — CollegePune',
+  title: 'Admin Login — CampusLelo',
   robots: 'noindex,nofollow',
 }
 
@@ -16,7 +16,7 @@ export default async function AdminLoginPage({
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="text-white font-extrabold text-2xl">CollegePune</div>
+          <div className="text-white font-extrabold text-2xl">CampusLelo</div>
           <div className="text-blue-400 text-sm mt-1">Admin Panel</div>
         </div>
 
@@ -40,7 +40,7 @@ export default async function AdminLoginPage({
                 required
                 autoComplete="email"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="admin@collegepune.com"
+                placeholder="admin@campuslelo.com"
               />
             </div>
 
@@ -68,7 +68,7 @@ export default async function AdminLoginPage({
         </div>
 
         <p className="text-center text-gray-500 text-xs mt-6">
-          CollegePune Admin · Restricted Access
+          CampusLelo Admin · Restricted Access
         </p>
       </div>
     </div>

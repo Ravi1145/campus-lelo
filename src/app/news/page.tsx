@@ -102,7 +102,7 @@ const latestNews = [
     excerpt: "SNAP 2025–26 applications crossed 1.5 lakh — a 20% increase over previous year. SIBM Pune and SCMHRD remain top choices among test-takers.",
     date: "2025-12-28",
     category: "MBA",
-    source: "CollegePune Research",
+    source: "CampusLelo Research",
     link: "/mba-colleges-pune",
     urgent: false,
   },

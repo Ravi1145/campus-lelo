@@ -131,7 +131,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getSEOPageBySlug(slug)
   if (!page) return {}
   // Canonical points to the standalone page (not /colleges-in-pune/) to prevent duplicate content
-  const canonical = `https://collegepune.com/${slug}`
+  const canonical = `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/${slug}`
   return {
     title: page.title,
     description: page.description,

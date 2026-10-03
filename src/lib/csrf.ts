@@ -13,7 +13,7 @@ export function isAllowedOrigin(req: NextRequest): boolean {
   // No Origin header — direct server-to-server call (cURL, Postman, server action).
   if (!origin) return true
 
-  const base = (process.env.NEXT_PUBLIC_BASE_URL ?? "https://collegepune.com").replace(/\/$/, "")
+  const base = (process.env.NEXT_PUBLIC_BASE_URL ?? "https://campuslelo.com").replace(/\/$/, "")
 
   // Derive www / non-www sibling automatically
   let sibling = ""

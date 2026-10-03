@@ -2,9 +2,9 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — CollegePune",
-  description: "CollegePune Privacy Policy — how we collect, use, and protect your personal information on collegepune.com.",
-  alternates: { canonical: "https://collegepune.com/privacy" },
+  title: "Privacy Policy — CampusLelo",
+  description: "CampusLelo Privacy Policy — how we collect, use, and protect your personal information on campuslelo.com.",
+  alternates: { canonical: "https://campuslelo.com/privacy" },
   robots: { index: true, follow: true },
 }
 
@@ -52,13 +52,13 @@ export default function PrivacyPage() {
         "**Correction**: You may request correction of inaccurate data.",
         "**Deletion**: You may request deletion of your personal data subject to legal retention requirements.",
         "**Opt-out**: You may unsubscribe from marketing communications at any time by contacting us.",
-        "To exercise any of these rights, email us at: support@collegepune.com",
+        "To exercise any of these rights, email us at: support@campuslelo.com",
       ],
     },
     {
       title: "6. Cookies",
       content: [
-        "CollegePune uses cookies to remember your preferences, understand how you use the site, and deliver a personalised experience.",
+        "CampusLelo uses cookies to remember your preferences, understand how you use the site, and deliver a personalised experience.",
         "Essential cookies (required for site functionality) cannot be disabled.",
         "Analytics cookies (Google Analytics / similar) can be declined via our cookie banner.",
         "You may also disable cookies in your browser settings, though some features may not work correctly.",
@@ -67,22 +67,22 @@ export default function PrivacyPage() {
     {
       title: "7. Third-Party Services",
       content: [
-        "CollegePune uses the following third-party services which have their own privacy policies: Google Analytics (usage tracking), Anthropic Claude AI (college recommendations), Vercel (hosting).",
+        "CampusLelo uses the following third-party services which have their own privacy policies: Google Analytics (usage tracking), Anthropic Claude AI (college recommendations), Vercel (hosting).",
         "External links to college websites are provided for your convenience. We are not responsible for the privacy practices of those websites.",
       ],
     },
     {
       title: "8. Children's Privacy",
       content: [
-        "CollegePune is intended for students aged 17 and above. We do not knowingly collect personal data from children under 13.",
-        "If you believe a child has submitted personal data on our site, please contact us immediately at support@collegepune.com.",
+        "CampusLelo is intended for students aged 17 and above. We do not knowingly collect personal data from children under 13.",
+        "If you believe a child has submitted personal data on our site, please contact us immediately at support@campuslelo.com.",
       ],
     },
     {
       title: "9. Changes to This Policy",
       content: [
         "We may update this Privacy Policy from time to time. Significant changes will be communicated via a notice on our homepage.",
-        "Your continued use of CollegePune after the effective date of any changes constitutes acceptance of the updated policy.",
+        "Your continued use of CampusLelo after the effective date of any changes constitutes acceptance of the updated policy.",
         "This policy was last updated: May 2026.",
       ],
     },
@@ -90,22 +90,22 @@ export default function PrivacyPage() {
       title: "10. Grievance Officer (IT Rules 2011)",
       content: [
         "In accordance with the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021, the following Grievance Officer has been appointed:",
-        "**Name**: Grievance Officer, CollegePune | **Email**: grievance@collegepune.com | **Address**: Undri, Pune, Maharashtra 411060",
+        "**Name**: Grievance Officer, CampusLelo | **Email**: grievance@campuslelo.com | **Address**: Undri, Pune, Maharashtra 411060",
         "Complaints or concerns regarding the processing of your personal data will be acknowledged within 48 hours and resolved within 30 days of receipt.",
       ],
     },
     {
       title: "11. Consent and Your Rights under DPDP Act 2023",
       content: [
-        "By submitting any enquiry or lead form on CollegePune, you provide free, specific, informed, and unambiguous consent for us to process your personal data as described in this policy.",
+        "By submitting any enquiry or lead form on CampusLelo, you provide free, specific, informed, and unambiguous consent for us to process your personal data as described in this policy.",
         "Under the Digital Personal Data Protection Act 2023, you have the right to: (a) access information about your data; (b) correct inaccurate data; (c) erase your data ('right to be forgotten'); (d) nominate a representative for your data rights; (e) grievance redressal.",
-        "To exercise any of these rights, email: grievance@collegepune.com. We will respond within 30 days.",
+        "To exercise any of these rights, email: grievance@campuslelo.com. We will respond within 30 days.",
       ],
     },
     {
       title: "12. Contact Us",
       content: [
-        "For any privacy-related questions, concerns, or requests: Email: support@collegepune.com | Phone: +91 77538 31118 | Address: Undri, Pune, Maharashtra 411060.",
+        "For any privacy-related questions, concerns, or requests: Email: support@campuslelo.com | Phone: +91 77538 31118 | Address: Undri, Pune, Maharashtra 411060.",
       ],
     },
   ]
@@ -125,8 +125,8 @@ export default function PrivacyPage() {
             Effective date: May 2026 · Last updated: May 2026
           </p>
           <p className="text-blue-200 text-sm mt-2">
-            CollegePune (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.
-            This policy explains how we collect, use, and protect your personal information when you use collegepune.com.
+            CampusLelo (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.
+            This policy explains how we collect, use, and protect your personal information when you use campuslelo.com.
           </p>
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function PrivacyPage() {
           <p className="text-white font-bold mb-1">Questions about your data?</p>
           <p className="text-blue-200 text-sm mb-3">We&apos;re here to help with any privacy concerns.</p>
           <a
-            href="mailto:support@collegepune.com"
+            href="mailto:support@campuslelo.com"
             className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors"
           >
             Contact Us

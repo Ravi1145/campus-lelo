@@ -16,7 +16,7 @@ export async function GET() {
       },
     })
   } catch {
-    return new NextResponse("# CollegePune LLMs.txt\nSee https://collegepune.com/llms.txt", {
+    return new NextResponse(`# CampusLelo LLMs.txt\nSee ${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/llms.txt`, {
       headers: { "Content-Type": "text/plain" },
     })
   }

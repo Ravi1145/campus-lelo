@@ -20,18 +20,18 @@ export async function sendLeadEmail(data: Record<string, unknown>): Promise<void
     .join('')
 
   await transporter.sendMail({
-    from:    `"CollegePune Leads" <${process.env.SMTP_USER}>`,
+    from:    `"CampusLelo Leads" <${process.env.SMTP_USER}>`,
     to,
     subject: `🎓 New Lead — ${data.name ?? 'Unknown'} (${data.source ?? 'site'})`,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:600px">
         <h2 style="background:#0A1628;color:#fff;padding:16px;margin:0;border-radius:8px 8px 0 0">
-          New Lead from CollegePune
+          New Lead from CampusLelo
         </h2>
         <table style="width:100%;border-collapse:collapse;border:1px solid #e5e7eb;border-top:none">
           ${rows}
         </table>
-        <p style="color:#999;font-size:12px;margin-top:12px">Sent from collegepune.com</p>
+        <p style="color:#999;font-size:12px;margin-top:12px">Sent from campuslelo.com</p>
       </div>
     `,
   })

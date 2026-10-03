@@ -74,25 +74,25 @@ export default function FeaturedColleges() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="flex items-end justify-between mb-4">
+        <div className="flex items-end justify-between mb-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Featured Colleges in Pune</h2>
-            <p className="text-gray-500 mt-2 flex items-center gap-1.5">
-              {!loading && featuredSet.size > 0 && (
-                <>
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <span className="text-amber-600 font-medium">{featuredSet.size} featured</span>
-                  <span className="text-gray-300">·</span>
-                </>
-              )}
+            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#F97316" }}>
+              <span>—</span> Top Colleges
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0F172A" }}>
+              Featured Colleges in{" "}
+              <span style={{ color: "#F97316" }}>Pune</span>
+            </h2>
+            <p className="mt-1.5 text-sm" style={{ color: "#475569" }}>
               NIRF ranked and top-rated colleges across all streams
             </p>
           </div>
           <Link
             href="/colleges"
-            className="hidden sm:flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+            className="hidden sm:flex items-center gap-1.5 font-semibold text-sm transition-opacity hover:opacity-80"
+            style={{ color: "#F97316" }}
           >
-            View All <ArrowRight className="w-4 h-4" />
+            View All Colleges <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
@@ -129,7 +129,8 @@ export default function FeaturedColleges() {
         <div className="text-center mt-8 sm:hidden">
           <Link
             href="/colleges"
-            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl transition-opacity hover:opacity-90"
+            style={{ background: "#F97316" }}
           >
             View All Colleges <ArrowRight className="w-4 h-4" />
           </Link>

@@ -7,7 +7,7 @@ import { getCutoff } from "@/data/cutoffs"
 import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
 
 export const metadata: Metadata = genMeta({
-  title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CollegePune",
+  title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CampusLelo",
   description: "Best 10 MBA colleges in Pune 2026 — SIBM (NIRF #13, ₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7–28 LPA. Compare & check eligibility free.",
   path: "/mba-colleges-pune",
   keywords: [
@@ -57,7 +57,7 @@ const breadcrumbs = [
   { name: "MBA Colleges in Pune", url: "/mba-colleges-pune" },
 ]
 
-const BASE_URL = "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const PAGE_URL = `${BASE_URL}/mba-colleges-pune`
 const TODAY = new Date().toISOString().split("T")[0]
 

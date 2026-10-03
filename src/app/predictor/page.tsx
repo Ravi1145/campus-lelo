@@ -234,7 +234,7 @@ export default function PredictorPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-4">About the Pune College Predictor 2026</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-4">
-            The CollegePune College Predictor helps students identify which Pune colleges they are eligible for based on their entrance exam performance. Enter your <strong>MHT-CET percentile</strong>, <strong>JEE Main score</strong>, <strong>NEET score</strong>, <strong>CAT percentile</strong>, or <strong>SNAP score</strong> and instantly see admission probabilities for 100+ Pune colleges including COEP, PICT, VIT Pune, SIBM Pune, AFMC, and BJ Medical College.
+            The CampusLelo College Predictor helps students identify which Pune colleges they are eligible for based on their entrance exam performance. Enter your <strong>MHT-CET percentile</strong>, <strong>JEE Main score</strong>, <strong>NEET score</strong>, <strong>CAT percentile</strong>, or <strong>SNAP score</strong> and instantly see admission probabilities for 100+ Pune colleges including COEP, PICT, VIT Pune, SIBM Pune, AFMC, and BJ Medical College.
           </p>
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
             {[

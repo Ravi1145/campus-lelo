@@ -36,7 +36,7 @@ export default function Sidebar({ role, userEmail }: SidebarProps) {
   return (
     <aside className="w-64 min-h-screen bg-[#0A1628] flex flex-col shrink-0">
       <div className="px-6 py-5 border-b border-white/10">
-        <div className="text-white font-extrabold text-lg">CollegePune</div>
+        <div className="text-white font-extrabold text-lg">CampusLelo</div>
         <div className="text-blue-300 text-xs mt-0.5">Admin Panel</div>
       </div>
 

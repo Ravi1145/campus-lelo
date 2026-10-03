@@ -9,14 +9,14 @@ import { Clock, ArrowRight, BookOpen, TrendingUp, Search } from "lucide-react"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Blog 2026 | Admission Guides & Tips | CollegePune",
+  title: "Pune College Blog 2026 | Admission Guides & Tips | CampusLelo",
   description:
-    "Expert articles on Pune college admissions 2026 — MHT-CET prep, MBA fees, NEET cutoffs, SNAP strategy & career planning. Latest guides from CollegePune experts.",
+    "Expert articles on Pune college admissions 2026 — MHT-CET prep, MBA fees, NEET cutoffs, SNAP strategy & career planning. Latest guides from CampusLelo experts.",
   path: "/blog",
   keywords: ["pune college guides", "mht-cet preparation", "mba admission pune", "best colleges pune blog"],
 })
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 interface Post {
   id: number | string
@@ -116,16 +116,16 @@ export default async function BlogPage({
   const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "CollegePune Blog",
+    name: "CampusLelo Blog",
     description: "Expert guides on Pune college admissions, MHT-CET, MBA, NEET and career planning.",
     url: `${BASE_URL}/blog`,
-    publisher: { "@type": "Organization", name: "CollegePune", url: BASE_URL },
+    publisher: { "@type": "Organization", name: "CampusLelo", url: BASE_URL },
     blogPost: allPosts.slice(0, 10).map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       description: post.excerpt,
       url: `${BASE_URL}/blog/${post.slug}`,
-      author: { "@type": "Person", name: post.author ?? "CollegePune" },
+      author: { "@type": "Person", name: post.author ?? "CampusLelo" },
       datePublished: post.published_at ?? post.date ?? new Date().toISOString(),
       articleSection: post.category,
     })),
@@ -243,7 +243,7 @@ export default async function BlogPage({
                         {(featured.author ?? "C")[0]}
                       </div>
                       <div>
-                        <p className="text-white text-sm font-medium">{featured.author ?? "CollegePune"}</p>
+                        <p className="text-white text-sm font-medium">{featured.author ?? "CampusLelo"}</p>
                         <p className="text-white/60 text-xs">{formatDate(featured)}</p>
                       </div>
                     </div>
@@ -324,7 +324,7 @@ export default async function BlogPage({
                                 {(post.author ?? "C")[0]}
                               </span>
                             </div>
-                            <span className="text-xs text-gray-600 font-medium">{post.author ?? "CollegePune"}</span>
+                            <span className="text-xs text-gray-600 font-medium">{post.author ?? "CampusLelo"}</span>
                           </div>
                           <ArrowRight className="w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform" />
                         </div>

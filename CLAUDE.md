@@ -1,12 +1,12 @@
-# CollegePune — Claude Project Instructions
+# CampusLelo — Claude Project Instructions
 
 ## Project Overview
 
-**CollegePune** is an AI-powered Pune college discovery portal.
+**CampusLelo** is an AI-powered Pune college discovery portal (rebranded from CollegePune).
 
 - **Stack:** Next.js 16 (App Router), Tailwind CSS v4, Claude AI (no separate backend)
 - **Location:** `D:\collegepune\college-pune`
-- **Live URL:** https://collegepune.com
+- **Live URL:** https://campuslelo.com (previously https://collegepune.com)
 - **Data:** Static files in `src/data/` — no Express backend required
 
 ## Superpowers Skills Active
@@ -72,7 +72,7 @@ npx tsc --noEmit          # Type check only
 
 ## Environment Variables
 ```
-NEXT_PUBLIC_BASE_URL=https://collegepune.com
+NEXT_PUBLIC_BASE_URL=https://campuslelo.com
 ANTHROPIC_API_KEY=...
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587

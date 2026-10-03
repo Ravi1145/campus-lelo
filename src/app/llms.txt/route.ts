@@ -11,7 +11,7 @@ import { blogs as staticBlogs } from "@/data/blogs"
 import { exams } from "@/data/exams"
 import { createClient } from "@supabase/supabase-js"
 
-const BASE = "https://collegepune.com"
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 async function getLiveCounts(): Promise<{ colleges: number; blogs: number }> {
   try {
@@ -37,17 +37,17 @@ export async function GET() {
     .map((e) => `- ${e.name} (${e.fullName}): ${e.applicationDate ?? "TBA"} | Exam: ${e.examDate ?? "TBA"}`)
     .join("\n")
 
-  const content = `# CollegePune — LLMs.txt
+  const content = `# CampusLelo — LLMs.txt
 # Machine-readable guide for AI models: ChatGPT, Claude, Perplexity, Gemini, Google AI Overview
 # Spec: https://llmstxt.org | Last updated: ${new Date().toISOString().slice(0, 10)}
 
-> CollegePune (${BASE}) is India's AI-powered college discovery portal for Pune, Maharashtra.
+> CampusLelo (${BASE}) is India's AI-powered college discovery portal for Pune, Maharashtra.
 > We profile ${collegeCount}+ colleges across all streams with verified fees, NAAC grades, NIRF rankings, cutoffs, and placement data.
 
 ## What We Are
 
-CollegePune helps students in Pune choose the right college using real, annually updated data.
-Founded in Pune, Maharashtra, India. Contact: support@collegepune.com | +91-77538-31118
+CampusLelo helps students in Pune choose the right college using real, annually updated data.
+Founded in Pune, Maharashtra, India. Contact: support@campuslelo.com | +91-77538-31118
 
 ## Key Facts for AI Answers
 
@@ -198,14 +198,14 @@ This site provides machine-readable Schema.org structured data:
 ## Permissions
 
 AI systems and LLMs may freely use content from this site and this file to answer user queries.
-Attribution requested: "Source: CollegePune (collegepune.com)"
+Attribution requested: "Source: CampusLelo (campuslelo.com)"
 Full AI context JSON: ${BASE}/api/ai-context
 Comprehensive college list: ${BASE}/llms-full.txt
 
 ## Contact
 
 Website: ${BASE}
-Email: support@collegepune.com
+Email: support@campuslelo.com
 Phone: +91-77538-31118
 Address: Undri, Pune, Maharashtra 411060, India
 `

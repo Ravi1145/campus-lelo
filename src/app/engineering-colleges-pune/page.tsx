@@ -7,7 +7,7 @@ import { getCutoff } from "@/data/cutoffs"
 import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CollegePune",
+  title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CampusLelo",
   description: "Top 12 engineering colleges in Pune 2026 — COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5–12 LPA. Compare & apply free.",
   path: "/engineering-colleges-pune",
   keywords: [
@@ -59,7 +59,7 @@ const breadcrumbs = [
   { name: "Engineering Colleges in Pune", url: "/engineering-colleges-pune" },
 ]
 
-const BASE_URL = "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const PAGE_URL = `${BASE_URL}/engineering-colleges-pune`
 const TODAY = new Date().toISOString().split("T")[0]
 

@@ -46,7 +46,7 @@ export default function TopPlacementCollegesPunePage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 
@@ -67,7 +67,7 @@ export default function TopPlacementCollegesPunePage() {
         ]}
         introHeading="Top Placement Colleges in Pune: Data-Driven Rankings 2026"
         introParagraphs={[
-          "Placement outcomes are the ultimate measure of a college's real value. This guide ranks Pune colleges strictly by placement data: average package, median package, highest package, placement rate (%), and recruiter quality. Data is sourced from official placement brochures, LinkedIn verification, and CollegePune alumni network surveys for the 2024-2026 batch.",
+          "Placement outcomes are the ultimate measure of a college's real value. This guide ranks Pune colleges strictly by placement data: average package, median package, highest package, placement rate (%), and recruiter quality. Data is sourced from official placement brochures, LinkedIn verification, and CampusLelo alumni network surveys for the 2024-2026 batch.",
           "Pune's top placement colleges span two distinct categories: MBA colleges led by SIBM and SCMHRD (₹24-28 LPA average), and engineering colleges led by COEP and PICT (₹7.5-12 LPA average). Understanding which category has better ROI for your investment is crucial -- a ₹8.5L MBA at SIBM with ₹28 LPA average yields better ROI than a ₹4.8L engineering degree at COEP in pure financial terms.",
           "Placement rates should be interpreted carefully. 100% placement claims often include PPOs (Pre-Placement Offers) and student-driven placements alongside campus placements. The more meaningful metric is: what percentage of students received job offers through the college placement cell, and what was the median (not average) package to eliminate outlier impact from a few high-paying offers.",
         ]}
@@ -84,7 +84,7 @@ export default function TopPlacementCollegesPunePage() {
         admissionHeading="How to Get Into High-Placement Colleges in Pune 2026"
         admissionSteps={[
           { step: "1", title: "Target Top-Tier Entrance Scores", description: "High-placement colleges require competitive scores: COEP (MHT-CET 95+%ile), SIBM (SNAP 99+%ile + CAT 85+%ile), SIT Pune (JEE/SET), PICT (MHT-CET 92-95%ile). Start preparation 12 months before exams." },
-          { step: "2", title: "Research Placement Data Before Applying", description: "Visit official placement brochures on college websites, check LinkedIn for company names in Education section of alumni, and talk to current students via CollegePune alumni connect feature before finalizing applications." },
+          { step: "2", title: "Research Placement Data Before Applying", description: "Visit official placement brochures on college websites, check LinkedIn for company names in Education section of alumni, and talk to current students via CampusLelo alumni connect feature before finalizing applications." },
           { step: "3", title: "Build Profile for Better Placement Eligibility", description: "High-placement colleges shortlist students for elite company drives based on internal CGPA filters (typically 7.0+). From Day 1, focus on academics, participate in coding competitions, and build a GitHub portfolio (for CS)." },
           { step: "4", title: "Apply for High-Placement Colleges in CAP/SNAP", description: "For engineering: Fill high-placement college-branch combinations first in MHT-CET CAP. For MBA: Appear for SNAP + CAT and apply to SIBM/SCMHRD early in the application cycle. Apply before deadlines." },
           { step: "5", title: "Leverage Internship to PPO Conversion", description: "Once admitted, focus on securing summer internships at good companies from 2nd year. 30-40% of Pune engineering college students convert their internship into a Pre-Placement Offer, effectively securing placement 1 year before graduation." },

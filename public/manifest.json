@@ -1,6 +1,6 @@
 {
-  "name": "CollegePune — Find Your College in Pune",
-  "short_name": "CollegePune",
+  "name": "CampusLelo — Find Your College in Pune",
+  "short_name": "CampusLelo",
   "description": "AI-powered college discovery for Pune. Compare engineering, MBA, medical & arts colleges by fees, placements, cutoffs & NAAC grade.",
   "start_url": "/",
   "display": "standalone",
@@ -35,7 +35,7 @@
       "sizes": "1024x682",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "CollegePune homepage showing top Pune colleges"
+      "label": "CampusLelo homepage showing top Pune colleges"
     }
   ],
   "shortcuts": [

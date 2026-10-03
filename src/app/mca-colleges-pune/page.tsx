@@ -4,7 +4,7 @@ import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchem
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
 
 export const metadata: Metadata = genMeta({
-  title: "MCA Colleges in Pune 2025-26 | Fees, Cutoff & Placements | CollegePune",
+  title: "MCA Colleges in Pune 2025-26 | Fees, Cutoff & Placements | CampusLelo",
   description: "Top MCA colleges in Pune 2025-26. Compare fees (₹40K–2.2L/yr), MAH-MCA-CET cutoffs, placements (avg ₹5–10 LPA), eligibility & direct admission options.",
   path: "/mca-colleges-pune",
   keywords: ["mca colleges in pune", "mca colleges pune 2025", "mca admission pune", "mca fees pune", "mah mca cet pune colleges", "best mca college pune"],
@@ -44,7 +44,7 @@ export default function MCACollegesPune() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 

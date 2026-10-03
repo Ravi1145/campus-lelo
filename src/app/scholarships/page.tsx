@@ -7,7 +7,7 @@ import ScholarshipSubscribe from "@/components/leads/ScholarshipSubscribe"
 import ScholarshipFinder from "@/components/scholarships/ScholarshipFinder"
 
 export const metadata: Metadata = genMeta({
-  title: "Scholarships for Pune Students 2026 | MahaDBT & NSP Guide | CollegePune",
+  title: "Scholarships for Pune Students 2026 | MahaDBT & NSP Guide | CampusLelo",
   description: "Scholarships for Pune college students 2026 — MahaDBT, NSP, EBC, OBC & merit. Eligibility, amounts, deadlines & direct application links. Get WhatsApp alerts free.",
   path: "/scholarships",
   keywords: [

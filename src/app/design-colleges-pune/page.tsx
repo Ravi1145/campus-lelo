@@ -40,9 +40,9 @@ const faqs = [
 ]
 
 const breadcrumb = [
-  { name: "Home", url: "https://collegepune.com" },
-  { name: "Colleges", url: "https://collegepune.com/colleges" },
-  { name: "Design Colleges Pune", url: "https://collegepune.com/design-colleges-pune" },
+  { name: "Home", url: process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com" },
+  { name: "Colleges", url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges` },
+  { name: "Design Colleges Pune", url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/design-colleges-pune` },
 ]
 
 export const revalidate = 86400

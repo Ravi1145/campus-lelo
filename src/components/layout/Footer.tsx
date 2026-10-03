@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react"
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/collegepune",
+    href: "https://www.facebook.com/campuslelo",
     icon: (
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/collegepune",
+    href: "https://www.instagram.com/campuslelo",
     icon: (
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -25,7 +25,7 @@ const socialLinks = [
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/@collegepune",
+    href: "https://www.youtube.com/@campuslelo",
     icon: (
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
@@ -131,7 +131,7 @@ export default function Footer() {
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
               <span className="text-white font-extrabold text-2xl tracking-tight">
-                College<span style={{ color: "var(--color-accent)" }}>Pune</span>
+                Campus<span style={{ color: "var(--color-accent)" }}>Lelo</span>
               </span>
             </Link>
 
@@ -146,8 +146,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-4 h-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                <a href="mailto:support@collegepune.com" className="hover:text-white transition-colors">
-                  support@collegepune.com
+                <a href="mailto:support@campuslelo.com" className="hover:text-white transition-colors">
+                  support@campuslelo.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
@@ -166,7 +166,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`CollegePune on ${label}`}
+                  aria-label={`CampusLelo on ${label}`}
                   className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors text-gray-300 hover:text-white bg-white/10 hover:bg-accent"
                 >
                   {icon}
@@ -220,7 +220,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">
-            © 2026 CollegePune.com · All rights reserved · AI-powered college discovery for Pune
+            © 2026 CampusLelo.com · All rights reserved · AI-powered college discovery for Pune
           </p>
           <div className="flex items-center gap-5 text-xs text-gray-500">
             <Link href="/privacy"    className="hover:text-gray-300 transition-colors">Privacy Policy</Link>

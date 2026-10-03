@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next"
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 // AI crawlers that should have full access for GEO / AI Overview visibility
 const AI_CRAWLERS = [

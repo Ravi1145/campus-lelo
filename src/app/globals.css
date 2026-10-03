@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #0A1628;
-  /* Brand navy — primary dark color used across header, footer, cards, AI sections */
-  --color-primary: #0A1628;
+  --color-background: #F6F8FB;
+  --color-foreground: #0F172A;
+  /* Brand navy */
+  --color-primary: #0B1226;
   --color-secondary: #1E3A5F;
-  /* Aliases so bg-navy / text-navy / border-navy work as utility classes */
-  --color-navy: #0A1628;
+  --color-navy: #0B1226;
   --color-navy-light: #1E3A5F;
-  /* Orange CTA — all primary action buttons */
-  --color-accent: #FF6B2C;
-  --color-orange: #FF6B2C;
+  /* Primary CTA — orange */
+  --color-accent: #F97316;
+  --color-orange: #F97316;
   /* Semantic */
-  --color-surface: #F8FAFC;
-  --color-success: #16a34a;
+  --color-surface: #F6F8FB;
+  --color-success: #16A34A;
   --color-warning: #d97706;
   --color-danger: #dc2626;
-  --color-muted: #64748b;
+  --color-muted: #475569;
+  --color-border: #E5E9F0;
   --font-heading: var(--font-plus-jakarta), system-ui, sans-serif;
-  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-body: var(--font-plus-jakarta), system-ui, sans-serif;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
   color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
+  background: #F6F8FB;
 }
 
 h1, h2, h3, h4, h5, h6 {

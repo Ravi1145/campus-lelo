@@ -33,7 +33,7 @@ const faqs = [
   { question: "What is the scope of BCom from Pune?", answer: "BCom graduates from Pune colleges can pursue CA (ICAI), CMA, MBA, M.Com, CS, or direct jobs in banking, finance, accounting, and consulting. Average starting salary: ₹2.5–₹4.5 LPA. Top employers: KPMG, Deloitte, PwC, Axis Bank, HDFC Bank, and Pune-based NBFCs." },
 ]
 
-const BASE_URL = "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const breadcrumbs = [
   { name: "Home", url: "/" },
   { name: "Colleges", url: "/colleges" },

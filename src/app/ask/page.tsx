@@ -86,7 +86,7 @@ export default function AskPage() {
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
             Ask a Pune College Question
           </h1>
-          <p className="text-gray-300">Get answers from CollegePune counsellors and Pune college alumni. 100% free.</p>
+          <p className="text-gray-300">Get answers from CampusLelo counsellors and Pune college alumni. 100% free.</p>
         </div>
       </div>
 

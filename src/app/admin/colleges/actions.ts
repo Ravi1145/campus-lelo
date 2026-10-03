@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import { upsertCollege, deleteCollege } from '@/lib/supabase/queries-admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { colleges as staticColleges } from '@/data/colleges'
+import { noidaColleges } from '@/data/noidaColleges'
 import type { ContentStatus } from '@/lib/supabase/types'
 import { requireAdmin } from '@/lib/server-auth'
 
@@ -245,5 +246,97 @@ export async function syncStaticCollegesToDBAction(): Promise<{
 
   revalidatePath('/admin/colleges')
   revalidatePath('/colleges')
+  return { success, failed, errors }
+}
+
+/**
+ * Sync all 20 Noida colleges from noidaColleges.ts into Supabase.
+ * Uses UPSERT ON CONFLICT slug — safe to run multiple times.
+ */
+export async function syncNoidaCollegesToDBAction(): Promise<{
+  success: number
+  failed: number
+  errors: string[]
+}> {
+  await requireAdmin()
+  const admin = createAdminClient()
+  let success = 0
+  let failed = 0
+  const errors: string[] = []
+
+  for (const c of noidaColleges) {
+    try {
+      const payload: Record<string, unknown> = {
+        slug:            c.slug,
+        name:            c.name,
+        short_name:      c.shortName ?? null,
+        type:            c.type ?? null,
+        established:     c.established ?? null,
+        affiliation:     c.affiliation ?? null,
+        naac_grade:      c.naac ?? null,
+        nirf_rank:       c.nirfRank ?? null,
+        city:            c.location?.split(',')[1]?.trim() ?? 'Noida',
+        state:           'Uttar Pradesh',
+        address:         c.address ?? null,
+        location:        c.location ?? null,
+        stream:          c.stream ?? null,
+        description:     c.description ?? null,
+        website:         c.website ?? null,
+        phone:           c.phone ?? null,
+        email:           c.email ?? null,
+        cover_url:       c.image ?? null,
+        courses:         c.courses ?? null,
+        specializations: c.specializations ?? null,
+        fees_min:        c.feesRange?.min ?? null,
+        fees_max:        c.feesRange?.max ?? null,
+        avg_placement:   c.avgPlacement ?? null,
+        highest_pkg:     c.highestPlacement ?? null,
+        top_recruiters:  c.topRecruiters ?? null,
+        entrance_exams:  c.entranceExams ?? null,
+        hostel:          c.hostel ?? false,
+        highlights:      c.highlights ?? null,
+        tags:            c.tags ?? null,
+        rating:          c.rating ?? null,
+        review_count:    c.reviewCount ?? null,
+        status:          'published' as ContentStatus,
+        details: {
+          short_name:      c.shortName,
+          affiliation:     c.affiliation,
+          stream:          c.stream,
+          courses:         c.courses ?? [],
+          specializations: c.specializations ?? [],
+          fees_min:        c.feesRange?.min ?? 0,
+          fees_max:        c.feesRange?.max ?? 0,
+          avg_placement:   c.avgPlacement ?? 0,
+          highest_pkg:     c.highestPlacement ?? 0,
+          top_recruiters:  c.topRecruiters ?? [],
+          entrance_exams:  c.entranceExams ?? [],
+          hostel:          c.hostel ?? false,
+          highlights:      c.highlights ?? [],
+          tags:            c.tags ?? [],
+          rating:          c.rating ?? 0,
+          review_count:    c.reviewCount ?? 0,
+          city:            'Noida',
+          state:           'Uttar Pradesh',
+        },
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (admin.from('colleges') as any).upsert(payload, { onConflict: 'slug' })
+      if (error) {
+        failed++
+        errors.push(`${c.slug}: ${error.message}`)
+      } else {
+        success++
+      }
+    } catch (err) {
+      failed++
+      errors.push(`${c.slug}: ${String(err)}`)
+    }
+  }
+
+  revalidatePath('/admin/colleges')
+  revalidatePath('/colleges')
+  revalidatePath('/colleges-in-noida')
   return { success, failed, errors }
 }

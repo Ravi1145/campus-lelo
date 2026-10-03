@@ -41,8 +41,8 @@ export default function ExitPopup() {
     // Mobile: back navigation / popstate
     const handlePopState = () => show()
 
-    // Show after 45s if user hasn't left yet (fallback)
-    const timer = setTimeout(show, 45000)
+    // Show after 25s if user hasn't left yet (fallback)
+    const timer = setTimeout(show, 25000)
 
     document.addEventListener("mouseleave", handleMouseLeave)
     window.addEventListener("popstate", handlePopState)
@@ -140,14 +140,18 @@ export default function ExitPopup() {
                 <GraduationCap className="w-7 h-7 text-orange-500" />
               </div>
 
+              {/* Social proof counter */}
+              <div className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                3,241 students shortlisted today
+              </div>
+
               {/* Copy */}
               <h2 className="text-2xl font-extrabold text-gray-900 mb-2 leading-tight">
-                Wait! Get{" "}
-                <span className="text-orange-500">Free Counselling</span>
-                {" "}for Pune Colleges
+                🎁 Get Your <span className="text-orange-500">FREE</span> 2026<br />Pune College Shortlist
               </h2>
               <p className="text-gray-500 text-sm mb-5">
-                Tell us your details and our expert counsellor will call you with the best college options, fees, and admission tips.
+                Our expert counsellor will call you with personalised college options, real fees, cutoffs, and admission tips — in under 2 hours.
               </p>
 
               {/* Bullets */}

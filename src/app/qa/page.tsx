@@ -5,7 +5,7 @@ import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchem
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Q&A 2026 — Real Questions Answered by Alumni & Experts",
-  description: "Browse 50+ answered questions about Pune college admissions, cutoffs, fees, hostels, and placements. Ask your question and get answers from CollegePune counsellors and alumni.",
+  description: "Browse 50+ answered questions about Pune college admissions, cutoffs, fees, hostels, and placements. Ask your question and get answers from CampusLelo counsellors and alumni.",
   path: "/qa",
   keywords: [
     "pune college questions and answers",
@@ -26,7 +26,7 @@ const qaData = [
     college: "COEP",
     tags: ["MHT-CET", "COEP", "Cutoff 2026"],
     answer: "COEP CSE branch MHT-CET cutoff 2026 (estimated): Open — 99.8+ percentile, OBC — 98.7 percentile, SC — 95.5 percentile. COEP CSE is the most competitive branch. Even with 99.9 percentile, seat is not guaranteed in CAP Round 1 — depend on document verification speed. Apply for home state + improvement quota both.",
-    answeredBy: "CollegePune Counsellor",
+    answeredBy: "CampusLelo Counsellor",
     date: "2026-01-10",
     helpful: 142,
   },
@@ -81,7 +81,7 @@ const qaData = [
     college: "PICT / VIT Pune",
     tags: ["PICT", "VIT Pune", "CSE Comparison"],
     answer: "PICT vs VIT Pune for CSE: PICT — NAAC A, fees ₹1.4–1.9L/yr, avg placement ₹7.5 LPA, very strong in CS/IT, product companies like Goldman Sachs visit. VIT Pune — NIRF #101, NAAC A+, fees ₹1.6–2.2L/yr, avg placement ₹8.5 LPA, better for core + IT combined. For pure CS/IT career, PICT edges out slightly. For mechanical + electronics, VIT Pune is better. COEP > PICT ≈ VIT Pune for CS.",
-    answeredBy: "CollegePune Research",
+    answeredBy: "CampusLelo Research",
     date: "2025-12-15",
     helpful: 115,
   },
@@ -136,7 +136,7 @@ export default function QAPage() {
               <span className="text-white">Q&A</span>
             </nav>
             <h1 className="text-3xl font-extrabold text-white mb-2">Pune College Q&A</h1>
-            <p className="text-gray-300 max-w-xl mb-5">Real questions answered by CollegePune counsellors and Pune college alumni. Ask yours for free.</p>
+            <p className="text-gray-300 max-w-xl mb-5">Real questions answered by CampusLelo counsellors and Pune college alumni. Ask yours for free.</p>
             <Link
               href="/ask"
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors"

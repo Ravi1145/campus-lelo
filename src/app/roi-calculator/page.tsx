@@ -252,7 +252,7 @@ export default function ROICalculatorPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Is Your Pune College Worth the Investment?</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-6">
-            The CollegePune ROI Calculator helps you decide whether a college is a good financial investment. Compare total fees against expected salary, estimate your payback period, and project 10-year earnings for any Pune college — covering B.Tech, MBA, MBBS, BCA, BBA, LLB, and more.
+            The CampusLelo ROI Calculator helps you decide whether a college is a good financial investment. Compare total fees against expected salary, estimate your payback period, and project 10-year earnings for any Pune college — covering B.Tech, MBA, MBBS, BCA, BBA, LLB, and more.
           </p>
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
             {[

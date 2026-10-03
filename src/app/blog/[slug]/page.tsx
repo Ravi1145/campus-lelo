@@ -11,7 +11,7 @@ import ShareButtons from "@/components/blog/ShareButtons"
 
 export const revalidate = 300
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -50,7 +50,7 @@ async function resolvePost(slug: string): Promise<Post | null> {
       return {
         id: db.id ?? slug, slug: db.slug, title: db.title,
         excerpt: db.excerpt ?? "", body: db.body ?? "",
-        author: db.author ?? "CollegePune",
+        author: db.author ?? "CampusLelo",
         published_at: db.published_at, read_time: db.read_time,
         category: db.category ?? "General", tags: db.tags ?? [],
         meta_title: db.meta_title, meta_desc: db.meta_desc,
@@ -139,7 +139,7 @@ export default async function BlogPostPage({ params }: Props) {
       .filter((b) => b.slug !== slug).slice(0, 3)
       .map((b) => ({
         id: b.id ?? b.slug, slug: b.slug, title: b.title,
-        excerpt: b.excerpt ?? "", body: "", author: b.author ?? "CollegePune",
+        excerpt: b.excerpt ?? "", body: "", author: b.author ?? "CampusLelo",
         published_at: b.published_at, read_time: b.read_time,
         category: b.category ?? "General", tags: b.tags ?? [],
       }))
@@ -177,8 +177,8 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     author: { "@type": "Person", name: post.author, url: `${BASE_URL}/blog` },
     publisher: {
-      "@type": "Organization", name: "CollegePune", url: BASE_URL,
-      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.png`, width: 200, height: 60 },
+      "@type": "Organization", name: "CampusLelo", url: BASE_URL,
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.webp`, width: 200, height: 60 },
     },
     datePublished: isoDate, dateModified: isoDate,
     url: `${BASE_URL}/blog/${slug}`,
@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
     articleSection: post.category,
     inLanguage: "en-IN",
     wordCount,
-    isPartOf: { "@type": "Blog", "@id": `${BASE_URL}/blog`, name: "CollegePune Blog" },
+    isPartOf: { "@type": "Blog", "@id": `${BASE_URL}/blog`, name: "CampusLelo Blog" },
   }
 
   const isHTML  = post.body.trimStart().startsWith("<")
@@ -244,8 +244,8 @@ export default async function BlogPostPage({ params }: Props) {
                 {(post.author ?? "C")[0]}
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">{post.author ?? "CollegePune"}</p>
-                <p className="text-gray-400 text-xs">CollegePune Editorial</p>
+                <p className="text-white text-sm font-semibold">{post.author ?? "CampusLelo"}</p>
+                <p className="text-gray-400 text-xs">CampusLelo Editorial</p>
               </div>
             </div>
           </div>
@@ -338,8 +338,8 @@ export default async function BlogPostPage({ params }: Props) {
                   {(post.author ?? "C")[0]}
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900 text-sm">{post.author ?? "CollegePune"}</p>
-                  <p className="text-[11px] text-gray-400 mt-0.5">CollegePune Editorial Team</p>
+                  <p className="font-bold text-gray-900 text-sm">{post.author ?? "CampusLelo"}</p>
+                  <p className="text-[11px] text-gray-400 mt-0.5">CampusLelo Editorial Team</p>
                   <p className="text-sm text-gray-600 mt-2 leading-relaxed">
                     Expert in Pune college admissions, entrance exam guidance, and higher education in Maharashtra.
                     Helping students make informed decisions since 2020.

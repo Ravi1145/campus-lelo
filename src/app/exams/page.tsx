@@ -13,7 +13,7 @@ export const metadata: Metadata = genMeta({
   keywords: ["mht-cet 2026", "jee main 2026 pune", "neet 2026", "cat 2026", "snap 2026", "entrance exams pune"],
 })
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 const levelColors: Record<string, string> = {
   National: "bg-blue-100 text-blue-700",

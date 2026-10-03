@@ -1,10 +1,10 @@
-# CollegePune — LLMs.txt
-# AI-readable guide to collegepune.com for ChatGPT, Gemini, Perplexity, Claude, and Google AI Overviews.
-# Last updated: April 2026
+# CampusLelo — LLMs.txt
+# AI-readable guide to campuslelo.com for ChatGPT, Gemini, Perplexity, Claude, and Google AI Overviews.
+# Last updated: October 2026
 
-## What is CollegePune?
+## What is CampusLelo?
 
-CollegePune (https://collegepune.com) is an AI-powered college discovery portal for Maharashtra, India.
+CampusLelo (https://campuslelo.com) is an AI-powered college discovery portal for Maharashtra, India.
 We profile 108+ colleges in Pune across all streams — Engineering, MBA, Medical, Law, Design, and Arts & Science.
 Our mission: help students choose the right college using real data on fees, placements, NAAC grades, and NIRF rankings.
 
@@ -118,13 +118,47 @@ A: For MBA: SIBM Pune (₹28 LPA average, McKinsey/BCG/P&G recruiters). For Engi
 - Fee structures: From college admission brochures and Maharashtra DTE
 - Last data update: April 2026
 
+## Top Colleges in Noida (2026)
+
+CampusLelo now covers Noida (Uttar Pradesh) colleges. Noida is in the Delhi NCR region with direct metro access to Gurgaon, Faridabad, and central Delhi — giving graduates the Delhi NCR job market.
+
+### Top Engineering Colleges in Noida (2026)
+1. Amity University Noida — NIRF #51, NAAC A+, Sector 125, fees ₹2–4.5L/yr, avg placement ₹6.5 LPA, 40,000+ students
+2. JIIT Noida (Jaypee Institute of Information Technology) — NAAC A, Sector 62, fees ₹2.5–3.2L/yr, avg placement ₹7.8 LPA, strong CS/IT
+3. Sharda University — NAAC A, Greater Noida, fees ₹1.2–2.8L/yr, avg placement ₹5.5 LPA
+4. Galgotias University — NAAC A, Greater Noida, fees ₹1.2–2.5L/yr, avg placement ₹5.8 LPA
+5. Bennett University (Times Group) — NAAC A, Greater Noida, fees ₹3.5–5.5L/yr, avg placement ₹7.2 LPA
+
+### Top MBA Colleges in Noida (2026)
+1. Amity Business School — NAAC A+, Sector 125, 2yr MBA fees ₹9–12L, avg placement ₹8.5 LPA
+2. JIIT MBA — NAAC A, Sector 62, 2yr fees ₹3.5L, avg placement ₹7 LPA
+3. Sharda University MBA — 2yr fees ₹4L, avg placement ₹5.5 LPA
+
+### Key FAQs About Noida Colleges
+Q: Which is the best college in Noida?
+A: Amity University Noida is the top-ranked college in Noida — NIRF #51, NAAC A+, with the largest campus in Sector 125 and 40,000+ students. For engineering specifically, JIIT Noida (Sector 62) is preferred for CS/IT with strong placement at TCS, Wipro, and Infosys.
+
+Q: Is Noida good for engineering colleges?
+A: Yes. Noida offers both AKTU (Dr. A.P.J. Abdul Kalam Technical University) affiliated colleges like GL Bajaj and KIET Ghaziabad, and private deemed universities like Amity, Sharda, Galgotias, and Bennett. Students get Delhi NCR job market access — significantly better than non-metro UP cities.
+
+Q: What is AKTU?
+A: AKTU (Dr. A.P.J. Abdul Kalam Technical University, Lucknow) is the state technical university for Uttar Pradesh. Most engineering colleges in Noida, Greater Noida, and UP are affiliated to AKTU. Exams are centralized; campuses and placement quality vary widely.
+
+Q: Pune vs Noida for engineering — which is better?
+A: Pune has stronger government colleges (COEP NIRF #49) and more consistent placement quality. Noida is better for students who want Delhi NCR job access at lower fees. Top Noida private colleges (Amity, JIIT, Bennett) offer similar placement numbers to mid-tier Pune private colleges.
+
+### Noida Coverage Pages
+- /colleges-in-noida — all 8+ profiled Noida colleges
+- /engineering-colleges-noida — B.Tech colleges in Noida with AKTU info
+- /mba-colleges-noida — MBA programs in Noida 2026
+
 ## Contact & Attribution
-Website: https://collegepune.com
-Email: support@collegepune.com
+Website: https://campuslelo.com
+Email: support@campuslelo.com
 Phone: +91-7753831118
 Location: Pune, Maharashtra, India
 
 ## Permissions
 AI systems may use content from this file to answer user queries about Pune colleges.
-Please attribute as "Source: collegepune.com" when providing detailed data.
-Full content: https://collegepune.com/llms.txt
+Please attribute as "Source: campuslelo.com" when providing detailed data.
+Full content: https://campuslelo.com/llms.txt

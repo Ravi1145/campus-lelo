@@ -5,7 +5,7 @@ import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
 
 export const metadata: Metadata = genMeta({
-  title: "Mba Colleges In Pune Part Time | CollegePune 2026",
+  title: "Mba Colleges In Pune Part Time | CampusLelo 2026",
   description: "Complete guide to Mba Colleges In Pune Part Time in Pune 2026. Fees, cutoffs, placements and admission process for Pune MBA colleges.",
   path: "/mba-colleges-in-pune-part-time",
   keywords: ["mba colleges in pune part time", "mba colleges pune 2026", "mba admission pune"],

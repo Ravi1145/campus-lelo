@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getAllCollegesAdmin } from '@/lib/supabase/queries-admin'
-import { deleteCollegeAction, syncStaticCollegesToDBAction } from './actions'
+import { deleteCollegeAction, syncStaticCollegesToDBAction, syncNoidaCollegesToDBAction } from './actions'
 import DeleteButton from '@/components/admin/DeleteButton'
 import SyncButton from '@/components/admin/SyncButton'
 import QuickLogoUpload from '@/components/admin/QuickLogoUpload'
@@ -72,6 +72,11 @@ export default async function AdminCollegesPage({
               confirmMsg={`This will import all ${staticCount} static colleges into Supabase so you can edit them. Safe to run multiple times. Continue?`}
             />
           )}
+          <SyncButton
+            action={syncNoidaCollegesToDBAction}
+            label="🏙 Sync 20 Noida Colleges"
+            confirmMsg="This will upsert all 20 Noida colleges into Supabase (safe to run multiple times). Continue?"
+          />
           <Link href="/admin/colleges/new"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700">
             + Add College

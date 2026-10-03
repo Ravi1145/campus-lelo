@@ -95,11 +95,11 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
     "@type": "WebPage",
     name: `${colA.name} vs ${colB.name} Comparison 2026`,
     description: `Detailed comparison of ${colA.name} and ${colB.name} including fees, placements, NAAC accreditation, cutoffs, courses offered, and campus facilities for 2026 admissions.`,
-    url: `https://collegepune.com/compare/${slug}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/compare/${slug}`,
     inLanguage: "en-IN",
     about: [
-      { "@type": "CollegeOrUniversity", name: colA.name, url: `https://collegepune.com/colleges/${colA.slug}` },
-      { "@type": "CollegeOrUniversity", name: colB.name, url: `https://collegepune.com/colleges/${colB.slug}` },
+      { "@type": "CollegeOrUniversity", name: colA.name, url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${colA.slug}` },
+      { "@type": "CollegeOrUniversity", name: colB.name, url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${colB.slug}` },
     ],
   }
 

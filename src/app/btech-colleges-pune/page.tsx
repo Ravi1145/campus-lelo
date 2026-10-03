@@ -46,7 +46,7 @@ export default function BtechCollegesPunePage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 
@@ -84,7 +84,7 @@ export default function BtechCollegesPunePage() {
         admissionHeading="BTech Admission Process in Pune 2026"
         admissionSteps={[
           { step: "1", title: "Appear for MHT-CET / JEE Main 2026", description: "Register and appear for MHT-CET (April-May 2026) or JEE Main (January & April 2026). MHT-CET is based on PCM at Class 12 level. Aim for 90+ percentile for mid-tier colleges, 95+ for top colleges." },
-          { step: "2", title: "Check Results & Merit Position", description: "MHT-CET results are declared in June 2026. Check your percentile and category rank. Use CollegePune's College Predictor to see which BTech colleges you can target." },
+          { step: "2", title: "Check Results & Merit Position", description: "MHT-CET results are declared in June 2026. Check your percentile and category rank. Use CampusLelo's College Predictor to see which BTech colleges you can target." },
           { step: "3", title: "Register on CAP Portal", description: "Register on cetcell.mahacet.org, fill in personal details, upload documents (10th/12th marksheets, caste certificate, Aadhar), and get eligibility verified." },
           { step: "4", title: "Fill College Preferences", description: "Fill preferences for BTech colleges in Pune in order of priority. You can list 50+ college-branch combinations. Seat allotment is strictly merit-based within category." },
           { step: "5", title: "Accept Allotment & Pay Fees", description: "Once a seat is allotted in CAP Round 1 (July), accept it online and pay seat confirmation fees. Collect original documents and report to the college within the specified deadline." },

@@ -46,7 +46,7 @@ export default function ComputerEngineeringCollegesPunePage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 
@@ -85,7 +85,7 @@ export default function ComputerEngineeringCollegesPunePage() {
         admissionSteps={[
           { step: "1", title: "Target MHT-CET PCM Score", description: "CS/IT is the most competitive branch. Target 95+ percentile for PICT, 99+ for COEP CSE, 85+ for VIT/MIT-WPU CS. JEE Main above 90 percentile also qualifies for premium college management quota." },
           { step: "2", title: "Apply on CAP Portal After Results", description: "Register on cetcell.mahacet.org after MHT-CET results. Verify documents and fill college-branch preferences. Put CS as first preference at all target colleges." },
-          { step: "3", title: "Research Colleges Before CAP Round 1", description: "Visit college campuses, attend open days, research placement data on LinkedIn, and talk to current students before locking preferences. Use CollegePune's comparison tool for data-driven decisions." },
+          { step: "3", title: "Research Colleges Before CAP Round 1", description: "Visit college campuses, attend open days, research placement data on LinkedIn, and talk to current students before locking preferences. Use CampusLelo's comparison tool for data-driven decisions." },
           { step: "4", title: "Fill 50+ Preferences Strategically", description: "Fill preferences across tiers: dream colleges first (COEP/PICT), then realistic targets (VIT Pune, MIT-WPU), then safe options (JSPM, AISSMS). Never leave preferences blank." },
           { step: "5", title: "Accept Allotment or Upgrade in Next Round", description: "If Round 1 allots a lower-preference college, decide: accept to secure a seat (safer) or freeze/upgrade to wait for better options in Round 2. Floating option allows upgrades if better seat opens." },
         ]}

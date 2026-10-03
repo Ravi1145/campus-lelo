@@ -6,7 +6,7 @@ import { CheckCircle, GraduationCap } from "lucide-react"
 export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Alumni Network 2026 | Ask Graduates Directly | CollegePune",
+  title: "Pune College Alumni Network 2026 | Ask Graduates Directly | CampusLelo",
   description: "Connect with verified alumni from COEP, SIBM, AFMC, PICT, VIT Pune and 20+ colleges. Get honest answers about placements, hostel, campus life and admission from real graduates.",
   path: "/alumni",
   keywords: [

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Placements 2024 | Avg Package ₹${(col.avgPlacement/100000).toFixed(1)} LPA | CollegePune`,
+    title: `${col.name} Placements 2024 | Avg Package ₹${(col.avgPlacement/100000).toFixed(1)} LPA | CampusLelo`,
     description: `${col.name} placement 2024: Average package ₹${(col.avgPlacement/100000).toFixed(1)} LPA, highest ₹${(col.highestPlacement/100000).toFixed(1)} LPA. Top recruiters: ${col.topRecruiters.slice(0,4).join(", ")}. Full placement statistics.`,
     path: `/colleges/${slug}/placements`,
     keywords: [`${col.shortName} placements`, `${col.name} placement 2024`, `${col.shortName} average package`, `${col.shortName} highest package`, `${col.shortName} top recruiters`],

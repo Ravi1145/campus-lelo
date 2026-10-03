@@ -55,7 +55,7 @@ const breadcrumbs = [
   { name: "Medical Colleges in Pune", url: "/medical-colleges-pune" },
 ]
 
-const BASE_URL = "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const PAGE_URL = `${BASE_URL}/medical-colleges-pune`
 const TODAY = new Date().toISOString().split("T")[0]
 

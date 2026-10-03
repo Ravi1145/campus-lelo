@@ -9,7 +9,7 @@ const ARTICLES = [
   {
     slug:     "best-btech-colleges-pune-2026",
     title:    "Top 10 Best BTech Colleges in Pune 2026: Rankings, Fees & Placements",
-    author:   "CollegePune Editorial",
+    author:   "CampusLelo Editorial",
     date:     "15 Jan, 2026",
     readTime: "8 min",
     category: "Engineering",

@@ -6,7 +6,7 @@ import Link from "next/link"
 import { colleges } from "@/data/colleges"
 import { cn } from "@/lib/utils"
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 const nirfPageSchema = {
   "@context": "https://schema.org",

@@ -46,7 +46,7 @@ export default function MhtCetCollegesPunePage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      url: `https://collegepune.com/colleges/${c.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges/${c.slug}`,
     })),
   }
 
@@ -78,13 +78,13 @@ export default function MhtCetCollegesPunePage() {
           { title: "Category-Wise Reservation Benefits", description: "Maharashtra reservation: OBC 19%, SC 13%, ST 7%, EWS 10%, SEBC 16%. Reserved category students have significantly lower cutoffs - OBC students can get COEP seats at 90-92 percentile instead of 99.5+." },
           { title: "Multiple Attempts Possible", description: "MHT-CET can be attempted every year. Students who do not get their target college can take a drop year, repeat Class 12, or improve MHT-CET in 2027 admissions. Many COEP/PICT students give MHT-CET 2-3 times." },
           { title: "JEE Main as Alternative", description: "For deemed universities (SIT Pune, MIT-WPU) and management quota seats, JEE Main scores are also accepted. Students strong in JEE Main can use it for premium college admissions alongside MHT-CET." },
-          { title: "Preference Order Strategy Matters", description: "CAP outcome depends critically on preference order. Always put dream college-branch combinations first, realistic options in middle, and safe options last. Use CollegePune's predictor to optimize preferences." },
+          { title: "Preference Order Strategy Matters", description: "CAP outcome depends critically on preference order. Always put dream college-branch combinations first, realistic options in middle, and safe options last. Use CampusLelo's predictor to optimize preferences." },
           { title: "Document Preparation Is Critical", description: "CAP requires Maharashtra domicile certificate, caste certificate, income certificate, and other documents. Prepare these before MHT-CET results to avoid missing CAP deadlines." },
         ]}
         admissionHeading="MHT-CET to Pune College: Step-by-Step 2026"
         admissionSteps={[
           { step: "1", title: "Register & Appear for MHT-CET PCM 2026", description: "Register at mahacet.org (typically January-February 2026). Exam fee: ₹800 (general), ₹600 (reserved). Exam is conducted April-May 2026 in computer-based mode. Paper covers PCM (Class 11+12 syllabus)." },
-          { step: "2", title: "Check MHT-CET Results (June 2026)", description: "Results declared on mahacet.org. Download your scorecard showing raw score, percentile, and All-India Rank. Use CollegePune's predictor to estimate college chances based on your percentile." },
+          { step: "2", title: "Check MHT-CET Results (June 2026)", description: "Results declared on mahacet.org. Download your scorecard showing raw score, percentile, and All-India Rank. Use CampusLelo's predictor to estimate college chances based on your percentile." },
           { step: "3", title: "Register on CAP Portal", description: "Visit cetcell.mahacet.org and register for engineering CAP. Upload documents: 10th/12th marksheets, CET scorecard, caste certificate, domicile certificate, income certificate. Registration is free." },
           { step: "4", title: "Fill College Preferences for CAP Round 1", description: "Fill 50+ college-branch combinations in priority order. Use previous year cutoffs as reference. Put all government college-CS combinations first, then private autonomous colleges, then private unaided." },
           { step: "5", title: "Accept Allotment (Freeze/Float/Slide)", description: "After Round 1 allotment, choose: Freeze (accept current seat, no more rounds), Float (participate in next round for better seat, keep current as backup), or Slide (upgrade only within same college). Missing deadline forfeits the seat." },

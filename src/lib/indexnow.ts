@@ -6,11 +6,11 @@
  * publishing a blog post, college page, or cutoff entry.
  *
  * IndexNow key file must exist at: /public/<INDEXNOW_KEY>.txt
- * The existing file at /public/collegepune2026indexnow.txt already satisfies this.
+ * The key file must exist at: /public/campuslelo2026indexnow.txt
  */
 
-const BASE_URL     = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
-const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "collegepune2026indexnow"
+const BASE_URL     = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "campuslelo2026indexnow"
 
 const ENDPOINTS = [
   "https://api.indexnow.org/indexnow",

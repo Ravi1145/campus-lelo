@@ -6,23 +6,25 @@ import dynamic from "next/dynamic"
 // ── Critical above-fold sections (server-render immediately) ──────────────────
 import HeroSection from "@/components/home/HeroSection"
 import CollegeMarquee from "@/components/home/CollegeMarquee"
+import BrowseByStream from "@/components/home/BrowseByStream"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
-import QuickExploreSection from "@/components/home/QuickExploreSection"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
-const FeaturedCourses    = dynamic(() => import("@/components/home/FeaturedCourses"))
-const RankingTables      = dynamic(() => import("@/components/home/RankingTables"))
-const AIRecommender      = dynamic(() => import("@/components/ai/AIRecommender"))
-const ExamCalendar       = dynamic(() => import("@/components/home/ExamCalendar"))
+const FeaturedCourses     = dynamic(() => import("@/components/home/FeaturedCourses"))
+const AIFinderBand        = dynamic(() => import("@/components/home/AIFinderBand"))
+const HowItWorks          = dynamic(() => import("@/components/home/HowItWorks"))
+const ExamCalendar        = dynamic(() => import("@/components/home/ExamCalendar"))
 const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNewsSection"))
 const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
-const AlumniQASection    = dynamic(() => import("@/components/home/AlumniQASection"))
-const FAQSection         = dynamic(() => import("@/components/home/FAQSection"))
+const RankingTables       = dynamic(() => import("@/components/home/RankingTables"))
+const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
 const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
-import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema } from "@/lib/seo"
+import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
+import QuickAnswer from "@/components/seo/QuickAnswer"
+import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Colleges in Pune 2026 | Rankings, Fees & Reviews | CollegePune",
+  title: "Best Colleges in Pune 2026 | Rankings, Fees & Reviews | CampusLelo",
   description: "Compare 100+ colleges in Pune — COEP (NIRF #49), SIBM (NIRF #13), AFMC (NIRF #4). Fees ₹15K–25L/yr, placements up to ₹65 LPA. Free AI counsellor for 2026 admissions.",
   path: "/",
   keywords: [
@@ -98,151 +100,72 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessSchema()) }}
       />
+      <Script
+        id="top-colleges-list"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateItemListSchema([
+          { name: "COEP Pune — College of Engineering Pune", url: "/colleges/coep-pune" },
+          { name: "SIBM Pune — Symbiosis Institute of Business Management", url: "/colleges/sibm-pune" },
+          { name: "AFMC Pune — Armed Forces Medical College", url: "/colleges/afmc-pune" },
+          { name: "PICT Pune — Pune Institute of Computer Technology", url: "/colleges/pict-pune" },
+          { name: "VIT Pune — Vishwakarma Institute of Technology", url: "/colleges/vit-pune" },
+          { name: "SIT Pune — Symbiosis Institute of Technology", url: "/colleges/sit-pune" },
+          { name: "SCMHRD Pune — Symbiosis Centre for Management and HRD", url: "/colleges/scmhrd-pune" },
+          { name: "MIT-WPU Pune — MIT World Peace University", url: "/colleges/mit-wpu-pune" },
+          { name: "PUMBA Pune — Department of Management Sciences", url: "/colleges/pumba-pune" },
+          { name: "BJ Medical College Pune", url: "/colleges/bj-medical-college-pune" },
+        ])) }}
+      />
 
       <main>
-        {/* Hero Section */}
+        {/* 1. Hero */}
         <HeroSection />
 
-        {/* College Marquee — scrolling college cards */}
+        {/* AEO Quick Answer — featured snippet target for "best college in pune" queries */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuickAnswer
+            question="Which is the best college in Pune in 2026?"
+            answer="COEP (College of Engineering Pune) is the best engineering college in Pune — NIRF #49, NAAC A+, government college with fees ₹80K–1.8L/yr and average placement ₹12 LPA. For MBA, SIBM Pune (NIRF #13, avg ₹28 LPA) is the top choice. For medicine, AFMC Pune (NIRF #4) is the highest-ranked college overall in Pune."
+            note="Based on NIRF 2025 rankings and 2024–25 placement reports. Updated October 2026."
+          />
+        </div>
+
+        {/* 2. Trust strip — partner college marquee */}
         <CollegeMarquee />
 
-        {/* Browse by Stream */}
-        <QuickExploreSection />
+        {/* 3. Browse by Stream */}
+        <BrowseByStream />
 
-        {/* Featured Colleges — after stream section */}
+        {/* 4. Featured Colleges */}
         <FeaturedColleges />
 
+        {/* 5. Featured Courses */}
         <FeaturedCourses />
 
-        <RankingTables />
-        <section className="py-16 bg-[#0A1628]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AIRecommender />
-          </div>
-        </section>
-        <ExamCalendar />
+        {/* 6. AI Finder band */}
+        <AIFinderBand />
 
+        {/* 7. How it works */}
+        <HowItWorks />
+
+        {/* 8. Exams & Deadlines */}
+        <ExamCalendar />
         <HomepageNewsSection />
 
-        {/* Tools Hub */}
-        <section className="py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">Free Tools for Smarter College Decisions</h2>
-              <p className="text-gray-500 mt-2 text-sm">Everything you need to plan your college journey — all free, all in one place.</p>
-            </div>
-            <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4">
-              {[
-                { href: "/predictor", icon: "🎯", label: "College Predictor", desc: "Find your best-fit colleges by exam score", bg: "bg-orange-50 hover:bg-orange-100 border-orange-100" },
-                { href: "/compare", icon: "⚖️", label: "Compare Colleges", desc: "Side-by-side fees & placement comparison", bg: "bg-blue-50 hover:bg-blue-100 border-blue-100" },
-                { href: "/roi-calculator", icon: "📈", label: "ROI Calculator", desc: "Is your degree worth the investment?", bg: "bg-green-50 hover:bg-green-100 border-green-100" },
-                { href: "/nirf-insights", icon: "🏆", label: "NIRF Insights", desc: "Rankings & NAAC grades for Pune colleges", bg: "bg-purple-50 hover:bg-purple-100 border-purple-100" },
-                { href: "/ai-finder", icon: "🤖", label: "AI College Finder", desc: "Chat with AI to find your ideal college", bg: "bg-pink-50 hover:bg-pink-100 border-pink-100" },
-                { href: "/counselling", icon: "📞", label: "Free Counselling", desc: "Talk to an expert — free 15-min session", bg: "bg-teal-50 hover:bg-teal-100 border-teal-100" },
-              ].map(({ href, icon, label, desc, bg }) => (
-                <Link key={href} href={href} className={`flex flex-col items-center text-center p-2 sm:p-4 rounded-2xl border transition-colors ${bg}`}>
-                  <span className="text-2xl sm:text-3xl mb-1 sm:mb-2">{icon}</span>
-                  <p className="text-[10px] sm:text-xs font-bold text-gray-900 mb-1 leading-tight">{label}</p>
-                  <p className="text-[10px] text-gray-500 hidden sm:block">{desc}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Guides & Tools Hub */}
-        <section className="py-14 bg-surface">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">Explore College Guides & Tools</h2>
-              <p className="text-gray-500 mt-2 text-sm">In-depth guides for every step of your college journey — rankings, fees, placements, and admissions.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Engineering */}
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
-                <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-lg">⚙️</span>
-                  Engineering Colleges
-                </h3>
-                <ul className="space-y-2.5">
-                  {[
-                    { label: "Best Engineering Colleges Pune 2026", href: "/engineering-colleges-pune" },
-                    { label: "Top 10 Engineering Colleges Ranked", href: "/top-10-engineering-colleges-in-pune" },
-                    { label: "Placement Guide — Avg & Highest LPA", href: "/engineering-colleges-pune-placement" },
-                    { label: "Low Fees Colleges (Under ₹5L)", href: "/low-fees-engineering-colleges-pune" },
-                    { label: "Scholarships for Engineering", href: "/engineering-colleges-pune-scholarship" },
-                    { label: "Admission Without JEE (MHT-CET)", href: "/engineering-admission-pune-without-jee" },
-                    { label: "Private Engineering Colleges", href: "/private-engineering-colleges-pune" },
-                    { label: "Direct Admission (Management Quota)", href: "/direct-admission-engineering-colleges-pune" },
-                  ].map(({ label, href }) => (
-                    <li key={href}>
-                      <Link href={href} className="text-sm text-gray-700 hover:text-orange-600 transition-colors flex items-center gap-1.5">
-                        <span className="text-orange-400">›</span> {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* MBA */}
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
-                <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center text-lg">💼</span>
-                  MBA Colleges
-                </h3>
-                <ul className="space-y-2.5">
-                  {[
-                    { label: "Best MBA Colleges Pune 2026", href: "/mba-colleges-pune" },
-                    { label: "Top 10 MBA Colleges Ranked", href: "/top-10-mba-colleges-in-pune" },
-                    { label: "MBA Placement Guide — LPA & Recruiters", href: "/mba-colleges-pune-placement" },
-                    { label: "Low Fees MBA Colleges", href: "/low-fees-mba-colleges-pune" },
-                    { label: "MBA Scholarships Pune", href: "/mba-colleges-pune-scholarship" },
-                    { label: "MBA Without CAT (MAT/CMAT/SNAP)", href: "/mba-admission-pune-without-cat" },
-                    { label: "Private MBA Colleges Pune", href: "/private-mba-colleges-pune" },
-                    { label: "Direct Admission MBA Pune", href: "/direct-admission-mba-colleges-pune" },
-                  ].map(({ label, href }) => (
-                    <li key={href}>
-                      <Link href={href} className="text-sm text-gray-700 hover:text-orange-600 transition-colors flex items-center gap-1.5">
-                        <span className="text-orange-400">›</span> {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Tools & Comparisons */}
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
-                <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center text-lg">🛠️</span>
-                  Tools & Comparisons
-                </h3>
-                <ul className="space-y-2.5">
-                  {[
-                    { label: "Engineering vs MBA — Which is Better?", href: "/pune-colleges-comparison-engineering-mba" },
-                    { label: "Placement Comparator (Interactive)", href: "/pune-college-placement-comparator" },
-                    { label: "Fees Calculator — 4-Year Total", href: "/pune-college-fees-calculator" },
-                    { label: "Admission Deadline Tracker 2026", href: "/pune-admission-deadline-tracker-2026" },
-                    { label: "AI College Finder", href: "/ai-finder" },
-                    { label: "Compare Colleges Side-by-Side", href: "/compare" },
-                    { label: "College Predictor by Score", href: "/predictor" },
-                    { label: "Free Expert Counselling", href: "/counselling" },
-                  ].map(({ label, href }) => (
-                    <li key={href}>
-                      <Link href={href} className="text-sm text-gray-700 hover:text-orange-600 transition-colors flex items-center gap-1.5">
-                        <span className="text-orange-400">›</span> {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* 9. Social proof */}
         <TestimonialsSection />
-        <AlumniQASection />
+
+        {/* 10. NIRF rankings */}
+        <RankingTables />
+
+        {/* 11. FAQ + Final CTA */}
         <FAQSection />
+
+        {/* 12. Guides */}
         <GuidesScrollSection />
+
+        {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
+        <PuneCollegeGuide />
       </main>
     </>
   )

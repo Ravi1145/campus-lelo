@@ -7,7 +7,7 @@ import CollegeGrid from "@/components/colleges/CollegeGrid"
 import { colleges } from "@/data/colleges"
 
 export const metadata: Metadata = genMeta({
-  title: "Colleges in Pune 2026 | Fees, Rankings & Reviews | CollegePune",
+  title: "Colleges in Pune 2026 | Fees, Rankings & Reviews | CampusLelo",
   description: "Browse 103+ colleges in Pune 2026. Filter by stream, fees, NAAC grade & location. Engineering, MBA, Medical — government, private & deemed colleges with real placement data.",
   path: "/colleges",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = genMeta({
 })
 
 const listingFaqs = [
-  { question: "How many colleges are there in Pune?", answer: "Pune has over 800 colleges including 400+ engineering colleges, 100+ MBA institutes, and 50+ medical colleges. CollegePune profiles 103+ top colleges with verified fees, placements, and NAAC data." },
+  { question: "How many colleges are there in Pune?", answer: "Pune has over 800 colleges including 400+ engineering colleges, 100+ MBA institutes, and 50+ medical colleges. CampusLelo profiles 103+ top colleges with verified fees, placements, and NAAC data." },
   { question: "Which is the best government college in Pune?", answer: "COEP (College of Engineering Pune) is the best government engineering college — NIRF #49, NAAC A+, fees ₹80K–1.8L/yr, avg placement ₹12 LPA. For medical: AFMC (NIRF #4, NAAC A++). For arts/commerce: BMCC and Fergusson College." },
   { question: "Which Pune college has the best placements?", answer: "For MBA: SIBM Pune with ₹28 LPA average and McKinsey/BCG recruiters. For engineering: COEP with ₹12 LPA average and ₹45 LPA highest package. For overall placement salary, SIBM Pune leads all Pune colleges." },
   { question: "What is the fee range for engineering colleges in Pune?", answer: "Engineering fees in Pune 2026: Government (COEP) ₹80K–1.8L/yr; Autonomous private (PICT, VIT Pune) ₹1.4L–2.2L/yr; Deemed universities (SIT, MIT-WPU) ₹2L–4.8L/yr. SC/ST students get full fee waiver at government colleges." },

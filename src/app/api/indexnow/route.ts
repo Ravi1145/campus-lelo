@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://collegepune.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 // Generate a key once and store in env. For now use a fixed key tied to domain.
-const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "collegepune2026indexnow"
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "campuslelo2026indexnow"
 
 // IndexNow endpoints — Bing propagates to Google, Yandex, etc.
 const INDEXNOW_ENDPOINTS = [

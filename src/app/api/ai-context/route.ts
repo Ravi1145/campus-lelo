@@ -15,7 +15,7 @@ import { colleges as staticColleges } from "@/data/colleges"
 import { exams } from "@/data/exams"
 import { createClient } from "@supabase/supabase-js"
 
-const BASE = "https://collegepune.com"
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 async function getPublishedCollegeCount(): Promise<number> {
   try {
@@ -40,23 +40,23 @@ export async function GET() {
   const context = {
     schema: "https://schema.org/Dataset",
     "@type": "Dataset",
-    name: "CollegePune AI Context",
+    name: "CampusLelo AI Context",
     description: "Structured data about colleges in Pune for AI models, RAG pipelines, and agents",
     url: `${BASE}/api/ai-context`,
     license: "https://creativecommons.org/licenses/by/4.0/",
     creator: {
       "@type": "Organization",
-      name: "CollegePune",
+      name: "CampusLelo",
       url: BASE,
-      email: "support@collegepune.com",
+      email: "support@campuslelo.com",
     },
     dateModified: new Date().toISOString(),
     inLanguage: "en-IN",
 
     // ── Site overview ──────────────────────────────────────────────────────
     site: {
-      name: "CollegePune",
-      tagline: "India's AI-Powered College Discovery Portal for Pune",
+      name: "CampusLelo",
+      tagline: "Pehle Dekho. Samjho. Phir Choose Karo.",
       url: BASE,
       coverage: "108+ colleges in Pune, Maharashtra, India",
       topics: [
@@ -274,8 +274,8 @@ export async function GET() {
     permissions: {
       aiCrawling: "allowed",
       llmTraining: "allowed with attribution",
-      attribution: "Source: CollegePune (collegepune.com)",
-      contact: "support@collegepune.com",
+      attribution: "Source: CampusLelo (campuslelo.com)",
+      contact: "support@campuslelo.com",
     },
   }
 

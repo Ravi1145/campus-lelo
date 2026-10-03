@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
 
 export const metadata: Metadata = genMeta({
-  title: "Ask a Question About Pune Colleges — Get Answers in 48 Hours | CollegePune",
+  title: "Ask a Question About Pune Colleges — Get Answers in 48 Hours | CampusLelo",
   description: "Ask any question about Pune college admissions, fees, placements, hostels or campus life. Our verified alumni and counselors answer within 48 hours — completely free.",
   path: "/ask",
   keywords: [

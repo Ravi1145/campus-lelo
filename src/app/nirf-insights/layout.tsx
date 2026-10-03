@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
 
 export const metadata: Metadata = genMeta({
-  title: "NIRF Rankings 2026 — Pune Colleges | Rank, Score & Insights | CollegePune",
+  title: "NIRF Rankings 2026 — Pune Colleges | Rank, Score & Insights | CampusLelo",
   description: "Explore NIRF 2026 rankings for Pune colleges. Compare COEP (Rank 49), SIBM (Rank 13), AFMC (Rank 4), VIT Pune (Rank 101) and 25+ colleges by NIRF scores across Teaching, Research, Placements and Perception.",
   path: "/nirf-insights",
   keywords: [

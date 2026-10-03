@@ -554,7 +554,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                     </p>
                   )}
                   <p className="text-xs text-gray-400 pt-1">
-                    Source: collegepune.com · Data verified April 2026
+                    Source: campuslelo.com · Data verified April 2026
                   </p>
                 </section>
               </>

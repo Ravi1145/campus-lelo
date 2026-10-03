@@ -158,7 +158,7 @@ export default async function CutoffPage({ params }: Props) {
     "@type": "Dataset",
     name: `${data.college_short} ${examLabel} Cutoff 2020–2026`,
     description: `Year-wise ${examLabel} cutoff data for ${data.college_name} (${data.college_short}) in Pune from 2020 to 2026. Data includes Open, OBC, SC, and ST category cutoffs.`,
-    publisher: { "@type": "Organization", name: "CollegePune", url: "https://collegepune.com" },
+    publisher: { "@type": "Organization", name: "CampusLelo", url: process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com" },
     temporalCoverage: "2020/2026",
     keywords: [`${examLabel} cutoff`, data.college_short, "Pune", "admissions 2026"],
   }

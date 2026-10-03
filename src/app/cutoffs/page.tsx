@@ -5,7 +5,7 @@ import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchem
 import { cutoffsData, examLabels, streamLabels } from "@/data/cutoffs"
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Cutoffs 2026 | MHT-CET, JEE, NEET, SNAP | CollegePune",
+  title: "Pune College Cutoffs 2026 | MHT-CET, JEE, NEET, SNAP | CampusLelo",
   description: "Year-wise cutoffs 2020–2026 for top Pune colleges. MHT-CET, JEE Main, NEET, SNAP, CAT cutoffs for COEP, PICT, SIBM, AFMC, BJ Medical. Check your admission chances free.",
   path: "/cutoffs",
   keywords: [
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "Can I get admission in Pune engineering college with 90 percentile MHT-CET?",
-    answer: "With 90 percentile MHT-CET, you can get: VIT Pune (CSE/IT — 2nd round), MIT-WPU (most branches), SIT Pune (Civil, Mechanical), JSPM Narhe (CSE/IT), Sinhgad Institute of Technology. COEP (97+) and PICT (97+) are out of range. Use CollegePune's College Predictor for a personalized list.",
+    answer: "With 90 percentile MHT-CET, you can get: VIT Pune (CSE/IT — 2nd round), MIT-WPU (most branches), SIT Pune (Civil, Mechanical), JSPM Narhe (CSE/IT), Sinhgad Institute of Technology. COEP (97+) and PICT (97+) are out of range. Use CampusLelo's College Predictor for a personalized list.",
   },
   {
     question: "What NEET score is needed for AFMC Pune?",
