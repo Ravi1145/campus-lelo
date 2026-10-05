@@ -1,8 +1,8 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { cutoffsData, examLabels, streamLabels } from "@/data/cutoffs"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Cutoffs 2026 | MHT-CET, JEE, NEET, SNAP | CampusLelo",
@@ -69,12 +69,12 @@ export default function CutoffsPage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#0D3B2E] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#0D3B2E] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -109,7 +109,7 @@ export default function CutoffsPage() {
                       <span className="text-2xl">{exam.icon}</span>
                       <div>
                         <h3 className="font-extrabold text-gray-900 text-base">{exam.label}</h3>
-                        <span className="text-[11px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{exam.stream}</span>
+                        <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{exam.stream}</span>
                       </div>
                     </div>
                     <p className="text-sm text-gray-500 mb-3">{exam.desc}</p>
@@ -151,12 +151,12 @@ export default function CutoffsPage() {
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-bold text-gray-900 text-sm">{c.college_short}</span>
-                      <span className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-semibold">
+                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-semibold">
                         {examLabels[c.exam] ?? c.exam.toUpperCase()}
                       </span>
                     </div>
-                    <p className="text-[11px] text-gray-400 mb-2 truncate">{c.college_name}</p>
-                    <div className="flex gap-2 text-[11px]">
+                    <p className="text-xs text-gray-400 mb-2 truncate">{c.college_name}</p>
+                    <div className="flex gap-2 text-xs">
                       <span className="text-blue-700 font-semibold">Open: {latest.open}</span>
                       <span className="text-orange-700">OBC: {latest.obc}</span>
                       <span className="text-green-700">SC: {latest.sc}</span>
@@ -184,7 +184,7 @@ export default function CutoffsPage() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-center">
             <h2 className="text-xl font-extrabold text-white mb-2">Know Your Exact Chances in 30 Seconds</h2>
             <p className="text-gray-300 text-sm mb-4">Enter your score and get a personalized college shortlist based on 2026 cutoffs.</p>
             <div className="flex flex-wrap gap-3 justify-center">

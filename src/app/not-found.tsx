@@ -24,7 +24,7 @@ export default function NotFound() {
       {/* Hero */}
       <div
         className="py-20 px-4 text-center"
-        style={{ background: "linear-gradient(135deg, #0A1628 0%, #1E3A5F 100%)" }}
+        style={{ background: "linear-gradient(135deg, #011B40 0%, #024692 100%)" }}
       >
         {/* 404 number */}
         <div
@@ -116,7 +116,7 @@ export default function NotFound() {
         {/* Help section */}
         <div
           className="rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ background: "linear-gradient(135deg, #0A1628, #1E3A5F)" }}
+          style={{ background: "linear-gradient(135deg, #011B40, #024692)" }}
         >
           <div className="text-white text-center sm:text-left">
             <p className="font-bold text-lg flex items-center gap-2 justify-center sm:justify-start">

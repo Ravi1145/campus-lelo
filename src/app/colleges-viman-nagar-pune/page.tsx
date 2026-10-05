@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Viman Nagar Pune 2025-26 | Engineering, MBA & IT Colleges",
@@ -34,11 +34,11 @@ export default function CollegesVimanNagarPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="bg-surface min-h-screen">
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -100,16 +100,13 @@ export default function CollegesVimanNagarPune() {
                 { label: "Kothrud", href: "/colleges-kothrud-pune" },
                 { label: "Wakad", href: "/colleges-wakad-pune" },
                 { label: "Hadapsar", href: "/colleges-hadapsar-pune" },
-                { label: "Kharadi", href: "/colleges-kharadi-pune" },
-                { label: "Aundh", href: "/colleges-aundh-pune" },
-                { label: "Baner", href: "/colleges-baner-pune" },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors">{l.label}</Link>
               ))}
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-6 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Need Help Finding a College?</h2>
             <p className="text-gray-300 text-sm mb-4">Free Pune college counselling — personalised in 15 minutes.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors inline-block">Free Counselling →</Link>

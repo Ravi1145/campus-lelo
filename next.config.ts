@@ -60,11 +60,12 @@ const nextConfig: NextConfig = {
       { source: "/best-engineering-colleges-pune", destination: "/engineering-colleges-pune", permanent: true },
       { source: "/best-mba-colleges-pune", destination: "/mba-colleges-pune", permanent: true },
       { source: "/arts-and-science-colleges-pune", destination: "/arts-colleges-pune", permanent: true },
-      // NOTE: /science-colleges-pune, /commerce-colleges-pune, /bcom-colleges-pune have standalone pages — do NOT redirect
-      { source: "/bsc-colleges-pune", destination: "/arts-colleges-pune", permanent: true },
+      // NOTE: /science-colleges-pune, /commerce-colleges-pune, /bcom-colleges-pune, /bsc-colleges-pune have standalone pages — do NOT redirect
       { source: "/ba-colleges-pune", destination: "/arts-colleges-pune", permanent: true },
       { source: "/bsc-computer-science-colleges-pune", destination: "/bsc-it-colleges-pune", permanent: true },
       { source: "/computer-science-colleges-pune", destination: "/bsc-it-colleges-pune", permanent: true },
+      // CAT city page consolidated (duplicate intent) — 2026-10-04
+      { source: "/cat-colleges-pune", destination: "/mba-colleges-in-pune-accepting-cat", permanent: true },
       // Architecture aliases
       { source: "/architecture-college-pune", destination: "/architecture-colleges-pune", permanent: true },
       { source: "/b-arch-colleges-pune", destination: "/architecture-colleges-pune", permanent: true },
@@ -145,13 +146,35 @@ const nextConfig: NextConfig = {
       { source: "/colleges/bharati-vidyapeeth-institute-pune", destination: "/colleges/bharati-vidyapeeth-college-engineering-pune", permanent: true },
       // BATU School
       { source: "/colleges/batu-school-management-studies-pune", destination: "/mba-colleges-pune", permanent: true },
+      // /colleges-in-pune/* topic pages that duplicate a standalone page
+      { source: "/colleges-in-pune/cat-mba-colleges-pune", destination: "/mba-colleges-in-pune-accepting-cat", permanent: true },
+      { source: "/colleges-in-pune/colleges-in-kothrud-pune", destination: "/colleges-kothrud-pune", permanent: true },
+      { source: "/colleges-in-pune/colleges-in-hinjewadi-pune", destination: "/colleges-hinjewadi-pune", permanent: true },
+      { source: "/colleges-in-pune/colleges-in-hadapsar-pune", destination: "/colleges-hadapsar-pune", permanent: true },
+      { source: "/colleges-in-pune/hostel-facility-colleges-pune", destination: "/colleges-in-pune-with-hostel", permanent: true },
+      { source: "/colleges-in-pune/mba-finance-colleges-pune", destination: "/mba-colleges-in-pune-for-finance", permanent: true },
+      { source: "/colleges-in-pune/mba-marketing-colleges-pune", destination: "/mba-colleges-in-pune-for-marketing", permanent: true },
+      { source: "/colleges-in-pune/btech-computer-science-colleges-pune", destination: "/computer-engineering-colleges-pune", permanent: true },
+      // Comparison URLs that used a wrong SIBM slug (never resolved)
+      { source: "/compare/mit-wpu-mit-world-peace-university-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
+      { source: "/compare/symbiosis-institute-of-business-management-sibm-vs-mit-wpu-mit-world-peace-university", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
+      { source: "/compare/flame-university-pune-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/flame-university-pune-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
+      // /city/pune/[stream] duplicates the stream landing pages and is not linked anywhere
+      { source: "/city/pune/engineering", destination: "/engineering-colleges-pune", permanent: true },
+      { source: "/city/pune/mba", destination: "/mba-colleges-pune", permanent: true },
+      { source: "/city/pune/management", destination: "/mba-colleges-pune", permanent: true },
+      { source: "/city/pune/medical", destination: "/medical-colleges-pune", permanent: true },
+      { source: "/city/pune/law", destination: "/law-colleges-pune", permanent: true },
+      { source: "/city/pune/commerce", destination: "/commerce-colleges-pune", permanent: true },
+      { source: "/city/pune/arts-science", destination: "/arts-colleges-pune", permanent: true },
+      { source: "/city/pune/architecture", destination: "/architecture-colleges-pune", permanent: true },
     ]
   },
   async headers() {
     return [
       // Security headers — applied site-wide
       {
-        source: "/(.*)",
+        source: "/((?!embed/).*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
@@ -178,12 +201,21 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      // Tell Google to index all public pages + add Last-Modified for crawl freshness
+      // Tell Google to index all public pages
       {
-        source: "/((?!admin|api).*)",
+        source: "/((?!admin|api|embed/).*)",
         headers: [
           { key: "X-Robots-Tag", value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
-          { key: "Last-Modified", value: new Date().toUTCString() },
+        ],
+      },
+      // Embeddable widgets (/embed/*): may be framed by other sites; noindex; minimal CSP
+      {
+        source: "/embed/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Robots-Tag", value: "noindex, follow" },
+          { key: "Content-Security-Policy", value: "default-src 'none'; style-src 'unsafe-inline'; img-src data:; frame-ancestors *; base-uri 'none'; form-action 'none'" },
         ],
       },
       // Block indexing of admin

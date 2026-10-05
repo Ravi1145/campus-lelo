@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import Script from "next/script"
 import Link from "next/link"
 import { colleges, getCollegeBySlug } from "@/data/colleges"
 
@@ -9,6 +8,7 @@ import { getCollegeBySlug as getDBCollege, DBCollege, CollegeDetails } from "@/l
 import CollegeProfile from "@/components/colleges/CollegeProfile"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateCollegeSchema, generateCollegeWebPageSchema, generateFAQSchema, generateHowToSchema } from "@/lib/seo"
 import type { College } from "@/types"
+import { safeJsonLd } from "@/lib/jsonld"
 
 // ─── details normalisation helpers ────────────────────────────────────────────
 // The admin form saves plain text; the structured CollegeDetails type expects
@@ -424,12 +424,12 @@ export default async function CollegePage({ params }: Props) {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="college-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collegeSchema) }} />
-      <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="college-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(collegeSchema) }} />
+      <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       {howToSchema && (
-        <Script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+        <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(howToSchema) }} />
       )}
       <div className="bg-surface min-h-screen">
         <CollegeProfile college={college} details={details} />

@@ -74,7 +74,7 @@ export default function AskPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-10">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link>

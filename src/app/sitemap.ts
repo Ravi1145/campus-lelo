@@ -5,6 +5,8 @@ import { exams } from "@/data/exams"
 import { courses } from "@/data/courses"
 import { getAllCutoffParams } from "@/data/cutoffs"
 import { seoPages as seoPageData } from "@/data/seoPages"
+import { mbaExams, getMbaExam, EXAM_TOPICS, prepPageIndexable, type ExamTopic } from "@/data/mba/exams"
+import { collegesPageIndexable } from "@/data/mba/programAdmissions"
 import { createClient } from "@supabase/supabase-js"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -12,15 +14,15 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages â€" lastModified reflects when content was meaningfully last changed
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL,                               lastModified: "2026-06-01", changeFrequency: "daily",   priority: 1.0 },
-    { url: `${BASE_URL}/colleges`,                 lastModified: "2026-06-01", changeFrequency: "daily",   priority: 0.9 },
+    { url: BASE_URL,                               lastModified: "2026-10-05", changeFrequency: "daily",   priority: 1.0 },
+    { url: `${BASE_URL}/colleges`,                 lastModified: "2026-10-05", changeFrequency: "daily",   priority: 0.9 },
     { url: `${BASE_URL}/colleges-in-pune`,         lastModified: "2026-06-01", changeFrequency: "daily",   priority: 0.9 },
     { url: `${BASE_URL}/blog`,                     lastModified: new Date(),   changeFrequency: "daily",   priority: 0.8 },
     { url: `${BASE_URL}/exams`,                    lastModified: "2026-04-01", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/courses`,                  lastModified: "2026-04-01", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/ai-finder`,                lastModified: "2026-03-01", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/compare`,                  lastModified: "2026-04-01", changeFrequency: "weekly",  priority: 0.7 },
-    { url: `${BASE_URL}/counselling`,              lastModified: "2026-03-01", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/counselling`,              lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/predictor`,                lastModified: "2026-04-01", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/roi-calculator`,           lastModified: "2026-03-01", changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/nirf-insights`,            lastModified: "2026-04-01", changeFrequency: "monthly", priority: 0.7 },
@@ -39,8 +41,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }))
 
+  // Colleges that live only in the database (e.g. Noida / Greater Noida / Ghaziabad profiles)
+  let dbCollegePages: MetadataRoute.Sitemap = []
+  try {
+    const dbClient = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+      { auth: { autoRefreshToken: false, persistSession: false } }
+    )
+    const { data, error } = await dbClient.from("colleges").select("slug, updated_at").eq("status", "published").limit(2000)
+    if (!error && data) {
+      const staticSlugs = new Set(colleges.map((c) => c.slug))
+      dbCollegePages = (data as { slug?: string; updated_at?: string }[])
+        .filter((c) => c.slug && !staticSlugs.has(c.slug))
+        .map((c) => ({
+          url: `${BASE_URL}/colleges/${c.slug}`,
+          lastModified: c.updated_at || "2026-06-01",
+          changeFrequency: "weekly" as const,
+          priority: 0.8,
+        }))
+    }
+  } catch {
+    dbCollegePages = []
+  }
+
   // Blog pages â€" Supabase first, fall back to static
-  let blogSlugs: string[] = []
+  // Real per-post modified dates — a constant new Date() tells Google every post changed today
+  let blogEntries: { slug: string; updated: string | Date }[] = []
   try {
     const adminClient = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -49,18 +76,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     )
     const { data, error } = await adminClient
       .from("blogs")
-      .select("slug")
+      .select("slug, updated_at, published_at")
       .eq("status", "published")
       .order("updated_at", { ascending: false })
       .limit(500)
     if (error || !data?.length) throw new Error("empty")
-    blogSlugs = data.map((b: { slug: string }) => b.slug)
+    blogEntries = data.map((b: { slug: string; updated_at?: string; published_at?: string }) => ({
+      slug: b.slug,
+      updated: b.updated_at || b.published_at || "2026-06-01",
+    }))
   } catch {
-    blogSlugs = staticBlogs.map((b) => b.slug)
+    blogEntries = []
   }
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+  // Static posts are always served by /blog/[slug] (DB first, static fallback),
+  // so include any static slug the DB doesn't already list.
+  const dbSlugs = new Set(blogEntries.map((b) => b.slug))
+  blogEntries.push(...staticBlogs
+    .filter((b) => !dbSlugs.has(b.slug))
+    .map((b) => ({ slug: b.slug, updated: b.date || "2026-06-01" })))
+  const blogPages: MetadataRoute.Sitemap = blogEntries.map(({ slug, updated }) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: updated,
     changeFrequency: "monthly" as const,
     priority: 0.75,
   }))
@@ -121,13 +157,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/ai-counselor`,                              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/career-paths`,                              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     // Engineering deep-dives
-    { url: `${BASE_URL}/top-engineering-colleges-pune`,             lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/btech-colleges-pune`,                       lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/computer-engineering-colleges-pune`,        lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mechanical-engineering-colleges-pune`,      lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     // MBA deep-dives
-    { url: `${BASE_URL}/best-mba-colleges-pune`,                    lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/pgdm-colleges-pune`,                        lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/mba-in-pune`,                               lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/pgdm-in-pune`,                              lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
     // Medical
     { url: `${BASE_URL}/mbbs-colleges-pune`,                        lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/neet-colleges-pune`,                        lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
@@ -140,7 +175,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Entrance exam clusters
     { url: `${BASE_URL}/mht-cet-colleges-pune`,                     lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/jee-colleges-pune`,                         lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/cat-colleges-pune`,                         lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     // Streams
     { url: `${BASE_URL}/science-colleges-pune`,                     lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/commerce-colleges-pune`,                    lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
@@ -172,12 +206,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/mba-colleges-in-pune-under-20-lakh`,                  lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-colleges-in-pune-low-fees`,                       lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-colleges-in-pune-scholarship`,                    lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/mba-colleges-in-pune-accepting-cat`,                  lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/mba-colleges-in-pune-accepting-cat`,                  lastModified: "2026-10-04", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-cmat`,                 lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-mh-cet`,               lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.95 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-mat`,                  lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-xat`,                  lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-gmat`,                 lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/mba-colleges-in-pune-accepting-snap`,                 lastModified: "2026-10-04", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/mba`,                                              lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/mba-exam-calendar`,                                  lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/press`,                                              lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/mba-cutoff-delhi-ncr`,                                 lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/editorial-policy`,                                     lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.4 },
     { url: `${BASE_URL}/mba-colleges-in-pune-without-entrance-exam`,          lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.88 },
     { url: `${BASE_URL}/mba-colleges-in-pune-direct-admission`,               lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/mba-colleges-in-pune-for-marketing`,                  lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.9 },
@@ -224,23 +265,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // NEW: location pages
     { url: `${BASE_URL}/colleges-hinjewadi-pune`,                   lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/colleges-viman-nagar-pune`,                 lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/colleges-aundh-pune`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/colleges-baner-pune`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/colleges-kharadi-pune`,                    lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/colleges-nigdi-pune`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.8 },
     // ── Noida / UP pages ──────────────────────────────────────────────────────
-    { url: `${BASE_URL}/colleges-in-noida`,                        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
-    { url: `${BASE_URL}/engineering-colleges-noida`,               lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
-    { url: `${BASE_URL}/mba-colleges-noida`,                       lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
-    { url: `${BASE_URL}/bca-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/bba-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/law-colleges-noida`,                       lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/design-colleges-noida`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/medical-colleges-greater-noida`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/government-colleges-noida`,                lastModified: new Date(), changeFrequency: "monthly", priority: 0.88 },
-    { url: `${BASE_URL}/aktu-colleges-noida`,                      lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
-    { url: `${BASE_URL}/colleges-noida-with-hostel`,               lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/pune-vs-noida-colleges`,                   lastModified: new Date(), changeFrequency: "monthly", priority: 0.88 },
+    { url: `${BASE_URL}/colleges-in-noida`,                        lastModified: "2026-06-10", changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE_URL}/engineering-colleges-noida`,               lastModified: "2026-06-10", changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE_URL}/mba-colleges-noida`,                       lastModified: "2026-06-10", changeFrequency: "weekly",  priority: 0.90 },
+    { url: `${BASE_URL}/mba-in-noida`,                             lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/colleges-in-greater-noida`,                lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/pgdm-colleges-noida`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
   ]
 
   // Cutoff pages â€" one per [exam, college] pair
@@ -254,13 +285,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }))
 
-  // Exam detail pages
-  const examPages: MetadataRoute.Sitemap = exams.map((e) => ({
-    url: `${BASE_URL}/exams/${e.name.toLowerCase().replace(/\s+/g, "-")}`,
-    lastModified: "2026-05-01",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }))
+  // Exam detail pages — non-MBA exams (MHT-CET, JEE, NEET…) from the legacy list
+  const examPages: MetadataRoute.Sitemap = exams
+    .map((e) => e.name.toLowerCase().replace(/\s+/g, "-"))
+    .filter((slug) => !getMbaExam(slug))
+    .map((slug) => ({
+      url: `${BASE_URL}/exams/${slug}`,
+      lastModified: "2026-05-01",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }))
+
+  // MBA/PGDM exam hubs + sub-pages (noindexed "colleges" pages excluded)
+  const mbaExamPages: MetadataRoute.Sitemap = mbaExams.flatMap((exam) => [
+    { url: `${BASE_URL}/exams/${exam.slug}`, lastModified: exam.lastReviewed, changeFrequency: "weekly" as const, priority: 0.9 },
+    ...(Object.keys(EXAM_TOPICS) as ExamTopic[])
+      .filter((topic) => (topic !== "colleges" || collegesPageIndexable(exam)) && (topic !== "preparation" || prepPageIndexable(exam)))
+      .map((topic) => ({
+        url: `${BASE_URL}/exams/${exam.slug}/${topic}`,
+        lastModified: exam.lastReviewed,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      })),
+  ])
 
   // Course detail pages
   const courseDetailPages: MetadataRoute.Sitemap = courses.map((c) => ({
@@ -279,16 +326,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  const alumniPages: MetadataRoute.Sitemap = [
-    "alumni", "alumni/rahul-sharma-coep-2023", "alumni/priya-desai-sibm-2022",
-    "alumni/aditya-kulkarni-pict-2023", "alumni/sneha-patil-afmc-2021",
-    "alumni/karan-mehta-vit-2023", "alumni/ananya-joshi-mit-wpu-2022",
-  ].map((path) => ({
-    url: `${BASE_URL}/${path}`,
-    lastModified: "2026-05-01",
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }))
+  // Alumni pages are noindex until profiles are verified — kept out of the sitemap
 
   // Slugs that 301-redirect to a canonical standalone page - exclude from sitemap
   const REDIRECTED_SLUGS = new Set([
@@ -304,6 +342,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "bsc-it-colleges-pune", "pharmacy-colleges-pune", "architecture-colleges-pune",
     "bcom-colleges-pune", "sppu-affiliated-colleges-pune",
     "top-10-engineering-colleges-in-pune", "top-10-mba-colleges-in-pune", "top-10-medical-colleges-in-pune",
+    "private-colleges-pune", "autonomous-colleges-pune",
+    // Redirected to a standalone page (next.config.ts)
+    "cat-mba-colleges-pune", "colleges-in-kothrud-pune", "colleges-in-hinjewadi-pune", "colleges-in-hadapsar-pune",
+    "hostel-facility-colleges-pune", "mba-finance-colleges-pune", "mba-marketing-colleges-pune", "btech-computer-science-colleges-pune",
   ])
 
   // /colleges-in-pune/[slug] â€" only include pages that don't redirect
@@ -311,7 +353,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((p) => !REDIRECTED_SLUGS.has(p.slug))
     .map((p) => ({
       url: `${BASE_URL}/colleges-in-pune/${p.slug}`,
-      lastModified: new Date(),
+      lastModified: "2026-06-01",
       changeFrequency: "monthly" as const,
       priority: 0.75,
     }))
@@ -328,7 +370,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic comparison pages
   const { COMPARISON_PAIRS } = await import("@/app/compare/[slug]/page")
-  const comparisonPages: MetadataRoute.Sitemap = COMPARISON_PAIRS.map(([a, b]) => ({
+  const knownSlugs = new Set(colleges.map((c) => c.slug))
+  const comparisonPages: MetadataRoute.Sitemap = COMPARISON_PAIRS.filter(([a, b]) => knownSlugs.has(a) && knownSlugs.has(b)).map(([a, b]) => ({
     url: `${BASE_URL}/compare/${a}-vs-${b}`,
     lastModified: "2026-06-10",
     changeFrequency: "monthly" as const,
@@ -339,6 +382,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPages,
     ...seoPages,
     ...collegePages,
+    ...dbCollegePages,
     ...collegeSubPages,
     ...comparisonPages,
     ...collegesInPunePages,
@@ -346,8 +390,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...cutoffIndexPage,
     ...cutoffPages,
     ...examPages,
+    ...mbaExamPages,
     ...courseDetailPages,
     ...careerPathPages,
-    ...alumniPages,
   ]
 }

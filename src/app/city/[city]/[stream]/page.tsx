@@ -5,6 +5,7 @@ import { colleges } from "@/data/colleges"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { getCityPage } from "@/lib/db"
 import { MapPin, GraduationCap, ArrowRight, Star, Building } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 const VALID_CITIES  = ["pune", "mumbai", "nagpur", "nashik", "aurangabad", "kolhapur", "solapur", "amravati", "thane", "navi-mumbai"]
 const VALID_STREAMS = ["engineering", "mba", "medical", "law", "arts-science", "management", "architecture", "commerce"]
@@ -102,13 +103,13 @@ export default async function CityStreamPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)) }} />
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema(breadcrumbs)) }} />
       <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }} />
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
-        <div className="bg-[#0A1628] text-white">
+        <div className="bg-[#011B40] text-white">
           <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
             <nav className="flex items-center gap-2 text-xs text-blue-300 mb-6">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -176,12 +177,12 @@ export default async function CityStreamPage({ params }: Props) {
                             <div className="flex items-center gap-2 mb-1">
                               <span className="text-xs font-bold text-gray-400">#{index + 1}</span>
                               {college.naac && (
-                                <span className="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold rounded">
+                                <span className="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-xs font-bold rounded">
                                   NAAC {college.naac}
                                 </span>
                               )}
                               {college.type && (
-                                <span className="px-1.5 py-0.5 bg-gray-100 text-gray-600 text-[10px] rounded capitalize">
+                                <span className="px-1.5 py-0.5 bg-gray-100 text-gray-600 text-xs rounded capitalize">
                                   {college.type}
                                 </span>
                               )}
@@ -194,7 +195,7 @@ export default async function CityStreamPage({ params }: Props) {
                             <div className="flex items-center gap-4 mt-2.5">
                               {college.feesRange && (
                                 <div>
-                                  <p className="text-[10px] text-gray-400 uppercase font-medium">Annual Fees</p>
+                                  <p className="text-xs text-gray-400 uppercase font-medium">Annual Fees</p>
                                   <p className="text-sm font-semibold text-gray-800">
                                     ₹{(college.feesRange.min / 100000).toFixed(1)}L – ₹{(college.feesRange.max / 100000).toFixed(1)}L
                                   </p>
@@ -202,7 +203,7 @@ export default async function CityStreamPage({ params }: Props) {
                               )}
                               {college.avgPlacement > 0 && (
                                 <div>
-                                  <p className="text-[10px] text-gray-400 uppercase font-medium">Avg Package</p>
+                                  <p className="text-xs text-gray-400 uppercase font-medium">Avg Package</p>
                                   <p className="text-sm font-semibold text-gray-800">
                                     ₹{(college.avgPlacement / 100000).toFixed(1)} LPA
                                   </p>

@@ -41,6 +41,10 @@ const streams = [
       { name: "Top 10 MBA Colleges →",      href: "/top-10-mba-colleges-in-pune" },
       { name: "MBA Finance →",              href: "/mba-colleges-in-pune-for-finance" },
       { name: "MBA HR →",                   href: "/mba-colleges-in-pune-for-hr" },
+      { name: "MBA Colleges Accepting CAT →", href: "/mba-colleges-in-pune-accepting-cat" },
+      { name: "All MBA guides →",             href: "/mba" },
+      { name: "MBA vs PGDM →",              href: "/mba-vs-pgdm" },
+      { name: "MBA Cutoff Delhi NCR →",     href: "/mba-cutoff-delhi-ncr" },
       { name: "All MBA Colleges →",         href: "/colleges?stream=MBA" },
     ],
     courses: [
@@ -49,10 +53,12 @@ const streams = [
     ],
     exams: [
       { name: "CAT",  href: "/exams/cat" },
+      { name: "MAH MBA CET", href: "/exams/mah-mba-cet" },
       { name: "SNAP", href: "/exams/snap" },
-      { name: "MAT",  href: "/exams/mat" },
-      { name: "CMAT", href: "/exams/cmat" },
       { name: "XAT",  href: "/exams/xat" },
+      { name: "CMAT", href: "/exams/cmat" },
+      { name: "MAT",  href: "/exams/mat" },
+      { name: "NMAT", href: "/exams/nmat" },
     ],
   },
   {
@@ -199,23 +205,23 @@ export default function Header() {
     "h-full px-3.5 text-sm font-medium flex items-center gap-1 border-b-2 transition-colors whitespace-nowrap",
     activeDropdown === id
       ? "text-orange-500 border-orange-500"
-      : "text-[#1E2D4E] hover:text-orange-500 border-transparent"
+      : "text-[#012858] hover:text-orange-500 border-transparent"
   )
 
   return (
     <>
-      <header className={cn(
-        "fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-200",
+      <header style={{ top: "var(--leadbar-h, 0px)" }} className={cn(
+        "fixed left-0 right-0 z-50 header-glass transition-[box-shadow,top] duration-200",
         scrolled ? "shadow-md" : "border-b border-gray-100"
       )}>
 
         {/* ══ TOP BAR ══════════════════════════════════════════ */}
-        <div className="bg-white border-b border-gray-100">
+        <div className="bg-transparent border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[70px] flex items-center gap-4">
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 mr-3">
-              <Image src="/logo.webp" alt="CampusLelo — Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={220} className="h-12 w-auto" priority unoptimized />
+              <Image src="/logo.webp" alt="CampusLelo — Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-12 w-auto" priority unoptimized />
             </Link>
 
             {/* Search bar — desktop */}
@@ -234,7 +240,7 @@ export default function Header() {
                 />
                 <button type="submit"
                   className="px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                  style={{ background: "#F97316" }}>
+                  style={{ background: "#E0170F" }}>
                   Search
                 </button>
               </div>
@@ -244,38 +250,38 @@ export default function Header() {
             <div className="flex items-center gap-2 ml-auto">
               {/* Pune picker */}
               <button className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-medium transition-colors hover:bg-gray-50 flex-shrink-0"
-                style={{ border: "1.5px solid #E5E9F0", color: "#1E2D4E" }}>
-                <MapPin className="w-3.5 h-3.5" style={{ color: "#F97316" }} />
+                style={{ border: "1.5px solid #E5E9F0", color: "#012858" }}>
+                <MapPin className="w-3.5 h-3.5" style={{ color: "#E0170F" }} />
                 Pune
                 <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
               </button>
 
               {/* Compare */}
               <Link href="/compare" className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-medium transition-colors hover:bg-gray-50 flex-shrink-0"
-                style={{ border: "1.5px solid #E5E9F0", color: "#1E2D4E" }}>
+                style={{ border: "1.5px solid #E5E9F0", color: "#012858" }}>
                 <BarChart3 className="w-3.5 h-3.5" />
                 Compare
               </Link>
 
               {/* AI Finder */}
               <Link href="/ai-finder" className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 <Sparkles className="w-4 h-4" />
                 <span className="hidden lg:inline">AI Finder</span>
               </Link>
 
               {/* Free Counselling */}
               <Link href="/counselling" className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                style={{ background: "#1E2D4E" }}>
+                style={{ background: "#012858" }}>
                 <Headphones className="w-4 h-4" />
                 <span className="hidden lg:inline">Free Counselling</span>
               </Link>
 
               {/* Mobile: search icon + hamburger */}
-              <button className="md:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#1E2D4E" }} onClick={() => router.push("/colleges")}>
+              <button className="md:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
                 <Search className="w-5 h-5" />
               </button>
-              <button className="lg:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#1E2D4E" }} onClick={() => setMobileOpen(true)}>
+              <button className="lg:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
                 <Menu className="w-5 h-5" />
               </button>
             </div>
@@ -283,14 +289,14 @@ export default function Header() {
         </div>
 
         {/* ══ BOTTOM NAV (desktop) ══════════════════════════════ */}
-        <nav className="hidden lg:block bg-white border-b border-gray-100">
+        <nav className="hidden lg:block bg-transparent border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center h-11 gap-0">
 
               {/* Home */}
               <Link href="/" className={cn(
                 "h-full px-3.5 text-sm font-semibold flex items-center border-b-2 transition-colors",
-                pathname === "/" ? "text-orange-500 border-orange-500" : "text-[#1E2D4E] hover:text-orange-500 border-transparent"
+                pathname === "/" ? "text-orange-500 border-orange-500" : "text-[#012858] hover:text-orange-500 border-transparent"
               )}>Home</Link>
 
               {/* Stream dropdowns */}
@@ -304,16 +310,16 @@ export default function Header() {
                   {activeDropdown === stream.label && (
                     <div onMouseEnter={keep} onMouseLeave={close}
                       className="absolute top-full left-0 mt-0 w-[min(580px,calc(100vw-2rem))] bg-white rounded-b-2xl shadow-2xl z-50 p-5"
-                      style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #F97316" }}>
+                      style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
                       <div className="grid grid-cols-3 gap-6">
                         {/* Top Colleges */}
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
+                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
                             <Building2 className="w-3 h-3" /> Top Colleges
                           </p>
                           <ul className="space-y-1">
                             {(liveColleges[stream.label] ?? []).map((c, i) => (
-                              <li key={i}><Link href={c.href} className="block py-1 text-sm font-medium truncate transition-colors hover:text-orange-500" style={{ color: "#1E2D4E" }}>{c.name}</Link></li>
+                              <li key={i}><Link href={c.href} className="block py-1 text-sm font-medium truncate transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
                             ))}
                             {!liveColleges[stream.label] && (
                               <li>{[1,2,3].map(i => <div key={i} className="h-4 bg-gray-100 rounded animate-pulse mb-2 w-4/5" />)}</li>
@@ -326,26 +332,26 @@ export default function Header() {
                         </div>
                         {/* Courses */}
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
+                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
                             <BookOpen className="w-3 h-3" /> Courses
                           </p>
                           <ul className="space-y-1">
                             {stream.courses.map((c, i) => (
-                              <li key={i}><Link href={c.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#1E2D4E" }}>{c.name}</Link></li>
+                              <li key={i}><Link href={c.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
                             ))}
                           </ul>
                         </div>
                         {/* Exams */}
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
+                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
                             <Compass className="w-3 h-3" /> Exams
                           </p>
                           <ul className="space-y-1">
                             {stream.exams.map(e => (
-                              <li key={e.name}><Link href={e.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#1E2D4E" }}>{e.name}</Link></li>
+                              <li key={e.name}><Link href={e.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{e.name}</Link></li>
                             ))}
                           </ul>
-                          <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF7ED", color: "#F97316" }}>
+                          <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#E0170F" }}>
                             🎯 Predict your college →
                           </Link>
                         </div>
@@ -363,7 +369,7 @@ export default function Header() {
                 {activeDropdown === "tools" && (
                   <div onMouseEnter={keep} onMouseLeave={close}
                     className="absolute top-full left-0 mt-0 w-[min(440px,calc(100vw-2rem))] bg-white rounded-b-2xl shadow-2xl z-50 p-4"
-                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #F97316" }}>
+                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
                     <div className="grid grid-cols-2 gap-2">
                       {tools.map(t => (
                         <Link key={t.href} href={t.href} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
@@ -371,7 +377,7 @@ export default function Header() {
                             <t.icon className="w-4 h-4" />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold group-hover:text-orange-500 transition-colors" style={{ color: "#1E2D4E" }}>{t.label}</p>
+                            <p className="text-sm font-semibold group-hover:text-orange-500 transition-colors" style={{ color: "#012858" }}>{t.label}</p>
                             <p className="text-xs" style={{ color: "#94A3B8" }}>{t.desc}</p>
                           </div>
                         </Link>
@@ -389,12 +395,12 @@ export default function Header() {
                 {activeDropdown === "explore" && (
                   <div onMouseEnter={keep} onMouseLeave={close}
                     className="absolute top-full left-0 mt-0 w-72 bg-white rounded-b-2xl shadow-2xl z-50 p-2"
-                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #F97316" }}>
+                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
                     <div className="grid grid-cols-2 gap-0.5">
                       {explore.map(e => (
                         <Link key={e.href} href={e.href}
                           className="flex items-center gap-2.5 px-3 py-2.5 text-sm rounded-lg transition-colors hover:bg-orange-50 hover:text-orange-500"
-                          style={{ color: "#1E2D4E" }}>
+                          style={{ color: "#012858" }}>
                           <e.icon className="w-4 h-4 flex-shrink-0" style={{ color: "#94A3B8" }} />
                           {e.label}
                         </Link>
@@ -418,7 +424,7 @@ export default function Header() {
                   "h-full px-3 text-sm font-medium flex items-center border-b-2 transition-colors whitespace-nowrap",
                   pathname.startsWith(item.href)
                     ? "text-orange-500 border-orange-500"
-                    : "text-[#1E2D4E] hover:text-orange-500 border-transparent"
+                    : "text-[#012858] hover:text-orange-500 border-transparent"
                 )}>{item.label}</Link>
               ))}
 
@@ -436,9 +442,9 @@ export default function Header() {
             {/* Mobile header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
               <Link href="/" onClick={() => setMobileOpen(false)}>
-                <Image src="/logo.webp" alt="CampusLelo" height={44} width={185} className="h-10 w-auto" priority unoptimized />
+                <Image src="/logo.webp" alt="CampusLelo" height={44} width={146} className="h-10 w-auto" priority unoptimized />
               </Link>
-              <button onClick={() => setMobileOpen(false)} className="p-1.5 rounded-lg hover:bg-gray-100" style={{ color: "#1E2D4E" }}>
+              <button onClick={() => setMobileOpen(false)} className="p-1.5 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }}>
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -449,7 +455,7 @@ export default function Header() {
                 <div className="flex items-center pl-3"><Search className="w-4 h-4" style={{ color: "#94A3B8" }} /></div>
                 <input type="text" value={searchQuery} onChange={e => setSearchQuery(e.target.value)}
                   placeholder="Search colleges, courses..." className="flex-1 px-2 py-2.5 text-sm outline-none bg-white" />
-                <button type="submit" className="px-4 text-sm font-semibold text-white" style={{ background: "#F97316" }}>Go</button>
+                <button type="submit" className="px-4 text-sm font-semibold text-white" style={{ background: "#E0170F" }}>Go</button>
               </div>
             </form>
 
@@ -457,7 +463,7 @@ export default function Header() {
             <div className="flex-1 overflow-y-auto">
               <Link href="/" onClick={() => setMobileOpen(false)}
                 className="flex items-center px-4 py-3 text-sm font-semibold border-b border-gray-100 transition-colors"
-                style={{ color: pathname === "/" ? "#F97316" : "#1E2D4E" }}>Home</Link>
+                style={{ color: pathname === "/" ? "#E0170F" : "#012858" }}>Home</Link>
 
               {streams.map(stream => (
                 <div key={stream.label} className="border-b border-gray-100">
@@ -468,7 +474,7 @@ export default function Header() {
                       if (next) fetchStreamColleges(stream.label, stream.apiStream)
                     }}
                     className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold hover:bg-gray-50"
-                    style={{ color: "#1E2D4E" }}
+                    style={{ color: "#012858" }}
                   >
                     {stream.label}
                     <ChevronDown className={cn("w-4 h-4 transition-transform", mobileExpanded === stream.label && "rotate-180")} style={{ color: "#94A3B8" }} />
@@ -477,7 +483,7 @@ export default function Header() {
                     <div className="bg-gray-50 px-4 pb-3 space-y-1">
                       {(liveColleges[stream.label] ?? []).map((c, i) => (
                         <Link key={i} href={c.href} onClick={() => setMobileOpen(false)}
-                          className="block py-1.5 text-sm font-medium truncate hover:text-orange-500" style={{ color: "#1E2D4E" }}>{c.name}</Link>
+                          className="block py-1.5 text-sm font-medium truncate hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link>
                       ))}
                       {!liveColleges[stream.label] && <div className="space-y-1.5 py-1">{[1,2,3].map(i => <div key={i} className="h-4 bg-gray-200 rounded animate-pulse w-3/4" />)}</div>}
                       {stream.staticLinks.map((c, i) => (
@@ -492,7 +498,7 @@ export default function Header() {
               {/* Tools accordion */}
               <div className="border-b border-gray-100">
                 <button onClick={() => setMobileExpanded(mobileExpanded === "tools" ? null : "tools")}
-                  className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold hover:bg-gray-50" style={{ color: "#1E2D4E" }}>
+                  className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold hover:bg-gray-50" style={{ color: "#012858" }}>
                   Tools
                   <ChevronDown className={cn("w-4 h-4 transition-transform", mobileExpanded === "tools" && "rotate-180")} style={{ color: "#94A3B8" }} />
                 </button>
@@ -500,7 +506,7 @@ export default function Header() {
                   <div className="bg-gray-50 px-4 pb-3 space-y-0.5">
                     {tools.map(t => (
                       <Link key={t.href} href={t.href} onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-3 py-2 text-sm hover:text-orange-500" style={{ color: "#1E2D4E" }}>
+                        className="flex items-center gap-3 py-2 text-sm hover:text-orange-500" style={{ color: "#012858" }}>
                         <t.icon className="w-4 h-4" style={{ color: "#94A3B8" }} /> {t.label}
                       </Link>
                     ))}
@@ -519,7 +525,7 @@ export default function Header() {
               ].map(e => (
                 <Link key={e.href} href={e.href} onClick={() => setMobileOpen(false)}
                   className="flex items-center gap-3 px-4 py-3 text-sm font-medium border-b border-gray-100 hover:bg-gray-50 hover:text-orange-500"
-                  style={{ color: "#1E2D4E" }}>
+                  style={{ color: "#012858" }}>
                   <e.icon className="w-4 h-4" style={{ color: "#94A3B8" }} /> {e.label}
                 </Link>
               ))}
@@ -529,12 +535,12 @@ export default function Header() {
             <div className="p-3 border-t border-gray-100 grid grid-cols-2 gap-2">
               <Link href="/ai-finder" onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-bold text-white"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 <Sparkles className="w-4 h-4" /> AI Finder
               </Link>
               <Link href="/counselling" onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-bold text-white"
-                style={{ background: "#1E2D4E" }}>
+                style={{ background: "#012858" }}>
                 <Headphones className="w-4 h-4" /> Counselling
               </Link>
             </div>

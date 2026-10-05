@@ -1,0 +1,5 @@
+keyword,cluster,exam_slug,program_type,city,intent,funnel_stage,est_demand,est_difficulty,target_url,page_status,needs_verified_data,data_dependency,source_of_keyword,notes
+cat score vs percentile,cat-scores,cat,MBA|PGDM,,informational,consideration,high,hard,/exams/cat/score-vs-percentile,live,no,,serp-observation,Methodology page; no calculator by policy
+mba colleges in pune accepting cat,cat-colleges,cat,MBA|PGDM,Pune,commercial,decision,high,moderate,/mba-colleges-in-pune-accepting-cat,live,yes,programAdmissions.ts,keyword-research.json,Add verified programmes to strengthen
+pgdm colleges accepting xat in delhi ncr,xat-colleges,xat,PGDM,Delhi NCR,commercial,decision,medium,moderate,,planned,yes,verify NCR PGDM institutes,brief,Do not publish until >=3 verified programmes
+mah mba cet cap cutoff pune colleges,mahcet-cutoffs,mah-mba-cet,MBA,Pune,informational,decision,high,moderate,,planned,yes,CET Cell round-wise cut-off PDFs,brief,Historical only; label clearly

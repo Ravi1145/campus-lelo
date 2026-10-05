@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import Script from "next/script"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export function generateStaticParams() {
   return colleges.map(c => ({ slug: c.slug }))
@@ -59,12 +59,12 @@ export default async function CollegeAdmission({ params }: { params: Promise<{ s
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(howToSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }} />
 
       <div className="bg-surface min-h-screen">
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-10">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-3">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -173,7 +173,7 @@ export default async function CollegeAdmission({ params }: { params: Promise<{ s
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-6 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Need Help Getting Into {col.shortName}?</h2>
             <p className="text-gray-300 text-sm mb-4">Our counsellors know the exact admission process. Get free guidance today.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

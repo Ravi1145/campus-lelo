@@ -60,7 +60,7 @@ export default function StickyConversionBar() {
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-[200] shadow-2xl"
-      style={{ background: "linear-gradient(90deg, #0A1628 0%, #16324F 100%)" }}
+      style={{ background: "linear-gradient(90deg, #011B40 0%, #012858 100%)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3 sm:gap-4">
 
@@ -101,7 +101,7 @@ export default function StickyConversionBar() {
               type="submit"
               disabled={loading || phone.replace(/\D/g, "").length !== 10}
               className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-white font-bold text-xs transition-all hover:opacity-90 disabled:opacity-50 shrink-0 whitespace-nowrap"
-              style={{ background: "#F97316" }}
+              style={{ background: "#E0170F" }}
             >
               {loading ? "…" : (
                 <>Get Shortlist <ArrowRight className="w-3.5 h-3.5" /></>

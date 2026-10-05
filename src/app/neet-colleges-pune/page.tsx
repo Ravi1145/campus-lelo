@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "NEET Colleges in Pune 2026 | Medical Colleges | NEET Cutoffs & Seats",
@@ -52,9 +52,9 @@ export default function NeetCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <SEOLandingPage
         breadcrumb={[{ label: "NEET Colleges in Pune", href: "/neet-colleges-pune" }]}
         h1="NEET Colleges in Pune 2026"

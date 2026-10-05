@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { CheckCircle2, ChevronRight, Calendar, FileText, GraduationCap, Building2, BookOpen, AlertCircle, IndianRupee, Users, BarChart3 } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Admission Guide 2026 | Step-by-Step Process for All Streams",
@@ -53,9 +53,9 @@ const streams = [
       "Report to college and complete enrollment",
     ],
     topColleges: [
-      { name: "COEP Pune",   href: "/colleges/college-of-engineering-pune-coep", cutoff: "98.5+ percentile" },
-      { name: "VIT Pune",    href: "/colleges/vishwakarma-institute-of-technology-vit-pune", cutoff: "90+ percentile" },
-      { name: "MIT-WPU",     href: "/colleges/mit-world-peace-university-mitwpu", cutoff: "85+ percentile" },
+      { name: "COEP Pune",   href: "/colleges/coep-college-of-engineering-pune", cutoff: "98.5+ percentile" },
+      { name: "VIT Pune",    href: "/colleges/vit-pune-vishwakarma-institute-of-technology", cutoff: "90+ percentile" },
+      { name: "MIT-WPU",     href: "/colleges/mit-wpu-mit-world-peace-university", cutoff: "85+ percentile" },
       { name: "Cummins",     href: "/colleges/cummins-college-of-engineering-pune", cutoff: "88+ percentile" },
     ],
     fees: "₹1.5L – ₹4.5L per year (government approved). Management quota: ₹3L – ₹8L per year.",
@@ -65,7 +65,7 @@ const streams = [
     name: "MBA / PGDM",
     icon: GraduationCap,
     color: "bg-orange-50 text-orange-700 border-orange-200",
-    accent: "#F97316",
+    accent: "#E0170F",
     exams: ["CAT", "SNAP", "MAH-MBA-CET", "CMAT", "XAT"],
     eligibility: "Graduation in any stream with minimum 50% (45% for reserved). Final year students can also apply.",
     seats: "Most Pune MBA colleges accept CAT + MAH-CET + SNAP scores. Each college has its own cutoff.",
@@ -86,7 +86,7 @@ const streams = [
       "Complete document verification and enrollment",
     ],
     topColleges: [
-      { name: "SIBM Pune",  href: "/colleges/symbiosis-institute-of-business-management-sibm", cutoff: "CAT 98%ile / SNAP 98+" },
+      { name: "SIBM Pune",  href: "/colleges/sibm-symbiosis-institute-business-management-pune", cutoff: "CAT 98%ile / SNAP 98+" },
       { name: "SCMHRD",     href: "/colleges/scmhrd-symbiosis-centre-management-hrd", cutoff: "CAT 95%ile / SNAP 95+" },
       { name: "PUMBA",      href: "/mba-in-pune", cutoff: "MAH-MBA-CET 95+ %ile" },
       { name: "MIT-SOM",    href: "/mba-in-pune", cutoff: "CAT 70+ %ile" },
@@ -193,8 +193,8 @@ export default function AdmissionGuidePage() {
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <main className="min-h-screen bg-[#F6F8FB]">
 
@@ -207,8 +207,8 @@ export default function AdmissionGuidePage() {
               <span className="text-gray-600 font-medium">Admission Guide</span>
             </nav>
             <div className="max-w-2xl">
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#F97316" }}>— COMPLETE 2026 GUIDE</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#0B1226" }}>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#E0170F" }}>— COMPLETE 2026 GUIDE</p>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#011B40" }}>
                 Pune College Admission Guide 2026
               </h1>
               <p className="text-base text-gray-500 mb-6">
@@ -242,18 +242,18 @@ export default function AdmissionGuidePage() {
                   <div className="lg:col-span-2 space-y-4">
                     {/* Overview */}
                     <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                      <h2 className="text-lg font-bold mb-3" style={{ color: "#0B1226" }}>Eligibility & Process</h2>
+                      <h2 className="text-lg font-bold mb-3" style={{ color: "#011B40" }}>Eligibility & Process</h2>
                       <div className="space-y-3 text-sm text-gray-600">
-                        <p><span className="font-semibold" style={{ color: "#1E2D4E" }}>Eligibility:</span> {stream.eligibility}</p>
-                        <p><span className="font-semibold" style={{ color: "#1E2D4E" }}>Entrance Exams:</span> {stream.exams.join(", ")}</p>
-                        <p><span className="font-semibold" style={{ color: "#1E2D4E" }}>Seat Types:</span> {stream.seats}</p>
-                        <p><span className="font-semibold" style={{ color: "#1E2D4E" }}>Fee Range:</span> {stream.fees}</p>
+                        <p><span className="font-semibold" style={{ color: "#012858" }}>Eligibility:</span> {stream.eligibility}</p>
+                        <p><span className="font-semibold" style={{ color: "#012858" }}>Entrance Exams:</span> {stream.exams.join(", ")}</p>
+                        <p><span className="font-semibold" style={{ color: "#012858" }}>Seat Types:</span> {stream.seats}</p>
+                        <p><span className="font-semibold" style={{ color: "#012858" }}>Fee Range:</span> {stream.fees}</p>
                       </div>
                     </div>
 
                     {/* Steps */}
                     <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                      <h3 className="font-bold mb-4" style={{ color: "#0B1226" }}>Admission Process — Step by Step</h3>
+                      <h3 className="font-bold mb-4" style={{ color: "#011B40" }}>Admission Process — Step by Step</h3>
                       <ol className="space-y-3">
                         {stream.steps.map((step, i) => (
                           <li key={i} className="flex gap-3 text-sm text-gray-600">
@@ -268,12 +268,12 @@ export default function AdmissionGuidePage() {
 
                     {/* Top colleges */}
                     <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                      <h3 className="font-bold mb-3" style={{ color: "#0B1226" }}>Top Pune Colleges — Cutoffs 2025</h3>
+                      <h3 className="font-bold mb-3" style={{ color: "#011B40" }}>Top Pune Colleges — Cutoffs 2025</h3>
                       <div className="space-y-2">
                         {stream.topColleges.map((c, i) => (
                           <Link key={i} href={c.href}
                             className="flex items-center justify-between py-2.5 border-b border-gray-50 last:border-0 group">
-                            <span className="text-sm font-medium group-hover:text-orange-500 transition-colors" style={{ color: "#1E2D4E" }}>{c.name}</span>
+                            <span className="text-sm font-medium group-hover:text-orange-500 transition-colors" style={{ color: "#012858" }}>{c.name}</span>
                             <span className="text-xs text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full">{c.cutoff}</span>
                           </Link>
                         ))}
@@ -284,21 +284,21 @@ export default function AdmissionGuidePage() {
                   {/* Key dates */}
                   <div>
                     <div className="bg-white rounded-2xl p-5 border border-gray-100 sticky top-24">
-                      <h3 className="font-bold mb-4 flex items-center gap-2" style={{ color: "#0B1226" }}>
-                        <Calendar className="w-4 h-4" style={{ color: "#F97316" }} />
+                      <h3 className="font-bold mb-4 flex items-center gap-2" style={{ color: "#011B40" }}>
+                        <Calendar className="w-4 h-4" style={{ color: "#E0170F" }} />
                         Key Dates 2026
                       </h3>
                       <div className="space-y-3">
                         {stream.keyDates.map((d, i) => (
                           <div key={i} className="flex flex-col gap-0.5 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
-                            <span className="text-xs font-semibold" style={{ color: "#F97316" }}>{d.date}</span>
-                            <span className="text-sm" style={{ color: "#1E2D4E" }}>{d.event}</span>
+                            <span className="text-xs font-semibold" style={{ color: "#E0170F" }}>{d.date}</span>
+                            <span className="text-sm" style={{ color: "#012858" }}>{d.event}</span>
                           </div>
                         ))}
                       </div>
                       <Link href="/counselling"
                         className="mt-4 block text-center py-2.5 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90"
-                        style={{ background: "#F97316" }}>
+                        style={{ background: "#E0170F" }}>
                         Get Admission Help
                       </Link>
                     </div>
@@ -313,11 +313,11 @@ export default function AdmissionGuidePage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-100">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(249,115,22,0.1)" }}>
-                <FileText className="w-5 h-5" style={{ color: "#F97316" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(224, 23, 15,0.1)" }}>
+                <FileText className="w-5 h-5" style={{ color: "#E0170F" }} />
               </div>
               <div>
-                <h2 className="text-xl font-bold" style={{ color: "#0B1226" }}>Documents Checklist — Pune College Admissions</h2>
+                <h2 className="text-xl font-bold" style={{ color: "#011B40" }}>Documents Checklist — Pune College Admissions</h2>
                 <p className="text-sm text-gray-500">Required documents for all streams</p>
               </div>
             </div>
@@ -325,7 +325,7 @@ export default function AdmissionGuidePage() {
               {documents.map((doc, i) => (
                 <div key={i} className="flex items-start gap-2.5 p-2.5 rounded-xl bg-gray-50">
                   <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#22C55E" }} />
-                  <span className="text-sm" style={{ color: "#1E2D4E" }}>{doc}</span>
+                  <span className="text-sm" style={{ color: "#012858" }}>{doc}</span>
                 </div>
               ))}
             </div>
@@ -338,7 +338,7 @@ export default function AdmissionGuidePage() {
 
         {/* Quick links */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-          <h2 className="text-xl font-bold mb-4" style={{ color: "#0B1226" }}>Useful Admission Resources</h2>
+          <h2 className="text-xl font-bold mb-4" style={{ color: "#011B40" }}>Useful Admission Resources</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { title: "College Predictor",      desc: "Find colleges by your MHT-CET / JEE / NEET score",  href: "/predictor",      icon: GraduationCap, bg: "bg-blue-50 text-blue-700" },
@@ -353,7 +353,7 @@ export default function AdmissionGuidePage() {
                   <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${card.bg}`}>
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold mb-1 group-hover:text-orange-500 transition-colors" style={{ color: "#0B1226" }}>{card.title}</h3>
+                  <h3 className="font-bold mb-1 group-hover:text-orange-500 transition-colors" style={{ color: "#011B40" }}>{card.title}</h3>
                   <p className="text-xs text-gray-500 leading-snug">{card.desc}</p>
                 </Link>
               )
@@ -363,11 +363,11 @@ export default function AdmissionGuidePage() {
 
         {/* FAQs */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
-          <h2 className="text-2xl font-bold mb-6" style={{ color: "#0B1226" }}>Admission FAQs</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: "#011B40" }}>Admission FAQs</h2>
           <div className="space-y-4 max-w-3xl">
             {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 border border-gray-100">
-                <h3 className="font-semibold mb-2" style={{ color: "#0B1226" }}>{faq.question}</h3>
+                <h3 className="font-semibold mb-2" style={{ color: "#011B40" }}>{faq.question}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}

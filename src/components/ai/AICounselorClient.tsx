@@ -112,11 +112,11 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
   return (
     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
       {/* Chat header */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1A3A5F] px-4 py-3 flex items-center gap-3">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#024692] px-4 py-3 flex items-center gap-3">
         <div className="w-9 h-9 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center text-base">🤖</div>
         <div className="flex-1">
           <p className="font-extrabold text-white text-sm">Aarav — AI Career Counselor</p>
-          <p className="text-[11px] text-blue-300">Powered by Claude AI · Pune college specialist</p>
+          <p className="text-xs text-blue-300">Powered by Claude AI · Pune college specialist</p>
         </div>
         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
       </div>
@@ -206,7 +206,7 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
             </svg>
           </button>
         </div>
-        <p className="text-[10px] text-gray-400 text-center mt-2">Press Enter to send · Shift+Enter for new line</p>
+        <p className="text-xs text-gray-400 text-center mt-2">Press Enter to send · Shift+Enter for new line</p>
       </div>
     </div>
   )

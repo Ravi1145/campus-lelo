@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
 import BTechClusterPage from "@/components/btech/BTechClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune with Fees 2026 | Course-wise Fee Structure",
@@ -34,11 +34,11 @@ export default function BTechFeesPage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="bg-gray-50 min-h-screen">
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -161,7 +161,7 @@ export default function BTechFeesPage() {
             </div>
           </section>
 
-          <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help Comparing BTech Fees in Pune?</h2>
             <p className="text-gray-300 mb-5 text-sm">Free counselling to find the best college in your budget and MHT-CET score range.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg inline-block">Free Counselling →</Link>

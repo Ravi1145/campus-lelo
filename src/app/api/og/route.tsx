@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           width: "1200px",
           height: "630px",
-          background: "linear-gradient(135deg, #0A1628 0%, #1E3A5F 60%, #0d2744 100%)",
+          background: "linear-gradient(135deg, #011B40 0%, #024692 60%, #0d2744 100%)",
           fontFamily: "system-ui, -apple-system, sans-serif",
           position: "relative",
           overflow: "hidden",
@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
         />
 
         {/* Orange accent line top */}
-        <div style={{ display: "flex", height: "6px", background: "linear-gradient(90deg, #f97316, #ea580c)", width: "100%" }} />
+        <div style={{ display: "flex", height: "6px", background: "linear-gradient(90deg, #E0170F, #C90D11)", width: "100%" }} />
 
         {/* Content */}
         <div style={{ display: "flex", flexDirection: "column", flex: 1, padding: "56px 64px", justifyContent: "space-between" }}>
@@ -48,22 +48,22 @@ export async function GET(req: NextRequest) {
                 background: "#f8fafc",
                 borderRadius: "14px",
                 alignItems: "center", justifyContent: "center",
-                fontSize: "22px", fontWeight: 800, color: "#ff5a14",
+                fontSize: "22px", fontWeight: 800, color: "#FB4312",
                 border: "1px solid rgba(255,255,255,0.08)",
               }}>C</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: "0px", fontSize: "22px", fontWeight: 800, letterSpacing: "-0.5px" }}>
                 <span style={{ color: "white" }}>Campus</span>
-                <span style={{ color: "#ff5a14" }}>Lelo</span>
+                <span style={{ color: "#FB4312" }}>Lelo</span>
               </div>
             </div>
             {category && (
               <div style={{
                 display: "flex",
-                background: "rgba(249,115,22,0.2)",
-                border: "1px solid rgba(249,115,22,0.4)",
+                background: "rgba(224, 23, 15,0.2)",
+                border: "1px solid rgba(224, 23, 15,0.4)",
                 borderRadius: "999px",
                 padding: "6px 16px",
-                fontSize: "14px", fontWeight: 600, color: "#fb923c",
+                fontSize: "14px", fontWeight: 600, color: "#FF9E8A",
               }}>{category}</div>
             )}
           </div>
@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
               { label: "Free AI Counselling", value: "✓" },
             ].map(({ label, value }) => (
               <div key={label} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "24px", fontWeight: 800, color: "#f97316" }}>{value}</span>
+                <span style={{ fontSize: "24px", fontWeight: 800, color: "#E0170F" }}>{value}</span>
                 <span style={{ fontSize: "13px", color: "#64748b" }}>{label}</span>
               </div>
             ))}

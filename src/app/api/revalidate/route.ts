@@ -5,7 +5,7 @@
  * Secret must NOT be sent as a URL query param (logged by CDNs/Vercel).
  *
  * Usage:
- *   curl -X POST https://collegepune.com/api/revalidate \
+ *   curl -X POST https://campuslelo.com/api/revalidate \
  *     -H "Authorization: Bearer <REVALIDATE_SECRET>" \
  *     -H "Content-Type: application/json" \
  *     -d '{"path":"/blog/some-slug"}'

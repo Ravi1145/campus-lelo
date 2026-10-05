@@ -1,10 +1,10 @@
 ﻿"use client"
 import { useState, useMemo } from "react"
-import Script from "next/script"
 import { Award, TrendingUp, MapPin, ExternalLink, Filter, ChevronUp, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
 import { cn } from "@/lib/utils"
+import { safeJsonLd } from "@/lib/jsonld"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
@@ -114,9 +114,9 @@ export default function NIRFInsightsPage() {
 
   return (
     <div className="bg-surface min-h-screen">
-      <Script id="nirf-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nirfPageSchema) }} />
+      <script id="nirf-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(nirfPageSchema) }} />
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-12 px-4">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
             <Award className="w-3.5 h-3.5" /> NIRF &amp; NAAC INSIGHTS
@@ -299,7 +299,7 @@ export default function NIRFInsightsPage() {
                         <td className="px-5 py-3 text-xs text-gray-400">{idx + 1}</td>
                         <td className="px-2 sm:px-4 py-3">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 bg-[#0A1628] rounded-xl flex items-center justify-center text-white font-bold text-[10px] flex-shrink-0">
+                            <div className="w-9 h-9 bg-[#011B40] rounded-xl flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
                               {college.shortName.slice(0, 3)}
                             </div>
                             <div>
@@ -350,7 +350,7 @@ export default function NIRFInsightsPage() {
                         <td className="px-5 py-3 text-xs text-gray-300">—</td>
                         <td className="px-2 sm:px-4 py-3">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 font-bold text-[10px] flex-shrink-0">
+                            <div className="w-9 h-9 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 font-bold text-xs flex-shrink-0">
                               {college.shortName.slice(0, 3)}
                             </div>
                             <div>
@@ -399,13 +399,13 @@ export default function NIRFInsightsPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-6 bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-6 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-white">
             <p className="font-bold">Not sure which college to choose?</p>
             <p className="text-blue-200 text-sm">Use our College Predictor or talk to a free counsellor.</p>
           </div>
           <div className="flex gap-3">
-            <Link href="/predictor" className="bg-white text-[#0A1628] font-bold px-4 py-2.5 rounded-xl text-sm whitespace-nowrap transition-colors hover:bg-gray-100">
+            <Link href="/predictor" className="bg-white text-[#011B40] font-bold px-4 py-2.5 rounded-xl text-sm whitespace-nowrap transition-colors hover:bg-gray-100">
               College Predictor →
             </Link>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2.5 rounded-xl text-sm whitespace-nowrap transition-colors">

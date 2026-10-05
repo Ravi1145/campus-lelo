@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "PGDM in Pune 2026 | Best PGDM Colleges, Fees & Admission",
@@ -49,7 +50,7 @@ const COMPARISON = [
   { aspect: "Curriculum",      mba: "University-fixed syllabus",               pgdm: "Industry-driven, flexible curriculum"      },
   { aspect: "Top institutes",  mba: "SIBM, PUMBA, MIT-SOM",                   pgdm: "SCMHRD, FLAME, BIMM, MIT-SOB"             },
   { aspect: "Avg placement",   mba: "₹10–28 LPA (SIBM/PUMBA)",               pgdm: "₹9.5–22 LPA (BIMM/SCMHRD)"               },
-  { aspect: "Recognition",     mba: "Degree valid everywhere",                 pgdm: "Equivalent to MBA for jobs & higher study" },
+  { aspect: "Recognition",     mba: "Degree valid everywhere",                 pgdm: "Diploma; MBA-equivalent only if AIU has granted it to the programme" },
 ]
 
 const FAQS = [
@@ -89,13 +90,13 @@ export default function PGDMInPune() {
 
   return (
     <>
-      <Script id="faq-schema"        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema"        type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <main className="min-h-screen" style={{ background: "#F6F8FB" }}>
 
         {/* Hero */}
-        <section style={{ background: "#0B1226" }} className="px-6 py-12">
+        <section style={{ background: "#011B40" }} className="px-6 py-12">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.50)" }}>
               <Link href="/" className="hover:text-white">Home</Link>
@@ -114,7 +115,7 @@ export default function PGDMInPune() {
             <div className="flex flex-wrap gap-3">
               <Link href="/pgdm-colleges-pune"
                 className="px-5 py-2.5 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 View All PGDM Colleges →
               </Link>
               <Link href="/counselling"
@@ -144,14 +145,14 @@ export default function PGDMInPune() {
                 <tbody>
                   {COLLEGES.map((c, i) => (
                     <tr key={c.rank} style={{ borderBottom: i < COLLEGES.length - 1 ? "1px solid #F1F5F9" : undefined }}>
-                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#F97316" }}>{c.rank}</td>
+                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#E0170F" }}>{c.rank}</td>
                       <td className="px-4 py-3.5">
-                        <Link href={`/colleges/${c.slug}`} className="font-semibold hover:underline" style={{ color: "#0B1226" }}>{c.name}</Link>
-                        <p className="text-[11px] mt-0.5" style={{ color: "#64748B" }}>{c.location} · {c.highlight}</p>
+                        <Link href={`/colleges/${c.slug}`} className="font-semibold hover:underline" style={{ color: "#011B40" }}>{c.name}</Link>
+                        <p className="text-xs mt-0.5" style={{ color: "#64748B" }}>{c.location} · {c.highlight}</p>
                       </td>
                       <td className="px-4 py-3.5 text-xs font-medium" style={{ color: "#16A34A" }}>{c.naac}</td>
                       <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#0F172A" }}>{c.fees}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#F97316" }}>{c.avgPkg}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{c.avgPkg}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{c.exam}</td>
                     </tr>
                   ))}
@@ -169,8 +170,8 @@ export default function PGDMInPune() {
                 <thead>
                   <tr style={{ background: "#F6F8FB", borderBottom: "1px solid #E5E9F0" }}>
                     <th className="text-left px-4 py-3 font-semibold text-xs w-1/3" style={{ color: "#475569" }}>Aspect</th>
-                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#0B1226" }}>MBA</th>
-                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#F97316" }}>PGDM</th>
+                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#011B40" }}>MBA</th>
+                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#E0170F" }}>PGDM</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -192,7 +193,7 @@ export default function PGDMInPune() {
             <div className="space-y-4">
               {FAQS.map(({ question, answer }) => (
                 <div key={question} className="bg-white rounded-xl p-5 border" style={{ borderColor: "#E5E9F0" }}>
-                  <h3 className="font-semibold text-sm mb-2" style={{ color: "#0B1226" }}>{question}</h3>
+                  <h3 className="font-semibold text-sm mb-2" style={{ color: "#011B40" }}>{question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#475569" }}>{answer}</p>
                 </div>
               ))}
@@ -206,7 +207,7 @@ export default function PGDMInPune() {
               {[
                 { label: "MBA in Pune",           href: "/mba-in-pune"                        },
                 { label: "MBA Colleges in Pune",  href: "/mba-colleges-in-pune"               },
-                { label: "Best MBA Pune",         href: "/best-mba-colleges-pune"             },
+                { label: "Best MBA Pune",         href: "/mba-colleges-pune"             },
                 { label: "PGDM Colleges Pune",    href: "/pgdm-colleges-pune"                 },
                 { label: "MBA Finance Pune",      href: "/mba-colleges-in-pune-for-finance"   },
                 { label: "MBA HR Pune",           href: "/mba-colleges-in-pune-for-hr"        },
@@ -224,17 +225,18 @@ export default function PGDMInPune() {
           </section>
 
           {/* CTA */}
-          <section className="rounded-2xl px-8 py-10 text-center" style={{ background: "#0B1226" }}>
+          <section className="rounded-2xl px-8 py-10 text-center" style={{ background: "#011B40" }}>
             <h2 className="font-bold text-xl text-white mb-2">Not sure between MBA and PGDM?</h2>
             <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.60)" }}>Our counsellors help you choose the right programme — free, no spam.</p>
             <Link href="/counselling"
               className="inline-block px-6 py-3 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90"
-              style={{ background: "#F97316" }}>
+              style={{ background: "#E0170F" }}>
               Talk to a Counsellor →
             </Link>
           </section>
         </div>
       </main>
+      <RelatedMbaSearches path="/pgdm-in-pune" />
     </>
   )
 }

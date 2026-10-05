@@ -13,7 +13,7 @@ interface Props {
 
 const COLORS = {
   open: "#1a56db",
-  obc:  "#f97316",
+  obc:  "#E0170F",
   sc:   "#16a34a",
   st:   "#9333ea",
 }

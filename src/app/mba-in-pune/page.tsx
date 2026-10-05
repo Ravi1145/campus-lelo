@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, BookOpen, Users, Award, IndianRupee, GraduationCap, Briefcase } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in Pune 2026 | Best Colleges, Fees, Admission & Scope",
@@ -55,7 +56,7 @@ const SPECIALIZATIONS = [
   { name: "MBA in Operations",    href: "/mba-colleges-in-pune-for-operations",    desc: "Supply chain, manufacturing, logistics" },
   { name: "MBA in Analytics",     href: "/mba-colleges-in-pune-for-business-analytics", desc: "Data science, business intelligence, fintech" },
   { name: "Executive MBA",        href: "/mba-colleges-in-pune-executive",         desc: "For working professionals with 5+ years experience" },
-  { name: "PGDM in Pune",        href: "/pgdm-in-pune",                           desc: "AICTE-approved diploma equivalent to MBA" },
+  { name: "PGDM in Pune",        href: "/pgdm-in-pune",                           desc: "AICTE-approved diploma — how it differs from an MBA" },
 ]
 
 const EXAMS = [
@@ -115,14 +116,14 @@ export default function MBAInPune() {
 
   return (
     <>
-      <Script id="faq-schema"        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="list-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
+      <script id="faq-schema"        type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="list-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(listSchema) }} />
 
       <main className="min-h-screen" style={{ background: "#F6F8FB" }}>
 
         {/* ── Hero ── */}
-        <section style={{ background: "#0B1226" }} className="px-6 py-12">
+        <section style={{ background: "#011B40" }} className="px-6 py-12">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.50)" }}>
               <Link href="/" className="hover:text-white">Home</Link>
@@ -139,7 +140,7 @@ export default function MBAInPune() {
             <div className="flex flex-wrap gap-3">
               <Link href="/mba-colleges-in-pune"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 View All MBA Colleges →
               </Link>
               <Link href="/counselling"
@@ -161,8 +162,8 @@ export default function MBAInPune() {
               { icon: Users,         value: "6 exams",   label: "CAT · SNAP · MAH-CET +"   },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#FFF3E8" }}>
-                  <Icon className="w-4.5 h-4.5" style={{ color: "#F97316" }} strokeWidth={1.5} />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#FFF4F2" }}>
+                  <Icon className="w-4.5 h-4.5" style={{ color: "#E0170F" }} strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="font-bold text-base leading-none" style={{ color: "#0F172A" }}>{value}</p>
@@ -197,24 +198,24 @@ export default function MBAInPune() {
                 <tbody>
                   {TOP_COLLEGES.map((c, i) => (
                     <tr key={c.rank} style={{ borderBottom: i < TOP_COLLEGES.length - 1 ? "1px solid #F1F5F9" : undefined }}>
-                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#F97316" }}>{c.rank}</td>
+                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#E0170F" }}>{c.rank}</td>
                       <td className="px-4 py-3.5">
-                        <Link href={`/colleges/${c.slug}`} className="font-semibold hover:underline" style={{ color: "#0B1226" }}>
+                        <Link href={`/colleges/${c.slug}`} className="font-semibold hover:underline" style={{ color: "#011B40" }}>
                           {c.name}
                         </Link>
-                        {c.nirf && <span className="ml-2 text-[10px] font-bold px-1.5 py-0.5 rounded" style={{ background: "#EEF2FF", color: "#4338CA" }}>NIRF #{c.nirf}</span>}
-                        <p className="text-[11px] mt-0.5" style={{ color: "#64748B" }}>{c.highlight}</p>
+                        {c.nirf && <span className="ml-2 text-xs font-bold px-1.5 py-0.5 rounded" style={{ background: "#EEF2FF", color: "#4338CA" }}>NIRF #{c.nirf}</span>}
+                        <p className="text-xs mt-0.5" style={{ color: "#64748B" }}>{c.highlight}</p>
                       </td>
                       <td className="px-4 py-3.5 text-xs font-medium" style={{ color: "#16A34A" }}>{c.naac}</td>
                       <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#0F172A" }}>{c.fees}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#F97316" }}>{c.avgPkg}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{c.avgPkg}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{c.exam}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-right text-[11px] mt-2" style={{ color: "#94A3B8" }}>Data: NIRF 2024, college placement reports. Updated Oct 2026.</p>
+            <p className="text-right text-xs mt-2" style={{ color: "#94A3B8" }}>Data: NIRF 2024, college placement reports. Updated Oct 2026.</p>
           </section>
 
           {/* ── Specializations ── */}
@@ -229,8 +230,8 @@ export default function MBAInPune() {
                   className="rounded-xl p-4 transition-shadow hover:shadow-md border bg-white"
                   style={{ borderColor: "#E5E9F0" }}
                 >
-                  <p className="font-semibold text-sm mb-1" style={{ color: "#0B1226" }}>{s.name}</p>
-                  <p className="text-[11px]" style={{ color: "#64748B" }}>{s.desc}</p>
+                  <p className="font-semibold text-sm mb-1" style={{ color: "#011B40" }}>{s.name}</p>
+                  <p className="text-xs" style={{ color: "#64748B" }}>{s.desc}</p>
                 </Link>
               ))}
             </div>
@@ -252,18 +253,18 @@ export default function MBAInPune() {
                 <tbody>
                   {EXAMS.map((e, i) => (
                     <tr key={e.name} style={{ borderBottom: i < EXAMS.length - 1 ? "1px solid #F1F5F9" : undefined }}>
-                      <td className="px-4 py-3.5 font-bold text-sm" style={{ color: "#0B1226" }}>{e.name}</td>
+                      <td className="px-4 py-3.5 font-bold text-sm" style={{ color: "#011B40" }}>{e.name}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{e.date}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{e.accepted}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#F97316" }}>{e.cutoff}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{e.cutoff}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="/mba-cutoff-pune" className="text-sm font-medium" style={{ color: "#F97316" }}>View all cutoffs →</Link>
-              <Link href="/mba-admission-process-pune" className="text-sm font-medium" style={{ color: "#F97316" }}>Admission process →</Link>
+              <Link href="/mba-cutoff-pune" className="text-sm font-medium" style={{ color: "#E0170F" }}>View all cutoffs →</Link>
+              <Link href="/mba-admission-process-pune" className="text-sm font-medium" style={{ color: "#E0170F" }}>Admission process →</Link>
             </div>
           </section>
 
@@ -298,18 +299,18 @@ export default function MBAInPune() {
                     { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune-highest-package"   },
                     { label: "MBA 100% Placement Pune",  href: "/mba-colleges-in-pune-with-100-placement"},
                     { label: "MBA Placements in Pune",   href: "/mba-placements-pune"                   },
-                    { label: "Best MBA Colleges Pune",   href: "/best-mba-colleges-pune"                },
+                    { label: "Best MBA Colleges Pune",   href: "/mba-colleges-pune"                },
                     { label: "Top 10 MBA Colleges Pune", href: "/top-10-mba-colleges-in-pune"           },
                   ],
                 },
               ].map(({ heading, links }) => (
                 <div key={heading} className="bg-white rounded-2xl border p-5" style={{ borderColor: "#E5E9F0" }}>
-                  <h3 className="font-semibold text-sm mb-3" style={{ color: "#0B1226" }}>{heading}</h3>
+                  <h3 className="font-semibold text-sm mb-3" style={{ color: "#011B40" }}>{heading}</h3>
                   <ul className="space-y-2">
                     {links.map(l => (
                       <li key={l.href}>
                         <Link href={l.href} className="text-xs hover:underline" style={{ color: "#475569" }}>
-                          <span style={{ color: "#F97316" }}>›</span> {l.label}
+                          <span style={{ color: "#E0170F" }}>›</span> {l.label}
                         </Link>
                       </li>
                     ))}
@@ -325,7 +326,7 @@ export default function MBAInPune() {
             <div className="space-y-4">
               {FAQS.map(({ question, answer }) => (
                 <div key={question} className="bg-white rounded-xl p-5 border" style={{ borderColor: "#E5E9F0" }}>
-                  <h3 className="font-semibold text-sm mb-2" style={{ color: "#0B1226" }}>{question}</h3>
+                  <h3 className="font-semibold text-sm mb-2" style={{ color: "#011B40" }}>{question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#475569" }}>{answer}</p>
                 </div>
               ))}
@@ -333,13 +334,13 @@ export default function MBAInPune() {
           </section>
 
           {/* ── Final CTA ── */}
-          <section className="rounded-2xl px-8 py-10 text-center" style={{ background: "#0B1226" }}>
+          <section className="rounded-2xl px-8 py-10 text-center" style={{ background: "#011B40" }}>
             <h2 className="font-bold text-xl text-white mb-2">Get Free MBA Counselling for Pune 2026</h2>
-            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.60)" }}>Talk to an expert counsellor — 100% free, no spam.</p>
+            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.60)" }}>Free phone counselling, or an expert video session for ₹199.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/counselling"
                 className="px-6 py-3 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 Book Free Session →
               </Link>
               <Link href="/mba-colleges-in-pune"
@@ -352,6 +353,7 @@ export default function MBAInPune() {
 
         </div>
       </main>
+      <RelatedMbaSearches path="/mba-in-pune" />
     </>
   )
 }

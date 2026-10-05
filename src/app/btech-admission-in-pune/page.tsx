@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
 import BTechClusterPage from "@/components/btech/BTechClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Admission in Pune 2026 | MHT-CET Process, Dates & Documents",
@@ -46,12 +46,12 @@ export default function BTechAdmissionInPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(howToSchema) }} />
 
       <div className="bg-gray-50 min-h-screen">
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -189,7 +189,7 @@ export default function BTechAdmissionInPune() {
             </div>
           </section>
 
-          <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help With BTech Admission in Pune?</h2>
             <p className="text-gray-300 mb-5 text-sm">Free counselling — our advisors guide you through the entire CAP process and option form strategy.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

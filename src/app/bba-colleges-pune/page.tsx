@@ -1,8 +1,8 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best BBA Colleges Pune 2026 | Fees, Cutoff & Placement",
@@ -131,12 +131,12 @@ export default function BBACollegesPunePage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -179,8 +179,8 @@ export default function BBACollegesPunePage() {
                       <Link href={`/colleges/${c.slug}`} className="font-bold text-gray-900 hover:text-orange-600 transition-colors text-base">
                         {c.name}
                       </Link>
-                      <span className="text-[11px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{c.type}</span>
-                      <span className="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold">NAAC {c.naac}</span>
+                      <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{c.type}</span>
+                      <span className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold">NAAC {c.naac}</span>
                     </div>
                     <p className="text-xs text-orange-600 font-semibold mb-2">{c.highlight}</p>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-gray-600">
@@ -255,7 +255,7 @@ export default function BBACollegesPunePage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-10 bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-6 text-center">
+          <div className="mt-10 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-center">
             <h2 className="text-xl font-extrabold text-white mb-2">Need Help Choosing a BBA College in Pune?</h2>
             <p className="text-gray-300 text-sm mb-4">Our counselors help you pick the right BBA college, prepare for SET, and plan your MBA pathway.</p>
             <div className="flex flex-wrap gap-3 justify-center">

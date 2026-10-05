@@ -95,7 +95,7 @@ export default function GatedCutoffChart({ data, slug, height = 260 }: Props) {
               {loading ? "Unlocking…" : "🔓 Show Full Chart"}
             </button>
           </form>
-          <p className="text-[10px] text-gray-400 mt-2">No spam. Get college alerts on WhatsApp.</p>
+          <p className="text-xs text-gray-400 mt-2">No spam. Get college alerts on WhatsApp.</p>
         </div>
       </div>
     </div>

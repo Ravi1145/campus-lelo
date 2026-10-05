@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { ArrowRight, Star } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { colleges as staticColleges } from "@/data/colleges"
 import type { College } from "@/types"
-import CollegeCard from "@/components/colleges/CollegeCard"
+import SimpleCollegeCard from "./SimpleCollegeCard"
 import FilterTabs from "@/components/ui/FilterTabs"
+import CardRail from "./CardRail"
 
 const TABS = ["All", "Engineering", "MBA", "Medical", "Law", "Architecture", "Government"]
 const CACHE_KEY = "cp_featured_colleges"
@@ -70,18 +71,18 @@ export default function FeaturedColleges() {
     .slice(0, 12)
 
   return (
-    <section className="py-16 bg-surface">
+    <section className="py-16 section-pearl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="flex items-end justify-between mb-6">
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#F97316" }}>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#E0170F" }}>
               <span>—</span> Top Colleges
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0F172A" }}>
               Featured Colleges in{" "}
-              <span style={{ color: "#F97316" }}>Pune</span>
+              <span style={{ color: "#E0170F" }}>Pune</span>
             </h2>
             <p className="mt-1.5 text-sm" style={{ color: "#475569" }}>
               NIRF ranked and top-rated colleges across all streams
@@ -90,7 +91,7 @@ export default function FeaturedColleges() {
           <Link
             href="/colleges"
             className="hidden sm:flex items-center gap-1.5 font-semibold text-sm transition-opacity hover:opacity-80"
-            style={{ color: "#F97316" }}
+            style={{ color: "#E0170F" }}
           >
             View All Colleges <ArrowRight className="w-4 h-4" />
           </Link>
@@ -110,19 +111,13 @@ export default function FeaturedColleges() {
 
         {/* College cards — featured always first */}
         {!loading && (
-          <div className="flex gap-3 sm:gap-5 overflow-x-auto pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <CardRail key={activeTab} label="featured colleges">
             {filtered.map((college) => (
-              <div key={college.slug} className="flex-shrink-0 w-[82vw] sm:w-72 snap-start relative">
-                {featuredSet.has(college.slug) && (
-                  <div className="absolute top-2 left-2 z-20 flex items-center gap-1 bg-amber-400 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
-                    <Star className="w-2.5 h-2.5 fill-white" />
-                    Featured
-                  </div>
-                )}
-                <CollegeCard college={college} />
+              <div key={college.slug} className="relative h-full">
+                <SimpleCollegeCard college={college} featured={featuredSet.has(college.slug)} />
               </div>
             ))}
-          </div>
+          </CardRail>
         )}
 
         {/* Mobile view all */}
@@ -130,7 +125,7 @@ export default function FeaturedColleges() {
           <Link
             href="/colleges"
             className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl transition-opacity hover:opacity-90"
-            style={{ background: "#F97316" }}
+            style={{ background: "#E0170F" }}
           >
             View All Colleges <ArrowRight className="w-4 h-4" />
           </Link>

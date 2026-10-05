@@ -1,13 +1,13 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import Script from "next/script"
 import { courses, getCourseBySlug } from "@/data/courses"
 import { colleges } from "@/data/colleges"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { formatFeesRange, formatCurrency } from "@/lib/utils"
 import { Clock, TrendingUp, BookOpen, ChevronRight, GraduationCap, Briefcase } from "lucide-react"
 import CollegeCard from "@/components/colleges/CollegeCard"
+import { safeJsonLd } from "@/lib/jsonld"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
@@ -69,8 +69,8 @@ export default async function CoursePage({ params }: Props) {
 
   return (
     <div className="bg-surface min-h-screen">
-      <Script id="course-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <Script id="course-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="course-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(courseSchema) }} />
+      <script id="course-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +88,7 @@ export default async function CoursePage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Hero */}
-            <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-2xl p-7 text-white">
+            <div className="bg-gradient-to-br from-[#011B40] to-[#024692] rounded-2xl p-7 text-white">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-7 h-7 text-white" />
@@ -207,7 +207,7 @@ export default async function CoursePage({ params }: Props) {
                 </Link>
                 <Link
                   href="/colleges"
-                  className="w-full bg-[#0A1628] hover:bg-[#1E3A5F] text-white font-semibold py-3 rounded-xl text-center text-sm transition-colors block"
+                  className="w-full bg-[#011B40] hover:bg-[#024692] text-white font-semibold py-3 rounded-xl text-center text-sm transition-colors block"
                 >
                   Browse All Pune Colleges
                 </Link>

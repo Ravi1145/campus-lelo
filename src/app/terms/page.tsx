@@ -102,7 +102,7 @@ export default function TermsPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-10 px-4">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-10 px-4">
         <div className="max-w-3xl mx-auto">
           <nav className="text-xs text-blue-300 mb-3 flex items-center gap-1">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -138,7 +138,7 @@ export default function TermsPage() {
           ))}
         </div>
 
-        <div className="mt-8 p-5 rounded-2xl text-center" style={{ background: "linear-gradient(135deg,#0A1628,#1E3A5F)" }}>
+        <div className="mt-8 p-5 rounded-2xl text-center" style={{ background: "linear-gradient(135deg,#011B40,#024692)" }}>
           <p className="text-white font-bold mb-1">Questions about these terms?</p>
           <p className="text-blue-200 text-sm mb-3">Our team is happy to clarify anything.</p>
           <a

@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -268,6 +268,13 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
   const [enquiryOpen, setEnquiryOpen] = useState(false)
   const [logoError, setLogoError] = useState(false)
 
+  // Deep links from the colleges list: /colleges/<slug>?tab=placements
+  useEffect(() => {
+    const t = new URLSearchParams(window.location.search).get("tab")
+    if (t && TABS.some((x) => x.id === t)) setActiveTab(t)
+  }, [])
+
+
   // FAQs: prefer details.faqs (DB), then college.faqs (static), then auto-generated
   const faqs: { q: string; a: string }[] =
     (Array.isArray(details?.faqs) && details.faqs.length > 0 ? details.faqs : null) ??
@@ -303,7 +310,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
         }}
       >
         {/* Dark overlay so text stays readable */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/90 to-[#1E3A5F]/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#011B40]/90 to-[#024692]/85" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-0">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-blue-300 mb-5">
@@ -1176,19 +1183,19 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
               {/* CTA Card */}
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-4 text-white">
-                  <h3 className="font-bold mb-1 text-sm">Free Admission Counseling</h3>
+                  <h3 className="font-bold mb-1 text-sm">Free Phone Counselling</h3>
                   <p className="text-orange-100 text-xs mb-3">
                     {college.stream === "Engineering"
-                      ? `MHT-CET / JEE guidance for ${college.shortName ?? college.name}. 100% free.`
+                      ? `MHT-CET / JEE guidance for ${college.shortName ?? college.name}. Free phone counselling.`
                       : college.stream === "Medical"
-                      ? `NEET counselling for ${college.shortName ?? college.name}. 100% free.`
+                      ? `NEET counselling for ${college.shortName ?? college.name}. Free phone counselling.`
                       : college.stream === "MBA"
-                      ? `CAT / MAH-MBA-CET guidance for ${college.shortName ?? college.name}. 100% free.`
+                      ? `CAT / MAH-MBA-CET guidance for ${college.shortName ?? college.name}. Free phone counselling.`
                       : college.stream === "Law"
-                      ? `MH-CET Law / CLAT guidance for ${college.shortName ?? college.name}. 100% free.`
+                      ? `MH-CET Law / CLAT guidance for ${college.shortName ?? college.name}. Free phone counselling.`
                       : college.stream === "Architecture"
-                      ? `NATA / JEE Paper 2 guidance for ${college.shortName ?? college.name}. 100% free.`
-                      : `Get expert guidance for ${college.shortName ?? college.name} admissions. 100% free.`}
+                      ? `NATA / JEE Paper 2 guidance for ${college.shortName ?? college.name}. Free phone counselling.`
+                      : `Get expert guidance for ${college.shortName ?? college.name} admissions. Free phone counselling.`}
                   </p>
                   <Link href="/counselling" className="block text-center bg-white text-orange-600 font-bold text-sm rounded-xl py-2.5 hover:bg-orange-50 transition-colors">
                     Book Free Session

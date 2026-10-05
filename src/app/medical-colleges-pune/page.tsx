@@ -1,10 +1,10 @@
 import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, Award, BookOpen, Users, AlertCircle } from "lucide-react"
 import { getCutoff } from "@/data/cutoffs"
 import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Medical Colleges in Pune 2026 | NEET Cutoff, Fees & MBBS Seats",
@@ -85,10 +85,10 @@ export default function MedicalCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
-      <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
+      <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
 
       <main className="bg-white min-h-screen">
         {/* Breadcrumb */}
@@ -105,7 +105,7 @@ export default function MedicalCollegesPunePage() {
         </nav>
 
         {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 sm:py-16">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-500/30 text-red-300 text-sm font-medium px-4 py-2 rounded-full mb-4">
@@ -204,7 +204,7 @@ export default function MedicalCollegesPunePage() {
                 <li className="flex gap-2"><Users className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>MBBS Seats: <strong>150</strong></span></li>
                 <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>Hospital: 1,400 bed teaching hospital</span></li>
               </ul>
-              <Link href="/colleges/dy-patil-medical-college-pune" className="mt-4 block text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 rounded-xl text-sm transition-colors">
+              <Link href="/colleges/dy-patil-medical-college-pimpri-pune" className="mt-4 block text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 rounded-xl text-sm transition-colors">
                 View Full Profile →
               </Link>
             </div>

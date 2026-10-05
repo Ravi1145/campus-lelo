@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/Header"
@@ -23,6 +23,11 @@ const dmSans = DM_Sans({
   display: "swap",
   preload: false,         // secondary font — no need to block on it
 })
+
+// Browser UI colour (mobile address bar) — logo navy
+export const viewport: Viewport = {
+  themeColor: "#012858",
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"),
@@ -95,8 +100,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1024,
-        height: 682,
+        width: 1200,
+        height: 630,
         alt: "CampusLelo — Best Colleges in Pune 2026",
       },
     ],
@@ -151,14 +156,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full — Comprehensive AI reference" />
         <link rel="alternate" type="application/json" href="/api/ai-context" title="Structured JSON context for AI agents" />
       </head>
-      <body className="min-h-full flex flex-col font-dm-sans bg-white">
+      <body className="min-h-full flex flex-col font-dm-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8MN7G8X" title="Google Tag Manager" height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
         </noscript>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <LeadBar />
         <Header />
-        <div className="flex-1 pt-14 lg:pt-24">
+        <div id="main-content" tabIndex={-1} className="flex-1 pt-14 lg:pt-24 outline-none" style={{ marginTop: "var(--leadbar-h, 0px)" }}>
           {children}
         </div>
         <Footer />

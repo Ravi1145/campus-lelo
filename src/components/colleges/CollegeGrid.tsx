@@ -1,273 +1,277 @@
 "use client"
-import { useState, useEffect, useMemo } from "react"
-import { useSearchParams } from "next/navigation"
+import { searchColleges } from "@/lib/collegeSearch"
+import { useState, useEffect, useMemo, useCallback } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
 import { colleges as localColleges } from "@/data/colleges"
 import { College } from "@/types"
 import CollegeCard from "./CollegeCard"
+import CollegeRowCard from "./CollegeRowCard"
 import CollegeFilters from "./CollegeFilters"
-import { SlidersHorizontal, Grid3X3, List, ArrowUpDown, Loader2 } from "lucide-react"
+import {
+  DEFAULT_FILTERS, FACETS, STREAM_FACET_VALUES, applyFilters, countActiveFilters, courseGroup, facetOptions, isCourseGroup,
+  type FacetKey, type FacetOption, type FiltersState,
+} from "@/lib/collegeFacets"
+import { SlidersHorizontal, LayoutGrid, Rows3, ArrowUpDown, X, Search, ChevronDown, Headphones } from "lucide-react"
 import { cn } from "@/lib/utils"
 import InlineLeadForm from "@/components/leads/InlineLeadForm"
-import FilterTabs from "@/components/ui/FilterTabs"
 
-const STREAM_TABS = ["All", "Engineering", "MBA", "Medical", "Law", "Architecture", "Design", "Commerce", "Arts & Science"]
-
-type SortOption = "rating" | "fees_low" | "fees_high" | "placement" | "nirf"
+type SortOption = "relevance" | "rating" | "fees_low" | "fees_high" | "placement" | "nirf"
+const PAGE = 20
 
 export default function CollegeGrid() {
+  const router = useRouter()
   const searchParams = useSearchParams()
-  const [allColleges, setAllColleges] = useState<College[]>([])
-  const [loading, setLoading] = useState(true)
-  const [activeStream, setActiveStream] = useState("All")
-  const [sortBy, setSortBy] = useState<SortOption>("rating")
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
-  const [filters, setFilters] = useState({
-    streams: [] as string[],
-    types: [] as string[],
-    naac: [] as string[],
-    areas: [] as string[],
-    exams: [] as string[],
-    feesMin: 0,
-    feesMax: 2500000,
-    hostel: false,
-    nirfRanked: false,
-  })
+  // Start with the built-in list so the page renders instantly and is in the
+  // server HTML (crawlable); database colleges are merged in after load.
+  const [allColleges, setAllColleges] = useState<College[]>(localColleges)
+  // With a search query, keep the search ranking ("Best match") unless the user picks another sort
+  const [sortBy, setSortBy] = useState<SortOption>(() => (searchParams.get("search") ? "relevance" : "rating"))
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list")
+  const [filters, setFilters] = useState<FiltersState>(DEFAULT_FILTERS)
+  const [mobileFilters, setMobileFilters] = useState(false)
+  const [visible, setVisible] = useState(PAGE)
 
   const searchQuery = searchParams.get("search") || ""
 
-  // ── Fetch from Express backend API, supplement with local static data ──
+  // New search from the header while already on /colleges → rank by relevance again
+  useEffect(() => {
+    if (searchQuery) setSortBy("relevance")
+  }, [searchQuery])
+
+  // URL filters used across the site: hero finder (?stream=&exam=), header menus
+  // (?stream=), redirects (?type=Government) and ?hostel=1.
+  const streamParam = searchParams.get("stream") || ""
+  const examParam = searchParams.get("exam") || ""
+  const typeParam = searchParams.get("type") || ""
+  const hostelParam = searchParams.get("hostel") || ""
+  const normalizedStream = streamParam === "Arts" ? "Arts & Science" : streamParam
+  const streamIsFacet = STREAM_FACET_VALUES.includes(normalizedStream)
+  const streamIsCourse = !streamIsFacet && !!normalizedStream && isCourseGroup(normalizedStream)
+  // Anything else ("Pharmacy"…) is matched as a keyword
+  const streamKeyword = normalizedStream && !streamIsFacet && !streamIsCourse ? normalizedStream : ""
+  useEffect(() => {
+    setFilters((f) => ({
+      ...f,
+      streams: streamIsFacet ? [normalizedStream] : [],
+      courses: streamIsCourse ? [courseGroup(normalizedStream)] : [],
+      exams: examParam ? [examParam] : [],
+      types: typeParam ? [typeParam] : [],
+      hostel: hostelParam === "1" || hostelParam === "true",
+    }))
+  }, [normalizedStream, streamIsFacet, streamIsCourse, examParam, typeParam, hostelParam])
+
+  // ── Fetch from the colleges API, supplement with local static data ──
   useEffect(() => {
     let cancelled = false
     async function load() {
-      setLoading(true)
       try {
-        const backendRes = await fetch('/api/colleges')
-          .then(r => r.ok ? r.json() : { colleges: [] })
+        const backendRes = await fetch("/api/colleges")
+          .then((r) => (r.ok ? r.json() : { colleges: [] }))
           .catch(() => ({ colleges: [] }))
-
         const backendColleges: College[] = backendRes.colleges ?? []
-        const backendNameSet = new Set(backendColleges.map((c) => c.name.toLowerCase().trim()))
-        const backendSlugSet = new Set(backendColleges.map((c) => c.slug))
-
-        // Add local static colleges not already returned by the backend
-        const localOnly = localColleges.filter(
-          (c) => !backendNameSet.has(c.name.toLowerCase().trim()) && !backendSlugSet.has(c.slug)
-        )
-
-        if (!cancelled) {
-          setAllColleges([...backendColleges, ...localOnly])
-        }
+        const names = new Set(backendColleges.map((c) => c.name.toLowerCase().trim()))
+        const slugs = new Set(backendColleges.map((c) => c.slug))
+        const localOnly = localColleges.filter((c) => !names.has(c.name.toLowerCase().trim()) && !slugs.has(c.slug))
+        if (!cancelled) setAllColleges([...backendColleges, ...localOnly])
       } catch {
         if (!cancelled) setAllColleges(localColleges)
-      } finally {
-        if (!cancelled) setLoading(false)
       }
     }
     load()
     return () => { cancelled = true }
   }, [])
 
+  // Colleges after the free-text search / keyword (before sidebar facets)
+  const scoped = useMemo(() => {
+    let r = [...allColleges]
+    if (streamKeyword) r = searchColleges(r, streamKeyword)
+    if (searchQuery) r = searchColleges(r, searchQuery)
+    return r
+  }, [allColleges, streamKeyword, searchQuery])
+
+  // Sidebar options with live counts (each group counts against the other groups' selections)
+  const options = useMemo(() => {
+    const o = {} as Record<FacetKey, FacetOption[]>
+    for (const { key } of FACETS) o[key] = facetOptions(allColleges, scoped, filters, key)
+    return o
+  }, [allColleges, scoped, filters])
+
   const filteredColleges = useMemo(() => {
-    let result = [...allColleges]
-
-    if (searchQuery) {
-      const q = searchQuery.toLowerCase()
-      result = result.filter(
-        (c) =>
-          c.name.toLowerCase().includes(q) ||
-          c.shortName.toLowerCase().includes(q) ||
-          c.location.toLowerCase().includes(q) ||
-          c.courses.some((course) => course.toLowerCase().includes(q)) ||
-          c.tags.some((tag) => tag.toLowerCase().includes(q))
-      )
-    }
-
-    if (activeStream !== "All") {
-      result = result.filter((c) => c.stream === activeStream)
-    } else if (filters.streams.length) {
-      result = result.filter((c) => filters.streams.includes(c.stream))
-    }
-    if (filters.types.length) {
-      result = result.filter((c) => filters.types.includes(c.type))
-    }
-    if (filters.naac.length) {
-      result = result.filter((c) => filters.naac.includes(c.naac))
-    }
-    if (filters.areas.length) {
-      result = result.filter((c) =>
-        filters.areas.some((area) => c.location.toLowerCase().includes(area.toLowerCase()))
-      )
-    }
-    if (filters.exams.length) {
-      result = result.filter((c) =>
-        filters.exams.some((exam) => c.entranceExams.includes(exam))
-      )
-    }
-    if (filters.feesMax < 2500000) {
-      result = result.filter((c) => c.feesRange.min <= filters.feesMax)
-    }
-    if (filters.hostel) {
-      result = result.filter((c) => c.hostel)
-    }
-    if (filters.nirfRanked) {
-      result = result.filter((c) => c.nirfRank !== null)
-    }
-
-    // Sort
+    const result = [...applyFilters(scoped, filters)]
     switch (sortBy) {
-      case "rating":
-        result.sort((a, b) => b.rating - a.rating)
-        break
-      case "fees_low":
-        result.sort((a, b) => a.feesRange.min - b.feesRange.min)
-        break
-      case "fees_high":
-        result.sort((a, b) => b.feesRange.max - a.feesRange.max)
-        break
-      case "placement":
-        result.sort((a, b) => b.avgPlacement - a.avgPlacement)
-        break
-      case "nirf":
-        result.sort((a, b) => (a.nirfRank ?? 9999) - (b.nirfRank ?? 9999))
-        break
+      case "rating": result.sort((a, b) => b.rating - a.rating); break
+      case "fees_low": result.sort((a, b) => a.feesRange.min - b.feesRange.min); break
+      case "fees_high": result.sort((a, b) => b.feesRange.max - a.feesRange.max); break
+      case "placement": result.sort((a, b) => b.avgPlacement - a.avgPlacement); break
+      case "nirf": result.sort((a, b) => (a.nirfRank ?? 9999) - (b.nirfRank ?? 9999)); break
     }
-
     return result
-  }, [allColleges, filters, activeStream, sortBy, searchQuery])
+  }, [scoped, filters, sortBy])
 
-  // ── Loading skeleton ──────────────────────────────────────
-  if (loading) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col lg:flex-row gap-6">
-          <div className="lg:w-72 flex-shrink-0">
-            <div className="bg-white rounded-2xl border border-gray-100 h-64 animate-pulse" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center justify-center h-64 gap-3 text-gray-400">
-              <Loader2 className="w-6 h-6 animate-spin" />
-              <span className="text-sm">Loading colleges from database…</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+  // Re-run the card entrance animation and reset paging whenever the result set changes
+  const signature = `${sortBy}|${searchQuery}|${streamKeyword}|${viewMode}|${JSON.stringify(filters)}`
+  useEffect(() => { setVisible(PAGE) }, [signature])
+
+  const dropParam = useCallback((name: string) => {
+    const p = new URLSearchParams(searchParams.toString())
+    p.delete(name)
+    const qs = p.toString()
+    router.replace(qs ? `/colleges?${qs}` : "/colleges", { scroll: false })
+  }, [router, searchParams])
+
+  const clearAll = () => {
+    setFilters(DEFAULT_FILTERS)
+    router.replace("/colleges", { scroll: false })
   }
 
+  // Removable chips for everything that narrows the list
+  const chips: { key: string; label: string; onRemove: () => void }[] = []
+  if (searchQuery) chips.push({ key: "q", label: `“${searchQuery}”`, onRemove: () => dropParam("search") })
+  if (streamKeyword) chips.push({ key: "kw", label: streamKeyword, onRemove: () => dropParam("stream") })
+  for (const { key } of FACETS) {
+    for (const v of filters[key]) {
+      chips.push({
+        key: `${key}-${v}`,
+        label: key === "naac" ? `NAAC ${v}` : v,
+        onRemove: () => setFilters((f) => ({ ...f, [key]: f[key].filter((x) => x !== v) })),
+      })
+    }
+  }
+  if (filters.hostel) chips.push({ key: "hostel", label: "Hostel", onRemove: () => setFilters((f) => ({ ...f, hostel: false })) })
+  if (filters.nirfRanked) chips.push({ key: "nirf", label: "NIRF ranked", onRemove: () => setFilters((f) => ({ ...f, nirfRanked: false })) })
+
+  const shown = filteredColleges.slice(0, visible)
+  const filterCount = countActiveFilters(filters)
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {searchQuery && (
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">
-            Search results for &quot;<span className="text-orange-600">{searchQuery}</span>&quot;
-          </h1>
-          <p className="text-gray-500 mt-1">{filteredColleges.length} colleges found</p>
-        </div>
-      )}
-
-      {/* Stream tab filter */}
-      <div className="bg-white rounded-2xl border border-gray-100 px-5 py-4 mb-6">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Filter by Stream</p>
-        <FilterTabs tabs={STREAM_TABS} active={activeStream} onChange={setActiveStream} />
-      </div>
-
-      <div className="flex flex-col lg:flex-row gap-6">
-        {/* Filters Sidebar */}
-        <div className="lg:w-72 flex-shrink-0">
-          <CollegeFilters onFiltersChange={setFilters} />
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+        <div className="lg:w-72 lg:shrink-0">
+          <CollegeFilters filters={filters} onChange={setFilters} options={options} mobileOpen={mobileFilters} onMobileClose={() => setMobileFilters(false)} resultCount={filteredColleges.length} />
         </div>
 
-        {/* Main Content */}
-        <div className="flex-1 min-w-0">
+        <div className="min-w-0 flex-1">
           {/* Toolbar */}
-          <div className="flex items-center justify-between mb-5 bg-white rounded-xl border border-gray-100 px-4 py-3">
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold text-gray-900">{filteredColleges.length}</span> colleges found
+          <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-sm ring-1 ring-gray-200">
+            <button
+              type="button"
+              onClick={() => setMobileFilters(true)}
+              className="inline-flex items-center gap-2 rounded-xl bg-[#012858] px-4 py-2 text-sm font-bold text-white shadow-md lg:hidden"
+            >
+              <SlidersHorizontal className="h-4 w-4" aria-hidden="true" /> Filters
+              {filterCount > 0 && <span className="rounded-full bg-[#E0170F] px-1.5 text-xs">{filterCount}</span>}
+            </button>
+
+            <p className="text-sm text-gray-600" aria-live="polite">
+              <span className="text-lg font-extrabold text-[#012858]">{filteredColleges.length}</span>{" "}
+              {filteredColleges.length === 1 ? "college" : "colleges"} found
+              {searchQuery && <> for <span className="font-semibold text-[#C90D11]">&ldquo;{searchQuery}&rdquo;</span></>}
             </p>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1">
-                <ArrowUpDown className="w-4 h-4 text-gray-400" />
+
+            <div className="ml-auto flex items-center gap-2">
+              <label htmlFor="college-sort" className="sr-only">Sort colleges</label>
+              <div className="relative">
+                <ArrowUpDown className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-500" aria-hidden="true" />
                 <select
+                  id="college-sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="text-sm text-gray-700 bg-transparent outline-none cursor-pointer"
+                  className="cursor-pointer appearance-none rounded-xl bg-gray-50 py-2 pl-9 pr-8 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 hover:ring-[#012858] focus:outline-none focus:ring-2 focus:ring-[#024692]"
                 >
-                  <option value="rating">Top Rated</option>
-                  <option value="nirf">NIRF Rank</option>
-                  <option value="placement">Best Placement</option>
-                  <option value="fees_low">Fees: Low to High</option>
-                  <option value="fees_high">Fees: High to Low</option>
+                  {searchQuery && <option value="relevance">Best match</option>}
+                  <option value="rating">Top rated</option>
+                  <option value="nirf">NIRF rank</option>
+                  <option value="placement">Best placement</option>
+                  <option value="fees_low">Fees: low to high</option>
+                  <option value="fees_high">Fees: high to low</option>
                 </select>
+                <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
               </div>
-              <div className="flex items-center gap-1 border-l border-gray-200 pl-3">
-                <button
-                  onClick={() => setViewMode("grid")}
-                  className={cn("p-1.5 rounded", viewMode === "grid" ? "bg-orange-100 text-orange-600" : "text-gray-400 hover:text-gray-600")}
-                >
-                  <Grid3X3 className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setViewMode("list")}
-                  className={cn("p-1.5 rounded", viewMode === "list" ? "bg-orange-100 text-orange-600" : "text-gray-400 hover:text-gray-600")}
-                >
-                  <List className="w-4 h-4" />
-                </button>
+              <div className="flex rounded-xl bg-gray-100 p-1" role="group" aria-label="Layout">
+                {([["list", Rows3, "List view"], ["grid", LayoutGrid, "Grid view"]] as const).map(([m, Icon, label]) => (
+                  <button
+                    key={m}
+                    type="button"
+                    aria-pressed={viewMode === m}
+                    aria-label={label}
+                    onClick={() => setViewMode(m)}
+                    className={cn("rounded-lg p-1.5 transition-all", viewMode === m ? "bg-white text-[#012858] shadow" : "text-gray-500 hover:text-gray-800")}
+                  >
+                    <Icon className="h-4 w-4" aria-hidden="true" />
+                  </button>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* College Cards */}
+          {/* Active filter chips */}
+          {chips.length > 0 && (
+            <div className="mb-5 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Active:</span>
+              {chips.map((c) => (
+                <button
+                  key={c.key}
+                  type="button"
+                  onClick={c.onRemove}
+                  aria-label={`Remove filter ${c.label}`}
+                  className="fade-in group inline-flex items-center gap-1.5 rounded-full bg-blue-50 py-1 pl-3 pr-2 text-xs font-bold text-[#012858] ring-1 ring-blue-100 transition-all hover:bg-[#012858] hover:text-white"
+                >
+                  {c.label}
+                  <X className="h-3.5 w-3.5 rounded-full bg-white/70 p-0.5 text-[#012858] group-hover:bg-white/20 group-hover:text-white" aria-hidden="true" />
+                </button>
+              ))}
+              <button type="button" onClick={clearAll} className="ml-1 text-xs font-bold text-[#C90D11] underline-offset-2 hover:underline">Clear all</button>
+            </div>
+          )}
+
+          {/* Results */}
           {filteredColleges.length === 0 ? (
-            <div className="bg-white rounded-2xl border border-gray-100 p-16 text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <SlidersHorizontal className="w-8 h-8 text-gray-400" />
+            <div className="hero-in rounded-3xl bg-white p-10 text-center shadow-sm ring-1 ring-gray-200 sm:p-16">
+              <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-50 to-orange-50 ring-1 ring-gray-200">
+                <Search className="h-9 w-9 text-[#012858]" aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No colleges found</h3>
-              <p className="text-gray-500 text-sm">Try adjusting your filters or search query</p>
+              <h3 className="text-xl font-extrabold text-[#012858]">No colleges match these filters</h3>
+              <p className="mx-auto mt-2 max-w-md text-sm text-gray-600">Try removing a filter or searching a broader term. Or tell us what you need and a counsellor will shortlist for you — free.</p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <button type="button" onClick={clearAll} className="rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 hover:bg-[#C90D11]">Clear all filters</button>
+                <a href="/counselling" className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#012858] ring-1 ring-gray-200 hover:ring-[#012858]">
+                  <Headphones className="h-4 w-4" aria-hidden="true" /> Free counselling
+                </a>
+              </div>
             </div>
           ) : (
-            <div className="space-y-5">
-              <div className={cn(
-                "grid gap-5",
-                viewMode === "grid"
-                  ? "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
-                  : "grid-cols-1"
-              )}>
-                {filteredColleges.slice(0, 5).map((college, idx) => (
-                  <CollegeCard key={college.slug} college={college} priority={idx < 3} />
+            <>
+              <div key={signature} className={cn("grid gap-4", viewMode === "grid" ? "grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3" : "grid-cols-1")}>
+                {shown.map((college, idx) => (
+                  <div key={college.slug} className="contents">
+                    <div className="hero-in h-full" style={{ "--i": Math.min(idx % PAGE, 8) } as React.CSSProperties}>
+                      {viewMode === "grid" ? <CollegeCard college={college} /> : <CollegeRowCard college={college} />}
+                    </div>
+                    {(idx === 5 || idx === 17) && filteredColleges.length > idx + 1 && (
+                      <div className="col-span-full"><InlineLeadForm context="Browse colleges in Pune" /></div>
+                    )}
+                  </div>
                 ))}
               </div>
-              {filteredColleges.length > 5 && (
-                <InlineLeadForm context="Browse colleges in Pune" />
-              )}
-              {filteredColleges.length > 5 && (
-                <div className={cn(
-                  "grid gap-5",
-                  viewMode === "grid"
-                    ? "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
-                    : "grid-cols-1"
-                )}>
-                  {filteredColleges.slice(5, 10).map((college) => (
-                    <CollegeCard key={college.slug} college={college} />
-                  ))}
+
+              {/* Show more */}
+              <div className="mt-8 text-center">
+                <p className="text-xs font-medium text-gray-600">Showing {shown.length} of {filteredColleges.length}</p>
+                <div className="mx-auto mt-2 h-1 w-48 overflow-hidden rounded-full bg-gray-200" aria-hidden="true">
+                  <div className="h-full rounded-full bg-gradient-to-r from-[#E0170F] to-[#024692] transition-all duration-500" style={{ width: `${(shown.length / filteredColleges.length) * 100}%` }} />
                 </div>
-              )}
-              {filteredColleges.length > 10 && (
-                <InlineLeadForm context="Browse colleges in Pune" />
-              )}
-              {filteredColleges.length > 10 && (
-                <div className={cn(
-                  "grid gap-5",
-                  viewMode === "grid"
-                    ? "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
-                    : "grid-cols-1"
-                )}>
-                  {filteredColleges.slice(10).map((college) => (
-                    <CollegeCard key={college.slug} college={college} />
-                  ))}
-                </div>
-              )}
-            </div>
+                {shown.length < filteredColleges.length && (
+                  <button
+                    type="button"
+                    onClick={() => setVisible((v) => v + PAGE)}
+                    className="group mt-5 inline-flex items-center gap-2 rounded-xl bg-[#012858] px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-950/20 transition-all hover:-translate-y-0.5 hover:bg-[#024692]"
+                  >
+                    Show {Math.min(PAGE, filteredColleges.length - shown.length)} more colleges
+                    <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
+                  </button>
+                )}
+              </div>
+            </>
           )}
         </div>
       </div>

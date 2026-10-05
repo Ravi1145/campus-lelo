@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import {
@@ -11,6 +10,7 @@ import {
 import { colleges } from "@/data/colleges"
 import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import NewsAlert from "@/components/leads/NewsAlert"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 86400 // 24h ISR
 
@@ -48,7 +48,7 @@ function CutoffTable({ data }: { data: CollegeCutoff }) {
     <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
       <table className="w-full text-sm">
         <thead>
-          <tr className="bg-[#0A1628] text-white">
+          <tr className="bg-[#011B40] text-white">
             <th className="text-left px-4 py-3 font-semibold w-16">Year</th>
             <th className="text-right px-4 py-3 font-semibold">Open<br/><span className="text-xs font-normal text-gray-300">{unit}</span></th>
             <th className="text-right px-4 py-3 font-semibold">OBC<br/><span className="text-xs font-normal text-gray-300">{unit}</span></th>
@@ -64,7 +64,7 @@ function CutoffTable({ data }: { data: CollegeCutoff }) {
               <td className="px-4 py-3 font-bold text-gray-900">
                 {row.year}
                 {row.year === new Date().getFullYear() && (
-                  <span className="ml-1 text-[10px] bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded-full font-semibold">Est.</span>
+                  <span className="ml-1 text-xs bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded-full font-semibold">Est.</span>
                 )}
               </td>
               <td className="px-4 py-3 text-right font-mono font-semibold text-blue-700">{row.open}</td>
@@ -165,13 +165,13 @@ export default async function CutoffPage({ params }: Props) {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="table-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tableSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="table-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(tableSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-10">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center flex-wrap">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -318,7 +318,7 @@ export default async function CutoffPage({ params }: Props) {
           </div>
 
           {/* Bottom CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-center">
             <h2 className="text-xl font-extrabold text-white mb-2">Not Sure Which College to Apply?</h2>
             <p className="text-gray-300 text-sm mb-4">Our AI counsellor matches you to the right college based on your {examLabel} score, category, and budget.</p>
             <div className="flex flex-wrap gap-3 justify-center">

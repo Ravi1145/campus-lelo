@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { Calendar, MapPin, Clock, ExternalLink, ChevronRight, Bell, GraduationCap, Building2, FileText } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Events 2026 | Admission Open Days, Fests & Education Expos",
@@ -172,8 +172,8 @@ export default function EventsPage() {
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <main className="min-h-screen bg-[#F6F8FB]">
 
@@ -186,8 +186,8 @@ export default function EventsPage() {
               <span className="text-gray-600 font-medium">Events</span>
             </nav>
             <div className="max-w-2xl">
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#F97316" }}>— UPCOMING EVENTS</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#0B1226" }}>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#E0170F" }}>— UPCOMING EVENTS</p>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#011B40" }}>
                 Pune College Events 2026
               </h1>
               <p className="text-base text-gray-500 mb-6">
@@ -203,7 +203,7 @@ export default function EventsPage() {
         </section>
 
         {/* Notify banner */}
-        <section className="bg-[#0B1226]">
+        <section className="bg-[#011B40]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3 text-white">
               <Bell className="w-5 h-5 text-orange-400 flex-shrink-0" />
@@ -212,7 +212,7 @@ export default function EventsPage() {
             <a href="https://wa.me/917753831118?text=Hi!%20Please%20send%20me%20Pune%20college%20event%20reminders%20for%202026."
               target="_blank" rel="noopener noreferrer"
               className="flex-shrink-0 px-5 py-2 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90"
-              style={{ background: "#F97316" }}>
+              style={{ background: "#E0170F" }}>
               Get Event Alerts →
             </a>
           </div>
@@ -224,20 +224,20 @@ export default function EventsPage() {
 
             {/* Featured events */}
             <div className="lg:col-span-2 space-y-5">
-              <h2 className="text-lg font-bold" style={{ color: "#0B1226" }}>All Upcoming Events</h2>
+              <h2 className="text-lg font-bold" style={{ color: "#011B40" }}>All Upcoming Events</h2>
 
               {upcomingEvents.map(event => (
                 <div key={event.id} className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     {event.isFeatured && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-orange-500 text-white">FEATURED</span>
+                      <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-500 text-white">FEATURED</span>
                     )}
                     <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${categoryColors[event.category] ?? "bg-gray-50 text-gray-700 border-gray-200"}`}>
                       {event.type}
                     </span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold mb-1" style={{ color: "#0B1226" }}>{event.title}</h3>
+                  <h3 className="text-base sm:text-lg font-bold mb-1" style={{ color: "#011B40" }}>{event.title}</h3>
                   <p className="text-sm text-gray-500 mb-3">{event.college}</p>
 
                   <div className="flex flex-wrap gap-x-5 gap-y-1.5 mb-3 text-sm text-gray-500">
@@ -258,7 +258,7 @@ export default function EventsPage() {
                       target={event.registrationLink.startsWith("http") ? "_blank" : undefined}
                       rel={event.registrationLink.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                      style={{ background: "#F97316" }}>
+                      style={{ background: "#E0170F" }}>
                       {event.registrationLink.startsWith("http") ? <><ExternalLink className="w-3.5 h-3.5" /> Register</> : "More Info →"}
                     </a>
                   </div>
@@ -270,7 +270,7 @@ export default function EventsPage() {
             <div className="space-y-5">
               {/* Quick links */}
               <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                <h3 className="font-bold mb-4" style={{ color: "#0B1226" }}>Key Exam Dates 2026</h3>
+                <h3 className="font-bold mb-4" style={{ color: "#011B40" }}>Key Exam Dates 2026</h3>
                 <div className="space-y-3">
                   {[
                     { exam: "MHT-CET PCM", date: "April 2026",    href: "/exams/mht-cet" },
@@ -282,7 +282,7 @@ export default function EventsPage() {
                     { exam: "SNAP 2026",   date: "December 2026", href: "/exams/snap" },
                   ].map(e => (
                     <Link key={e.exam} href={e.href} className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0 group">
-                      <span className="text-sm font-medium group-hover:text-orange-500 transition-colors" style={{ color: "#1E2D4E" }}>{e.exam}</span>
+                      <span className="text-sm font-medium group-hover:text-orange-500 transition-colors" style={{ color: "#012858" }}>{e.exam}</span>
                       <span className="text-xs text-gray-400">{e.date}</span>
                     </Link>
                   ))}
@@ -290,20 +290,20 @@ export default function EventsPage() {
               </div>
 
               {/* CTA */}
-              <div className="rounded-2xl p-5" style={{ background: "#0B1226" }}>
-                <GraduationCap className="w-8 h-8 mb-3" style={{ color: "#F97316" }} />
+              <div className="rounded-2xl p-5" style={{ background: "#011B40" }}>
+                <GraduationCap className="w-8 h-8 mb-3" style={{ color: "#E0170F" }} />
                 <h3 className="font-bold text-white mb-2">Need Admission Guidance?</h3>
                 <p className="text-sm text-gray-300 mb-4">Our counsellors help you shortlist colleges, prepare for open days and meet admission deadlines — free.</p>
                 <Link href="/counselling"
                   className="block text-center py-2.5 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90"
-                  style={{ background: "#F97316" }}>
+                  style={{ background: "#E0170F" }}>
                   Get Free Counselling
                 </Link>
               </div>
 
               {/* Quick navigation */}
               <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                <h3 className="font-bold mb-4" style={{ color: "#0B1226" }}>Related Pages</h3>
+                <h3 className="font-bold mb-4" style={{ color: "#011B40" }}>Related Pages</h3>
                 <div className="space-y-2">
                   {[
                     { label: "Admission Guide 2026",     href: "/admission-guide",   icon: FileText },
@@ -314,7 +314,7 @@ export default function EventsPage() {
                   ].map(e => (
                     <Link key={e.href} href={e.href}
                       className="flex items-center gap-3 py-2 text-sm hover:text-orange-500 transition-colors group"
-                      style={{ color: "#1E2D4E" }}>
+                      style={{ color: "#012858" }}>
                       <e.icon className="w-4 h-4 text-gray-400 group-hover:text-orange-400 flex-shrink-0" />
                       {e.label}
                     </Link>
@@ -327,11 +327,11 @@ export default function EventsPage() {
 
         {/* FAQs */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
-          <h2 className="text-2xl font-bold mb-6" style={{ color: "#0B1226" }}>Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: "#011B40" }}>Frequently Asked Questions</h2>
           <div className="space-y-4 max-w-3xl">
             {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 border border-gray-100">
-                <h3 className="font-semibold mb-2" style={{ color: "#0B1226" }}>{faq.question}</h3>
+                <h3 className="font-semibold mb-2" style={{ color: "#011B40" }}>{faq.question}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}

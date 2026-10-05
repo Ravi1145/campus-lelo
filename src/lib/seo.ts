@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { keywordsForPath } from "@/lib/mbaKeywords"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const SITE_NAME = "CampusLelo"
@@ -32,6 +33,8 @@ export function generateMetadata({
       "pune university colleges",
       "sppu affiliated colleges 2026",
       ...keywords,
+      // Real queries from our MBA keyword clusters (src/data/mba/keywordClusters.ts)
+      ...keywordsForPath(path),
     ],
     authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
@@ -56,7 +59,6 @@ export function generateMetadata({
       canonical: canonicalUrl,
       languages: {
         "en-IN": canonicalUrl,
-        "mr-IN": canonicalUrl,
         "x-default": canonicalUrl,
       },
     },
@@ -251,9 +253,9 @@ export function generateCollegeSchema(college: {
   reviewCount?: number
   slug?: string
   reviews?: { studentName: string; course: string; year: number; rating: number; title: string; body: string }[]
+  updatedAt?: string
 }) {
   const pageUrl = `${BASE_URL}/colleges/${college.slug ?? ''}`
-  const today = new Date().toISOString().split('T')[0]
 
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -278,7 +280,7 @@ export function generateCollegeSchema(college: {
     url: college.website || pageUrl,
     sameAs: [college.website, `https://en.wikipedia.org/wiki/${encodeURIComponent(college.name)}`].filter(Boolean),
     foundingDate: college.established.toString(),
-    dateModified: `${today}`,
+    ...(college.updatedAt ? { dateModified: college.updatedAt } : {}),
     areaServed: { "@type": "City", name: "Pune", sameAs: "https://en.wikipedia.org/wiki/Pune" },
     // Accreditation signals — key for Google AI Overview on education queries
     ...(college.naac ? {
@@ -336,7 +338,7 @@ export function generateCollegeSchema(college: {
       inLanguage: "en-IN",
       isPartOf: { "@id": `${BASE_URL}/#website` },
       about: { "@id": `${pageUrl}#college` },
-      dateModified: `${today}`,
+      ...(college.updatedAt ? { dateModified: college.updatedAt } : {}),
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -348,33 +350,10 @@ export function generateCollegeSchema(college: {
     },
   }
 
-  // AggregateRating — unlocks gold star rich snippets
-  if (college.rating && college.rating > 0) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: college.rating.toFixed(1),
-      reviewCount: college.reviewCount && college.reviewCount > 0 ? college.reviewCount : 1,
-      bestRating: "5",
-      worstRating: "1",
-    }
-  }
-
-  // Individual Review items
-  if (college.reviews && college.reviews.length > 0) {
-    schema.review = college.reviews.slice(0, 5).map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.studentName },
-      datePublished: `${r.year}-01-01`,
-      name: r.title,
-      reviewBody: r.body,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: r.rating.toFixed(1),
-        bestRating: "5",
-        worstRating: "1",
-      },
-    }))
-  }
+  // NOTE: AggregateRating / Review are intentionally NOT emitted here.
+  // college.rating / college.reviews are static editorial data, not verified user
+  // reviews — marking them up violates Google's review-snippet guidelines.
+  // Rating schema is emitted only from moderated DB reviews in ReviewSection.
 
   return schema
 }
@@ -391,9 +370,9 @@ export function generateCollegeWebPageSchema(college: {
   feesMax?: number
   avgPlacement?: number
   entranceExams?: string[]
+  updatedAt?: string
 }) {
   const pageUrl = `${BASE_URL}/colleges/${college.slug}`
-  const today = new Date().toISOString().split('T')[0]
   const feesText = college.feesMin ? `₹${(college.feesMin / 100000).toFixed(1)}L–₹${(college.feesMax! / 100000).toFixed(1)}L/yr` : ''
   const placText = college.avgPlacement ? `, avg placement ₹${(college.avgPlacement / 100000).toFixed(1)} LPA` : ''
   const naacText = college.naac ? `NAAC ${college.naac}` : ''
@@ -409,7 +388,7 @@ export function generateCollegeWebPageSchema(college: {
     inLanguage: "en-IN",
     isPartOf: { "@id": `${BASE_URL}/#website` },
     about: { "@type": "CollegeOrUniversity", "@id": `${pageUrl}#college`, name: college.name },
-    dateModified: `${today}`,
+    ...(college.updatedAt ? { dateModified: college.updatedAt } : {}),
     // speakable tells Google AI which sections to use for AI Overview answers
     speakable: {
       "@type": "SpeakableSpecification",

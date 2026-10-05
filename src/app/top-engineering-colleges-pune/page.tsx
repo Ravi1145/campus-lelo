@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Top Engineering Colleges in Pune 2026 | Rankings, Fees & Placements",
   description: "Discover the top engineering colleges in Pune for 2026 admission. Ranked by NIRF, NAAC, fees (₹80K-4.8L/yr), and placement packages. COEP, PICT, VIT Pune, SIT Pune & more.",
-  path: "/top-engineering-colleges-pune",
+  path: "/top-btech-colleges-in-pune",
   keywords: ["top engineering colleges pune", "best engineering colleges in pune 2026", "top btech colleges pune", "ranked engineering colleges pune"],
 })
 
@@ -35,7 +35,7 @@ export default function TopEngineeringCollegesPunePage() {
   const faqSchema = generateFAQSchema(faqs.map(f => ({ question: f.q, answer: f.a })))
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "Top Engineering Colleges Pune", url: "/top-engineering-colleges-pune" },
+    { name: "Top Engineering Colleges Pune", url: "/top-btech-colleges-in-pune" },
   ])
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -52,11 +52,11 @@ export default function TopEngineeringCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <SEOLandingPage
-        breadcrumb={[{ label: "Top Engineering Colleges in Pune", href: "/top-engineering-colleges-pune" }]}
+        breadcrumb={[{ label: "Top Engineering Colleges in Pune", href: "/top-btech-colleges-in-pune" }]}
         h1="Top Engineering Colleges in Pune 2026"
         subtitle="Ranked by NIRF, NAAC grades, fees, and placement packages - the definitive guide to the best engineering institutions in Pune for 2026 admission."
         heroStats={[

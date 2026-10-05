@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
 import BTechClusterPage from "@/components/btech/BTechClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune Through MHT-CET 2026 | CAP Cutoffs & Admission",
@@ -45,8 +45,8 @@ export default function BTechThroughMHTCET() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <BTechClusterPage
         h1="BTech Colleges in Pune Through MHT-CET 2026"
         subtitle="Complete MHT-CET cutoffs, CAP round process and college-wise branch cutoffs for BTech admission in Pune."

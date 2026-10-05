@@ -52,7 +52,7 @@ export default function PlacementComparator() {
             onClick={() => { setStream(s); setSelected([]) }}
             className={`flex-1 py-2.5 rounded-xl text-sm font-bold border transition-colors ${
               stream === s
-                ? "bg-[#0A1628] text-white border-[#0A1628]"
+                ? "bg-[#011B40] text-white border-[#011B40]"
                 : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
             }`}
           >

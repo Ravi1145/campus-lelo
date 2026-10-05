@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune with 100% Placement 2026 | Best Placement MBA",
@@ -26,8 +27,8 @@ export default function MBAWith100Placement() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Colleges in Pune with Best Placements 2026"
         subtitle="Top MBA colleges in Pune with highest placement rates, average packages, and most recruiter companies on campus."
@@ -50,12 +51,13 @@ export default function MBAWith100Placement() {
           { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune-highest-package" },
           { label: "MBA Average Package Pune", href: "/mba-colleges-in-pune-average-package" },
           { label: "MBA Placements Pune", href: "/mba-placements-pune" },
-          { label: "Top MBA Colleges Pune", href: "/best-mba-colleges-pune" },
+          { label: "Top MBA Colleges Pune", href: "/mba-colleges-pune" },
           { label: "Engineering Placements Pune", href: "/engineering-colleges-pune-placement" },
         ]}
         ctaHeading="Find the Best Placement MBA College for Your Profile"
         ctaSubtext="Free counselling to target the right MBA college based on your CAT/MAH-CET score and placement goals."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-with-100-placement" />
     </>
   )
 }

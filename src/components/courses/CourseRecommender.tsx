@@ -89,10 +89,10 @@ export default function CourseRecommender() {
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="font-extrabold text-gray-900 text-base">{rec.course}</h3>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${rec.matchScore >= 85 ? "bg-green-50 text-green-700" : "bg-yellow-50 text-yellow-700"}`}>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${rec.matchScore >= 85 ? "bg-green-50 text-green-700" : "bg-yellow-50 text-yellow-700"}`}>
                       {rec.matchScore}% match
                     </span>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">{rec.level} · {rec.duration}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">{rec.level} · {rec.duration}</span>
                   </div>
                   <p className="text-xs text-gray-500 leading-relaxed">{rec.whyFit}</p>
                 </div>

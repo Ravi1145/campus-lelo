@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune with Hostel 2026 | On-Campus Accommodation",
@@ -27,8 +28,8 @@ export default function MBAWithHostel() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Colleges in Pune with Hostel 2026"
         subtitle="On-campus hostel facilities at top Pune MBA colleges. Hostel fees, facilities and accommodation options for outstation MBA students."
@@ -56,6 +57,7 @@ export default function MBAWithHostel() {
         ctaHeading="Planning to Stay in Hostel During MBA?"
         ctaSubtext="Get hostel availability and booking guidance from our counsellors â€” free."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-with-hostel" />
     </>
   )
 }

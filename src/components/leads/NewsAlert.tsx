@@ -63,7 +63,7 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
   return (
     <div
       className="rounded-xl overflow-hidden"
-      style={{ background: "linear-gradient(90deg, #0A1628 0%, #1a2f52 100%)", border: "1px solid rgba(255,255,255,0.08)" }}
+      style={{ background: "linear-gradient(90deg, #011B40 0%, #1a2f52 100%)", border: "1px solid rgba(255,255,255,0.08)" }}
     >
       <div className="px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-3">
         {/* Icon + text */}

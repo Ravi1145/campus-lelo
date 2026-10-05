@@ -39,7 +39,7 @@ export default function AdmissionPosterHero() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] text-white py-8 px-4">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#024692] text-white py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
@@ -61,11 +61,11 @@ export default function AdmissionPosterHero() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Heading */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-[#0A1628] text-white px-8 py-2 rounded-full mb-4 font-bold text-sm">
+          <div className="inline-block bg-[#011B40] text-white px-8 py-2 rounded-full mb-4 font-bold text-sm">
             ⭐ TOP COLLEGES. BRIGHT FUTURES.
           </div>
           <h2 className="text-5xl md:text-6xl font-black mb-4">
-            <span className="text-[#0A1628]">ADMISSION</span>
+            <span className="text-[#011B40]">ADMISSION</span>
             <br />
             <span className="text-orange-500">OPEN 2026</span>
           </h2>
@@ -74,12 +74,12 @@ export default function AdmissionPosterHero() {
 
         {/* Courses Grid */}
         <div className="bg-gray-50 rounded-3xl p-8 mb-12">
-          <h3 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">COURSES WE OFFER</h3>
+          <h3 className="text-2xl font-bold text-[#011B40] mb-8 text-center">COURSES WE OFFER</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {COURSES.map((course) => (
               <div key={course.label} className="bg-white rounded-2xl p-4 text-center hover:shadow-lg transition-shadow">
                 <div className="text-4xl mb-2">{course.icon}</div>
-                <p className="font-bold text-sm text-[#0A1628] mb-1">{course.label}</p>
+                <p className="font-bold text-sm text-[#011B40] mb-1">{course.label}</p>
                 <p className="text-xs text-gray-600">{course.desc}</p>
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function AdmissionPosterHero() {
 
         {/* Top Colleges */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#0A1628] mb-6 text-center">TOP COLLEGES IN PUNE</h3>
+          <h3 className="text-2xl font-bold text-[#011B40] mb-6 text-center">TOP COLLEGES IN PUNE</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {TOP_COLLEGES.map((college) => (
               <div key={college.name} className="bg-white border-2 border-gray-200 rounded-2xl p-4 text-center hover:border-orange-500 transition-colors">
@@ -103,7 +103,7 @@ export default function AdmissionPosterHero() {
         </div>
 
         {/* Scholarship Section */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] text-white rounded-3xl p-8 mb-12 grid md:grid-cols-2 gap-8 items-center">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] text-white rounded-3xl p-8 mb-12 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-bold mb-4">SCHOLARSHIP UPTO</h3>
             <p className="text-6xl font-black text-orange-500 mb-2">₹50,000</p>
@@ -127,7 +127,7 @@ export default function AdmissionPosterHero() {
             { icon: "✅", label: "EASY ADMISSION" },
             { icon: "👥", label: "FREE PLACEMENT GUIDANCE" },
           ].map((item) => (
-            <div key={item.label} className="bg-[#0A1628] text-white rounded-2xl p-4 text-center">
+            <div key={item.label} className="bg-[#011B40] text-white rounded-2xl p-4 text-center">
               <div className="text-3xl mb-2">{item.icon}</div>
               <p className="text-xs font-bold">{item.label}</p>
             </div>
@@ -136,7 +136,7 @@ export default function AdmissionPosterHero() {
 
         {/* Admission Process */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">OUR SIMPLE ADMISSION PROCESS</h3>
+          <h3 className="text-2xl font-bold text-[#011B40] mb-8 text-center">OUR SIMPLE ADMISSION PROCESS</h3>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {ADMISSION_STEPS.map((step, idx) => (
               <div key={step.num} className="flex flex-col items-center">
@@ -144,7 +144,7 @@ export default function AdmissionPosterHero() {
                   {step.icon}
                 </div>
                 <div className="bg-gray-100 rounded-xl p-3 text-center max-w-32">
-                  <p className="text-xs font-black text-[#0A1628]">{step.title}</p>
+                  <p className="text-xs font-black text-[#011B40]">{step.title}</p>
                 </div>
                 {idx < ADMISSION_STEPS.length - 1 && (
                   <div className="hidden md:block text-3xl text-orange-500 font-bold mx-4">→</div>
@@ -160,7 +160,7 @@ export default function AdmissionPosterHero() {
             📋 APPLY NOW<br />
             <span className="text-sm font-bold">SECURE YOUR FUTURE TODAY!</span>
           </Link>
-          <Link href="/counselling" className="bg-[#0A1628] hover:bg-[#0f2340] text-white rounded-2xl p-6 text-center font-black text-xl transition-colors">
+          <Link href="/counselling" className="bg-[#011B40] hover:bg-[#0f2340] text-white rounded-2xl p-6 text-center font-black text-xl transition-colors">
             📞 TALK TO OUR ADMISSION EXPERTS<br />
             <span className="text-orange-500 text-2xl font-black">7318538887</span>
             <div className="text-sm font-bold mt-2">www.campuslelo.com</div>
@@ -168,7 +168,7 @@ export default function AdmissionPosterHero() {
         </div>
 
         {/* Trust Badges */}
-        <div className="bg-[#0A1628] text-white rounded-2xl p-6 flex flex-wrap justify-center gap-6 text-center">
+        <div className="bg-[#011B40] text-white rounded-2xl p-6 flex flex-wrap justify-center gap-6 text-center">
           {TRUST_POINTS.map((point) => (
             <div key={point} className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-orange-500" />

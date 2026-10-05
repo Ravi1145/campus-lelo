@@ -136,8 +136,8 @@ export default function QuickExploreSection() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm font-bold text-gray-900 leading-tight">{cat.label}</p>
-                  <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5 hidden sm:block">{cat.sub}</p>
-                  <span className={`mt-1 inline-block text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded-full ${cat.badgeColor}`}>
+                  <p className="text-xs sm:text-xs text-gray-500 mt-0.5 hidden sm:block">{cat.sub}</p>
+                  <span className={`mt-1 inline-block text-xs sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded-full ${cat.badgeColor}`}>
                     {cat.badge}
                   </span>
                 </div>

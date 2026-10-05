@@ -79,7 +79,7 @@ export default function PredictorPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-12 px-4">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-12 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
             <GraduationCap className="w-3.5 h-3.5" /> FREE COLLEGE PREDICTOR
@@ -178,18 +178,18 @@ export default function PredictorPage() {
                   const { label, color } = getProbabilityLabel(probability)
                   return (
                     <div key={college.id} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-orange-200 transition-colors">
-                      <div className="w-12 h-12 bg-[#0A1628] rounded-xl flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                      <div className="w-12 h-12 bg-[#011B40] rounded-xl flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                         {college.shortName.slice(0, 3)}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-1">
                           <h3 className="font-bold text-gray-900 text-sm">{college.name}</h3>
                           {college.nirfRank && (
-                            <span className="text-[11px] bg-purple-50 text-purple-700 font-semibold px-2 py-0.5 rounded-full">
+                            <span className="text-xs bg-purple-50 text-purple-700 font-semibold px-2 py-0.5 rounded-full">
                               NIRF #{college.nirfRank}
                             </span>
                           )}
-                          <span className="text-[11px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded-full">
+                          <span className="text-xs bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded-full">
                             NAAC {college.naac}
                           </span>
                         </div>
@@ -202,7 +202,7 @@ export default function PredictorPage() {
                       <div className="flex sm:flex-col items-center sm:items-end gap-3 sm:gap-2">
                         <div className="text-center">
                           <p className="text-2xl font-extrabold text-gray-900">{probability}%</p>
-                          <span className={cn("text-[11px] font-bold px-2 py-0.5 rounded-full", color)}>{label}</span>
+                          <span className={cn("text-xs font-bold px-2 py-0.5 rounded-full", color)}>{label}</span>
                         </div>
                         <Link
                           href={`/colleges/${college.slug}`}
@@ -218,7 +218,7 @@ export default function PredictorPage() {
             )}
 
             {/* CTA banner */}
-            <div className="mt-6 bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="mt-6 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-white">
                 <p className="font-bold">Want personalised guidance?</p>
                 <p className="text-blue-200 text-sm">Talk to our expert counsellors — free, 15-min session.</p>

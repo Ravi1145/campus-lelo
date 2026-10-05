@@ -1,12 +1,12 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import Script from "next/script"
 import Link from "next/link"
 import { CheckCircle, ArrowLeft, Briefcase, GraduationCap, Star } from "lucide-react"
 import {
   generateMetadata as genMeta,
   generateBreadcrumbSchema,
 } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 3600
 
@@ -123,7 +123,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!alumni) return {}
 
   const { name, course, college } = alumni
-  return genMeta({
+  // noindex until profiles are verified real alumni (with consent) — E-E-A-T risk
+  return { ...genMeta({
     title: `${name} — ${course} at ${college} | CampusLelo Alumni`,
     description: `${name} graduated from ${college} with ${course} (${alumni.year}). Now at ${alumni.company}. Read highlights and connect with verified Pune alumni.`,
     path: `/alumni/${slug}`,
@@ -133,7 +134,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${college} ${course}`,
       "pune college alumni",
     ],
-  })
+  }), robots: { index: false, follow: true } }
 }
 
 function Initials({ name, className = "" }: { name: string; className?: string }) {
@@ -179,15 +180,15 @@ export default async function AlumniProfilePage({ params }: Props) {
 
   return (
     <>
-      <Script
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
 
       <main className="bg-white min-h-screen">
         {/* ── Hero strip ──────────────────────────────────────────────────── */}
-        <section className="bg-[#0A1628] text-white">
+        <section className="bg-[#011B40] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
             {/* Breadcrumb */}
             <nav
@@ -237,7 +238,7 @@ export default async function AlumniProfilePage({ params }: Props) {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 space-y-8">
             {/* Bio */}
             <div>
-              <h2 className="text-base font-extrabold text-gray-900 mb-2 uppercase tracking-wide text-xs text-[#0A1628]">
+              <h2 className="text-base font-extrabold text-gray-900 mb-2 uppercase tracking-wide text-xs text-[#011B40]">
                 About
               </h2>
               <p className="text-gray-600 leading-relaxed">{bio}</p>
@@ -246,7 +247,7 @@ export default async function AlumniProfilePage({ params }: Props) {
             {/* Highlights */}
             {highlights.length > 0 && (
               <div>
-                <h2 className="text-xs font-extrabold text-[#0A1628] uppercase tracking-wide mb-3">
+                <h2 className="text-xs font-extrabold text-[#011B40] uppercase tracking-wide mb-3">
                   Highlights
                 </h2>
                 <ul className="space-y-2">
@@ -268,7 +269,7 @@ export default async function AlumniProfilePage({ params }: Props) {
           </div>
 
           {/* CTA */}
-          <div className="mt-8 bg-[#0A1628] rounded-2xl p-6 sm:p-8 text-center text-white">
+          <div className="mt-8 bg-[#011B40] rounded-2xl p-6 sm:p-8 text-center text-white">
             <h2 className="text-lg sm:text-xl font-extrabold mb-2">
               Ask {firstName} a Question
             </h2>
@@ -277,7 +278,7 @@ export default async function AlumniProfilePage({ params }: Props) {
             </p>
             <Link
               href={`/qa?college=${encodeURIComponent(college)}`}
-              className="inline-flex items-center gap-2 bg-[var(--color-accent,#f97316)] hover:opacity-90 text-white font-bold px-7 py-3 rounded-xl text-sm transition-opacity"
+              className="inline-flex items-center gap-2 bg-[var(--color-accent,#E0170F)] hover:opacity-90 text-white font-bold px-7 py-3 rounded-xl text-sm transition-opacity"
             >
               Ask {firstName} a Question
             </Link>
@@ -287,7 +288,7 @@ export default async function AlumniProfilePage({ params }: Props) {
           <div className="mt-6 text-center">
             <Link
               href="/alumni"
-              className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#0A1628] transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#011B40] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               View all alumni

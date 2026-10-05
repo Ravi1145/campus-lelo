@@ -42,7 +42,7 @@ export default function CareerPathsPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1A2E4A] py-12">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#1A2E4A] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -93,25 +93,25 @@ export default function CareerPathsPage() {
 
                   <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                     <div className="bg-green-50 rounded-xl py-2">
-                      <p className="text-[10px] text-gray-500">Entry</p>
+                      <p className="text-xs text-gray-500">Entry</p>
                       <p className="font-extrabold text-green-700 text-sm">{formatLPA(path.avgSalaryEntry)} PA</p>
                     </div>
                     <div className="bg-blue-50 rounded-xl py-2">
-                      <p className="text-[10px] text-gray-500">5 Years</p>
+                      <p className="text-xs text-gray-500">5 Years</p>
                       <p className="font-extrabold text-blue-700 text-sm">{formatLPA(path.avgSalaryMid)} PA</p>
                     </div>
                     <div className="bg-purple-50 rounded-xl py-2">
-                      <p className="text-[10px] text-gray-500">Senior</p>
+                      <p className="text-xs text-gray-500">Senior</p>
                       <p className="font-extrabold text-purple-700 text-sm">{formatLPA(path.avgSalarySenior)} PA</p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2">
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${path.growth === "Very High" ? "bg-green-100 text-green-700" : path.growth === "High" ? "bg-blue-100 text-blue-700" : "bg-gray-100 text-gray-600"}`}>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${path.growth === "Very High" ? "bg-green-100 text-green-700" : path.growth === "High" ? "bg-blue-100 text-blue-700" : "bg-gray-100 text-gray-600"}`}>
                         {path.growth} growth
                       </span>
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${path.demand === "Very High" ? "bg-orange-100 text-orange-700" : "bg-gray-100 text-gray-600"}`}>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${path.demand === "Very High" ? "bg-orange-100 text-orange-700" : "bg-gray-100 text-gray-600"}`}>
                         {path.demand} demand
                       </span>
                     </div>
@@ -126,7 +126,7 @@ export default function CareerPathsPage() {
         ))}
 
         {/* AI Counselor CTA */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1A3A5F] rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-5">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-5">
           <div className="text-4xl">🤖</div>
           <div className="flex-1 text-center sm:text-left">
             <h2 className="font-extrabold text-white text-lg mb-1">Not sure which career is right for you?</h2>

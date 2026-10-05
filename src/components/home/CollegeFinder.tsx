@@ -104,7 +104,7 @@ function ProgressBar({ step }: { step: number }) {
           className="h-full rounded-full transition-all duration-500 ease-out"
           style={{
             width: `${pct}%`,
-            backgroundColor: "var(--color-accent, #f97316)",
+            backgroundColor: "var(--color-accent, #E0170F)",
           }}
         />
       </div>
@@ -130,7 +130,7 @@ function OptionButton({
       className={cn(
         "w-full border-2 rounded-xl px-4 py-3 text-left transition-all text-sm font-semibold",
         selected
-          ? "border-[color:var(--color-accent,#f97316)] bg-orange-50 text-gray-900"
+          ? "border-[color:var(--color-accent,#E0170F)] bg-orange-50 text-gray-900"
           : "border-gray-200 text-gray-700 hover:border-orange-300 hover:bg-orange-50/40",
         className,
       )}
@@ -167,7 +167,7 @@ function NextButton({
       disabled={disabled}
       className={cn(
         "mt-4 ml-auto flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-bold text-white transition-all",
-        "bg-[color:var(--color-accent,#f97316)] hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed",
+        "bg-[color:var(--color-accent,#E0170F)] hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed",
       )}
     >
       Next <ArrowRight className="w-3.5 h-3.5" />
@@ -448,7 +448,7 @@ export default function CollegeFinder() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[color:var(--color-accent,#f97316)] text-white font-bold rounded-xl py-3 w-full flex items-center justify-center gap-2 text-sm hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="bg-[color:var(--color-accent,#E0170F)] text-white font-bold rounded-xl py-3 w-full flex items-center justify-center gap-2 text-sm hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {loading ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
@@ -522,12 +522,12 @@ export default function CollegeFinder() {
               Want expert guidance?
             </p>
             <p className="text-xs text-gray-500 mb-3">
-              Our counsellors will call you within 2 hours — completely free.
+              A counsellor will call you — phone counselling is free.
             </p>
             <a
               href="tel:+918080804422"
               className="inline-flex items-center gap-2 text-sm font-bold text-white px-5 py-2.5 rounded-xl transition-all hover:brightness-110"
-              style={{ backgroundColor: "var(--color-primary, #0A1628)" }}
+              style={{ backgroundColor: "var(--color-primary, #011B40)" }}
             >
               <Phone className="w-4 h-4" />
               Talk to a Counselor

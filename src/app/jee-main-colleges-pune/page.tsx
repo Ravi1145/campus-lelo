@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 300
 
@@ -48,12 +48,12 @@ export default function JeeMainCollegesPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
 
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-br from-[#0A1628] to-indigo-900 text-white py-12 px-4">
+        <section className="bg-gradient-to-br from-[#011B40] to-indigo-900 text-white py-12 px-4">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>

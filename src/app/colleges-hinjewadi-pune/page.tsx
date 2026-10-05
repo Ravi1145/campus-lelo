@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Hinjewadi Pune 2025-26 | IT Park Engineering & MBA Colleges",
@@ -49,12 +49,12 @@ export default function CollegesHinjewadiPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="list-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="list-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessSchema) }} />
 
       <div className="bg-surface min-h-screen">
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -112,7 +112,7 @@ export default function CollegesHinjewadiPune() {
             <h2 className="text-lg font-bold text-gray-900 mb-4">Courses Near Hinjewadi Pune</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
               {[
-                { label: "B.Tech near Hinjewadi", href: "/btech-colleges-pune" },
+                { label: "B.Tech near Hinjewadi", href: "/btech-colleges-in-pune" },
                 { label: "MBA near Hinjewadi", href: "/mba-colleges-pune" },
                 { label: "MCA near Hinjewadi", href: "/mca-colleges-pune" },
                 { label: "BCA near Hinjewadi", href: "/bca-colleges-pune" },
@@ -151,9 +151,6 @@ export default function CollegesHinjewadiPune() {
                 { label: "Wakad", href: "/colleges-wakad-pune" },
                 { label: "Hadapsar", href: "/colleges-hadapsar-pune" },
                 { label: "Viman Nagar", href: "/colleges-viman-nagar-pune" },
-                { label: "Kharadi", href: "/colleges-kharadi-pune" },
-                { label: "Aundh", href: "/colleges-aundh-pune" },
-                { label: "Baner", href: "/colleges-baner-pune" },
                 { label: "Shivajinagar", href: "/colleges-in-pune" },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors">
@@ -164,7 +161,7 @@ export default function CollegesHinjewadiPune() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-6 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Need Help Choosing a College Near Hinjewadi?</h2>
             <p className="text-gray-300 text-sm mb-4">Get free Pune college counselling — find the best fit for your career goals.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors inline-block">

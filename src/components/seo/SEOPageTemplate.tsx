@@ -26,7 +26,7 @@ function formatPkg(n: number): string {
 const STREAM_LINKS: Record<string, { label: string; href: string }[]> = {
   Engineering: [
     { label: "Top 10 Engineering Colleges Pune", href: "/top-10-engineering-colleges-in-pune" },
-    { label: "B.Tech Colleges Pune", href: "/btech-colleges-pune" },
+    { label: "B.Tech Colleges Pune", href: "/btech-colleges-in-pune" },
     { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune" },
     { label: "Engineering Placements Pune", href: "/engineering-colleges-pune-placement" },
     { label: "JEE Colleges Pune", href: "/jee-colleges-pune" },
@@ -42,7 +42,7 @@ const STREAM_LINKS: Record<string, { label: string; href: string }[]> = {
     { label: "MBA Without CAT Pune", href: "/mba-admission-pune-without-cat" },
     { label: "MBA Placements Pune", href: "/mba-colleges-pune-placement" },
     { label: "Low Fees MBA Colleges", href: "/low-fees-mba-colleges-pune" },
-    { label: "CAT Colleges Pune", href: "/cat-colleges-pune" },
+    { label: "CAT Colleges Pune", href: "/mba-colleges-in-pune-accepting-cat" },
     { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
     { label: "NAAC A+ Colleges Pune", href: "/naac-a-plus-colleges-pune" },
     { label: "Compare Colleges", href: "/compare" },

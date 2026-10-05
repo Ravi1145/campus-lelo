@@ -5,6 +5,8 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { sendLeadEmail } from '@/lib/mailer'
 import { isAllowedOrigin } from '@/lib/csrf'
 import { timingSafeEqual, createHash } from 'crypto'
+import { rateLimit } from '@/lib/ratelimit'
+import { buildLeadRecord, isSpam } from '@/lib/leads'
 
 function safeEqual(a: string, b: string): boolean {
   try {
@@ -18,35 +20,46 @@ export async function POST(req: NextRequest) {
   if (!isAllowedOrigin(req)) {
     return NextResponse.json({ success: false, message: 'Forbidden' }, { status: 403 })
   }
+  // 10 submissions per IP per 10 minutes. Generous because many students share
+  // carrier-NAT IPs; the honeypot below catches most bots.
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown'
+  if (!rateLimit(`leads:${ip}`, 10, 10 * 60_000).allowed) {
+    return NextResponse.json({ success: false, message: 'Too many requests. Please try again in a few minutes or call us.' }, { status: 429 })
+  }
   try {
     const body = await req.json()
     const validated = leadSchema.parse(body)
     const referer = req.headers.get('referer') ?? ''
 
-    const admin = createAdminClient()
-    const { error } = await admin.from('leads').insert({
-      name:            validated.name ?? null,
-      phone:           validated.phone,
-      email:           validated.email || null,
-      stream:          validated.stream ?? null,
-      college_interest: validated.college_interest ?? null,
-      course_interest: validated.course_interest ?? null,
-      budget:          validated.budget ?? null,
-      exam_type:       validated.exam_type ?? null,
-      exam_score:      validated.exam_score ?? null,
-      career_goal:     validated.career_goal ?? null,
-      source:          validated.source ?? 'website',
-      message:         validated.message ?? null,
-      page_url:        referer || null,
-      status:          'new',
-    })
+    // Honeypot filled → bot. Pretend success so it doesn't retry; store nothing.
+    if (isSpam(validated)) {
+      return NextResponse.json({ success: true, message: 'Thank you! Our counsellor will contact you within 2 hours.' })
+    }
 
-    if (error) console.error('[leads] Supabase insert error:', error.message)
-
+    const record = buildLeadRecord(validated, referer)
+    let saved = false
     try {
-      await sendLeadEmail({ ...validated, page_url: referer })
+      const admin = createAdminClient()
+      const { error } = await admin.from('leads').insert(record)
+      if (error) console.error('[leads] Supabase insert error:', error.message)
+      else saved = true
+    } catch (dbErr) {
+      console.error('[leads] Supabase unavailable:', dbErr)
+    }
+
+    let emailed = false
+    try {
+      emailed = await sendLeadEmail({ ...validated, message: record.message ?? undefined, page_url: record.page_url ?? '' })
     } catch (emailErr) {
       console.error('[leads] email failed:', emailErr)
+    }
+
+    // Only claim success if the lead reached at least one destination
+    if (!saved && !emailed) {
+      return NextResponse.json(
+        { success: false, message: 'We could not save your request. Please try again or WhatsApp us.' },
+        { status: 503 },
+      )
     }
 
     return NextResponse.json({

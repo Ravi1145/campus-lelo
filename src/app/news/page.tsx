@@ -1,5 +1,4 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { getAllBlogs } from "@/lib/db"
@@ -7,6 +6,7 @@ import { blogs as staticBlogs } from "@/data/blogs"
 import type { BlogPost } from "@/types"
 import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import NewsAlert from "@/components/leads/NewsAlert"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 3600 // ISR — re-render every hour
 
@@ -131,12 +131,12 @@ export default async function NewsPage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-10">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -178,8 +178,8 @@ export default async function NewsPage() {
                       >
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-[10px] bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold uppercase">Urgent</span>
-                            <span className="text-[10px] text-gray-400">{formatDate(n.date)}</span>
+                            <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold uppercase">Urgent</span>
+                            <span className="text-xs text-gray-400">{formatDate(n.date)}</span>
                           </div>
                           <h3 className="font-bold text-gray-900 text-sm leading-snug">{n.title}</h3>
                           <p className="text-xs text-gray-500 mt-1 line-clamp-2">{n.excerpt}</p>
@@ -202,8 +202,8 @@ export default async function NewsPage() {
                     >
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-1">
-                          <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{n.category}</span>
-                          <span className="text-[10px] text-gray-400">{formatDate(n.date)} · {n.source}</span>
+                          <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{n.category}</span>
+                          <span className="text-xs text-gray-400">{formatDate(n.date)} · {n.source}</span>
                         </div>
                         <h3 className="font-semibold text-gray-900 text-sm leading-snug">{n.title}</h3>
                         <p className="text-xs text-gray-500 mt-1 line-clamp-2">{n.excerpt}</p>
@@ -226,8 +226,8 @@ export default async function NewsPage() {
                       >
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2 mb-1">
-                            <span className="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold">{post.category}</span>
-                            <span className="text-[10px] text-gray-400">{formatDate(post.date)} · {post.readTime} read</span>
+                            <span className="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold">{post.category}</span>
+                            <span className="text-xs text-gray-400">{formatDate(post.date)} · {post.readTime} read</span>
                           </div>
                           <h3 className="font-semibold text-gray-900 text-sm leading-snug">{post.title}</h3>
                           <p className="text-xs text-gray-500 mt-1 line-clamp-2">{post.excerpt}</p>

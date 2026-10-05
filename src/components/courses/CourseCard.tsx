@@ -42,7 +42,7 @@ export default function CourseCard({ course }: CourseCardProps) {
           }}
         >
           {/* overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/90 via-[#0A1628]/85 to-[#0A1628]/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#011B40]/90 via-[#011B40]/85 to-[#011B40]/92" />
 
           {/* Level badge top-right */}
           <span className={`absolute top-3 right-3 z-20 text-xs font-bold px-2.5 py-0.5 rounded-full ${levelColors[course.level] ?? "bg-gray-500 text-white"}`}>
@@ -92,7 +92,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             <div className="bg-orange-50 border border-orange-100 rounded-xl px-3 py-2.5">
               <div className="flex items-center gap-1 mb-1">
                 <IndianRupee className="w-3 h-3 text-orange-400 shrink-0" />
-                <span className="text-[9px] text-orange-500 font-semibold uppercase tracking-wider">Annual Fees</span>
+                <span className="text-xs text-orange-500 font-semibold uppercase tracking-wider">Annual Fees</span>
               </div>
               <p className="text-xs font-bold text-gray-900 leading-tight">
                 {formatFeesRange(course.avgFees.min, course.avgFees.max)}
@@ -101,7 +101,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5">
               <div className="flex items-center gap-1 mb-1">
                 <TrendingUp className="w-3 h-3 text-blue-400 shrink-0" />
-                <span className="text-[9px] text-blue-500 font-semibold uppercase tracking-wider">Avg Salary</span>
+                <span className="text-xs text-blue-500 font-semibold uppercase tracking-wider">Avg Salary</span>
               </div>
               <p className="text-xs font-bold text-gray-900 leading-tight">
                 {formatCurrency(course.avgSalary)}

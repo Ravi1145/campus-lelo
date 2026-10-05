@@ -1,10 +1,10 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import ScholarshipSubscribe from "@/components/leads/ScholarshipSubscribe"
 import ScholarshipFinder from "@/components/scholarships/ScholarshipFinder"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Scholarships for Pune Students 2026 | MahaDBT & NSP Guide | CampusLelo",
@@ -195,12 +195,12 @@ export default function ScholarshipsPage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#0D3B2E] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#0D3B2E] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -262,8 +262,8 @@ export default function ScholarshipsPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-wrap items-center gap-2 mb-1">
                         <h3 className="font-extrabold text-gray-900 text-base">{s.name}</h3>
-                        <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${s.badgeColor}`}>{s.badge}</span>
-                        <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${s.priority === "High" ? "bg-red-50 text-red-600" : "bg-gray-100 text-gray-600"}`}>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${s.badgeColor}`}>{s.badge}</span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${s.priority === "High" ? "bg-red-50 text-red-600" : "bg-gray-100 text-gray-600"}`}>
                           {s.priority} Priority
                         </span>
                       </div>
@@ -348,7 +348,7 @@ export default function ScholarshipsPage() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-6 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-center">
             <h2 className="text-xl font-extrabold text-white mb-2">Need Help with Scholarship Application?</h2>
             <p className="text-gray-300 text-sm mb-4">Our counsellors help Pune college students complete MahaDBT, NSP, and college scholarship applications — completely free.</p>
             <div className="flex flex-wrap gap-3 justify-center">

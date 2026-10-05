@@ -11,8 +11,11 @@
  */
 
 import { NextResponse } from "next/server"
+import { PLANS, FREE_FOR_EVERYONE, QUICK_ANSWER, COMPARISON, COUNSELLING_UPDATED, VIDEO_PRICE_INR } from "@/data/counselling"
 import { colleges as staticColleges } from "@/data/colleges"
 import { exams } from "@/data/exams"
+import { mbaExams } from "@/data/mba/exams"
+import { programAdmissions, maharashtraCap } from "@/data/mba/programAdmissions"
 import { createClient } from "@supabase/supabase-js"
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -157,7 +160,7 @@ export async function GET() {
           feesTotal: "₹22L",
           avgPlacementLPA: 28,
           highestPlacementLPA: 65,
-          admissionExam: "SNAP (60+ percentile)",
+          admissionExam: "SNAP (Symbiosis International University)",
           topRecruiters: ["McKinsey", "BCG", "P&G", "Deloitte", "Amazon"],
         },
         {
@@ -168,7 +171,7 @@ export async function GET() {
           nirfRank: 20,
           feesTotal: "₹18L",
           avgPlacementLPA: 22,
-          admissionExam: "SNAP (65+ percentile)",
+          admissionExam: "SNAP (Symbiosis International University)",
         },
         {
           rank: 3,
@@ -178,7 +181,7 @@ export async function GET() {
           type: "Government (SPPU)",
           feesTotal: "₹2.8L",
           avgPlacementLPA: 12,
-          admissionExam: "CAT (80+ percentile)",
+          admissionExam: "Maharashtra MBA CAP — MAH MBA CET; All-India seats via CAT/XAT/CMAT/MAT/ATMA/GMAT",
           note: "Cheapest MBA in Pune",
         },
       ],
@@ -218,6 +221,63 @@ export async function GET() {
         { name: "PUMBA", stream: "MBA", url: `${BASE}/colleges/pumba-pune-university-mba` },
         { name: "ILS Law College", stream: "Law", url: `${BASE}/colleges/ils-law-college-pune` },
       ],
+    },
+
+    // ── Counselling services (prices and inclusions come from src/data/counselling.ts) ──
+    counselling: {
+      url: `${BASE}/counselling`,
+      lastReviewed: COUNSELLING_UPDATED,
+      summary: QUICK_ANSWER,
+      currency: "INR",
+      plans: PLANS.map((p) => ({
+        id: p.id,
+        name: p.name,
+        price: p.id === "video_199" ? VIDEO_PRICE_INR : 0,
+        priceNote: p.priceNote,
+        includes: p.includes,
+        requestUrl: `${BASE}/counselling?plan=${p.id === "video_199" ? "video" : "free"}#book`,
+      })),
+      comparison: COMPARISON,
+      alwaysFreeForEveryStudent: FREE_FOR_EVERYONE.map((f) => ({ name: f.title, url: `${BASE}${f.href}` })),
+      payment: "The student requests a slot; CampusLelo confirms it on WhatsApp and sends a payment link. No payment is taken on the website.",
+      admissionGuarantee: false,
+    },
+
+    // ── MBA / PGDM entrance exams — sourced, with verification dates ───────
+    mbaEntranceExams: {
+      policy: `${BASE}/editorial-policy`,
+      exams: mbaExams.map((e) => ({
+        name: e.name,
+        fullName: e.fullName,
+        cycle: e.cycleLabel,
+        conductingBody: e.conductingBody,
+        officialSite: e.officialSite,
+        guide: `${BASE}/exams/${e.slug}`,
+        keyDates: e.keyDates.map((d) => ({ label: d.label, value: d.value, source: d.source.url, sourceType: d.source.type })),
+        datesNote: e.datesNote,
+        eligibility: e.eligibility.text,
+        pattern: {
+          durationMinutes: e.pattern.durationMinutes,
+          totalQuestions: e.pattern.totalQuestions,
+          sections: e.pattern.sections.map((s) => s.name),
+          marking: e.pattern.marking,
+          source: e.pattern.source.url,
+        },
+        scoring: e.scoring.headline,
+        lastReviewed: e.lastReviewed,
+      })),
+      verifiedProgrammes: programAdmissions.map((p) => ({
+        institution: p.institution,
+        program: p.program,
+        programType: p.programType,
+        city: p.city,
+        acceptedExams: p.examsAccepted,
+        intake: p.intake,
+        source: p.source.url,
+        verifiedOn: p.source.accessed,
+      })),
+      maharashtraCap: { summary: maharashtraCap.summary, allIndiaSeatExams: maharashtraCap.allIndiaSeatExams },
+      mbaVsPgdm: `${BASE}/mba-vs-pgdm`,
     },
 
     // ── Entrance exam calendar 2026 ────────────────────────────────────────

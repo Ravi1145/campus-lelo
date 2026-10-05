@@ -461,7 +461,7 @@ export const colleges: College[] = [
     avgPlacement: 2800000,
     highestPlacement: 6500000,
     topRecruiters: ["McKinsey", "BCG", "Deloitte", "KPMG", "Amazon", "Microsoft", "Flipkart", "P&G", "Unilever"],
-    entranceExams: ["SNAP", "CAT", "XAT"],
+    entranceExams: ["SNAP"], // verified 2026-10-04: SIU admits via SNAP
     hostel: true,
     rating: 4.7,
     reviewCount: 1850,
@@ -2441,7 +2441,7 @@ export const colleges: College[] = [
     avgPlacement: 2200000,
     highestPlacement: 6500000,
     topRecruiters: ["Goldman Sachs", "McKinsey", "Deloitte", "EY", "Amazon", "Google", "Accenture", "KPMG"],
-    entranceExams: ["SNAP", "CAT", "GMAT"],
+    entranceExams: ["SNAP"], // verified 2026-10-04: SIU admits via SNAP
     hostel: true,
     rating: 4.6,
     reviewCount: 890,

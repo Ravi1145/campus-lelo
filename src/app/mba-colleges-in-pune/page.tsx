@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { mbaColleges, mbaFAQs } from "@/data/mbaColleges"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune 2026 | Fees, Cutoff & Placement",
@@ -62,14 +63,14 @@ export default function MBACollegesInPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
-      <Script id="course-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
+      <script id="course-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(courseSchema) }} />
 
       <div className="bg-gray-50 min-h-screen">
         {/* Hero */}
-        <header className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-14 px-4">
+        <header className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-14 px-4">
           <div className="max-w-6xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -250,7 +251,7 @@ export default function MBACollegesInPune() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">Related MBA Pages</h2>
             <div className="flex flex-wrap gap-2 text-sm">
               {[
-                { label: "Best MBA Colleges Pune", href: "/best-mba-colleges-pune" },
+                { label: "Best MBA Colleges Pune", href: "/mba-colleges-pune" },
                 { label: "MBA Placements Pune", href: "/mba-colleges-pune-placement" },
                 { label: "Low Fees MBA Pune", href: "/low-fees-mba-colleges-pune" },
                 { label: "MBA Direct Admission", href: "/direct-admission-mba-colleges-pune" },
@@ -265,7 +266,7 @@ export default function MBACollegesInPune() {
           </section>
 
           {/* CTA */}
-          <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Get Free MBA Admission Guidance</h2>
             <p className="text-gray-300 mb-6 text-sm max-w-lg mx-auto">Our Pune-based counsellors will help you shortlist MBA colleges based on your MAH-CET score, budget, and career goals — free, no sales pressure.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -276,6 +277,7 @@ export default function MBACollegesInPune() {
 
         </main>
       </div>
+      <RelatedMbaSearches path="/mba-colleges-in-pune" />
     </>
   )
 }

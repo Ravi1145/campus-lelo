@@ -1,8 +1,9 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, BookOpen, IndianRupee } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const revalidate = 300
 
@@ -138,12 +139,12 @@ export default function LowFeesMBACollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-12 px-4">
+        <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-12 px-4">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -192,7 +193,7 @@ export default function LowFeesMBACollegesPunePage() {
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="bg-[#0A1628] text-white">
+                <thead className="bg-[#011B40] text-white">
                   <tr>
                     <th className="px-4 py-3 text-left">College</th>
                     <th className="px-4 py-3 text-center hidden sm:table-cell">NAAC</th>
@@ -238,7 +239,7 @@ export default function LowFeesMBACollegesPunePage() {
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="bg-[#0A1628] text-white">
+                <thead className="bg-[#011B40] text-white">
                   <tr>
                     <th className="px-4 py-3 text-left">College</th>
                     <th className="px-4 py-3 text-center hidden sm:table-cell">NAAC</th>
@@ -387,7 +388,7 @@ export default function LowFeesMBACollegesPunePage() {
               { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
               { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-pune-placement", icon: "💼" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
-              { label: "CAT Score Colleges in Pune", href: "/cat-colleges-pune", icon: "📝" },
+              { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
               { label: "PGDM Colleges in Pune", href: "/pgdm-colleges-pune", icon: "📊" },
               { label: "Admission Without CAT (MAH-CET)", href: "/mba-admission-pune-without-cat", icon: "🚀" },
               ].map(({ label, href, icon }) => (
@@ -400,7 +401,7 @@ export default function LowFeesMBACollegesPunePage() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Find the best value MBA for your budget</p>
               <p className="text-blue-200 text-sm">Use our MBA Predictor or get free counselling on loans & scholarships.</p>
@@ -409,13 +410,14 @@ export default function LowFeesMBACollegesPunePage() {
               <Link href="/predictor" className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
                 MBA Predictor →
               </Link>
-              <Link href="/counselling" className="flex items-center justify-center gap-2 bg-white text-[#0A1628] font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-gray-100 transition-colors">
+              <Link href="/counselling" className="flex items-center justify-center gap-2 bg-white text-[#011B40] font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-gray-100 transition-colors">
                 Free Counselling →
               </Link>
             </div>
           </div>
         </div>
       </div>
+      <RelatedMbaSearches path="/low-fees-mba-colleges-pune" />
     </>
   )
 }

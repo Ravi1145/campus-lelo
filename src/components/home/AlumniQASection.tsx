@@ -110,12 +110,12 @@ function QACard({ qa }: { qa: typeof QA_DATA[0] }) {
                 <CheckCircle className="w-3.5 h-3.5 text-blue-500 shrink-0" />
               )}
             </div>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-xs text-gray-400 mt-0.5">
               Alumni · {qa.college} · Batch {qa.alumni.batch}
             </p>
           </div>
         </div>
-        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${qa.streamColor}`}>
+        <span className={`text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${qa.streamColor}`}>
           {qa.stream}
         </span>
       </div>
@@ -136,7 +136,7 @@ function QACard({ qa }: { qa: typeof QA_DATA[0] }) {
         {isLong && (
           <button
             onClick={() => setExpanded(v => !v)}
-            className="mt-1.5 flex items-center gap-1 text-[11px] font-semibold text-accent hover:opacity-80 transition-opacity"
+            className="mt-1.5 flex items-center gap-1 text-xs font-semibold text-accent hover:opacity-80 transition-opacity"
           >
             {expanded ? <><ChevronUp className="w-3 h-3" /> Show less</> : <><ChevronDown className="w-3 h-3" /> Read full answer</>}
           </button>
@@ -146,13 +146,13 @@ function QACard({ qa }: { qa: typeof QA_DATA[0] }) {
       {/* Footer */}
       <div className="flex items-center justify-between pt-1 border-t border-gray-50">
         <div className="flex items-center gap-3">
-          <button className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-accent transition-colors">
+          <button className="flex items-center gap-1 text-xs text-gray-400 hover:text-accent transition-colors">
             <ThumbsUp className="w-3 h-3" />
             <span>{qa.helpful} helpful</span>
           </button>
           <Link
             href={`/qa?college=${qa.collegeSlug}`}
-            className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-accent transition-colors"
+            className="flex items-center gap-1 text-xs text-gray-400 hover:text-accent transition-colors"
           >
             <MessageCircle className="w-3 h-3" />
             <span>{qa.replies} replies</span>
@@ -160,7 +160,7 @@ function QACard({ qa }: { qa: typeof QA_DATA[0] }) {
         </div>
         <Link
           href={`/colleges/${qa.collegeSlug}#alumni`}
-          className="text-[10px] font-semibold text-accent hover:opacity-80 transition-opacity flex items-center gap-0.5"
+          className="text-xs font-semibold text-accent hover:opacity-80 transition-opacity flex items-center gap-0.5"
         >
           View college <ChevronRight className="w-3 h-3" />
         </Link>
@@ -219,7 +219,7 @@ function AskCard() {
   return (
     <div
       className="rounded-2xl p-5 flex flex-col gap-4 h-full"
-      style={{ background: "linear-gradient(135deg, #0A1628 0%, #1E3A5F 100%)" }}
+      style={{ background: "linear-gradient(135deg, #011B40 0%, #024692 100%)" }}
     >
       <div>
         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 mb-3">
@@ -290,7 +290,7 @@ export default function AlumniQASection() {
           <div className="flex items-center gap-2.5">
             <div
               className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-              style={{ background: "linear-gradient(135deg, #0A1628, #1E3A5F)" }}
+              style={{ background: "linear-gradient(135deg, #011B40, #024692)" }}
             >
               <MessageCircle className="w-4 h-4 text-white" />
             </div>

@@ -8,8 +8,8 @@
 export const tokens = {
   colors: {
     // ── Core brand — matches globals.css @theme CSS variables ──
-    primary:   "#0A1628",   // CollegePune Navy — header, footer, dark CTAs (CSS: --color-primary)
-    secondary: "#1E3A5F",   // Navy medium — card headers, AI sections (CSS: --color-secondary)
+    primary:   "#011B40",   // CollegePune Navy — header, footer, dark CTAs (CSS: --color-primary)
+    secondary: "#024692",   // Navy medium — card headers, AI sections (CSS: --color-secondary)
     accent:    "#FF6B2C",   // Admission Orange — primary CTA buttons, highlights (CSS: --color-accent)
     // ── Semantic ──
     blue:      "#1a56db",   // Blue — links, analytics charts only

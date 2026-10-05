@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
 import BTechClusterPage from "@/components/btech/BTechClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune Under 10 Lakh Total Fees 2026 | Best Value Engineering",
@@ -35,8 +35,8 @@ export default function BTechUnder10Lakh() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <BTechClusterPage
         h1="BTech Colleges in Pune Under 10 Lakh Total Fees 2026"
         subtitle="Best-value BTech colleges in Pune with total 4-year fees under ₹10 lakh — COEP, PICT, VIT Pune, PCCOE with top placements and NAAC grades."

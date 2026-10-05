@@ -74,7 +74,7 @@ export default function SEOLandingPage({
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0A1628] to-[#071B3B] text-white py-14 px-4">
+      <section className="bg-gradient-to-br from-[#011B40] to-[#071B3B] text-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-white/60 mb-6">
@@ -121,7 +121,7 @@ export default function SEOLandingPage({
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Top Colleges</h2>
             <div className="overflow-x-auto rounded-2xl border border-gray-200">
               <table className="w-full text-sm">
-                <thead className="bg-[#0A1628] text-white">
+                <thead className="bg-[#011B40] text-white">
                   <tr>
                     <th className="text-left px-4 py-3 font-semibold">#</th>
                     <th className="text-left px-4 py-3 font-semibold">College Name</th>
@@ -173,7 +173,7 @@ export default function SEOLandingPage({
           <div className="space-y-4">
             {admissionSteps.map((s, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="shrink-0 w-10 h-10 rounded-full bg-[#0A1628] text-white flex items-center justify-center font-bold text-sm">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-[#011B40] text-white flex items-center justify-center font-bold text-sm">
                   {s.step}
                 </div>
                 <div>
@@ -238,7 +238,7 @@ export default function SEOLandingPage({
           </div>
           <p className="text-white/70 text-sm mt-4 flex items-center justify-center gap-1.5">
             <Shield className="w-3.5 h-3.5" />
-            100% Free · No Hidden Charges
+            Free phone counselling · Video session ₹199
           </p>
         </section>
 

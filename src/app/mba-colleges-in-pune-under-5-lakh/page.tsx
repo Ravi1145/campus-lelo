@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune Under 5 Lakh Total Fees 2026 | Government & Affordable",
@@ -29,8 +30,8 @@ export default function MBAUnder5Lakh() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Colleges in Pune Under 5 Lakh Total Fees 2026"
         subtitle="Government and SPPU-affiliated MBA colleges in Pune with total 2-year fees under â‚¹5 lakh. Quality education, low cost."
@@ -60,6 +61,7 @@ export default function MBAUnder5Lakh() {
         ctaHeading="Want Help Getting Into PUMBA or Low-Fee MBA?"
         ctaSubtext="Our counsellors know the exact MAH-CET cutoff strategy for PUMBA. Free guidance â€” book now."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-under-5-lakh" />
     </>
   )
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Admission Process in Pune 2026 | Step-by-Step Guide | MAH-CET to Enrollment",
@@ -41,12 +42,12 @@ export default function MBAAdmissionProcess() {
 
   return (
     <>
-      <Script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(howToSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="bg-gray-50 min-h-screen">
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
           <div className="max-w-5xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -154,13 +155,14 @@ export default function MBAAdmissionProcess() {
             </div>
           </section>
 
-          <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">MBA Admission Guidance — Free</h2>
             <p className="text-gray-300 mb-5 text-sm">Our counsellors will walk you through the entire CAP process and help you fill the perfect option form.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg inline-block">Book Free Session →</Link>
           </section>
         </div>
       </div>
+      <RelatedMbaSearches path="/mba-admission-process-pune" />
     </>
   )
 }

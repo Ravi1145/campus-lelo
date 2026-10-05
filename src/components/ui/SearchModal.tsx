@@ -96,7 +96,7 @@ export default function SearchModal() {
       >
         <Search className="w-4 h-4 shrink-0 text-gray-400" />
         <span className="flex-1 text-left text-gray-400">Search colleges, guides...</span>
-        <kbd className="shrink-0 flex items-center gap-1 px-2 py-1 text-[10px] font-mono bg-gray-50 border border-gray-200 rounded text-gray-400">
+        <kbd className="shrink-0 flex items-center gap-1 px-2 py-1 text-xs font-mono bg-gray-50 border border-gray-200 rounded text-gray-400">
           ⌘K
         </kbd>
       </button>
@@ -139,7 +139,7 @@ export default function SearchModal() {
           ) : (
             <>
               {!query.trim() && (
-                <p className="px-4 pt-3 pb-1 text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
+                <p className="px-4 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   Top Colleges
                 </p>
               )}
@@ -161,11 +161,11 @@ export default function SearchModal() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
                           <span className="text-sm font-semibold text-gray-900 truncate">{college.name}</span>
-                          <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${STREAM_COLORS[college.stream] ?? "bg-gray-100 text-gray-600"}`}>
+                          <span className={`text-xs px-1.5 py-0.5 rounded-full font-semibold ${STREAM_COLORS[college.stream] ?? "bg-gray-100 text-gray-600"}`}>
                             {college.stream}
                           </span>
                         </div>
-                        <div className="flex items-center gap-2 text-[11px] text-gray-400 mt-0.5">
+                        <div className="flex items-center gap-2 text-xs text-gray-400 mt-0.5">
                           <span>{college.naac} NAAC</span>
                           {college.nirfRank && <span>· NIRF #{college.nirfRank}</span>}
                           <span>· ₹{(college.feesRange.min / 100000).toFixed(0)}L–{(college.feesRange.max / 100000).toFixed(0)}L/yr</span>
@@ -182,7 +182,7 @@ export default function SearchModal() {
         </div>
 
         {/* Footer hint */}
-        <div className="flex items-center gap-3 px-4 py-2.5 border-t border-gray-100 bg-gray-50 text-[11px] text-gray-400">
+        <div className="flex items-center gap-3 px-4 py-2.5 border-t border-gray-100 bg-gray-50 text-xs text-gray-400">
           <span><kbd className="font-mono bg-white border border-gray-200 rounded px-1">↑↓</kbd> navigate</span>
           <span><kbd className="font-mono bg-white border border-gray-200 rounded px-1">↵</kbd> open</span>
           <span><kbd className="font-mono bg-white border border-gray-200 rounded px-1">Esc</kbd> close</span>

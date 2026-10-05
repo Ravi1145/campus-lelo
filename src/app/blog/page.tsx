@@ -1,10 +1,10 @@
 import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { getAllBlogs } from "@/lib/db"
 import { blogs as staticBlogs } from "@/data/blogs"
 import { Clock, ArrowRight, BookOpen, TrendingUp, Search } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 300
 
@@ -133,8 +133,8 @@ export default async function BlogPage({
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Script id="blog-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="blog-list-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }} />
+      <script id="blog-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="blog-list-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(blogListSchema) }} />
 
       {/* ── Page Header ──────────────────────────────────────── */}
       <div className="bg-white border-b border-gray-200">
@@ -291,7 +291,7 @@ export default async function BlogPage({
                       {/* Cover visual */}
                       <div className={`bg-gradient-to-br ${cat.gradient} p-6 flex items-center justify-between`} style={{ minHeight: "120px" }}>
                         <div>
-                          <span className="bg-white/20 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
+                          <span className="bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
                             {post.category}
                           </span>
                         </div>
@@ -338,7 +338,7 @@ export default async function BlogPage({
         )}
 
         {/* ── Newsletter / CTA banner ────────────────────────── */}
-        <div className="mt-14 bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
+        <div className="mt-14 bg-gradient-to-br from-[#011B40] to-[#024692] rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
           <div className="text-4xl">📬</div>
           <div className="flex-1 text-center sm:text-left">
             <h3 className="text-xl font-extrabold text-white mb-1">Get Admission Alerts in Your Inbox</h3>

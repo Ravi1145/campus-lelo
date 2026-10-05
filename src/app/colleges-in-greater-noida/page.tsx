@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import Script from "next/script"
 import { MapPin, Star, IndianRupee, Trophy, ChevronRight, CheckCircle2 } from "lucide-react"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateItemListSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 3600
 
@@ -148,22 +148,22 @@ const faqData = [
 export default function CollegesInGreaterNoidaPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqData)) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema([
+      <script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqData)) }} />
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema([
           { name: "Home", url: "/" },
           { name: "Colleges in Noida", url: "/colleges-in-noida" },
           { name: "Colleges in Greater Noida 2026", url: "/colleges-in-greater-noida" },
         ])) }} />
-      <Script id="list-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateItemListSchema(
+      <script id="list-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateItemListSchema(
           greaterNoidaColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}` }))
         )) }} />
 
       <main style={{ background: "#F7F9FC" }}>
 
-        <section style={{ background: "#16324F" }} className="py-10 px-4">
+        <section style={{ background: "#012858" }} className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
             <nav className="flex items-center gap-1.5 text-xs text-blue-200 mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -182,7 +182,7 @@ export default function CollegesInGreaterNoidaPage() {
             <div className="flex flex-wrap gap-3 text-sm">
               {[["50+", "Colleges"], ["₹1.2L–6L", "Fees/yr"], ["₹55 LPA", "Highest Pkg"], ["JEE/CAT/CMAT", "Entrance"]].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
-                  <span className="font-bold" style={{ color: "#FF6B35" }}>{val}</span>
+                  <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>
                 </div>
               ))}
@@ -194,7 +194,7 @@ export default function CollegesInGreaterNoidaPage() {
           <div className="grid lg:grid-cols-3 gap-8">
 
             <div className="lg:col-span-2 space-y-5">
-              <h2 className="text-lg font-bold" style={{ color: "#16324F" }}>
+              <h2 className="text-lg font-bold" style={{ color: "#012858" }}>
                 Top {greaterNoidaColleges.length} Colleges in Greater Noida 2026
               </h2>
 
@@ -202,21 +202,21 @@ export default function CollegesInGreaterNoidaPage() {
                 <div key={college.slug} className="bg-white rounded-2xl border border-gray-100 p-5 hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm"
-                      style={{ background: "#16324F" }}>#{idx + 1}</div>
+                      style={{ background: "#012858" }}>#{idx + 1}</div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-3 flex-wrap">
                         <div>
-                          <Link href={`/colleges/${college.slug}`} className="font-bold text-base hover:underline" style={{ color: "#16324F" }}>{college.name}</Link>
+                          <Link href={`/colleges/${college.slug}`} className="font-bold text-base hover:underline" style={{ color: "#012858" }}>{college.name}</Link>
                           <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><MapPin size={11} />{college.location}</p>
                         </div>
-                        <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#FF6B35" }}>
-                          <Star size={13} fill="#FF6B35" />{college.rating}
+                        <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
+                          <Star size={13} fill="#E0170F" />{college.rating}
                           <span className="text-xs text-gray-400 font-normal">({college.reviews})</span>
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
-                        <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F7F9FC", color: "#16324F", border: "1px solid #E5E9F0" }}>{college.type}</span>
-                        <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#FFF7F0", color: "#FF6B35", border: "1px solid #FFD9C5" }}>NAAC {college.naac}</span>
+                        <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>{college.type}</span>
+                        <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#FFF4F2", color: "#E0170F", border: "1px solid #FFC9BE" }}>NAAC {college.naac}</span>
                         {college.nirf && <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F0F7FF", color: "#0062CC", border: "1px solid #CCE0FF" }}>NIRF #{college.nirf}</span>}
                       </div>
                       <p className="text-xs italic text-gray-500 mb-3">✦ {college.highlight}</p>
@@ -228,15 +228,15 @@ export default function CollegesInGreaterNoidaPage() {
                         ].map(({ label, val }) => (
                           <div key={label} className="rounded-xl p-2" style={{ background: "#F7F9FC" }}>
                             <p className="text-xs text-gray-500">{label}</p>
-                            <p className="text-sm font-bold mt-0.5" style={{ color: "#16324F" }}>{val}</p>
+                            <p className="text-sm font-bold mt-0.5" style={{ color: "#012858" }}>{val}</p>
                           </div>
                         ))}
                       </div>
                       <p className="text-xs text-gray-500 mb-1">Courses: {college.courses.join(" · ")}</p>
                       <p className="text-xs text-gray-500">Students: {college.strength.toLocaleString()}+</p>
                       <div className="mt-3 flex gap-2">
-                        <Link href={`/colleges/${college.slug}`} className="text-xs px-4 py-1.5 rounded-lg font-medium text-white" style={{ background: "#FF6B35" }}>View Details</Link>
-                        <Link href="/counselling" className="text-xs px-4 py-1.5 rounded-lg font-medium" style={{ background: "#F7F9FC", color: "#16324F", border: "1px solid #E5E9F0" }}>Free Counselling</Link>
+                        <Link href={`/colleges/${college.slug}`} className="text-xs px-4 py-1.5 rounded-lg font-medium text-white" style={{ background: "#E0170F" }}>View Details</Link>
+                        <Link href="/counselling" className="text-xs px-4 py-1.5 rounded-lg font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>Free Counselling</Link>
                       </div>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ export default function CollegesInGreaterNoidaPage() {
 
             <div className="space-y-5">
               <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-sm mb-3" style={{ color: "#16324F" }}>Explore by Stream</h3>
+                <h3 className="font-bold text-sm mb-3" style={{ color: "#012858" }}>Explore by Stream</h3>
                 <ul className="space-y-1 text-sm">
                   {[
                     { label: "Engineering Colleges Noida", href: "/engineering-colleges-noida" },
@@ -256,44 +256,44 @@ export default function CollegesInGreaterNoidaPage() {
                     { label: "MBA Colleges in Pune", href: "/mba-colleges-in-pune" },
                   ].map(l => (
                     <li key={l.href}>
-                      <Link href={l.href} className="block py-1.5 px-2 rounded-lg hover:bg-orange-50 transition-colors" style={{ color: "#16324F" }}>{l.label}</Link>
+                      <Link href={l.href} className="block py-1.5 px-2 rounded-lg hover:bg-orange-50 transition-colors" style={{ color: "#012858" }}>{l.label}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl p-5 text-sm" style={{ background: "#16324F", color: "white" }}>
+              <div className="rounded-2xl p-5 text-sm" style={{ background: "#012858", color: "white" }}>
                 <h3 className="font-bold mb-3">Greater Noida vs Noida</h3>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-semibold text-xs mb-1" style={{ color: "#FF6B35" }}>Greater Noida Advantage</p>
+                    <p className="font-semibold text-xs mb-1" style={{ color: "#E0170F" }}>Greater Noida Advantage</p>
                     <ul className="space-y-1 text-xs text-blue-100">
                       {["Larger campuses (52–100 acres)", "Slightly lower fees", "MBBS + Law options (Sharda)", "Yamuna Expressway connectivity"].map(p => (
-                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#FF6B35" }} />{p}</li>
+                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />{p}</li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <p className="font-semibold text-xs mb-1" style={{ color: "#FF6B35" }}>Noida City Advantage</p>
+                    <p className="font-semibold text-xs mb-1" style={{ color: "#E0170F" }}>Noida City Advantage</p>
                     <ul className="space-y-1 text-xs text-blue-100">
                       {["Better metro access (JIIT, Amity)", "Higher NIRF rankings", "Stronger IT company recruiters", "Closer to Delhi job market"].map(p => (
-                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#FF6B35" }} />{p}</li>
+                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />{p}</li>
                       ))}
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl p-5 text-center" style={{ background: "#FFF7F0", border: "1px solid #FFD9C5" }}>
-                <p className="font-bold text-sm mb-1" style={{ color: "#16324F" }}>Not sure which Greater Noida college?</p>
+              <div className="rounded-2xl p-5 text-center" style={{ background: "#FFF4F2", border: "1px solid #FFC9BE" }}>
+                <p className="font-bold text-sm mb-1" style={{ color: "#012858" }}>Not sure which Greater Noida college?</p>
                 <p className="text-xs text-gray-500 mb-3">Free counselling on WhatsApp — 2 min</p>
-                <Link href="/counselling" className="block w-full py-2 rounded-xl text-sm font-bold text-white" style={{ background: "#FF6B35" }}>Free Counselling</Link>
+                <Link href="/counselling" className="block w-full py-2 rounded-xl text-sm font-bold text-white" style={{ background: "#E0170F" }}>Free Counselling</Link>
               </div>
             </div>
           </div>
 
           <section className="mt-10 bg-white rounded-2xl border border-gray-100 p-8">
-            <h2 className="text-xl font-bold mb-4" style={{ color: "#16324F" }}>Colleges in Greater Noida 2026 — Complete Guide</h2>
+            <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>Colleges in Greater Noida 2026 — Complete Guide</h2>
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600 leading-relaxed">
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">How to Choose a College in Greater Noida?</h3>
@@ -307,11 +307,11 @@ export default function CollegesInGreaterNoidaPage() {
           </section>
 
           <section className="mt-10">
-            <h2 className="text-xl font-bold mb-6" style={{ color: "#16324F" }}>FAQs — Colleges in Greater Noida 2026</h2>
+            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs — Colleges in Greater Noida 2026</h2>
             <div className="space-y-4">
               {faqData.map(faq => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 p-5 group">
-                  <summary className="font-semibold text-sm cursor-pointer list-none flex justify-between items-center" style={{ color: "#16324F" }}>
+                  <summary className="font-semibold text-sm cursor-pointer list-none flex justify-between items-center" style={{ color: "#012858" }}>
                     {faq.question}
                     <ChevronRight size={16} className="flex-shrink-0 group-open:rotate-90 transition-transform text-gray-400" />
                   </summary>

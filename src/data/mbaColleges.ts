@@ -37,13 +37,13 @@ export const mbaColleges: MBACollege[] = [
     feesPerYear: 1400000,
     avgPlacement: 2400000,
     highestPlacement: 8500000,
-    entranceExams: ["SNAP", "CAT"],
+    // Verified 2026-10-04 (sibm.edu/admissions): SIU admits via SNAP — see src/data/mba/programAdmissions.ts
+    entranceExams: ["SNAP"],
     specializations: ["Marketing", "Finance", "HR", "Operations", "International Business"],
     hostel: true,
     website: "https://www.sibm.edu",
     established: 1978,
     topRecruiters: ["McKinsey", "BCG", "Deloitte", "Amazon", "Google", "Flipkart", "HDFC Bank", "Axis Bank"],
-    catCutoff: "90+ percentile",
     highlights: ["NIRF #14 MBA", "Avg package ₹24 LPA", "Top 15 MBA college India", "AACSB accredited"],
   },
   {
@@ -59,7 +59,8 @@ export const mbaColleges: MBACollege[] = [
     feesPerYear: 700000,
     avgPlacement: 1100000,
     highestPlacement: 3600000,
-    entranceExams: ["MAH-CET MBA", "CAT", "CMAT", "ATMA"],
+    // Verified 2026-10-04 (MIT-WPU Dept of Business brochure 2026): ATMA is NOT listed
+    entranceExams: ["CAT", "XAT", "NMAT", "GMAT", "CMAT", "MAH-CET MBA", "MAT", "PERA"],
     specializations: ["Marketing", "Finance", "HR", "Operations", "Business Analytics", "Entrepreneurship"],
     hostel: true,
     website: "https://www.mitwpu.edu.in",
@@ -217,7 +218,7 @@ export const mbaFAQs = {
     { question: "Is MBA from Pune University valid?", answer: "Yes, PUMBA (Pune University MBA / Department of Management Sciences, SPPU) is a fully recognized, government-run MBA program affiliated to Savitribai Phule Pune University. It is AICTE-approved and has NAAC A+ grade. PUMBA MBA degree is equivalent to any private MBA and accepted by all employers and higher education institutions." },
     { question: "How many MBA colleges are there in Pune?", answer: "Pune has 120+ AICTE-approved MBA colleges across government, autonomous, deemed university, and private categories. This includes 5 Symbiosis group colleges, 15+ SPPU-affiliated colleges, 30+ autonomous MBA institutes, and 70+ private unaided MBA colleges." },
     { question: "Is Pune good for MBA?", answer: "Yes, Pune is one of India's top 5 cities for MBA education. It offers the best industry-academia interface with 1,000+ companies for placements, top-ranked colleges like SIBM and SCMHRD, and the most affordable government MBA option (PUMBA at ₹1.25L/yr). The city's IT, manufacturing, BFSI, and pharma sectors offer diverse MBA placement opportunities." },
-    { question: "What is the minimum CAT score for MBA in Pune?", answer: "For SIBM Pune: 90+ percentile (CAT). For SCMHRD: 88+ percentile. For MIT-SOM/DYPIM/BVIMR: 70-80+ percentile. Some Pune MBA colleges accept 50-60 percentile for management quota. PUMBA requires 75+ percentile CAT. Note: Most Pune MBA colleges prefer MAH-CET MBA for state-level seats." },
+    { question: "What is the minimum CAT score for MBA in Pune?", answer: "There is no single minimum. CAT percentiles change every year, and each programme sets its own shortlisting criteria. Symbiosis MBA programmes (SIBM, SCMHRD) admit through SNAP, not CAT. CAT is accepted for All-India seats in Maharashtra's MBA CAP and by programmes such as MIT-WPU's MBA. Check each programme's current admission page — see /mba-colleges-in-pune-accepting-cat for verified programmes." },
   ],
   fees: [
     { question: "Which is the cheapest MBA college in Pune?", answer: "PUMBA (Pune University MBA) at Savitribai Phule Pune University is the cheapest quality MBA college in Pune at ₹1.25L/year (₹2.5L total). For private colleges, Indira Institute of Management (₹4.5L total) and BVIMR (₹7L total) offer the best value-for-money among AICTE-approved programs." },

@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "BSc Colleges in Pune 2025-26 | Fees, Courses & Admission | CampusLelo",
+  title: "BSc Colleges in Pune 2026 | Fees, Courses & Admission | CampusLelo",
   description: "Best BSc colleges in Pune 2025-26. BSc Physics, Chemistry, CS, IT, Biotech, Data Science. Compare fees (₹12K–2L/yr), NAAC grades, placements and admission process.",
   path: "/bsc-colleges-pune",
   keywords: ["bsc colleges in pune", "bsc colleges pune 2025", "bsc admission pune", "bsc computer science pune", "bsc biotechnology pune", "best bsc college pune"],
@@ -38,11 +38,11 @@ export default function BscCollegesPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <SEOLandingPage
         breadcrumb={[{ label: "BSc Colleges in Pune", href: "/bsc-colleges-pune" }]}
-        h1="BSc Colleges in Pune 2025-26"
+        h1="BSc Colleges in Pune 2026"
         subtitle="Explore top Bachelor of Science (BSc) colleges in Pune. Compare fees, BSc specializations (CS, IT, Biotech, Data Science), admission process & placements for 2025-26."
         heroStats={[
           { value: "80+", label: "BSc Colleges" },

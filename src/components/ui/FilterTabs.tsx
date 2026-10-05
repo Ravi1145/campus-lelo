@@ -18,8 +18,8 @@ export default function FilterTabs({ tabs, active, onChange, className }: Filter
           className={cn(
             "flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium border transition-all whitespace-nowrap",
             active === tab
-              ? "bg-[#0B1226] border-[#0B1226] text-white"
-              : "bg-white border-[#E5E9F0] text-[#475569] hover:border-[#0B1226] hover:text-[#0B1226]"
+              ? "bg-[#011B40] border-[#011B40] text-white"
+              : "bg-white border-[#E5E9F0] text-[#475569] hover:border-[#011B40] hover:text-[#011B40]"
           )}
         >
           {tab}

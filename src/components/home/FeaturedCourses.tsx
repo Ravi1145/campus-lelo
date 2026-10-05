@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import CardRail from "./CardRail"
 import Link from "next/link"
 import { ArrowRight, TrendingUp, IndianRupee } from "lucide-react"
 import { courses } from "@/data/courses"
@@ -37,7 +38,7 @@ export default function FeaturedCourses() {
     .slice(0, 10)
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 section-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -58,12 +59,12 @@ export default function FeaturedCourses() {
         <FilterTabs tabs={COURSE_TABS} active={activeTab} onChange={setActiveTab} className="mb-6" />
 
         {/* Horizontal scroll row */}
-        <div className="flex gap-5 overflow-x-auto pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <CardRail key={activeTab} label="featured courses" itemClassName="w-[82vw] sm:w-72">
           {featured.map((course) => (
             <Link
               key={course.id}
               href={`/courses/${course.slug}`}
-              className="flex-shrink-0 w-72 block group"
+              className="block h-full group"
             >
               <article className="bg-white rounded-2xl border border-gray-100 hover:border-orange-400 hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full">
 
@@ -77,7 +78,7 @@ export default function FeaturedCourses() {
                   }}
                 >
                   {/* overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/90 via-[#0A1628]/85 to-[#0A1628]/92" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#011B40]/90 via-[#011B40]/85 to-[#011B40]/92" />
 
                   {/* Level badge top-right */}
                   <span className={`absolute top-3 right-3 z-20 text-xs font-bold px-2.5 py-0.5 rounded-full ${levelColors[course.level] ?? "bg-gray-500 text-white"}`}>
@@ -127,7 +128,7 @@ export default function FeaturedCourses() {
                     <div className="bg-orange-50 border border-orange-100 rounded-xl px-3 py-2.5">
                       <div className="flex items-center gap-1 mb-1">
                         <IndianRupee className="w-3 h-3 text-orange-400 shrink-0" />
-                        <span className="text-[9px] text-orange-500 font-semibold uppercase tracking-wider">Annual Fees</span>
+                        <span className="text-xs text-orange-500 font-semibold uppercase tracking-wider">Annual Fees</span>
                       </div>
                       <p className="text-xs font-bold text-gray-900 leading-tight">
                         {formatFeesRange(course.avgFees.min, course.avgFees.max)}
@@ -136,7 +137,7 @@ export default function FeaturedCourses() {
                     <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5">
                       <div className="flex items-center gap-1 mb-1">
                         <TrendingUp className="w-3 h-3 text-blue-400 shrink-0" />
-                        <span className="text-[9px] text-blue-500 font-semibold uppercase tracking-wider">Avg Salary</span>
+                        <span className="text-xs text-blue-500 font-semibold uppercase tracking-wider">Avg Salary</span>
                       </div>
                       <p className="text-xs font-bold text-gray-900 leading-tight">
                         {formatCurrency(course.avgSalary)}
@@ -177,7 +178,7 @@ export default function FeaturedCourses() {
               </article>
             </Link>
           ))}
-        </div>
+        </CardRail>
 
         {/* Mobile view all */}
         <div className="text-center mt-8 sm:hidden">

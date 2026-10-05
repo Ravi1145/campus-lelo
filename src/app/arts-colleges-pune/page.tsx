@@ -1,8 +1,8 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Arts & Science Colleges in Pune 2026 | BA, BSc, BCom Fees & Admission",
@@ -183,12 +183,12 @@ export const revalidate = 86400
 export default function ArtsCollegesPune() {
   return (
     <>
-      <Script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />
-      <Script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumb)) }} />
+      <script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }} />
+      <script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema(breadcrumb)) }} />
 
       <div className="min-h-screen bg-surface">
         {/* Hero */}
-        <div className="py-14 px-4 text-center" style={{ background: "linear-gradient(135deg,#0A1628 0%,#1E3A5F 100%)" }}>
+        <div className="py-14 px-4 text-center" style={{ background: "linear-gradient(135deg,#011B40 0%,#024692 100%)" }}>
           <nav className="text-xs text-blue-300 mb-4 flex items-center justify-center gap-1">
             <Link href="/" className="hover:text-white">Home</Link>
             <span>›</span>
@@ -233,7 +233,7 @@ export default function ArtsCollegesPune() {
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ background: "#0A1628" }}>
+                <tr style={{ background: "#011B40" }}>
                   {["Rank", "College", "Type", "NAAC", "Fees/yr", "Programs", "Seats", "Highlight"].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-white font-semibold whitespace-nowrap">{h}</th>
                   ))}
@@ -297,7 +297,7 @@ export default function ArtsCollegesPune() {
           </div>
 
           {/* CTA */}
-          <div className="rounded-2xl p-6 text-center mb-10" style={{ background: "linear-gradient(135deg,#0A1628,#1E3A5F)" }}>
+          <div className="rounded-2xl p-6 text-center mb-10" style={{ background: "linear-gradient(135deg,#011B40,#024692)" }}>
             <p className="text-white font-bold text-lg mb-2">Not sure which stream — Arts, Science or Commerce?</p>
             <p className="text-blue-200 text-sm mb-4">Our AI College Finder matches you to the best college based on your Class 12 marks, stream preference &amp; budget.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

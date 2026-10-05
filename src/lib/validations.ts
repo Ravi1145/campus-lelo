@@ -17,10 +17,21 @@ export const leadSchema = z.object({
     'enquiry_form', 'college_page', 'exit_popup', 'ai_gate',
     'predictor', 'shortlist', 'counselling', 'lead_magnet', 'inline_form',
     'news_alert', 'lead_bar', 'scholarship_subscribe', 'qa_question',
-    'ai_counselor', 'ai_finder',
+    'ai_counselor', 'ai_finder', 'exam_page', 'mba_cluster',
   ]),
   message: z.string().max(500).optional(),
   page_url: z.string().optional(),
+  // Attribution & context (no dedicated DB columns yet — folded into `message`
+  // by buildLeadRecord until docs/migrations/2026-10-05-leads-attribution.sql is applied)
+  program_type: z.enum(['MBA', 'PGDM', 'Both', 'Not sure']).optional(),
+  city_preference: z.string().max(40).optional(),
+  utm_source: z.string().max(80).optional(),
+  utm_medium: z.string().max(80).optional(),
+  utm_campaign: z.string().max(120).optional(),
+  utm_content: z.string().max(120).optional(),
+  consent: z.boolean().optional(),
+  // Honeypot — real users never see or fill this field
+  website: z.string().max(200).optional(),
 })
 
 export const enquirySchema = z.object({
@@ -43,6 +54,13 @@ export const counsellingSchema = z.object({
   preferred_date: z.string().optional(),
   preferred_time: z.enum(['morning', 'afternoon', 'evening']).optional(),
   exam_score: z.string().optional(),
+  // Which counselling the student wants: free phone call or the paid video session
+  plan: z.enum(['free_phone', 'video_199']).default('free_phone'),
+  budget: z.string().max(60).optional(),
+  city_preference: z.string().max(40).optional(),
+  help_topics: z.array(z.string().max(40)).max(8).optional(),
+  // Honeypot — real users never see or fill this field
+  website: z.string().max(200).optional(),
 })
 
 export type LeadInput = z.infer<typeof leadSchema>

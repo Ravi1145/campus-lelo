@@ -1,13 +1,15 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import MbaLeadForm from "@/components/leads/MbaLeadForm"
 import Link from "next/link"
-import Script from "next/script"
 import { blogs as staticBlogs, getBlogBySlug as getStaticBlog } from "@/data/blogs"
 import { getBlogBySlug as getDBBlog, getAllBlogs } from "@/lib/db"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { Clock, Calendar, ChevronRight, Tag, ArrowRight, BookOpen, Phone, GraduationCap, Star } from "lucide-react"
 import ReadingProgress from "@/components/blog/ReadingProgress"
 import ShareButtons from "@/components/blog/ShareButtons"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const revalidate = 300
 
@@ -97,11 +99,11 @@ function badgeCls(cat: string) {
 // ── Featured colleges for sidebar ────────────────────────────────────────────
 const FEATURED_COLLEGES = [
   { name: "COEP Pune",       slug: "coep-college-of-engineering-pune", naac: "A++", stream: "Engineering" },
-  { name: "PICT Pune",       slug: "pict-pune-college-of-engineering", naac: "A+",  stream: "Engineering" },
+  { name: "PICT Pune",       slug: "pict-pune-institute-of-computer-technology", naac: "A+",  stream: "Engineering" },
   { name: "SIBM Pune",       slug: "sibm-symbiosis-institute-business-management-pune", naac: "A+", stream: "MBA" },
-  { name: "VIT Pune",        slug: "vit-vishwakarma-institute-technology-pune", naac: "A+", stream: "Engineering" },
+  { name: "VIT Pune",        slug: "vit-pune-vishwakarma-institute-of-technology", naac: "A+", stream: "Engineering" },
   { name: "AFMC Pune",       slug: "afmc-armed-forces-medical-college-pune", naac: "A+", stream: "Medical" },
-  { name: "MIT-WPU",         slug: "mit-world-peace-university-pune", naac: "A+",  stream: "Engineering" },
+  { name: "MIT-WPU",         slug: "mit-wpu-mit-world-peace-university", naac: "A+",  stream: "Engineering" },
 ]
 
 // ── Extract H2/H3 headings for TOC ───────────────────────────────────────────
@@ -198,8 +200,8 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <div className="bg-[#F5F6FA] min-h-screen">
       <ReadingProgress />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="blog-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="blog-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(blogPostingSchema) }} />
 
       {/* ── Breadcrumb ──────────────────────────────────────────── */}
       <div className="bg-white border-b border-gray-200">
@@ -220,11 +222,11 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       {/* ── Article Hero — clean dark navy ──────────────────────── */}
-      <div className="bg-[#0A1628] py-10 px-4">
+      <div className="bg-[#011B40] py-10 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4 flex-wrap">
-              <span className="bg-orange-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+              <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                 {post.category}
               </span>
               <span className="flex items-center gap-1 text-gray-400 text-sm">
@@ -339,7 +341,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 text-sm">{post.author ?? "CampusLelo"}</p>
-                  <p className="text-[11px] text-gray-400 mt-0.5">CampusLelo Editorial Team</p>
+                  <p className="text-xs text-gray-400 mt-0.5">CampusLelo Editorial Team</p>
                   <p className="text-sm text-gray-600 mt-2 leading-relaxed">
                     Expert in Pune college admissions, entrance exam guidance, and higher education in Maharashtra.
                     Helping students make informed decisions since 2020.
@@ -366,14 +368,14 @@ export default async function BlogPostPage({ params }: Props) {
                           {/* Thin top bar */}
                           <div className="h-1 bg-orange-400" />
                           <div className="p-4 flex-1 flex flex-col">
-                            <span className={`self-start text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-2 ${badgeCls(r.category)}`}>
+                            <span className={`self-start text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 ${badgeCls(r.category)}`}>
                               {r.category}
                             </span>
                             <h3 className="font-bold text-gray-900 text-sm mb-2 group-hover:text-orange-600 transition-colors line-clamp-2 leading-snug flex-1">
                               {r.title}
                             </h3>
                             <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-                              {rDate && <span className="text-[11px] text-gray-400">{rDate}</span>}
+                              {rDate && <span className="text-xs text-gray-400">{rDate}</span>}
                               <ArrowRight className="w-3.5 h-3.5 text-orange-400 group-hover:translate-x-1 transition-transform ml-auto" />
                             </div>
                           </div>
@@ -384,6 +386,8 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
               </section>
             )}
+
+            <RelatedMbaSearches path={`/blog/${slug}`} requireCluster inline />
 
             {/* Internal links grid */}
             <div className="mt-8 bg-white rounded-xl border border-gray-200 p-5">
@@ -411,8 +415,20 @@ export default async function BlogPostPage({ params }: Props) {
           {/* ══ RIGHT — Sticky Sidebar ══════════════════════════════ */}
           <aside className="space-y-5 lg:sticky lg:top-6">
 
+            {/* MBA posts: contextual shortlist form (exam / programme / city captured) */}
+            {/MBA|PGDM/i.test(post.category) && (
+              <div id="shortlist">
+                <MbaLeadForm
+                  source="mba_cluster"
+                  placement={`blog:${slug}`}
+                  heading="Get a free MBA/PGDM shortlist"
+                  subheading="Share your exam and score — a counsellor will suggest realistic options and deadlines."
+                />
+              </div>
+            )}
+
             {/* ① Get Free Counselling — dark navy, Collegedunia-style */}
-            <div className="bg-[#0A1628] rounded-xl overflow-hidden shadow-md">
+            <div className="bg-[#011B40] rounded-xl overflow-hidden shadow-md">
               <div className="p-5 text-center border-b border-white/10">
                 <GraduationCap className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                 <p className="text-white font-bold text-base">Get Started!</p>
@@ -433,7 +449,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* ② Table of Contents — desktop only */}
             {toc.length >= 3 && (
               <div className="hidden lg:block bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <div className="bg-[#1E3A5F] px-4 py-3">
+                <div className="bg-[#024692] px-4 py-3">
                   <p className="text-white text-sm font-bold">Table of Contents</p>
                 </div>
                 <nav className="divide-y divide-gray-100">
@@ -450,7 +466,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* ③ Top Colleges in Pune */}
             <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-              <div className="bg-[#1E3A5F] px-4 py-3 flex items-center justify-between">
+              <div className="bg-[#024692] px-4 py-3 flex items-center justify-between">
                 <p className="text-white text-sm font-bold">Top Colleges in Pune</p>
                 <Star className="w-4 h-4 text-orange-400 fill-orange-400" />
               </div>
@@ -464,7 +480,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <p className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors truncate">
                           {c.name}
                         </p>
-                        <p className="text-[11px] text-gray-400">{c.stream} · NAAC {c.naac}</p>
+                        <p className="text-xs text-gray-400">{c.stream} · NAAC {c.naac}</p>
                       </div>
                       <ChevronRight className="w-3.5 h-3.5 text-gray-300 shrink-0" />
                     </Link>
@@ -480,7 +496,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             {/* ④ College Predictor */}
-            <div className="bg-[#0A1628] rounded-xl overflow-hidden shadow-md">
+            <div className="bg-[#011B40] rounded-xl overflow-hidden shadow-md">
               <div className="px-5 pt-5 pb-4">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shrink-0">
@@ -501,7 +517,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* ⑤ Write a Review */}
             <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
               <div className="px-5 py-4 flex items-start gap-3">
-                <div className="w-10 h-10 bg-[#1E3A5F] rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 bg-[#024692] rounded-lg flex items-center justify-center shrink-0">
                   <span className="text-xl">✍️</span>
                 </div>
                 <div>
@@ -511,7 +527,7 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
               <div className="px-5 pb-4">
                 <Link href="/colleges"
-                  className="flex items-center justify-center gap-2 w-full border border-[#1E3A5F] text-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors">
+                  className="flex items-center justify-center gap-2 w-full border border-[#024692] text-[#012858] hover:bg-[#024692] hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors">
                   Review Now <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

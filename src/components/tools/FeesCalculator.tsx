@@ -75,7 +75,7 @@ export default function FeesCalculator() {
               onClick={() => { setCourse(c); setCollegeIdx(0) }}
               className={`flex-1 py-2.5 rounded-xl text-sm font-bold border transition-colors ${
                 course === c
-                  ? "bg-[#0A1628] text-white border-[#0A1628]"
+                  ? "bg-[#011B40] text-white border-[#011B40]"
                   : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
               }`}
             >
@@ -120,7 +120,7 @@ export default function FeesCalculator() {
       </div>
 
       {/* Result */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-2xl p-5 text-white">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] rounded-2xl p-5 text-white">
         <p className="text-xs font-bold uppercase tracking-wider text-blue-300 mb-3">📊 Fee Estimate</p>
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="bg-white/10 rounded-xl p-3">

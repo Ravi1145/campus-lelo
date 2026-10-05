@@ -1,7 +1,7 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Q&A 2026 — Real Questions Answered by Alumni & Experts",
@@ -123,12 +123,12 @@ export default function QAPage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-10">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -171,9 +171,9 @@ export default function QAPage() {
                     <div className="flex-1">
                       <h2 className="font-bold text-gray-900 text-sm leading-snug">{qa.question}</h2>
                       <div className="flex flex-wrap gap-1.5 mt-1.5">
-                        <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{qa.stream}</span>
+                        <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{qa.stream}</span>
                         {qa.tags.map((t) => (
-                          <span key={t} className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{t}</span>
+                          <span key={t} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{t}</span>
                         ))}
                       </div>
                     </div>
@@ -187,9 +187,9 @@ export default function QAPage() {
                     <div className="flex-1">
                       <p className="text-sm text-gray-700 leading-relaxed">{qa.answer}</p>
                       <div className="flex items-center gap-3 mt-2">
-                        <span className="text-[10px] text-gray-400">By {qa.answeredBy}</span>
-                        <span className="text-[10px] text-gray-300">·</span>
-                        <span className="text-[10px] text-green-600 font-semibold">👍 {qa.helpful} found helpful</span>
+                        <span className="text-xs text-gray-400">By {qa.answeredBy}</span>
+                        <span className="text-xs text-gray-300">·</span>
+                        <span className="text-xs text-green-600 font-semibold">👍 {qa.helpful} found helpful</span>
                       </div>
                     </div>
                   </div>

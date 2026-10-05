@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune Highest Package 2026 | Max Salary After MBA Pune",
@@ -28,8 +29,8 @@ export default function MBAHighestPackage() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Colleges in Pune — Highest Package 2026"
         subtitle="College-wise highest MBA salary packages in Pune. SIBM ₹85 LPA, SCMHRD ₹62 LPA, MIT-SOM ₹36 LPA. Complete data."
@@ -53,11 +54,12 @@ export default function MBAHighestPackage() {
           { label: "MBA 100% Placement", href: "/mba-colleges-in-pune-with-100-placement" },
           { label: "MBA Placements Pune", href: "/mba-placements-pune" },
           { label: "MBA for Finance", href: "/mba-colleges-in-pune-for-finance" },
-          { label: "Best MBA Colleges Pune", href: "/best-mba-colleges-pune" },
+          { label: "Best MBA Colleges Pune", href: "/mba-colleges-pune" },
         ]}
         ctaHeading="Target ₹20+ LPA After MBA? Here's How"
         ctaSubtext="Free counselling to plan your MBA journey from entrance exam to high-package placement."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-highest-package" />
     </>
   )
 }

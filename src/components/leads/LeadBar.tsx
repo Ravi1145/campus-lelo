@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { X, Clock } from "lucide-react"
 
 // Admission deadline — matches site_settings in Supabase
@@ -33,10 +33,25 @@ export default function LeadBar() {
   const [loading, setLoading] = useState(false)
   const countdown = useCountdown(DEADLINE)
 
+  const barRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const wasDismissed = localStorage.getItem("lead_bar_dismissed") === "true"
     if (!wasDismissed) setDismissed(false)
   }, [])
+
+  // Publish the bar's height as --leadbar-h so the fixed header and page content
+  // sit below it instead of being covered (it used to hide the top of the logo).
+  useEffect(() => {
+    const root = document.documentElement
+    const el = barRef.current
+    if (dismissed || !el) { root.style.setProperty("--leadbar-h", "0px"); return }
+    const update = () => root.style.setProperty("--leadbar-h", `${el.offsetHeight}px`)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => { ro.disconnect(); root.style.setProperty("--leadbar-h", "0px") }
+  }, [dismissed])
 
   const dismiss = () => {
     setDismissed(true)
@@ -48,7 +63,7 @@ export default function LeadBar() {
     if (!/^[6-9]\d{9}$/.test(phone)) return
     setLoading(true)
     try {
-      await fetch("/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -58,6 +73,8 @@ export default function LeadBar() {
           message: "Admission 2026 guide request via top bar",
         }),
       })
+      // fetch() doesn't throw on 4xx/5xx — only confirm when the API accepted the lead
+      if (!res.ok) return
       setSubmitted(true)
       setTimeout(dismiss, 5000)
     } catch {
@@ -70,7 +87,7 @@ export default function LeadBar() {
   if (dismissed) return null
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[150] bg-gradient-to-r from-[#0A1628] to-[#1a56db] text-white text-sm shadow-lg">
+    <div ref={barRef} className="fixed top-0 left-0 right-0 z-[150] bg-gradient-to-r from-[#011B40] to-[#024692] text-white text-sm shadow-lg">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-3">
 
         {/* Announcement text */}

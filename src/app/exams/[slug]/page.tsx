@@ -5,17 +5,27 @@ import { exams } from "@/data/exams"
 import { colleges } from "@/data/colleges"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { Calendar, Clock, Globe, Users, BookOpen, GraduationCap, ArrowRight } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
+import { getMbaExam, MBA_EXAM_SLUGS } from "@/data/mba/exams"
+import { MbaExamHub, examHubMetadata } from "@/components/exams/MbaExamRoutes"
 
 interface Props {
   params: Promise<{ slug: string }>
 }
 
+// MBA/PGDM exams render from the sourced profiles in src/data/mba (MbaExamHub);
+// other exams (MHT-CET, JEE, NEET…) keep the original template below.
 export async function generateStaticParams() {
-  return exams.map(e => ({ slug: e.name.toLowerCase().replace(/\s+/g, "-") }))
+  const legacy = exams
+    .map(e => e.name.toLowerCase().replace(/\s+/g, "-"))
+    .filter(slug => !MBA_EXAM_SLUGS.includes(slug))
+  return [...legacy, ...MBA_EXAM_SLUGS].map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
+  const mbaExam = getMbaExam(slug)
+  if (mbaExam) return examHubMetadata(mbaExam)
   const exam = exams.find(e => e.name.toLowerCase().replace(/\s+/g, "-") === slug)
   if (!exam) return {}
   return genMeta({
@@ -27,6 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ExamDetailPage({ params }: Props) {
   const { slug } = await params
+  const mbaExam = getMbaExam(slug)
+  if (mbaExam) return <MbaExamHub exam={mbaExam} />
+
   const exam = exams.find(e => e.name.toLowerCase().replace(/\s+/g, "-") === slug)
   if (!exam) notFound()
 
@@ -59,16 +72,16 @@ export default async function ExamDetailPage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema(breadcrumbs)) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }}
       />
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
-        <div className="bg-[#0A1628] text-white">
+        <div className="bg-[#011B40] text-white">
           <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-xs text-blue-300 mb-6">

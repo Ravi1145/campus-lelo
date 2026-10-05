@@ -44,20 +44,24 @@ const AI_CRAWLERS = [
   "Timpibot",
 ]
 
+// API routes that crawlers must reach: OG images (social previews) and AI context
+const PUBLIC_API_PATHS = ["/api/og", "/api/ai-context", "/api/llm.txt"]
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Default: all bots get full access except admin + internals
+      // Default: all bots get full access except admin + private APIs.
+      // /_next/ must stay crawlable — Googlebot needs JS/CSS to render pages.
       {
         userAgent: "*",
-        allow: "/",
-        disallow: ["/admin/", "/_next/"],
+        allow: ["/", ...PUBLIC_API_PATHS],
+        disallow: ["/admin/", "/api/"],
       },
       // AI crawlers: explicitly allow everything including /api/ai-context
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
-        allow: "/",
-        disallow: ["/admin/"],
+        allow: ["/", ...PUBLIC_API_PATHS],
+        disallow: ["/admin/", "/api/"],
       })),
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,

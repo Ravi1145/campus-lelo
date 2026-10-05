@@ -1,10 +1,13 @@
 ﻿import { Metadata } from "next"
 import { Suspense } from "react"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema, generateItemListSchema } from "@/lib/seo"
-import Script from "next/script"
 import Link from "next/link"
 import CollegeGrid from "@/components/colleges/CollegeGrid"
+import CollegeListFallback from "@/components/colleges/CollegeListFallback"
+import CollegesHeroSearch from "@/components/colleges/CollegesHeroSearch"
+import { Award, Building2, BedDouble, Landmark } from "lucide-react"
 import { colleges } from "@/data/colleges"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Pune 2026 | Fees, Rankings & Reviews | CampusLelo",
@@ -31,6 +34,12 @@ export default function CollegesPage() {
     { name: "Colleges in Pune", url: "/colleges" },
   ])
   const faqSchema = generateFAQSchema(listingFaqs)
+  const stats = [
+    { icon: Building2, value: `${colleges.length}+`, label: "Colleges profiled" },
+    { icon: Award, value: colleges.filter(c => c.nirfRank !== null).length, label: "NIRF ranked" },
+    { icon: Landmark, value: colleges.filter(c => c.type === "Government").length, label: "Government colleges" },
+    { icon: BedDouble, value: colleges.filter(c => c.hostel).length, label: "With hostel" },
+  ]
   const topColleges = colleges.slice(0, 10)
   const itemList = generateItemListSchema(
     topColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}`, description: `${c.type} college, NAAC ${c.naac}, avg placement ₹${(c.avgPlacement/100000).toFixed(1)} LPA` }))
@@ -38,28 +47,51 @@ export default function CollegesPage() {
 
   return (
     <>
-      <Script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="item-list" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="item-list" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemList) }} />
       <div className="bg-surface min-h-screen">
         {/* Page Header */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="text-xs text-blue-300 mb-4 flex gap-1">
+        <div className="bg-rich-navy relative overflow-hidden">
+          <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.12]" />
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#E0170F]/20 blur-3xl" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+            <nav aria-label="Breadcrumb" className="hero-in text-xs text-blue-200 mb-5 flex gap-1.5" style={{ "--i": 0 } as React.CSSProperties}>
               <Link href="/" className="hover:text-white">Home</Link>
-              <span>›</span>
-              <span className="text-white">Colleges in Pune</span>
+              <span aria-hidden="true">›</span>
+              <span className="text-white" aria-current="page">Colleges in Pune</span>
             </nav>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-              All Colleges in Pune 2026
-            </h1>
-            <p className="text-gray-300 text-lg max-w-2xl">
-              Discover and compare {colleges.length}+ top engineering, MBA, medical and arts colleges in Pune. Real fees, placements, and NAAC data.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3">
+
+            <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+              <div>
+                <h1 className="hero-in text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.1]" style={{ "--i": 1 } as React.CSSProperties}>
+                  All Colleges in Pune <span className="bg-gradient-to-r from-[#FB4312] to-[#FF9E8A] bg-clip-text text-transparent">2026</span>
+                </h1>
+                <p className="hero-in mt-4 text-base sm:text-lg text-blue-100 max-w-xl leading-relaxed" style={{ "--i": 2 } as React.CSSProperties}>
+                  Discover and compare {colleges.length}+ engineering, MBA, medical, law and arts colleges — fees, placements, NAAC grades and accepted exams in one place.
+                </p>
+                <div className="hero-in mt-7" style={{ "--i": 3 } as React.CSSProperties}>
+                  <CollegesHeroSearch />
+                </div>
+              </div>
+
+              {/* Live stats — counted from the college data */}
+              <ul className="hidden lg:grid grid-cols-2 gap-3">
+                {stats.map(({ icon: Icon, value, label }, i) => (
+                  <li key={label} className="hero-pop rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur" style={{ "--i": i + 1 } as React.CSSProperties}>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-orange-300"><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                    <p className="mt-3 text-3xl font-extrabold text-white">{value}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-blue-200">{label}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="hero-in mt-8 flex flex-wrap items-center gap-2" style={{ "--i": 5 } as React.CSSProperties}>
+              <span className="text-xs font-semibold text-blue-200">Explore:</span>
               {["Engineering", "MBA", "Medical", "Law", "Design", "Government"].map(s => (
                 <Link key={s} href={`/colleges-in-pune/${s.toLowerCase()}-colleges-pune`}
-                  className="text-xs bg-white/10 text-blue-200 hover:bg-white/20 px-3 py-1.5 rounded-full transition-colors">
+                  className="text-xs font-semibold bg-white/10 text-white ring-1 ring-white/15 hover:bg-white hover:text-[#012858] px-3 py-1.5 rounded-full transition-colors">
                   {s} Colleges →
                 </Link>
               ))}
@@ -67,7 +99,7 @@ export default function CollegesPage() {
           </div>
         </div>
 
-        <Suspense fallback={<div className="flex items-center justify-center h-64 text-gray-500">Loading colleges...</div>}>
+        <Suspense fallback={<CollegeListFallback />}>
           <CollegeGrid />
         </Suspense>
 
@@ -90,11 +122,11 @@ export default function CollegesPage() {
               {[
                 { label: "Engineering Colleges Pune", href: "/colleges-in-pune/engineering-colleges-pune" },
                 { label: "MBA Colleges Pune", href: "/colleges-in-pune/mba-colleges-pune" },
-                { label: "Government Colleges Pune", href: "/colleges-in-pune/government-colleges-pune" },
+                { label: "Government Colleges Pune", href: "/government-colleges-pune" },
                 { label: "NAAC A+ Colleges Pune", href: "/colleges-in-pune/naac-a-plus-colleges-pune" },
                 { label: "NIRF Ranked Colleges Pune", href: "/colleges-in-pune/nirf-ranked-colleges-pune" },
                 { label: "Low Fee Colleges Pune", href: "/colleges-in-pune/low-fee-colleges-pune" },
-                { label: "MHT-CET Colleges Pune", href: "/colleges-in-pune/mht-cet-colleges-pune" },
+                { label: "MHT-CET Colleges Pune", href: "/engineering-colleges-pune" },
                 { label: "Top Placement Colleges Pune", href: "/colleges-in-pune/top-placement-colleges-pune" },
                 { label: "Colleges with Hostel Pune", href: "/colleges-in-pune/hostel-facility-colleges-pune" },
                 { label: "Medical Colleges Pune", href: "/colleges-in-pune/medical-colleges-pune" },

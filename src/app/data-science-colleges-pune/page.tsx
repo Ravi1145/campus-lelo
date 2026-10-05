@@ -84,7 +84,7 @@ const faqs = [
 export default function DataScienceCollegesPune() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-[#0A1628] to-purple-900 text-white py-14 px-4">
+      <section className="bg-gradient-to-br from-[#011B40] to-purple-900 text-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
           <nav className="text-sm text-blue-200 mb-4 flex gap-1 flex-wrap">
             <Link href="/" className="hover:text-white">Home</Link>

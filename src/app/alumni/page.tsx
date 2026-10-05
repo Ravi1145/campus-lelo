@@ -5,7 +5,8 @@ import { CheckCircle, GraduationCap } from "lucide-react"
 
 export const revalidate = 3600
 
-export const metadata: Metadata = genMeta({
+// noindex until profiles are verified real alumni (with consent) — E-E-A-T risk
+export const metadata: Metadata = { ...genMeta({
   title: "Pune College Alumni Network 2026 | Ask Graduates Directly | CampusLelo",
   description: "Connect with verified alumni from COEP, SIBM, AFMC, PICT, VIT Pune and 20+ colleges. Get honest answers about placements, hostel, campus life and admission from real graduates.",
   path: "/alumni",
@@ -14,7 +15,7 @@ export const metadata: Metadata = genMeta({
     "ask alumni pune college", "college alumni network pune",
     "pune engineering alumni", "mba alumni pune",
   ],
-})
+}), robots: { index: false, follow: true } }
 
 const featuredAlumni = [
   { slug: "rahul-sharma-coep-2023", name: "Rahul Sharma", college: "COEP Pune", course: "B.Tech CSE", year: 2023, company: "Google", package: "₹32 LPA", avatar: null },
@@ -40,7 +41,7 @@ export default function AlumniPage() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 sm:py-16">
+      <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 text-sm px-4 py-1.5 rounded-full mb-4">
             <CheckCircle className="w-4 h-4" /> Verified Alumni Network

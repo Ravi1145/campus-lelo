@@ -1,302 +1,193 @@
 "use client"
-import { useState, useEffect, useCallback } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
-import { Filter, X, ChevronDown, ChevronUp, RotateCcw } from "lucide-react"
+import { useEffect, useId, useState } from "react"
+import { SlidersHorizontal, X, ChevronDown, RotateCcw, Search } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { FACETS, countActiveFilters, isSelected, keyOf, DEFAULT_FILTERS, type FacetKey, type FacetOption, type FiltersState } from "@/lib/collegeFacets"
 
-const STREAMS = ["Engineering", "MBA", "Medical", "Arts & Science", "Management", "Law", "Architecture"]
-const COLLEGE_TYPES = ["Government", "Private", "Deemed", "Autonomous"]
-const NAAC_GRADES = ["A++", "A+", "A", "B++", "B+"]
-const PUNE_AREAS = ["Shivajinagar", "Kothrud", "Hadapsar", "Wakad", "Tathawade", "Akurdi", "Bavdhan", "Karve Nagar", "Bibwewadi", "Viman Nagar", "Dhankawadi", "Lavale"]
-const EXAMS = ["MHT-CET", "JEE Main", "JEE Advanced", "NEET", "CAT", "SNAP", "MAT", "CMAT", "NATA", "SET"]
+// Filter sidebar for /colleges. Every group: title, optional search box, a
+// scrollable checkbox list with live counts. Fully controlled by CollegeGrid.
 
-interface FiltersState {
-  streams: string[]
-  types: string[]
-  naac: string[]
-  areas: string[]
-  exams: string[]
-  feesMin: number
-  feesMax: number
-  hostel: boolean
-  nirfRanked: boolean
-}
-
-function FilterSection({
-  title,
-  children,
-  defaultOpen = true,
-}: {
+function Section({ title, selectedCount, defaultOpen, options, onToggle, isOn }: {
   title: string
-  children: React.ReactNode
-  defaultOpen?: boolean
+  selectedCount: number
+  defaultOpen: boolean
+  options: FacetOption[]
+  onToggle: (value: string) => void
+  isOn: (value: string) => boolean
 }) {
-  const [open, setOpen] = useState(defaultOpen)
+  const [open, setOpen] = useState(defaultOpen || selectedCount > 0)
+  const [q, setQ] = useState("")
+  const id = useId()
+  const searchable = options.length > 7
+  const shown = q ? options.filter((o) => o.value.toLowerCase().includes(q.toLowerCase())) : options
+
   return (
-    <div className="border-b border-gray-100 pb-4 mb-4">
+    <div className="border-b border-gray-100 py-3.5 last:border-b-0">
       <button
+        type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full text-sm font-semibold text-gray-800 mb-3"
+        aria-expanded={open}
+        aria-controls={id}
+        className="flex w-full items-center justify-between text-left text-sm font-extrabold text-[#012858]"
       >
-        {title}
-        {open ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+        <span className="flex items-center gap-2">
+          {title}
+          {selectedCount > 0 && <span className="rounded-full bg-[#E0170F] px-1.5 py-0.5 text-[10px] font-bold leading-none text-white">{selectedCount}</span>}
+        </span>
+        <ChevronDown className={cn("h-4 w-4 text-gray-500 transition-transform duration-300", open && "rotate-180")} aria-hidden="true" />
       </button>
-      {open && children}
+
+      <div id={id} className={cn("grid transition-[grid-template-rows,opacity] duration-300 ease-out", open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}>
+        <div className="overflow-hidden">
+          <div className="pt-3">
+            {searchable && (
+              <div className="relative mb-2">
+                <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-500" aria-hidden="true" />
+                <label htmlFor={`${id}-q`} className="sr-only">Search {title}</label>
+                <input
+                  id={`${id}-q`}
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
+                  placeholder={`Search by ${title}`}
+                  className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-8 pr-2 text-xs text-gray-900 placeholder:text-gray-500 focus:border-[#024692] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
+                />
+              </div>
+            )}
+            <ul className="max-h-48 space-y-0.5 overflow-y-auto pr-1 [scrollbar-width:thin]">
+              {shown.map((o) => {
+                const on = isOn(o.value)
+                const dim = o.count === 0 && !on
+                return (
+                  <li key={o.value}>
+                    <label className={cn("flex cursor-pointer items-center gap-2.5 rounded-lg px-1.5 py-1.5 text-[13px] transition-colors hover:bg-blue-50/60", dim && "opacity-45")}>
+                      <input
+                        type="checkbox"
+                        checked={on}
+                        onChange={() => onToggle(o.value)}
+                        className="h-4 w-4 shrink-0 rounded border-gray-300 accent-[#E0170F]"
+                      />
+                      <span className={cn("flex-1 truncate", on ? "font-bold text-[#012858]" : "text-gray-800")}>{o.value}</span>
+                      <span className="text-xs tabular-nums text-gray-500">({o.count})</span>
+                    </label>
+                  </li>
+                )
+              })}
+              {shown.length === 0 && <li className="px-1.5 py-2 text-xs text-gray-500">No match</li>}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-function CheckboxGroup({
-  options,
-  selected,
-  onChange,
-}: {
-  options: string[]
-  selected: string[]
-  onChange: (value: string) => void
-}) {
+function Switch({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <div className="space-y-2">
-      {options.map((option) => (
-        <label key={option} className="flex items-center gap-2 cursor-pointer group">
-          <input
-            type="checkbox"
-            checked={selected.includes(option)}
-            onChange={() => onChange(option)}
-            className="w-4 h-4 rounded border-gray-300 text-orange-500 focus:ring-orange-400"
-          />
-          <span className={cn(
-            "text-sm transition-colors",
-            selected.includes(option) ? "text-orange-600 font-medium" : "text-gray-600 group-hover:text-gray-900"
-          )}>
-            {option}
-          </span>
-        </label>
-      ))}
-    </div>
+    <button type="button" role="switch" aria-checked={checked} onClick={() => onChange(!checked)} className="flex w-full items-center justify-between gap-3 rounded-lg py-1.5 text-left text-[13px] font-medium text-gray-800">
+      {label}
+      <span className={cn("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-[#E0170F]" : "bg-gray-300")}>
+        <span className={cn("absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all", checked ? "left-[22px]" : "left-0.5")} />
+      </span>
+    </button>
   )
 }
 
 interface CollegeFiltersProps {
-  onFiltersChange?: (filters: FiltersState) => void
-  className?: string
+  filters: FiltersState
+  onChange: (f: FiltersState) => void
+  options: Record<FacetKey, FacetOption[]>
+  mobileOpen: boolean
+  onMobileClose: () => void
+  resultCount: number
 }
 
-export default function CollegeFilters({ onFiltersChange, className }: CollegeFiltersProps) {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const [activeCount, setActiveCount] = useState(0)
-  const [mobileOpen, setMobileOpen] = useState(false)
+export default function CollegeFilters({ filters, onChange, options, mobileOpen, onMobileClose, resultCount }: CollegeFiltersProps) {
+  const active = countActiveFilters(filters)
 
-  const [filters, setFilters] = useState<FiltersState>({
-    streams: searchParams.get("stream") ? [searchParams.get("stream")!] : [],
-    types: [],
-    naac: [],
-    areas: [],
-    exams: [],
-    feesMin: 0,
-    feesMax: 2500000,
-    hostel: false,
-    nirfRanked: false,
-  })
+  const toggle = (key: FacetKey, value: string) => {
+    const on = isSelected(filters, key, value)
+    onChange({ ...filters, [key]: on ? filters[key].filter((s) => keyOf(key, s) !== keyOf(key, value)) : [...filters[key], value] })
+  }
 
+  // Lock page scroll behind the mobile sheet; close on Escape
   useEffect(() => {
-    let count = 0
-    if (filters.streams.length) count += filters.streams.length
-    if (filters.types.length) count += filters.types.length
-    if (filters.naac.length) count += filters.naac.length
-    if (filters.areas.length) count += filters.areas.length
-    if (filters.exams.length) count += filters.exams.length
-    if (filters.hostel) count++
-    if (filters.nirfRanked) count++
-    if (filters.feesMax < 2500000) count++
-    setActiveCount(count)
-    onFiltersChange?.(filters)
-    // NOTE: onFiltersChange intentionally excluded from deps — it's a callback prop.
-    // Including it causes infinite re-renders when parent doesn't memoize it.
-    // The parent (CollegeGrid) passes useState's setFilters which is always stable.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters])
+    if (!mobileOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onMobileClose() }
+    window.addEventListener("keydown", esc)
+    return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", esc) }
+  }, [mobileOpen, onMobileClose])
 
-  const toggleArray = (key: keyof FiltersState, value: string) => {
-    setFilters((prev) => {
-      const arr = prev[key] as string[]
-      return {
-        ...prev,
-        [key]: arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value],
-      }
-    })
-  }
-
-  const resetFilters = () => {
-    setFilters({
-      streams: [],
-      types: [],
-      naac: [],
-      areas: [],
-      exams: [],
-      feesMin: 0,
-      feesMax: 2500000,
-      hostel: false,
-      nirfRanked: false,
-    })
-  }
-
-  const filterContent = (
-    <div className={cn("bg-white rounded-2xl border border-gray-100 p-5", className)}>
-      <div className="flex items-center justify-between mb-5">
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-orange-500" />
-          <h2 className="font-bold text-gray-900">Filters</h2>
-          {activeCount > 0 && (
-            <span className="bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full">
-              {activeCount}
-            </span>
-          )}
-        </div>
-        {activeCount > 0 && (
-          <button
-            onClick={resetFilters}
-            className="flex items-center gap-1 text-xs text-gray-500 hover:text-orange-600 transition-colors"
-          >
-            <RotateCcw className="w-3 h-3" />
-            Reset All
-          </button>
-        )}
+  const body = (
+    <>
+      {FACETS.map(({ key, title, defaultOpen }) => {
+        const opts = options[key] ?? []
+        // A group with a single choice (e.g. one state) can't narrow anything
+        if (opts.length < 2 && filters[key].length === 0) return null
+        return (
+          <Section
+            key={key}
+            title={title}
+            selectedCount={filters[key].length}
+            defaultOpen={defaultOpen}
+            options={opts}
+            onToggle={(v) => toggle(key, v)}
+            isOn={(v) => isSelected(filters, key, v)}
+          />
+        )
+      })}
+      <div className="py-3.5">
+        <Switch label="Has hostel facility" checked={filters.hostel} onChange={(v) => onChange({ ...filters, hostel: v })} />
+        <Switch label="NIRF ranked only" checked={filters.nirfRanked} onChange={(v) => onChange({ ...filters, nirfRanked: v })} />
       </div>
+    </>
+  )
 
-      <FilterSection title="Stream / Program">
-        <CheckboxGroup
-          options={STREAMS}
-          selected={filters.streams}
-          onChange={(v) => toggleArray("streams", v)}
-        />
-      </FilterSection>
-
-      <FilterSection title="College Type">
-        <CheckboxGroup
-          options={COLLEGE_TYPES}
-          selected={filters.types}
-          onChange={(v) => toggleArray("types", v)}
-        />
-      </FilterSection>
-
-      <FilterSection title="NAAC Grade">
-        <CheckboxGroup
-          options={NAAC_GRADES}
-          selected={filters.naac}
-          onChange={(v) => toggleArray("naac", v)}
-        />
-      </FilterSection>
-
-      <FilterSection title="Annual Fees Range" defaultOpen={false}>
-        <div className="space-y-3">
-          <div>
-            <label className="text-xs text-gray-500 mb-1 block">
-              Max Fees: ₹{(filters.feesMax / 100000).toFixed(1)}L/yr
-            </label>
-            <input
-              type="range"
-              min={0}
-              max={2500000}
-              step={50000}
-              value={filters.feesMax}
-              onChange={(e) => setFilters((p) => ({ ...p, feesMax: Number(e.target.value) }))}
-              className="w-full accent-orange-500"
-            />
-            <div className="flex justify-between text-xs text-gray-400 mt-1">
-              <span>Free</span>
-              <span>₹25L/yr</span>
-            </div>
-          </div>
-        </div>
-      </FilterSection>
-
-      <FilterSection title="Location in Pune" defaultOpen={false}>
-        <CheckboxGroup
-          options={PUNE_AREAS}
-          selected={filters.areas}
-          onChange={(v) => toggleArray("areas", v)}
-        />
-      </FilterSection>
-
-      <FilterSection title="Entrance Exam" defaultOpen={false}>
-        <CheckboxGroup
-          options={EXAMS}
-          selected={filters.exams}
-          onChange={(v) => toggleArray("exams", v)}
-        />
-      </FilterSection>
-
-      <FilterSection title="Other Filters" defaultOpen={true}>
-        <div className="space-y-3">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={filters.hostel}
-              onChange={(e) => setFilters((p) => ({ ...p, hostel: e.target.checked }))}
-              className="w-4 h-4 rounded border-gray-300 text-orange-500"
-            />
-            <span className="text-sm text-gray-600">Has Hostel Facility</span>
-          </label>
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={filters.nirfRanked}
-              onChange={(e) => setFilters((p) => ({ ...p, nirfRanked: e.target.checked }))}
-              className="w-4 h-4 rounded border-gray-300 text-orange-500"
-            />
-            <span className="text-sm text-gray-600">NIRF Ranked</span>
-          </label>
-        </div>
-      </FilterSection>
+  const header = (
+    <div className="flex items-center justify-between">
+      <h2 className="flex items-center gap-2 text-base font-extrabold text-[#012858]">
+        <SlidersHorizontal className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /> Filter By
+        {active > 0 && <span className="rounded-full bg-[#E0170F] px-2 py-0.5 text-xs font-bold text-white">{active}</span>}
+      </h2>
+      {active > 0 && (
+        <button type="button" onClick={() => onChange(DEFAULT_FILTERS)} className="inline-flex items-center gap-1 text-xs font-bold text-[#C90D11] hover:underline">
+          <RotateCcw className="h-3 w-3" aria-hidden="true" /> Reset all
+        </button>
+      )}
     </div>
   )
 
   return (
     <>
-      {/* Mobile filter button */}
-      <div className="lg:hidden flex items-center justify-between mb-4">
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm hover:border-orange-300 transition-colors"
-        >
-          <Filter className="w-4 h-4" />
-          Filters
-          {activeCount > 0 && (
-            <span className="bg-orange-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
-              {activeCount}
-            </span>
-          )}
-        </button>
-      </div>
+      {/* Desktop: sticky card */}
+      <aside aria-label="Filter colleges" className="hidden rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-200 lg:sticky lg:top-[calc(var(--leadbar-h,0px)+7.5rem)] lg:block lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto [scrollbar-width:thin]">
+        {header}
+        <div className="mt-2">{body}</div>
+      </aside>
 
-      {/* Mobile sheet */}
+      {/* Mobile: bottom sheet */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
-          <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between px-5 py-4 border-b">
-              <span className="font-bold text-gray-900">Filters</span>
-              <button onClick={() => setMobileOpen(false)}>
-                <X className="w-5 h-5 text-gray-500" />
+        <div className="fixed inset-0 z-[120] lg:hidden" role="dialog" aria-modal="true" aria-label="Filter colleges">
+          <div className="fade-in absolute inset-0 bg-[#011B40]/60 backdrop-blur-sm" onClick={onMobileClose} />
+          <div className="sheet-up absolute inset-x-0 bottom-0 flex max-h-[88vh] flex-col rounded-t-3xl bg-white shadow-2xl">
+            <div className="mx-auto mt-2 h-1.5 w-10 rounded-full bg-gray-300" aria-hidden="true" />
+            <div className="flex items-center justify-between border-b border-gray-100 px-5 py-3">
+              {header}
+              <button type="button" onClick={onMobileClose} aria-label="Close filters" className="ml-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-700">
+                <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
-            <div className="p-5">{filterContent}</div>
-            <div className="px-5 pb-8 pt-2 flex gap-3">
-              <button onClick={resetFilters} className="flex-1 border border-gray-200 rounded-xl py-3 text-sm font-medium text-gray-700">
-                Reset
-              </button>
-              <button onClick={() => setMobileOpen(false)} className="flex-1 bg-orange-500 text-white rounded-xl py-3 text-sm font-semibold">
-                Apply Filters {activeCount > 0 && `(${activeCount})`}
+            <div className="overflow-y-auto px-5">{body}</div>
+            <div className="flex gap-3 border-t border-gray-100 px-5 py-4">
+              <button type="button" onClick={() => onChange(DEFAULT_FILTERS)} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-semibold text-gray-700">Reset</button>
+              <button type="button" onClick={onMobileClose} className="flex-[2] rounded-xl bg-[#E0170F] py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20">
+                Show {resultCount} colleges
               </button>
             </div>
           </div>
         </div>
       )}
-
-      {/* Desktop */}
-      <div className="hidden lg:block">{filterContent}</div>
     </>
   )
 }

@@ -1,26 +1,20 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import Script from "next/script"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 // All pre-defined comparison pairs for static generation + sitemap
 export const COMPARISON_PAIRS = [
   ["coep-college-of-engineering-pune", "pict-pune-institute-of-computer-technology"],
   ["coep-college-of-engineering-pune", "vit-pune-vishwakarma-institute-of-technology"],
   ["coep-college-of-engineering-pune", "mit-wpu-mit-world-peace-university"],
-  ["coep-college-of-engineering-pune", "pccoe-pimpri-chinchwad-college-of-engineering"],
   ["pict-pune-institute-of-computer-technology", "vit-pune-vishwakarma-institute-of-technology"],
   ["pict-pune-institute-of-computer-technology", "mit-wpu-mit-world-peace-university"],
-  ["mit-wpu-mit-world-peace-university", "pccoe-pimpri-chinchwad-college-of-engineering"],
-  ["mit-wpu-mit-world-peace-university", "symbiosis-institute-of-business-management-sibm"],
-  ["vit-pune-vishwakarma-institute-of-technology", "pccoe-pimpri-chinchwad-college-of-engineering"],
-  ["symbiosis-institute-of-business-management-sibm", "mit-wpu-mit-world-peace-university"],
-  ["dy-patil-university-pune", "mit-wpu-mit-world-peace-university"],
-  ["flame-university-pune", "symbiosis-institute-of-business-management-sibm"],
+  ["mit-wpu-mit-world-peace-university", "sibm-symbiosis-institute-business-management-pune"],
+  ["flame-university-pune", "sibm-symbiosis-institute-business-management-pune"],
   ["symbiosis-institute-of-technology-pune", "mit-wpu-mit-world-peace-university"],
-  ["aissms-college-of-engineering-pune", "pccoe-pimpri-chinchwad-college-of-engineering"],
 ]
 
 export function generateStaticParams() {
@@ -131,13 +125,13 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="compare-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(compareSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="compare-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(compareSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+        <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -307,7 +301,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
           )}
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-xl p-8 text-center">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help Choosing Between {colA.shortName} and {colB.shortName}?</h2>
             <p className="text-gray-300 mb-6 text-sm">Talk to our free Pune college counsellor — get personalised guidance in 15 minutes.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

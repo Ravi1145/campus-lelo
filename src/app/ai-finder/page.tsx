@@ -15,7 +15,7 @@ export default function AIFinderPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-16">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-sm font-medium px-4 py-2 rounded-full mb-5">
             <Sparkles className="w-4 h-4" />
@@ -51,7 +51,7 @@ export default function AIFinderPage() {
       </div>
 
       {/* Chat Section */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <MessageCircle className="w-10 h-10 text-orange-400 mx-auto mb-3" />
           <h2 className="text-2xl font-bold text-white mb-2">Need More Help?</h2>

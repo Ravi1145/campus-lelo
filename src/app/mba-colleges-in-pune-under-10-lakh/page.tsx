@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune Under 10 Lakh Total Fees 2026 | Best Value MBA",
@@ -26,8 +27,8 @@ export default function MBAUnder10Lakh() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Colleges in Pune Under 10 Lakh Total Fees 2026"
         subtitle="Best value MBA colleges in Pune with total 2-year fees under â‚¹10 lakh. Good placements, NAAC accreditation, MAH-CET admission."
@@ -55,6 +56,7 @@ export default function MBAUnder10Lakh() {
         ctaHeading="Find the Best MBA Under 10 Lakh in Pune"
         ctaSubtext="Free counselling to identify the best value MBA college for your MAH-CET score and career goals."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-under-10-lakh" />
     </>
   )
 }

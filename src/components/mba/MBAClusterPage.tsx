@@ -1,6 +1,21 @@
 "use client"
 import Link from "next/link"
 import type { MBACollege } from "@/data/mbaColleges"
+import MbaLeadForm from "@/components/leads/MbaLeadForm"
+
+// Kept as a small static list (this is a client component — avoid bundling exam data)
+const EXAM_GUIDE_LINKS = [
+  { label: "CAT", href: "/exams/cat" },
+  { label: "MAH MBA CET", href: "/exams/mah-mba-cet" },
+  { label: "SNAP", href: "/exams/snap" },
+  { label: "XAT", href: "/exams/xat" },
+  { label: "CMAT", href: "/exams/cmat" },
+  { label: "MAT", href: "/exams/mat" },
+  { label: "NMAT", href: "/exams/nmat" },
+  { label: "ATMA", href: "/exams/atma" },
+  { label: "GMAT", href: "/exams/gmat" },
+  { label: "MBA vs PGDM", href: "/mba-vs-pgdm" },
+]
 
 interface ClusterFAQ { question: string; answer: string }
 interface InternalLink { label: string; href: string }
@@ -28,7 +43,7 @@ export default function MBAClusterPage({
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero */}
-      <header className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+      <header className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
             <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -131,10 +146,31 @@ export default function MBAClusterPage({
           </div>
         </section>
 
+        {/* Entrance exam guides (exam-first linking: cluster page → exam hub) */}
+        <section className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h2 className="text-base font-bold text-gray-900 mb-3">MBA & PGDM Entrance Exam Guides</h2>
+          <div className="flex flex-wrap gap-2">
+            {EXAM_GUIDE_LINKS.map(l => (
+              <Link key={l.href} href={l.href} className="px-3 py-1.5 bg-orange-50 border border-orange-100 rounded-full text-sm text-orange-700 hover:border-orange-300 transition-colors">{l.label}</Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Lead capture — contextual MBA/PGDM shortlist form */}
+        <section id="shortlist" className="max-w-xl mx-auto w-full">
+          <MbaLeadForm
+            source="mba_cluster"
+            city="Pune"
+            placement={`mba_cluster:${h1.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60)}`}
+            heading={ctaHeading}
+            subheading={ctaSubtext}
+          />
+        </section>
+
         {/* CTA */}
-        <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-2">{ctaHeading}</h2>
-          <p className="text-gray-300 mb-5 text-sm max-w-lg mx-auto">{ctaSubtext}</p>
+        <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-2">Prefer to talk it through?</h2>
+          <p className="text-gray-300 mb-5 text-sm max-w-lg mx-auto">Book a free counselling session, or check which colleges match your exam score.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Free Counselling →</Link>
             <Link href="/predictor" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors">College Predictor</Link>

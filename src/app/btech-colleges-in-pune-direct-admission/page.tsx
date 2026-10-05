@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
 import BTechClusterPage from "@/components/btech/BTechClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Direct Admission in Pune 2026 | Without MHT-CET | Management Quota",
@@ -35,8 +35,8 @@ export default function BTechDirectAdmission() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <BTechClusterPage
         h1="BTech Direct Admission in Pune 2026 | Without MHT-CET"
         subtitle="Management quota and NRI quota BTech admission in Pune without MHT-CET. Fees, process and eligible colleges."

@@ -1,0 +1,10 @@
+exam_slug,cycle,url,dates_status,dates_source_type,pattern_status,pattern_source_type,eligibility_source_type,prep_areas,prep_page_indexable,verified_programmes,colleges_page_indexable,last_reviewed,next_review_due,next_trigger,owner,open_actions
+cat,CAT 2026,/exams/cat,confirmed,secondary,confirmed,secondary,secondary,4,yes,3,yes,2026-10-04,2026-12-01,Admit card / exam day 29 Nov,,Confirm marking from CAT 2026 notification PDF; add result date
+xat,XAT 2027,/exams/xat,confirmed,official,confirmed,official,secondary,4,yes,3,yes,2026-10-04,2026-12-20,Admit card 20 Dec,,Confirm fee and eligibility on official page
+cmat,CMAT 2027,/exams/cmat,withheld-conflict,,confirmed,secondary,secondary,2,no,3,yes,2026-10-04,2026-10-25,NTA information bulletin,,Add dates from NTA bulletin; expand prep to 3 areas
+mat,MAT Dec 2026,/exams/mat,confirmed,official,confirmed,official,secondary,2,no,2,yes,2026-10-04,2026-12-01,Dec PBT/CBT,,Expand prep; add 2027 sessions
+mah-mba-cet,MAH MBA CET 2026 (2027 awaited),/exams/mah-mba-cet,previous-cycle,official+secondary,confirmed,secondary,secondary,2,no,1,yes,2026-10-04,2027-01-15,CET Cell 2027 schedule,,Add 2027 schedule; CAP round cut-off PDFs; verify 10 Pune programmes
+snap,SNAP 2026,/exams/snap,confirmed,official,confirmed,secondary,official,2,no,2,yes,2026-10-04,2026-12-01,SNAP admit cards Dec,,Confirm 4-section pattern from bulletin; result date
+nmat,NMAT 2026,/exams/nmat,confirmed,official,confirmed,official,secondary,1,no,1,no,2026-10-04,2026-11-01,Testing window opens 2 Nov,,Verify NMAT programmes (NMIMS etc.)
+atma,ATMA 2026,/exams/atma,past-sessions,official,confirmed,secondary,secondary,1,no,0,no,2026-10-04,2026-11-01,Next session announcement,,Verify ATMA programmes; add upcoming sessions
+gmat,GMAT Focus,/exams/gmat,n/a-year-round,,confirmed,official,official,1,no,3,yes,2026-10-04,2027-04-01,GMAC changes,,Expand prep

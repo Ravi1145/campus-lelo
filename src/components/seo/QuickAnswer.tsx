@@ -24,14 +24,14 @@ export default function QuickAnswer({ question, answer, note }: QuickAnswerProps
     <div
       className="quick-answer speakable my-6 rounded-2xl border-l-4 p-5"
       data-speakable="true"
-      style={{ background: "#F7F9FC", borderLeftColor: "#FF6B35" }}
+      style={{ background: "#F7F9FC", borderLeftColor: "#E0170F" }}
       itemScope
       itemType="https://schema.org/Question"
     >
-      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#FF6B35" }}>
+      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#E0170F" }}>
         Quick Answer
       </p>
-      <p className="font-semibold text-sm mb-2" style={{ color: "#16324F" }} itemProp="name">
+      <p className="font-semibold text-sm mb-2" style={{ color: "#012858" }} itemProp="name">
         {question}
       </p>
       <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">

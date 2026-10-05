@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in Finance Colleges in Pune 2026 | Best MBA Finance Placement & Fees",
@@ -27,8 +28,8 @@ export default function MBAFinance() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA in Finance — Top Colleges in Pune 2026"
         subtitle="Best MBA Finance colleges in Pune — SIBM, SCMHRD, PUMBA with investment banking, BFSI and corporate finance placements."
@@ -51,12 +52,13 @@ export default function MBAFinance() {
           { label: "MBA for Marketing", href: "/mba-colleges-in-pune-for-marketing" },
           { label: "MBA for Business Analytics", href: "/mba-colleges-in-pune-for-business-analytics" },
           { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune-highest-package" },
-          { label: "SIBM vs SCMHRD", href: "/compare/symbiosis-institute-of-business-management-sibm-vs-symbiosis-institute-of-technology-pune" },
+          { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
           { label: "MBA Placements Pune", href: "/mba-placements-pune" },
         ]}
         ctaHeading="MBA Finance in Pune — Get Personalised Guidance"
         ctaSubtext="Our counsellors will help you target SIBM, SCMHRD or PUMBA based on your CAT/MAH-CET score."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-for-finance" />
     </>
   )
 }

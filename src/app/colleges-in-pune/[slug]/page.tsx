@@ -126,10 +126,23 @@ export async function generateStaticParams() {
   return seoPages.map((p) => ({ slug: p.slug }))
 }
 
+const OWN_PAGE_SLUGS = new Set(["clat-colleges-pune", "colleges-in-shivajinagar-pune", "nirf-ranked-colleges-pune", "deemed-universities-pune"])
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const page = getSEOPageBySlug(slug)
   if (!page) return {}
+  const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
+  // These topics have no standalone page, so this URL is the page: index it, canonical to itself
+  if (OWN_PAGE_SLUGS.has(slug)) {
+    return {
+      title: page.title,
+      description: page.description,
+      keywords: page.keywords,
+      alternates: { canonical: `${BASE}/colleges-in-pune/${slug}` },
+      robots: { index: true, follow: true },
+    }
+  }
   // Canonical points to the standalone page (not /colleges-in-pune/) to prevent duplicate content
   const canonical = `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/${slug}`
   return {

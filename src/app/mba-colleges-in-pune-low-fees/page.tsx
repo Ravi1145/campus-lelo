@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Mba Colleges In Pune Low Fees | CampusLelo 2026",
@@ -26,8 +27,8 @@ export default function Page() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="Mba Colleges In Pune Low Fees — Pune 2026"
         subtitle="Complete guide to Mba Colleges In Pune Low Fees in Pune. Compare top MBA colleges, fees, cutoffs and placements."
@@ -54,6 +55,7 @@ export default function Page() {
         ctaHeading="Get Personalised MBA Guidance for Pune"
         ctaSubtext="Free counselling from our Pune-based MBA experts — 15 minutes, zero cost."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-low-fees" />
     </>
   )
 }

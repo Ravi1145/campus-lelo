@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { GitCompare, X, ArrowRight } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 interface CompareButtonProps {
@@ -15,6 +15,7 @@ export default function CompareButton({ collegeSlug, collegeName }: CompareButto
   const [isSelected, setIsSelected] = useState(false)
   const [compareList, setCompareList] = useState<{ slug: string; name: string }[]>([])
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const stored = localStorage.getItem(COMPARE_KEY)
@@ -74,6 +75,7 @@ export default function CompareButton({ collegeSlug, collegeName }: CompareButto
 export function CompareFloatingBar() {
   const [compareList, setCompareList] = useState<{ slug: string; name: string }[]>([])
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const syncList = () => {
@@ -103,10 +105,11 @@ export function CompareFloatingBar() {
     setCompareList([])
   }
 
-  if (compareList.length === 0) return null
+  // Not needed on the compare page itself (it already shows the selection)
+  if (compareList.length === 0 || pathname === "/compare") return null
 
   return (
-    <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-40 bg-[#0A1628] text-white rounded-2xl shadow-2xl px-5 py-3 flex items-center gap-4 border border-white/10">
+    <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-40 bg-[#011B40] text-white rounded-2xl shadow-2xl px-5 py-3 flex items-center gap-4 border border-white/10">
       <GitCompare className="w-5 h-5 text-orange-400 flex-shrink-0" />
       <div className="flex items-center gap-3">
         {compareList.map((c) => (

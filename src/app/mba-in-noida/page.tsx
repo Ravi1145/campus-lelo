@@ -1,8 +1,9 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import Script from "next/script"
 import { MapPin, Star, IndianRupee, Trophy, ChevronRight, CheckCircle2 } from "lucide-react"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const revalidate = 3600
 
@@ -61,10 +62,10 @@ const faqData = [
 export default function MBAInNoidaPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqData)) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema([
+      <script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqData)) }} />
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema([
           { name: "Home", url: "/" },
           { name: "Colleges in Noida", url: "/colleges-in-noida" },
           { name: "MBA Colleges in Noida", url: "/mba-colleges-noida" },
@@ -73,7 +74,7 @@ export default function MBAInNoidaPage() {
 
       <main style={{ background: "#F7F9FC" }}>
 
-        <section style={{ background: "#16324F" }} className="py-10 px-4">
+        <section style={{ background: "#012858" }} className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
             <nav className="flex items-center gap-1.5 text-xs text-blue-200 mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -94,7 +95,7 @@ export default function MBAInNoidaPage() {
             <div className="flex flex-wrap gap-3 text-sm">
               {[["20+", "MBA Colleges"], ["₹1.8L–7L", "Total 2yr Fees"], ["₹8.5 LPA", "Best Avg Pkg"], ["CAT/MAT/CMAT", "Entrance Exams"]].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
-                  <span className="font-bold" style={{ color: "#FF6B35" }}>{val}</span>
+                  <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>
                 </div>
               ))}
@@ -109,32 +110,32 @@ export default function MBAInNoidaPage() {
 
               {/* Quick comparison table */}
               <div className="bg-white rounded-2xl border border-gray-100 p-6">
-                <h2 className="text-lg font-bold mb-4" style={{ color: "#16324F" }}>
+                <h2 className="text-lg font-bold mb-4" style={{ color: "#012858" }}>
                   MBA Colleges in Noida 2026 — Quick Comparison
                 </h2>
                 <div className="overflow-x-auto">
                   <table className="w-full text-xs">
                     <thead>
                       <tr style={{ background: "#F7F9FC" }}>
-                        <th className="text-left p-2 font-semibold" style={{ color: "#16324F" }}>College</th>
-                        <th className="text-center p-2 font-semibold" style={{ color: "#16324F" }}>NAAC</th>
-                        <th className="text-center p-2 font-semibold" style={{ color: "#16324F" }}>Total Fees</th>
-                        <th className="text-center p-2 font-semibold" style={{ color: "#16324F" }}>Avg Pkg</th>
-                        <th className="text-center p-2 font-semibold" style={{ color: "#16324F" }}>Entrance</th>
+                        <th className="text-left p-2 font-semibold" style={{ color: "#012858" }}>College</th>
+                        <th className="text-center p-2 font-semibold" style={{ color: "#012858" }}>NAAC</th>
+                        <th className="text-center p-2 font-semibold" style={{ color: "#012858" }}>Total Fees</th>
+                        <th className="text-center p-2 font-semibold" style={{ color: "#012858" }}>Avg Pkg</th>
+                        <th className="text-center p-2 font-semibold" style={{ color: "#012858" }}>Entrance</th>
                       </tr>
                     </thead>
                     <tbody>
                       {mbaComparison.map((row, i) => (
                         <tr key={row.college} className={i % 2 === 0 ? "bg-white" : ""} style={{ borderTop: "1px solid #F0F0F0" }}>
                           <td className="p-2">
-                            <p className="font-semibold" style={{ color: "#16324F" }}>{row.college}</p>
-                            <p className="text-green-600 text-[10px] font-medium">{row.highlight}</p>
+                            <p className="font-semibold" style={{ color: "#012858" }}>{row.college}</p>
+                            <p className="text-green-600 text-xs font-medium">{row.highlight}</p>
                           </td>
                           <td className="p-2 text-center">
-                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold" style={{ background: "#FFF7F0", color: "#FF6B35" }}>{row.naac}</span>
+                            <span className="px-1.5 py-0.5 rounded text-xs font-bold" style={{ background: "#FFF4F2", color: "#E0170F" }}>{row.naac}</span>
                           </td>
-                          <td className="p-2 text-center font-medium" style={{ color: "#16324F" }}>{row.fees}</td>
-                          <td className="p-2 text-center font-bold" style={{ color: "#FF6B35" }}>{row.avg}</td>
+                          <td className="p-2 text-center font-medium" style={{ color: "#012858" }}>{row.fees}</td>
+                          <td className="p-2 text-center font-bold" style={{ color: "#E0170F" }}>{row.avg}</td>
                           <td className="p-2 text-center text-gray-500">{row.exam}</td>
                         </tr>
                       ))}
@@ -142,10 +143,10 @@ export default function MBAInNoidaPage() {
                   </table>
                 </div>
                 <div className="mt-4 flex gap-3">
-                  <Link href="/mba-colleges-noida" className="text-xs px-4 py-2 rounded-lg font-medium text-white" style={{ background: "#FF6B35" }}>
+                  <Link href="/mba-colleges-noida" className="text-xs px-4 py-2 rounded-lg font-medium text-white" style={{ background: "#E0170F" }}>
                     See Full College Details
                   </Link>
-                  <Link href="/counselling" className="text-xs px-4 py-2 rounded-lg font-medium" style={{ background: "#F7F9FC", color: "#16324F", border: "1px solid #E5E9F0" }}>
+                  <Link href="/counselling" className="text-xs px-4 py-2 rounded-lg font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>
                     Free Counselling
                   </Link>
                 </div>
@@ -153,20 +154,20 @@ export default function MBAInNoidaPage() {
 
               {/* MBA Specializations */}
               <div className="bg-white rounded-2xl border border-gray-100 p-6">
-                <h2 className="text-lg font-bold mb-4" style={{ color: "#16324F" }}>MBA Specializations in Noida 2026</h2>
+                <h2 className="text-lg font-bold mb-4" style={{ color: "#012858" }}>MBA Specializations in Noida 2026</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { spec: "MBA Finance", colleges: "Amity, JIIT, Bennett, Sharda", demand: "High — HDFC, ICICI, Axis Bank recruit", color: "#F0F7FF" },
                     { spec: "MBA Marketing", colleges: "Amity, GL Bajaj, Galgotias, Sharda", demand: "High — FMCG, e-commerce, EdTech", color: "#F0FFF4" },
-                    { spec: "MBA HR", colleges: "Amity, Sharda, Galgotias, GL Bajaj", demand: "Moderate — TCS, Infosys, large MNCs", color: "#FFF7F0" },
+                    { spec: "MBA HR", colleges: "Amity, Sharda, Galgotias, GL Bajaj", demand: "Moderate — TCS, Infosys, large MNCs", color: "#FFF4F2" },
                     { spec: "MBA Operations", colleges: "JIIT, Amity, Bennett", demand: "High for logistics/supply chain NCR", color: "#F7F0FF" },
                     { spec: "MBA Business Analytics", colleges: "Amity, Bennett, JIIT", demand: "Very High — data-driven NCR companies", color: "#FFF0F0" },
                     { spec: "MBA International Business", colleges: "Amity, Sharda", demand: "Moderate — export/import, MNC India ops", color: "#F0FFFF" },
                   ].map(s => (
                     <div key={s.spec} className="rounded-xl p-3" style={{ background: s.color }}>
-                      <p className="font-semibold text-sm mb-1" style={{ color: "#16324F" }}>{s.spec}</p>
+                      <p className="font-semibold text-sm mb-1" style={{ color: "#012858" }}>{s.spec}</p>
                       <p className="text-xs text-gray-500 mb-1">Offered at: {s.colleges}</p>
-                      <p className="text-xs font-medium" style={{ color: "#FF6B35" }}>{s.demand}</p>
+                      <p className="text-xs font-medium" style={{ color: "#E0170F" }}>{s.demand}</p>
                     </div>
                   ))}
                 </div>
@@ -174,7 +175,7 @@ export default function MBAInNoidaPage() {
 
               {/* MBA in Noida Admission Timeline */}
               <div className="bg-white rounded-2xl border border-gray-100 p-6">
-                <h2 className="text-lg font-bold mb-4" style={{ color: "#16324F" }}>MBA in Noida 2026 — Admission Timeline</h2>
+                <h2 className="text-lg font-bold mb-4" style={{ color: "#012858" }}>MBA in Noida 2026 — Admission Timeline</h2>
                 <div className="space-y-3">
                   {[
                     { month: "Nov 2025", event: "CAT 2025 Registration (closed)", status: "done" },
@@ -204,35 +205,37 @@ export default function MBAInNoidaPage() {
 
             <div className="space-y-5">
               <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-sm mb-3" style={{ color: "#16324F" }}>MBA in Noida — Quick Links</h3>
+                <h3 className="font-bold text-sm mb-3" style={{ color: "#012858" }}>MBA in Noida — Quick Links</h3>
                 <ul className="space-y-1 text-sm">
                   {[
                     { label: "MBA Colleges in Noida", href: "/mba-colleges-noida" },
+                    { label: "MBA Cutoff Delhi NCR", href: "/mba-cutoff-delhi-ncr" },
+                    { label: "MBA in Delhi NCR & Noida Guide", href: "/blog/mba-colleges-delhi-ncr-noida-guide" },
                     { label: "PGDM Colleges Noida", href: "/pgdm-colleges-noida" },
                     { label: "Engineering Colleges Noida", href: "/engineering-colleges-noida" },
                     { label: "MBA Colleges in Pune", href: "/mba-colleges-in-pune" },
                     { label: "Greater Noida Colleges", href: "/colleges-in-greater-noida" },
                   ].map(l => (
                     <li key={l.href}>
-                      <Link href={l.href} className="block py-1.5 px-2 rounded-lg hover:bg-orange-50 transition-colors" style={{ color: "#16324F" }}>{l.label}</Link>
+                      <Link href={l.href} className="block py-1.5 px-2 rounded-lg hover:bg-orange-50 transition-colors" style={{ color: "#012858" }}>{l.label}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl p-5 text-sm" style={{ background: "#16324F", color: "white" }}>
+              <div className="rounded-2xl p-5 text-sm" style={{ background: "#012858", color: "white" }}>
                 <h3 className="font-bold mb-3">MBA Noida vs Pune — Quick Verdict</h3>
                 <div className="space-y-2 text-xs text-blue-100">
-                  <p><span className="font-semibold" style={{ color: "#FF6B35" }}>Choose Noida:</span> Delhi NCR job market, lower fees, MAT/CMAT accepted</p>
-                  <p><span className="font-semibold" style={{ color: "#FF6B35" }}>Choose Pune:</span> Stronger MBA brand (SIBM, SCMHRD), better avg ₹28 LPA</p>
-                  <p><span className="font-semibold" style={{ color: "#FF6B35" }}>Budget MBA:</span> GL Bajaj Noida ₹1.8L &gt; vs PUMBA Pune ₹1.25L (govt, harder to get)</p>
-                  <p><span className="font-semibold" style={{ color: "#FF6B35" }}>Top MBA:</span> Both offer SNAP/CAT colleges but Pune wins on ranking</p>
+                  <p><span className="font-semibold" style={{ color: "#E0170F" }}>Choose Noida:</span> Delhi NCR job market, lower fees, MAT/CMAT accepted</p>
+                  <p><span className="font-semibold" style={{ color: "#E0170F" }}>Choose Pune:</span> Stronger MBA brand (SIBM, SCMHRD), better avg ₹28 LPA</p>
+                  <p><span className="font-semibold" style={{ color: "#E0170F" }}>Budget MBA:</span> GL Bajaj Noida ₹1.8L &gt; vs PUMBA Pune ₹1.25L (govt, harder to get)</p>
+                  <p><span className="font-semibold" style={{ color: "#E0170F" }}>Top MBA:</span> Both offer SNAP/CAT colleges but Pune wins on ranking</p>
                 </div>
               </div>
 
               {/* Who should choose Noida MBA */}
               <div className="rounded-2xl p-5 text-sm bg-white border border-gray-100">
-                <h3 className="font-bold mb-3 text-sm" style={{ color: "#16324F" }}>Choose Noida MBA If...</h3>
+                <h3 className="font-bold mb-3 text-sm" style={{ color: "#012858" }}>Choose Noida MBA If...</h3>
                 <ul className="space-y-2">
                   {[
                     "You want Delhi NCR corporate placement",
@@ -242,27 +245,27 @@ export default function MBAInNoidaPage() {
                     "Want MAT/CMAT admission option",
                   ].map(p => (
                     <li key={p} className="flex items-start gap-2 text-xs text-gray-600">
-                      <CheckCircle2 size={13} className="flex-shrink-0 mt-0.5" style={{ color: "#FF6B35" }} />
+                      <CheckCircle2 size={13} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />
                       {p}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl p-5 text-center" style={{ background: "#FFF7F0", border: "1px solid #FFD9C5" }}>
-                <p className="font-bold text-sm mb-1" style={{ color: "#16324F" }}>MBA in Noida or Pune?</p>
+              <div className="rounded-2xl p-5 text-center" style={{ background: "#FFF4F2", border: "1px solid #FFC9BE" }}>
+                <p className="font-bold text-sm mb-1" style={{ color: "#012858" }}>MBA in Noida or Pune?</p>
                 <p className="text-xs text-gray-500 mb-3">Talk to a counsellor — free on WhatsApp</p>
-                <Link href="/counselling" className="block w-full py-2 rounded-xl text-sm font-bold text-white" style={{ background: "#FF6B35" }}>Free Counselling</Link>
+                <Link href="/counselling" className="block w-full py-2 rounded-xl text-sm font-bold text-white" style={{ background: "#E0170F" }}>Free Counselling</Link>
               </div>
             </div>
           </div>
 
           <section className="mt-10">
-            <h2 className="text-xl font-bold mb-6" style={{ color: "#16324F" }}>FAQs — MBA in Noida 2026</h2>
+            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs — MBA in Noida 2026</h2>
             <div className="space-y-4">
               {faqData.map(faq => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 p-5 group">
-                  <summary className="font-semibold text-sm cursor-pointer list-none flex justify-between items-center" style={{ color: "#16324F" }}>
+                  <summary className="font-semibold text-sm cursor-pointer list-none flex justify-between items-center" style={{ color: "#012858" }}>
                     {faq.question}
                     <ChevronRight size={16} className="flex-shrink-0 group-open:rotate-90 transition-transform text-gray-400" />
                   </summary>
@@ -273,6 +276,7 @@ export default function MBAInNoidaPage() {
           </section>
         </div>
       </main>
+      <RelatedMbaSearches path="/mba-in-noida" />
     </>
   )
 }

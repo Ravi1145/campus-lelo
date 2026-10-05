@@ -63,7 +63,7 @@ export default function ROICalculatorPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-12 px-4">
+      <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-12 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
             <Calculator className="w-3.5 h-3.5" /> EDUCATION ROI CALCULATOR
@@ -193,7 +193,7 @@ export default function ROICalculatorPage() {
                         <tr key={row.year} className={cn("hover:bg-gray-50", row.net > 0 && row.year === result.breakEvenYear && "bg-green-50")}>
                           <td className="px-2 sm:px-4 py-2 font-medium text-sm">
                             <span className="hidden sm:inline">Year </span>{row.year}
-                            {row.year === result.breakEvenYear && <span className="ml-1 text-[10px] bg-green-500 text-white px-1.5 rounded-full hidden sm:inline">Break-even ✓</span>}
+                            {row.year === result.breakEvenYear && <span className="ml-1 text-xs bg-green-500 text-white px-1.5 rounded-full hidden sm:inline">Break-even ✓</span>}
                           </td>
                           <td className="px-2 sm:px-4 py-2 text-right text-sm">{formatINR(row.salary)}</td>
                           <td className="px-2 sm:px-4 py-2 text-right text-sm hidden sm:table-cell">{formatINR(row.cumulative)}</td>
@@ -232,7 +232,7 @@ export default function ROICalculatorPage() {
                 </div>
               </div>
 
-              <Link href="/counselling" className="block text-center bg-[#0A1628] hover:bg-[#162040] text-white font-bold py-3 rounded-xl text-sm transition-colors">
+              <Link href="/counselling" className="block text-center bg-[#011B40] hover:bg-[#162040] text-white font-bold py-3 rounded-xl text-sm transition-colors">
                 Talk to a Counsellor About Scholarships →
               </Link>
             </div>

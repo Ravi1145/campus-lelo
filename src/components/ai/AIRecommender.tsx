@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Sparkles, Loader2, TrendingUp, IndianRupee, MapPin, ChevronRight, Brain } from "lucide-react"
 import Link from "next/link"
 import { cn, formatCurrency } from "@/lib/utils"
@@ -37,6 +37,20 @@ export default function AIRecommender() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [step, setStep] = useState(1)
+
+  // Prefill from the homepage finder: /ai-finder?stream=&exam=&score=&budget=
+  // (read in an effect so the page stays statically rendered — no Suspense needed)
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search)
+    const stream = p.get("stream"), exam = p.get("exam"), score = p.get("score"), budget = Number(p.get("budget"))
+    setForm((prev) => ({
+      ...prev,
+      ...(stream && STREAMS.includes(stream) ? { stream } : {}),
+      ...(exam && EXAM_TYPES.includes(exam) ? { examType: exam } : {}),
+      ...(score ? { examScore: score.slice(0, 30) } : {}),
+      ...(budget >= 50000 && budget <= 2500000 ? { budget } : {}),
+    }))
+  }, [])
 
   const togglePref = (pref: string) => {
     setForm((prev) => ({
@@ -78,7 +92,7 @@ export default function AIRecommender() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-3xl p-8 lg:p-12">
+    <section className="bg-gradient-to-br from-[#011B40] to-[#024692] rounded-3xl p-8 lg:p-12">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-sm font-medium px-4 py-2 rounded-full mb-4">
@@ -230,7 +244,7 @@ export default function AIRecommender() {
             <div className="space-y-4">
               {result.colleges.map((college, i) => (
                 <div key={i} className="bg-white rounded-2xl overflow-hidden">
-                  <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] px-5 py-3 flex items-center justify-between">
+                  <div className="bg-gradient-to-r from-[#011B40] to-[#024692] px-5 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold bg-orange-500 text-white px-2 py-0.5 rounded-full">
                         #{i + 1} Match
@@ -270,7 +284,7 @@ export default function AIRecommender() {
                     <div className="flex gap-2">
                       <Link
                         href={`/colleges/${college.slug}`}
-                        className="flex-1 bg-[#0A1628] text-white text-sm font-semibold py-2.5 rounded-xl text-center hover:bg-[#1E3A5F] transition-colors"
+                        className="flex-1 bg-[#011B40] text-white text-sm font-semibold py-2.5 rounded-xl text-center hover:bg-[#024692] transition-colors"
                       >
                         Know More
                       </Link>

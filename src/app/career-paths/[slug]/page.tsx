@@ -43,7 +43,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
   return (
     <div className="bg-surface min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1A2E4A] py-10">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#1A2E4A] py-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center flex-wrap">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -141,7 +141,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
           <div className="space-y-3">
             {path.courses.map(course => (
               <div key={course.name} className="flex items-center gap-3">
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${course.level === "UG" ? "bg-green-100 text-green-700" : "bg-purple-100 text-purple-700"}`}>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${course.level === "UG" ? "bg-green-100 text-green-700" : "bg-purple-100 text-purple-700"}`}>
                   {course.level}
                 </span>
                 <div className="flex-1">

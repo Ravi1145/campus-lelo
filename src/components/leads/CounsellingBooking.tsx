@@ -1,47 +1,64 @@
 "use client"
-import { useState } from "react"
-import { Loader2, CheckCircle, Calendar, Clock, User, Phone, BookOpen } from "lucide-react"
+import { useEffect, useId, useState } from "react"
+import Link from "next/link"
+import { ArrowRight, Check, Loader2, ShieldCheck, User, Video, PhoneCall } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ChipGroup, Field, Honeypot, MultiChipGroup, PhoneField, inputCls } from "./LeadFormParts"
+import { BUDGET_YEARLY, LOCATIONS } from "./leadOptions"
+import { HELP_TOPICS, PLANS, VIDEO_PRICE_INR, type PlanId } from "@/data/counselling"
+import { PLAN_EVENT } from "@/components/counselling/PlanCta"
 
-interface FormData {
-  name: string
-  phone: string
-  stream: string
-  preferred_date: string
-  preferred_time: "morning" | "afternoon" | "evening" | ""
+declare global {
+  interface Window { dataLayer?: Record<string, unknown>[] }
 }
 
-interface FormErrors {
-  name?: string
-  phone?: string
+const STREAMS = ["Engineering", "Medical", "MBA", "Law", "Arts & Science", "Commerce", "Design", "Pharmacy", "Other"]
+const TIMES = [
+  { value: "morning", label: "Morning" },
+  { value: "afternoon", label: "Afternoon" },
+  { value: "evening", label: "Evening" },
+]
+
+interface Props {
+  /** Pre-selected plan, e.g. from a "Book video session" button */
+  defaultPlan?: PlanId
 }
 
-const initialForm: FormData = {
-  name: "",
-  phone: "",
-  stream: "",
-  preferred_date: "",
-  preferred_time: "",
-}
-
-const streams = ["Engineering", "Medical", "MBA", "Law", "Arts & Science", "Commerce", "Design", "Pharmacy", "Other"]
-
-export default function CounsellingBooking() {
-  const [form, setForm] = useState<FormData>(initialForm)
-  const [errors, setErrors] = useState<FormErrors>({})
+// Counselling request: choose free phone counselling or the paid video session,
+// say what you need and when. No payment is taken here — for the video session
+// the team confirms the slot and sends a payment link.
+export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props) {
+  const uid = useId()
+  const [plan, setPlan] = useState<PlanId>(defaultPlan)
+  const [form, setForm] = useState({ name: "", phone: "", stream: "", location: "", budget: "", date: "", time: "", website: "" })
+  const [topics, setTopics] = useState<string[]>([])
+  const [errors, setErrors] = useState<{ name?: string; phone?: string; form?: string }>({})
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState<{ bookingRef: string } | null>(null)
+  const [success, setSuccess] = useState<{ ref: string; plan: PlanId } | null>(null)
+  const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) => setForm((f) => ({ ...f, [k]: v }))
+  const isVideo = plan === "video_199"
 
-  const validate = (): boolean => {
-    const newErrors: FormErrors = {}
-    if (!form.name || form.name.length < 2) newErrors.name = "Name must be at least 2 characters"
-    if (!form.phone || !/^[6-9]\d{9}$/.test(form.phone)) newErrors.phone = "Enter a valid 10-digit Indian mobile number"
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
+  // Deep link: /counselling?plan=video preselects the paid session
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get("plan")
+    if (p === "video") setPlan("video_199")
+    else if (p === "free") setPlan("free_phone")
+    // Plan buttons on this page pick a plan without reloading
+    const onPlan = (e: Event) => setPlan((e as CustomEvent<PlanId>).detail)
+    window.addEventListener(PLAN_EVENT, onPlan)
+    return () => window.removeEventListener(PLAN_EVENT, onPlan)
+  }, [])
+
+  const validate = () => {
+    const e: typeof errors = {}
+    if (form.name.trim().length < 2) e.name = "Please enter your name"
+    if (!/^[6-9]\d{9}$/.test(form.phone)) e.phone = "Enter a valid 10-digit mobile number"
+    setErrors(e)
+    return Object.keys(e).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (ev: React.FormEvent) => {
+    ev.preventDefault()
     if (!validate()) return
     setLoading(true)
     try {
@@ -49,198 +66,145 @@ export default function CounsellingBooking() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: form.name,
+          name: form.name.trim(),
           phone: form.phone,
           stream: form.stream || undefined,
-          preferred_date: form.preferred_date || undefined,
-          preferred_time: form.preferred_time || undefined,
+          plan,
+          budget: form.budget || undefined,
+          city_preference: form.location || undefined,
+          help_topics: topics.length ? topics : undefined,
+          preferred_date: form.date || undefined,
+          preferred_time: form.time || undefined,
+          website: form.website,
         }),
       })
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
       if (data.success) {
-        setSuccess({ bookingRef: data.bookingRef })
-        setForm(initialForm)
+        setSuccess({ ref: data.bookingRef, plan })
+        window.dataLayer?.push({ event: "generate_lead", lead_source: "counselling", counselling_plan: plan, budget: form.budget || "none", location: form.location || "none" })
       } else {
-        setErrors({ name: data.message || "Submission failed. Please try again." })
+        setErrors({ form: data.message || "Submission failed. Please try again." })
       }
-    } catch (error) {
-      console.error("Booking error:", error)
-      setErrors({ name: "Network error. Please try again." })
+    } catch {
+      setErrors({ form: "Network error. Please try again." })
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <section className="bg-gradient-to-br from-[#0A1628] via-[#1a2d50] to-[#c2410c] py-10 sm:py-16 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
-          {/* Left: Text */}
-          <div className="text-white">
-            <span className="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
-              100% FREE
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-              Book a Free 15-Min Expert Counselling Session
-            </h2>
-            <p className="text-blue-100 text-base mb-6">
-              Talk to our Pune education experts. Get personalized guidance on colleges, courses, fees, and admission strategy — completely free.
-            </p>
-            <ul className="space-y-3 text-sm text-blue-100">
-              {[
-                "Personalized college shortlist based on your profile",
-                "Fees, scholarships & hostel info for every college",
-                "Direct admission process guidance",
-                "100% confidential — no spam calls",
-              ].map((point) => (
-                <li key={point} className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex items-center gap-4 text-sm text-blue-200">
-              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 15-min session</span>
-              <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Mon – Sat</span>
-              <span className="flex items-center gap-1.5"><Phone className="w-4 h-4" /> WhatsApp / Call</span>
-            </div>
-          </div>
+    <section id="book" aria-labelledby="book-h" className="bg-rich-navy relative scroll-mt-32 overflow-hidden px-4 py-14 sm:px-6 sm:py-20">
+      <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.1]" />
+      <div className="relative mx-auto grid max-w-5xl items-start gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
+        {/* Left: what you get */}
+        <div className="text-white">
+          <h2 id="book-h" className="text-3xl font-extrabold leading-tight sm:text-4xl">Tell us what you need. We&apos;ll take it from there.</h2>
+          <p className="mt-3 text-base leading-relaxed text-blue-100">Pick free phone counselling or an expert video session. Add your budget and city so the first conversation starts with options, not questions.</p>
+          <ul className="mt-6 space-y-3 text-sm text-blue-50">
+            {(isVideo ? PLANS[1] : PLANS[0]).includes.map((p) => (
+              <li key={p} className="flex items-start gap-2.5">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/90 text-[#011B40]"><Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>
+                {p}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-xs text-blue-200">Free, no spam. We contact you only about your request.</p>
+        </div>
 
-          {/* Right: Form Card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-6">
-            {success ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Session Booked!</h3>
-                <p className="text-sm font-semibold text-orange-600 mb-3">Reference: {success.bookingRef}</p>
-                <p className="text-sm text-gray-600">
-                  Our counsellor will call/WhatsApp you to confirm the time. Get ready for your free session!
-                </p>
-                <button
-                  onClick={() => setSuccess(null)}
-                  className="mt-5 text-sm text-orange-600 hover:text-orange-700 font-medium underline"
-                >
-                  Book another session
-                </button>
+        {/* Right: form */}
+        <div className="rounded-3xl bg-white p-5 shadow-2xl sm:p-7">
+          {success ? (
+            <div className="py-6 text-center" role="status">
+              <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/60"><Check className="h-8 w-8" strokeWidth={3} aria-hidden="true" /></span>
+              <h3 className="mt-5 text-2xl font-extrabold text-[#012858]">{success.plan === "video_199" ? "Video session requested" : "Call requested"}</h3>
+              <p className="mt-1 text-sm font-bold text-[#C90D11]">Reference {success.ref}</p>
+              <p className="mx-auto mt-3 max-w-sm text-sm text-gray-600">
+                {success.plan === "video_199"
+                  ? `We will confirm your slot on WhatsApp and send a secure payment link for ₹${VIDEO_PRICE_INR}. You pay only after the slot is confirmed.`
+                  : "A counsellor will call or WhatsApp you to talk through your options. It is free."}
+              </p>
+              <div className="mt-5 flex flex-col gap-1.5 text-sm font-bold text-[#C90D11]">
+                <Link href="/scholarships" className="hover:underline">Explore scholarships while you wait →</Link>
+                <Link href="/colleges" className="hover:underline">Browse colleges →</Link>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="text-center mb-2">
-                  <h3 className="text-lg font-bold text-gray-900">Book Your Free Session</h3>
-                  <p className="text-xs text-gray-500">Usually confirmed within 1 hour</p>
-                </div>
+              <button type="button" onClick={() => setSuccess(null)} className="mt-5 text-sm font-semibold text-gray-600 underline underline-offset-2 hover:text-[#012858]">Make another request</button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} noValidate className="relative space-y-5">
+              <Honeypot id={`${uid}-website`} value={form.website} onChange={(v) => set("website", v)} />
 
-                {/* Name */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">
-                    <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5" /> Full Name <span className="text-red-500">*</span></span>
-                  </label>
-                  <input
-                    type="text"
-                    value={form.name}
-                    onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                    placeholder="Your full name"
-                    className={cn(
-                      "w-full border rounded-xl px-3 py-2.5 text-sm outline-none transition-colors",
-                      errors.name ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-orange-400"
-                    )}
-                  />
-                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+              {/* Plan picker */}
+              <fieldset>
+                <legend className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-600">Choose counselling</legend>
+                <div className="grid gap-2.5 sm:grid-cols-2">
+                  {PLANS.map((p) => {
+                    const on = plan === p.id
+                    const Icon = p.id === "video_199" ? Video : PhoneCall
+                    return (
+                      <label key={p.id} className="cursor-pointer">
+                        <input type="radio" name={`${uid}-plan`} value={p.id} checked={on} onChange={() => setPlan(p.id)} className="peer sr-only" />
+                        <span className={cn(
+                          "flex h-full flex-col rounded-2xl p-4 ring-1 transition-all peer-focus-visible:ring-2 peer-focus-visible:ring-[#024692]",
+                          on ? "bg-[#012858] text-white shadow-lg ring-[#012858]" : "bg-white text-gray-800 ring-gray-200 hover:ring-[#012858]",
+                        )}>
+                          <span className="flex items-center justify-between">
+                            <Icon className={cn("h-5 w-5", on ? "text-orange-300" : "text-[#E0170F]")} aria-hidden="true" />
+                            <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-extrabold", on ? "bg-white text-[#012858]" : "bg-gray-100 text-[#012858]")}>{p.priceLabel}</span>
+                          </span>
+                          <span className="mt-2 text-sm font-extrabold leading-snug">{p.id === "video_199" ? "Expert video session" : "Phone counselling"}</span>
+                          <span className={cn("mt-0.5 text-xs", on ? "text-blue-100" : "text-gray-600")}>{p.id === "video_199" ? "CAP, career and your shortlist" : "A call or WhatsApp chat"}</span>
+                        </span>
+                      </label>
+                    )
+                  })}
                 </div>
+              </fieldset>
 
-                {/* Phone */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">
-                    <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> WhatsApp Number <span className="text-red-500">*</span></span>
-                  </label>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value.replace(/\D/g, "").slice(0, 10) }))}
-                    placeholder="10-digit WhatsApp number"
-                    maxLength={10}
-                    className={cn(
-                      "w-full border rounded-xl px-3 py-2.5 text-sm outline-none transition-colors",
-                      errors.phone ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-orange-400"
-                    )}
-                  />
-                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-                </div>
-
-                {/* Stream */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">
-                    <span className="flex items-center gap-1.5"><BookOpen className="w-3.5 h-3.5" /> Stream / Field</span>
-                  </label>
-                  <select
-                    value={form.stream}
-                    onChange={(e) => setForm((p) => ({ ...p, stream: e.target.value }))}
-                    className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-orange-400 bg-white"
-                  >
-                    <option value="">Select your stream</option>
-                    {streams.map((s) => <option key={s} value={s}>{s}</option>)}
-                  </select>
-                </div>
-
-                {/* Preferred Date */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">
-                    <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> Preferred Date</span>
-                  </label>
-                  <input
-                    type="date"
-                    value={form.preferred_date}
-                    onChange={(e) => setForm((p) => ({ ...p, preferred_date: e.target.value }))}
-                    min={new Date().toISOString().split("T")[0]}
-                    className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-orange-400"
-                  />
-                </div>
-
-                {/* Preferred Time */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> Preferred Time</span>
-                  </label>
-                  <div className="flex gap-2">
-                    {(["morning", "afternoon", "evening"] as const).map((opt) => (
-                      <button
-                        key={opt}
-                        type="button"
-                        onClick={() => setForm((p) => ({ ...p, preferred_time: opt }))}
-                        className={cn(
-                          "flex-1 py-2 rounded-xl text-xs font-semibold border transition-all",
-                          form.preferred_time === opt
-                            ? "bg-orange-500 border-orange-500 text-white"
-                            : "border-gray-200 text-gray-600 hover:border-orange-300"
-                        )}
-                      >
-                        {opt === "morning" ? "☀️ Morning" : opt === "afternoon" ? "🌤 Afternoon" : "🌆 Evening"}
-                      </button>
-                    ))}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Full name" htmlFor={`${uid}-name`} error={errors.name}>
+                  <div className="relative">
+                    <User className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
+                    <input id={`${uid}-name`} autoComplete="name" maxLength={50} value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="Your full name" aria-invalid={!!errors.name} className={`${inputCls} pl-10`} />
                   </div>
-                </div>
+                </Field>
+                <PhoneField id={`${uid}-phone`} label="WhatsApp number" value={form.phone} onChange={(v) => set("phone", v)} error={errors.phone} />
+              </div>
 
-                {/* Submit */}
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all text-sm"
-                >
-                  {loading ? (
-                    <><Loader2 className="w-4 h-4 animate-spin" /> Booking...</>
-                  ) : (
-                    <>Book Free Session 📅</>
-                  )}
-                </button>
-                <p className="text-center text-xs text-gray-400">
-                  By submitting, you consent to being contacted by our counsellors.{" "}
-                  <a href="/privacy" className="underline hover:text-orange-500">Privacy Policy</a>. No spam. Free service.
+              <Field label="Stream / field" htmlFor={`${uid}-stream`}>
+                <select id={`${uid}-stream`} value={form.stream} onChange={(e) => set("stream", e.target.value)} className={inputCls}>
+                  <option value="">Select your stream</option>
+                  {STREAMS.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
+              </Field>
+
+              <MultiChipGroup legend="What do you need help with?" hint="Pick any" options={HELP_TOPICS} value={topics} onChange={setTopics} />
+              <ChipGroup legend="Preferred location" options={LOCATIONS} value={form.location} onChange={(v) => set("location", v)} />
+              <ChipGroup legend="Budget" hint="per year" options={BUDGET_YEARLY} value={form.budget} onChange={(v) => set("budget", v)} />
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label={isVideo ? "Preferred date for the video call" : "Preferred date for the call"} htmlFor={`${uid}-date`}>
+                  <input id={`${uid}-date`} type="date" value={form.date} min={new Date().toISOString().split("T")[0]} onChange={(e) => set("date", e.target.value)} className={inputCls} />
+                </Field>
+                <ChipGroup legend="Preferred time" options={TIMES} value={form.time} onChange={(v) => set("time", v)} />
+              </div>
+
+              {isVideo && (
+                <p className="rounded-xl bg-amber-50 p-3 text-xs leading-relaxed text-amber-900 ring-1 ring-amber-200">
+                  <strong>How payment works:</strong> you send this request first. We confirm the slot on WhatsApp and send a secure payment link for ₹{VIDEO_PRICE_INR}. Nothing is charged on this page.
                 </p>
-              </form>
-            )}
-          </div>
+              )}
+
+              {errors.form && <p className="text-sm font-medium text-red-700" role="alert">{errors.form}</p>}
+
+              <button type="submit" disabled={loading} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
+                {loading ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>{isVideo ? `Request video session — ₹${VIDEO_PRICE_INR}` : "Request a free call"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}
+              </button>
+              <p className="flex items-start gap-1.5 text-xs text-gray-600">
+                <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+                <span>By submitting you agree to be contacted by our counsellors. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
+              </p>
+            </form>
+          )}
         </div>
       </div>
     </section>

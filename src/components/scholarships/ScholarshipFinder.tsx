@@ -100,10 +100,10 @@ export default function ScholarshipFinder() {
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="font-extrabold text-gray-900 text-sm">{s.name}</h3>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${s.matchScore >= 85 ? "bg-green-50 text-green-700" : "bg-yellow-50 text-yellow-700"}`}>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${s.matchScore >= 85 ? "bg-green-50 text-green-700" : "bg-yellow-50 text-yellow-700"}`}>
                       {s.matchScore}% match
                     </span>
-                    {s.urgent && <span className="text-[10px] px-2 py-0.5 rounded-full font-bold bg-red-50 text-red-600">Urgent</span>}
+                    {s.urgent && <span className="text-xs px-2 py-0.5 rounded-full font-bold bg-red-50 text-red-600">Urgent</span>}
                   </div>
                   <p className="text-xs text-gray-500">{s.description}</p>
                 </div>

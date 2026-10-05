@@ -1,10 +1,10 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, Award, MapPin, ExternalLink, BookOpen, Users } from "lucide-react"
 import { getCutoff } from "@/data/cutoffs"
 import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CampusLelo",
@@ -90,14 +90,14 @@ export default function EngineeringCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
-      <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
+      <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
 
       <div className="bg-surface min-h-screen">
         {/* Hero */}
-        <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-12 px-4">
+        <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-12 px-4">
           <div className="max-w-5xl mx-auto">
             {/* Breadcrumb */}
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1">
@@ -148,7 +148,7 @@ export default function EngineeringCollegesPunePage() {
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="bg-[#0A1628] text-white">
+                <thead className="bg-[#011B40] text-white">
                   <tr>
                     <th className="px-3 sm:px-4 py-3 text-left w-8">#</th>
                     <th className="px-3 sm:px-4 py-3 text-left">College</th>
@@ -211,7 +211,7 @@ export default function EngineeringCollegesPunePage() {
                   <h3 className="text-lg font-bold text-gray-900">1. College of Engineering Pune (COEP)</h3>
                   <p className="text-sm text-gray-500 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" /> Shivajinagar, Pune · Est. 1854</p>
                 </div>
-                <Link href="/colleges/coep-college-of-engineering-pune" className="inline-flex items-center gap-2 bg-[#0A1628] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#1E3A5F] transition-colors flex-shrink-0">
+                <Link href="/colleges/coep-college-of-engineering-pune" className="inline-flex items-center gap-2 bg-[#011B40] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#024692] transition-colors flex-shrink-0">
                   Full Details →
                 </Link>
               </div>
@@ -250,7 +250,7 @@ export default function EngineeringCollegesPunePage() {
                   <h3 className="text-lg font-bold text-gray-900">2. Pune Institute of Computer Technology (PICT)</h3>
                   <p className="text-sm text-gray-500 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" /> Dhankawadi, Pune · Est. 1983</p>
                 </div>
-                <Link href="/colleges/pict-pune-institute-of-computer-technology" className="inline-flex items-center gap-2 bg-[#0A1628] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#1E3A5F] transition-colors flex-shrink-0">
+                <Link href="/colleges/pict-pune-institute-of-computer-technology" className="inline-flex items-center gap-2 bg-[#011B40] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#024692] transition-colors flex-shrink-0">
                   Full Details →
                 </Link>
               </div>
@@ -284,7 +284,7 @@ export default function EngineeringCollegesPunePage() {
                   <h3 className="text-lg font-bold text-gray-900">3. Vishwakarma Institute of Technology (VIT Pune)</h3>
                   <p className="text-sm text-gray-500 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" /> Bibwewadi, Pune · Est. 1983</p>
                 </div>
-                <Link href="/colleges/vit-pune-vishwakarma-institute-of-technology" className="inline-flex items-center gap-2 bg-[#0A1628] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#1E3A5F] transition-colors flex-shrink-0">
+                <Link href="/colleges/vit-pune-vishwakarma-institute-of-technology" className="inline-flex items-center gap-2 bg-[#011B40] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#024692] transition-colors flex-shrink-0">
                   Full Details →
                 </Link>
               </div>
@@ -410,7 +410,7 @@ export default function EngineeringCollegesPunePage() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Not sure which college to pick?</p>
               <p className="text-blue-200 text-sm">Use our free College Predictor or get expert counselling.</p>
@@ -419,7 +419,7 @@ export default function EngineeringCollegesPunePage() {
               <Link href="/predictor" className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
                 College Predictor →
               </Link>
-              <Link href="/counselling" className="flex items-center justify-center gap-2 bg-white text-[#0A1628] font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-gray-100 transition-colors">
+              <Link href="/counselling" className="flex items-center justify-center gap-2 bg-white text-[#011B40] font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-gray-100 transition-colors">
                 Free Counselling →
               </Link>
             </div>

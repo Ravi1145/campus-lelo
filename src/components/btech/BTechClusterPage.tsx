@@ -29,7 +29,7 @@ export default function BTechClusterPage({
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero */}
-      <header className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+      <header className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -85,7 +85,7 @@ export default function BTechClusterPage({
                         <p className="text-gray-500">Avg Pkg</p>
                       </div>
                       <div className="bg-gray-50 rounded-lg p-2 text-center">
-                        <p className="font-bold text-gray-800 truncate text-[11px] leading-tight">{col.mhtCetCutoff ?? "Via " + col.entranceExams[0]}</p>
+                        <p className="font-bold text-gray-800 truncate text-xs leading-tight">{col.mhtCetCutoff ?? "Via " + col.entranceExams[0]}</p>
                         <p className="text-gray-500">MHT-CET</p>
                       </div>
                       <div className="bg-gray-50 rounded-lg p-2 text-center">
@@ -143,7 +143,7 @@ export default function BTechClusterPage({
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+        <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-2">{ctaHeading}</h2>
           <p className="text-gray-300 mb-5 text-sm max-w-lg mx-auto">{ctaSubtext}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

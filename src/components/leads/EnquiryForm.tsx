@@ -293,7 +293,7 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
                     className={cn(
                       "flex-1 py-2 rounded-xl text-xs font-semibold border transition-all",
                       form.preferred_time === opt
-                        ? "bg-[#0A1628] border-[#0A1628] text-white"
+                        ? "bg-[#011B40] border-[#011B40] text-white"
                         : "border-gray-200 text-gray-600 hover:border-gray-300"
                     )}
                   >

@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Entrepreneurship Colleges in Pune 2026 | Best Startup MBA",
@@ -25,8 +26,8 @@ export default function MBAEntrepreneurship() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA Entrepreneurship â€” Colleges in Pune 2026"
         subtitle="Best MBA Entrepreneurship programs in Pune â€” startup incubation, VC access, and entrepreneurship specialization at top Pune business schools."
@@ -49,6 +50,7 @@ export default function MBAEntrepreneurship() {
         ctaHeading="Want to Launch a Startup After MBA in Pune?"
         ctaSubtext="Free guidance to choose the right MBA entrepreneurship program based on your startup idea and funding goals."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-for-entrepreneurship" />
     </>
   )
 }

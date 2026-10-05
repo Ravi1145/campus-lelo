@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Cutoff Pune 2026 | MAH-CET MBA, CAT & SNAP Cutoffs All Colleges",
@@ -30,11 +31,11 @@ export default function MBACutoffPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="bg-gray-50 min-h-screen">
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 px-4">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
@@ -175,7 +176,7 @@ export default function MBACutoffPune() {
             </div>
           </section>
 
-          <section className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-center">
+          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Know Your Cutoff Range? Get Your College List</h2>
             <p className="text-gray-300 mb-5 text-sm">Free counselling — get personalised MBA college predictions based on your MAH-CET/CAT score.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -185,6 +186,7 @@ export default function MBACutoffPune() {
           </section>
         </div>
       </div>
+      <RelatedMbaSearches path="/mba-cutoff-pune" />
     </>
   )
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA IT Management Colleges in Pune 2026 | Best Tech MBA Pune",
@@ -25,8 +26,8 @@ export default function MBAForIT() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA IT Management — Colleges in Pune 2026"
         subtitle="Best MBA IT Management and Tech MBA programs in Pune with top IT company placements in Hinjewadi, Kharadi and Baner IT parks."
@@ -43,12 +44,13 @@ export default function MBAForIT() {
         internalLinks={[
           { label: "MBA for Business Analytics", href: "/mba-colleges-in-pune-for-business-analytics" },
           { label: "MBA for Finance", href: "/mba-colleges-in-pune-for-finance" },
-          { label: "B.Tech Colleges Pune", href: "/btech-colleges-pune" },
+          { label: "B.Tech Colleges Pune", href: "/btech-colleges-in-pune" },
           { label: "MCA Colleges Pune", href: "/mca-colleges-pune" },
         ]}
         ctaHeading="MBA IT Management in Pune — Get Guidance"
         ctaSubtext="Free counselling to find the right MBA IT college based on your B.Tech background and career goals."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-for-it" />
     </>
   )
 }

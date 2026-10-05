@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in HR Colleges in Pune 2026 | Best MBA Human Resources Pune",
@@ -26,8 +27,8 @@ export default function MBAHR() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA in HR — Colleges in Pune 2026"
         subtitle="Best MBA Human Resources colleges in Pune. SCMHRD leads with dedicated HRD specialization and top IT/manufacturing HR placements."
@@ -49,12 +50,13 @@ export default function MBAHR() {
         internalLinks={[
           { label: "MBA for Marketing", href: "/mba-colleges-in-pune-for-marketing" },
           { label: "MBA for Operations", href: "/mba-colleges-in-pune-for-operations" },
-          { label: "SIBM vs SCMHRD", href: "/compare/symbiosis-institute-of-business-management-sibm-vs-symbiosis-institute-of-technology-pune" },
+          { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
           { label: "MBA Placements Pune", href: "/mba-placements-pune" },
         ]}
         ctaHeading="MBA HR in Pune — Get Your College Shortlist"
         ctaSubtext="Free counselling to choose between SCMHRD, SIBM, PUMBA for MBA HR based on your profile."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-for-hr" />
     </>
   )
 }

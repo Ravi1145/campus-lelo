@@ -1,10 +1,11 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, Award, BookOpen, Users, Star } from "lucide-react"
 import { getCutoff } from "@/data/cutoffs"
 import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CampusLelo",
@@ -87,10 +88,10 @@ export default function MBACollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
-      <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
+      <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
 
       <main className="bg-white min-h-screen">
         {/* Breadcrumb */}
@@ -107,7 +108,7 @@ export default function MBACollegesPunePage() {
         </nav>
 
         {/* Hero */}
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] text-white py-12 sm:py-16">
+        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-500/30 text-orange-300 text-sm font-medium px-4 py-2 rounded-full mb-4">
@@ -379,6 +380,7 @@ export default function MBACollegesPunePage() {
           </div>
         </section>
       </main>
+      <RelatedMbaSearches path="/mba-colleges-pune" />
     </>
   )
 }

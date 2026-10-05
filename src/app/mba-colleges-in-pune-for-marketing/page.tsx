@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { mbaColleges } from "@/data/mbaColleges"
 import MBAClusterPage from "@/components/mba/MBAClusterPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in Marketing Colleges in Pune 2026 | Best MBA Marketing Pune",
@@ -29,8 +30,8 @@ export default function MBAMarketing() {
   ])
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
         h1="MBA in Marketing â€” Colleges in Pune 2026"
         subtitle="Best MBA Marketing colleges in Pune with top placements in FMCG, e-commerce, automotive and digital marketing."
@@ -54,11 +55,12 @@ export default function MBAMarketing() {
           { label: "MBA for HR", href: "/mba-colleges-in-pune-for-hr" },
           { label: "MBA for Business Analytics", href: "/mba-colleges-in-pune-for-business-analytics" },
           { label: "MBA Placements Pune", href: "/mba-placements-pune" },
-          { label: "Best MBA Colleges Pune", href: "/best-mba-colleges-pune" },
+          { label: "Best MBA Colleges Pune", href: "/mba-colleges-pune" },
         ]}
         ctaHeading="MBA Marketing â€” Choose the Right Pune College"
         ctaSubtext="Free counselling to pick the right MBA Marketing college based on your target industry and budget."
       />
+      <RelatedMbaSearches path="/mba-colleges-in-pune-for-marketing" />
     </>
   )
 }

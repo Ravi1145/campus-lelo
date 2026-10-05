@@ -29,7 +29,7 @@ const socialLinks = [
     icon: (
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
-        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0A1628" />
+        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#011B40" />
       </svg>
     ),
   },
@@ -55,8 +55,8 @@ const footerLinks = {
     { label: "PICT Pune",         href: "/colleges/pict-pune-institute-of-computer-technology" },
     { label: "VIT Pune",          href: "/colleges/vit-pune-vishwakarma-institute-of-technology" },
     { label: "Fergusson College", href: "/colleges/fergusson-college-pune" },
-    { label: "MIT-WPU Pune",      href: "/colleges/mit-world-peace-university-pune" },
-    { label: "SIT Pune",          href: "/colleges/sit-pune-symbiosis-institute-of-technology" },
+    { label: "MIT-WPU Pune",      href: "/colleges/mit-wpu-mit-world-peace-university" },
+    { label: "SIT Pune",          href: "/colleges/symbiosis-institute-of-technology-pune" },
   ],
   "Engineering & MBA": [
     { label: "Engineering Colleges Pune",   href: "/engineering-colleges-pune" },
@@ -119,7 +119,7 @@ const seoLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "var(--color-navy)" }} className="text-gray-300">
+    <footer style={{ backgroundColor: "var(--color-navy)" }} className="bg-rich-navy text-gray-300">
 
       {/* ── Main grid ─────────────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -225,6 +225,9 @@ export default function Footer() {
           <div className="flex items-center gap-5 text-xs text-gray-500">
             <Link href="/privacy"    className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms"      className="hover:text-gray-300 transition-colors">Terms of Use</Link>
+            <Link href="/editorial-policy" className="hover:text-gray-300 transition-colors">Editorial Policy</Link>
+            <Link href="/mba-exam-calendar" className="hover:text-gray-300 transition-colors">MBA Exam Calendar</Link>
+            <Link href="/press" className="hover:text-gray-300 transition-colors">Press &amp; Media Kit</Link>
             <Link href="/sitemap.xml" className="hover:text-gray-300 transition-colors">Sitemap</Link>
           </div>
         </div>

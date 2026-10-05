@@ -62,7 +62,7 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
   return (
     <div
       className="rounded-2xl overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #0A1628 0%, #1E3A5F 100%)", boxShadow: "0 4px 24px rgba(10,22,40,0.18)" }}
+      style={{ background: "linear-gradient(135deg, #011B40 0%, #024692 100%)", boxShadow: "0 4px 24px rgba(10,22,40,0.18)" }}
     >
       <div className="px-5 py-5 sm:px-6">
         <div className="flex items-start gap-3 mb-4">

@@ -1,10 +1,11 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { exams } from "@/data/exams"
+import { mbaExams } from "@/data/mba/exams"
 import { Calendar, ExternalLink, Clock, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Entrance Exam Calendar 2026 — MHT-CET, JEE, NEET, CAT for Pune Colleges",
@@ -37,27 +38,31 @@ export default function ExamsPage() {
     { name: "Entrance Exams", url: `${BASE_URL}/exams` },
   ])
 
-  // Schema.org Event array for each exam
+  // Schema.org Event array — only exams with a confirmed, parseable date.
+  // (Never emit a placeholder startDate: that would be fabricated structured data.)
+  const datedExams = exams
+    .map((exam) => ({ exam, startDate: parseExamDate(exam.examDate) }))
+    .filter((x): x is { exam: typeof exams[number]; startDate: string } => Boolean(x.startDate))
   const eventListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Entrance Exam Calendar 2026 — Pune Colleges",
-    description: "Complete list of entrance exams for Pune college admissions in 2026",
-    numberOfItems: exams.length,
-    itemListElement: exams.map((exam, idx) => ({
+    name: "Entrance Exam Calendar — Pune Colleges",
+    description: "Entrance exams for Pune college admissions with confirmed dates",
+    numberOfItems: datedExams.length,
+    itemListElement: datedExams.map(({ exam, startDate }, idx) => ({
       "@type": "ListItem",
       position: idx + 1,
       item: {
         "@context": "https://schema.org",
         "@type": "Event",
-        name: `${exam.name} 2026 — ${exam.fullName}`,
+        name: `${exam.name} ${startDate.slice(0, 4)} — ${exam.fullName}`,
         description: exam.description,
         url: exam.website,
         organizer: {
           "@type": "Organization",
           name: exam.conductedBy,
         },
-        startDate: parseExamDate(exam.examDate) ?? "2026-01-01",
+        startDate,
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         location: {
@@ -75,10 +80,10 @@ export default function ExamsPage() {
 
   return (
     <div className="bg-surface min-h-screen">
-      <Script id="exams-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="exams-events" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventListSchema) }} />
+      <script id="exams-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="exams-events" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(eventListSchema) }} />
 
-      <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] py-12">
+      <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
             Entrance Exam Calendar 2026
@@ -90,6 +95,18 @@ export default function ExamsPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section className="mb-8 bg-white rounded-2xl border border-gray-100 p-5">
+          <h2 className="text-lg font-bold text-gray-900 mb-1">MBA & PGDM entrance exam guides</h2>
+          <p className="text-sm text-gray-600 mb-4">Dates, eligibility, pattern, syllabus, score-vs-percentile and verified accepting colleges for each exam — with official sources.</p>
+          <div className="flex flex-wrap gap-2">
+            {mbaExams.map((e) => (
+              <Link key={e.slug} href={`/exams/${e.slug}`} className="px-3 py-1.5 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-600">
+                {e.name}
+              </Link>
+            ))}
+            <Link href="/mba-vs-pgdm" className="px-3 py-1.5 rounded-full bg-orange-50 text-sm font-semibold text-orange-700 hover:bg-orange-100">MBA vs PGDM</Link>
+          </div>
+        </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {exams.map((exam) => (
             <article key={exam.id} className="bg-white rounded-2xl border border-gray-100 hover:border-orange-200 hover:shadow-lg transition-all p-5">
@@ -143,17 +160,20 @@ export default function ExamsPage() {
                 </div>
               </div>
 
-              <div className="mt-3 pt-3 border-t border-gray-100">
+              <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
                 <p className="text-xs text-gray-500">
                   <span className="font-medium text-gray-700">Eligibility:</span> {exam.eligibility}
                 </p>
+                <Link href={`/exams/${exam.name.toLowerCase().replace(/\s+/g, "-")}`} className="text-xs font-semibold text-orange-600 hover:underline whitespace-nowrap">
+                  {exam.name} full guide →
+                </Link>
               </div>
             </article>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-10 bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-7 text-center">
+        <div className="mt-10 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-7 text-center">
           <h2 className="text-xl font-bold text-white mb-2">Not sure which exam to appear for?</h2>
           <p className="text-gray-400 mb-5">Let our AI analyze your profile and tell you which exams to focus on for your dream Pune college.</p>
           <Link

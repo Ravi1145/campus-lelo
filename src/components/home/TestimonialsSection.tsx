@@ -1,173 +1,74 @@
 import Link from "next/link"
+import { ArrowRight, BadgeCheck, CalendarClock, GitCompare, Headphones, Sparkles, TrendingUp } from "lucide-react"
+import Reveal from "./Reveal"
+import { VIDEO_PRICE_INR } from "@/data/counselling"
 
-interface Testimonial {
-  id: number
-  name: string
-  college: string
-  course: string
-  year: string
-  rating: number
-  text: string
-  initials: string
-  color: string
-}
+// "Why CampusLelo" — replaces the old testimonials block. Every card describes a
+// feature that exists on the site and links to it; no unverifiable quotes,
+// ratings or student counts (see docs/archive/replaced-components-2026-10-05).
 
-// Static testimonials — replace with Supabase fetch once testimonials table is seeded
-const staticTestimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Rohan Deshmukh",
-    college: "COEP Pune",
-    course: "B.Tech Computer Engineering",
-    year: "2024",
-    rating: 5,
-    text: "CampusLelo helped me find COEP's exact MHT-CET cutoff category-wise. The counsellor called within 2 hours and explained the entire CAP process. Got into COEP CSE with 99.2 percentile!",
-    initials: "RD",
-    color: "bg-blue-600",
-  },
-  {
-    id: 2,
-    name: "Priya Kulkarni",
-    college: "SIBM Pune",
-    course: "MBA Marketing",
-    year: "2024",
-    rating: 5,
-    text: "I was confused between SIBM and SCMHRD. The comparison tool on CampusLelo showed me fees, placement, SNAP cutoffs side-by-side. Enrolled in SIBM — best decision ever. Placed at ₹26 LPA.",
-    initials: "PK",
-    color: "bg-orange-500",
-  },
-  {
-    id: 3,
-    name: "Aditya Sharma",
-    college: "PICT Pune",
-    course: "B.Tech IT",
-    year: "2025",
-    rating: 5,
-    text: "The AI college finder matched me to PICT when I entered my 95.7 percentile. The free counselling session cleared all my doubts about PICT vs VIT Pune. Placed at Persistent Systems in 3rd year!",
-    initials: "AS",
-    color: "bg-green-600",
-  },
-  {
-    id: 4,
-    name: "Sneha Patil",
-    college: "AFMC Pune",
-    course: "MBBS",
-    year: "2023",
-    rating: 5,
-    text: "AFMC cutoffs are hard to find anywhere. CampusLelo had NEET category-wise cutoffs going back to 2020. The team also helped me prepare my AFMC entrance test application. Forever grateful!",
-    initials: "SP",
-    color: "bg-red-600",
-  },
-  {
-    id: 5,
-    name: "Karan Mehta",
-    college: "VIT Pune",
-    course: "B.Tech Mechanical",
-    year: "2024",
-    rating: 4,
-    text: "Was worried about hostel availability. CampusLelo showed VIT Pune hostel fees, capacity, and application process clearly. The WhatsApp alert for admission deadline saved me from missing the cutoff date.",
-    initials: "KM",
-    color: "bg-purple-600",
-  },
-  {
-    id: 6,
-    name: "Ananya Joshi",
-    college: "MIT-WPU Pune",
-    course: "MBA Finance",
-    year: "2025",
-    rating: 5,
-    text: "Got a scholarship of ₹2L through the MahaDBT guide on CampusLelo. The step-by-step application walkthrough was incredibly helpful. The team is super responsive on WhatsApp too!",
-    initials: "AJ",
-    color: "bg-teal-600",
-  },
+const FEATURES = [
+  { icon: GitCompare, title: "Compare side by side", desc: "Put two colleges next to each other — fees, placements, exams accepted, NAAC and NIRF.", href: "/compare", cta: "Compare colleges" },
+  { icon: Sparkles, title: "AI college finder", desc: "Answer four quick questions about your stream, score and budget and get a matched shortlist.", href: "/ai-finder", cta: "Try the finder" },
+  { icon: CalendarClock, title: "Exam guides with dates", desc: "CAT, XAT, SNAP, NMAT, MAT and more — dates, pattern and eligibility, linked to the official source.", href: "/exams", cta: "See exam guides" },
+  { icon: TrendingUp, title: "Published cut-offs", desc: "Only cut-offs that colleges or exam bodies have published — with the source and review date.", href: "/mba-cutoff-delhi-ncr", cta: "MBA cut-offs" },
 ]
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-0.5">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          className={`w-3.5 h-3.5 ${i < rating ? "text-yellow-400" : "text-gray-200"}`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          aria-hidden="true"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  )
-}
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-14 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-3">
-          <div>
-            <p className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">Student Stories</p>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-              Real Students. Real Results.
-            </h2>
-            <p className="text-gray-500 mt-2 text-sm max-w-lg">
-              Join 50,000+ students who found their college with CampusLelo — free, fast, and personalised.
-            </p>
+    <section aria-labelledby="why-heading" className="py-16 px-4 sm:px-6 section-ivory">
+      <Reveal className="mx-auto max-w-7xl">
+        <div className="reveal-item max-w-2xl" style={{ "--i": 0 } as React.CSSProperties}>
+          <p className="text-xs font-bold uppercase tracking-widest text-orange-600">Why CampusLelo</p>
+          <h2 id="why-heading" className="mt-2 text-3xl font-extrabold text-[#012858] sm:text-4xl">Everything you need to choose with confidence</h2>
+          <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">Tools to research, compare and shortlist — and a human counsellor when you want one. Free for students.</p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {/* Counselling feature card — large */}
+          <div className="reveal-item relative overflow-hidden rounded-3xl bg-rich-navy p-7 text-white shadow-xl shadow-blue-950/20 sm:p-9 lg:row-span-2" style={{ "--i": 1 } as React.CSSProperties}>
+            <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.1]" />
+            <div aria-hidden="true" className="pointer-events-none absolute -bottom-20 -right-16 h-64 w-64 rounded-full bg-[#E0170F]/30 blur-3xl" />
+            <div className="relative flex h-full flex-col">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-orange-300 ring-1 ring-white/20"><Headphones className="h-6 w-6" aria-hidden="true" /></span>
+              <h3 className="mt-6 text-2xl font-extrabold leading-tight sm:text-3xl">Guidance that fits: a free call, or a ₹{VIDEO_PRICE_INR} video session</h3>
+              <p className="mt-3 text-sm leading-relaxed text-blue-100 sm:text-base">Not sure which college or exam is right? Start with free phone counselling, scholarship information and alumni to talk to. For one-to-one help with CAP rounds, career choice and a personal shortlist, book an expert video session.</p>
+              <ul className="mt-6 space-y-3 text-sm text-blue-50">
+                {["Free phone counselling, scholarships and alumni connect", `Expert video session — ₹${VIDEO_PRICE_INR}: CAP rounds, career choice, shortlist`, "Help with forms and deadlines"].map((t) => (
+                  <li key={t} className="flex items-center gap-2.5"><BadgeCheck className="h-5 w-5 shrink-0 text-emerald-300" aria-hidden="true" />{t}</li>
+                ))}
+              </ul>
+              <Link href="/counselling#plans" className="group mt-8 inline-flex w-fit items-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/25 transition-all hover:-translate-y-0.5 hover:bg-[#C90D11] lg:mt-auto">
+                See free and paid options <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
-          {/* Aggregate rating */}
-          <div className="flex items-center gap-3 bg-yellow-50 border border-yellow-100 rounded-2xl px-5 py-3 flex-shrink-0">
-            <div>
-              <p className="text-3xl font-extrabold text-gray-900 leading-none">4.9</p>
-              <StarRating rating={5} />
-            </div>
-            <div className="text-sm text-gray-600">
-              <p className="font-semibold">Excellent</p>
-              <p className="text-gray-400 text-xs">Based on 2,400+ reviews</p>
-            </div>
+
+          {/* Four feature cards */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-2">
+            {FEATURES.map(({ icon: Icon, title, desc, href, cta }, i) => (
+              <Link key={title} href={href} className="reveal-item group relative flex flex-col overflow-hidden rounded-3xl bg-white p-6 ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-[#012858]/25" style={{ "--i": i + 2 } as React.CSSProperties}>
+                <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-[#E0170F] via-[#FB4312] to-[#024692] transition-transform duration-500 group-hover:scale-x-100" />
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#012858] to-[#024692] text-white shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <h3 className="mt-5 text-lg font-extrabold text-[#012858]">{title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">{desc}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-[#C90D11]">
+                  {cta} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {staticTestimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
-            >
-              {/* Stars */}
-              <StarRating rating={t.rating} />
-
-              {/* Quote */}
-              <p className="text-sm text-gray-700 leading-relaxed flex-1">
-                &ldquo;{t.text}&rdquo;
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
-                <div className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
-                  {t.initials}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-gray-900">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.course} · {t.college} &rsquo;{t.year}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/counselling"
-            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-xl transition-colors text-sm"
-          >
-            Get Free Counselling Like Them →
-          </Link>
-          <p className="text-xs text-gray-400 mt-3">247 students counselled this week · 100% free</p>
-        </div>
-      </div>
+        {/* Honest trust line */}
+        <p className="reveal-item mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm text-gray-600" style={{ "--i": 7 } as React.CSSProperties}>
+          <BadgeCheck className="h-4 w-4 text-emerald-600" aria-hidden="true" />
+          Exam dates and cut-offs link to their official source.
+          <Link href="/editorial-policy" className="font-bold text-[#012858] underline-offset-2 hover:underline">How we verify data</Link>
+        </p>
+      </Reveal>
     </section>
   )
 }

@@ -68,7 +68,7 @@ export default function CollegeMarqueeCard({ college }: { college: MarqueeColleg
         <p className="text-gray-900 font-bold text-sm truncate group-hover/card:text-[var(--color-accent)] transition-colors">
           {college.shortName}
         </p>
-        <p className="text-gray-400 text-[11px] truncate leading-tight mt-0.5">
+        <p className="text-gray-400 text-xs truncate leading-tight mt-0.5">
           {college.name}
         </p>
       </div>

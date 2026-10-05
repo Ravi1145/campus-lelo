@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune 2026 | Best B.Tech Colleges | Fees & Admission",
   description: "Complete list of BTech colleges in Pune 2026. Compare fees (₹80K-4.8L/yr), MHT-CET cutoffs, placements, and NAAC grades for B.Tech admission in Pune.",
-  path: "/btech-colleges-pune",
+  path: "/btech-colleges-in-pune",
   keywords: ["btech colleges pune", "b.tech colleges in pune 2026", "btech admission pune", "btech fees pune", "btech engineering pune"],
 })
 
@@ -35,7 +35,7 @@ export default function BtechCollegesPunePage() {
   const faqSchema = generateFAQSchema(faqs.map(f => ({ question: f.q, answer: f.a })))
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "BTech Colleges in Pune", url: "/btech-colleges-pune" },
+    { name: "BTech Colleges in Pune", url: "/btech-colleges-in-pune" },
   ])
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -52,11 +52,11 @@ export default function BtechCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <SEOLandingPage
-        breadcrumb={[{ label: "BTech Colleges in Pune", href: "/btech-colleges-pune" }]}
+        breadcrumb={[{ label: "BTech Colleges in Pune", href: "/btech-colleges-in-pune" }]}
         h1="BTech Colleges in Pune 2026"
         subtitle="Explore top B.Tech colleges in Pune. Compare fees, MHT-CET cutoffs, branch options, placement packages, and NAAC ratings for 2026 admission."
         heroStats={[

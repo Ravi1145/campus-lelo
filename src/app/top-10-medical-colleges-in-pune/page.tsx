@@ -1,8 +1,8 @@
 import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateItemListSchema } from "@/lib/seo"
 import { CheckCircle, MapPin, ExternalLink, BookOpen } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const revalidate = 300
 
@@ -203,13 +203,13 @@ export default function Top10MedicalCollegesPage() {
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
 
       <main className="min-h-screen bg-white">
         {/* Hero */}
-        <div className="bg-gradient-to-br from-[#0A1628] via-[#0D2040] to-[#1a1a2e] text-white py-14">
+        <div className="bg-gradient-to-br from-[#011B40] via-[#0D2040] to-[#1a1a2e] text-white py-14">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-white/60 mb-6">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -262,7 +262,7 @@ export default function Top10MedicalCollegesPage() {
                       <div className="flex items-center gap-1 mt-1 text-xs text-gray-500">
                         <MapPin className="w-3 h-3" /> {c.location}
                       </div>
-                      <span className="inline-block mt-1 text-[10px] font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">
+                      <span className="inline-block mt-1 text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">
                         {c.highlight}
                       </span>
                     </td>

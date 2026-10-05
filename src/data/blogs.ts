@@ -1,4 +1,6 @@
 import { BlogPost } from "@/types"
+import { mbaDelhiNcrGuide } from "./blog-posts/mba-delhi-ncr-noida"
+import { mbaIndiaGuides } from "./blog-posts/mba-india-guides"
 
 export const blogs: BlogPost[] = [
   {
@@ -1060,6 +1062,8 @@ Pune has a unique recruitment ecosystem that differs significantly from Bangalor
 
 **Most students underestimate CGPA.** COEP has a rule: CGPA below 6.0 = ineligible for campus placements. Most top companies (Goldman, Deutsche) have informal CGPA cutoffs of 8.0+.`,
   },
+  mbaDelhiNcrGuide,
+  ...mbaIndiaGuides,
 ]
 
 export const getBlogBySlug = (slug: string): BlogPost | undefined => {

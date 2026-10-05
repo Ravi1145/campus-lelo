@@ -128,7 +128,7 @@ export default function AIChatWidget() {
           )}
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-t-2xl">
+          <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-t-2xl">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
@@ -176,7 +176,7 @@ export default function AIChatWidget() {
                         "w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
                         message.role === "user"
                           ? "bg-orange-500"
-                          : "bg-gradient-to-br from-[#0A1628] to-[#1E3A5F]"
+                          : "bg-gradient-to-br from-[#011B40] to-[#024692]"
                       )}
                     >
                       {message.role === "user" ? (

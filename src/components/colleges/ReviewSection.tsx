@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect, useCallback } from "react"
-import Script from "next/script"
 import { Star, ThumbsUp, ThumbsDown, PenLine, ChevronDown, ChevronUp, Loader2, CheckCircle } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 interface Review {
   id: string
@@ -344,20 +344,21 @@ export default function ReviewSection({ collegeSlug, collegeName, staticReviews 
       : 0
   )
 
-  // AggregateRating JSON-LD for rich snippets
-  const aggregateRatingSchema = totalCount > 0 ? {
+  // AggregateRating JSON-LD — only from moderated, user-submitted DB reviews.
+  // Static editorial reviews are displayed but never marked up as reviews.
+  const aggregateRatingSchema = dbTotal > 0 && dbAvg > 0 ? {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": collegeName,
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": avgRating.toFixed(1),
+      "ratingValue": dbAvg.toFixed(1),
       "bestRating": "5",
       "worstRating": "1",
-      "ratingCount": totalCount,
-      "reviewCount": totalCount,
+      "ratingCount": dbTotal,
+      "reviewCount": dbTotal,
     },
-    "review": allReviews.slice(0, 5).map(r => ({
+    "review": dbReviews.slice(0, 5).map(r => ({
       "@type": "Review",
       "author": { "@type": "Person", "name": r.student_name },
       "reviewRating": { "@type": "Rating", "ratingValue": r.rating, "bestRating": "5" },
@@ -375,10 +376,10 @@ export default function ReviewSection({ collegeSlug, collegeName, staticReviews 
   return (
     <>
       {aggregateRatingSchema && (
-        <Script
+        <script
           id={`schema-aggregate-rating-${collegeSlug}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(aggregateRatingSchema) }}
         />
       )}
 

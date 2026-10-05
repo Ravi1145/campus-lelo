@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "PGDM Colleges in Pune 2026 | Best Post Graduate Diploma Management",
@@ -24,8 +25,8 @@ const colleges = [
 ]
 
 const faqs = [
-  { q: "What is the difference between PGDM and MBA in Pune?", a: "MBA is a university-affiliated degree (from Savitribai Phule Pune University), while PGDM is an AICTE-approved diploma offered by autonomous institutes. PGDM is considered equivalent to MBA for employment and higher education purposes. Top PGDM institutes like SCMHRD often outrank many MBA colleges in placements." },
-  { q: "Is PGDM from Pune colleges recognized?", a: "Yes. AICTE-approved PGDM from institutes like SCMHRD, MIT-SOB, and BIMM is fully recognized by all employers, government bodies, and for higher education admission. These are considered equivalent to MBA by UGC and AICTE." },
+  { q: "What is the difference between PGDM and MBA in Pune?", a: "An MBA is a degree awarded by a university (for example, Savitribai Phule Pune University or a deemed university such as Symbiosis), while a PGDM is a diploma from an AICTE-approved autonomous institute. A PGDM is not automatically equivalent to an MBA — the Association of Indian Universities (AIU) grants equivalence to specific PGDM programmes for higher studies, for a fixed period. Compare individual programmes rather than the label." },
+  { q: "Is PGDM from Pune colleges recognized?", a: "A PGDM is recognised when the institute holds current AICTE approval for that programme and intake. For higher studies or jobs that ask for an \"MBA or equivalent\", check whether the programme currently holds AIU equivalence. Note that SCMHRD and other Symbiosis institutes award an MBA degree through Symbiosis International University, not a PGDM." },
   { q: "What is the eligibility for PGDM admission in Pune?", a: "Minimum 50% in graduation (45% for SC/ST) from any recognized university. Must appear in CAT, MAH-CET, XAT, SNAP, or other accepted exams. Work experience is not mandatory but is preferred by top institutes like SCMHRD." },
   { q: "What is the average fee for PGDM in Pune?", a: "PGDM fees in Pune range from ₹3.8L (Suryadatta) to ₹12L (FLAME University) for 2 years. Mid-tier institutes charge ₹4-6L. Premium institutes like SCMHRD and MIT-SOB charge ₹6-8L. These fees include tuition but may exclude hostel and study materials." },
   { q: "Which PGDM specializations are available in Pune?", a: "Popular PGDM specializations in Pune: Finance, Marketing, Human Resource Management, Operations Management, Business Analytics, International Business, Supply Chain Management, and Entrepreneurship. Finance and Marketing are the most popular for high-paying careers." },
@@ -52,9 +53,9 @@ export default function PgdmCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <SEOLandingPage
         breadcrumb={[{ label: "PGDM Colleges in Pune", href: "/pgdm-colleges-pune" }]}
         h1="PGDM Colleges in Pune 2026"
@@ -76,7 +77,7 @@ export default function PgdmCollegesPunePage() {
         whyPoints={[
           { title: "Industry-Updated Curriculum", description: "PGDM institutes can revise curriculum every year without university approval, ensuring students learn relevant skills like business analytics, digital marketing, and ESG management from day one." },
           { title: "Corporate Faculty Exposure", description: "Top Pune PGDM institutes bring in CEOs, CFOs, and VPs from Pune's corporate sector as regular faculty, giving students real-world perspectives unavailable in traditional MBA programs." },
-          { title: "Equivalent to MBA for Jobs", description: "AICTE-approved PGDM is fully equivalent to MBA for all employment purposes, government jobs, and higher education in India and internationally. Employers treat them identically." },
+          { title: "Recognition: Check AICTE & AIU", description: "A PGDM is a diploma. Check the institute's current AICTE approval, and if you may study further or apply for government jobs, whether the programme holds AIU equivalence to an MBA and for which years." },
           { title: "Better Placement Infrastructure", description: "Autonomous PGDM institutes invest heavily in dedicated placement cells, industry advisory boards, and corporate relations teams -- often achieving better placement outcomes than affiliated MBA programs." },
           { title: "International Exposure", description: "Several Pune PGDM institutes offer international immersion programs at partner universities in Europe, USA, and Singapore -- a common differentiator from regular MBA programs." },
           { title: "Smaller Batch Sizes", description: "PGDM batches are typically 60-120 students vs. 300+ in university MBA programs, enabling personalized mentorship, stronger alumni bonds, and better individual placement attention." },
@@ -98,10 +99,11 @@ export default function PgdmCollegesPunePage() {
         { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-pune-placement", icon: "💼" },
         { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
         { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
-        { label: "CAT Score Colleges in Pune", href: "/cat-colleges-pune", icon: "📝" },
+        { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
         { label: "Admission Without CAT (MAH-CET)", href: "/mba-admission-pune-without-cat", icon: "🚀" },
       ]}
       />
+      <RelatedMbaSearches path="/pgdm-colleges-pune" />
     </>
   )
 }

@@ -12,7 +12,7 @@ export default async function AdminLoginPage({
 }) {
   const { error } = await searchParams
   return (
-    <div className="min-h-screen bg-[#0A1628] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#011B40] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-8">

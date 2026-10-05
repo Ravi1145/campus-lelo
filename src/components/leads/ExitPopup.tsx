@@ -1,30 +1,35 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
-import { X, GraduationCap, ArrowRight, CheckCircle } from "lucide-react"
+import { useState, useEffect, useCallback, useRef } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { X, ArrowRight, ArrowLeft, Check, Loader2, ShieldCheck, User } from "lucide-react"
+import { ChipGroup, Field, Honeypot, PhoneField, inputCls } from "./LeadFormParts"
+import { BUDGET_YEARLY, COURSES, LOCATIONS, utmFromLocation } from "./leadOptions"
 
 const SESSION_KEY = "exit_popup_shown"
 
-const COURSES = [
-  { value: "BTech",  label: "B.Tech / Engineering" },
-  { value: "MBA",    label: "MBA / PGDM" },
-  { value: "MBBS",   label: "MBBS / Medical" },
-  { value: "BBA",    label: "BBA / Management" },
-  { value: "BArch",  label: "B.Arch / Architecture" },
-  { value: "BSc",    label: "B.Sc / Science" },
-  { value: "BCom",   label: "B.Com / Commerce" },
-  { value: "Law",    label: "LLB / Law" },
-  { value: "Other",  label: "Other Course" },
+declare global {
+  interface Window { dataLayer?: Record<string, unknown>[] }
+}
+
+const BENEFITS = [
+  "A shortlist matched to your score, budget and city",
+  "Fees and cut-offs taken from official sources",
+  "A counsellor who guides you — free for students",
 ]
 
 export default function ExitPopup() {
-  const [visible, setVisible]       = useState(false)
-  const [name, setName]             = useState("")
-  const [phone, setPhone]           = useState("")
-  const [stream, setStream]         = useState("")
+  const [visible, setVisible] = useState(false)
+  const [step, setStep] = useState<1 | 2>(1)
+  const [form, setForm] = useState({ stream: "", location: "", budget: "", name: "", phone: "", website: "" })
+  const [errors, setErrors] = useState<{ stream?: string; name?: string; phone?: string; form?: string }>({})
   const [submitting, setSubmitting] = useState(false)
-  const [done, setDone]             = useState(false)
-  const [error, setError]           = useState("")
+  const [done, setDone] = useState(false)
+  const panelRef = useRef<HTMLDivElement>(null)
+  const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) => setForm((f) => ({ ...f, [k]: v }))
+
+  const close = useCallback(() => setVisible(false), [])
 
   const show = useCallback(() => {
     if (sessionStorage.getItem(SESSION_KEY)) return
@@ -33,63 +38,72 @@ export default function ExitPopup() {
   }, [])
 
   useEffect(() => {
-    // Desktop: mouse leaves viewport upwards
+    // Desktop (mouse/trackpad) only. On phones a popup over the content is an
+    // "intrusive interstitial" that Google can demote, and hijacking the back
+    // button breaks navigation — mobile visitors use the inline forms instead.
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return
+
+    // Desktop: mouse leaves viewport upwards (exit intent)
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) show()
     }
 
-    // Mobile: back navigation / popstate
-    const handlePopState = () => show()
-
-    // Show after 25s if user hasn't left yet (fallback)
+    // Fallback after 25s on the page
     const timer = setTimeout(show, 25000)
 
     document.addEventListener("mouseleave", handleMouseLeave)
-    window.addEventListener("popstate", handlePopState)
-
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave)
-      window.removeEventListener("popstate", handlePopState)
       clearTimeout(timer)
     }
   }, [show])
 
-  async function handleSubmit(e: React.FormEvent) {
+  // Escape closes; focus moves into the dialog when it opens
+  useEffect(() => {
+    if (!visible) return
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") close() }
+    window.addEventListener("keydown", esc)
+    panelRef.current?.querySelector<HTMLElement>("input, button")?.focus()
+    return () => window.removeEventListener("keydown", esc)
+  }, [visible, close])
+
+  function next() {
+    if (!form.stream) { setErrors({ stream: "Choose the course you are looking for" }); return }
+    setErrors({})
+    setStep(2)
+  }
+
+  async function submit(e: React.FormEvent) {
     e.preventDefault()
-    const cleanedPhone = phone.replace(/\D/g, "")
+    const eMap: typeof errors = {}
+    if (form.name.trim().length < 2) eMap.name = "Please enter your name"
+    if (!/^[6-9]\d{9}$/.test(form.phone)) eMap.phone = "Enter a valid 10-digit mobile number"
+    if (eMap.name || eMap.phone) { setErrors(eMap); return }
 
-    if (name.trim().length < 2) {
-      setError("Enter your name (at least 2 characters)")
-      return
-    }
-    if (cleanedPhone.length !== 10) {
-      setError("Enter a valid 10-digit mobile number")
-      return
-    }
-    if (!stream) {
-      setError("Please select a course you're interested in")
-      return
-    }
-
-    setError("")
+    setErrors({})
     setSubmitting(true)
     try {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name:    name.trim(),
-          phone:   cleanedPhone,
-          stream,
-          source:  "exit_popup",
-          message: "Free counselling request via exit popup",
+          name: form.name.trim(),
+          phone: form.phone,
+          stream: form.stream,
+          budget: form.budget || undefined,
+          city_preference: form.location || undefined,
+          source: "exit_popup",
+          message: "Free shortlist request via popup",
+          ...utmFromLocation(),
+          website: form.website,
         }),
       })
-      if (!res.ok) throw new Error("Server error")
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok || data.success === false) throw new Error("Server error")
       setDone(true)
-      setTimeout(() => setVisible(false), 4000)
+      window.dataLayer?.push({ event: "generate_lead", lead_source: "exit_popup", course: form.stream, budget: form.budget || "none", location: form.location || "none" })
     } catch {
-      setError("Something went wrong. Please try again.")
+      setErrors({ form: "Something went wrong. Please try again." })
     } finally {
       setSubmitting(false)
     }
@@ -98,134 +112,108 @@ export default function ExitPopup() {
   if (!visible) return null
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Get free college counselling"
-      className="fixed inset-0 z-[500] flex items-center justify-center p-4"
-    >
-      {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        onClick={() => setVisible(false)}
-      />
+    <div role="dialog" aria-modal="true" aria-labelledby="lead-popup-title" className="fixed inset-0 z-[500] flex items-center justify-center p-4">
+      <div className="fade-in absolute inset-0 bg-[#011B40]/70 backdrop-blur-sm" onClick={close} />
 
-      {/* Panel */}
-      <div className="relative z-10 w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
-        {/* Close */}
-        <button
-          onClick={() => setVisible(false)}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
-          aria-label="Close popup"
-        >
-          <X className="w-5 h-5" />
+      <div ref={panelRef} className="hero-pop relative z-10 grid max-h-[92vh] w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl md:grid-cols-[0.9fr_1.1fr]" style={{ "--i": 0 } as React.CSSProperties}>
+        <button type="button" onClick={close} aria-label="Close" className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow ring-1 ring-gray-200 transition hover:bg-gray-100 md:bg-gray-100 md:shadow-none md:ring-0">
+          <X className="h-5 w-5" aria-hidden="true" />
         </button>
 
-        {/* Top gradient strip */}
-        <div className="h-2 bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400" />
+        {/* Photo panel */}
+        <div className="relative hidden min-h-[30rem] md:block">
+          <Image src="/hero-students.webp" alt="" fill sizes="340px" className="object-cover object-[62%_20%]" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#011B40] via-[#011B40]/70 to-[#024692]/30" />
+          <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+            <p className="text-xs font-bold uppercase tracking-widest text-orange-300">CampusLelo</p>
+            <p className="mt-2 text-2xl font-extrabold leading-tight">Your college shortlist, built around your score and budget.</p>
+            <ul className="mt-5 space-y-2.5">
+              {BENEFITS.map((b) => (
+                <li key={b} className="flex items-start gap-2.5 text-sm text-blue-50">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/90 text-[#011B40]"><Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-        <div className="p-6 sm:p-8">
+        {/* Form panel */}
+        <div className="relative max-h-[92vh] overflow-y-auto p-6 sm:p-8">
           {done ? (
-            <div className="text-center py-4">
-              <CheckCircle className="w-14 h-14 text-green-500 mx-auto mb-4" />
-              <h2 className="text-xl font-extrabold text-gray-900 mb-2">We&apos;ll call you soon! 🎉</h2>
-              <p className="text-gray-500 text-sm">
-                Our counsellor will contact you within 2 hours with personalised college recommendations. Good luck!
-              </p>
+            <div className="flex h-full min-h-[22rem] flex-col items-center justify-center text-center" role="status">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/60"><Check className="h-8 w-8" strokeWidth={3} aria-hidden="true" /></span>
+              <h2 id="lead-popup-title" className="mt-5 text-2xl font-extrabold text-[#012858]">Thanks, {form.name.trim().split(" ")[0]}!</h2>
+              <p className="mt-2 max-w-xs text-sm text-gray-600">A CampusLelo counsellor will call you with options for {form.stream === "MBA" ? "MBA / PGDM" : "your course"}{form.location && form.location !== "Open to any" ? ` in ${form.location}` : ""}.</p>
+              <div className="mt-5 flex flex-col gap-1.5 text-sm font-bold text-[#C90D11]">
+                <Link href="/colleges" onClick={close} className="hover:underline">Browse colleges while you wait →</Link>
+                <Link href="/mba" onClick={close} className="hover:underline">MBA &amp; PGDM guides →</Link>
+              </div>
             </div>
           ) : (
-            <>
-              {/* Icon */}
-              <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-5">
-                <GraduationCap className="w-7 h-7 text-orange-500" />
-              </div>
+            <form onSubmit={submit} noValidate className="space-y-5">
+              <Honeypot id="popup-website" value={form.website} onChange={(v) => set("website", v)} />
 
-              {/* Social proof counter */}
-              <div className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                3,241 students shortlisted today
-              </div>
-
-              {/* Copy */}
-              <h2 className="text-2xl font-extrabold text-gray-900 mb-2 leading-tight">
-                🎁 Get Your <span className="text-orange-500">FREE</span> 2026<br />Pune College Shortlist
-              </h2>
-              <p className="text-gray-500 text-sm mb-5">
-                Our expert counsellor will call you with personalised college options, real fees, cutoffs, and admission tips — in under 2 hours.
-              </p>
-
-              {/* Bullets */}
-              <ul className="space-y-1.5 mb-6">
-                {[
-                  "Personalised college shortlist based on your score",
-                  "Fees, cutoffs & placement data for 2026",
-                  "Expert guidance — completely free",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
-                    <span className="w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-3">
-                {/* Name */}
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your full name"
-                  maxLength={50}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-400 outline-none text-gray-900 text-sm transition-colors"
-                  required
-                />
-
-                {/* Phone */}
-                <div className="relative">
-                  <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500 font-medium select-none">+91</span>
-                  <input
-                    type="tel"
-                    inputMode="numeric"
-                    maxLength={10}
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
-                    placeholder="Mobile number"
-                    className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-400 outline-none text-gray-900 text-sm transition-colors"
-                    required
-                  />
+              {/* Progress */}
+              <div>
+                <div className="flex items-center justify-between text-xs font-bold text-gray-600">
+                  <span>Step {step} of 2</span>
+                  <span>{step === 1 ? "Your goal" : "Your contact"}</span>
                 </div>
+                <div className="mt-2 flex gap-1.5" aria-hidden="true">
+                  <span className="h-1.5 flex-1 rounded-full bg-[#E0170F]" />
+                  <span className={`h-1.5 flex-1 rounded-full transition-colors duration-500 ${step === 2 ? "bg-[#E0170F]" : "bg-gray-200"}`} />
+                </div>
+              </div>
 
-                {/* Course */}
-                <select
-                  value={stream}
-                  onChange={(e) => setStream(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-400 outline-none text-sm transition-colors bg-white text-gray-900"
-                  required
-                >
-                  <option value="" disabled>Select course interest</option>
-                  {COURSES.map((c) => (
-                    <option key={c.value} value={c.value}>{c.label}</option>
-                  ))}
-                </select>
+              {step === 1 ? (
+                <>
+                  <div>
+                    <h2 id="lead-popup-title" className="text-2xl font-extrabold leading-tight text-[#012858]">Get a free shortlist</h2>
+                    <p className="mt-1 text-sm text-gray-600">Tell us what you are looking for. It takes 20 seconds.</p>
+                  </div>
+                  <div>
+                    <ChipGroup legend="Course" options={COURSES} value={form.stream} onChange={(v) => { set("stream", v); setErrors({}) }} />
+                    {errors.stream && <p className="mt-1.5 text-xs font-medium text-red-700" role="alert">{errors.stream}</p>}
+                  </div>
+                  <ChipGroup legend="Preferred location" options={LOCATIONS} value={form.location} onChange={(v) => set("location", v)} />
+                  <ChipGroup legend="Budget" hint="per year" options={BUDGET_YEARLY} value={form.budget} onChange={(v) => set("budget", v)} />
+                  <button type="button" onClick={next} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11]">
+                    Continue <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h2 id="lead-popup-title" className="text-2xl font-extrabold leading-tight text-[#012858]">Where should we reach you?</h2>
+                    <p className="mt-1 text-sm text-gray-600">
+                      {[form.stream && COURSES.find((c) => c.value === form.stream)?.label, form.location, form.budget].filter(Boolean).join(" · ")}
+                    </p>
+                  </div>
+                  <Field label="Your name" htmlFor="popup-name" error={errors.name}>
+                    <div className="relative">
+                      <User className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
+                      <input id="popup-name" autoComplete="name" maxLength={50} value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="Full name" aria-invalid={!!errors.name} className={`${inputCls} pl-10`} />
+                    </div>
+                  </Field>
+                  <PhoneField id="popup-phone" value={form.phone} onChange={(v) => set("phone", v)} error={errors.phone} />
+                  {errors.form && <p className="text-sm font-medium text-red-700" role="alert">{errors.form}</p>}
+                  <div className="flex gap-2">
+                    <button type="button" onClick={() => setStep(1)} aria-label="Back" className="flex w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 text-gray-700 transition hover:bg-gray-50">
+                      <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                    </button>
+                    <button type="submit" disabled={submitting} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
+                      {submitting ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : "Get my free shortlist"}
+                    </button>
+                  </div>
+                </>
+              )}
 
-                {error && <p className="text-red-500 text-xs">{error}</p>}
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors text-sm"
-                >
-                  {submitting ? "Submitting…" : (
-                    <>Get Free Counselling <ArrowRight className="w-4 h-4" /></>
-                  )}
-                </button>
-              </form>
-
-              <p className="text-center text-[11px] text-gray-400 mt-3">
-                Free · No spam · Our counsellor calls within 2 hours
+              <p className="flex items-start gap-1.5 text-xs text-gray-600">
+                <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+                <span>Free, no spam. By submitting you agree to be contacted by CampusLelo counsellors. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
               </p>
-            </>
+            </form>
           )}
         </div>
       </div>

@@ -1,5 +1,4 @@
 ﻿import { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 
@@ -7,6 +6,7 @@ import dynamic from "next/dynamic"
 import HeroSection from "@/components/home/HeroSection"
 import CollegeMarquee from "@/components/home/CollegeMarquee"
 import BrowseByStream from "@/components/home/BrowseByStream"
+import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
@@ -20,8 +20,8 @@ const RankingTables       = dynamic(() => import("@/components/home/RankingTable
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
 const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
 import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
-import QuickAnswer from "@/components/seo/QuickAnswer"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Colleges in Pune 2026 | Rankings, Fees & Reviews | CampusLelo",
@@ -80,30 +80,30 @@ const faqData = [
 export default function HomePage() {
   return (
     <>
-      <Script
+      <script
         id="org-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateOrganizationSchema()) }}
       />
-      <Script
+      <script
         id="website-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateWebSiteSchema()) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateWebSiteSchema()) }}
       />
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqData)) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqData)) }}
       />
-      <Script
+      <script
         id="local-business"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessSchema()) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateLocalBusinessSchema()) }}
       />
-      <Script
+      <script
         id="top-colleges-list"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateItemListSchema([
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(generateItemListSchema([
           { name: "COEP Pune — College of Engineering Pune", url: "/colleges/coep-pune" },
           { name: "SIBM Pune — Symbiosis Institute of Business Management", url: "/colleges/sibm-pune" },
           { name: "AFMC Pune — Armed Forces Medical College", url: "/colleges/afmc-pune" },
@@ -121,20 +121,12 @@ export default function HomePage() {
         {/* 1. Hero */}
         <HeroSection />
 
-        {/* AEO Quick Answer — featured snippet target for "best college in pune" queries */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <QuickAnswer
-            question="Which is the best college in Pune in 2026?"
-            answer="COEP (College of Engineering Pune) is the best engineering college in Pune — NIRF #49, NAAC A+, government college with fees ₹80K–1.8L/yr and average placement ₹12 LPA. For MBA, SIBM Pune (NIRF #13, avg ₹28 LPA) is the top choice. For medicine, AFMC Pune (NIRF #4) is the highest-ranked college overall in Pune."
-            note="Based on NIRF 2025 rankings and 2024–25 placement reports. Updated October 2026."
-          />
-        </div>
-
         {/* 2. Trust strip — partner college marquee */}
         <CollegeMarquee />
 
         {/* 3. Browse by Stream */}
         <BrowseByStream />
+        <ExamGuidesBand />
 
         {/* 4. Featured Colleges */}
         <FeaturedColleges />
@@ -149,7 +141,7 @@ export default function HomePage() {
         <HowItWorks />
 
         {/* 8. Exams & Deadlines */}
-        <ExamCalendar />
+        <ExamCalendar generatedAt={Date.now()} />
         <HomepageNewsSection />
 
         {/* 9. Social proof */}

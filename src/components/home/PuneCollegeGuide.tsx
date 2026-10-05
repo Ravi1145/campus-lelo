@@ -19,8 +19,8 @@ const examLinks = [
   { label: "MHT-CET Colleges in Pune 2026",                href: "/mht-cet-colleges-pune" },
   { label: "JEE Main Colleges in Pune 2026",               href: "/jee-main-colleges-pune" },
   { label: "NEET Colleges in Pune 2026",                   href: "/neet-colleges-pune" },
-  { label: "CAT Colleges in Pune 2026",                    href: "/cat-colleges-pune" },
-  { label: "SNAP Colleges in Pune 2026",                   href: "/mba-colleges-in-pune-accepting-cat" },
+  { label: "CAT Colleges in Pune 2026",                    href: "/mba-colleges-in-pune-accepting-cat" },
+  { label: "SNAP Colleges in Pune 2026",                   href: "/mba-colleges-in-pune-accepting-snap" },
   { label: "MH-CET MBA Colleges Pune 2026",                href: "/mba-colleges-in-pune-accepting-mh-cet" },
 ]
 
@@ -46,19 +46,19 @@ const noidaLinks = [
   { label: "Best Colleges in Noida 2026",         href: "/colleges-in-noida" },
   { label: "Engineering Colleges in Noida 2026",  href: "/engineering-colleges-noida" },
   { label: "MBA Colleges in Noida 2026",          href: "/mba-colleges-noida" },
-  { label: "AKTU Colleges Noida 2026",            href: "/aktu-colleges-noida" },
-  { label: "Amity University Noida",              href: "/colleges/amity-university-noida" },
-  { label: "JIIT Noida B.Tech",                   href: "/colleges/jaypee-institute-noida" },
+  { label: "PGDM Colleges in Noida 2026",        href: "/pgdm-colleges-noida" },
+  { label: "Colleges in Greater Noida",          href: "/colleges-in-greater-noida" },
+  { label: "MBA in Noida",                       href: "/mba-in-noida" },
 ]
 
 export default function PuneCollegeGuide() {
   return (
-    <section className="bg-white border-t border-gray-100" aria-label="Pune College Guide">
+    <section className="section-ivory" aria-label="Pune College Guide">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
 
         {/* Main heading — targets "colleges in pune 2026" and variants */}
         <div className="max-w-3xl mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#16324F" }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#012858" }}>
             Complete Guide to Colleges in Pune 2026
           </h2>
           <p className="text-base text-gray-600 leading-relaxed mb-4">
@@ -78,7 +78,7 @@ export default function PuneCollegeGuide() {
 
           {/* By Stream */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: "#FF6B35" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: "#E0170F" }}>
               Browse by Stream
             </h3>
             <ul className="grid sm:grid-cols-2 gap-1.5">
@@ -86,7 +86,7 @@ export default function PuneCollegeGuide() {
                 <li key={link.href}>
                   <Link href={link.href}
                     className="flex items-center justify-between py-2 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors group"
-                    style={{ color: "#16324F" }}>
+                    style={{ color: "#012858" }}>
                     <span className="group-hover:underline">{link.label}</span>
                     <span className="text-xs text-gray-400 ml-2 flex-shrink-0">{link.count}</span>
                   </Link>
@@ -100,7 +100,7 @@ export default function PuneCollegeGuide() {
 
             {/* By Exam */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#FF6B35" }}>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
                 By Entrance Exam
               </h3>
               <ul className="space-y-1">
@@ -108,7 +108,7 @@ export default function PuneCollegeGuide() {
                   <li key={link.href}>
                     <Link href={link.href}
                       className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                      style={{ color: "#16324F" }}>
+                      style={{ color: "#012858" }}>
                       {link.label}
                     </Link>
                   </li>
@@ -118,7 +118,7 @@ export default function PuneCollegeGuide() {
 
             {/* Tools */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#FF6B35" }}>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
                 Free Tools
               </h3>
               <ul className="space-y-1">
@@ -126,7 +126,7 @@ export default function PuneCollegeGuide() {
                   <li key={link.href}>
                     <Link href={link.href}
                       className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                      style={{ color: "#16324F" }}>
+                      style={{ color: "#012858" }}>
                       {link.label}
                     </Link>
                   </li>
@@ -137,7 +137,7 @@ export default function PuneCollegeGuide() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#FF6B35" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
               Guides &amp; Resources
             </h3>
             <ul className="space-y-1 mb-6">
@@ -145,7 +145,7 @@ export default function PuneCollegeGuide() {
                 <li key={link.href}>
                   <Link href={link.href}
                     className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                    style={{ color: "#16324F" }}>
+                    style={{ color: "#012858" }}>
                     {link.label}
                   </Link>
                 </li>
@@ -154,7 +154,7 @@ export default function PuneCollegeGuide() {
 
             {/* Key facts box */}
             <div className="rounded-2xl p-4 text-sm space-y-2" style={{ background: "#F7F9FC", border: "1px solid #E5E9F0" }}>
-              <p className="font-bold text-xs uppercase tracking-wider" style={{ color: "#16324F" }}>Pune at a Glance</p>
+              <p className="font-bold text-xs uppercase tracking-wider" style={{ color: "#012858" }}>Pune at a Glance</p>
               {[
                 ["500+", "Colleges in Pune"],
                 ["50+", "Courses & Streams"],
@@ -164,7 +164,7 @@ export default function PuneCollegeGuide() {
               ].map(([val, label]) => (
                 <div key={label} className="flex justify-between items-center py-1 border-b border-gray-100 last:border-0">
                   <span style={{ color: "#475569" }}>{label}</span>
-                  <span className="font-bold text-xs" style={{ color: "#FF6B35" }}>{val}</span>
+                  <span className="font-bold text-xs" style={{ color: "#E0170F" }}>{val}</span>
                 </div>
               ))}
             </div>
@@ -174,10 +174,10 @@ export default function PuneCollegeGuide() {
         {/* Noida section */}
         <div className="mt-8 pt-6 border-t border-gray-100">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#FF6B35" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#E0170F" }}>
               Also Explore — Noida &amp; Greater Noida
             </h3>
-            <Link href="/colleges-in-noida" className="text-xs font-medium hover:underline" style={{ color: "#FF6B35" }}>
+            <Link href="/colleges-in-noida" className="text-xs font-medium hover:underline" style={{ color: "#E0170F" }}>
               View all →
             </Link>
           </div>
@@ -186,7 +186,7 @@ export default function PuneCollegeGuide() {
               <li key={link.href}>
                 <Link href={link.href}
                   className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                  style={{ color: "#16324F" }}>
+                  style={{ color: "#012858" }}>
                   {link.label}
                 </Link>
               </li>

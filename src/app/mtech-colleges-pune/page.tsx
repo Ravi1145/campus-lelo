@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "M.Tech Colleges in Pune 2025-26 | GATE & Non-GATE Admission | Fees",
@@ -38,8 +38,8 @@ export default function MtechCollegesPune() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <SEOLandingPage
         breadcrumb={[{ label: "M.Tech Colleges in Pune", href: "/mtech-colleges-pune" }]}
         h1="M.Tech Colleges in Pune 2025-26"
@@ -77,7 +77,7 @@ export default function MtechCollegesPune() {
         relatedGuides={[
           { label: "GATE 2025 Cutoff for Pune Colleges", href: "/cutoffs", icon: "📋" },
           { label: "M.Tech vs MBA After B.Tech", href: "/blog", icon: "📊" },
-          { label: "B.Tech Colleges in Pune", href: "/btech-colleges-pune", icon: "🎓" },
+          { label: "B.Tech Colleges in Pune", href: "/btech-colleges-in-pune", icon: "🎓" },
           { label: "Free Counselling", href: "/counselling", icon: "🗣️" },
         ]}
       />

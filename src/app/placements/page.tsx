@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { TrendingUp, Building2, GraduationCap, IndianRupee, ChevronRight, BarChart3, Star, Users } from "lucide-react"
+import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "College Placements in Pune 2026 | Highest Package & Average Salary Data",
@@ -165,8 +165,8 @@ export default function PlacementsPage() {
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
       <main className="min-h-screen bg-[#F6F8FB]">
 
@@ -179,8 +179,8 @@ export default function PlacementsPage() {
               <span className="text-gray-600 font-medium">Placements</span>
             </nav>
             <div className="max-w-2xl">
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#F97316" }}>— VERIFIED PLACEMENT DATA</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#0B1226" }}>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#E0170F" }}>— VERIFIED PLACEMENT DATA</p>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#011B40" }}>
                 College Placements in Pune 2026
               </h1>
               <p className="text-base text-gray-500 mb-6">
@@ -194,7 +194,7 @@ export default function PlacementsPage() {
                   { val: "50+",     label: "Top Recruiters" },
                 ].map(s => (
                   <div key={s.label} className="flex items-center gap-2">
-                    <span className="text-lg font-bold" style={{ color: "#F97316" }}>{s.val}</span>
+                    <span className="text-lg font-bold" style={{ color: "#E0170F" }}>{s.val}</span>
                     <span className="text-gray-500 text-xs">{s.label}</span>
                   </div>
                 ))}
@@ -205,7 +205,7 @@ export default function PlacementsPage() {
 
         {/* Stream overview */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h2 className="text-xl font-bold mb-4" style={{ color: "#0B1226" }}>Placement Overview by Stream</h2>
+          <h2 className="text-xl font-bold mb-4" style={{ color: "#011B40" }}>Placement Overview by Stream</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {streamStats.map(s => (
               <div key={s.stream} className={`rounded-2xl p-4 border ${s.color}`}>
@@ -221,8 +221,8 @@ export default function PlacementsPage() {
         {/* College placement table */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold" style={{ color: "#0B1226" }}>College-wise Placement Data 2024</h2>
-            <Link href="/compare" className="text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#F97316" }}>
+            <h2 className="text-xl font-bold" style={{ color: "#011B40" }}>College-wise Placement Data 2024</h2>
+            <Link href="/compare" className="text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E0170F" }}>
               Compare Colleges →
             </Link>
           </div>
@@ -234,11 +234,11 @@ export default function PlacementsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs font-bold text-gray-400">#{i + 1}</span>
-                      {p.nirf && <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">NIRF #{p.nirf}</span>}
+                      {p.nirf && <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">NIRF #{p.nirf}</span>}
                       {p.tier === 1 && <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />}
                     </div>
                     <Link href={`/colleges/${p.slug}`}>
-                      <h3 className="text-base font-bold hover:text-orange-500 transition-colors mb-1" style={{ color: "#0B1226" }}>{p.college}</h3>
+                      <h3 className="text-base font-bold hover:text-orange-500 transition-colors mb-1" style={{ color: "#011B40" }}>{p.college}</h3>
                     </Link>
                     <p className="text-xs text-gray-400 mb-3">{p.stream} • {p.batch} batch</p>
 
@@ -251,12 +251,12 @@ export default function PlacementsPage() {
                         { label: "Placement %",   value: p.placementPct,  icon: Users },
                       ].map(stat => (
                         <div key={stat.label} className="flex items-center gap-2">
-                          <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(249,115,22,0.1)" }}>
-                            <stat.icon className="w-3.5 h-3.5" style={{ color: "#F97316" }} />
+                          <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(224, 23, 15,0.1)" }}>
+                            <stat.icon className="w-3.5 h-3.5" style={{ color: "#E0170F" }} />
                           </div>
                           <div>
-                            <p className="text-[10px] text-gray-400">{stat.label}</p>
-                            <p className="text-sm font-bold" style={{ color: "#0B1226" }}>{stat.value}</p>
+                            <p className="text-xs text-gray-400">{stat.label}</p>
+                            <p className="text-sm font-bold" style={{ color: "#011B40" }}>{stat.value}</p>
                           </div>
                         </div>
                       ))}
@@ -264,7 +264,7 @@ export default function PlacementsPage() {
 
                     {/* Recruiters */}
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1.5">Top Recruiters</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1.5">Top Recruiters</p>
                       <div className="flex flex-wrap gap-1.5">
                         {p.topRecruiters.map(r => (
                           <span key={r} className="px-2.5 py-0.5 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-200">{r}</span>
@@ -276,12 +276,12 @@ export default function PlacementsPage() {
                   <div className="flex sm:flex-col gap-2 sm:items-end flex-shrink-0">
                     <Link href={`/colleges/${p.slug}`}
                       className="px-4 py-2 rounded-xl text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ background: "#F97316" }}>
+                      style={{ background: "#E0170F" }}>
                       View College
                     </Link>
                     <Link href="/compare"
                       className="px-4 py-2 rounded-xl text-sm font-semibold text-center transition-colors hover:bg-gray-100"
-                      style={{ border: "1.5px solid #E5E9F0", color: "#1E2D4E" }}>
+                      style={{ border: "1.5px solid #E5E9F0", color: "#012858" }}>
                       Compare
                     </Link>
                   </div>
@@ -293,16 +293,16 @@ export default function PlacementsPage() {
 
         {/* CTA banner */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-          <div className="rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5" style={{ background: "#0B1226" }}>
+          <div className="rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5" style={{ background: "#011B40" }}>
             <div>
-              <GraduationCap className="w-8 h-8 mb-2" style={{ color: "#F97316" }} />
+              <GraduationCap className="w-8 h-8 mb-2" style={{ color: "#E0170F" }} />
               <h2 className="text-xl font-bold text-white mb-1">Get Personalised Placement Guidance</h2>
               <p className="text-sm text-gray-300">Our counsellors help you choose the right college based on your target placement package and sector.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
               <Link href="/counselling"
                 className="px-6 py-3 rounded-xl text-sm font-bold text-white text-center transition-opacity hover:opacity-90"
-                style={{ background: "#F97316" }}>
+                style={{ background: "#E0170F" }}>
                 Free Counselling
               </Link>
               <Link href="/compare"
@@ -316,11 +316,11 @@ export default function PlacementsPage() {
 
         {/* FAQs */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
-          <h2 className="text-2xl font-bold mb-6" style={{ color: "#0B1226" }}>Placement FAQs</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: "#011B40" }}>Placement FAQs</h2>
           <div className="space-y-4 max-w-3xl">
             {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 border border-gray-100">
-                <h3 className="font-semibold mb-2" style={{ color: "#0B1226" }}>{faq.question}</h3>
+                <h3 className="font-semibold mb-2" style={{ color: "#011B40" }}>{faq.question}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}

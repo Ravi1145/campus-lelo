@@ -1,0 +1,220 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { useRouter } from "next/navigation"
+import {
+  Search, GraduationCap, Users, BarChart3,
+  MapPin, FileText, Building2, CheckCircle2, Star,
+  IndianRupee,
+} from "lucide-react"
+
+const STREAMS = ["Engineering", "MBA", "Medical", "Law", "Design", "Pharmacy", "Arts", "Commerce", "BBA", "BCA", "MCA"]
+const EXAMS   = ["MHT-CET", "JEE Main", "CAT", "NEET", "CLAT", "SNAP", "CMAT"]
+
+const POPULAR_CHIPS = [
+  { label: "MBA in Pune",   href: "/mba-in-pune" },
+  { label: "BTech in Pune", href: "/colleges?stream=Engineering" },
+  { label: "BBA",           href: "/colleges?stream=BBA" },
+  { label: "BCA",           href: "/colleges?stream=BCA" },
+  { label: "MCA",           href: "/colleges?stream=MCA" },
+  { label: "Design",        href: "/colleges?stream=Design" },
+  { label: "Law",           href: "/colleges?stream=Law" },
+  { label: "Medical",       href: "/colleges?stream=Medical" },
+]
+
+const STATS = [
+  { icon: Building2,    value: "100+",  label: "Colleges Profiled"    },
+  { icon: GraduationCap,value: "50+",   label: "Courses & Streams"    },
+  { icon: Users,        value: "50K+",  label: "Students Guided"      },
+  { icon: CheckCircle2, value: "Sourced", label: "Exam & Admission Data" },
+  { icon: BarChart3,    value: "NIRF",  label: "Rankings & Insights"  },
+]
+
+const FLOAT_CARDS = [
+  { icon: Building2,   stat: "100+", sub: "Colleges Profiled",  pos: { top: "12%", right: "2%" } },
+  { icon: IndianRupee, stat: "Real", sub: "Fees & Cutoffs",     pos: { top: "38%", right: "2%" } },
+  { icon: Users,       stat: "Free", sub: "Expert Counselling", pos: { top: "62%", right: "2%" } },
+]
+
+export default function HeroSection() {
+  const [stream, setStream] = useState("")
+  const [exam,   setExam]   = useState("")
+  const router = useRouter()
+
+  const handleFind = () => {
+    const params = new URLSearchParams()
+    if (stream) params.set("stream", stream)
+    if (exam)   params.set("exam", exam)
+    router.push(`/colleges${params.toString() ? "?" + params.toString() : ""}`)
+  }
+
+  return (
+    <section className="bg-white overflow-hidden">
+
+      {/* ── Hero body ── */}
+      <div className="relative" style={{ minHeight: "520px" }}>
+
+        {/* Full-cover background image */}
+        <div className="absolute top-0 left-0 right-0 bottom-0">
+          <Image
+            src="/hero-students.webp"
+            alt="Students at top colleges in Pune 2026"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Left overlay — solid white on left, fades into image on right */}
+          <div className="absolute inset-0" style={{
+            background: "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.98) 35%, rgba(255,255,255,0.7) 52%, rgba(255,255,255,0.1) 68%, transparent 80%)"
+          }} />
+
+          {/* Floating info cards */}
+          {FLOAT_CARDS.map(({ icon: Icon, stat, sub, pos }) => (
+            <div key={sub} className="absolute hidden lg:flex bg-white rounded-xl px-3.5 py-2.5 items-center gap-2.5 z-10"
+              style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.13)", ...pos }}>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(224, 23, 15,0.1)" }}>
+                <Icon className="w-4 h-4" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+              </div>
+              <div>
+                <p className="text-xs font-bold leading-none" style={{ color: "#011B40" }}>{stat}</p>
+                <p className="text-xs mt-0.5" style={{ color: "#475569" }}>{sub}</p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+        {/* Left content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="max-w-lg">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-5"
+              style={{ background: "rgba(224, 23, 15,0.1)", color: "#E0170F", border: "1px solid rgba(224, 23, 15,0.25)" }}>
+              <Star className="w-3.5 h-3.5 fill-current" />
+              India&apos;s Smart College Discovery Platform
+            </div>
+
+            {/* H1 */}
+            <h1 className="font-bold mb-3" style={{ fontSize: "clamp(1.85rem,3.5vw,2.8rem)", lineHeight: "1.15", color: "#011B40" }}>
+              Find the Right College<br />
+              in Pune,{" "}
+              <span style={{ color: "#E0170F" }}>With Real Fees<br />and Placements</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mb-6 text-sm sm:text-base" style={{ color: "#475569", lineHeight: "1.65" }}>
+              Compare 100+ Pune colleges. Check real fees, cutoffs, placements, reviews
+              and get free expert counselling on WhatsApp.
+            </p>
+
+            {/* Inline search bar */}
+            <div className="flex flex-col xl:flex-row gap-2 mb-5">
+              {/* Course/Stream */}
+              <div className="relative flex items-center flex-1">
+                <GraduationCap className="absolute left-3 w-4 h-4 pointer-events-none shrink-0" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+                <select aria-label="Course or stream" value={stream} onChange={e => setStream(e.target.value)}
+                  className="w-full pl-9 pr-8 py-3 rounded-xl text-sm bg-white focus:outline-none appearance-none"
+                  style={{ border: "1.5px solid #E5E9F0", color: stream ? "#0F172A" : "#64748B" }}>
+                  <option value="">Select Course / Stream</option>
+                  {STREAMS.map(s => <option key={s} value={s}>{s}</option>)}
+                </select>
+                <div className="pointer-events-none absolute right-2.5"><svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg></div>
+              </div>
+
+              {/* Location */}
+              <div className="relative flex items-center xl:w-32">
+                <MapPin className="absolute left-3 w-4 h-4 pointer-events-none shrink-0" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+                <div className="w-full pl-9 pr-3 py-3 rounded-xl text-sm bg-white font-medium" style={{ border: "1.5px solid #E5E9F0", color: "#0F172A" }}>
+                  Pune
+                </div>
+                <div className="pointer-events-none absolute right-2.5"><svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg></div>
+              </div>
+
+              {/* Exam */}
+              <div className="relative flex items-center flex-1">
+                <FileText className="absolute left-3 w-4 h-4 pointer-events-none shrink-0" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+                <select aria-label="Entrance exam" value={exam} onChange={e => setExam(e.target.value)}
+                  className="w-full pl-9 pr-8 py-3 rounded-xl text-sm bg-white focus:outline-none appearance-none"
+                  style={{ border: "1.5px solid #E5E9F0", color: exam ? "#0F172A" : "#64748B" }}>
+                  <option value="">Select Exam</option>
+                  {EXAMS.map(ex => <option key={ex} value={ex}>{ex}</option>)}
+                </select>
+                <div className="pointer-events-none absolute right-2.5"><svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg></div>
+              </div>
+
+              {/* Button */}
+              <button onClick={handleFind}
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
+                style={{ background: "#E0170F" }}>
+                <Search className="w-4 h-4" strokeWidth={2} />
+                Find Colleges
+              </button>
+            </div>
+
+            {/* Secondary WhatsApp CTA */}
+            <a
+              href={`https://wa.me/917753831118?text=${encodeURIComponent("Hi! I need a free college shortlist for Pune 2026 admissions. Can you help?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl font-bold text-white text-sm transition-all hover:opacity-90 active:scale-95 mb-4"
+              style={{ background: "#15803D", boxShadow: "0 4px 16px rgba(21,128,61,0.30)" }}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Get Free College Shortlist on WhatsApp
+              <span className="text-xs font-normal opacity-80 hidden sm:inline">— 2 min, free</span>
+            </a>
+
+            {/* Social proof + urgency row */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-4">
+              <span className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#012858" }}>
+                <Users className="w-3.5 h-3.5" style={{ color: "#E0170F" }} />
+                50,000+ students guided
+              </span>
+              <span className="text-xs font-semibold" style={{ color: "#E0170F" }}>
+                ⚡ CAP Round 1 opens July 2026
+              </span>
+            </div>
+
+            {/* Popular searches */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-semibold" style={{ color: "#475569" }}>Popular:</span>
+              {POPULAR_CHIPS.map(chip => (
+                <Link key={chip.label} href={chip.href}
+                  className="px-3 py-1 rounded-full text-xs font-medium transition-colors hover:border-orange-400 hover:text-orange-600 bg-white"
+                  style={{ border: "1px solid #E5E9F0", color: "#475569" }}>
+                  {chip.label}
+                </Link>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* ── Stats strip (white) ── */}
+      <div style={{ borderTop: "1px solid #E5E9F0" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-5">
+            {STATS.map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex items-center gap-2.5">
+                <Icon className="w-5 h-5 shrink-0" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+                <div>
+                  <p className="font-bold text-sm leading-none" style={{ color: "#011B40" }}>{value}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "#475569" }}>{label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </section>
+  )
+}

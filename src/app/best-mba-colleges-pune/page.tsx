@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
+import { safeJsonLd } from "@/lib/jsonld"
+import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Best MBA Colleges in Pune 2026 | Top Ranked MBA Programs",
   description: "Best MBA colleges in Pune 2026. SIBM, SCMHRD, IIMS Pune, Flame University -- compare CAT cutoffs, fees (₹4L-18L), placement packages up to ₹28 LPA. Apply now.",
-  path: "/best-mba-colleges-pune",
+  path: "/mba-colleges-pune",
   keywords: ["best mba colleges pune", "top mba colleges in pune 2026", "ranked mba colleges pune", "mba programs pune"],
 })
 
@@ -35,7 +36,7 @@ export default function BestMbaCollegesPunePage() {
   const faqSchema = generateFAQSchema(faqs.map(f => ({ question: f.q, answer: f.a })))
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "Best MBA Colleges in Pune", url: "/best-mba-colleges-pune" },
+    { name: "Best MBA Colleges in Pune", url: "/mba-colleges-pune" },
   ])
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -52,11 +53,11 @@ export default function BestMbaCollegesPunePage() {
 
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <SEOLandingPage
-        breadcrumb={[{ label: "Best MBA Colleges in Pune", href: "/best-mba-colleges-pune" }]}
+        breadcrumb={[{ label: "Best MBA Colleges in Pune", href: "/mba-colleges-pune" }]}
         h1="Best MBA Colleges in Pune 2026"
         subtitle="The definitive ranking of Pune's top MBA programs. Compare CAT cutoffs, total fees, placement packages, specializations, and admission processes for 2026."
         heroStats={[
@@ -98,11 +99,12 @@ export default function BestMbaCollegesPunePage() {
         { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-pune-placement", icon: "💼" },
         { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
         { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
-        { label: "CAT Score Colleges in Pune", href: "/cat-colleges-pune", icon: "📝" },
+        { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
         { label: "PGDM Colleges in Pune", href: "/pgdm-colleges-pune", icon: "📊" },
         { label: "Admission Without CAT (MAH-CET)", href: "/mba-admission-pune-without-cat", icon: "🚀" },
       ]}
       />
+      <RelatedMbaSearches path="/mba-colleges-pune" />
     </>
   )
 }

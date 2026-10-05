@@ -14,9 +14,54 @@ const categoryIcons: Record<string, React.ElementType> = {
   industry_connect: Briefcase,
 }
 
-export default function AIComparison() {
-  const [college1, setCollege1] = useState("")
-  const [college2, setCollege2] = useState("")
+const fmtL = (n?: number) => (n ? `₹${(n / 100000).toFixed(n >= 1000000 ? 0 : 1)}L` : "—")
+
+/** Instant, data-only comparison (no AI call) — shown as soon as two colleges are picked. */
+function QuickFacts({ a, b }: { a: (typeof colleges)[number]; b: (typeof colleges)[number] }) {
+  const rows: [string, string, string][] = [
+    ["Type", a.type, b.type],
+    ["Stream", a.stream, b.stream],
+    ["Location", a.location, b.location],
+    ["NAAC grade", a.naac || "—", b.naac || "—"],
+    ["NIRF rank", a.nirfRank ? `#${a.nirfRank}` : "Not ranked", b.nirfRank ? `#${b.nirfRank}` : "Not ranked"],
+    ["Fees per year", `${fmtL(a.feesRange.min)} – ${fmtL(a.feesRange.max)}`, `${fmtL(b.feesRange.min)} – ${fmtL(b.feesRange.max)}`],
+    ["Average package", a.avgPlacement ? `${fmtL(a.avgPlacement)} per year` : "—", b.avgPlacement ? `${fmtL(b.avgPlacement)} per year` : "—"],
+    ["Entrance exams", a.entranceExams.join(", ") || "—", b.entranceExams.join(", ") || "—"],
+    ["Hostel", a.hostel ? "Available" : "Not listed", b.hostel ? "Available" : "Not listed"],
+    ["Established", String(a.established || "—"), String(b.established || "—")],
+  ]
+  return (
+    <section aria-labelledby="quick-facts-heading" className="bg-white rounded-2xl border border-gray-100 p-6">
+      <h2 id="quick-facts-heading" className="text-lg font-bold text-gray-900 mb-1">Side-by-side facts</h2>
+      <p className="text-sm text-gray-600 mb-4">From each college&apos;s CampusLelo profile. Check fees and placement figures on the college&apos;s official site before deciding.</p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm min-w-[520px]">
+          <thead>
+            <tr className="border-b border-gray-200 text-left">
+              <th scope="col" className="py-2 pr-3 text-xs uppercase tracking-wide text-gray-500 w-1/4">&nbsp;</th>
+              <th scope="col" className="py-2 pr-3"><a href={`/colleges/${a.slug}`} className="font-bold text-[#012858] hover:text-orange-600">{a.shortName || a.name}</a></th>
+              <th scope="col" className="py-2"><a href={`/colleges/${b.slug}`} className="font-bold text-[#012858] hover:text-orange-600">{b.shortName || b.name}</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(([k, x, y]) => (
+              <tr key={k} className="border-b border-gray-100 align-top">
+                <th scope="row" className="py-2.5 pr-3 text-left font-medium text-gray-600">{k}</th>
+                <td className="py-2.5 pr-3 text-gray-900">{x}</td>
+                <td className="py-2.5 text-gray-900">{y}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )
+}
+
+export default function AIComparison({ initialCollege1 = "", initialCollege2 = "" }: { initialCollege1?: string; initialCollege2?: string }) {
+  // Pre-selected from /compare?c1=&c2= (compare bar, college pages)
+  const [college1, setCollege1] = useState(initialCollege1)
+  const [college2, setCollege2] = useState(initialCollege2)
   const [result, setResult] = useState<AIComparisonResult | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
@@ -62,10 +107,11 @@ export default function AIComparison() {
 
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 items-center">
           <div className="sm:col-span-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5 block">
+            <label htmlFor="compare-college-1" className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1.5 block">
               College 1
             </label>
             <select
+              id="compare-college-1"
               value={college1}
               onChange={(e) => setCollege1(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 outline-none focus:border-orange-400 bg-white"
@@ -84,10 +130,11 @@ export default function AIComparison() {
           </div>
 
           <div className="sm:col-span-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5 block">
+            <label htmlFor="compare-college-2" className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1.5 block">
               College 2
             </label>
             <select
+              id="compare-college-2"
               value={college2}
               onChange={(e) => setCollege2(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 outline-none focus:border-orange-400 bg-white"
@@ -122,6 +169,8 @@ export default function AIComparison() {
         </button>
       </div>
 
+      {col1Data && col2Data && college1 !== college2 && <QuickFacts a={col1Data} b={col2Data} />}
+
       {/* Loading Skeleton */}
       {loading && (
         <div className="bg-white rounded-2xl border border-gray-100 p-6 space-y-4">
@@ -141,7 +190,7 @@ export default function AIComparison() {
       {result && !loading && (
         <>
           {/* Winner Banner */}
-          <div className="bg-gradient-to-r from-[#0A1628] to-[#1E3A5F] rounded-2xl p-6 text-white">
+          <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-white">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
                 <Trophy className="w-5 h-5 text-white" />
