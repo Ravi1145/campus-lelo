@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 data/*.db
 *.db
+
+# Keep the env template in git (it has names and placeholders only)
+!.env.example
