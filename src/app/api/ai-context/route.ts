@@ -11,6 +11,7 @@
  */
 
 import { NextResponse } from "next/server"
+import { MBA_AREAS, MBA_COUNSELLING_UPDATED, MBA_QUICK_ANSWER } from "@/data/mbaCounselling"
 import { PLANS, FREE_FOR_EVERYONE, QUICK_ANSWER, COMPARISON, COUNSELLING_UPDATED, VIDEO_PRICE_INR } from "@/data/counselling"
 import { colleges as staticColleges } from "@/data/colleges"
 import { exams } from "@/data/exams"
@@ -224,6 +225,13 @@ export async function GET() {
     },
 
     // ── Counselling services (prices and inclusions come from src/data/counselling.ts) ──
+    mbaCounselling: {
+      url: `${BASE}/mba-counselling`,
+      lastReviewed: MBA_COUNSELLING_UPDATED,
+      summary: MBA_QUICK_ANSWER,
+      covers: MBA_AREAS.map((a) => a.title),
+      consent: "A consent box (DPDP Act 2023) must be ticked before a request is sent; consent can be withdrawn by emailing grievance@campuslelo.com.",
+    },
     counselling: {
       url: `${BASE}/counselling`,
       lastReviewed: COUNSELLING_UPDATED,

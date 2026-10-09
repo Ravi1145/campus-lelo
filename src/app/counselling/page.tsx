@@ -170,7 +170,7 @@ export default function CounsellingPage() {
             ))}
           </ul>
           <p className="mt-4 text-sm text-gray-600">
-            Looking for state counselling basics first? Read our <Link href="/mht-cet-counselling-pune-2026" className="font-bold text-[#C90D11] hover:underline">MHT-CET counselling guide</Link> or the <Link href="/mba-admission-process-pune" className="font-bold text-[#C90D11] hover:underline">MBA admission process in Pune</Link>.
+            Looking for state counselling basics first? Read our <Link href="/mht-cet-counselling-pune-2026" className="font-bold text-[#C90D11] hover:underline">MHT-CET counselling guide</Link> or the <Link href="/mba-admission-process-pune" className="font-bold text-[#C90D11] hover:underline">MBA admission process in Pune</Link>. Planning an MBA or PGDM? See <Link href="/mba-counselling" className="font-bold text-[#C90D11] hover:underline">MBA counselling and career guidance</Link>.
           </p>
         </section>
       </div>

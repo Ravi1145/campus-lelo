@@ -17,7 +17,8 @@ export function attributionLine(input: LeadInput): string {
   if (input.city_preference) parts.push(`city: ${input.city_preference}`)
   const utm = [input.utm_source, input.utm_medium, input.utm_campaign, input.utm_content]
   if (utm.some((v) => v && v !== "none" && v !== "organic")) parts.push(`utm: ${utm.map((v) => v || "-").join("/")}`)
-  if (input.consent !== undefined) parts.push(`consent: ${input.consent ? "yes" : "no"}`)
+  // DPDP record of consent: given, which notice wording, and when it was received
+  if (input.consent !== undefined) parts.push(`consent: ${input.consent ? "yes" : "no"} v${input.consent_version ?? "-"} ${new Date().toISOString()}`)
   return parts.length ? `[${parts.join(" | ")}]` : ""
 }
 

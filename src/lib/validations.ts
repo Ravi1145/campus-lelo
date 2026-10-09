@@ -6,7 +6,8 @@ export const leadSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(50).optional(),
   phone: z.string().regex(phoneRegex, 'Enter a valid 10-digit Indian mobile number'),
   email: z.string().email('Invalid email').optional().or(z.literal('')),
-  stream: z.enum(['BTech', 'MBA', 'MBBS', 'BBA', 'BArch', 'BSc', 'BCom', 'Law', 'Other']).optional(),
+  // Free text: forms send labels such as "Engineering" or "Arts & Science"; a strict enum silently dropped those leads
+  stream: z.string().max(40).optional(),
   budget: z.string().optional(),
   exam_type: z.string().optional(),
   exam_score: z.string().optional(),
@@ -29,7 +30,9 @@ export const leadSchema = z.object({
   utm_medium: z.string().max(80).optional(),
   utm_campaign: z.string().max(120).optional(),
   utm_content: z.string().max(120).optional(),
-  consent: z.boolean().optional(),
+  // DPDP Act 2023: the visitor must tick the consent box; the server refuses leads without it
+  consent: z.literal(true, { error: "Please tick the consent box so we can contact you" }),
+  consent_version: z.string().max(20).optional(),
   // Honeypot — real users never see or fill this field
   website: z.string().max(200).optional(),
 })
@@ -44,6 +47,8 @@ export const enquirySchema = z.object({
   message: z.string().max(500).optional(),
   preferred_contact: z.enum(['whatsapp', 'call', 'email']).default('whatsapp'),
   preferred_time: z.enum(['morning', 'afternoon', 'evening']).optional(),
+  consent: z.literal(true, { error: "Please tick the consent box so we can contact you" }),
+  consent_version: z.string().max(20).optional(),
 })
 
 export const counsellingSchema = z.object({
@@ -59,6 +64,8 @@ export const counsellingSchema = z.object({
   budget: z.string().max(60).optional(),
   city_preference: z.string().max(40).optional(),
   help_topics: z.array(z.string().max(40)).max(8).optional(),
+  consent: z.literal(true, { error: "Please tick the consent box so we can contact you" }),
+  consent_version: z.string().max(20).optional(),
   // Honeypot — real users never see or fill this field
   website: z.string().max(200).optional(),
 })

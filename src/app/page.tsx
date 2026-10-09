@@ -26,7 +26,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Colleges in Pune 2026 | Rankings, Fees & Reviews | CampusLelo",
-  description: "Compare 100+ colleges in Pune — COEP (NIRF #49), SIBM (NIRF #13), AFMC (NIRF #4). Fees ₹15K–25L/yr, placements up to ₹65 LPA. Free AI counsellor for 2026 admissions.",
+  description: "Compare 100+ colleges in Pune by fees, courses, exams and cut-offs. Sourced MBA exam dates, free shortlist and counselling for 2026–27 admissions.",
   path: "/",
   keywords: [
     "colleges in pune 2026",

@@ -7,7 +7,7 @@ export const revalidate = 300 // ISR — re-render every 5 min; on-demand revali
 import { getCollegeBySlug as getDBCollege, DBCollege, CollegeDetails } from "@/lib/db"
 import CollegeProfile from "@/components/colleges/CollegeProfile"
 import CollegeAtAGlance from "@/components/seo/CollegeAtAGlance"
-import { generateMetadata as genMeta, generateBreadcrumbSchema, generateCollegeSchema, generateCollegeWebPageSchema, generateFAQSchema, generateHowToSchema } from "@/lib/seo"
+import { titleName, generateMetadata as genMeta, generateBreadcrumbSchema, generateCollegeSchema, generateCollegeWebPageSchema, generateFAQSchema, generateHowToSchema } from "@/lib/seo"
 import type { College } from "@/types"
 import { safeJsonLd } from "@/lib/jsonld"
 
@@ -265,7 +265,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exam1      = college.entranceExams[0] ?? "MHT-CET"
   const exam2      = college.entranceExams[1] ? ` / ${college.entranceExams[1]}` : ""
   // Title: College Name 2026 | NAAC + NIRF | Fees, Cutoff & Admission — max ~65 chars readable
-  const titleParts = [college.name, "2026", naacText ? `${naacText}${nirfText}` : nirfText.slice(2), "Fees, Cutoff & Admission"].filter(Boolean)
+  const titleParts = [titleName(college), "2026", naacText ? `${naacText}${nirfText}` : nirfText.slice(2), "Fees, Cutoff & Admission"].filter(Boolean)
   const title = titleParts.join(" | ")
 
   return genMeta({

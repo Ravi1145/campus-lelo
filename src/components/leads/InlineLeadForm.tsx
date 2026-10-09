@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2, MapPin, ShieldCheck, User, Wallet } from "lucide-react"
-import { Field, Honeypot, inputCls } from "./LeadFormParts"
+import { CONSENT_VERSION, ConsentCheckbox, Field, Honeypot, inputCls } from "./LeadFormParts"
 import { BUDGET_YEARLY, LOCATIONS, utmFromLocation } from "./leadOptions"
 
 declare global {
@@ -15,8 +15,8 @@ interface InlineLeadFormProps {
 
 // Compact lead band for lists and articles: name, phone, budget, location.
 export default function InlineLeadForm({ context }: InlineLeadFormProps) {
-  const [form, setForm] = useState({ name: "", phone: "", budget: "", location: "", website: "" })
-  const [errors, setErrors] = useState<{ name?: string; phone?: string; form?: string }>({})
+  const [form, setForm] = useState({ name: "", phone: "", budget: "", location: "", consent: false, website: "" })
+  const [errors, setErrors] = useState<{ name?: string; phone?: string; consent?: string; form?: string }>({})
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) => setForm((f) => ({ ...f, [k]: v }))
@@ -26,6 +26,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
     const e: typeof errors = {}
     if (form.name.trim().length < 2) e.name = "Enter your name"
     if (!/^[6-9]\d{9}$/.test(form.phone)) e.phone = "Enter a valid 10-digit number"
+    if (!form.consent) e.consent = "Please tick the box so we can contact you"
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -46,6 +47,8 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
           source: "inline_form",
           message: context,
           ...utmFromLocation(),
+          consent: form.consent,
+          consent_version: CONSENT_VERSION,
           website: form.website,
         }),
       })
@@ -119,13 +122,15 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
             </Field>
           </div>
 
+          <div className="mt-4"><ConsentCheckbox id={`${uid}-consent`} checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose="my college shortlist and admission guidance" compact /></div>
+
           <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
             <button type="submit" disabled={loading} className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
               {loading ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>Get my shortlist <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}
             </button>
             <p className="flex items-center gap-1.5 text-xs text-gray-600">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" aria-hidden="true" />
-              Free. By submitting you agree to be contacted. <Link href="/privacy" className="font-semibold underline">Privacy</Link>
+              Free. We never sell your details. <Link href="/privacy" className="font-semibold underline">Privacy</Link>
             </p>
           </div>
           {errors.form && <p className="mt-2 text-sm font-medium text-red-700" role="alert">{errors.form}</p>}

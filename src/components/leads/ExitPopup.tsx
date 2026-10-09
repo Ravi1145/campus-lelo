@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { X, ArrowRight, ArrowLeft, Check, Loader2, ShieldCheck, User } from "lucide-react"
-import { ChipGroup, Field, Honeypot, PhoneField, inputCls } from "./LeadFormParts"
+import { CONSENT_VERSION, ChipGroup, ConsentCheckbox, Field, Honeypot, PhoneField, inputCls } from "./LeadFormParts"
 import { BUDGET_YEARLY, COURSES, LOCATIONS, utmFromLocation } from "./leadOptions"
 
 const SESSION_KEY = "exit_popup_shown"
@@ -22,8 +22,8 @@ const BENEFITS = [
 export default function ExitPopup() {
   const [visible, setVisible] = useState(false)
   const [step, setStep] = useState<1 | 2>(1)
-  const [form, setForm] = useState({ stream: "", location: "", budget: "", name: "", phone: "", website: "" })
-  const [errors, setErrors] = useState<{ stream?: string; name?: string; phone?: string; form?: string }>({})
+  const [form, setForm] = useState({ stream: "", location: "", budget: "", name: "", phone: "", consent: false, website: "" })
+  const [errors, setErrors] = useState<{ stream?: string; name?: string; phone?: string; consent?: string; form?: string }>({})
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -78,7 +78,8 @@ export default function ExitPopup() {
     const eMap: typeof errors = {}
     if (form.name.trim().length < 2) eMap.name = "Please enter your name"
     if (!/^[6-9]\d{9}$/.test(form.phone)) eMap.phone = "Enter a valid 10-digit mobile number"
-    if (eMap.name || eMap.phone) { setErrors(eMap); return }
+    if (!form.consent) eMap.consent = "Please tick the box so we can contact you"
+    if (eMap.name || eMap.phone || eMap.consent) { setErrors(eMap); return }
 
     setErrors({})
     setSubmitting(true)
@@ -95,6 +96,8 @@ export default function ExitPopup() {
           source: "exit_popup",
           message: "Free shortlist request via popup",
           ...utmFromLocation(),
+          consent: form.consent,
+          consent_version: CONSENT_VERSION,
           website: form.website,
         }),
       })
@@ -197,6 +200,7 @@ export default function ExitPopup() {
                     </div>
                   </Field>
                   <PhoneField id="popup-phone" value={form.phone} onChange={(v) => set("phone", v)} error={errors.phone} />
+                  <ConsentCheckbox id="popup-consent" checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose="my free college shortlist" compact />
                   {errors.form && <p className="text-sm font-medium text-red-700" role="alert">{errors.form}</p>}
                   <div className="flex gap-2">
                     <button type="button" onClick={() => setStep(1)} aria-label="Back" className="flex w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 text-gray-700 transition hover:bg-gray-50">
@@ -211,7 +215,7 @@ export default function ExitPopup() {
 
               <p className="flex items-start gap-1.5 text-xs text-gray-600">
                 <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
-                <span>Free, no spam. By submitting you agree to be contacted by CampusLelo counsellors. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
+                <span>Free, no spam. We never sell your details. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
               </p>
             </form>
           )}

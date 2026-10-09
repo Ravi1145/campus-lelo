@@ -144,6 +144,7 @@ Key profiles:
 - ${BASE}/predictor — College predictor by MHT-CET / JEE / NEET score
 - ${BASE}/ai-finder — AI chatbot for personalized college recommendations
 - ${BASE}/compare — Side-by-side comparison of any two colleges
+- ${BASE}/mba-counselling — Free MBA/PGDM counselling: admission, exam choice, management career guidance (optional ₹199 video session)
 - ${BASE}/counselling — Free phone counselling, or an expert video session (₹199): CAP rounds, career choice, personal shortlist
 - ${BASE}/roi-calculator — Degree ROI: fees vs expected salary
 

@@ -110,3 +110,52 @@ export function MultiChipGroup({ legend, hint, options, value, onChange }: { leg
     </fieldset>
   )
 }
+
+/** Version of the notice text shown next to the consent box. Bump when the wording changes. */
+export const CONSENT_VERSION = "2026-10-09"
+
+/**
+ * DPDP Act 2023 consent: a separate, unticked box that says what data is used, why, who sees it,
+ * how to withdraw, and links the privacy notice. The form must not submit until it is ticked.
+ */
+export function ConsentCheckbox({
+  id,
+  checked,
+  onChange,
+  error,
+  purpose = "counselling and admission guidance",
+  dark = false,
+  compact = false,
+}: {
+  id: string
+  checked: boolean
+  onChange: (v: boolean) => void
+  error?: string
+  purpose?: string
+  dark?: boolean
+  compact?: boolean
+}) {
+  const text = dark ? "text-blue-100" : "text-gray-600"
+  const link = dark ? "font-semibold text-white underline" : "font-semibold text-[#024692] underline"
+  return (
+    <div>
+      <div className="flex items-start gap-2.5">
+        <input
+          id={id}
+          type="checkbox"
+          checked={checked}
+          onChange={(e) => onChange(e.target.checked)}
+          aria-invalid={!!error}
+          aria-describedby={`${id}-note`}
+          className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#E0170F]"
+        />
+        <label htmlFor={id} id={`${id}-note`} className={cn("cursor-pointer leading-snug", compact ? "text-[11px]" : "text-xs", text)}>
+          I agree that CampusLelo may use my name, mobile number and the details I enter to contact me by call or WhatsApp for {purpose}, and share them only with the colleges or counsellors I ask about. I am 18 or older, or a parent or guardian is submitting this form. I can withdraw consent or ask for my data to be erased at any time by emailing{" "}
+          <a href="mailto:grievance@campuslelo.com" className={link}>grievance@campuslelo.com</a>. Read the{" "}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer" className={link}>Privacy Notice</a>.
+        </label>
+      </div>
+      {error && <p className="mt-1 text-xs font-medium text-red-700" role="alert">{error}</p>}
+    </div>
+  )
+}

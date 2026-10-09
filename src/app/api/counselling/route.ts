@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
       validated.help_topics?.length ? `Help needed: ${validated.help_topics.join(', ')}` : null,
       validated.preferred_date ? `Preferred date: ${validated.preferred_date}` : null,
       validated.preferred_time ? `Preferred time: ${validated.preferred_time}` : null,
+      `Consent (DPDP): yes v${validated.consent_version ?? '-'} ${new Date().toISOString()}`,
     ].filter(Boolean).join('\n')
 
     const admin = createAdminClient()

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { X, Send, Loader2, CheckCircle, Shield, Zap, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { CONSENT_VERSION, ConsentCheckbox } from "./LeadFormParts"
 
 interface EnquiryFormProps {
   collegeName: string
@@ -19,12 +20,14 @@ interface FormData {
   message: string
   preferred_contact: "whatsapp" | "call" | "email"
   preferred_time: "morning" | "afternoon" | "evening" | ""
+  consent: boolean
 }
 
 interface FormErrors {
   name?: string
   phone?: string
   email?: string
+  consent?: string
 }
 
 const initialForm: FormData = {
@@ -35,6 +38,7 @@ const initialForm: FormData = {
   message: "",
   preferred_contact: "whatsapp",
   preferred_time: "",
+  consent: false,
 }
 
 export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen, onClose }: EnquiryFormProps) {
@@ -70,6 +74,7 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
     if (!form.name || form.name.length < 2) newErrors.name = "Name must be at least 2 characters"
     if (!form.phone || !/^[6-9]\d{9}$/.test(form.phone)) newErrors.phone = "Enter a valid 10-digit Indian mobile number"
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) newErrors.email = "Invalid email address"
+    if (!form.consent) newErrors.consent = "Please tick the box so we can contact you"
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -106,6 +111,8 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
           message: form.message || undefined,
           preferred_contact: form.preferred_contact,
           preferred_time: form.preferred_time || undefined,
+          consent: form.consent,
+          consent_version: CONSENT_VERSION,
         }),
       })
       const data = await res.json()
@@ -303,6 +310,8 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
               </div>
             </div>
 
+            <ConsentCheckbox id="enq-consent" checked={form.consent} onChange={(v) => { setForm((f) => ({ ...f, consent: v })); setErrors((er) => ({ ...er, consent: undefined })) }} error={errors.consent} purpose={`my enquiry about ${collegeName}`} compact />
+
             {/* Submit */}
             <button
               type="submit"
@@ -317,8 +326,7 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
             </button>
 
             <p className="text-center text-xs text-gray-400">
-              By submitting, you consent to being contacted by our counsellors about college admissions.{" "}
-              <a href="/privacy" className="underline hover:text-orange-500">Privacy Policy</a>.
+              We never sell your details. <a href="/privacy" className="underline hover:text-orange-500">Privacy Policy</a>.
             </p>
 
             {/* Trust Row */}

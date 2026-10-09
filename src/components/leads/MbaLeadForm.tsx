@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2, ShieldCheck, User } from "lucide-react"
-import { ChipGroup, Field, Honeypot, PhoneField, inputCls } from "./LeadFormParts"
+import { CONSENT_VERSION, ChipGroup, ConsentCheckbox, Field, Honeypot, PhoneField, inputCls } from "./LeadFormParts"
 import { BUDGET_TOTAL, utmFromLocation } from "./leadOptions"
 
 // Short MBA/PGDM lead form for exam hubs, city × exam pages and MBA guides.
@@ -74,6 +74,7 @@ export default function MbaLeadForm({
           message: `MBA/PGDM shortlist request · ${placement} · ${window.location.pathname}`,
           ...utmFromLocation(),
           consent: form.consent,
+          consent_version: CONSENT_VERSION,
           website: form.website,
         }),
       })
@@ -104,6 +105,7 @@ export default function MbaLeadForm({
         <div className="mt-3 flex flex-col gap-1.5 text-sm font-bold text-[#C90D11]">
           <Link href="/mba-vs-pgdm" className="hover:underline">MBA vs PGDM — what&apos;s right for you? →</Link>
           <Link href="/exams" className="hover:underline">All entrance exam guides →</Link>
+          <Link href="/mba-counselling" className="hover:underline">MBA counselling and career guidance →</Link>
         </div>
       </div>
     )
@@ -160,13 +162,7 @@ export default function MbaLeadForm({
 
         <ChipGroup legend="Budget" hint="full programme" options={BUDGET_TOTAL} value={form.budget} onChange={(v) => set("budget", v)} />
 
-        <div>
-          <label className="flex items-start gap-2.5 text-xs leading-relaxed text-gray-700">
-            <input type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-[#E0170F]" checked={form.consent} onChange={(e) => set("consent", e.target.checked)} />
-            <span>I agree that CampusLelo may call or WhatsApp me about admissions. See our <Link href="/privacy" className="font-semibold underline">privacy policy</Link>.</span>
-          </label>
-          {errors.consent && <p className="mt-1 text-xs font-medium text-red-700" role="alert">{errors.consent}</p>}
-        </div>
+        <ConsentCheckbox id="mba-consent" checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose="my MBA/PGDM shortlist and admission guidance" compact />
 
         <button type="submit" disabled={status === "loading"} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
           {status === "loading" ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>Get my free shortlist <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}

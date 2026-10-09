@@ -31,7 +31,7 @@ const POPULAR = [
 const STATS = [
   { icon: Building2, value: 100, suffix: "+", label: "Colleges profiled" },
   { icon: GraduationCap, value: 50, suffix: "+", label: "Courses & streams" },
-  { icon: Users, value: 50, suffix: "K+", label: "Students guided" },
+  { icon: Users, value: 0, suffix: "", text: "Free", label: "College search & shortlist" },
   { icon: FileText, value: 9, suffix: "", label: "MBA exam guides" },
   { icon: ShieldCheck, value: 0, suffix: "", text: "Sourced", label: "Exam & admission data" },
 ]

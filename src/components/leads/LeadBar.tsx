@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Link from "next/link"
 import { X, Clock } from "lucide-react"
 
 // Admission deadline — matches site_settings in Supabase
@@ -28,9 +29,6 @@ function useCountdown(target: Date) {
 
 export default function LeadBar() {
   const [dismissed, setDismissed] = useState(true) // start hidden to avoid SSR flash
-  const [phone, setPhone] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
   const countdown = useCountdown(DEADLINE)
 
   const barRef = useRef<HTMLDivElement>(null)
@@ -58,32 +56,6 @@ export default function LeadBar() {
     localStorage.setItem("lead_bar_dismissed", "true")
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!/^[6-9]\d{9}$/.test(phone)) return
-    setLoading(true)
-    try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name:    "Lead Bar",
-          phone,
-          source:  "lead_bar",
-          message: "Admission 2026 guide request via top bar",
-        }),
-      })
-      // fetch() doesn't throw on 4xx/5xx — only confirm when the API accepted the lead
-      if (!res.ok) return
-      setSubmitted(true)
-      setTimeout(dismiss, 5000)
-    } catch {
-      // silently fail — don't break UX
-    } finally {
-      setLoading(false)
-    }
-  }
-
   if (dismissed) return null
 
   return (
@@ -104,31 +76,13 @@ export default function LeadBar() {
           </span>
         </div>
 
-        {/* Lead form */}
-        {submitted ? (
-          <p className="text-green-400 font-semibold text-xs flex-1 text-right sm:text-left truncate">
-            ✅ <span className="hidden sm:inline">Check WhatsApp for college list!</span><span className="sm:hidden">We'll call you!</span>
-          </p>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex items-center gap-1.5 sm:gap-2 flex-1 justify-end min-w-0">
-            <input
-              type="tel"
-              inputMode="numeric"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
-              placeholder="Phone number"
-              className="flex-1 min-w-0 max-w-[130px] sm:max-w-[180px] px-2 sm:px-3 py-1 rounded-lg text-gray-900 text-xs placeholder-gray-500 outline-none focus:ring-2 focus:ring-orange-400 bg-white"
-              maxLength={10}
-            />
-            <button
-              type="submit"
-              disabled={loading || phone.length !== 10}
-              className="px-2 sm:px-3 py-1 bg-orange-500 hover:bg-orange-600 disabled:opacity-50 text-white text-xs font-bold rounded-lg transition-colors shrink-0 whitespace-nowrap"
-            >
-              {loading ? "…" : <><span className="hidden sm:inline">Get </span>Guide</>}
-            </button>
-          </form>
-        )}
+        {/* Consent-first: the request form (with the DPDP consent box) lives on the counselling page */}
+        <Link
+          href="/counselling#book"
+          className="ml-auto px-3 py-1 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold rounded-lg transition-colors shrink-0 whitespace-nowrap"
+        >
+          Get free counselling
+        </Link>
 
         {/* Dismiss */}
         <button

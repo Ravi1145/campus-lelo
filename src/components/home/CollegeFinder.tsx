@@ -6,6 +6,7 @@ import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Lock, Phone, User, MapPin 
 import { cn, formatFeesRange } from "@/lib/utils"
 import { colleges } from "@/data/colleges"
 import type { College } from "@/types"
+import { CONSENT_VERSION, ConsentCheckbox } from "@/components/leads/LeadFormParts"
 
 // ─── Quiz constants ───────────────────────────────────────────────────────────
 
@@ -217,6 +218,7 @@ export default function CollegeFinder() {
   const [step,    setStep]    = useState(0)
   const [data,    setData]    = useState<Partial<QuizData>>({})
   const [name,    setName]    = useState("")
+  const [consent, setConsent] = useState(false)
   const [phone,   setPhone]   = useState("")
   const [error,   setError]   = useState("")
   const [loading, setLoading] = useState(false)
@@ -243,6 +245,11 @@ export default function CollegeFinder() {
       return
     }
 
+    if (!consent) {
+      setError("Please tick the consent box to continue.")
+      return
+    }
+
     setLoading(true)
     try {
       const sp = new URLSearchParams(
@@ -256,6 +263,8 @@ export default function CollegeFinder() {
           name:         name.trim(),
           phone:        cleaned,
           source:       "ai_finder",
+          consent,
+          consent_version: CONSENT_VERSION,
           stream:       data.stream,
           budget:       data.budget,
           score:        data.score,
@@ -440,6 +449,8 @@ export default function CollegeFinder() {
                 className="w-full border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
               />
             </div>
+
+            <ConsentCheckbox id="finder-consent" checked={consent} onChange={(v) => { setConsent(v); setError("") }} purpose="my college list and admission guidance" compact />
 
             {error && (
               <p className="text-red-500 text-xs font-medium">{error}</p>

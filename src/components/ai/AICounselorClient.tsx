@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import { CONSENT_VERSION, ConsentCheckbox } from "@/components/leads/LeadFormParts"
 import Link from "next/link"
 
 interface Message {
@@ -24,6 +25,7 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
   const [leadSubmitted, setLeadSubmitted] = useState(false)
   const [leadName, setLeadName] = useState("")
   const [leadPhone, setLeadPhone] = useState("")
+  const [leadConsent, setLeadConsent] = useState(false)
   const [leadSubmitting, setLeadSubmitting] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -82,13 +84,13 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!leadName || !leadPhone) return
+    if (!leadName || !leadPhone || !leadConsent) return
     setLeadSubmitting(true)
     try {
       await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: leadName, phone: leadPhone, source: "ai_counselor", context: "AI Career Counselor" }),
+        body: JSON.stringify({ name: leadName, phone: leadPhone, source: "ai_counselor", context: "AI Career Counselor", consent: leadConsent, consent_version: CONSENT_VERSION }),
       })
     } catch { /* silent */ }
     setLeadSubmitted(true)
@@ -164,7 +166,8 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
                 className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" required />
               <input type="tel" placeholder="WhatsApp / Phone Number" value={leadPhone} onChange={e => setLeadPhone(e.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" required />
-              <button type="submit" disabled={leadSubmitting}
+              <ConsentCheckbox id="aic-consent" checked={leadConsent} onChange={setLeadConsent} purpose="a counselling callback" compact />
+              <button type="submit" disabled={leadSubmitting || !leadConsent}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl text-sm transition-colors disabled:opacity-50">
                 {leadSubmitting ? "Saving…" : "Continue Chatting →"}
               </button>

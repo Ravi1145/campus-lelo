@@ -3,11 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import { HelpCircle, Send, CheckCircle } from "lucide-react"
+import { CONSENT_VERSION, ConsentCheckbox } from "@/components/leads/LeadFormParts"
 
 const STREAMS = ["Engineering", "MBA", "Medical", "Arts & Science", "BCA/BSc IT", "BBA", "Design", "Law", "Pharmacy", "Architecture"]
 
 export default function AskPage() {
-  const [form, setForm] = useState({ question: "", stream: "", college: "", phone: "" })
+  const [form, setForm] = useState({ question: "", stream: "", college: "", phone: "", consent: false })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -17,6 +18,7 @@ export default function AskPage() {
     if (form.question.trim().length < 20) e.question = "Question must be at least 20 characters"
     if (!form.stream) e.stream = "Select a stream"
     if (form.phone && !/^[6-9]\d{9}$/.test(form.phone)) e.phone = "Enter valid 10-digit number"
+    if (!form.consent) e.consent = "Please tick the box to send your question"
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -33,6 +35,8 @@ export default function AskPage() {
         body: JSON.stringify({
           phone: form.phone || "0000000000",
           source: "qa_question",
+          consent: form.consent,
+          consent_version: CONSENT_VERSION,
           stream: form.stream,
           notes: `Q: ${form.question} | College: ${form.college || "Not specified"}`,
           utm_source: new URLSearchParams(window.location.search).get("utm_source") || "organic",
@@ -166,6 +170,8 @@ export default function AskPage() {
                   />
                   {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
                 </div>
+
+                <ConsentCheckbox id="ask-consent" checked={form.consent} onChange={(v) => setForm({ ...form, consent: v })} error={errors.consent} purpose="answering my question and, if I add a number, contacting me about it" compact />
 
                 <button
                   type="submit"

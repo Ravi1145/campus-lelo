@@ -71,12 +71,45 @@ async function resolvePost(slug: string): Promise<Post | null> {
   return null
 }
 
+// Search-result titles for posts whose headline is too long to show in full (<= 58 chars).
+// The on-page H1 keeps the full headline; only the <title> is shortened.
+const SEARCH_TITLES: Record<string, string> = {
+  "admission-guide-noida-engineering-colleges-2026": "Noida Engineering Admission 2026: JEE, AKTU & Documents",
+  "scholarships-pune-students-2026-complete-guide": "Pune College Scholarships 2026: MahaDBT, NSP & More",
+  "aktu-colleges-noida-greater-noida-2026-complete-guide": "Best AKTU Colleges in Noida 2026: Fees & Placements",
+  "top-recruiters-pune-colleges-2025-2026": "Top Recruiters in Pune Colleges 2025–26: Salaries",
+  "placement-records-pune-engineering-2025": "Pune Engineering Placement Records 2025: Salaries",
+  "government-vs-private-college-fees-pune-2026": "Government vs Private Colleges Pune 2026: Fees & ROI",
+  "top-10-engineering-colleges-pune-2026-nirf-rankings": "Top 10 Engineering Colleges in Pune 2026: NIRF, Fees",
+  "mba-after-engineering-pune-noida-2026": "MBA After Engineering 2026: ROI, Top Colleges, Timeline",
+  "highest-paying-jobs-after-engineering-pune-2026": "Highest Paying Jobs After Engineering in Pune 2026",
+  "mba-specialisations-explained": "MBA Specialisations Explained: Marketing, Finance, HR",
+  "pune-colleges-hostel-facilities-2026": "Best Hostel Facilities in Pune Colleges 2026: Fees",
+  "sibm-pune-complete-guide-2026": "SIBM Pune 2026: SNAP Cutoff, Fees & Placements",
+  "best-btech-colleges-pune-2026": "Top 10 BTech Colleges in Pune 2026: Fees & Rankings",
+  "mht-cet-2026-preparation-strategy": "MHT-CET 2026 Preparation Strategy, Syllabus & Tips",
+  "coep-pune-complete-guide-2026": "COEP Pune 2026: Admission, Fees, Cutoff & Placements",
+  "mba-colleges-pune-fees-placements-2026": "Best MBA Colleges in Pune 2026: Fees, Cutoff, Placements",
+  "executive-online-part-time-mba-india": "Executive, Online & Part-Time MBA in India: Which Fits?",
+  "mba-eligibility-criteria-in-india": "MBA Eligibility in India: Marks, Degree & Experience",
+  "mba-without-cat-india": "MBA Without CAT in India: Exams & Direct Admission",
+  "mba-entrance-exams-in-india": "MBA Entrance Exams in India: List, Dates, Which to Take",
+  "jiit-noida-vs-amity-university-noida-2026": "JIIT Noida vs Amity Noida 2026: Better for B.Tech CSE?",
+  "mba-placements-and-salary-how-to-read-reports": "MBA Average Package: How to Read a Placement Report",
+  "how-to-choose-an-mba-college-in-india": "How to Choose an MBA College in India: 8 Criteria",
+  "mba-fees-in-india-guide": "MBA Fees in India: What the Total Cost Includes",
+  "mba-cutoff-vs-percentile-explained": "MBA Cut-off vs Percentile Explained: What You Need",
+  "neet-2026-pune-medical-college-cutoff": "NEET 2026 Cutoff for Pune Medical Colleges: AFMC, BJMC",
+  "pune-vs-noida-colleges-comparison-2026": "Pune vs Noida for Engineering & MBA 2026: Which Is Better?",
+  "mba-admission-process-in-india": "MBA Admission Process in India: Steps, Dates, Documents",
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = await resolvePost(slug)
   if (!post) return {}
   return genMeta({
-    title: post.meta_title || post.title,
+    title: post.meta_title || SEARCH_TITLES[slug] || post.title,
     description: post.meta_desc || post.excerpt,
     path: `/blog/${slug}`,
     keywords: post.tags,

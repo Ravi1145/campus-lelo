@@ -4,9 +4,9 @@ import { BookOpen, Building2, GraduationCap, MapPin, TrendingUp, Shield } from "
 import { seoPages, seoPageHref } from "@/data/seoPages"
 
 export const metadata: Metadata = {
-  title: "Colleges in Pune 2026 — Complete List, Fees & Rankings",
+  title: "Colleges in Pune 2026: List, Fees & Rankings",
   description:
-    "Explore all colleges in Pune 2026. Filter by stream (Engineering, MBA, Medical, Law), type (Government, Private, Deemed), entrance exam, fees, and location. NAAC and NIRF ranked.",
+    "Browse colleges in Pune 2026. Filter by stream, type, entrance exam, fees and area, with NAAC and NIRF details. Free shortlist from CampusLelo.",
   alternates: { canonical: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges-in-pune` },
 }
 export const revalidate = 300

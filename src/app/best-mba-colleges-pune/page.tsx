@@ -92,7 +92,7 @@ export default function BestMbaCollegesPunePage() {
         ]}
         faqs={faqs}
         ctaHeading="Get Into the Best MBA College in Pune"
-        ctaSubtext="Our MBA admission counsellors have helped 2,000+ students crack SIBM, SCMHRD, and FLAME admissions. Free guidance on test prep, SOP writing, and GD/PI preparation."
+        ctaSubtext="Free guidance from CampusLelo counsellors on exam choice, shortlisting, SOP writing, and GD/PI preparation for SIBM, SCMHRD, FLAME and other Pune MBA admissions."
       relatedGuides={[
         { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
         { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },

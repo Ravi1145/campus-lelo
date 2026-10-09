@@ -3,7 +3,7 @@ import { useEffect, useId, useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2, ShieldCheck, User, Video, PhoneCall } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { ChipGroup, Field, Honeypot, MultiChipGroup, PhoneField, inputCls } from "./LeadFormParts"
+import { CONSENT_VERSION, ChipGroup, ConsentCheckbox, Field, Honeypot, MultiChipGroup, PhoneField, inputCls } from "./LeadFormParts"
 import { BUDGET_YEARLY, LOCATIONS } from "./leadOptions"
 import { HELP_TOPICS, PLANS, VIDEO_PRICE_INR, type PlanId } from "@/data/counselling"
 import { PLAN_EVENT } from "@/components/counselling/PlanCta"
@@ -22,17 +22,23 @@ const TIMES = [
 interface Props {
   /** Pre-selected plan, e.g. from a "Book video session" button */
   defaultPlan?: PlanId
+  /** Pre-selected stream, e.g. "MBA" on the MBA counselling page */
+  defaultStream?: string
+  /** Topic chips to offer instead of the general list */
+  topicOptions?: string[]
+  heading?: string
+  intro?: string
 }
 
 // Counselling request: choose free phone counselling or the paid video session,
 // say what you need and when. No payment is taken here — for the video session
 // the team confirms the slot and sends a payment link.
-export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props) {
+export default function CounsellingBooking({ defaultPlan = "free_phone", defaultStream = "", topicOptions = HELP_TOPICS, heading = "Tell us what you need. We'll take it from there.", intro = "Pick free phone counselling or an expert video session. Add your budget and city so the first conversation starts with options, not questions." }: Props) {
   const uid = useId()
   const [plan, setPlan] = useState<PlanId>(defaultPlan)
-  const [form, setForm] = useState({ name: "", phone: "", stream: "", location: "", budget: "", date: "", time: "", website: "" })
+  const [form, setForm] = useState({ name: "", phone: "", stream: defaultStream, location: "", budget: "", date: "", time: "", consent: false, website: "" })
   const [topics, setTopics] = useState<string[]>([])
-  const [errors, setErrors] = useState<{ name?: string; phone?: string; form?: string }>({})
+  const [errors, setErrors] = useState<{ name?: string; phone?: string; consent?: string; form?: string }>({})
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState<{ ref: string; plan: PlanId } | null>(null)
   const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) => setForm((f) => ({ ...f, [k]: v }))
@@ -53,6 +59,7 @@ export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props
     const e: typeof errors = {}
     if (form.name.trim().length < 2) e.name = "Please enter your name"
     if (!/^[6-9]\d{9}$/.test(form.phone)) e.phone = "Enter a valid 10-digit mobile number"
+    if (!form.consent) e.consent = "Please tick the box so we can contact you"
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -75,6 +82,8 @@ export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props
           help_topics: topics.length ? topics : undefined,
           preferred_date: form.date || undefined,
           preferred_time: form.time || undefined,
+          consent: form.consent,
+          consent_version: CONSENT_VERSION,
           website: form.website,
         }),
       })
@@ -98,8 +107,8 @@ export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props
       <div className="relative mx-auto grid max-w-5xl items-start gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
         {/* Left: what you get */}
         <div className="text-white">
-          <h2 id="book-h" className="text-3xl font-extrabold leading-tight sm:text-4xl">Tell us what you need. We&apos;ll take it from there.</h2>
-          <p className="mt-3 text-base leading-relaxed text-blue-100">Pick free phone counselling or an expert video session. Add your budget and city so the first conversation starts with options, not questions.</p>
+          <h2 id="book-h" className="text-3xl font-extrabold leading-tight sm:text-4xl">{heading}</h2>
+          <p className="mt-3 text-base leading-relaxed text-blue-100">{intro}</p>
           <ul className="mt-6 space-y-3 text-sm text-blue-50">
             {(isVideo ? PLANS[1] : PLANS[0]).includes.map((p) => (
               <li key={p} className="flex items-start gap-2.5">
@@ -177,7 +186,7 @@ export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props
                 </select>
               </Field>
 
-              <MultiChipGroup legend="What do you need help with?" hint="Pick any" options={HELP_TOPICS} value={topics} onChange={setTopics} />
+              <MultiChipGroup legend="What do you need help with?" hint="Pick any" options={topicOptions} value={topics} onChange={setTopics} />
               <ChipGroup legend="Preferred location" options={LOCATIONS} value={form.location} onChange={(v) => set("location", v)} />
               <ChipGroup legend="Budget" hint="per year" options={BUDGET_YEARLY} value={form.budget} onChange={(v) => set("budget", v)} />
 
@@ -196,12 +205,14 @@ export default function CounsellingBooking({ defaultPlan = "free_phone" }: Props
 
               {errors.form && <p className="text-sm font-medium text-red-700" role="alert">{errors.form}</p>}
 
+              <ConsentCheckbox id={`${uid}-consent`} checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose={isVideo ? "my counselling session and admission guidance" : "free counselling and admission guidance"} />
+
               <button type="submit" disabled={loading} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
                 {loading ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>{isVideo ? `Request video session — ₹${VIDEO_PRICE_INR}` : "Request a free call"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}
               </button>
               <p className="flex items-start gap-1.5 text-xs text-gray-600">
                 <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
-                <span>By submitting you agree to be contacted by our counsellors. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
+                <span>We never sell your details. <Link href="/privacy" className="font-semibold underline">Privacy policy</Link></span>
               </p>
             </form>
           )}

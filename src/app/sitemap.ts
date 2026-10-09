@@ -215,6 +215,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-gmat`,                 lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-snap`,                 lastModified: "2026-10-04", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba`,                                              lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/mba-counselling`,                                lastModified: "2026-10-09", changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/mba-exam-calendar`,                                  lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/site-map`,                                          lastModified: "2026-10-08", changeFrequency: "weekly",  priority: 0.5 },
     { url: `${BASE_URL}/about`,                                          lastModified: "2026-10-08", changeFrequency: "yearly",  priority: 0.5 },

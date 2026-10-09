@@ -147,7 +147,7 @@ export default function MbaHubPage() {
         {/* Exams */}
         <section aria-labelledby="exams-h">
           <h2 id="exams-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA entrance exams</h2>
-          <p className="mt-1 text-sm text-gray-600">Dates, pattern, eligibility, score vs percentile, preparation and accepting colleges — each with its official source. <Link href="/mba-exam-calendar" className="font-bold text-[#C90D11] hover:underline">See all dates in one calendar →</Link></p>
+          <p className="mt-1 text-sm text-gray-600">Dates, pattern, eligibility, score vs percentile, preparation and accepting colleges — each with its official source. <Link href="/mba-exam-calendar" className="font-bold text-[#C90D11] hover:underline">See all dates in one calendar →</Link> Unsure which exam or college? <Link href="/mba-counselling" className="font-bold text-[#C90D11] hover:underline">Get free MBA counselling →</Link></p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {mbaExams.map((e) => (
               <li key={e.slug} className="rounded-2xl bg-white p-5 ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/10">

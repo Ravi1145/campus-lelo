@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Zap, CheckCircle, Loader2, X } from "lucide-react"
+import { CONSENT_VERSION, ConsentCheckbox } from "./LeadFormParts"
 
 interface NewsAlertProps {
   /** Displayed in the banner heading, e.g. "MHT-CET 2026" */
@@ -14,6 +15,7 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
   const [success, setSuccess] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const [error, setError] = useState("")
+  const [consent, setConsent] = useState(false)
 
   if (dismissed) return null
 
@@ -21,6 +23,10 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
     e.preventDefault()
     if (!/^[6-9]\d{9}$/.test(phone)) {
       setError("Enter a valid 10-digit number")
+      return
+    }
+    if (!consent) {
+      setError("Please tick the consent box")
       return
     }
     setError("")
@@ -32,6 +38,8 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           phone,
+          consent,
+          consent_version: CONSENT_VERSION,
           exam_name:    examName,
           utm_source:   sp.get("utm_source")   || "organic",
           utm_medium:   sp.get("utm_medium")   || "none",
@@ -75,7 +83,8 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full sm:w-auto">
+        <form onSubmit={handleSubmit} className="w-full sm:w-auto sm:max-w-md">
+         <div className="flex items-center gap-2">
           <div className="flex-1 sm:flex-none">
             <input
               type="tel"
@@ -96,6 +105,8 @@ export default function NewsAlert({ examName = "MHT-CET 2026", source = "news_al
             {loading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Zap className="w-3.5 h-3.5" />}
             {loading ? "…" : "Alert Me"}
           </button>
+         </div>
+         <div className="mt-2"><ConsentCheckbox id="alert-consent" checked={consent} onChange={(v) => { setConsent(v); setError("") }} purpose="WhatsApp alerts about exam results and cutoffs" dark compact /></div>
         </form>
 
         {/* Dismiss */}

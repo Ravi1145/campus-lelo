@@ -7,7 +7,11 @@ const phoneRegex = /^[6-9]\d{9}$/
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { phone, exam_name, utm_source, utm_medium, utm_campaign, utm_content } = body
+    const { phone, exam_name, utm_source, utm_medium, utm_campaign, utm_content, consent, consent_version } = body
+
+    if (consent !== true) {
+      return NextResponse.json({ success: false, message: 'Please tick the consent box to subscribe' }, { status: 400 })
+    }
 
     if (!phone || !phoneRegex.test(phone)) {
       return NextResponse.json({ success: false, message: 'Enter a valid 10-digit Indian mobile number' }, { status: 400 })
@@ -20,6 +24,7 @@ export async function POST(req: NextRequest) {
     const messageText = [
       exam_name ? `${exam_name} merit list & cutoff alert subscription` : 'WhatsApp alert subscription',
       utmNote ? `UTM: ${utmNote}` : null,
+      `Consent (DPDP): yes v${String(consent_version ?? "-").slice(0, 20)} ${new Date().toISOString()}`,
     ].filter(Boolean).join('\n')
 
     const { error } = await admin.from('leads').insert({

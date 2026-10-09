@@ -74,8 +74,9 @@ export default function PrivacyPage() {
     {
       title: "8. Children's Privacy",
       content: [
-        "CampusLelo is intended for students aged 17 and above. We do not knowingly collect personal data from children under 13.",
-        "If you believe a child has submitted personal data on our site, please contact us immediately at support@campuslelo.com.",
+        "Under the Digital Personal Data Protection Act 2023 a person under 18 is a child. Our forms ask you to confirm that you are 18 or older, or that a parent or guardian is submitting the form or has agreed to it.",
+        "We do not track, profile or show targeted advertising to children, and we do not knowingly process a child's data without a parent's or guardian's consent.",
+        "If you believe a child has submitted personal data without that consent, email grievance@campuslelo.com and we will delete it.",
       ],
     },
     {
@@ -83,7 +84,7 @@ export default function PrivacyPage() {
       content: [
         "We may update this Privacy Policy from time to time. Significant changes will be communicated via a notice on our homepage.",
         "Your continued use of CampusLelo after the effective date of any changes constitutes acceptance of the updated policy.",
-        "This policy was last updated: May 2026.",
+        "This policy was last updated: October 2026.",
       ],
     },
     {
@@ -97,9 +98,14 @@ export default function PrivacyPage() {
     {
       title: "11. Consent and Your Rights under DPDP Act 2023",
       content: [
-        "By submitting any enquiry or lead form on CampusLelo, you provide free, specific, informed, and unambiguous consent for us to process your personal data as described in this policy.",
+        "Every form that collects your name or mobile number has its own unticked consent box. We process your data for the purpose written next to that box, and only after you tick it. If you do not tick it, the form does not send.",
+        "**Purposes**: contacting you by call or WhatsApp about counselling, college shortlists and admission guidance; sending exam-result, cut-off and scholarship alerts if you asked for them. We do not use your details for anything else without asking again.",
+        "**Who sees it**: our counsellors, and a college or counsellor only when you ask about that college or service. We do not sell your data.",
+        "**Withdrawing consent**: you can withdraw consent as easily as you gave it. Email grievance@campuslelo.com or message us on WhatsApp and we will stop contacting you and erase your data unless the law requires us to keep it.",
+        "**Record of consent**: we keep a record of when you consented and which version of the notice you saw, so we can show that consent was given.",
         "Under the Digital Personal Data Protection Act 2023, you have the right to: (a) access information about your data; (b) correct inaccurate data; (c) erase your data ('right to be forgotten'); (d) nominate a representative for your data rights; (e) grievance redressal.",
         "To exercise any of these rights, email: grievance@campuslelo.com. We will respond within 30 days.",
+        "If you are not satisfied with our response you may complain to the Data Protection Board of India once it is operational.",
       ],
     },
     {

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import dynamic from "next/dynamic"
 import type { CollegeCutoff } from "@/data/cutoffs"
+import { CONSENT_VERSION, ConsentCheckbox } from "@/components/leads/LeadFormParts"
 
 const CutoffChart = dynamic(() => import("./CutoffChart"), { ssr: false })
 
@@ -16,6 +17,7 @@ export default function GatedCutoffChart({ data, slug, height = 260 }: Props) {
   const storageKey = `cutoff_unlocked_${slug}_${data.exam}`
   const [unlocked, setUnlocked] = useState(false)
   const [phone, setPhone] = useState("")
+  const [consent, setConsent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
@@ -31,6 +33,10 @@ export default function GatedCutoffChart({ data, slug, height = 260 }: Props) {
       setError("Enter valid 10-digit mobile number")
       return
     }
+    if (!consent) {
+      setError("Please tick the consent box")
+      return
+    }
     setLoading(true)
     setError("")
     try {
@@ -40,6 +46,8 @@ export default function GatedCutoffChart({ data, slug, height = 260 }: Props) {
         body: JSON.stringify({
           phone,
           source: 'college_page',
+          consent,
+          consent_version: CONSENT_VERSION,
           message: `Cutoff gate: ${slug} / ${data.exam}`,
           utm_source: new URLSearchParams(window.location.search).get("utm_source") || "organic",
         }),
@@ -86,6 +94,7 @@ export default function GatedCutoffChart({ data, slug, height = 260 }: Props) {
               className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100"
               maxLength={10}
             />
+            <div className="text-left"><ConsentCheckbox id={`gate-consent-${slug}`} checked={consent} onChange={(v) => { setConsent(v); setError("") }} purpose="cut-off alerts and admission guidance" compact /></div>
             {error && <p className="text-xs text-red-500">{error}</p>}
             <button
               type="submit"

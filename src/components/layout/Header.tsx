@@ -43,6 +43,7 @@ const streams = [
       { name: "MBA HR →",                   href: "/mba-colleges-in-pune-for-hr" },
       { name: "MBA Colleges Accepting CAT →", href: "/mba-colleges-in-pune-accepting-cat" },
       { name: "All MBA guides →",             href: "/mba" },
+      { name: "MBA Counselling (free) →",      href: "/mba-counselling" },
       { name: "MBA Colleges Delhi NCR →",     href: "/mba-colleges-in-delhi-ncr" },
       { name: "MBA Colleges Delhi →",         href: "/mba-colleges-in-delhi" },
       { name: "MBA Colleges Greater Noida →", href: "/mba-colleges-in-greater-noida" },

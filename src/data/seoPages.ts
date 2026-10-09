@@ -187,7 +187,7 @@ export const seoPages: SEOPage[] = [
   },
   {
     slug: 'clat-colleges-pune',
-    title: 'CLAT Law Colleges in Pune 2026 — Cutoff & Admission',
+    title: 'CLAT Colleges in Pune 2026 — Cutoff & Admission',
     h1: 'CLAT Law Colleges in Pune 2026',
     description: 'Law colleges in Pune accepting CLAT scores — Symbiosis Law, ILS Law & more. Check CLAT cutoffs, fees, and LLB/LLM programs.',
     keywords: ['clat colleges pune', 'clat cutoff pune 2026', 'law college admission pune clat'],
@@ -207,7 +207,7 @@ export const seoPages: SEOPage[] = [
   },
   {
     slug: 'colleges-in-shivajinagar-pune',
-    title: 'Colleges in Shivajinagar, Pune 2026 — List & Fees',
+    title: 'Colleges in Shivajinagar, Pune 2026 — Fees',
     h1: 'Colleges in Shivajinagar, Pune',
     description: 'Best colleges near Shivajinagar, Pune — COEP, Fergusson, Modern College & more. Central Pune colleges with easy commute access.',
     keywords: ['colleges in shivajinagar pune', 'shivajinagar college list', 'engineering college shivajinagar'],
@@ -241,7 +241,7 @@ export const seoPages: SEOPage[] = [
   },
   {
     slug: 'nirf-ranked-colleges-pune',
-    title: 'NIRF Ranked Colleges in Pune 2026 — Official Rankings',
+    title: 'NIRF Ranked Colleges in Pune 2026 — Rankings',
     h1: 'NIRF Ranked Colleges in Pune 2026',
     description: 'Colleges in Pune with official NIRF rankings 2026. Compare research output, placements, perception scores, and overall NIRF score.',
     keywords: ['nirf ranked colleges pune', 'nirf ranking pune college 2026', 'top nirf college pune'],
@@ -259,7 +259,7 @@ export const seoPages: SEOPage[] = [
   },
   {
     slug: 'deemed-universities-pune',
-    title: 'Deemed Universities in Pune 2026 — Rankings & Fees',
+    title: 'Deemed Universities in Pune 2026 — Fees',
     h1: 'Deemed Universities in Pune 2026',
     description: 'List of deemed universities in Pune — Symbiosis, DY Patil, MIT-ADT, BVDU & more. Compare programs, fees, rankings, and research output.',
     keywords: ['deemed universities in pune', 'deemed university pune list 2026', 'private university pune'],

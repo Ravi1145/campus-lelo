@@ -20,7 +20,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 // Group rules, first match wins. Titles are generated from the URL, so a new page
 // shows up here automatically the moment it is added to the XML sitemap.
 const GROUPS: { title: string; test: (p: string) => boolean }[] = [
-  { title: "Start here", test: (p) => ["/", "/colleges", "/mba", "/counselling", "/ai-finder", "/compare", "/predictor", "/scholarships", "/alumni", "/exams", "/courses", "/blog", "/news", "/qa", "/events", "/placements", "/admission-guide"].includes(p) },
+  { title: "Start here", test: (p) => ["/", "/colleges", "/mba", "/counselling", "/mba-counselling", "/ai-finder", "/compare", "/predictor", "/scholarships", "/alumni", "/exams", "/courses", "/blog", "/news", "/qa", "/events", "/placements", "/admission-guide"].includes(p) },
   { title: "MBA & PGDM", test: (p) => /mba|pgdm|^\/exams\/(cat|xat|snap|cmat|mat|nmat|atma|gmat|mah-mba-cet)/.test(p) },
   { title: "Engineering & B.Tech", test: (p) => /btech|engineering|jee|mht-cet|mechanical|computer|data-science|mtech|mca|bca|bsc-it/.test(p) },
   { title: "Medical, Law, Design & other streams", test: (p) => /medical|mbbs|neet|law|design|arts|commerce|bcom|bba|science|bsc|architecture|pharmacy/.test(p) },

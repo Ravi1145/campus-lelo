@@ -136,6 +136,7 @@ export function counsellingMarkdown(base: string): string {
     `- Payment: the student requests a slot, CampusLelo confirms it on WhatsApp and sends a payment link. No payment is taken on the website.`,
     `- Always free for every student: scholarship information (${base}/scholarships) and alumni connection (${base}/alumni).`,
     `- CampusLelo does not guarantee admission to any college.`,
+    `- MBA and PGDM students: free counselling on admission, exam choice and management career guidance at ${base}/mba-counselling.`,
     `- Book or compare plans: ${base}/counselling (last reviewed ${COUNSELLING_UPDATED}).`,
   ].join("\n")
 }

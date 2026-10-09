@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       email:           validated.email || null,
       college_interest: validated.college_name,
       course_interest: validated.course ?? null,
-      message:         validated.message ?? null,
+      message:         [validated.message, `[consent: yes v${validated.consent_version ?? "-"} ${new Date().toISOString()}]`].filter(Boolean).join(" "),
       source:          'enquiry_form',
       page_url:        referer || null,
       status:          'new',

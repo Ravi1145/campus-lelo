@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Bell, CheckCircle, Loader2 } from "lucide-react"
+import { CONSENT_VERSION, ConsentCheckbox } from "./LeadFormParts"
 
 interface ScholarshipSubscribeProps {
   context?: string
@@ -11,11 +12,16 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState("")
+  const [consent, setConsent] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!/^[6-9]\d{9}$/.test(phone)) {
       setError("Enter a valid 10-digit mobile number")
+      return
+    }
+    if (!consent) {
+      setError("Please tick the consent box")
       return
     }
     setError("")
@@ -27,6 +33,8 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           phone,
+          consent,
+          consent_version: CONSENT_VERSION,
           source:       context,
           message:      "Scholarship alert subscription",
           utm_source:   sp.get("utm_source")   || "organic",
@@ -76,7 +84,8 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
             </p>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5">
+        <form onSubmit={handleSubmit}>
+         <div className="flex flex-col sm:flex-row gap-2.5">
           <div className="flex-1 min-w-0">
             <input
               type="tel"
@@ -97,6 +106,8 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Bell className="w-4 h-4" />}
             {loading ? "Saving…" : "Alert Me"}
           </button>
+         </div>
+         <div className="mt-3"><ConsentCheckbox id="sch-consent" checked={consent} onChange={(v) => { setConsent(v); setError("") }} purpose="WhatsApp alerts about scholarships and deadlines" dark compact /></div>
         </form>
         <p className="text-xs mt-3" style={{ color: "rgba(148,175,210,0.75)" }}>
           🔒 Only used for scholarship alerts. Unsubscribe any time.
