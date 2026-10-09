@@ -175,7 +175,7 @@ export default function EventsPage() {
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
-      <main className="min-h-screen bg-[#F6F8FB]">
+      <div className="min-h-screen bg-[#F6F8FB]">
 
         {/* Hero */}
         <section className="bg-white border-b border-gray-100">
@@ -277,7 +277,7 @@ export default function EventsPage() {
                     { exam: "MAH-MBA-CET", date: "March 2026",    href: "/exams/mah-mba-cet" },
                     { exam: "JEE Main",    date: "Jan & Apr 2026",href: "/exams/jee-main" },
                     { exam: "NEET UG",     date: "May 2026",      href: "/exams/neet" },
-                    { exam: "CLAT",        date: "December 2026", href: "/exams/clat" },
+                    { exam: "CLAT",        date: "December 2026", href: "/colleges?exam=CLAT" },
                     { exam: "CAT 2026",    date: "November 2026", href: "/exams/cat" },
                     { exam: "SNAP 2026",   date: "December 2026", href: "/exams/snap" },
                   ].map(e => (
@@ -337,7 +337,7 @@ export default function EventsPage() {
             ))}
           </div>
         </section>
-      </main>
+      </div>
     </>
   )
 }

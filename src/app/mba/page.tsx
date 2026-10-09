@@ -51,6 +51,17 @@ export default function MbaHubPage() {
   const g = hubGroups()
   const guides = Array.from(new Map(g.topics.filter((c) => c.pillar.startsWith("/blog/")).map((c) => [c.pillar, c])).values())
   const breadcrumb = generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "MBA & PGDM guide", url: "/mba" }])
+  const webPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://campuslelo.com/mba",
+    url: "https://campuslelo.com/mba",
+    name: "MBA & PGDM in India: exams, colleges, cut-offs and guides",
+    inLanguage: "en-IN",
+    dateModified: "2026-10-05",
+    isPartOf: { "@id": "https://campuslelo.com/#website" },
+    publisher: { "@type": "Organization", name: "CampusLelo", url: "https://campuslelo.com" },
+  }
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -61,6 +72,7 @@ export default function MbaHubPage() {
   return (
     <>
       <script id="breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
+      <script id="webpage" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPage) }} />
       <script id="item-list" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemList) }} />
 
       {/* Header */}
@@ -77,6 +89,7 @@ export default function MbaHubPage() {
           <p className="hero-in mt-4 max-w-2xl text-base leading-relaxed text-blue-100 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
             One place to start your MBA or PGDM search. Pick your city, your exam or your question — every page links to its official sources, and we show no number we cannot verify.
           </p>
+          <p className="hero-in mt-3 text-xs text-blue-200" style={{ "--i": 2 } as React.CSSProperties}>Last updated <time dateTime="2026-10-05">5 October 2026</time></p>
           <div className="hero-in mt-7 flex flex-wrap gap-3" style={{ "--i": 3 } as React.CSSProperties}>
             <Link href="/mba-vs-pgdm" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#012858] shadow-lg transition-transform hover:-translate-y-0.5"><GitCompare className="h-4 w-4" aria-hidden="true" /> MBA vs PGDM</Link>
             <Link href="/ai-finder" className="inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/25 transition-transform hover:-translate-y-0.5 hover:bg-[#C90D11]"><Sparkles className="h-4 w-4" aria-hidden="true" /> Find my MBA college</Link>
@@ -110,6 +123,15 @@ export default function MbaHubPage() {
         {/* Cities */}
         <section aria-labelledby="cities-h">
           <h2 id="cities-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><MapPin className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA &amp; PGDM by city</h2>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {[
+              ["MBA colleges in Delhi", "/mba-colleges-in-delhi"], ["MBA colleges in Delhi NCR", "/mba-colleges-in-delhi-ncr"], ["PGDM colleges in Delhi NCR", "/pgdm-colleges-in-delhi-ncr"],
+              ["MBA colleges in Greater Noida", "/mba-colleges-in-greater-noida"], ["MBA colleges in Noida", "/mba-colleges-noida"], ["MBA without CAT in Delhi NCR", "/mba-colleges-in-delhi-ncr-without-cat"],
+              ["MBA colleges in Pune", "/mba-colleges-in-pune"],
+            ].map(([label, href]) => (
+              <li key={href}><Link href={href} className="inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">{label}</Link></li>
+            ))}
+          </ul>
           <div className="mt-6 space-y-10">
             {g.cities.map((city) => (
               <div key={city.key}>

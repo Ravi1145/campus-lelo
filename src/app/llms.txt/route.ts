@@ -151,6 +151,13 @@ Key profiles:
 - ${BASE}/blog — ${blogCount}+ admission guides and college articles
 - ${BASE}/exams — Guide to all entrance exams
 - ${BASE}/scholarships — MahaDBT, NSP, and college-specific scholarships
+- ${BASE}/mba — MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
+- ${BASE}/mba-exam-calendar — Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
+- ${BASE}/mba-cutoff-delhi-ncr — Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none
+- ${BASE}/mba-vs-pgdm — MBA vs PGDM explained
+- ${BASE}/editorial-policy — How facts are sourced and corrected
+- ${BASE}/site-map — Every page, grouped
+- ${BASE}/llms-full.txt — Full machine-readable reference (generated from site data)
 
 ## Frequently Asked Questions
 

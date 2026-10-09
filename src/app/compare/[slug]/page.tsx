@@ -7,7 +7,6 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 // All pre-defined comparison pairs for static generation + sitemap
 export const COMPARISON_PAIRS = [
-  ["coep-college-of-engineering-pune", "pict-pune-institute-of-computer-technology"],
   ["coep-college-of-engineering-pune", "vit-pune-vishwakarma-institute-of-technology"],
   ["coep-college-of-engineering-pune", "mit-wpu-mit-world-peace-university"],
   ["pict-pune-institute-of-computer-technology", "vit-pune-vishwakarma-institute-of-technology"],

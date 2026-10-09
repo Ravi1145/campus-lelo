@@ -72,7 +72,7 @@ export default function EngineeringCollegesNoidaPage() {
           engineeringColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}` }))
         )) }} />
 
-      <main style={{ background: "#F7F9FC" }}>
+      <div style={{ background: "#F7F9FC" }}>
 
         {/* Hero */}
         <section style={{ background: "#012858" }} className="py-10 px-4">
@@ -235,7 +235,7 @@ export default function EngineeringCollegesNoidaPage() {
             </div>
           </section>
         </div>
-      </main>
+      </div>
     </>
   )
 }

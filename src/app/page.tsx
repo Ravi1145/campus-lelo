@@ -20,6 +20,7 @@ const RankingTables       = dynamic(() => import("@/components/home/RankingTable
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
 const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
 import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
+import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
@@ -117,7 +118,7 @@ export default function HomePage() {
         ])) }}
       />
 
-      <main>
+      <div>
         {/* 1. Hero */}
         <HeroSection />
 
@@ -157,8 +158,9 @@ export default function HomePage() {
         <GuidesScrollSection />
 
         {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
+        <WhatIsCampusLelo />
         <PuneCollegeGuide />
-      </main>
+      </div>
     </>
   )
 }

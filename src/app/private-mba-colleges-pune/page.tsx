@@ -28,7 +28,7 @@ const colleges = [
     fees: "₹8L–₹11L/yr (₹16L–₹22L total)",
     placement: "₹18.2 LPA avg",
     exam: "SNAP",
-    slug: "sibm-symbiosis-institute-of-business-management-pune",
+    slug: "sibm-symbiosis-institute-business-management-pune",
     highlight: "Top MBA in Pune",
   },
   {
@@ -50,7 +50,7 @@ const colleges = [
     fees: "₹3.5L–₹5.5L/yr (₹7L–₹11L total)",
     placement: "₹8.5 LPA avg",
     exam: "CAT / MAT / CMAT",
-    slug: "mit-som-mit-school-of-management-pune",
+    slug: "mit-school-of-management-pune",
     highlight: "Best Value MBA",
   },
   {

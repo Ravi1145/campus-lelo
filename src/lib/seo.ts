@@ -5,6 +5,34 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const SITE_NAME = "CampusLelo"
 const DEFAULT_OG_IMAGE = `${BASE_URL}/api/og`
 
+/** Search results cut titles at ~60 characters: drop trailing "| segments" (brand first) until it fits. */
+export function fitTitle(title: string, max = 58): string {
+  if (title.length <= max) return title
+  // 1) drop trailing "| segments", 2) then trailing "— segments", always keeping the first part
+  for (const sep of [" | ", " — "]) {
+    const parts = title.split(sep)
+    while (parts.length > 1 && parts.join(sep).length > max) parts.pop()
+    title = parts.join(sep)
+    if (title.length <= max) break
+  }
+  return title
+}
+
+/** Long institution names (e.g. "… Medical College & Sassoon General Hospital") use the short name in titles. */
+export function titleName(c: { name: string; shortName?: string }, max = 34): string {
+  return c.name.length > max && c.shortName ? c.shortName : c.name
+}
+
+/** …and descriptions at ~160: cut at a sentence end if possible, else at a word. */
+export function fitDescription(text: string, max = 145): string {
+  if (text.length <= max) return text
+  const cut = text.slice(0, max - 1)
+  const sentence = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("! "))
+  if (sentence > 90) return cut.slice(0, sentence + 1)
+  const word = cut.lastIndexOf(" ")
+  return cut.slice(0, word > 90 ? word : cut.length).replace(/[,;:\-–—]+$/, "") + "…"
+}
+
 export function generateMetadata({
   title,
   description,
@@ -21,8 +49,8 @@ export function generateMetadata({
   const canonicalUrl = `${BASE_URL}${path}`
 
   return {
-    title: { absolute: title },
-    description,
+    title: { absolute: fitTitle(title) },
+    description: fitDescription(description),
     keywords: [
       "colleges in pune",
       "colleges in pune 2026",

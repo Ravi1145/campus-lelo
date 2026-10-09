@@ -38,9 +38,9 @@ const categories = [
     stream: "Arts, Science & Commerce",
     colleges: [
       { name: "Fergusson College", slug: "fergusson-college-pune", nirf: null, naac: "A+", note: "Autonomous" },
-      { name: "SP College", slug: "sp-college-pune", nirf: null, naac: "A+", note: "Autonomous" },
+      { name: "SP College", slug: "sp-college-pune-sir-parashurambhau-college", nirf: null, naac: "A+", note: "Autonomous" },
       { name: "Garware College of Commerce", slug: "garware-college-of-commerce-pune", nirf: null, naac: "A", note: "SPPU Affiliated" },
-      { name: "Modern College Pune", slug: "modern-college-pune", nirf: null, naac: "A", note: "Autonomous" },
+      { name: "Modern College Pune", slug: "modern-college-of-arts-science-commerce-pune", nirf: null, naac: "A", note: "Autonomous" },
     ],
   },
 ]

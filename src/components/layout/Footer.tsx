@@ -227,7 +227,9 @@ export default function Footer() {
             <Link href="/terms"      className="hover:text-gray-300 transition-colors">Terms of Use</Link>
             <Link href="/editorial-policy" className="hover:text-gray-300 transition-colors">Editorial Policy</Link>
             <Link href="/mba-exam-calendar" className="hover:text-gray-300 transition-colors">MBA Exam Calendar</Link>
+            <Link href="/about" className="hover:text-gray-300 transition-colors">About Us</Link>
             <Link href="/press" className="hover:text-gray-300 transition-colors">Press &amp; Media Kit</Link>
+            <Link href="/site-map" className="hover:text-gray-300 transition-colors">Site Map</Link>
             <Link href="/sitemap.xml" className="hover:text-gray-300 transition-colors">Sitemap</Link>
           </div>
         </div>

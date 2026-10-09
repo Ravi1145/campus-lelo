@@ -39,7 +39,7 @@ function Initials({ name, className = "" }: { name: string; className?: string }
 
 export default function AlumniPage() {
   return (
-    <main className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -99,6 +99,6 @@ export default function AlumniPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

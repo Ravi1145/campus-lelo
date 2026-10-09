@@ -126,7 +126,7 @@
   "intent": "commercial",
   "pillar": "/blog/how-to-choose-an-mba-college-in-india",
   "supporting": [
-   "/best-mba-colleges-pune",
+   "/mba-colleges-pune",
    "/mba-colleges-noida",
    "/compare"
   ],
@@ -245,8 +245,13 @@
   "size": 118,
   "signal": 999,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr",
+   "/pgdm-colleges-in-delhi-ncr",
+   "/mba-colleges-in-delhi-accepting-cat",
+   "/mba-colleges-in-delhi-ncr-accepting-cmat"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -459,8 +464,13 @@
   "size": 104,
   "signal": 829,
   "intent": "commercial",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi-ncr",
+  "supporting": [
+   "/mba-colleges-in-delhi",
+   "/pgdm-colleges-in-delhi-ncr",
+   "/mba-colleges-in-delhi-ncr-accepting-cat",
+   "/mba-colleges-in-delhi-ncr-accepting-cmat"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -766,8 +776,11 @@
   "size": 91,
   "signal": 732,
   "intent": "commercial",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr",
+   "/pgdm-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -906,8 +919,10 @@
   "size": 79,
   "signal": 583,
   "intent": "commercial",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -935,6 +950,7 @@
   "intent": "commercial",
   "pillar": "/mba-colleges-noida",
   "supporting": [
+   "/mba-colleges-in-greater-noida",
    "/pgdm-colleges-noida"
   ],
   "article": false,
@@ -991,7 +1007,7 @@
   "size": 49,
   "signal": 476,
   "intent": "transactional",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+  "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
   "supporting": [],
   "article": false,
   "coverage": 100,
@@ -1018,8 +1034,10 @@
   "size": 53,
   "signal": 472,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -1047,6 +1065,7 @@
   "intent": "informational",
   "pillar": "/mba-colleges-noida",
   "supporting": [
+   "/mba-colleges-in-greater-noida",
    "/pgdm-colleges-noida"
   ],
   "article": false,
@@ -1075,7 +1094,9 @@
   "signal": 471,
   "intent": "commercial",
   "pillar": "/mba-colleges-noida",
-  "supporting": [],
+  "supporting": [
+   "/mba-colleges-in-greater-noida"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -1128,15 +1149,10 @@
   "size": 52,
   "signal": 435,
   "intent": "commercial",
-  "pillar": "/best-mba-colleges-pune",
-  "supporting": [
-   "/pgdm-colleges-pune",
-   "/top-10-mba-colleges-in-pune",
-   "/mba-colleges-in-pune-accepting-cmat",
-   "/mba-colleges-in-pune-accepting-mh-cet"
-  ],
+  "pillar": null,
+  "supporting": [],
   "article": false,
-  "coverage": 96,
+  "coverage": 15,
   "keywords": [
    "mba colleges in pune list",
    "mba colleges in pune rank wise",
@@ -1275,8 +1291,7 @@
   "intent": "commercial",
   "pillar": "/exams/cat/score-vs-percentile",
   "supporting": [
-   "/mba-cutoff-delhi-ncr",
-   "/blog/mba-colleges-delhi-ncr-noida-guide"
+   "/mba-cutoff-delhi-ncr"
   ],
   "article": false,
   "coverage": 86,
@@ -1720,7 +1735,10 @@
   "signal": 204,
   "intent": "commercial",
   "pillar": "/mba-colleges-noida",
-  "supporting": [],
+  "supporting": [
+   "/mba-colleges-in-greater-noida",
+   "/pgdm-colleges-noida"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -1976,8 +1994,11 @@
   "size": 23,
   "signal": 167,
   "intent": "commercial",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr",
+   "/mba-colleges-in-delhi-ncr-accepting-gmat"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2059,8 +2080,10 @@
   "size": 19,
   "signal": 156,
   "intent": "transactional",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2088,7 +2111,7 @@
   "intent": "commercial",
   "pillar": "/exams/cmat/score-vs-percentile",
   "supporting": [
-   "/blog/mba-colleges-delhi-ncr-noida-guide"
+   "/mba-cutoff-delhi-ncr"
   ],
   "article": false,
   "coverage": 88,
@@ -2200,7 +2223,9 @@
   "signal": 150,
   "intent": "informational",
   "pillar": "/mba-colleges-noida",
-  "supporting": [],
+  "supporting": [
+   "/mba-colleges-in-greater-noida"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2464,8 +2489,11 @@
   "size": 15,
   "signal": 125,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr",
+   "/mba-colleges-in-delhi-accepting-cat"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2551,10 +2579,8 @@
   "size": 11,
   "signal": 116,
   "intent": "transactional",
-  "pillar": "/mba-colleges-noida",
-  "supporting": [
-   "/blog/mba-colleges-delhi-ncr-noida-guide"
-  ],
+  "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
+  "supporting": [],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2771,8 +2797,10 @@
   "size": 6,
   "signal": 64,
   "intent": "transactional",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-noida",
+  "supporting": [
+   "/mba-colleges-in-greater-noida"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2872,8 +2900,10 @@
   "size": 6,
   "signal": 47,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2891,7 +2921,7 @@
   "size": 5,
   "signal": 46,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+  "pillar": "/mba-colleges-noida",
   "supporting": [],
   "article": false,
   "coverage": 100,
@@ -2909,8 +2939,10 @@
   "size": 8,
   "signal": 45,
   "intent": "transactional",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2930,8 +2962,10 @@
   "size": 5,
   "signal": 45,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi",
+  "supporting": [
+   "/mba-colleges-in-delhi-ncr"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [
@@ -2967,7 +3001,7 @@
   "size": 5,
   "signal": 39,
   "intent": "commercial",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+  "pillar": "/mba-cutoff-delhi-ncr",
   "supporting": [],
   "article": false,
   "coverage": 100,
@@ -3090,8 +3124,10 @@
   "size": 4,
   "signal": 21,
   "intent": "informational",
-  "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-  "supporting": [],
+  "pillar": "/mba-colleges-in-delhi-ncr",
+  "supporting": [
+   "/mba-colleges-in-delhi"
+  ],
   "article": false,
   "coverage": 100,
   "keywords": [

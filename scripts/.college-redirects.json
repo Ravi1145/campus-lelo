@@ -1,0 +1,698 @@
+[
+ {
+  "dead": "abhinav-college-commerce-pune",
+  "to": "/colleges?search=abhinav",
+  "how": "search",
+  "closest": "garware-college-of-commerce-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "aims-institute-management-pune",
+  "to": "/colleges?search=aims",
+  "how": "search",
+  "closest": "indira-institute-of-management-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "balaji-institute-management-research-pune",
+  "to": "/colleges?search=balaji%20research",
+  "how": "search",
+  "closest": "balaji-institute-of-modern-management-pune",
+  "k": 0.5,
+  "s": 0.57
+ },
+ {
+  "dead": "bharati-vidyapeeth-college-pharmacy-pune",
+  "to": "/colleges/bharati-vidyapeeth-medical-college-pune",
+  "how": "match",
+  "closest": "bharati-vidyapeeth-medical-college-pune",
+  "k": 0.67,
+  "s": 0.67
+ },
+ {
+  "dead": "bharati-vidyapeeth-institute-management-pune",
+  "to": "/colleges?search=bharati%20vidyapeeth",
+  "how": "search",
+  "closest": "bharati-vidyapeeth-medical-college-pune",
+  "k": 1,
+  "s": 0.43
+ },
+ {
+  "dead": "bharati-vidyapeeth-law-college-pune",
+  "to": "/colleges/bharati-vidyapeeth-medical-college-pune",
+  "how": "match",
+  "closest": "bharati-vidyapeeth-medical-college-pune",
+  "k": 0.67,
+  "s": 0.67
+ },
+ {
+  "dead": "bimm-balaji-institute-modern-management",
+  "to": "/colleges/balaji-institute-of-modern-management-pune",
+  "how": "match",
+  "closest": "balaji-institute-of-modern-management-pune",
+  "k": 0.67,
+  "s": 0.57
+ },
+ {
+  "dead": "bimm-bharati-vidyapeeth-institute-management-pune",
+  "to": "/colleges?search=bimm%20bharati%20vidyapeeth",
+  "how": "search",
+  "closest": "bharati-vidyapeeth-medical-college-pune",
+  "k": 0.67,
+  "s": 0.38
+ },
+ {
+  "dead": "bj-government-medical-college-pune",
+  "to": "/colleges?search=bj%20government",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0.5,
+  "s": 0.8
+ },
+ {
+  "dead": "bmcc-brihan-maharashtra-college-commerce-pune",
+  "to": "/colleges/bmcc-brihan-maharashtra-college-of-commerce-pune",
+  "how": "match",
+  "closest": "bmcc-brihan-maharashtra-college-of-commerce-pune",
+  "k": 1,
+  "s": 0.86
+ },
+ {
+  "dead": "bmcc-pune",
+  "to": "/colleges?search=bmcc",
+  "how": "search",
+  "closest": "bmcc-brihan-maharashtra-college-of-commerce-pune",
+  "k": 1,
+  "s": 0.29
+ },
+ {
+  "dead": "college-of-engineering-pune-coep",
+  "to": "/colleges/coep-college-of-engineering-pune",
+  "how": "match",
+  "closest": "coep-college-of-engineering-pune",
+  "k": 1,
+  "s": 1
+ },
+ {
+  "dead": "command-hospital-medical-college-pune",
+  "to": "/colleges?search=command%20hospital",
+  "how": "search",
+  "closest": "deenanath-mangeshkar-hospital-research-centre",
+  "k": 0.5,
+  "s": 0.11
+ },
+ {
+  "dead": "datta-meghe-medical-college-pune",
+  "to": "/colleges?search=datta%20meghe",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "deenanath-mangeshkar-medical-college-pune",
+  "to": "/colleges?search=deenanath%20mangeshkar",
+  "how": "search",
+  "closest": "deenanath-mangeshkar-hospital-research-centre",
+  "k": 1,
+  "s": 0.25
+ },
+ {
+  "dead": "dvvpf-medical-college-ahmednagar-pune",
+  "to": "/colleges?search=dvvpf%20ahmednagar",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "dy-patil-medical-college-pune",
+  "to": "/colleges/dy-patil-medical-college-pimpri-pune",
+  "how": "match",
+  "closest": "dy-patil-medical-college-pimpri-pune",
+  "k": 1,
+  "s": 0.83
+ },
+ {
+  "dead": "dy-patil-school-of-management-hadapsar-pune",
+  "to": "/colleges/dy-patil-business-school-pune",
+  "how": "match",
+  "closest": "dy-patil-business-school-pune",
+  "k": 0.67,
+  "s": 0.5
+ },
+ {
+  "dead": "dy-patil-university-pimpri-pune",
+  "to": "/colleges/dy-patil-medical-college-pimpri-pune",
+  "how": "match",
+  "closest": "dy-patil-medical-college-pimpri-pune",
+  "k": 1,
+  "s": 0.57
+ },
+ {
+  "dead": "dy-patil-university-pune",
+  "to": "/colleges/ajeenkya-dy-patil-university-pune",
+  "how": "match",
+  "closest": "ajeenkya-dy-patil-university-pune",
+  "k": 1,
+  "s": 0.8
+ },
+ {
+  "dead": "government-college-of-engineering-pune",
+  "to": "/colleges?search=government",
+  "how": "search",
+  "closest": "byramjee-jeejeebhoy-government-medical-college",
+  "k": 1,
+  "s": 0.25
+ },
+ {
+  "dead": "government-college-pharmacy-pune",
+  "to": "/colleges?search=government%20pharmacy",
+  "how": "search",
+  "closest": "byramjee-jeejeebhoy-government-medical-college",
+  "k": 0.5,
+  "s": 0.29
+ },
+ {
+  "dead": "government-polytechnic-pune",
+  "to": "/colleges?search=government%20polytechnic",
+  "how": "search",
+  "closest": "byramjee-jeejeebhoy-government-medical-college",
+  "k": 0.5,
+  "s": 0.14
+ },
+ {
+  "dead": "gsmoze-college-engineering-pune",
+  "to": "/colleges?search=gsmoze",
+  "how": "search",
+  "closest": "coep-college-of-engineering-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "iiitp-international-institute-information-technology-pune",
+  "to": "/colleges/i2it-international-institute-information-technology-pune",
+  "how": "match",
+  "closest": "i2it-international-institute-information-technology-pune",
+  "k": 0.67,
+  "s": 0.71
+ },
+ {
+  "dead": "iimc-pune-indian-institute-management-commerce",
+  "to": "/colleges?search=iimc%20indian",
+  "how": "search",
+  "closest": "iiser-pune-indian-institute-science-education-research",
+  "k": 0.5,
+  "s": 0.3
+ },
+ {
+  "dead": "iims-pune",
+  "to": "/colleges?search=iims",
+  "how": "search",
+  "closest": "imed-pune",
+  "k": 0,
+  "s": 0.33
+ },
+ {
+  "dead": "imt-ghaziabad",
+  "to": "/colleges?search=imt%20ghaziabad",
+  "how": "search",
+  "closest": "kiet-ghaziabad",
+  "k": 0.5,
+  "s": 0.33
+ },
+ {
+  "dead": "indira-college-architecture-pune",
+  "to": "/colleges?search=indira%20architecture",
+  "how": "search",
+  "closest": "indira-college-of-engineering-management-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "indira-college-pharmacy-pune",
+  "to": "/colleges?search=indira%20pharmacy",
+  "how": "search",
+  "closest": "indira-college-of-engineering-management-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "indsearch-institute-management-pune",
+  "to": "/colleges/indsearch-institute-of-management-pune",
+  "how": "match",
+  "closest": "indsearch-institute-of-management-pune",
+  "k": 1,
+  "s": 0.8
+ },
+ {
+  "dead": "jspm-charak-college-pharmacy-pune",
+  "to": "/colleges?search=jspm%20charak%20pharmacy",
+  "how": "search",
+  "closest": "jspm-rscoe-rajarshi-shahu-college-of-engineering",
+  "k": 0.33,
+  "s": 0.2
+ },
+ {
+  "dead": "jspm-imperial-college-engineering-pune",
+  "to": "/colleges?search=jspm%20imperial",
+  "how": "search",
+  "closest": "jspm-rscoe-rajarshi-shahu-college-of-engineering",
+  "k": 0.5,
+  "s": 0.33
+ },
+ {
+  "dead": "jspm-rajarshi-shahu-college-engineering-pune",
+  "to": "/colleges/jspm-rscoe-rajarshi-shahu-college-of-engineering",
+  "how": "match",
+  "closest": "jspm-rscoe-rajarshi-shahu-college-of-engineering",
+  "k": 1,
+  "s": 0.63
+ },
+ {
+  "dead": "maeer-mit-college-engineering-pune",
+  "to": "/colleges?search=maeer%20mit",
+  "how": "search",
+  "closest": "mit-arts-commerce-science-college-pune",
+  "k": 0.5,
+  "s": 0.38
+ },
+ {
+  "dead": "maeer-mit-institute-management-pune",
+  "to": "/colleges?search=maeer%20mit",
+  "how": "search",
+  "closest": "mit-school-of-management-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "maeer-mit-polytechnic-pune",
+  "to": "/colleges?search=maeer%20mit%20polytechnic",
+  "how": "search",
+  "closest": "mmca-maeer-pune",
+  "k": 0.33,
+  "s": 0.4
+ },
+ {
+  "dead": "mims-medical-college-pune",
+  "to": "/colleges?search=mims",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0,
+  "s": 0.6
+ },
+ {
+  "dead": "mit-adt-university-pune",
+  "to": "/colleges?search=mit%20adt",
+  "how": "search",
+  "closest": "mit-arts-design-technology-university-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "mit-college-arts-commerce-science-pune",
+  "to": "/colleges/mit-arts-commerce-science-college-pune",
+  "how": "match",
+  "closest": "mit-arts-commerce-science-college-pune",
+  "k": 1,
+  "s": 1
+ },
+ {
+  "dead": "mit-college-commerce-pune",
+  "to": "/colleges/mit-arts-commerce-science-college-pune",
+  "how": "match",
+  "closest": "mit-arts-commerce-science-college-pune",
+  "k": 1,
+  "s": 0.67
+ },
+ {
+  "dead": "mit-college-engineering-pune",
+  "to": "/colleges?search=mit",
+  "how": "search",
+  "closest": "mit-arts-commerce-science-college-pune",
+  "k": 1,
+  "s": 0.43
+ },
+ {
+  "dead": "mit-college-of-engineering-pune",
+  "to": "/colleges/mitaoe-mit-academy-of-engineering-alandi-pune",
+  "how": "match",
+  "closest": "mitaoe-mit-academy-of-engineering-alandi-pune",
+  "k": 1,
+  "s": 0.5
+ },
+ {
+  "dead": "mit-college-of-pharmacy-pune",
+  "to": "/colleges?search=mit%20pharmacy",
+  "how": "search",
+  "closest": "mit-school-of-management-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "mit-id-mit-institute-of-design-pune",
+  "to": "/colleges/mit-institute-of-design-pune",
+  "how": "match",
+  "closest": "mit-institute-of-design-pune",
+  "k": 0.67,
+  "s": 0.83
+ },
+ {
+  "dead": "mit-school-of-business-pune",
+  "to": "/colleges?search=mit%20business",
+  "how": "search",
+  "closest": "mit-school-of-management-pune",
+  "k": 0.5,
+  "s": 0.67
+ },
+ {
+  "dead": "mit-school-of-law-pune",
+  "to": "/colleges?search=mit%20law",
+  "how": "search",
+  "closest": "mit-school-of-management-pune",
+  "k": 0.5,
+  "s": 0.67
+ },
+ {
+  "dead": "mit-som-mit-school-of-management-pune",
+  "to": "/colleges?search=mit%20som%20mit",
+  "how": "search",
+  "closest": "mit-school-of-management-pune",
+  "k": 0.5,
+  "s": 0.83
+ },
+ {
+  "dead": "mit-world-peace-university-mitwpu",
+  "to": "/colleges/mit-wpu-mit-world-peace-university",
+  "how": "match",
+  "closest": "mit-wpu-mit-world-peace-university",
+  "k": 0.75,
+  "s": 0.67
+ },
+ {
+  "dead": "mit-world-peace-university-pune",
+  "to": "/colleges/mit-wpu-mit-world-peace-university",
+  "how": "match",
+  "closest": "mit-wpu-mit-world-peace-university",
+  "k": 1,
+  "s": 0.67
+ },
+ {
+  "dead": "mit-wpu-mit-world-peace-university-pune",
+  "to": "/colleges/mit-wpu-mit-world-peace-university",
+  "how": "match",
+  "closest": "mit-wpu-mit-world-peace-university",
+  "k": 1,
+  "s": 0.83
+ },
+ {
+  "dead": "mmmcs-pune",
+  "to": "/colleges?search=mmmcs",
+  "how": "search",
+  "closest": "imed-pune",
+  "k": 0,
+  "s": 0.33
+ },
+ {
+  "dead": "mnlu-maharashtra-national-law-university-pune",
+  "to": "/colleges?search=mnlu%20maharashtra%20national%20law",
+  "how": "search",
+  "closest": "tilak-maharashtra-university-pune",
+  "k": 0.25,
+  "s": 0.43
+ },
+ {
+  "dead": "modern-college-pune",
+  "to": "/colleges?search=modern",
+  "how": "search",
+  "closest": "modern-college-of-arts-science-commerce-pune",
+  "k": 1,
+  "s": 0.43
+ },
+ {
+  "dead": "modern-law-college-pune",
+  "to": "/colleges?search=modern%20law",
+  "how": "search",
+  "closest": "ils-law-college-pune",
+  "k": 0.5,
+  "s": 0.6
+ },
+ {
+  "dead": "pccoe-pimpri-chinchwad-college-of-engineering",
+  "to": "/colleges/pccoer-pimpri-chinchwad-college-of-engineering",
+  "how": "match",
+  "closest": "pccoer-pimpri-chinchwad-college-of-engineering",
+  "k": 0.67,
+  "s": 0.71
+ },
+ {
+  "dead": "pimpri-chinchwad-college-engineering-pccoe",
+  "to": "/colleges/pccoer-pimpri-chinchwad-college-of-engineering",
+  "how": "match",
+  "closest": "pccoer-pimpri-chinchwad-college-of-engineering",
+  "k": 0.67,
+  "s": 0.57
+ },
+ {
+  "dead": "poona-college-of-pharmacy-pune",
+  "to": "/colleges?search=poona%20pharmacy",
+  "how": "search",
+  "closest": "poona-college-of-arts-science-commerce-pune",
+  "k": 0.5,
+  "s": 0.5
+ },
+ {
+  "dead": "pune-dental-college-pune",
+  "to": "/colleges?search=dental",
+  "how": "search",
+  "closest": "fergusson-college-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "ruby-hall-clinic-medical-college-pune",
+  "to": "/colleges?search=ruby%20hall%20clinic",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0,
+  "s": 0.43
+ },
+ {
+  "dead": "seth-gs-medical-college-pune",
+  "to": "/colleges?search=seth%20gs",
+  "how": "search",
+  "closest": "bj-medical-college-pune",
+  "k": 0,
+  "s": 0.5
+ },
+ {
+  "dead": "sibm-symbiosis-institute-of-business-management",
+  "to": "/colleges/sibm-symbiosis-institute-business-management-pune",
+  "how": "match",
+  "closest": "sibm-symbiosis-institute-business-management-pune",
+  "k": 1,
+  "s": 0.71
+ },
+ {
+  "dead": "sibm-symbiosis-institute-of-business-management-pune",
+  "to": "/colleges/sibm-symbiosis-institute-business-management-pune",
+  "how": "match",
+  "closest": "sibm-symbiosis-institute-business-management-pune",
+  "k": 1,
+  "s": 0.86
+ },
+ {
+  "dead": "sid-sinhgad-institute-design-pune",
+  "to": "/colleges?search=sid%20sinhgad%20design",
+  "how": "search",
+  "closest": "sinhgad-institute-of-management-pune",
+  "k": 0.33,
+  "s": 0.43
+ },
+ {
+  "dead": "sinhgad-college-of-pharmacy-pune",
+  "to": "/colleges?search=sinhgad%20pharmacy",
+  "how": "search",
+  "closest": "sinhgad-college-of-engineering-pune",
+  "k": 0.5,
+  "s": 0.67
+ },
+ {
+  "dead": "sinhgad-institute-medical-sciences-pune",
+  "to": "/colleges?search=sinhgad%20sciences",
+  "how": "search",
+  "closest": "sinhgad-institute-of-management-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "sir-parashurambhau-college-pune",
+  "to": "/colleges/sp-college-pune-sir-parashurambhau-college",
+  "how": "match",
+  "closest": "sp-college-pune-sir-parashurambhau-college",
+  "k": 1,
+  "s": 0.8
+ },
+ {
+  "dead": "sit-pune-symbiosis-institute-of-technology",
+  "to": "/colleges?search=sit%20symbiosis",
+  "how": "search",
+  "closest": "symbiosis-institute-of-technology-pune",
+  "k": 0.5,
+  "s": 0.83
+ },
+ {
+  "dead": "skncoe-smt-kashibai-navale-college-engineering",
+  "to": "/colleges/skncoe-smt-kashibai-navale-college-of-engineering",
+  "how": "match",
+  "closest": "skncoe-smt-kashibai-navale-college-of-engineering",
+  "k": 1,
+  "s": 0.86
+ },
+ {
+  "dead": "sknmc-kashibai-navale-medical-college-pune",
+  "to": "/colleges/smt-kashibai-navale-medical-college",
+  "how": "match",
+  "closest": "smt-kashibai-navale-medical-college",
+  "k": 0.67,
+  "s": 0.57
+ },
+ {
+  "dead": "sls-symbiosis-law-school-pune",
+  "to": "/colleges/symbiosis-law-school-pune",
+  "how": "match",
+  "closest": "symbiosis-law-school-pune",
+  "k": 0.67,
+  "s": 0.8
+ },
+ {
+  "dead": "smcw-symbiosis-medical-college-pune",
+  "to": "/colleges?search=smcw%20symbiosis",
+  "how": "search",
+  "closest": "symbiosis-medical-college-for-women-pune",
+  "k": 0.5,
+  "s": 0.57
+ },
+ {
+  "dead": "smt-kashibai-navale-medical-college-pune",
+  "to": "/colleges/smt-kashibai-navale-medical-college",
+  "how": "match",
+  "closest": "smt-kashibai-navale-medical-college",
+  "k": 1,
+  "s": 0.83
+ },
+ {
+  "dead": "sndt-womens-university-pune",
+  "to": "/colleges?search=sndt%20womens",
+  "how": "search",
+  "closest": "flame-university-pune",
+  "k": 0,
+  "s": 0.4
+ },
+ {
+  "dead": "sp-college-pune",
+  "to": "/colleges/sp-college-pune-sir-parashurambhau-college",
+  "how": "match",
+  "closest": "sp-college-pune-sir-parashurambhau-college",
+  "k": 1,
+  "s": 0.6
+ },
+ {
+  "dead": "ssd-symbiosis-school-of-design-pune",
+  "to": "/colleges/symbiosis-institute-of-design-pune",
+  "how": "match",
+  "closest": "symbiosis-institute-of-design-pune",
+  "k": 0.67,
+  "s": 0.57
+ },
+ {
+  "dead": "symbiosis-centre-for-management-hrm-pune",
+  "to": "/colleges?search=symbiosis%20hrm",
+  "how": "search",
+  "closest": "scmhrd-symbiosis-centre-management-hrd",
+  "k": 0.5,
+  "s": 0.38
+ },
+ {
+  "dead": "symbiosis-centre-information-technology-pune",
+  "to": "/colleges?search=symbiosis%20information",
+  "how": "search",
+  "closest": "symbiosis-institute-of-technology-pune",
+  "k": 0.5,
+  "s": 0.43
+ },
+ {
+  "dead": "symbiosis-college-arts-commerce-pune",
+  "to": "/colleges/symbiosis-college-of-arts-commerce-pune",
+  "how": "match",
+  "closest": "symbiosis-college-of-arts-commerce-pune",
+  "k": 1,
+  "s": 0.83
+ },
+ {
+  "dead": "symbiosis-institute-of-business-management-pune",
+  "to": "/colleges/sibm-symbiosis-institute-business-management-pune",
+  "how": "match",
+  "closest": "sibm-symbiosis-institute-business-management-pune",
+  "k": 1,
+  "s": 0.71
+ },
+ {
+  "dead": "symbiosis-institute-of-business-management-sibm",
+  "to": "/colleges/sibm-symbiosis-institute-business-management-pune",
+  "how": "match",
+  "closest": "sibm-symbiosis-institute-business-management-pune",
+  "k": 1,
+  "s": 0.71
+ },
+ {
+  "dead": "symbiosis-medical-college-women-pune",
+  "to": "/colleges/symbiosis-medical-college-for-women-pune",
+  "how": "match",
+  "closest": "symbiosis-medical-college-for-women-pune",
+  "k": 1,
+  "s": 0.83
+ },
+ {
+  "dead": "vishwakarma-institute-of-technology-vit-pune",
+  "to": "/colleges/vit-pune-vishwakarma-institute-of-technology",
+  "how": "match",
+  "closest": "vit-pune-vishwakarma-institute-of-technology",
+  "k": 1,
+  "s": 1
+ },
+ {
+  "dead": "vit-vishwakarma-institute-of-technology-pune",
+  "to": "/colleges/vit-pune-vishwakarma-institute-of-technology",
+  "how": "match",
+  "closest": "vit-pune-vishwakarma-institute-of-technology",
+  "k": 1,
+  "s": 1
+ },
+ {
+  "dead": "vvpmc-pune",
+  "to": "/colleges?search=vvpmc",
+  "how": "search",
+  "closest": "imed-pune",
+  "k": 0,
+  "s": 0.33
+ },
+ {
+  "dead": "wadia-college-science-pune",
+  "to": "/colleges/nowrosjee-wadia-college-pune",
+  "how": "match",
+  "closest": "nowrosjee-wadia-college-pune",
+  "k": 1,
+  "s": 0.6
+ },
+ {
+  "dead": "zeal-college-engineering-research-pune",
+  "to": "/colleges/zeal-college-of-engineering-research-pune",
+  "how": "match",
+  "closest": "zeal-college-of-engineering-research-pune",
+  "k": 1,
+  "s": 0.83
+ }
+]

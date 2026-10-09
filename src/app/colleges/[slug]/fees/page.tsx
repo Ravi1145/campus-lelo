@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
-import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { titleName, generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Fees 2025-26 | Course-wise Fee Structure | CampusLelo`,
+    title: `${titleName(col)} Fees 2025-26 | Course-wise Fee Structure | CampusLelo`,
     description: `${col.name} fee structure 2025-26: ${col.courses.join(", ")} fees range from ₹${(col.feesRange.min/100000).toFixed(1)}L to ₹${(col.feesRange.max/100000).toFixed(1)}L per year. Hostel, scholarship & payment details.`,
     path: `/colleges/${slug}/fees`,
     keywords: [`${col.shortName} fees`, `${col.name} fee structure`, `${col.shortName} fees per year`, `${col.name} fees 2025`, `${col.shortName} total fees`],

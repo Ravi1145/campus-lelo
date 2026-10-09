@@ -47,8 +47,8 @@ export const careerPaths: CareerPath[] = [
     puneColeges: [
       { name: "COEP Pune", slug: "coep-college-of-engineering-pune", avgPlacement: 1200000 },
       { name: "PICT Pune", slug: "pict-pune-institute-of-computer-technology", avgPlacement: 1000000 },
-      { name: "VIT Pune", slug: "vit-vishwakarma-institute-of-technology-pune", avgPlacement: 900000 },
-      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university-pune", avgPlacement: 850000 },
+      { name: "VIT Pune", slug: "vit-pune-vishwakarma-institute-of-technology", avgPlacement: 900000 },
+      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university", avgPlacement: 850000 },
     ],
     roadmap: [
       { year: "Year 1–2", milestone: "Foundation", description: "Core programming (C/C++/Python), Data Structures, Maths, Digital Electronics. Start competitive coding on LeetCode." },
@@ -86,9 +86,9 @@ export const careerPaths: CareerPath[] = [
     ],
     puneColeges: [
       { name: "COEP Pune", slug: "coep-college-of-engineering-pune", avgPlacement: 1200000 },
-      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university-pune", avgPlacement: 850000 },
+      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university", avgPlacement: 850000 },
       { name: "Vijaybhoomi University", slug: "vijaybhoomi-university-karjat", avgPlacement: 800000 },
-      { name: "Symbiosis (SIBM)", slug: "symbiosis-institute-of-business-management-pune", avgPlacement: 1600000 },
+      { name: "Symbiosis (SIBM)", slug: "sibm-symbiosis-institute-business-management-pune", avgPlacement: 1600000 },
     ],
     roadmap: [
       { year: "Year 1–2", milestone: "Math & Python Foundation", description: "Linear Algebra, Statistics, Probability, Python (NumPy, Pandas). Complete a Kaggle notebook." },
@@ -124,9 +124,9 @@ export const careerPaths: CareerPath[] = [
       { level: "PG", name: "PG Diploma in Product Management", duration: "1 year" },
     ],
     puneColeges: [
-      { name: "SIBM Pune", slug: "symbiosis-institute-of-business-management-pune", avgPlacement: 1600000 },
+      { name: "SIBM Pune", slug: "sibm-symbiosis-institute-business-management-pune", avgPlacement: 1600000 },
       { name: "SCMHRD", slug: "symbiosis-centre-for-management-hrm-pune", avgPlacement: 1400000 },
-      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university-pune", avgPlacement: 850000 },
+      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university", avgPlacement: 850000 },
     ],
     roadmap: [
       { year: "Foundation", milestone: "Technical + Business base", description: "Engineering or business degree. Learn to code at least at a conceptual level. Take online PM courses (Reforge, PM School)." },
@@ -161,9 +161,9 @@ export const careerPaths: CareerPath[] = [
       { level: "PG", name: "PGDM Marketing", duration: "2 years" },
     ],
     puneColeges: [
-      { name: "SIBM Pune", slug: "symbiosis-institute-of-business-management-pune", avgPlacement: 1600000 },
+      { name: "SIBM Pune", slug: "sibm-symbiosis-institute-business-management-pune", avgPlacement: 1600000 },
       { name: "SCMHRD", slug: "symbiosis-centre-for-management-hrm-pune", avgPlacement: 1400000 },
-      { name: "MIT School of Business", slug: "mit-wpu-mit-world-peace-university-pune", avgPlacement: 850000 },
+      { name: "MIT School of Business", slug: "mit-wpu-mit-world-peace-university", avgPlacement: 850000 },
     ],
     roadmap: [
       { year: "UG + Internships", milestone: "Build marketing foundation", description: "BBA or any UG degree. Do 2–3 marketing internships. Build a digital portfolio (run a blog, manage social)." },
@@ -199,7 +199,7 @@ export const careerPaths: CareerPath[] = [
     ],
     puneColeges: [
       { name: "COEP Pune", slug: "coep-college-of-engineering-pune", avgPlacement: 1200000 },
-      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university-pune", avgPlacement: 850000 },
+      { name: "MIT-WPU", slug: "mit-wpu-mit-world-peace-university", avgPlacement: 850000 },
       { name: "Symbiosis Institute of Technology", slug: "symbiosis-institute-of-technology-pune", avgPlacement: 700000 },
     ],
     roadmap: [
@@ -235,7 +235,7 @@ export const careerPaths: CareerPath[] = [
       { level: "PG", name: "DNB (National Board)", duration: "3 years" },
     ],
     puneColeges: [
-      { name: "BJ Medical College Pune", slug: "bj-government-medical-college-pune", avgPlacement: 800000 },
+      { name: "BJ Medical College Pune", slug: "bj-medical-college-pune", avgPlacement: 800000 },
       { name: "Armed Forces Medical College", slug: "afmc-armed-forces-medical-college-pune", avgPlacement: 1000000 },
     ],
     roadmap: [

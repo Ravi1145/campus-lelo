@@ -196,7 +196,7 @@ export default function AdmissionGuidePage() {
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
-      <main className="min-h-screen bg-[#F6F8FB]">
+      <div className="min-h-screen bg-[#F6F8FB]">
 
         {/* Hero */}
         <section className="bg-white border-b border-gray-100">
@@ -373,7 +373,7 @@ export default function AdmissionGuidePage() {
             ))}
           </div>
         </section>
-      </main>
+      </div>
     </>
   )
 }

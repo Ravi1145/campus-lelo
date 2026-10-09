@@ -14,13 +14,13 @@ export const revalidate = 300
 
 const colleges = [
   { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹25K-60K/yr", placement: "Research & Govt", slug: "fergusson-college-pune" },
-  { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Government Aided", slug: "sp-college-pune" },
-  { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Government Aided", slug: "modern-college-pune" },
-  { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "wadia-college-science-pune" },
+  { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Government Aided", slug: "sp-college-pune-sir-parashurambhau-college" },
+  { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Government Aided", slug: "modern-college-of-arts-science-commerce-pune" },
+  { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "nowrosjee-wadia-college-pune" },
   { name: "MIT College of Science - MIT-WPU", location: "Kothrud", naac: "A+", fees: "₹60K-1.2L/yr", placement: "₹4.5 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "₹5 LPA avg", slug: "symbiosis-college-arts-commerce-pune" },
+  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "₹5 LPA avg", slug: "symbiosis-college-of-arts-commerce-pune" },
   { name: "Marathwada Mitra Mandal College of Science", location: "Deccan", naac: "A", fees: "₹20K-50K/yr", placement: "Govt. Aided", slug: "mmmcs-pune" },
-  { name: "Sir Parashurambhau College (SP College)", location: "Shivajinagar", naac: "A+", fees: "₹20K-48K/yr", placement: "Research", slug: "sir-parashurambhau-college-pune" },
+  { name: "Sir Parashurambhau College (SP College)", location: "Shivajinagar", naac: "A+", fees: "₹20K-48K/yr", placement: "Research", slug: "sp-college-pune-sir-parashurambhau-college" },
 ]
 
 const faqs = [

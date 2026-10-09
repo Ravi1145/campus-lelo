@@ -19,11 +19,11 @@ export const metadata: Metadata = genMeta({
 
 const colleges = [
   { rank: 1, name: "Fergusson College", slug: "fergusson-college-pune", naac: "A+", type: "Government Aided", fees: "₹15K–₹40K/yr", highlight: "Most Prestigious | Est. 1885" },
-  { rank: 2, name: "SP College (Sir Parashurambhau)", slug: "sp-college-pune", naac: "A+", type: "Government Aided", fees: "₹12K–₹35K/yr", highlight: "Top SPPU Commerce College" },
+  { rank: 2, name: "SP College (Sir Parashurambhau)", slug: "sp-college-pune-sir-parashurambhau-college", naac: "A+", type: "Government Aided", fees: "₹12K–₹35K/yr", highlight: "Top SPPU Commerce College" },
   { rank: 3, name: "Garware College of Commerce", slug: "garware-college-of-commerce-pune", naac: "A", type: "Government Aided", fees: "₹10K–₹28K/yr", highlight: "Best BCom — Lowest Fees" },
   { rank: 4, name: "Symbiosis College of Arts & Commerce (SCAC)", slug: "colleges", naac: "A+", type: "Autonomous", fees: "₹60K–₹90K/yr", highlight: "Symbiosis Brand | SPPU" },
-  { rank: 5, name: "Modern College of Arts, Science & Commerce", slug: "modern-college-pune", naac: "A", type: "Government Aided", fees: "₹18K–₹42K/yr", highlight: "Large Intake | Strong Alumni" },
-  { rank: 6, name: "Brihan Maharashtra College of Commerce (BMCC)", slug: "bmcc-brihan-maharashtra-college-commerce-pune", naac: "A", type: "Government Aided", fees: "₹15K–₹38K/yr", highlight: "Commerce Specialist College" },
+  { rank: 5, name: "Modern College of Arts, Science & Commerce", slug: "modern-college-of-arts-science-commerce-pune", naac: "A", type: "Government Aided", fees: "₹18K–₹42K/yr", highlight: "Large Intake | Strong Alumni" },
+  { rank: 6, name: "Brihan Maharashtra College of Commerce (BMCC)", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune", naac: "A", type: "Government Aided", fees: "₹15K–₹38K/yr", highlight: "Commerce Specialist College" },
 ]
 
 const faqs = [

@@ -120,7 +120,7 @@ export default function MBAInPune() {
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <script id="list-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(listSchema) }} />
 
-      <main className="min-h-screen" style={{ background: "#F6F8FB" }}>
+      <div className="min-h-screen" style={{ background: "#F6F8FB" }}>
 
         {/* ── Hero ── */}
         <section style={{ background: "#011B40" }} className="px-6 py-12">
@@ -352,7 +352,7 @@ export default function MBAInPune() {
           </section>
 
         </div>
-      </main>
+      </div>
       <RelatedMbaSearches path="/mba-in-pune" />
     </>
   )

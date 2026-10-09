@@ -259,7 +259,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-start">
 
           {/* ══ LEFT — Article ══════════════════════════════════════ */}
-          <main className="min-w-0">
+          <div className="min-w-0">
             <article className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
 
               {/* Excerpt lead */}
@@ -410,7 +410,7 @@ export default async function BlogPostPage({ params }: Props) {
                 ))}
               </div>
             </div>
-          </main>
+          </div>
 
           {/* ══ RIGHT — Sticky Sidebar ══════════════════════════════ */}
           <aside className="space-y-5 lg:sticky lg:top-6">

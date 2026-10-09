@@ -70,7 +70,7 @@ export default function CollegeRowCard({ college }: { college: College }) {
             <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 ring-1 ring-gray-200 sm:h-16 sm:w-16">
               {college.logo && !logoError ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={college.logo} alt={`${college.name} logo`} className="h-full w-full object-contain" onError={() => setLogoError(true)} />
+                <img src={college.logo} alt={`${college.name} logo`} width={64} height={64} loading="lazy" className="h-full w-full object-contain" onError={() => setLogoError(true)} />
               ) : (
                 <span className="px-1 text-center text-[11px] font-black leading-tight text-[#012858]">{abbrev(college.shortName)}</span>
               )}

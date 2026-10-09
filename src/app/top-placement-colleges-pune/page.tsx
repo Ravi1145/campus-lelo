@@ -13,7 +13,7 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "SIBM Pune - MBA", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg | ₹72 LPA highest", slug: "sibm-symbiosis-institute-of-business-management" },
+  { name: "SIBM Pune - MBA", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg | ₹72 LPA highest", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "SCMHRD Pune - MBA", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "₹24 LPA avg | ₹60 LPA highest", slug: "scmhrd-symbiosis-centre-management-hrd" },
   { name: "COEP Pune - Engineering", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg | ₹45 LPA highest", slug: "coep-college-of-engineering-pune" },
   { name: "SIT Pune - Engineering (Symbiosis)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg | ₹42 LPA highest", slug: "symbiosis-institute-of-technology-pune" },

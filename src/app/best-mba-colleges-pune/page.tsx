@@ -14,14 +14,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg", slug: "sibm-symbiosis-institute-of-business-management" },
+  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "Symbiosis Centre for Management & HRD (SCMHRD)", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "₹24 LPA avg", slug: "scmhrd-symbiosis-centre-management-hrd" },
   { name: "IIMS Pune (International Institute of Management Studies)", location: "Karve Nagar", naac: "A", fees: "₹5.5L (2yr)", placement: "₹12 LPA avg", slug: "iims-pune" },
   { name: "Flame University School of Business", location: "Lavale", naac: "A+", fees: "₹12L (2yr)", placement: "₹14 LPA avg", slug: "flame-university-pune" },
   { name: "MIT School of Business (MIT-SOB)", location: "Kothrud", naac: "A+", fees: "₹6.5L (2yr)", placement: "₹10.5 LPA avg", slug: "mit-school-of-business-pune" },
   { name: "Indira College of Engineering & Management - MBA", location: "Pune", naac: "B++", fees: "₹4.5L (2yr)", placement: "₹8 LPA avg", slug: "indira-college-pune" },
   { name: "Balaji Institute of Management & Research (BIMR)", location: "Tathawade", naac: "A", fees: "₹5.2L (2yr)", placement: "₹9 LPA avg", slug: "balaji-institute-management-research-pune" },
-  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹1.8L (2yr)", placement: "₹7 LPA avg", slug: "bmcc-pune" },
+  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹1.8L (2yr)", placement: "₹7 LPA avg", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
 ]
 
 const faqs = [

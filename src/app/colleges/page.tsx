@@ -7,6 +7,7 @@ import CollegeListFallback from "@/components/colleges/CollegeListFallback"
 import CollegesHeroSearch from "@/components/colleges/CollegesHeroSearch"
 import { Award, Building2, BedDouble, Landmark } from "lucide-react"
 import { colleges } from "@/data/colleges"
+import { seoPageHref } from "@/data/seoPages"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
@@ -90,7 +91,7 @@ export default function CollegesPage() {
             <div className="hero-in mt-8 flex flex-wrap items-center gap-2" style={{ "--i": 5 } as React.CSSProperties}>
               <span className="text-xs font-semibold text-blue-200">Explore:</span>
               {["Engineering", "MBA", "Medical", "Law", "Design", "Government"].map(s => (
-                <Link key={s} href={`/colleges-in-pune/${s.toLowerCase()}-colleges-pune`}
+                <Link key={s} href={seoPageHref(`${s.toLowerCase()}-colleges-pune`)}
                   className="text-xs font-semibold bg-white/10 text-white ring-1 ring-white/15 hover:bg-white hover:text-[#012858] px-3 py-1.5 rounded-full transition-colors">
                   {s} Colleges →
                 </Link>
@@ -128,7 +129,7 @@ export default function CollegesPage() {
                 { label: "Low Fee Colleges Pune", href: "/colleges-in-pune/low-fee-colleges-pune" },
                 { label: "MHT-CET Colleges Pune", href: "/engineering-colleges-pune" },
                 { label: "Top Placement Colleges Pune", href: "/colleges-in-pune/top-placement-colleges-pune" },
-                { label: "Colleges with Hostel Pune", href: "/colleges-in-pune/hostel-facility-colleges-pune" },
+                { label: "Colleges with Hostel Pune", href: "/colleges-in-pune-with-hostel" },
                 { label: "Medical Colleges Pune", href: "/colleges-in-pune/medical-colleges-pune" },
               ].map(link => (
                 <Link key={link.href} href={link.href}

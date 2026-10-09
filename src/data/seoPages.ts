@@ -296,3 +296,29 @@ export const seoPages: SEOPage[] = [
 export function getSEOPageBySlug(slug: string): SEOPage | undefined {
   return seoPages.find((p) => p.slug === slug)
 }
+
+// ── Where a topic slug really lives ──────────────────────────────────────────
+// /colleges-in-pune/<slug> is a noindex duplicate for topics that have a standalone page,
+// and a redirect for some others. Link to the final URL so crawlers and visitors skip the hop.
+const STANDALONE = new Set([
+  "engineering-colleges-pune", "mba-colleges-pune", "medical-colleges-pune", "law-colleges-pune", "arts-colleges-pune",
+  "science-colleges-pune", "commerce-colleges-pune", "design-colleges-pune", "government-colleges-pune", "low-fee-colleges-pune",
+  "top-placement-colleges-pune", "mht-cet-colleges-pune", "jee-main-colleges-pune", "neet-colleges-pune", "naac-a-plus-colleges-pune",
+])
+const MOVED: Record<string, string> = {
+  "cat-mba-colleges-pune": "/mba-colleges-in-pune-accepting-cat",
+  "colleges-in-kothrud-pune": "/colleges-kothrud-pune",
+  "colleges-in-hinjewadi-pune": "/colleges-hinjewadi-pune",
+  "colleges-in-hadapsar-pune": "/colleges-hadapsar-pune",
+  "hostel-facility-colleges-pune": "/colleges-in-pune-with-hostel",
+  "mba-finance-colleges-pune": "/mba-colleges-in-pune-for-finance",
+  "mba-marketing-colleges-pune": "/mba-colleges-in-pune-for-marketing",
+  "btech-computer-science-colleges-pune": "/computer-engineering-colleges-pune",
+  "private-colleges-pune": "/colleges?type=Private",
+  "autonomous-colleges-pune": "/colleges?type=Autonomous",
+}
+export function seoPageHref(slug: string): string {
+  if (MOVED[slug]) return MOVED[slug]
+  if (STANDALONE.has(slug)) return `/${slug}`
+  return `/colleges-in-pune/${slug}`
+}

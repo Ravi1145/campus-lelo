@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import MbaPuneExamAnswer from "@/components/seo/MbaPuneExamAnswer"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { mbaColleges, mbaFAQs } from "@/data/mbaColleges"
@@ -107,7 +108,9 @@ export default function MBACollegesInPune() {
           </div>
         </header>
 
-        <main id="main-content" className="max-w-6xl mx-auto px-4 py-10 space-y-10">
+        <div id="main-content" className="max-w-6xl mx-auto px-4 py-10 space-y-10">
+
+          <MbaPuneExamAnswer />
 
           {/* Filter Cluster Links */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
@@ -275,7 +278,7 @@ export default function MBACollegesInPune() {
             </div>
           </section>
 
-        </main>
+        </div>
       </div>
       <RelatedMbaSearches path="/mba-colleges-in-pune" />
     </>

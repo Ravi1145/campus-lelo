@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
-import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { titleName, generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Scholarships 2025-26 | MahaDBT, Merit & Government Schemes`,
+    title: `${titleName(col)} Scholarships 2025-26 | MahaDBT, Merit & Government Schemes`,
     description: `Complete list of scholarships available at ${col.name} 2025-26: MahaDBT, EBC freeship, merit scholarships, minority scholarships. Reduce fees from ₹${(col.feesRange.min/100000).toFixed(1)}L to zero.`,
     path: `/colleges/${slug}/scholarship`,
     keywords: [`${col.shortName} scholarship`, `${col.name} scholarship 2025`, `${col.shortName} fee waiver`, `${col.shortName} mahadbt`, `scholarship ${col.name}`],

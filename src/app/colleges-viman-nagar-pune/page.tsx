@@ -15,7 +15,7 @@ export const revalidate = 300
 const areaColleges = [
   { name: "Army Institute of Technology (AIT)", distance: "3 km from Viman Nagar", courses: "B.Tech, MBA", naac: "A", slug: "army-institute-of-technology-pune" },
   { name: "MAEER's MIT College of Engineering (MITCOE)", distance: "5 km via Nagar Road", courses: "B.Tech, M.Tech, MBA", naac: "A+", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Symbiosis International University", distance: "4 km (Senapati Bapat Rd)", courses: "BBA, MBA, Law, Design", naac: "A++", slug: "symbiosis-institute-of-business-management-sibm" },
+  { name: "Symbiosis International University", distance: "4 km (Senapati Bapat Rd)", courses: "BBA, MBA, Law, Design", naac: "A++", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "Zeal College of Engineering", distance: "6 km from Viman Nagar", courses: "B.Tech", naac: "A", slug: "coep-college-of-engineering-pune" },
 ]
 

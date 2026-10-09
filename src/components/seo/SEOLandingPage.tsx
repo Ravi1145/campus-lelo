@@ -72,7 +72,7 @@ export default function SEOLandingPage({
   relatedGuides,
 }: SEOLandingPageProps) {
   return (
-    <main className="bg-white">
+    <div className="bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#011B40] to-[#071B3B] text-white py-14 px-4">
         <div className="max-w-5xl mx-auto">
@@ -243,6 +243,6 @@ export default function SEOLandingPage({
         </section>
 
       </div>
-    </main>
+    </div>
   )
 }

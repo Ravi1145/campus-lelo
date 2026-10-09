@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
-import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
+import { titleName, generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Placements 2024 | Avg Package ₹${(col.avgPlacement/100000).toFixed(1)} LPA | CampusLelo`,
+    title: `${titleName(col)} Placements 2024 | Avg Package ₹${(col.avgPlacement/100000).toFixed(1)} LPA | CampusLelo`,
     description: `${col.name} placement 2024: Average package ₹${(col.avgPlacement/100000).toFixed(1)} LPA, highest ₹${(col.highestPlacement/100000).toFixed(1)} LPA. Top recruiters: ${col.topRecruiters.slice(0,4).join(", ")}. Full placement statistics.`,
     path: `/colleges/${slug}/placements`,
     keywords: [`${col.shortName} placements`, `${col.name} placement 2024`, `${col.shortName} average package`, `${col.shortName} highest package`, `${col.shortName} top recruiters`],

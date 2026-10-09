@@ -61,7 +61,7 @@ const QA_DATA = [
   {
     id: 5,
     college: "MIT-WPU Pune",
-    collegeSlug: "mit-world-peace-university-pune",
+    collegeSlug: "mit-wpu-mit-world-peace-university",
     stream: "Engineering",
     streamColor: "bg-blue-100 text-blue-700",
     alumni: { name: "Vikram Kulkarni", batch: "2023", avatar: "V", color: "bg-purple-600" },

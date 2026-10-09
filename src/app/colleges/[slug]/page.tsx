@@ -6,6 +6,7 @@ import { colleges, getCollegeBySlug } from "@/data/colleges"
 export const revalidate = 300 // ISR — re-render every 5 min; on-demand revalidation via admin also busts this
 import { getCollegeBySlug as getDBCollege, DBCollege, CollegeDetails } from "@/lib/db"
 import CollegeProfile from "@/components/colleges/CollegeProfile"
+import CollegeAtAGlance from "@/components/seo/CollegeAtAGlance"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateCollegeSchema, generateCollegeWebPageSchema, generateFAQSchema, generateHowToSchema } from "@/lib/seo"
 import type { College } from "@/types"
 import { safeJsonLd } from "@/lib/jsonld"
@@ -400,7 +401,7 @@ export default async function CollegePage({ params }: Props) {
   const comparePages: Record<string, { label: string; href: string }[]> = {
     "coep-college-of-engineering-pune":              [{ label: "COEP vs PICT", href: "/coep-vs-pict-pune" }],
     "pict-pune-institute-of-computer-technology":    [{ label: "COEP vs PICT", href: "/coep-vs-pict-pune" }],
-    "sibm-symbiosis-institute-of-business-management-pune": [{ label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" }],
+    "sibm-symbiosis-institute-business-management-pune": [{ label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" }],
     "vit-pune-vishwakarma-institute-of-technology":  [{ label: "VIT Pune vs MIT-WPU", href: "/vit-pune-vs-mit-wpu" }],
     "mit-wpu-mit-world-peace-university":            [{ label: "VIT Pune vs MIT-WPU", href: "/vit-pune-vs-mit-wpu" }],
   }
@@ -433,6 +434,7 @@ export default async function CollegePage({ params }: Props) {
       )}
       <div className="bg-surface min-h-screen">
         <CollegeProfile college={college} details={details} />
+        <CollegeAtAGlance college={college} />
 
         {/* ── Server-rendered FAQ section — always visible to AI crawlers ──────
             CollegeProfile renders FAQs behind a JS tab click (client component),
@@ -457,6 +459,7 @@ export default async function CollegePage({ params }: Props) {
               ))}
             </div>
             {/* Sub-page links — drive crawlers to fee/placement/cutoff pages */}
+            {colleges.some((c) => c.slug === slug) && (
             <div className="mt-8 flex flex-wrap gap-2 text-sm">
               <span className="text-xs text-gray-400 font-medium self-center">More about {college.shortName}:</span>
               {[
@@ -475,6 +478,7 @@ export default async function CollegePage({ params }: Props) {
                 </Link>
               ))}
             </div>
+            )}
           </div>
         </section>
 

@@ -14,7 +14,7 @@ export const revalidate = 300
 
 const colleges = [
   { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹12K–30K/yr", placement: "₹3.5 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Rd", naac: "A+", fees: "₹55K–1.2L/yr", placement: "₹4.2 LPA avg", slug: "symbiosis-institute-of-business-management-sibm" },
+  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Rd", naac: "A+", fees: "₹55K–1.2L/yr", placement: "₹4.2 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "MIT World Peace University", location: "Kothrud", naac: "A+", fees: "₹1.0L–2.0L/yr", placement: "₹5.5 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
   { name: "SP College Pune", location: "Tilak Road", naac: "A+", fees: "₹10K–25K/yr", placement: "₹3.2 LPA avg", slug: "coep-college-of-engineering-pune" },
   { name: "Modern College of Arts, Science & Commerce", location: "Ganeshkhind", naac: "A", fees: "₹15K–40K/yr", placement: "₹3.0 LPA avg", slug: "coep-college-of-engineering-pune" },

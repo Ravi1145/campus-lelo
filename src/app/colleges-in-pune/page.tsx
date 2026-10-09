@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next"
 import Link from "next/link"
 import { BookOpen, Building2, GraduationCap, MapPin, TrendingUp, Shield } from "lucide-react"
-import { seoPages } from "@/data/seoPages"
+import { seoPages, seoPageHref } from "@/data/seoPages"
 
 export const metadata: Metadata = {
   title: "Colleges in Pune 2026 — Complete List, Fees & Rankings",
@@ -126,7 +126,7 @@ export default function CollegesInPunePage() {
                 {cat.pages.map((page) => (
                   <Link
                     key={page.slug}
-                    href={`/colleges-in-pune/${page.slug}`}
+                    href={seoPageHref(page.slug)}
                     className={`p-5 rounded-xl border transition-colors ${colorMap[cat.color]}`}
                   >
                     <div className="font-semibold text-base mb-1">{page.h1}</div>

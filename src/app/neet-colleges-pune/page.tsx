@@ -13,13 +13,13 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "BJ Government Medical College (BJMC)", location: "Shivajinagar", naac: "A+", fees: "₹1L-2L/yr", placement: "NEET Cutoff: 630+ (General)", slug: "bj-government-medical-college-pune" },
+  { name: "BJ Government Medical College (BJMC)", location: "Shivajinagar", naac: "A+", fees: "₹1L-2L/yr", placement: "NEET Cutoff: 630+ (General)", slug: "bj-medical-college-pune" },
   { name: "Armed Forces Medical College (AFMC)", location: "Wanowrie", naac: "A++", fees: "Fully Sponsored", placement: "NEET + AFMC Test Required", slug: "afmc-armed-forces-medical-college-pune" },
   { name: "D.Y. Patil Medical College Pimpri", location: "Pimpri", naac: "A+", fees: "₹18L-22L/yr", placement: "NEET Cutoff: 540+ (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune" },
   { name: "Bharati Vidyapeeth Medical College", location: "Dhankawadi", naac: "A", fees: "₹12L-16L/yr", placement: "NEET Cutoff: 530+ (Mgmt)", slug: "bharati-vidyapeeth-medical-college-pune" },
   { name: "Sinhgad Institute of Medical Sciences", location: "Ambegaon", naac: "B+", fees: "₹8L-12L/yr", placement: "NEET Cutoff: 510+ (Mgmt)", slug: "sinhgad-institute-medical-sciences-pune" },
   { name: "Command Hospital Medical College", location: "Pune Cantonment", naac: "A", fees: "₹6L-10L/yr", placement: "Armed Forces Priority", slug: "command-hospital-medical-college-pune" },
-  { name: "Dr. D.Y. Patil Medical College (DYPMC)", location: "Nerul/DY Patil Campus", naac: "A", fees: "₹14L-18L/yr", placement: "NEET Cutoff: 520+ (Mgmt)", slug: "dy-patil-medical-college-pune" },
+  { name: "Dr. D.Y. Patil Medical College (DYPMC)", location: "Nerul/DY Patil Campus", naac: "A", fees: "₹14L-18L/yr", placement: "NEET Cutoff: 520+ (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune" },
   { name: "Dr. Vithalrao Vikhe Patil College of Medicine", location: "Ahmednagar Road", naac: "A", fees: "₹10L-15L/yr", placement: "NEET Cutoff: 520+", slug: "vvpmc-pune" },
 ]
 

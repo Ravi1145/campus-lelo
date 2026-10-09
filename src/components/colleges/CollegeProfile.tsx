@@ -35,6 +35,17 @@ interface CollegeProfileProps {
   details?: CollegeDetails
 }
 
+// Stream → standalone landing page (so related-search links never point at a guessed URL)
+const STREAM_HUBS: Record<string, string> = {
+  Engineering: "/engineering-colleges-pune",
+  MBA: "/mba-colleges-pune",
+  Management: "/mba-colleges-pune",
+  Medical: "/medical-colleges-pune",
+  Law: "/law-colleges-pune",
+  Architecture: "/architecture-colleges-pune",
+  "Arts & Science": "/arts-colleges-pune",
+}
+
 const TABS = [
   { id: "overview",    label: "Overview" },
   { id: "courses",     label: "Courses & Fees" },
@@ -1213,14 +1224,14 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
           <h2 className="text-base font-semibold text-gray-700 mb-4">Related Searches</h2>
           <div className="flex flex-wrap gap-2">
             {[
-              { label: `Best ${college.stream} Colleges in Pune`, href: `/colleges-in-pune/${college.stream.toLowerCase().replace(/[^a-z]/g, '-')}-colleges-pune` },
-              { label: `${college.type} Colleges in Pune`, href: `/colleges-in-pune/${college.type.toLowerCase()}-colleges-pune` },
-              { label: "Colleges with Best Placements Pune", href: "/colleges-in-pune/top-placement-colleges-pune" },
-              { label: "NAAC A+ Colleges Pune", href: "/colleges-in-pune/naac-a-plus-colleges-pune" },
+              { label: `Best ${college.stream} Colleges in Pune`, href: STREAM_HUBS[college.stream] ?? `/colleges?stream=${encodeURIComponent(college.stream)}` },
+              { label: `${college.type} Colleges in Pune`, href: college.type === "Government" ? "/government-colleges-pune" : `/colleges?type=${encodeURIComponent(college.type)}` },
+              { label: "Colleges with Best Placements Pune", href: "/top-placement-colleges-pune" },
+              { label: "NAAC A+ Colleges Pune", href: "/naac-a-plus-colleges-pune" },
               { label: `Compare ${college.shortName}`, href: "/compare" },
               { label: "Free Admission Counselling", href: "/counselling" },
-              ...(college.entranceExams[0] ? [{ label: `${college.entranceExams[0]} Colleges Pune`, href: `/colleges-in-pune/${college.entranceExams[0].toLowerCase().replace(/[^a-z]/g, '-')}-colleges-pune` }] : []),
-              { label: "Low Fee Colleges Pune", href: "/colleges-in-pune/low-fee-colleges-pune" },
+              ...(college.entranceExams[0] ? [{ label: `${college.entranceExams[0]} Colleges Pune`, href: `/colleges?exam=${encodeURIComponent(college.entranceExams[0].replace(/\(.*?\)/g, '').replace(/\b20\d\d\b/g, '').trim())}` }] : []),
+              { label: "Low Fee Colleges Pune", href: "/low-fee-colleges-pune" },
             ].map(link => (
               <Link
                 key={link.href}

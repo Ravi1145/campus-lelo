@@ -90,7 +90,7 @@ export default function CollegesInNoidaPage() {
           noidaColleges.map(c => ({ name: `${c.name} — ${c.location}`, url: `/colleges/${c.slug}` }))
         )) }} />
 
-      <main style={{ background: "#F7F9FC" }}>
+      <div style={{ background: "#F7F9FC" }}>
 
         {/* AEO Quick Answer — targeted by speakable schema for AI Overview snippets */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,7 +367,7 @@ export default function CollegesInNoidaPage() {
             </div>
           </section>
         </div>
-      </main>
+      </div>
     </>
   )
 }

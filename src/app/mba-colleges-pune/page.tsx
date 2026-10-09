@@ -93,7 +93,7 @@ export default function MBACollegesPunePage() {
       <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
 
-      <main className="bg-white min-h-screen">
+      <div className="bg-white min-h-screen">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 border-b border-gray-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -379,7 +379,7 @@ export default function MBACollegesPunePage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
       <RelatedMbaSearches path="/mba-colleges-pune" />
     </>
   )

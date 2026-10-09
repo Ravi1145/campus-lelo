@@ -35,7 +35,7 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
             <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md">
               {college.logo && !logoError ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={college.logo} alt={`${college.name} logo`} className="h-full w-full object-contain p-1" onError={() => setLogoError(true)} />
+                <img src={college.logo} alt={`${college.name} logo`} width={48} height={48} loading="lazy" className="h-full w-full object-contain p-1" onError={() => setLogoError(true)} />
               ) : (
                 <span className="px-1 text-center text-[10px] font-black leading-tight text-[#012858]">{abbrev(college.shortName)}</span>
               )}

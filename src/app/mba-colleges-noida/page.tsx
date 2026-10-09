@@ -160,7 +160,7 @@ export default function MBACollegesNoidaPage() {
           mbaColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}` }))
         )) }} />
 
-      <main style={{ background: "#F7F9FC" }}>
+      <div style={{ background: "#F7F9FC" }}>
 
         <section style={{ background: "#012858" }} className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
@@ -295,7 +295,7 @@ export default function MBACollegesNoidaPage() {
             </div>
           </section>
         </div>
-      </main>
+      </div>
       <RelatedMbaSearches path="/mba-colleges-noida" />
     </>
   )

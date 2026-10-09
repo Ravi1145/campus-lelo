@@ -2,6 +2,7 @@ import { Building2 } from "lucide-react"
 import { colleges as staticColleges } from "@/data/colleges"
 import CollegeMarqueeCard from "./CollegeMarqueeCard"
 import MarqueePause from "./MarqueePause"
+import LoopClone from "@/components/ui/LoopClone"
 
 interface MarqueeCollege { slug: string; name: string; shortName: string; logo?: string }
 
@@ -62,13 +63,21 @@ export default async function CollegeMarquee() {
         {/* Scrolling track — three identical sets; translating -1/3 loops seamlessly.
             Only the first set is exposed to screen readers / keyboard. */}
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          {[0, 1, 2].map((set) => (
-            <div key={set} className="flex gap-4 pr-4" {...(set > 0 ? { "aria-hidden": true, inert: true } : {})}>
-              {COLLEGES.map((c) => (
-                <CollegeMarqueeCard key={`${c.slug}-${set}`} college={c} />
-              ))}
-            </div>
-          ))}
+          <div className="flex gap-4 pr-4">
+            {COLLEGES.map((c) => (
+              <CollegeMarqueeCard key={`${c.slug}-0`} college={c} />
+            ))}
+          </div>
+          {/* Loop filler: added after load so it stays out of the server HTML */}
+          <LoopClone>
+            {[1, 2].map((set) => (
+              <div key={set} className="flex gap-4 pr-4" aria-hidden="true" {...{ inert: true }}>
+                {COLLEGES.map((c) => (
+                  <CollegeMarqueeCard key={`${c.slug}-${set}`} college={c} />
+                ))}
+              </div>
+            ))}
+          </LoopClone>
         </div>
       </div>
     </section>

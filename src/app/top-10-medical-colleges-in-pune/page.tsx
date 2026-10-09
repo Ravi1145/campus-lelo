@@ -59,7 +59,7 @@ const colleges = [
     neetCutoff: "550+",
     seats: 250,
     exam: "NEET",
-    slug: "dy-patil-medical-college-pune",
+    slug: "dy-patil-medical-college-pimpri-pune",
     highlight: "Best Private | Strong Placements",
     location: "Pimpri, Pune",
   },
@@ -101,7 +101,7 @@ const colleges = [
     neetCutoff: "520+",
     seats: 150,
     exam: "NEET",
-    slug: "sknmc-kashibai-navale-medical-college-pune",
+    slug: "smt-kashibai-navale-medical-college",
     highlight: "Affordable Private | Good Infrastructure",
     location: "Narhe, Pune",
   },
@@ -157,7 +157,7 @@ const colleges = [
     neetCutoff: "530+",
     seats: 100,
     exam: "NEET",
-    slug: "smcw-symbiosis-medical-college-pune",
+    slug: "symbiosis-medical-college-for-women-pune",
     highlight: "Women Only | Lavale Campus",
     location: "Lavale, Pune",
   },
@@ -207,7 +207,7 @@ export default function Top10MedicalCollegesPage() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
 
-      <main className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">
         {/* Hero */}
         <div className="bg-gradient-to-br from-[#011B40] via-[#0D2040] to-[#1a1a2e] text-white py-14">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,7 +350,7 @@ export default function Top10MedicalCollegesPage() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   )
 }

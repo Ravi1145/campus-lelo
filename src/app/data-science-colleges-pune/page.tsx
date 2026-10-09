@@ -28,7 +28,7 @@ const colleges = [
   },
   {
     name: "MIT World Peace University (MIT-WPU)",
-    slug: "mit-world-peace-university-pune",
+    slug: "mit-wpu-mit-world-peace-university",
     program: "BTech CSE (AI & Data Science) / BSc Data Science",
     fees: "₹2.2L–₹3.5L/yr",
     cutoff: "82–88 percentile (MHT-CET)",
@@ -46,7 +46,7 @@ const colleges = [
   },
   {
     name: "Symbiosis Institute of Technology (SIT)",
-    slug: "sit-pune-symbiosis-institute-of-technology",
+    slug: "symbiosis-institute-of-technology-pune",
     program: "BTech CSE (AI/ML) / MTech Data Science",
     fees: "₹3L–₹4.8L/yr",
     cutoff: "85–90 percentile (MHT-CET)",

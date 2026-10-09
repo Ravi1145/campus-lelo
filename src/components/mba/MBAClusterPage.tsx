@@ -67,7 +67,7 @@ export default function MBAClusterPage({
         </div>
       </header>
 
-      <main id="main-content" className="max-w-6xl mx-auto px-4 py-10 space-y-8">
+      <div id="main-content" className="max-w-6xl mx-auto px-4 py-10 space-y-8">
 
         {/* College List */}
         <section aria-label="College list">
@@ -177,7 +177,7 @@ export default function MBAClusterPage({
           </div>
         </section>
 
-      </main>
+      </div>
     </div>
   )
 }

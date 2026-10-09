@@ -99,7 +99,7 @@ const hostelColleges = [
     capacity: "300+ seats",
     availability: "Limited — apply on admission day",
     highlight: "NIRF #18 | Government Medical | Affordable | Sasoon Hospital",
-    slug: "bj-government-medical-college-pune",
+    slug: "bj-medical-college-pune",
     note: "Apply on the same day as admission — fills within hours",
   },
   {
@@ -112,7 +112,7 @@ const hostelColleges = [
     capacity: "800+ seats",
     availability: "Good Availability",
     highlight: "Symbiosis Campus | Lavale | NAAC A+",
-    slug: "sit-pune-symbiosis-institute-of-technology",
+    slug: "symbiosis-institute-of-technology-pune",
     note: "On Symbiosis Lavale campus — safe and well-maintained",
   },
   {

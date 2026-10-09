@@ -28,9 +28,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         role={profile.role as 'super_admin' | 'agent'}
         userEmail={user.email ?? ''}
       />
-      <main className="flex-1 overflow-auto min-h-screen">
+      <div className="flex-1 overflow-auto min-h-screen">
         <div className="p-8">{children}</div>
-      </main>
+      </div>
     </div>
   )
 }

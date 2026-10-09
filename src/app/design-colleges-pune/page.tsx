@@ -23,8 +23,8 @@ export const metadata: Metadata = genMeta({
 })
 
 const colleges = [
-  { rank: 1, name: "MIT Institute of Design (MIT-ID)", type: "Private", naac: "A+", fees: "₹3.5L–₹5L/yr", program: "B.Des, M.Des", seats: 120, nata: "Not required", slug: "mit-id-mit-institute-of-design-pune", highlight: "No. 1 Design School Pune | Industry tie-ups" },
-  { rank: 2, name: "Symbiosis School of Design (SSD)", type: "Deemed", naac: "A+", fees: "₹4L–₹5.5L/yr", program: "B.Des", seats: 60, nata: "Portfolio + interview", slug: "ssd-symbiosis-school-of-design-pune", highlight: "Top Deemed | Excellent placement" },
+  { rank: 1, name: "MIT Institute of Design (MIT-ID)", type: "Private", naac: "A+", fees: "₹3.5L–₹5L/yr", program: "B.Des, M.Des", seats: 120, nata: "Not required", slug: "mit-institute-of-design-pune", highlight: "No. 1 Design School Pune | Industry tie-ups" },
+  { rank: 2, name: "Symbiosis School of Design (SSD)", type: "Deemed", naac: "A+", fees: "₹4L–₹5.5L/yr", program: "B.Des", seats: 60, nata: "Portfolio + interview", slug: "symbiosis-institute-of-design-pune", highlight: "Top Deemed | Excellent placement" },
   { rank: 3, name: "MAEER's MIT College of Engineering — Architecture", type: "Private", naac: "A+", fees: "₹1.8L–₹2.5L/yr", program: "B.Arch", seats: 40, nata: "NATA 80+", slug: "mit-college-engineering-pune", highlight: "Best B.Arch | NATA approved" },
   { rank: 4, name: "Indira College of Engineering — Architecture", type: "Private", naac: "A", fees: "₹1.2L–₹1.8L/yr", program: "B.Arch", seats: 40, nata: "NATA 70+", slug: "indira-college-architecture-pune", highlight: "Affordable B.Arch option" },
   { rank: 5, name: "Sinhgad Institute of Design (SID)", type: "Private", naac: "A", fees: "₹2.5L–₹3.5L/yr", program: "B.Des", seats: 60, nata: "Portfolio based", slug: "sid-sinhgad-institute-design-pune", highlight: "Growing design school | Strong faculty" },

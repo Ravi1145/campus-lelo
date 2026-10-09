@@ -15,11 +15,11 @@ export const revalidate = 300
 const colleges = [
   { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
   { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹25K-60K/yr", placement: "Govt. College", slug: "fergusson-college-pune" },
-  { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Govt. Aided", slug: "sp-college-pune" },
+  { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Govt. Aided", slug: "sp-college-pune-sir-parashurambhau-college" },
   { name: "Garware College of Commerce", location: "Karve Road", naac: "A", fees: "₹15K-40K/yr", placement: "Govt. Aided", slug: "garware-college-of-commerce-pune" },
-  { name: "BMCC (Brihan Maharashtra College of Commerce)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "₹5.5 LPA avg", slug: "bmcc-pune" },
-  { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Govt. Aided", slug: "modern-college-pune" },
-  { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "wadia-college-science-pune" },
+  { name: "BMCC (Brihan Maharashtra College of Commerce)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "₹5.5 LPA avg", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
+  { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Govt. Aided", slug: "modern-college-of-arts-science-commerce-pune" },
+  { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "nowrosjee-wadia-college-pune" },
   { name: "Sinhgad College of Engineering (State Quota Seats)", location: "Vadgaon", naac: "A", fees: "₹1.15L/yr", placement: "₹4.9 LPA avg", slug: "sinhgad-college-of-engineering-pune" },
 ]
 

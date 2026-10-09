@@ -43,6 +43,9 @@ const streams = [
       { name: "MBA HR →",                   href: "/mba-colleges-in-pune-for-hr" },
       { name: "MBA Colleges Accepting CAT →", href: "/mba-colleges-in-pune-accepting-cat" },
       { name: "All MBA guides →",             href: "/mba" },
+      { name: "MBA Colleges Delhi NCR →",     href: "/mba-colleges-in-delhi-ncr" },
+      { name: "MBA Colleges Delhi →",         href: "/mba-colleges-in-delhi" },
+      { name: "MBA Colleges Greater Noida →", href: "/mba-colleges-in-greater-noida" },
       { name: "MBA vs PGDM →",              href: "/mba-vs-pgdm" },
       { name: "MBA Cutoff Delhi NCR →",     href: "/mba-cutoff-delhi-ncr" },
       { name: "All MBA Colleges →",         href: "/colleges?stream=MBA" },
@@ -234,6 +237,7 @@ export default function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
+                  aria-label="Search colleges, courses, exams and locations"
                   placeholder="Search colleges, courses, exams, locations..."
                   className="flex-1 px-3 py-2.5 text-sm bg-white outline-none"
                   style={{ color: "#0F172A" }}
@@ -278,10 +282,10 @@ export default function Header() {
               </Link>
 
               {/* Mobile: search icon + hamburger */}
-              <button className="md:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
+              <button type="button" aria-label="Search colleges" className="md:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
                 <Search className="w-5 h-5" />
               </button>
-              <button className="lg:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
+              <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="lg:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
                 <Menu className="w-5 h-5" />
               </button>
             </div>
@@ -289,7 +293,7 @@ export default function Header() {
         </div>
 
         {/* ══ BOTTOM NAV (desktop) ══════════════════════════════ */}
-        <nav className="hidden lg:block bg-transparent border-b border-gray-100">
+        <nav aria-label="Main navigation" className="hidden lg:block bg-transparent border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center h-11 gap-0">
 

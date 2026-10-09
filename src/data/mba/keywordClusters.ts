@@ -93,7 +93,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/blog/how-to-choose-an-mba-college-in-india",
     "supporting": [
-      "/best-mba-colleges-pune",
+      "/mba-colleges-pune",
       "/mba-colleges-noida",
       "/compare"
     ],
@@ -184,8 +184,13 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "general:delhi-ncr",
     "name": "General MBA queries — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr",
+      "/pgdm-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-accepting-cat",
+      "/mba-colleges-in-delhi-ncr-accepting-cmat"
+    ],
     "size": 118,
     "keywords": [
       "mba colleges in delhi ncr",
@@ -349,8 +354,13 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "best-top-ranking:delhi-ncr",
     "name": "Best / top MBA colleges — delhi-ncr",
     "intent": "commercial",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [
+      "/mba-colleges-in-delhi",
+      "/pgdm-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-ncr-accepting-cat",
+      "/mba-colleges-in-delhi-ncr-accepting-cmat"
+    ],
     "size": 104,
     "keywords": [
       "best mba colleges in delhi ncr",
@@ -566,8 +576,11 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "fees-funding:delhi-ncr",
     "name": "MBA fees, scholarships & loans — delhi-ncr",
     "intent": "commercial",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr",
+      "/pgdm-colleges-in-delhi-ncr"
+    ],
     "size": 91,
     "keywords": [
       "mba colleges in delhi with fees",
@@ -611,8 +624,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "placements-salary:delhi-ncr",
     "name": "MBA placements & salary — delhi-ncr",
     "intent": "commercial",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 79,
     "keywords": [
       "mba colleges in delhi with fees and placement",
@@ -633,6 +648,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [
+      "/mba-colleges-in-greater-noida",
       "/pgdm-colleges-noida"
     ],
     "size": 61,
@@ -675,7 +691,7 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "no-exam-direct:delhi-ncr",
     "name": "MBA without entrance exam / direct admission — delhi-ncr",
     "intent": "transactional",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+    "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
     "supporting": [],
     "size": 49,
     "keywords": [
@@ -695,8 +711,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "mode-format:delhi-ncr",
     "name": "Executive, online, part-time MBA — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 53,
     "keywords": [
       "mba colleges in delhi distance learning",
@@ -717,6 +735,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "informational",
     "pillar": "/mba-colleges-noida",
     "supporting": [
+      "/mba-colleges-in-greater-noida",
       "/pgdm-colleges-noida"
     ],
     "size": 52,
@@ -738,7 +757,9 @@ export const keywordClusters: KeywordCluster[] = [
     "name": "MBA fees, scholarships & loans — noida",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
-    "supporting": [],
+    "supporting": [
+      "/mba-colleges-in-greater-noida"
+    ],
     "size": 56,
     "keywords": [
       "mba colleges in noida with fee structure",
@@ -751,31 +772,6 @@ export const keywordClusters: KeywordCluster[] = [
       "mba colleges in noida with low fees",
       "top mba colleges in noida with fee structure",
       "mba in noida with low fees"
-    ]
-  },
-  {
-    "id": "best-top-ranking:pune",
-    "name": "Best / top MBA colleges — pune",
-    "intent": "commercial",
-    "pillar": "/best-mba-colleges-pune",
-    "supporting": [
-      "/pgdm-colleges-pune",
-      "/top-10-mba-colleges-in-pune",
-      "/mba-colleges-in-pune-accepting-cmat",
-      "/mba-colleges-in-pune-accepting-mh-cet"
-    ],
-    "size": 52,
-    "keywords": [
-      "mba colleges in pune list",
-      "mba colleges in pune rank wise",
-      "mba colleges in pune top 10",
-      "best mba colleges in pune",
-      "is mit pune good for mba",
-      "mba college ranking in pune",
-      "mba in pune best college",
-      "top mba colleges in pune accepting cmat score",
-      "top mba colleges in pune accepting mah cet",
-      "best mba colleges pune"
     ]
   },
   {
@@ -829,8 +825,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/exams/cat/score-vs-percentile",
     "supporting": [
-      "/mba-cutoff-delhi-ncr",
-      "/blog/mba-colleges-delhi-ncr-noida-guide"
+      "/mba-cutoff-delhi-ncr"
     ],
     "size": 49,
     "keywords": [
@@ -962,7 +957,10 @@ export const keywordClusters: KeywordCluster[] = [
     "name": "MBA placements & salary — noida",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
-    "supporting": [],
+    "supporting": [
+      "/mba-colleges-in-greater-noida",
+      "/pgdm-colleges-noida"
+    ],
     "size": 24,
     "keywords": [
       "jaipuria noida mba average package",
@@ -1095,8 +1093,11 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "college-specific:delhi-ncr",
     "name": "College-specific MBA queries — delhi-ncr",
     "intent": "commercial",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-ncr-accepting-gmat"
+    ],
     "size": 23,
     "keywords": [
       "fms delhi mba ranking",
@@ -1137,8 +1138,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "admission-process:delhi-ncr",
     "name": "MBA admission process — delhi-ncr",
     "intent": "transactional",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 19,
     "keywords": [
       "mba colleges in delhi admission open",
@@ -1159,7 +1162,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/exams/cmat/score-vs-percentile",
     "supporting": [
-      "/blog/mba-colleges-delhi-ncr-noida-guide"
+      "/mba-cutoff-delhi-ncr"
     ],
     "size": 26,
     "keywords": [
@@ -1203,7 +1206,9 @@ export const keywordClusters: KeywordCluster[] = [
     "name": "Executive, online, part-time MBA — noida",
     "intent": "informational",
     "pillar": "/mba-colleges-noida",
-    "supporting": [],
+    "supporting": [
+      "/mba-colleges-in-greater-noida"
+    ],
     "size": 15,
     "keywords": [
       "distance mba colleges in greater noida",
@@ -1404,8 +1409,11 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "eligibility-profile:delhi-ncr",
     "name": "MBA eligibility & profile — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-accepting-cat"
+    ],
     "size": 15,
     "keywords": [
       "mba in delhi university eligibility",
@@ -1470,10 +1478,8 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "no-exam-direct:noida",
     "name": "MBA without entrance exam / direct admission — noida",
     "intent": "transactional",
-    "pillar": "/mba-colleges-noida",
-    "supporting": [
-      "/blog/mba-colleges-delhi-ncr-noida-guide"
-    ],
+    "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
+    "supporting": [],
     "size": 11,
     "keywords": [
       "mba colleges in noida without entrance exam",
@@ -1550,8 +1556,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "admission-process:noida",
     "name": "MBA admission process — noida",
     "intent": "transactional",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-noida",
+    "supporting": [
+      "/mba-colleges-in-greater-noida"
+    ],
     "size": 6,
     "keywords": [
       "jaipuria noida mba admission process",
@@ -1583,8 +1591,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "specialization:hr:delhi-ncr",
     "name": "MBA in hr — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 6,
     "keywords": [
       "mba colleges in delhi for hr",
@@ -1599,7 +1609,7 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "eligibility-profile:noida",
     "name": "MBA eligibility & profile — noida",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+    "pillar": "/mba-colleges-noida",
     "supporting": [],
     "size": 5,
     "keywords": [
@@ -1614,8 +1624,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "exam-dates-prep:delhi-ncr",
     "name": "MBA entrance exam dates & prep — delhi-ncr",
     "intent": "transactional",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 8,
     "keywords": [
       "mba syllabus delhi university",
@@ -1632,8 +1644,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "specialization:healthcare:delhi-ncr",
     "name": "MBA in healthcare — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
     "size": 5,
     "keywords": [
       "mba in healthcare management colleges in delhi ncr",
@@ -1663,7 +1677,7 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "cutoff-percentile:noida",
     "name": "MBA cut-offs & percentiles — noida",
     "intent": "commercial",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
+    "pillar": "/mba-cutoff-delhi-ncr",
     "supporting": [],
     "size": 5,
     "keywords": [
@@ -1722,8 +1736,10 @@ export const keywordClusters: KeywordCluster[] = [
     "id": "specialization:finance:delhi-ncr",
     "name": "MBA in finance — delhi-ncr",
     "intent": "informational",
-    "pillar": "/blog/mba-colleges-delhi-ncr-noida-guide",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [
+      "/mba-colleges-in-delhi"
+    ],
     "size": 4,
     "keywords": [
       "mba finance colleges in delhi ncr",

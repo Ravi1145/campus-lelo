@@ -16,7 +16,7 @@ const areaColleges = [
   { name: "MIT World Peace University (MIT-WPU)", distance: "2 km from Hinjewadi Phase 1", courses: "B.Tech, MBA, MCA, BBA", naac: "A+", slug: "mit-wpu-mit-world-peace-university" },
   { name: "Indira College of Engineering and Management", distance: "3 km from Hinjewadi", courses: "B.Tech, MBA", naac: "A", slug: "coep-college-of-engineering-pune" },
   { name: "Symbiosis Institute of Technology (SIT)", distance: "5 km via Lavale", courses: "B.Tech, M.Tech", naac: "A+", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "JSPM's Rajarshi Shahu College of Engineering", distance: "4 km from Hinjewadi", courses: "B.Tech, MBA, MCA", naac: "A", slug: "jspm-rajarshi-shahu-college-engineering-pune" },
+  { name: "JSPM's Rajarshi Shahu College of Engineering", distance: "4 km from Hinjewadi", courses: "B.Tech, MBA, MCA", naac: "A", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
   { name: "Pimpri Chinchwad College of Engineering (PCCOE)", distance: "8 km from Hinjewadi", courses: "B.Tech, M.Tech, MBA", naac: "A+", slug: "pccoe-pimpri-chinchwad-college-of-engineering" },
 ]
 

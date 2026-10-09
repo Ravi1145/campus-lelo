@@ -7,6 +7,7 @@ import { getAllCutoffParams } from "@/data/cutoffs"
 import { seoPages as seoPageData } from "@/data/seoPages"
 import { mbaExams, getMbaExam, EXAM_TOPICS, prepPageIndexable, type ExamTopic } from "@/data/mba/exams"
 import { collegesPageIndexable } from "@/data/mba/programAdmissions"
+import { regionPages } from "@/data/mba/regionPages"
 import { createClient } from "@supabase/supabase-js"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -215,6 +216,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/mba-colleges-in-pune-accepting-snap`,                 lastModified: "2026-10-04", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba`,                                              lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mba-exam-calendar`,                                  lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/site-map`,                                          lastModified: "2026-10-08", changeFrequency: "weekly",  priority: 0.5 },
+    { url: `${BASE_URL}/about`,                                          lastModified: "2026-10-08", changeFrequency: "yearly",  priority: 0.5 },
     { url: `${BASE_URL}/press`,                                              lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-cutoff-delhi-ncr`,                                 lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
@@ -273,6 +276,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/colleges-in-greater-noida`,                lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/pgdm-colleges-noida`,                      lastModified: "2026-06-10", changeFrequency: "monthly", priority: 0.85 },
   ]
+
+  // Delhi / Delhi NCR / Greater Noida MBA pages (generated from verified programme data)
+  const regionEntries: MetadataRoute.Sitemap = regionPages.map((r) => ({
+    url: `${BASE_URL}${r.path}`,
+    lastModified: "2026-10-09",
+    changeFrequency: "weekly" as const,
+    priority: r.exam || r.scope !== "all" ? 0.8 : 0.9,
+  }))
 
   // Cutoff pages â€" one per [exam, college] pair
   const cutoffIndexPage: MetadataRoute.Sitemap = [
@@ -381,6 +392,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticPages,
     ...seoPages,
+    ...regionEntries,
     ...collegePages,
     ...dbCollegePages,
     ...collegeSubPages,

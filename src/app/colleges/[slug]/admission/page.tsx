@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { colleges } from "@/data/colleges"
-import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
+import { titleName, generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const col = colleges.find(c => c.slug === slug)
   if (!col) return {}
   return genMeta({
-    title: `${col.name} Admission 2025-26 | Process, Eligibility & Dates`,
+    title: `${titleName(col)} Admission 2025-26 | Process, Eligibility & Dates`,
     description: `${col.name} admission 2025-26: Eligibility criteria, application process, important dates, and direct admission options for ${col.courses.join(", ")}. Via ${col.entranceExams.join(", ")}.`,
     path: `/colleges/${slug}/admission`,
     keywords: [`${col.shortName} admission`, `${col.name} admission 2025`, `${col.shortName} application form`, `${col.shortName} eligibility`, `how to get admission in ${col.shortName}`],

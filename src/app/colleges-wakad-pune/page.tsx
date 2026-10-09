@@ -15,7 +15,7 @@ export const revalidate = 300
 const colleges = [
   { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade, Wakad area", naac: "A", fees: "â‚¹1.2Lâ€“1.7L/yr", placement: "â‚¹5.2 LPA avg", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
   { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale (near Wakad)", naac: "A+", fees: "â‚¹3.6Lâ€“4.8L/yr", placement: "â‚¹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale (near Wakad)", naac: "A+", fees: "â‚¹8.5L (2yr)", placement: "â‚¹28 LPA avg", slug: "sibm-symbiosis-institute-of-business-management" },
+  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale (near Wakad)", naac: "A+", fees: "â‚¹8.5L (2yr)", placement: "â‚¹28 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "Suryadatta Institute of Management", location: "Wakad, Pune", naac: "B+", fees: "â‚¹3.8L (2yr MBA)", placement: "â‚¹6.5 LPA avg", slug: "suryadatta-institute-management-pune" },
   { name: "JSPM Imperial College of Engineering", location: "Wagholi/Wakad area", naac: "B+", fees: "â‚¹85Kâ€“1.25L/yr", placement: "â‚¹4 LPA avg", slug: "jspm-imperial-college-engineering-pune" },
   { name: "Indira College of Engineering & Management (Parandwadi)", location: "Wakad-Hinjewadi belt", naac: "B++", fees: "â‚¹95Kâ€“1.35L/yr", placement: "â‚¹4.2 LPA avg", slug: "indira-college-of-engineering-management-pune" },

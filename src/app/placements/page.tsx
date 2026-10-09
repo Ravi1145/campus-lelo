@@ -38,7 +38,7 @@ const placementData = [
     placementPct: "100%",
     topRecruiters: ["Goldman Sachs", "Deutsche Bank", "McKinsey", "Deloitte", "KPMG", "Amazon"],
     topSectors: ["Consulting", "BFSI", "IT", "FMCG"],
-    slug: "symbiosis-institute-of-business-management-sibm",
+    slug: "sibm-symbiosis-institute-business-management-pune",
     tier: 1,
   },
   {
@@ -66,7 +66,7 @@ const placementData = [
     placementPct: "95%",
     topRecruiters: ["Google", "Microsoft", "Qualcomm", "NVIDIA", "Amazon", "Persistent"],
     topSectors: ["Software / IT", "Core Engineering", "VLSI", "Embedded"],
-    slug: "college-of-engineering-pune-coep",
+    slug: "coep-college-of-engineering-pune",
     tier: 1,
   },
   {
@@ -80,7 +80,7 @@ const placementData = [
     placementPct: "93%",
     topRecruiters: ["Infosys", "TCS", "Wipro", "Capgemini", "L&T", "Persistent"],
     topSectors: ["IT Services", "Product", "Core Engineering"],
-    slug: "vishwakarma-institute-of-technology-vit-pune",
+    slug: "vit-pune-vishwakarma-institute-of-technology",
     tier: 1,
   },
   {
@@ -94,7 +94,7 @@ const placementData = [
     placementPct: "91%",
     topRecruiters: ["Infosys", "Cognizant", "Capgemini", "Bajaj Auto", "Tata Motors"],
     topSectors: ["IT", "Automobile", "Manufacturing"],
-    slug: "mit-world-peace-university-mitwpu",
+    slug: "mit-wpu-mit-world-peace-university",
     tier: 2,
   },
   {
@@ -168,7 +168,7 @@ export default function PlacementsPage() {
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
 
-      <main className="min-h-screen bg-[#F6F8FB]">
+      <div className="min-h-screen bg-[#F6F8FB]">
 
         {/* Hero */}
         <section className="bg-white border-b border-gray-100">
@@ -326,7 +326,7 @@ export default function PlacementsPage() {
             ))}
           </div>
         </section>
-      </main>
+      </div>
     </>
   )
 }

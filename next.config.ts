@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { collegeRedirects } from "./src/data/collegeRedirects"
 import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
@@ -82,7 +83,6 @@ const nextConfig: NextConfig = {
       { source: "/govt-colleges-pune", destination: "/government-colleges-pune", permanent: true },
       { source: "/admissions", destination: "/counselling", permanent: true },
       { source: "/admission", destination: "/counselling", permanent: true },
-      { source: "/about", destination: "/", permanent: true },
       { source: "/contact", destination: "/counselling", permanent: true },
 
       // ─── /colleges-in-pune/[slug] virtual pages → correct destinations ────
@@ -159,6 +159,14 @@ const nextConfig: NextConfig = {
       { source: "/compare/mit-wpu-mit-world-peace-university-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
       { source: "/compare/symbiosis-institute-of-business-management-sibm-vs-mit-wpu-mit-world-peace-university", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
       { source: "/compare/flame-university-pune-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/flame-university-pune-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
+      // Guessed college slugs linked from landing pages (see src/data/collegeRedirects.ts)
+      ...Object.entries(collegeRedirects).map(([slug, destination]) => ({ source: `/colleges/${slug}`, destination, permanent: true })),
+      { source: "/colleges/colleges", destination: "/colleges", permanent: true },
+      // Same pair already has a standalone page; avoid two near-identical comparisons
+      { source: "/compare/coep-college-of-engineering-pune-vs-pict-pune-institute-of-computer-technology", destination: "/coep-vs-pict-pune", permanent: true },
+      { source: "/colleges/pccoe-pimpri-chinchwad-college-of-engineering/:path*", destination: "/colleges?search=pccoe", permanent: true },
+      // Breadcrumb level that never had a page
+      { source: "/cutoffs/:exam(cat|jee|mht-cet|neet|snap|xat|cmat|mat|gmat)", destination: "/cutoffs", permanent: true },
       // /city/pune/[stream] duplicates the stream landing pages and is not linked anywhere
       { source: "/city/pune/engineering", destination: "/engineering-colleges-pune", permanent: true },
       { source: "/city/pune/mba", destination: "/mba-colleges-pune", permanent: true },
@@ -196,6 +204,7 @@ const nextConfig: NextConfig = {
               "connect-src 'self' https://*.supabase.co https://api.anthropic.com wss://*.supabase.co https://va.vercel-scripts.com https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com",
               "frame-src 'self' https://vercel.live https://www.googletagmanager.com",
               "object-src 'none'",
+              "frame-ancestors 'self'",
               "base-uri 'self'",
             ].join("; "),
           },

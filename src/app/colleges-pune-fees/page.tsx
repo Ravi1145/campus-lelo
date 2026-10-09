@@ -15,10 +15,10 @@ export const revalidate = 300
 const colleges = [
   { name: "COEP Pune (Engineering - Govt)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
   { name: "Fergusson College (Arts/Science - Govt)", location: "Shivajinagar", naac: "A+", fees: "₹25K-60K/yr", placement: "Government", slug: "fergusson-college-pune" },
-  { name: "SIBM Pune (MBA - Private)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr total)", placement: "₹28 LPA avg", slug: "sibm-symbiosis-institute-of-business-management" },
+  { name: "SIBM Pune (MBA - Private)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr total)", placement: "₹28 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
   { name: "VIT Pune (Engineering - Private)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
   { name: "SIT Pune (Engineering - Deemed)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "BJ Government Medical College (MBBS)", location: "Shivajinagar", naac: "A+", fees: "₹1L-2L/yr", placement: "Doctor Residency", slug: "bj-government-medical-college-pune" },
+  { name: "BJ Government Medical College (MBBS)", location: "Shivajinagar", naac: "A+", fees: "₹1L-2L/yr", placement: "Doctor Residency", slug: "bj-medical-college-pune" },
   { name: "DY Patil Medical College (MBBS - Private)", location: "Pimpri", naac: "A+", fees: "₹18L-22L/yr", placement: "Hospital Residency", slug: "dy-patil-medical-college-pimpri-pune" },
   { name: "MIT-WPU (Engineering/MBA - Deemed)", location: "Kothrud", naac: "A+", fees: "₹2L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
 ]

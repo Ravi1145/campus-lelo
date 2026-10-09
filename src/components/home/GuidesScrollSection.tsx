@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Award, BookOpen, Briefcase, Clock, Cog, FileText, GraduationCap, Stethoscope, TrendingUp, Trophy, Users, Wallet } from "lucide-react"
 import MarqueePause from "./MarqueePause"
+import LoopClone from "@/components/ui/LoopClone"
 import { getAllBlogs } from "@/lib/db"
 import { blogs as staticBlogs } from "@/data/blogs"
 
@@ -131,7 +132,7 @@ function GuideCard({ guide }: { guide: GuideCard }) {
           <Icon className="h-3.5 w-3.5 text-[#E0170F]" aria-hidden="true" />
           {guide.category}
         </span>
-        <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/35 px-2.5 py-1 text-[11px] font-semibold text-white ring-1 ring-white/25 backdrop-blur">
+        <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/65 px-2.5 py-1 text-[11px] font-semibold text-white ring-1 ring-white/25 backdrop-blur">
           <Clock className="h-3 w-3" aria-hidden="true" />
           {guide.readTime}
         </span>
@@ -198,9 +199,11 @@ export default async function GuidesScrollSection() {
             <div className="flex gap-4 pr-4">
               {guides.map((g) => <GuideCard key={g.slug} guide={g} />)}
             </div>
-            <div className="flex gap-4 pr-4 motion-reduce:hidden" aria-hidden="true" {...{ inert: true }}>
-              {guides.map((g) => <GuideCard key={`${g.slug}-clone`} guide={g} />)}
-            </div>
+            <LoopClone>
+              <div className="flex gap-4 pr-4 motion-reduce:hidden" aria-hidden="true" {...{ inert: true }}>
+                {guides.map((g) => <GuideCard key={`${g.slug}-clone`} guide={g} />)}
+              </div>
+            </LoopClone>
           </div>
         </div>
       )}

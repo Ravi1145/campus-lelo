@@ -30,11 +30,11 @@ export const revalidate = 300
 const colleges = [
   { rank: 1, name: "AFMC – Armed Forces Medical College", type: "Government (Defence)", nirf: 4, naac: "A++", fees: "₹50,000 (total 4.5 yrs)", seats: 130, neet: "650+", slug: "afmc-armed-forces-medical-college-pune", highlight: "NIRF #4 | Nearly Free | Best in India" },
   { rank: 2, name: "BJ Medical College (BJMC)", type: "Government", nirf: 18, naac: "A+", fees: "₹60K–₹1.2L/yr", seats: 250, neet: "625+ (Open)", slug: "bj-medical-college-pune", highlight: "NIRF #18 | Best Govt for State Quota" },
-  { rank: 3, name: "D.Y. Patil Medical College, Pune", type: "Deemed", nirf: null, naac: "A", fees: "₹11L–₹15L/yr", seats: 150, neet: "500–550 (Mgmt)", slug: "dy-patil-medical-college-pune", highlight: "Most Seats | Management Quota Available" },
+  { rank: 3, name: "D.Y. Patil Medical College, Pune", type: "Deemed", nirf: null, naac: "A", fees: "₹11L–₹15L/yr", seats: 150, neet: "500–550 (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune", highlight: "Most Seats | Management Quota Available" },
   { rank: 4, name: "Bharati Vidyapeeth Medical College", type: "Deemed", nirf: null, naac: "A", fees: "₹8.5L–₹12L/yr", seats: 150, neet: "490–540 (Mgmt)", slug: "bharati-vidyapeeth-medical-college-pune", highlight: "Affordable Deemed | Good Facilities" },
   { rank: 5, name: "Dr. D.Y. Patil Medical College, Pimpri", type: "Deemed", nirf: null, naac: "A", fees: "₹10L–₹14L/yr", seats: 150, neet: "510–560 (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune", highlight: "Large Hospital Attached" },
   { rank: 6, name: "Deenanath Mangeshkar Hospital & Research Centre", type: "Private", nirf: null, naac: "B+", fees: "₹7L–₹10L/yr", seats: 100, neet: "480–530 (Mgmt)", slug: "deenanath-mangeshkar-medical-college-pune", highlight: "Prestigious Hospital Brand" },
-  { rank: 7, name: "Smt. Kashibai Navale Medical College & GH", type: "Private", nirf: null, naac: "B+", fees: "₹7.5L–₹11L/yr", seats: 150, neet: "470–520 (Mgmt)", slug: "smt-kashibai-navale-medical-college-pune", highlight: "Modern Infrastructure" },
+  { rank: 7, name: "Smt. Kashibai Navale Medical College & GH", type: "Private", nirf: null, naac: "B+", fees: "₹7.5L–₹11L/yr", seats: 150, neet: "470–520 (Mgmt)", slug: "smt-kashibai-navale-medical-college", highlight: "Modern Infrastructure" },
   { rank: 8, name: "Pune Dental College & Hospital", type: "Government", nirf: null, naac: "A", fees: "₹1.5L–₹2.5L/yr", seats: 60, neet: "500+ for BDS", slug: "pune-dental-college-pune", highlight: "Best Govt Dental – BDS" },
 ]
 
@@ -90,7 +90,7 @@ export default function MedicalCollegesPunePage() {
       <script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }} />
       <script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageSchema) }} />
 
-      <main className="bg-white min-h-screen">
+      <div className="bg-white min-h-screen">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 border-b border-gray-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -351,7 +351,7 @@ export default function MedicalCollegesPunePage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </>
   )
 }

@@ -24,7 +24,7 @@ export const metadata: Metadata = genMeta({
 
 const colleges = [
   { rank: 1, name: "ILS Law College Pune", type: "Government-aided", naac: "A", fees: "₹20K–₹40K/yr", program: "BA LLB (5yr), LLM", seats: 180, clat: "Merit based", slug: "ils-law-college-pune", highlight: "Oldest & Most Prestigious | 1924 Est." },
-  { rank: 2, name: "Symbiosis Law School (SLS), Pune", type: "Deemed", naac: "A+", fees: "₹1.8L–₹2.5L/yr", program: "BA LLB, BBA LLB, LLM", seats: 200, clat: "SLAT score", slug: "sls-symbiosis-law-school-pune", highlight: "Top 5 Law School India | Best Placements" },
+  { rank: 2, name: "Symbiosis Law School (SLS), Pune", type: "Deemed", naac: "A+", fees: "₹1.8L–₹2.5L/yr", program: "BA LLB, BBA LLB, LLM", seats: 200, clat: "SLAT score", slug: "symbiosis-law-school-pune", highlight: "Top 5 Law School India | Best Placements" },
   { rank: 3, name: "Maharashtra National Law University (MNLU), Pune", type: "Government (NLU)", naac: "–", fees: "₹2L–₹2.5L/yr", program: "BA LLB (5yr)", seats: 120, clat: "CLAT top 2000", slug: "mnlu-maharashtra-national-law-university-pune", highlight: "NLU Status | CLAT admission | Premium" },
   { rank: 4, name: "Bharati Vidyapeeth Law College", type: "Private", naac: "A", fees: "₹60K–₹90K/yr", program: "BA LLB, LLB (3yr)", seats: 120, clat: "MH-CET Law", slug: "bharati-vidyapeeth-law-college-pune", highlight: "Affordable Private | Good faculty" },
   { rank: 5, name: "New Law College, Pune (BMCC Road)", type: "Government-aided", naac: "B+", fees: "₹15K–₹25K/yr", program: "LLB (3yr)", seats: 360, clat: "MH-CET Law", slug: "new-law-college-pune", highlight: "Cheapest Law Degree | Large intake" },

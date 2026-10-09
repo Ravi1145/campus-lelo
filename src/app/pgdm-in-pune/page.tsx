@@ -36,7 +36,7 @@ const COLLEGES = [
   { rank: 3, name: "MIT School of Business (MIT-SOB)",                location: "Kothrud",    naac: "A+", fees: "₹6.5L (2yr)", avgPkg: "₹10.5 LPA",exam: "CAT / MAT / CMAT",slug: "mit-school-of-business-pune",                    highlight: "Best ROI private PGDM"         },
   { rank: 4, name: "BIMM – Balaji Institute of Modern Management",    location: "Tathawade",  naac: "A",  fees: "₹5.5L (2yr)", avgPkg: "₹9.5 LPA", exam: "CAT / MAT / CMAT",slug: "balaji-institute-of-modern-management-pune",     highlight: "Budget PGDM with good placements" },
   { rank: 5, name: "AIMS Institute of Management",                    location: "Viman Nagar",naac: "A",  fees: "₹4.8L (2yr)", avgPkg: "₹8.5 LPA", exam: "CAT / MAT / CMAT",slug: "aims-institute-management-pune",                 highlight: "Affordable with industry focus" },
-  { rank: 6, name: "IndSearch Institute of Management",               location: "Baner",      naac: "A",  fees: "₹4.5L (2yr)", avgPkg: "₹8 LPA",   exam: "CAT / MAT / CMAT",slug: "indsearch-institute-management-pune",            highlight: "70+ years of management education" },
+  { rank: 6, name: "IndSearch Institute of Management",               location: "Baner",      naac: "A",  fees: "₹4.5L (2yr)", avgPkg: "₹8 LPA",   exam: "CAT / MAT / CMAT",slug: "indsearch-institute-of-management-pune",            highlight: "70+ years of management education" },
   { rank: 7, name: "MAEER MIT Institute of Management",               location: "Kothrud",    naac: "A+", fees: "₹5.5L (2yr)", avgPkg: "₹9.2 LPA", exam: "CAT / MAT / CMAT",slug: "maeer-mit-institute-management-pune",            highlight: "MIT group, strong alumni" },
   { rank: 8, name: "Suryadatta Institute of Management",              location: "Wakad",      naac: "B+", fees: "₹3.8L (2yr)", avgPkg: "₹6.5 LPA", exam: "MAT / CMAT",      slug: "suryadatta-institute-management-pune",           highlight: "Most affordable PGDM in Pune" },
 ]
@@ -93,7 +93,7 @@ export default function PGDMInPune() {
       <script id="faq-schema"        type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
-      <main className="min-h-screen" style={{ background: "#F6F8FB" }}>
+      <div className="min-h-screen" style={{ background: "#F6F8FB" }}>
 
         {/* Hero */}
         <section style={{ background: "#011B40" }} className="px-6 py-12">
@@ -235,7 +235,7 @@ export default function PGDMInPune() {
             </Link>
           </section>
         </div>
-      </main>
+      </div>
       <RelatedMbaSearches path="/pgdm-in-pune" />
     </>
   )

@@ -117,7 +117,7 @@ ${ul([
 <p>Pune and NCR students can see city-specific options on our ${a("/mba-colleges-in-pune-scholarship", "MBA scholarships in Pune")} and ${a("/low-fees-mba-colleges-pune", "low-fee MBA colleges in Pune")} pages.</p>
 
 <h2>Is a costlier MBA always better?</h2>
-<p>No. Judge cost against what you get back. Compare the total cost with the institute's published placement report, read carefully using our guide to ${a("/blog/mba-placements-and-salary-how-to-read-reports", "reading MBA placement reports")}. A lower-cost programme with a clear route to your target role can beat a premium one that does not fit your goal.</p>
+<p>No. A higher fee does not guarantee a better outcome, so judge cost against what you get back. Work out the total cost from the worksheet above, then compare it with the placement report the institute publishes, read carefully using our guide to ${a("/blog/mba-placements-and-salary-how-to-read-reports", "reading MBA placement reports")}. A simple check is how many years of the median starting salary it would take to repay the total cost, and any loan, on top of living expenses. Use the median where it is reported, not the highest offer. A lower-cost programme with a clear route to your target role can beat a premium one that does not fit your goal.</p>
 ${RELATED([...COMMON_LINKS, ["/blog/how-to-choose-an-mba-college-in-india", "How to choose an MBA college in India"]])}
 ${SOURCES}`
 
@@ -196,7 +196,7 @@ ${ol([
 ])}
 
 <h2>Best MBA colleges by city</h2>
-<p>If a city matters to you, start with our city pages: ${a("/best-mba-colleges-pune", "best MBA colleges in Pune")}, ${a("/top-10-mba-colleges-in-pune", "top 10 MBA colleges in Pune")}, ${a("/mba-colleges-noida", "MBA colleges in Noida")} and the ${a("/blog/mba-colleges-delhi-ncr-noida-guide", "Delhi NCR guide")}. You can also filter all colleges by stream, exam and fees on our ${a("/colleges?stream=MBA", "MBA college list")}.</p>
+<p>If a city matters to you, start with our city pages: ${a("/mba-colleges-pune", "best MBA colleges in Pune")}, ${a("/top-10-mba-colleges-in-pune", "top 10 MBA colleges in Pune")}, ${a("/mba-colleges-noida", "MBA colleges in Noida")} and the ${a("/blog/mba-colleges-delhi-ncr-noida-guide", "Delhi NCR guide")}. You can also filter all colleges by stream, exam and fees on our ${a("/colleges?stream=MBA", "MBA college list")}.</p>
 
 <h2>Is a CMAT or MAT score enough for a good MBA?</h2>
 <p>Many good programmes accept ${examLink("cmat", "CMAT")}, ${examLink("mat", "MAT")}, ${examLink("snap", "SNAP")} or ${examLink("xat", "XAT")} as well as ${examLink("cat", "CAT")}. Acceptance is set by each programme, so confirm it on the institute's page. Do not rule a college out by exam alone; check the exam list for each college you like.</p>
@@ -210,7 +210,7 @@ const cutoffBody = `
 <p><strong>Quick answer:</strong> a score, a percentile and a cut-off are three different things. Your score is the marks you got. Your percentile shows how you ranked against other test-takers. A cut-off is a threshold an institute uses to shortlist you for the next round, and many institutes publish none. Predicted "cut-off lists" on random sites are guesses; here we show what is officially published.</p>
 
 <h2>What is an MBA entrance exam cut-off?</h2>
-<p>A cut-off is the minimum score or percentile an institute uses at a stage of selection. People often search "MBA cut-off for IIM", "IIFT MBA cut-off" or "BIMTECH MBA cut-off" expecting one figure. In practice:</p>
+<p><strong>A cut-off is the minimum score or percentile an institute uses at one stage of selection.</strong> It is not the same as your score, which is the marks you obtained, or your percentile, which shows how you ranked among test-takers. Most shortlist cut-offs only decide who is called for the group discussion and interview; final selection also weighs academics, work experience and interview performance. Many institutes publish no cut-off at all. People often search "MBA cut-off for IIM", "IIFT MBA cut-off" or "BIMTECH MBA cut-off" expecting one figure. In practice:</p>
 ${ul([
   "<strong>Sectional cut-offs</strong> require a minimum in each section, not only overall.",
   "<strong>Overall or composite cut-offs</strong> combine section scores with weights chosen by the institute.",

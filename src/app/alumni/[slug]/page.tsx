@@ -186,7 +186,7 @@ export default async function AlumniProfilePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
 
-      <main className="bg-white min-h-screen">
+      <div className="bg-white min-h-screen">
         {/* ── Hero strip ──────────────────────────────────────────────────── */}
         <section className="bg-[#011B40] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
@@ -295,7 +295,7 @@ export default async function AlumniProfilePage({ params }: Props) {
             </Link>
           </div>
         </div>
-      </main>
+      </div>
     </>
   )
 }

@@ -107,7 +107,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
     <div className={cn("relative shrink-0 flex items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg ring-4 ring-white", size)}>
       {college.logo && !logoError ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={college.logo} alt={`${college.name} logo`} className="h-full w-full object-contain p-1.5" onError={() => setLogoError(true)} />
+        <img src={college.logo} alt={`${college.name} logo`} width={72} height={72} loading="lazy" className="h-full w-full object-contain p-1.5" onError={() => setLogoError(true)} />
       ) : (
         <span className="px-1 text-center text-xs font-black leading-tight tracking-tight text-[#012858]">{abbrev(college.shortName)}</span>
       )}

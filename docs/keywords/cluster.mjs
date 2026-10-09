@@ -11,7 +11,9 @@ const raw = JSON.parse(fs.readFileSync(path.join(here, "raw-suggestions.json"), 
 
 // ── What exists on the site (routes + blog slugs) ───────────────────────────
 const routes = new Set(fs.readdirSync(path.join(root, "src/app"), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => "/" + d.name))
-const has = (u) => routes.has(u)
+// Pages that redirect elsewhere (next.config.ts) must never be a keyword target
+const redirected = new Set([...fs.readFileSync(path.join(root, "next.config.ts"), "utf8").matchAll(/source:\s*"(\/[a-z0-9-]+)"/g)].map((m) => m[1]))
+const has = (u) => routes.has(u) && !redirected.has(u)
 const BLOG = "/blog/mba-colleges-delhi-ncr-noida-guide"
 
 // ── Dimension detectors ─────────────────────────────────────────────────────
@@ -82,10 +84,18 @@ function landing(kw, c) {
   const P = (u) => (has(u) ? u : null)
   // Cities and countries we have no pages for — leave unmapped (listed as gaps), don't point at another city's page
   if (OTHER_CITIES.test(kw)) return null
-  // Delhi NCR / Noida queries that are exam-led still belong on the city page
-  if (c.loc && /delhi|ncr|gurgaon|noida/.test(c.loc) && /college|cut ?off|percentile|score/.test(kw)) {
-    if (c.loc === "noida" || c.loc === "greater noida") return c.topic === "cutoff-percentile" ? BLOG : P("/mba-colleges-noida")
-    return c.topic === "cutoff-percentile" ? P("/mba-cutoff-delhi-ncr") : BLOG
+  // ── Delhi / Delhi NCR / Gurugram / Noida / Greater Noida: dedicated region pages ──────────
+  const NCRLOC = ["delhi", "delhi ncr", "gurgaon", "noida", "greater noida"]
+  if (NCRLOC.includes(c.loc)) {
+    const ex = ["cat", "xat", "gmat", "cmat"].includes(c.exam) ? c.exam : null
+    if (/without|no entrance|direct admission|management quota|non[- ]?cat|other than cat/.test(kw)) return P("/mba-colleges-in-delhi-ncr-without-cat")
+    if (/cut ?off|percentile/.test(kw)) return P("/mba-cutoff-delhi-ncr")
+    if (ex && /accept|college|score|admission/.test(kw)) return c.loc === "delhi" && ex === "cat" ? P("/mba-colleges-in-delhi-accepting-cat") : P(`/mba-colleges-in-delhi-ncr-accepting-${ex}`)
+    if (/pgdm/.test(kw)) return c.loc === "noida" || c.loc === "greater noida" ? P("/pgdm-colleges-noida") : P("/pgdm-colleges-in-delhi-ncr")
+    if (c.loc === "greater noida") return P("/mba-colleges-in-greater-noida")
+    if (c.loc === "noida") return P("/mba-colleges-noida")
+    if (c.loc === "delhi") return P("/mba-colleges-in-delhi")
+    return P("/mba-colleges-in-delhi-ncr") // delhi ncr, gurgaon
   }
   const slugExam = c.exam === "cuet-pg" ? null : c.exam
   // Exam-led queries → exam hub / topic pages
@@ -197,7 +207,7 @@ const B = (slug) => `/blog/${slug}`
 const ARTICLE_FOR = {
   "fees-funding:india": { url: B("mba-fees-in-india-guide"), supporting: ["/low-fees-mba-colleges-pune", "/mba-colleges-noida"] },
   "placements-salary:india": { url: B("mba-placements-and-salary-how-to-read-reports"), supporting: ["/mba-placements-pune", "/mba-colleges-noida"] },
-  "best-top-ranking:india": { url: B("how-to-choose-an-mba-college-in-india"), supporting: ["/best-mba-colleges-pune", "/mba-colleges-noida", "/compare"] },
+  "best-top-ranking:india": { url: B("how-to-choose-an-mba-college-in-india"), supporting: ["/mba-colleges-pune", "/mba-colleges-noida", "/compare"] },
   "cutoff-percentile:india": { url: B("mba-cutoff-vs-percentile-explained"), supporting: ["/mba-cutoff-pune", "/mba-cutoff-delhi-ncr"] },
   "admission-process:india": { url: B("mba-admission-process-in-india"), supporting: ["/mba-admission-process-pune", "/exams"] },
   "eligibility-profile:india": { url: B("mba-eligibility-criteria-in-india"), supporting: ["/exams", "/mba-admission-process-pune"] },

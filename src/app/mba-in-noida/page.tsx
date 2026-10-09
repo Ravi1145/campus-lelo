@@ -72,7 +72,7 @@ export default function MBAInNoidaPage() {
           { name: "MBA in Noida 2026 Guide", url: "/mba-in-noida" },
         ])) }} />
 
-      <main style={{ background: "#F7F9FC" }}>
+      <div style={{ background: "#F7F9FC" }}>
 
         <section style={{ background: "#012858" }} className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
@@ -275,7 +275,7 @@ export default function MBAInNoidaPage() {
             </div>
           </section>
         </div>
-      </main>
+      </div>
       <RelatedMbaSearches path="/mba-in-noida" />
     </>
   )

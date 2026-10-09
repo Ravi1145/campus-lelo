@@ -20,9 +20,9 @@ export const metadata: Metadata = genMeta({
 const cutoffs = [
   { rank: 1, name: "AFMC Pune (Armed Forces Medical College)", slug: "afmc-armed-forces-medical-college-pune", type: "Government (Defence)", nirf: 4, fees: "₹50K total (4.5 yrs)", open: "650+ (NEET + AFMC test)", obc: "640+", sc: "620+", st: "610+", note: "NIRF #4 — Best in Pune" },
   { rank: 2, name: "BJ Medical College Pune", slug: "bj-medical-college-pune", type: "Government State", nirf: 18, fees: "₹60K/yr", open: "632 (State) / 641 (AIQ)", obc: "596+ (State)", sc: "548+", st: "528+", note: "Best Govt. Option" },
-  { rank: 3, name: "D.Y. Patil Medical College (Deemed)", slug: "dy-patil-medical-college-pune", type: "Deemed Private", nirf: null, fees: "₹14L–₹18L/yr", open: "550+", obc: "530+", sc: "500+", st: "480+", note: "Largest Private MBBS" },
+  { rank: 3, name: "D.Y. Patil Medical College (Deemed)", slug: "dy-patil-medical-college-pimpri-pune", type: "Deemed Private", nirf: null, fees: "₹14L–₹18L/yr", open: "550+", obc: "530+", sc: "500+", st: "480+", note: "Largest Private MBBS" },
   { rank: 4, name: "Bharati Vidyapeeth Medical College", slug: "bharati-vidyapeeth-medical-college-pune", type: "Deemed", nirf: null, fees: "₹12L–₹15L/yr", open: "560+", obc: "540+", sc: "510+", st: "490+", note: "Established 1989" },
-  { rank: 5, name: "Symbiosis Medical College for Women (SMCW)", slug: "symbiosis-medical-college-women-pune", type: "Deemed (Women only)", nirf: null, fees: "₹12.5L/yr", open: "565+ (Women)", obc: "545+", sc: "515+", st: "495+", note: "Women Only | SIU Campus" },
+  { rank: 5, name: "Symbiosis Medical College for Women (SMCW)", slug: "symbiosis-medical-college-for-women-pune", type: "Deemed (Women only)", nirf: null, fees: "₹12.5L/yr", open: "565+ (Women)", obc: "545+", sc: "515+", st: "495+", note: "Women Only | SIU Campus" },
 ]
 
 const faqs = [
