@@ -108,6 +108,54 @@ ${ul([
 ])}
 <p>Checked on 9 October 2026. Counselling status changes during the cycle, so confirm dates on each university's own portal. See our ${a("/editorial-policy", "editorial policy")}.</p>`
 
+
+const upBody = `
+<p><strong>Quick answer:</strong> there are two main ways into an MBA or PGDM in Uttar Pradesh. State-affiliated colleges fill seats through UPTAC counselling, which education portals report uses CUET PG scores. Institutes such as IIM Lucknow, Jaypee Business School, BIMTECH, Jaipuria and IMT run their own admission with exams like CAT, MAT, CMAT, XAT and GMAT. None of the independent institutes we verified publishes a fixed percentile cut-off.</p>
+
+<h2>Route 1: UPTAC state counselling</h2>
+<p>UPTAC runs counselling and admission for degree-level engineering institutions and other professional colleges in Uttar Pradesh. Its official site (${ext("https://uptac.samarth.edu.in/", "uptac.samarth.edu.in")}) lists an information brochure, a counselling procedure, opening and closing rank details and a notice titled "CUET PG 2026 Paper Mappings for UPTAC 2026". The page we checked did not list MBA programmes, and education portals report that MBA seats in AKTU-affiliated colleges use CUET PG scores. Read the current brochure to confirm which programmes, papers and categories apply to you. See ${a("/blog/cuet-pg-mba-colleges-and-cutoff-explained", "CUET PG for MBA")}.</p>
+
+<h2>Route 2: institute-level admission</h2>
+<table><thead><tr><th>Institute</th><th>City</th><th>Exams accepted (from its own page)</th></tr></thead><tbody>
+<tr><td>IIM Lucknow (MBA, PGP)</td><td>Lucknow</td><td>CAT only; then WAT and interview</td></tr>
+<tr><td>Jaypee Business School</td><td>Noida</td><td>CAT, MAT, CMAT, XAT, GMAT, ATMA, CUET-PG; then GD and interview</td></tr>
+<tr><td>BIMTECH</td><td>Greater Noida</td><td>CAT, XAT, GMAT, CMAT (MAT for two specialisations)</td></tr>
+<tr><td>Jaipuria Institute of Management</td><td>Noida</td><td>CAT, XAT, CMAT, MAT, GMAT</td></tr>
+<tr><td>IMT Ghaziabad</td><td>Ghaziabad</td><td>CAT, XAT, GMAT</td></tr>
+</tbody></table>
+<p>Each row comes from the institute's admission page and the full list with dates is on ${a("/mba-colleges-in-uttar-pradesh", "MBA colleges in Uttar Pradesh")}. IIM Lucknow's Noida campus runs separate programmes with their own admission pages.</p>
+
+<h2>Do these institutes publish a cut-off?</h2>
+<p>Not a fixed percentile on the pages we checked. They shortlist on the exam score together with academics, work experience and, in several cases, a group discussion or interview. Any single percentile you see for them elsewhere is an estimate. See ${a("/mba-cutoff-uttar-pradesh", "MBA cut-offs in Noida, Lucknow and UP")}.</p>
+
+<h2>How to choose a route</h2>
+${ol([
+  "<strong>List your exam scores.</strong> A CAT, MAT, CMAT, XAT or GMAT score opens the institute route. A CUET PG score opens the state counselling route.",
+  "<strong>Check the official pages.</strong> Use the institute's admission page or UPTAC's brochure, not a summary on a coaching site.",
+  "<strong>Note the dates.</strong> UPTAC and each institute have their own registration and counselling dates.",
+  "<strong>Compare total cost and outcomes.</strong> See " + a("/blog/mba-fees-in-india-guide", "the MBA fees guide") + " and " + a("/blog/mba-placements-and-salary-how-to-read-reports", "how to read placement reports") + ".",
+  "<strong>Apply to a mix</strong> of reach, target and safe options across both routes.",
+])}
+
+<h2>Where to go next</h2>
+${ul([
+  a("/mba-colleges-in-lucknow", "MBA colleges in Lucknow"),
+  a("/mba-colleges-noida", "MBA colleges in Noida"),
+  a("/mba-colleges-in-greater-noida", "MBA colleges in Greater Noida"),
+  a("/mba-cutoff-uttar-pradesh", "MBA cut-offs in Noida, Lucknow and UP"),
+  a("/mba-counselling", "Free MBA counselling"),
+])}
+
+<h2>Sources</h2>
+${ul([
+  ext("https://uptac.samarth.edu.in/", "UPTAC official site"),
+  ext("https://www.iiml.ac.in/master-business-administration", "IIM Lucknow: MBA (PGP) admission policy (official)"),
+  ext("https://jbs.ac.in/mba-admission-procedure", "Jaypee Business School: MBA admission procedure (official)"),
+  ext("https://www.bimtech.ac.in/admissions/", "BIMTECH admissions (official)"),
+  ext("https://www.jaipuria.ac.in/admissions/", "Jaipuria admissions (official)"),
+])}
+<p>Checked on 9 October 2026. Counselling status changes during the cycle, so confirm dates on the official portals. See our ${a("/editorial-policy", "editorial policy")}.</p>`
+
 export const mbaCutoffGuides: BlogPost[] = [
   {
     id: 41, slug: "mah-mba-cet-cap-cutoff-explained",
@@ -122,5 +170,12 @@ export const mbaCutoffGuides: BlogPost[] = [
     excerpt: "CUET PG is run by NTA, but each university sets its own MBA cut-off and counselling. See how to find a university's real cut-off and when CUET PG is the right exam.",
     body: cuetBody, author: AUTHOR, date: DATE, publishedAt: DATE, readTime: "5 min", category: "Exams",
     tags: ["CUET PG MBA", "CUET PG MBA cutoff", "MBA colleges accepting CUET PG", "CUET PG MBA colleges", "MBA admission through CUET PG"],
+  },
+  {
+    id: 43, slug: "mba-admission-in-uttar-pradesh",
+    title: "MBA Admission in Uttar Pradesh: CUET PG, UPTAC and Direct Routes",
+    excerpt: "How MBA admission works in UP: UPTAC counselling for state-affiliated colleges, and direct admission at IIM Lucknow, JBS, BIMTECH, Jaipuria and IMT, with the exams each accepts.",
+    body: upBody, author: AUTHOR, date: DATE, publishedAt: DATE, readTime: "6 min", category: "MBA",
+    tags: ["MBA admission in UP", "MBA colleges in Uttar Pradesh", "UPTAC MBA", "AKTU MBA admission", "MBA colleges in Lucknow"],
   },
 ]

@@ -162,6 +162,8 @@ const nextConfig: NextConfig = {
       // Guessed college slugs linked from landing pages (see src/data/collegeRedirects.ts)
       ...Object.entries(collegeRedirects).map(([slug, destination]) => ({ source: `/colleges/${slug}`, destination, permanent: true })),
       { source: "/colleges/colleges", destination: "/colleges", permanent: true },
+      // Same intent as /mba-colleges-noida; the old page had unsourced fees and packages
+      { source: "/mba-in-noida", destination: "/mba-colleges-noida", permanent: true },
       // Same pair already has a standalone page; avoid two near-identical comparisons
       { source: "/compare/coep-college-of-engineering-pune-vs-pict-pune-institute-of-computer-technology", destination: "/coep-vs-pict-pune", permanent: true },
       { source: "/colleges/pccoe-pimpri-chinchwad-college-of-engineering/:path*", destination: "/colleges?search=pccoe", permanent: true },

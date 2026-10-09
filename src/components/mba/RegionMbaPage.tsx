@@ -58,14 +58,14 @@ export default function RegionMbaPage({ path }: { path: string }) {
     ? `We have not yet verified any ${def.place} programmes for this exam. Check each institute's admission page.`
     : def.scope === "noCat"
       ? `Yes, for the programmes we have verified. ${list(names)} accept at least one exam besides CAT (${list(Array.from(new Set(programmes.flatMap((p) => p.examsAccepted.filter((e) => e !== "cat")).map(examName))))}). ${excluded.length ? `${list(excluded.map(short))} ${excluded.length === 1 ? "takes" : "take"} only CAT for the programmes we checked, so you would need a CAT score for ${excluded.length === 1 ? "it" : "them"}. ` : ""}Acceptance is set per programme and changes each cycle, so confirm on the institute's own page before you register.`
-      : `We have verified ${programmes.length} ${def.exam ? `${examName(def.exam)}-accepting ` : ""}programme${programmes.length === 1 ? "" : "s"} in ${placeIn} against the institutes' official admission pages: ${list(programmes.map((p) => `${short(p)} (${list(p.examsAccepted.map(examName))})`))}. Acceptance is set per programme and per intake, so confirm the current cycle on each institute's page.`
+      : `We have verified ${programmes.length} ${def.exam ? `${examName(def.exam)}-accepting ` : ""}programme${programmes.length === 1 ? "" : "s"} in ${placeIn} against the institutes' official admission pages: ${list(programmes.map((p) => `${short(p)} (${p.examsAccepted.length ? list(p.examsAccepted.map(examName)) : "see its admission page"})`))}. Acceptance is set per programme and per intake, so confirm the current cycle on each institute's page.`
 
   // ── FAQs (all generated from the same records) ─────────────────────────────
   const faqs = [
     { question: def.question, answer },
     {
       question: `Which exams are accepted for MBA and PGDM in ${placeIn}?`,
-      answer: programmes.length ? `Among the programmes we verified: ${programmes.map((p) => `${short(p)} accepts ${list(p.examsAccepted.map(examName))}`).join("; ")}.` : "We have not verified programmes for this selection yet.",
+      answer: programmes.length ? `Among the programmes we verified: ${programmes.map((p) => `${short(p)} ${p.examsAccepted.length ? `accepts ${list(p.examsAccepted.map(examName))}` : "uses the exams listed on its admission page"}`).join("; ")}.` : "We have not verified programmes for this selection yet.",
     },
     {
       question: `Is a PGDM from ${placeIn} the same as an MBA?`,
@@ -179,7 +179,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
           {(cutoffs.length > 0 || noCutoff.length > 0) && (
             <section aria-labelledby="cut-h">
               <h2 id="cut-h" className="text-2xl font-extrabold text-[#012858]">MBA cut-offs in {placeIn}</h2>
-              <p className="mt-1 text-sm text-gray-600">Only officially published or consistently reported figures, and what each measures. Details: <Link href="/mba-cutoff-delhi-ncr" className="font-bold text-[#C90D11] hover:underline">MBA cut-offs in Delhi NCR</Link>.</p>
+              <p className="mt-1 text-sm text-gray-600">Only officially published or consistently reported figures, and what each measures. Details: <Link href={def.cutoffPage ?? "/mba-cutoff-delhi-ncr"} className="font-bold text-[#C90D11] hover:underline">MBA cut-offs in Delhi NCR</Link>.</p>
               <div className="mt-4 space-y-3">
                 {cutoffs.map((c) => (
                   <div key={c.institution} className="rounded-2xl bg-white p-5 ring-1 ring-gray-200">

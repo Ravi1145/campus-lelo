@@ -99,6 +99,7 @@ export function ProgramList({ programs }: { programs: ProgramAdmission[] }) {
           </div>
           <p className="text-sm text-gray-700 mt-2">
             <span className="font-semibold">Accepts: </span>
+            {p.examsAccepted.length === 0 && <span>see notes</span>}
             {p.examsAccepted.map((slug, i) => {
               const e = getMbaExam(slug)
               return (

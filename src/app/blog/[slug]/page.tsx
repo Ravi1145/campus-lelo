@@ -103,6 +103,7 @@ const SEARCH_TITLES: Record<string, string> = {
   "pune-vs-noida-colleges-comparison-2026": "Pune vs Noida for Engineering & MBA 2026: Which Is Better?",
   "mba-admission-process-in-india": "MBA Admission Process in India: Steps, Dates, Documents",
   "mah-mba-cet-cap-cutoff-explained": "MAH MBA CET CAP Cut-off Explained: Closing Percentiles",
+  "mba-admission-in-uttar-pradesh": "MBA Admission in UP: CUET PG, UPTAC, Direct Routes",
   "cuet-pg-mba-colleges-and-cutoff-explained": "CUET PG for MBA: Colleges, Cut-off, How It Works",
 }
 

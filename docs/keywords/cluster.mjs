@@ -19,7 +19,7 @@ const BLOG = "/blog/mba-colleges-delhi-ncr-noida-guide"
 // ── Dimension detectors ─────────────────────────────────────────────────────
 const LOCATIONS = [
   ["greater noida", /greater noida/], ["noida", /\bnoida\b/], ["gurgaon", /gurgaon|gurugram/], ["delhi ncr", /\bncr\b/],
-  ["delhi", /\bdelhi\b/], ["pune", /\bpune\b|\bpumba\b|\bsibm\b|scmhrd|mit wpu|\bsymbiosis\b/], ["mumbai", /mumbai|nmims|spjimr|welingkar|\bjbims\b/],
+  ["delhi", /\bdelhi\b/], ["lucknow", /lucknow/], ["dehradun", /dehradun|\bdoon\b|\bupes\b|graphic era/], ["uttarakhand", /uttarakhand|kashipur|roorkee|haridwar/], ["uttar pradesh", /uttar pradesh|\bup\b|aktu|upsee|uptac/], ["ghaziabad", /ghaziabad/], ["pune", /\bpune\b|\bpumba\b|\bsibm\b|scmhrd|mit wpu|\bsymbiosis\b/], ["mumbai", /mumbai|nmims|spjimr|welingkar|\bjbims\b/],
   ["bangalore", /bangalore|bengaluru/], ["hyderabad", /hyderabad|\bisb\b/],
 ]
 const EXAMS = [
@@ -79,7 +79,7 @@ function relevant(kw) {
 }
 
 // ── Landing-page mapping (best existing URL for a query; null = gap) ────────
-const OTHER_CITIES = /\b(mumbai|bangalore|bengaluru|hyderabad|kolkata|chennai|ahmedabad|jaipur|lucknow|indore|nagpur|chandigarh|coimbatore|bhopal|kochi|goa|patna|ranchi|vizag|visakhapatnam|surat|vadodara|nashik|thane|navi mumbai|telangana|kerala|karnataka|tamil nadu|gujarat|rajasthan|uttar pradesh|new zealand|usa|canada|abroad|australia|uk|germany|dubai)\b/
+const OTHER_CITIES = /\b(mumbai|bangalore|bengaluru|hyderabad|kolkata|chennai|ahmedabad|jaipur|indore|nagpur|chandigarh|coimbatore|bhopal|kochi|goa|patna|ranchi|vizag|visakhapatnam|surat|vadodara|nashik|thane|navi mumbai|telangana|kerala|karnataka|tamil nadu|gujarat|rajasthan|uttar pradesh|new zealand|usa|canada|abroad|australia|uk|germany|dubai)\b/
 function landing(kw, c) {
   const P = (u) => (has(u) ? u : null)
   // Cities and countries we have no pages for — leave unmapped (listed as gaps), don't point at another city's page
@@ -89,7 +89,7 @@ function landing(kw, c) {
   if (NCRLOC.includes(c.loc)) {
     const ex = ["cat", "xat", "gmat", "cmat"].includes(c.exam) ? c.exam : null
     if (/without|no entrance|direct admission|management quota|non[- ]?cat|other than cat/.test(kw)) return P("/mba-colleges-in-delhi-ncr-without-cat")
-    if (/cut ?off|percentile/.test(kw)) return P("/mba-cutoff-delhi-ncr")
+    if (/cut ?off|percentile/.test(kw)) return c.loc === "noida" || c.loc === "greater noida" ? P("/mba-cutoff-uttar-pradesh") : P("/mba-cutoff-delhi-ncr")
     if (ex && /accept|college|score|admission/.test(kw)) return c.loc === "delhi" && ex === "cat" ? P("/mba-colleges-in-delhi-accepting-cat") : P(`/mba-colleges-in-delhi-ncr-accepting-${ex}`)
     if (/pgdm/.test(kw)) return c.loc === "noida" || c.loc === "greater noida" ? P("/pgdm-colleges-noida") : P("/pgdm-colleges-in-delhi-ncr")
     if (c.loc === "greater noida") return P("/mba-colleges-in-greater-noida")
@@ -147,6 +147,11 @@ function landing(kw, c) {
     if (c.topic === "cutoff-percentile") return P("/mba-cutoff-delhi-ncr")
     return BLOG
   }
+  if (loc === "dehradun") return c.topic === "cutoff-percentile" ? P("/mba-cutoff-uttarakhand") : P("/mba-colleges-in-dehradun")
+  if (loc === "uttarakhand") return c.topic === "cutoff-percentile" ? P("/mba-cutoff-uttarakhand") : P("/mba-colleges-in-uttarakhand")
+  if (loc === "lucknow") return c.topic === "cutoff-percentile" ? P("/mba-cutoff-uttar-pradesh") : P("/mba-colleges-in-lucknow")
+  if (loc === "uttar pradesh") return c.topic === "cutoff-percentile" ? P("/mba-cutoff-uttar-pradesh") : c.topic === "admission-process" ? "/blog/mba-admission-in-uttar-pradesh" : P("/mba-colleges-in-uttar-pradesh")
+  if (loc === "ghaziabad") return c.topic === "cutoff-percentile" ? P("/mba-cutoff-delhi-ncr") : P("/mba-colleges-in-delhi-ncr")
   if (loc === "mumbai" && c.topic === "cutoff-percentile") return P("/mba-cutoff-mumbai")
   if (loc) return null // Bangalore / Hyderabad / other Mumbai topics — no page yet
   // Location-less / national queries

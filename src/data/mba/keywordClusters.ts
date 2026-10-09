@@ -25,18 +25,18 @@ export const keywordClusters: KeywordCluster[] = [
       "/low-fees-mba-colleges-pune",
       "/mba-colleges-noida"
     ],
-    "size": 454,
+    "size": 569,
     "keywords": [
       "pgdm colleges with low fees",
       "ipe mba fees",
-      "mba colleges in india fees",
-      "mba colleges in india low fees",
-      "flame mba fees",
-      "how to get scholarship for mba in india",
-      "is there any scholarship for mba in iim",
-      "how much scholarship can i get for mba in telangana",
-      "mba in india fees",
-      "mba courses in india fees"
+      "mba colleges in faridabad with fees",
+      "mba colleges in faridabad with low fees",
+      "mba colleges in meerut with fee structure",
+      "top mba colleges in meerut with fee structure",
+      "mba colleges in kanpur fees",
+      "top mba colleges in agra with fees",
+      "top mba colleges in varanasi with fees",
+      "mba at lowest fees"
     ]
   },
   {
@@ -48,18 +48,42 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-placements-pune",
       "/mba-colleges-noida"
     ],
-    "size": 345,
+    "size": 439,
     "keywords": [
       "bimtech mba average package",
+      "top 10 mba colleges in kanpur placement wise",
+      "sharda university mba average package",
+      "lbsim mba average package",
       "mba average package",
+      "mba colleges with placement",
       "mba colleges in india placement wise",
       "bimtech mba placements",
-      "xlri mba average package",
-      "ipe mba placements",
-      "flame mba placements",
-      "flame university mba average package",
-      "mba colleges with placement",
-      "mba colleges average package"
+      "iim mba average package",
+      "xlri mba average package"
+    ]
+  },
+  {
+    "id": "best-top-ranking:india",
+    "name": "Best / top MBA colleges",
+    "intent": "commercial",
+    "pillar": "/blog/how-to-choose-an-mba-college-in-india",
+    "supporting": [
+      "/mba-colleges-pune",
+      "/mba-colleges-noida",
+      "/compare"
+    ],
+    "size": 358,
+    "keywords": [
+      "mba colleges in india ranking",
+      "top mba colleges in faridabad",
+      "mba colleges in varanasi list",
+      "which college is best for mba",
+      "best mba colleges in india",
+      "mba in india best university",
+      "mba in india top colleges",
+      "top mba colleges in india accepting cmat score",
+      "which iim is best for mba",
+      "mba entrance exam list"
     ]
   },
   {
@@ -88,30 +112,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "best-top-ranking:india",
-    "name": "Best / top MBA colleges",
-    "intent": "commercial",
-    "pillar": "/blog/how-to-choose-an-mba-college-in-india",
-    "supporting": [
-      "/mba-colleges-pune",
-      "/mba-colleges-noida",
-      "/compare"
-    ],
-    "size": 287,
-    "keywords": [
-      "mba colleges in india ranking",
-      "which college is best for mba",
-      "best mba colleges in india",
-      "mba in india best university",
-      "mba in india top colleges",
-      "top mba colleges in india accepting cmat score",
-      "mba entrance exam list",
-      "best mba colleges new zealand",
-      "which is the best mba college",
-      "is cmat good for mba"
-    ]
-  },
-  {
     "id": "admission-process:india",
     "name": "MBA admission process",
     "intent": "transactional",
@@ -120,18 +120,18 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-admission-process-pune",
       "/exams"
     ],
-    "size": 258,
+    "size": 292,
     "keywords": [
-      "xlri mba admission process",
       "mba colleges in india admission open",
+      "xlri mba admission process",
+      "mba how to get admission",
+      "mba colleges open for admission",
       "iift mba admission process",
       "bimtech mba admission process",
       "iim mba admission process",
       "ipe mba admission 2026",
       "great lakes mba admission process",
-      "flame mba admission process",
-      "imt ghaziabad mba admission process",
-      "mba admission process"
+      "flame mba admission process"
     ]
   },
   {
@@ -143,8 +143,9 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-cutoff-pune",
       "/mba-cutoff-delhi-ncr"
     ],
-    "size": 223,
+    "size": 222,
     "keywords": [
+      "mba obc cut off",
       "mba entrance exam cut off",
       "mba colleges in india cutoff",
       "mba cutoff for iim",
@@ -152,9 +153,8 @@ export const keywordClusters: KeywordCluster[] = [
       "mba cutoff in bhu",
       "mba cutoff rank of pgcet 2025",
       "mba cut off allahabad university",
-      "top mba colleges in india cutoff",
-      "iift mba cutoff",
-      "bimtech mba cutoff"
+      "mba iit kanpur cutoff",
+      "top mba colleges in india cutoff"
     ]
   },
   {
@@ -166,18 +166,18 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-admission-pune-without-cat",
       "/mba-colleges-in-pune-without-entrance-exam"
     ],
-    "size": 166,
+    "size": 176,
     "keywords": [
       "mba colleges in india without cat",
       "mba colleges in india direct admission",
       "mba without cat colleges",
       "mba without cat in kolkata",
+      "mba direct admission colleges in varanasi",
+      "mba colleges in uttar pradesh without entrance exam",
       "direct admission in mba colleges",
+      "how to get direct admission in mba colleges",
       "can you do mba without cat",
-      "best mba colleges in india direct admission",
-      "mba colleges without cat in india",
-      "pgdm colleges direct admission",
-      "pgdm colleges without entrance exam"
+      "best mba colleges in india direct admission"
     ]
   },
   {
@@ -191,7 +191,7 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-colleges-in-delhi-accepting-cat",
       "/mba-colleges-in-delhi-ncr-accepting-cmat"
     ],
-    "size": 118,
+    "size": 126,
     "keywords": [
       "mba colleges in delhi ncr",
       "mba colleges in delhi university",
@@ -206,6 +206,76 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "mode-format:india",
+    "name": "Executive, online, part-time MBA",
+    "intent": "informational",
+    "pillar": "/blog/executive-online-part-time-mba-india",
+    "supporting": [
+      "/mba-colleges-in-pune-executive",
+      "/mba-colleges-in-pune-online",
+      "/mba-colleges-in-pune-part-time"
+    ],
+    "size": 152,
+    "keywords": [
+      "distance mba colleges in faridabad",
+      "executive mba in india eligibility",
+      "mba in india part time",
+      "mba executive india",
+      "executive mba in india online",
+      "mba in india online",
+      "mba in india distance learning",
+      "executive mba india",
+      "mba for working professionals",
+      "mba weekend classes"
+    ]
+  },
+  {
+    "id": "eligibility-profile:india",
+    "name": "MBA eligibility & profile",
+    "intent": "informational",
+    "pillar": "/blog/mba-eligibility-criteria-in-india",
+    "supporting": [
+      "/exams",
+      "/mba-admission-process-pune"
+    ],
+    "size": 135,
+    "keywords": [
+      "mba eligibility criteria",
+      "sharda university mba eligibility criteria",
+      "bml munjal mba admission criteria",
+      "mba colleges eligibility criteria",
+      "mba in india eligibility",
+      "mba in usa after bcom in india",
+      "mba in india without work experience",
+      "top mba colleges in india and their eligibility criteria",
+      "mba cet eligibility criteria 2026",
+      "iift mba eligibility"
+    ]
+  },
+  {
+    "id": "exam-dates-prep:india",
+    "name": "MBA entrance exam dates & prep",
+    "intent": "transactional",
+    "pillar": "/blog/mba-entrance-exams-in-india",
+    "supporting": [
+      "/exams",
+      "/exams/cat"
+    ],
+    "size": 150,
+    "keywords": [
+      "fore school mba application last date",
+      "what is the syllabus of mba",
+      "mba india syllabus",
+      "flame mba application last date",
+      "mba syllabus",
+      "mba full form",
+      "pgdm full form",
+      "mba entrance exam dates 2027",
+      "mba admission last date 2026",
+      "mba admission registration date 2026"
+    ]
+  },
+  {
     "id": "placements-salary:pune",
     "name": "MBA placements & salary — pune",
     "intent": "commercial",
@@ -216,7 +286,7 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-colleges-in-pune-executive",
       "/mba-colleges-in-pune-for-marketing"
     ],
-    "size": 139,
+    "size": 140,
     "keywords": [
       "mba colleges in pune with good placements",
       "sibm pune mba placements",
@@ -256,29 +326,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "exam-dates-prep:india",
-    "name": "MBA entrance exam dates & prep",
-    "intent": "transactional",
-    "pillar": "/blog/mba-entrance-exams-in-india",
-    "supporting": [
-      "/exams",
-      "/exams/cat"
-    ],
-    "size": 142,
-    "keywords": [
-      "what is the syllabus of mba",
-      "mba india syllabus",
-      "flame mba application last date",
-      "mba syllabus",
-      "mba full form",
-      "pgdm full form",
-      "mba entrance exam dates 2027",
-      "mba admission last date 2026",
-      "mba admission registration date 2026",
-      "mba entrance exam books"
-    ]
-  },
-  {
     "id": "fees-funding:pune",
     "name": "MBA fees, scholarships & loans — pune",
     "intent": "commercial",
@@ -304,6 +351,31 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "best-top-ranking:delhi-ncr",
+    "name": "Best / top MBA colleges — delhi-ncr",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [
+      "/mba-colleges-in-delhi",
+      "/pgdm-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-ncr-accepting-cat",
+      "/mba-colleges-in-delhi-ncr-accepting-cmat"
+    ],
+    "size": 111,
+    "keywords": [
+      "best mba colleges in delhi ncr",
+      "top mba colleges in delhi ncr",
+      "mba in delhi best colleges",
+      "mba colleges in delhi top 10",
+      "mba colleges in delhi list",
+      "top mba colleges in delhi ncr accepting cat score",
+      "top mba colleges in delhi ncr accepting mat score",
+      "mba colleges in delhi ncr list",
+      "best mba colleges in gurugram",
+      "top mba colleges in gurugram"
+    ]
+  },
+  {
     "id": "comparison:india",
     "name": "MBA vs PGDM & comparisons",
     "intent": "commercial",
@@ -311,7 +383,7 @@ export const keywordClusters: KeywordCluster[] = [
     "supporting": [
       "/mba-colleges-in-pune"
     ],
-    "size": 103,
+    "size": 104,
     "keywords": [
       "mba or pgdm kya hai",
       "mba vs pgdm which is better",
@@ -351,31 +423,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "best-top-ranking:delhi-ncr",
-    "name": "Best / top MBA colleges — delhi-ncr",
-    "intent": "commercial",
-    "pillar": "/mba-colleges-in-delhi-ncr",
-    "supporting": [
-      "/mba-colleges-in-delhi",
-      "/pgdm-colleges-in-delhi-ncr",
-      "/mba-colleges-in-delhi-ncr-accepting-cat",
-      "/mba-colleges-in-delhi-ncr-accepting-cmat"
-    ],
-    "size": 104,
-    "keywords": [
-      "best mba colleges in delhi ncr",
-      "top mba colleges in delhi ncr",
-      "mba in delhi best colleges",
-      "mba colleges in delhi top 10",
-      "mba colleges in delhi list",
-      "top mba colleges in delhi ncr accepting cat score",
-      "top mba colleges in delhi ncr accepting mat score",
-      "mba colleges in delhi ncr list",
-      "which college is best for mba in delhi",
-      "best mba colleges in delhi"
-    ]
-  },
-  {
     "id": "exam:snap:exam-info",
     "name": "SNAP dates, syllabus & prep",
     "intent": "informational",
@@ -401,26 +448,26 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "eligibility-profile:india",
-    "name": "MBA eligibility & profile",
-    "intent": "informational",
-    "pillar": "/blog/mba-eligibility-criteria-in-india",
+    "id": "fees-funding:delhi-ncr",
+    "name": "MBA fees, scholarships & loans — delhi-ncr",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-delhi",
     "supporting": [
-      "/exams",
-      "/mba-admission-process-pune"
+      "/mba-colleges-in-delhi-ncr",
+      "/pgdm-colleges-in-delhi-ncr"
     ],
-    "size": 104,
+    "size": 97,
     "keywords": [
-      "mba eligibility criteria",
-      "mba colleges eligibility criteria",
-      "mba in india eligibility",
-      "mba in usa after bcom in india",
-      "mba in india without work experience",
-      "top mba colleges in india and their eligibility criteria",
-      "mba cet eligibility criteria 2026",
-      "iift mba eligibility",
-      "bimtech mba eligibility",
-      "iim mba eligibility"
+      "mba colleges in delhi with fees",
+      "mba colleges in delhi fees",
+      "mba colleges in delhi low fees",
+      "mba colleges in delhi ncr with low fees",
+      "mba colleges in delhi and fees",
+      "mba colleges in gurgaon with low fees",
+      "mba colleges in gurgaon fees",
+      "mba in gurgaon fees",
+      "mdi gurgaon mba fees",
+      "pgdm colleges in delhi with fee structure"
     ]
   },
   {
@@ -499,30 +546,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "mode-format:india",
-    "name": "Executive, online, part-time MBA",
-    "intent": "informational",
-    "pillar": "/blog/executive-online-part-time-mba-india",
-    "supporting": [
-      "/mba-colleges-in-pune-executive",
-      "/mba-colleges-in-pune-online",
-      "/mba-colleges-in-pune-part-time"
-    ],
-    "size": 124,
-    "keywords": [
-      "executive mba in india eligibility",
-      "mba in india part time",
-      "mba executive india",
-      "executive mba in india online",
-      "mba in india online",
-      "mba in india distance learning",
-      "executive mba india",
-      "mba for working professionals",
-      "mba weekend classes",
-      "one year mba india"
-    ]
-  },
-  {
     "id": "exam:mat:exam-info",
     "name": "MAT dates, syllabus & prep",
     "intent": "informational",
@@ -573,26 +596,23 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "fees-funding:delhi-ncr",
-    "name": "MBA fees, scholarships & loans — delhi-ncr",
-    "intent": "commercial",
-    "pillar": "/mba-colleges-in-delhi",
-    "supporting": [
-      "/mba-colleges-in-delhi-ncr",
-      "/pgdm-colleges-in-delhi-ncr"
-    ],
-    "size": 91,
+    "id": "cutoff-percentile:delhi-ncr",
+    "name": "MBA cut-offs & percentiles — delhi-ncr",
+    "intent": "informational",
+    "pillar": "/mba-cutoff-delhi-ncr",
+    "supporting": [],
+    "size": 81,
     "keywords": [
-      "mba colleges in delhi with fees",
-      "mba colleges in delhi fees",
-      "mba colleges in delhi low fees",
-      "mba colleges in delhi ncr with low fees",
-      "mba colleges in delhi and fees",
-      "mba colleges in gurgaon with low fees",
-      "mba colleges in gurgaon fees",
-      "mdi gurgaon mba fees",
-      "pgdm colleges in delhi with fee structure",
-      "best mba colleges in delhi ncr with low fees"
+      "mba colleges in delhi for 50 percentile",
+      "mba cutoff for iit delhi",
+      "mba cutoff for fms delhi",
+      "delhi school of management mba cut off",
+      "xlri delhi mba cutoff",
+      "iit delhi mba cutoff category wise",
+      "iit delhi mba cutoff reddit",
+      "mba iit delhi cutoff",
+      "fms delhi mba cutoff",
+      "mdi gurgaon mba cutoff"
     ]
   },
   {
@@ -621,6 +641,48 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "fees-funding:lucknow",
+    "name": "MBA fees, scholarships & loans — lucknow",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 85,
+    "keywords": [
+      "mba colleges in lucknow with low fees",
+      "mba colleges in lucknow fees",
+      "mba colleges in lucknow with fee structure",
+      "bbau lucknow mba fees",
+      "best mba colleges in lucknow with fee structure",
+      "top mba colleges in lucknow with fees",
+      "mba in lucknow fees",
+      "mba government colleges in lucknow fees",
+      "mba fees in lucknow university",
+      "mba colleges in lucknow and fees"
+    ]
+  },
+  {
+    "id": "fees-funding:noida",
+    "name": "MBA fees, scholarships & loans — noida",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [
+      "/mba-colleges-in-greater-noida"
+    ],
+    "size": 76,
+    "keywords": [
+      "mba colleges in noida with fee structure",
+      "mba colleges in noida under 5 lakhs",
+      "top mba colleges in noida with fee structure",
+      "mba colleges in greater noida with low fees",
+      "mba college greater noida fees",
+      "mba colleges in greater noida with fee structure",
+      "top mba colleges in greater noida with fee structure",
+      "jaipuria noida mba fees",
+      "amity noida mba fees",
+      "jbs noida mba fees"
+    ]
+  },
+  {
     "id": "placements-salary:delhi-ncr",
     "name": "MBA placements & salary — delhi-ncr",
     "intent": "commercial",
@@ -628,18 +690,61 @@ export const keywordClusters: KeywordCluster[] = [
     "supporting": [
       "/mba-colleges-in-delhi-ncr"
     ],
-    "size": 79,
+    "size": 84,
     "keywords": [
       "mba colleges in delhi with fees and placement",
       "mba colleges in delhi ncr jobs",
+      "mba colleges in gurgaon with placement",
       "jobs in delhi ncr for mba freshers",
       "mba colleges in delhi with highest placement",
-      "mba colleges in gurgaon with placement",
       "mba jobs in gurgaon",
+      "mba gurgaon average package",
       "fms delhi mba placements",
       "mba iit delhi average package",
-      "mba jobs in delhi for freshers",
-      "mba gurgaon average package"
+      "mba jobs in delhi for freshers"
+    ]
+  },
+  {
+    "id": "placements-salary:lucknow",
+    "name": "MBA placements & salary — lucknow",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 74,
+    "keywords": [
+      "mba colleges in lucknow with placement",
+      "lucknow university mba average package",
+      "jaipuria lucknow mba average package",
+      "mba colleges in lucknow with good placement",
+      "top mba colleges in lucknow with fees and placement",
+      "mba iim lucknow average package",
+      "iim lucknow mba placements",
+      "iim lucknow mba average package",
+      "lucknow university mba placements",
+      "bbau lucknow mba placements"
+    ]
+  },
+  {
+    "id": "exam:cat:score",
+    "name": "CAT score, percentile & cut-off",
+    "intent": "informational",
+    "pillar": "/exams/cat/score-vs-percentile",
+    "supporting": [
+      "/mba-cutoff-delhi-ncr",
+      "/mba-cutoff-uttar-pradesh"
+    ],
+    "size": 71,
+    "keywords": [
+      "mba colleges in delhi with cat cut off",
+      "mba colleges in mumbai with cat cut off",
+      "mba from iit delhi cat cut off",
+      "mba colleges with cat cut off",
+      "cat cutoff",
+      "cat percentile predictor",
+      "cat exam general cutoff",
+      "iit delhi mba cut off cat",
+      "hyderabad central university mba cat cut off",
+      "cat cutoff for iim"
     ]
   },
   {
@@ -651,7 +756,7 @@ export const keywordClusters: KeywordCluster[] = [
       "/mba-colleges-in-greater-noida",
       "/pgdm-colleges-noida"
     ],
-    "size": 61,
+    "size": 63,
     "keywords": [
       "mba colleges in greater noida list",
       "best mba colleges in greater noida",
@@ -663,6 +768,71 @@ export const keywordClusters: KeywordCluster[] = [
       "best private mba colleges in greater noida",
       "top mba colleges in greater noida",
       "list of mba colleges in greater noida"
+    ]
+  },
+  {
+    "id": "mode-format:delhi-ncr",
+    "name": "Executive, online, part-time MBA — delhi-ncr",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [
+      "/mba-colleges-in-delhi"
+    ],
+    "size": 55,
+    "keywords": [
+      "mba colleges in delhi distance learning",
+      "online mba colleges in delhi ncr",
+      "mba colleges in delhi for distance learning",
+      "best executive mba in delhi ncr",
+      "best online mba in delhi ncr",
+      "mba colleges in delhi online",
+      "online mba in delhi ncr",
+      "executive mba in delhi ncr",
+      "part time mba in delhi ncr",
+      "mba in delhi university online"
+    ]
+  },
+  {
+    "id": "general:noida",
+    "name": "General MBA queries — noida",
+    "intent": "informational",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [
+      "/mba-colleges-in-greater-noida",
+      "/pgdm-colleges-noida"
+    ],
+    "size": 54,
+    "keywords": [
+      "mba colleges in noida and greater noida",
+      "mba colleges in noida private",
+      "mba colleges in greater noida",
+      "mba colleges in greater noida knowledge park",
+      "private mba colleges in greater noida",
+      "mba in pharmaceutical management colleges in greater noida",
+      "pgdm colleges in greater noida",
+      "government mba colleges in greater noida",
+      "mba colleges in noida and delhi",
+      "mba pharmaceutical management colleges in noida"
+    ]
+  },
+  {
+    "id": "no-exam-direct:delhi-ncr",
+    "name": "MBA without entrance exam / direct admission — delhi-ncr",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
+    "supporting": [],
+    "size": 49,
+    "keywords": [
+      "mba colleges in delhi without cat",
+      "mba colleges in delhi direct admission",
+      "mba colleges in delhi ncr without cat",
+      "mba colleges in delhi ncr with direct admission",
+      "mba colleges in delhi ncr without entrance exam",
+      "mba colleges in delhi for direct admission",
+      "mba colleges in gurgaon without cat",
+      "mba without cat in delhi",
+      "mba colleges in delhi with fees without cat",
+      "best mba colleges in delhi ncr without cat"
     ]
   },
   {
@@ -688,90 +858,106 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "no-exam-direct:delhi-ncr",
-    "name": "MBA without entrance exam / direct admission — delhi-ncr",
-    "intent": "transactional",
-    "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
+    "id": "best-top-ranking:uttar pradesh",
+    "name": "Best / top MBA colleges — uttar pradesh",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
-    "size": 49,
+    "size": 54,
     "keywords": [
-      "mba colleges in delhi without cat",
-      "mba colleges in delhi direct admission",
-      "mba colleges in delhi ncr without cat",
-      "mba colleges in delhi ncr with direct admission",
-      "mba colleges in delhi ncr without entrance exam",
-      "mba colleges in delhi for direct admission",
-      "mba colleges in gurgaon without cat",
-      "mba without cat in delhi",
-      "mba colleges in delhi with fees without cat",
-      "best mba colleges in delhi ncr without cat"
+      "best mba colleges in uttar pradesh",
+      "top 10 mba colleges in uttar pradesh private",
+      "top mba colleges in uttar pradesh",
+      "list of mba colleges in uttar pradesh",
+      "best mba university in uttar pradesh",
+      "top mba university in uttar pradesh",
+      "top 10 mba colleges in uttar pradesh",
+      "mba colleges in up list",
+      "best mba colleges in up",
+      "aktu mba ranking"
     ]
   },
   {
-    "id": "mode-format:delhi-ncr",
-    "name": "Executive, online, part-time MBA — delhi-ncr",
-    "intent": "informational",
-    "pillar": "/mba-colleges-in-delhi",
-    "supporting": [
-      "/mba-colleges-in-delhi-ncr"
-    ],
-    "size": 53,
+    "id": "placements-salary:dehradun",
+    "name": "MBA placements & salary — dehradun",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 59,
     "keywords": [
-      "mba colleges in delhi distance learning",
-      "online mba colleges in delhi ncr",
-      "mba colleges in delhi for distance learning",
-      "best executive mba in delhi ncr",
-      "best online mba in delhi ncr",
-      "mba colleges in delhi online",
-      "online mba in delhi ncr",
-      "executive mba in delhi ncr",
-      "part time mba in delhi ncr",
-      "mba in delhi university online"
+      "graphic era mba average package",
+      "upes dehradun mba average package",
+      "best placement mba colleges in dehradun",
+      "upes dehradun mba placement rate",
+      "upes dehradun mba placements",
+      "graphic era mba placements",
+      "doon university mba placements",
+      "doon university mba average package",
+      "mba fresher jobs in dehradun",
+      "upes dehradun mba fees and average package"
     ]
   },
   {
-    "id": "general:noida",
-    "name": "General MBA queries — noida",
+    "id": "general:lucknow",
+    "name": "General MBA queries — lucknow",
     "intent": "informational",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 56,
+    "keywords": [
+      "mba colleges in lucknow government",
+      "mba colleges in lucknow university",
+      "mba colleges in lucknow name",
+      "mba courses in lucknow",
+      "mba courses in lucknow university",
+      "mba colleges in lucknow private",
+      "lucknow university mba review",
+      "bbau lucknow mba review",
+      "mba colleges in lucknow near me",
+      "mba colleges in lucknow open now"
+    ]
+  },
+  {
+    "id": "fees-funding:dehradun",
+    "name": "MBA fees, scholarships & loans — dehradun",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 60,
+    "keywords": [
+      "mba colleges in dehradun with fee structure",
+      "mba colleges in dehradun fees",
+      "doon university mba fees",
+      "mba colleges in dehradun with low fees",
+      "best mba colleges in dehradun with low fees",
+      "top mba colleges in dehradun with fee structure",
+      "mba in dehradun with low fees",
+      "mba government colleges in dehradun fees",
+      "mba fees in dehradun",
+      "cheapest mba colleges in dehradun"
+    ]
+  },
+  {
+    "id": "placements-salary:noida",
+    "name": "MBA placements & salary — noida",
+    "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [
       "/mba-colleges-in-greater-noida",
       "/pgdm-colleges-noida"
     ],
-    "size": 52,
-    "keywords": [
-      "mba colleges in noida and greater noida",
-      "mba colleges in noida private",
-      "mba colleges in greater noida",
-      "mba colleges in greater noida knowledge park",
-      "private mba colleges in greater noida",
-      "mba in pharmaceutical management colleges in greater noida",
-      "pgdm colleges in greater noida",
-      "government mba colleges in greater noida",
-      "mba colleges in noida and delhi",
-      "mba pharmaceutical management colleges in noida"
-    ]
-  },
-  {
-    "id": "fees-funding:noida",
-    "name": "MBA fees, scholarships & loans — noida",
-    "intent": "commercial",
-    "pillar": "/mba-colleges-noida",
-    "supporting": [
-      "/mba-colleges-in-greater-noida"
-    ],
     "size": 56,
     "keywords": [
-      "mba colleges in noida with fee structure",
-      "mba colleges in noida under 5 lakhs",
-      "mba colleges in greater noida with low fees",
-      "mba college greater noida fees",
-      "mba colleges in greater noida with fee structure",
-      "top mba colleges in greater noida with fee structure",
-      "jaipuria noida mba fees",
-      "mba colleges in noida with low fees",
-      "top mba colleges in noida with fee structure",
-      "mba in noida with low fees"
+      "jaipuria noida mba average package",
+      "amity noida mba average package",
+      "top mba colleges in noida with fee structure and placement",
+      "mba jobs in greater noida",
+      "mba sibm noida average package",
+      "mba jobs in noida for freshers",
+      "jaipuria noida mba placements",
+      "symbiosis noida mba average package",
+      "mba colleges in noida jobs",
+      "amity noida mba placements"
     ]
   },
   {
@@ -800,6 +986,29 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "specialization:india",
+    "name": "MBA in india",
+    "intent": "informational",
+    "pillar": "/blog/mba-specialisations-explained",
+    "supporting": [
+      "/mba-colleges-in-pune-for-marketing",
+      "/mba-colleges-in-pune-for-finance"
+    ],
+    "size": 63,
+    "keywords": [
+      "mba in hospital management colleges in greater noida",
+      "mba in hospital management colleges in dehradun",
+      "mba in hospital management colleges in noida",
+      "mba healthcare management colleges in uttar pradesh",
+      "mba in healthcare management colleges in dehradun",
+      "mba marketing colleges in delhi",
+      "mba hr colleges in noida",
+      "mba in healthcare management colleges in noida",
+      "mba hr colleges in lucknow",
+      "mba operations colleges in pune"
+    ]
+  },
+  {
     "id": "exam:mah-mba-cet:score",
     "name": "MAH MBA-CET score, percentile & cut-off",
     "intent": "commercial",
@@ -820,48 +1029,43 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "exam:cat:score",
-    "name": "CAT score, percentile & cut-off",
+    "id": "best-top-ranking:dehradun",
+    "name": "Best / top MBA colleges — dehradun",
     "intent": "commercial",
-    "pillar": "/exams/cat/score-vs-percentile",
-    "supporting": [
-      "/mba-cutoff-delhi-ncr"
-    ],
-    "size": 49,
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 36,
     "keywords": [
-      "mba colleges in delhi with cat cut off",
-      "mba colleges in mumbai with cat cut off",
-      "mba colleges with cat cut off",
-      "cat cutoff",
-      "cat percentile predictor",
-      "cat exam general cutoff",
-      "hyderabad central university mba cat cut off",
-      "cat cutoff for iim",
-      "bimtech mba cutoff cat",
-      "jaipuria noida mba cat cut off"
+      "mba colleges in dehradun top 10",
+      "top mba colleges in dehradun rank wise",
+      "mba colleges in dehradun list",
+      "best mba colleges in dehradun",
+      "top mba colleges in dehradun",
+      "top 5 mba colleges in dehradun",
+      "upes dehradun mba ranking",
+      "upes dehradun mba ranking in india",
+      "graphic era mba ranking",
+      "good mba colleges in dehradun"
     ]
   },
   {
-    "id": "specialization:india",
-    "name": "MBA in india",
+    "id": "general:dehradun",
+    "name": "General MBA queries — dehradun",
     "intent": "informational",
-    "pillar": "/blog/mba-specialisations-explained",
-    "supporting": [
-      "/mba-colleges-in-pune-for-marketing",
-      "/mba-colleges-in-pune-for-finance"
-    ],
-    "size": 53,
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 33,
     "keywords": [
-      "mba in hospital management colleges in greater noida",
-      "mba in hospital management colleges in noida",
-      "mba marketing colleges in delhi",
-      "mba hr colleges in noida",
-      "mba in healthcare management colleges in noida",
-      "mba operations colleges in pune",
-      "mba business analytics colleges in mumbai",
-      "mba operations colleges in mumbai",
-      "mba in international business colleges in pune",
-      "mba healthcare colleges in mumbai"
+      "pgdm colleges in dehradun",
+      "mba colleges in dehradun",
+      "mba government colleges in dehradun",
+      "graphic era mba reviews",
+      "mba in pharmaceutical management colleges in dehradun",
+      "mba private colleges in dehradun",
+      "upes dehradun mba reviews",
+      "graphic era mba review reddit",
+      "doon university mba review",
+      "mba colleges of dehradun"
     ]
   },
   {
@@ -931,6 +1135,66 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "fees-funding:uttar pradesh",
+    "name": "MBA fees, scholarships & loans — uttar pradesh",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttar-pradesh",
+    "supporting": [],
+    "size": 31,
+    "keywords": [
+      "mba colleges in up with low fees",
+      "mba fees in uttar pradesh",
+      "mba colleges in up with fee structure",
+      "mba up fees",
+      "best mba colleges in up with low fees",
+      "mba agribusiness colleges in up fees",
+      "mba fees in up private college",
+      "top mba colleges in up with fee structure",
+      "best mba colleges in up with fees",
+      "mba in up cost"
+    ]
+  },
+  {
+    "id": "best-top-ranking:uttarakhand",
+    "name": "Best / top MBA colleges — uttarakhand",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 24,
+    "keywords": [
+      "top mba colleges in haridwar",
+      "mba colleges in uttarakhand list",
+      "best mba colleges in uttarakhand",
+      "best mba colleges in roorkee",
+      "top mba colleges in roorkee",
+      "top pgdm colleges in uttarakhand",
+      "top mba/pgdm colleges in uttarakhand",
+      "top mba colleges in uttarakhand",
+      "top mba university in uttarakhand",
+      "best mba in uttarakhand"
+    ]
+  },
+  {
+    "id": "admission-process:lucknow",
+    "name": "MBA admission process — lucknow",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 26,
+    "keywords": [
+      "how to get admission in mba in lucknow university",
+      "iim lucknow mba admission process",
+      "lucknow university mba admission 2026",
+      "bbau lucknow mba admission process",
+      "jaipuria lucknow mba admission process",
+      "amity lucknow mba admission",
+      "mba admission lucknow university",
+      "bbau lucknow mba admission 2026",
+      "jaipuria lucknow mba admission",
+      "amity lucknow mba admission process"
+    ]
+  },
+  {
     "id": "course-basics:india",
     "name": "MBA course basics & career",
     "intent": "informational",
@@ -953,26 +1217,111 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "placements-salary:noida",
-    "name": "MBA placements & salary — noida",
+    "id": "best-top-ranking:lucknow",
+    "name": "Best / top MBA colleges — lucknow",
     "intent": "commercial",
-    "pillar": "/mba-colleges-noida",
-    "supporting": [
-      "/mba-colleges-in-greater-noida",
-      "/pgdm-colleges-noida"
-    ],
-    "size": 24,
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 27,
     "keywords": [
-      "jaipuria noida mba average package",
-      "top mba colleges in noida with fee structure and placement",
-      "mba jobs in greater noida",
-      "mba sibm noida average package",
-      "mba jobs in noida for freshers",
-      "jaipuria noida mba placements",
-      "mba colleges in noida jobs",
-      "mba jobs in noida for fresher salary",
-      "jaipuria noida mba placement report",
-      "symbiosis noida mba average package"
+      "lucknow university mba ranking",
+      "top mba colleges in lucknow",
+      "mba in lucknow best college",
+      "best mba colleges in lucknow",
+      "best mba colleges in lucknow private",
+      "mba college in lucknow list",
+      "lucknow university mba ranking in india",
+      "mba colleges in lucknow best",
+      "mba colleges in lucknow list",
+      "top rated mba colleges in lucknow"
+    ]
+  },
+  {
+    "id": "fees-funding:uttarakhand",
+    "name": "MBA fees, scholarships & loans — uttarakhand",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 25,
+    "keywords": [
+      "mba colleges in uttarakhand with low fees",
+      "mba colleges in roorkee with fees",
+      "mba colleges in uttarakhand with fee structure",
+      "mba fees in coer roorkee",
+      "top 10 mba colleges in uttarakhand with fees",
+      "mba fees in uttarakhand open university",
+      "mba fees in haridwar university",
+      "mba in iit roorkee fees",
+      "iim kashipur mba fees",
+      "mba fees in uttarakhand"
+    ]
+  },
+  {
+    "id": "exam:nmat:score",
+    "name": "NMAT score, percentile & cut-off",
+    "intent": "commercial",
+    "pillar": "/exams/nmat/score-vs-percentile",
+    "supporting": [
+      "/exams/nmat/syllabus"
+    ],
+    "size": 36,
+    "keywords": [
+      "nmat cutoff for nmims",
+      "nmat percentile",
+      "nmat cutoff",
+      "nmat percentile calculator",
+      "nmat cutoff 2026",
+      "nmat percentile for nmims",
+      "great lakes pgpm cutoff nmat",
+      "flame mba nmat cutoff",
+      "bml munjal mba nmat cut off",
+      "nmat cutoff for nmims mumbai"
+    ]
+  },
+  {
+    "id": "exam:cuet-pg:score",
+    "name": "CUET PG score, percentile & cut-off",
+    "intent": "commercial",
+    "pillar": "/blog/cuet-pg-mba-colleges-and-cutoff-explained",
+    "supporting": [
+      "/blog/mba-cutoff-vs-percentile-explained",
+      "/mba-counselling"
+    ],
+    "size": 30,
+    "keywords": [
+      "mba cutoff cuet pg",
+      "cuet pg cutoff",
+      "cuet pg percentile calculator",
+      "cuet pg cutoff 2026",
+      "cuet pg percentile 2026",
+      "mba bhu cutoff cuet pg",
+      "aktu mba cuet pg cutoff",
+      "bbau lucknow mba cuet cut off",
+      "cuet pg cutoff for jnu",
+      "cuet pg percentile calculator 2026"
+    ]
+  },
+  {
+    "id": "exam:xat:score",
+    "name": "XAT score, percentile & cut-off",
+    "intent": "commercial",
+    "pillar": "/exams/xat/score-vs-percentile",
+    "supporting": [
+      "/mba-cutoff-delhi-ncr",
+      "/exams/xat/syllabus"
+    ],
+    "size": 31,
+    "keywords": [
+      "xat cutoff",
+      "bimtech mba cutoff xat",
+      "bitsom mba cutoff xat",
+      "xat cutoff for xlri",
+      "xat percentile for xlri jamshedpur",
+      "upes dehradun mba xat cutoff",
+      "xat cutoff 2026",
+      "xat percentile",
+      "nirma mba cut off xat",
+      "lbsim delhi mba xat cutoff"
     ]
   },
   {
@@ -1000,91 +1349,87 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "exam:nmat:score",
-    "name": "NMAT score, percentile & cut-off",
+    "id": "fees-funding:ghaziabad",
+    "name": "MBA fees, scholarships & loans — ghaziabad",
     "intent": "commercial",
-    "pillar": "/exams/nmat/score-vs-percentile",
-    "supporting": [
-      "/exams/nmat/syllabus"
-    ],
-    "size": 34,
-    "keywords": [
-      "nmat cutoff for nmims",
-      "nmat percentile",
-      "nmat cutoff",
-      "nmat percentile calculator",
-      "nmat cutoff 2026",
-      "nmat percentile for nmims",
-      "great lakes pgpm cutoff nmat",
-      "flame mba nmat cutoff",
-      "nmat cutoff for nmims mumbai",
-      "nmat cutoff 2025"
-    ]
-  },
-  {
-    "id": "cutoff-percentile:delhi-ncr",
-    "name": "MBA cut-offs & percentiles — delhi-ncr",
-    "intent": "commercial",
-    "pillar": "/mba-cutoff-delhi-ncr",
+    "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
-    "size": 27,
+    "size": 28,
     "keywords": [
-      "mba colleges in delhi for 50 percentile",
-      "mba cutoff for iit delhi",
-      "mba iit delhi cutoff",
-      "fms delhi mba cutoff",
-      "mdi gurgaon mba cutoff",
-      "delhi school of management mba cut off",
-      "fms delhi mba cutoff 2025",
-      "mdi gurgaon mba hr cutoff",
-      "fms delhi mba cutoff 2024",
-      "iift delhi mba cutoff"
+      "mba colleges in ghaziabad with low fees",
+      "mba colleges in ghaziabad with fee structure",
+      "top mba colleges in ghaziabad with fee structure",
+      "mba fees in ghaziabad",
+      "imt ghaziabad mba fees",
+      "mba in ghaziabad fees",
+      "imt ghaziabad mba fees online",
+      "mba colleges in ghaziabad with low fee structure",
+      "top 10 mba colleges in ghaziabad with fees",
+      "mba in ims ghaziabad fees"
     ]
   },
   {
-    "id": "exam:xat:score",
-    "name": "XAT score, percentile & cut-off",
+    "id": "admission-process:delhi-ncr",
+    "name": "MBA admission process — delhi-ncr",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr"
+    ],
+    "size": 23,
+    "keywords": [
+      "mba colleges in delhi admission open",
+      "fms delhi mba admission process",
+      "mdi gurgaon mba admission process",
+      "mba admission in delhi ncr",
+      "mba admission gurgaon",
+      "mba admission in gurugram university",
+      "mba admission consultants in gurgaon",
+      "fms delhi mba admission",
+      "mdi gurgaon mba admission",
+      "mba admission in gurugram"
+    ]
+  },
+  {
+    "id": "placements-salary:uttarakhand",
+    "name": "MBA placements & salary — uttarakhand",
     "intent": "commercial",
-    "pillar": "/exams/xat/score-vs-percentile",
-    "supporting": [
-      "/exams/xat/syllabus",
-      "/mba-cutoff-delhi-ncr"
-    ],
-    "size": 29,
-    "keywords": [
-      "xat cutoff",
-      "bimtech mba cutoff xat",
-      "bitsom mba cutoff xat",
-      "xat cutoff for xlri",
-      "xat percentile for xlri jamshedpur",
-      "xat cutoff 2026",
-      "xat percentile",
-      "nirma mba cut off xat",
-      "xat cutoff for xlri jamshedpur",
-      "xat percentile predictor"
-    ]
-  },
-  {
-    "id": "exam:cuet-pg:score",
-    "name": "CUET PG score, percentile & cut-off",
-    "intent": "informational",
-    "pillar": "/blog/cuet-pg-mba-colleges-and-cutoff-explained",
-    "supporting": [
-      "/blog/mba-cutoff-vs-percentile-explained",
-      "/mba-counselling"
-    ],
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
     "size": 25,
     "keywords": [
-      "mba cutoff cuet pg",
-      "cuet pg cutoff",
-      "cuet pg percentile calculator",
-      "cuet pg cutoff 2026",
-      "cuet pg percentile 2026",
-      "mba bhu cutoff cuet pg",
-      "cuet pg cutoff for jnu",
-      "cuet pg percentile calculator 2026",
-      "cuet pg cutoff for du",
-      "cuet pg percentile"
+      "mba jobs in uttarakhand",
+      "mba iit roorkee placements",
+      "iim kashipur mba placements",
+      "iim kashipur mba average package",
+      "mba government jobs in uttarakhand",
+      "mba jobs in haridwar",
+      "iim kashipur mba placements 2025",
+      "iim kashipur mba average package 2025",
+      "iim kashipur placements mba analytics",
+      "iim kashipur mba average package 2024"
+    ]
+  },
+  {
+    "id": "exam:cmat:score",
+    "name": "CMAT score, percentile & cut-off",
+    "intent": "commercial",
+    "pillar": "/exams/cmat/score-vs-percentile",
+    "supporting": [
+      "/mba-cutoff-uttar-pradesh"
+    ],
+    "size": 28,
+    "keywords": [
+      "cmat cutoff for jbims",
+      "cmat percentile",
+      "cmat cutoff",
+      "cmat cutoff for general category",
+      "jaipuria noida mba cmat cut off",
+      "cmat cutoff for welingkar mumbai",
+      "cmat percentile for jbims",
+      "bimtech mba cutoff cmat",
+      "cmat cutoff 2026",
+      "cmat percentile calculator"
     ]
   },
   {
@@ -1136,6 +1481,48 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "placements-salary:ghaziabad",
+    "name": "MBA placements & salary — ghaziabad",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 24,
+    "keywords": [
+      "imt ghaziabad mba placements",
+      "imt ghaziabad mba average package",
+      "mba jobs in ghaziabad",
+      "imt ghaziabad mba fees and average package",
+      "its ghaziabad mba placements",
+      "imt ghaziabad mba average package 2025",
+      "imt ghaziabad mba fees and placements",
+      "imt ghaziabad mba placement report",
+      "imt ghaziabad mba average package 2024",
+      "imt ghaziabad mba placement rate"
+    ]
+  },
+  {
+    "id": "mode-format:noida",
+    "name": "Executive, online, part-time MBA — noida",
+    "intent": "informational",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [
+      "/mba-colleges-in-greater-noida"
+    ],
+    "size": 16,
+    "keywords": [
+      "distance mba colleges in greater noida",
+      "mba colleges in noida online",
+      "online mba in greater noida",
+      "executive mba in greater noida",
+      "distance mba in noida",
+      "distance mba colleges in noida",
+      "executive mba in noida",
+      "part time mba in noida",
+      "iim lucknow noida campus executive mba eligibility",
+      "distance learning mba in noida"
+    ]
+  },
+  {
     "id": "eligibility-profile:pune",
     "name": "MBA eligibility & profile — pune",
     "intent": "informational",
@@ -1155,50 +1542,6 @@ export const keywordClusters: KeywordCluster[] = [
       "symbiosis mba eligibility criteria",
       "pumba pune eligibility",
       "mit wpu mba admission criteria"
-    ]
-  },
-  {
-    "id": "admission-process:delhi-ncr",
-    "name": "MBA admission process — delhi-ncr",
-    "intent": "transactional",
-    "pillar": "/mba-colleges-in-delhi",
-    "supporting": [
-      "/mba-colleges-in-delhi-ncr"
-    ],
-    "size": 19,
-    "keywords": [
-      "mba colleges in delhi admission open",
-      "fms delhi mba admission process",
-      "mdi gurgaon mba admission process",
-      "mba admission in delhi ncr",
-      "mba admission gurgaon",
-      "mba admission consultants in gurgaon",
-      "fms delhi mba admission",
-      "mdi gurgaon mba admission",
-      "mdi gurgaon mba admission 2026",
-      "mba delhi admission"
-    ]
-  },
-  {
-    "id": "exam:cmat:score",
-    "name": "CMAT score, percentile & cut-off",
-    "intent": "commercial",
-    "pillar": "/exams/cmat/score-vs-percentile",
-    "supporting": [
-      "/mba-cutoff-delhi-ncr"
-    ],
-    "size": 26,
-    "keywords": [
-      "cmat cutoff for jbims",
-      "cmat percentile",
-      "cmat cutoff",
-      "cmat cutoff for general category",
-      "jaipuria noida mba cmat cut off",
-      "cmat cutoff for welingkar mumbai",
-      "cmat percentile for jbims",
-      "bimtech mba cutoff cmat",
-      "cmat cutoff 2026",
-      "cmat percentile calculator"
     ]
   },
   {
@@ -1225,28 +1568,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "mode-format:noida",
-    "name": "Executive, online, part-time MBA — noida",
-    "intent": "informational",
-    "pillar": "/mba-colleges-noida",
-    "supporting": [
-      "/mba-colleges-in-greater-noida"
-    ],
-    "size": 15,
-    "keywords": [
-      "distance mba colleges in greater noida",
-      "mba colleges in noida online",
-      "online mba in greater noida",
-      "executive mba in greater noida",
-      "distance mba in noida",
-      "distance mba colleges in noida",
-      "executive mba in noida",
-      "part time mba in noida",
-      "distance learning mba in noida",
-      "online mba in noida"
-    ]
-  },
-  {
     "id": "specialization:operations:india",
     "name": "MBA in operations",
     "intent": "informational",
@@ -1267,6 +1588,66 @@ export const keywordClusters: KeywordCluster[] = [
       "best colleges for mba operations in india",
       "mba operations colleges",
       "best universities for mba in operations management"
+    ]
+  },
+  {
+    "id": "best-top-ranking:ghaziabad",
+    "name": "Best / top MBA colleges — ghaziabad",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 17,
+    "keywords": [
+      "best mba colleges in ghaziabad",
+      "top mba colleges in ghaziabad",
+      "top 10 mba colleges in ghaziabad list",
+      "best mba in ghaziabad",
+      "mba top colleges in ghaziabad",
+      "mba college in ghaziabad list",
+      "best pgdm colleges in ghaziabad",
+      "mba best college in ghaziabad",
+      "its ghaziabad mba ranking",
+      "best mba colleges ghaziabad"
+    ]
+  },
+  {
+    "id": "admission-process:dehradun",
+    "name": "MBA admission process — dehradun",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 18,
+    "keywords": [
+      "upes dehradun mba admission process",
+      "graphic era mba admission",
+      "doon university mba admission",
+      "ims dehradun mba admission",
+      "mba admission dehradun",
+      "graphic era mba admission process",
+      "upes dehradun mba admission",
+      "doon university mba admission process",
+      "doon university mba admission 2026",
+      "graphic era mba admission 2026"
+    ]
+  },
+  {
+    "id": "cutoff-percentile:noida",
+    "name": "MBA cut-offs & percentiles — noida",
+    "intent": "informational",
+    "pillar": "/mba-cutoff-uttar-pradesh",
+    "supporting": [],
+    "size": 15,
+    "keywords": [
+      "mba sibm noida cutoff",
+      "bimtech noida mba cutoff",
+      "jaipuria noida mba cutoff",
+      "amity noida mba cutoff",
+      "amity noida mba cut off",
+      "symbiosis noida cut off for mba",
+      "gims noida mba cut off",
+      "ims noida mba cut off",
+      "jaipuria noida mba cut off",
+      "sibm noida cutoff for mba"
     ]
   },
   {
@@ -1334,6 +1715,29 @@ export const keywordClusters: KeywordCluster[] = [
       "snap exam pattern and cutoff",
       "snap cutoff 2026",
       "snap colleges cut off"
+    ]
+  },
+  {
+    "id": "eligibility-profile:delhi-ncr",
+    "name": "MBA eligibility & profile — delhi-ncr",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-delhi",
+    "supporting": [
+      "/mba-colleges-in-delhi-ncr",
+      "/mba-colleges-in-delhi-accepting-cat"
+    ],
+    "size": 17,
+    "keywords": [
+      "mba in delhi university eligibility",
+      "mba in iit delhi eligibility",
+      "fms delhi mba eligibility",
+      "mdi gurgaon mba eligibility",
+      "fms delhi mba admission criteria",
+      "fms delhi mba eligibility cat score",
+      "mdi gurgaon mba admission criteria",
+      "fore school delhi mba admission criteria",
+      "companies in gurgaon for mba freshers",
+      "fms delhi mba eligibility percentage"
     ]
   },
   {
@@ -1429,26 +1833,83 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "eligibility-profile:delhi-ncr",
-    "name": "MBA eligibility & profile — delhi-ncr",
-    "intent": "informational",
-    "pillar": "/mba-colleges-in-delhi",
-    "supporting": [
-      "/mba-colleges-in-delhi-ncr",
-      "/mba-colleges-in-delhi-accepting-cat"
-    ],
+    "id": "cutoff-percentile:lucknow",
+    "name": "MBA cut-offs & percentiles — lucknow",
+    "intent": "commercial",
+    "pillar": "/mba-cutoff-uttar-pradesh",
+    "supporting": [],
     "size": 15,
     "keywords": [
-      "mba in delhi university eligibility",
-      "mba in iit delhi eligibility",
-      "fms delhi mba eligibility",
-      "mdi gurgaon mba eligibility",
-      "fms delhi mba admission criteria",
-      "fms delhi mba eligibility cat score",
-      "mdi gurgaon mba admission criteria",
-      "companies in gurgaon for mba freshers",
-      "fms delhi mba eligibility percentage",
-      "fms delhi mba eligibility for obc"
+      "iim lucknow mba cutoff",
+      "lucknow university mba cutoff",
+      "bbau lucknow mba cutoff",
+      "jaipuria lucknow mba cut off",
+      "iim lucknow mba abm cutoff",
+      "lucknow university mba cutoff 2026",
+      "iim lucknow mba sm cutoff",
+      "lucknow university mba cutoff 2025",
+      "bbau lucknow mba cut off 2025",
+      "iim lucknow executive mba cutoff"
+    ]
+  },
+  {
+    "id": "mode-format:lucknow",
+    "name": "Executive, online, part-time MBA — lucknow",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 14,
+    "keywords": [
+      "distance mba in lucknow",
+      "mba online lucknow",
+      "part time mba in lucknow",
+      "executive mba in lucknow",
+      "mba distance education in lucknow",
+      "distance mba colleges in lucknow",
+      "online mba in lucknow university",
+      "online mba colleges in lucknow",
+      "executive mba in lucknow university",
+      "executive mba in iim lucknow"
+    ]
+  },
+  {
+    "id": "mode-format:uttar pradesh",
+    "name": "Executive, online, part-time MBA — uttar pradesh",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-uttar-pradesh",
+    "supporting": [],
+    "size": 13,
+    "keywords": [
+      "distance mba colleges in uttar pradesh",
+      "online mba colleges in uttar pradesh",
+      "online mba in uttar pradesh",
+      "mba top up online",
+      "mba top up distance learning uk",
+      "mba up online",
+      "mba executive up",
+      "distance mba in up",
+      "distance mba colleges in up",
+      "mba top up online uk"
+    ]
+  },
+  {
+    "id": "admission-process:uttar pradesh",
+    "name": "MBA admission process — uttar pradesh",
+    "intent": "transactional",
+    "pillar": "/blog/mba-admission-in-uttar-pradesh",
+    "supporting": [],
+    "size": 15,
+    "keywords": [
+      "mba admission up",
+      "aktu mba admission",
+      "mba admission in uttar pradesh",
+      "aktu mba admission process",
+      "up mba admission requirements",
+      "aktu mba counselling 2026",
+      "aktu mba counselling",
+      "aktu mba admission 2026",
+      "aktu mba counselling 2026 date",
+      "aktu mba counselling 2025 date"
     ]
   },
   {
@@ -1475,6 +1936,46 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "college-specific:noida",
+    "name": "College-specific MBA queries — noida",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [],
+    "size": 15,
+    "keywords": [
+      "jaipuria noida mba ranking",
+      "jaipuria noida mba review",
+      "amity noida mba ranking",
+      "amity noida mba review",
+      "jaipuria noida mba nirf ranking",
+      "amity noida mba ranking in india",
+      "jaipuria mba college in noida",
+      "mba courses in amity university noida",
+      "amity noida mba nirf ranking",
+      "amity noida mba entrance exam"
+    ]
+  },
+  {
+    "id": "college-specific:ghaziabad",
+    "name": "College-specific MBA queries — ghaziabad",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 15,
+    "keywords": [
+      "imt ghaziabad mba ranking",
+      "imt ghaziabad mba ranking in india",
+      "imt ghaziabad mba reviews",
+      "is it worth doing mba from imt ghaziabad",
+      "imt ghaziabad mba courses",
+      "imt ghaziabad college ranking",
+      "imt ghaziabad ranking for mba",
+      "is imt ghaziabad a good college",
+      "imt ghaziabad college ranking in india",
+      "imt ghaziabad college review"
+    ]
+  },
+  {
     "id": "specialization:entrepreneurship:india",
     "name": "MBA in entrepreneurship",
     "intent": "informational",
@@ -1495,6 +1996,46 @@ export const keywordClusters: KeywordCluster[] = [
       "mba in entrepreneurship and innovation",
       "best colleges for mba in entrepreneurship in india",
       "mba entrepreneurship colleges in tamilnadu"
+    ]
+  },
+  {
+    "id": "no-exam-direct:lucknow",
+    "name": "MBA without entrance exam / direct admission — lucknow",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 11,
+    "keywords": [
+      "mba colleges in lucknow without cat",
+      "mba colleges in lucknow with direct admission",
+      "mba colleges in lucknow without entrance exam",
+      "best mba colleges in lucknow without entrance exam",
+      "mba colleges in lucknow with direct admission fees",
+      "top 10 mba colleges in lucknow without cat",
+      "iim lucknow mba without cat",
+      "top mba colleges in lucknow with direct admission",
+      "mba direct admission in lucknow",
+      "jaipuria institute of management lucknow mba direct admission"
+    ]
+  },
+  {
+    "id": "college-specific:lucknow",
+    "name": "College-specific MBA queries — lucknow",
+    "intent": "navigational",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 12,
+    "keywords": [
+      "iim lucknow mba ranking",
+      "is jaipuria lucknow good for mba",
+      "jaipuria lucknow mba review",
+      "iim lucknow blended mba review",
+      "iim lucknow mba global ranking",
+      "mba courses in iim lucknow",
+      "jaipuria mba college in lucknow",
+      "mba programs in iim lucknow",
+      "amity university lucknow mba entrance exam",
+      "iim lucknow mba entrance exam"
     ]
   },
   {
@@ -1558,21 +2099,103 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "college-specific:noida",
-    "name": "College-specific MBA queries — noida",
-    "intent": "commercial",
-    "pillar": "/mba-colleges-noida",
+    "id": "general:uttarakhand",
+    "name": "General MBA queries — uttarakhand",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
-    "size": 8,
+    "size": 12,
     "keywords": [
-      "jaipuria noida mba ranking",
-      "jaipuria noida mba review",
-      "jaipuria noida mba nirf ranking",
-      "jaipuria mba college in noida",
-      "mba courses in amity university noida",
-      "mba courses in amity noida",
-      "symbiosis noida mba reviews",
-      "bimtech noida mba ranking"
+      "mba colleges in uttarakhand",
+      "mba colleges in haridwar",
+      "mba colleges in roorkee",
+      "pgdm colleges in uttarakhand",
+      "private mba colleges in uttarakhand",
+      "mba government colleges in uttarakhand",
+      "government mba colleges in uttarakhand",
+      "mba university in roorkee",
+      "govt mba colleges in roorkee",
+      "mba university in uttarakhand"
+    ]
+  },
+  {
+    "id": "eligibility-profile:lucknow",
+    "name": "MBA eligibility & profile — lucknow",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 13,
+    "keywords": [
+      "lucknow university mba eligibility",
+      "mba eligibility in lucknow university",
+      "iim lucknow mba eligibility",
+      "jaipuria lucknow mba eligibility",
+      "iim lucknow mba admission criteria",
+      "jaipuria institute of management lucknow mba admission criteria",
+      "amity university lucknow mba eligibility",
+      "iim lucknow mba admission criteria 2025",
+      "jaipuria institute of management lucknow mba eligibility",
+      "lucknow university mba admission criteria"
+    ]
+  },
+  {
+    "id": "exam-dates-prep:uttar pradesh",
+    "name": "MBA entrance exam dates & prep — uttar pradesh",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-uttar-pradesh",
+    "supporting": [],
+    "size": 16,
+    "keywords": [
+      "aktu mba admission last date",
+      "aktu mba registration last date 2026",
+      "aktu mba admission 2026 last date",
+      "aktu mba registration",
+      "aktu mba registration 2026",
+      "aktu mba registration last date",
+      "aktu mba counselling 2026 last date",
+      "aktu mba registration date 2026",
+      "aktu mba admission last date 2025",
+      "aktu mba entrance exam date 2026"
+    ]
+  },
+  {
+    "id": "mode-format:dehradun",
+    "name": "Executive, online, part-time MBA — dehradun",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 10,
+    "keywords": [
+      "distance mba in dehradun",
+      "distance mba colleges in dehradun",
+      "mba online dehradun",
+      "online mba colleges in dehradun",
+      "part time mba in dehradun",
+      "executive mba in dehradun",
+      "mba distance education in dehradun",
+      "online mba courses in dehradun",
+      "best online mba colleges in dehradun",
+      "upes dehradun online mba review"
+    ]
+  },
+  {
+    "id": "placements-salary:uttar pradesh",
+    "name": "MBA placements & salary — uttar pradesh",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttar-pradesh",
+    "supporting": [],
+    "size": 10,
+    "keywords": [
+      "mba jobs in up government",
+      "best placement mba colleges in uttar pradesh",
+      "mba government jobs in uttar pradesh",
+      "aktu mba average package",
+      "aktu mba placements",
+      "aktu mba placement package",
+      "aktu mba fees and placement",
+      "aktu mba placement percentage",
+      "aktu mba placement rate",
+      "best placement mba colleges in up"
     ]
   },
   {
@@ -1583,14 +2206,266 @@ export const keywordClusters: KeywordCluster[] = [
     "supporting": [
       "/mba-colleges-in-greater-noida"
     ],
-    "size": 6,
+    "size": 9,
     "keywords": [
       "jaipuria noida mba admission process",
       "mba admission noida",
       "mba admission in greater noida",
       "jaipuria noida mba admission",
+      "amity noida mba admission",
+      "amity noida mba admission process",
       "mba admission in noida jbs",
+      "amity noida mba admission 2026",
       "jaipuria institute of management noida mba admission"
+    ]
+  },
+  {
+    "id": "cutoff-percentile:dehradun",
+    "name": "MBA cut-offs & percentiles — dehradun",
+    "intent": "informational",
+    "pillar": "/mba-cutoff-uttarakhand",
+    "supporting": [],
+    "size": 8,
+    "keywords": [
+      "doon business school mba cut off",
+      "upes dehradun mba cutoff",
+      "graphic era mba cut off",
+      "doon university mba cut off",
+      "upes dehradun cutoff for mba",
+      "ibs dehradun mba cut off",
+      "upes dehradun mba cut off",
+      "upes mba cutoff"
+    ]
+  },
+  {
+    "id": "admission-process:uttarakhand",
+    "name": "MBA admission process — uttarakhand",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 10,
+    "keywords": [
+      "mba admission in uttarakhand",
+      "mba iit roorkee admission",
+      "iim kashipur mba admission process",
+      "iim kashipur mba admission",
+      "how to get admission in iit roorkee for mba",
+      "iim kashipur mba admission 2026",
+      "iim kashipur mba admission results",
+      "iim kashipur mba admission policy",
+      "iim kashipur mba analytics admission",
+      "iim kashipur mba analytics admission policy"
+    ]
+  },
+  {
+    "id": "mode-format:ghaziabad",
+    "name": "Executive, online, part-time MBA — ghaziabad",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 11,
+    "keywords": [
+      "mba imt ghaziabad distance learning",
+      "online mba in ghaziabad",
+      "executive mba in imt ghaziabad",
+      "distance mba in ghaziabad",
+      "online mba colleges in ghaziabad",
+      "distance mba colleges in ghaziabad",
+      "online mba in imt ghaziabad",
+      "imt ghaziabad online mba review",
+      "imt ghaziabad executive mba review",
+      "imt ghaziabad distance mba review"
+    ]
+  },
+  {
+    "id": "cutoff-percentile:uttarakhand",
+    "name": "MBA cut-offs & percentiles — uttarakhand",
+    "intent": "commercial",
+    "pillar": "/mba-cutoff-uttarakhand",
+    "supporting": [],
+    "size": 12,
+    "keywords": [
+      "iim kashipur mba cutoff",
+      "iim kashipur mba analytics cutoff",
+      "iim kashipur mba cutoff 2025",
+      "iim kashipur mba analytics cutoff 2025",
+      "mba analytics kashipur cutoff",
+      "iim kashipur mba analytics cutoff 2026",
+      "mba analytics iim kashipur cutoff",
+      "iim kashipur mba ba cutoff",
+      "iim kashipur mba analytics cutoff obc",
+      "iit roorkee mba cutoff obc"
+    ]
+  },
+  {
+    "id": "mode-format:uttarakhand",
+    "name": "Executive, online, part-time MBA — uttarakhand",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 9,
+    "keywords": [
+      "distance mba in uttarakhand",
+      "online mba in uttarakhand",
+      "executive mba in iit roorkee",
+      "executive mba indian institute of technology roorkee",
+      "distance mba colleges in uttarakhand",
+      "online mba colleges in uttarakhand",
+      "online mba courses in uttarakhand",
+      "iim kashipur executive mba review",
+      "iim kashipur executive mba eligibility"
+    ]
+  },
+  {
+    "id": "general:ghaziabad",
+    "name": "General MBA queries — ghaziabad",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 8,
+    "keywords": [
+      "mba colleges in ghaziabad",
+      "pgdm colleges in ghaziabad",
+      "mba private colleges in ghaziabad",
+      "mba government colleges in ghaziabad",
+      "colleges in ghaziabad for mba",
+      "its ghaziabad mba review",
+      "pgdm college ghaziabad",
+      "mba university in ghaziabad"
+    ]
+  },
+  {
+    "id": "eligibility-profile:noida",
+    "name": "MBA eligibility & profile — noida",
+    "intent": "informational",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [],
+    "size": 7,
+    "keywords": [
+      "jaipuria noida mba eligibility",
+      "jaipuria noida mba admission criteria",
+      "amity noida mba eligibility",
+      "companies in noida for mba freshers",
+      "amity noida mba admission criteria",
+      "walk in interview in noida for mba freshers",
+      "jaipuria institute of management noida mba eligibility"
+    ]
+  },
+  {
+    "id": "eligibility-profile:dehradun",
+    "name": "MBA eligibility & profile — dehradun",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 8,
+    "keywords": [
+      "doon university mba eligibility",
+      "upes dehradun mba eligibility criteria",
+      "graphic era mba eligibility",
+      "upes dehradun mba admission criteria",
+      "doon university mba admission criteria",
+      "graphic era mba admission criteria",
+      "upes dehradun mba criteria",
+      "graphic era mba criteria"
+    ]
+  },
+  {
+    "id": "no-exam-direct:dehradun",
+    "name": "MBA without entrance exam / direct admission — dehradun",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 5,
+    "keywords": [
+      "mba colleges in dehradun without cat",
+      "mba colleges in dehradun direct admission",
+      "mba colleges in dehradun without entrance exam",
+      "top mba colleges in dehradun without entrance exam",
+      "direct admission in mba colleges in dehradun"
+    ]
+  },
+  {
+    "id": "exam-dates-prep:dehradun",
+    "name": "MBA entrance exam dates & prep — dehradun",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-dehradun",
+    "supporting": [],
+    "size": 7,
+    "keywords": [
+      "graphic era mba admission last date",
+      "upes dehradun mba admission last date",
+      "graphic era mba admission 2026 last date",
+      "upes dehradun mba application last date",
+      "doon university mba admission last date",
+      "upes dehradun mba application form",
+      "graphic era mba admission 2025 last date"
+    ]
+  },
+  {
+    "id": "admission-process:ghaziabad",
+    "name": "MBA admission process — ghaziabad",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 7,
+    "keywords": [
+      "imt ghaziabad mba admission process",
+      "imt ghaziabad mba admission",
+      "mba admission in ghaziabad",
+      "mba admission in ims ghaziabad",
+      "imt ghaziabad mba admission 2026",
+      "imt ghaziabad mba admission login",
+      "imt ghaziabad mba admission 2025"
+    ]
+  },
+  {
+    "id": "exam-dates-prep:lucknow",
+    "name": "MBA entrance exam dates & prep — lucknow",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 11,
+    "keywords": [
+      "amity university lucknow mba admission last date",
+      "lucknow university mba admission 2026 last date",
+      "iim lucknow mba admission result",
+      "lucknow university mba entrance exam date 2026",
+      "mba entrance exam date of lucknow university",
+      "lucknow university mba entrance exam syllabus",
+      "lucknow university mba syllabus",
+      "lucknow university mba admission form",
+      "lucknow university mba entrance exam date",
+      "lucknow university mba admission last date"
+    ]
+  },
+  {
+    "id": "college-specific:uttarakhand",
+    "name": "College-specific MBA queries — uttarakhand",
+    "intent": "commercial",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 6,
+    "keywords": [
+      "iim kashipur mba ranking",
+      "iim kashipur mba review",
+      "iim kashipur mba analytics ranking",
+      "iim kashipur mba nirf ranking",
+      "iim kashipur mba analytics nirf ranking",
+      "iim kashipur world ranking"
+    ]
+  },
+  {
+    "id": "no-exam-direct:ghaziabad",
+    "name": "MBA without entrance exam / direct admission — ghaziabad",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 4,
+    "keywords": [
+      "mba colleges in ghaziabad without cat",
+      "mba colleges in ghaziabad direct admission",
+      "top mba colleges in ghaziabad without cat",
+      "mba colleges in ghaziabad without entrance exam"
     ]
   },
   {
@@ -1629,18 +2504,37 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "eligibility-profile:noida",
-    "name": "MBA eligibility & profile — noida",
+    "id": "campus-life:india",
+    "name": "MBA hostel, girls & campus",
     "intent": "informational",
-    "pillar": "/mba-colleges-noida",
-    "supporting": [],
+    "pillar": "/mba-colleges-in-pune-with-hostel",
+    "supporting": [
+      "/mba-colleges-in-lucknow",
+      "/mba-colleges-in-pune-for-girls"
+    ],
     "size": 5,
     "keywords": [
-      "jaipuria noida mba eligibility",
-      "jaipuria noida mba admission criteria",
-      "companies in noida for mba freshers",
-      "walk in interview in noida for mba freshers",
-      "jaipuria institute of management noida mba eligibility"
+      "mba colleges in pune with hostel facility",
+      "mba colleges in bangalore with hostel facility",
+      "mba colleges with hostel in hyderabad",
+      "mba girls college in lucknow",
+      "mba girls colleges in pune"
+    ]
+  },
+  {
+    "id": "eligibility-profile:uttarakhand",
+    "name": "MBA eligibility & profile — uttarakhand",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-uttarakhand",
+    "supporting": [],
+    "size": 6,
+    "keywords": [
+      "mba iit roorkee eligibility",
+      "iim kashipur mba admission criteria",
+      "iim kashipur mba eligibility",
+      "iim kashipur mba criteria",
+      "iim kashipur mba analytics eligibility",
+      "iim kashipur mba analytics admission criteria"
     ]
   },
   {
@@ -1681,34 +2575,64 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "campus-life:india",
-    "name": "MBA hostel, girls & campus",
-    "intent": "informational",
-    "pillar": "/mba-colleges-in-pune-with-hostel",
-    "supporting": [
-      "/mba-colleges-in-pune-for-girls"
-    ],
-    "size": 4,
+    "id": "exam-dates-prep:noida",
+    "name": "MBA entrance exam dates & prep — noida",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-noida",
+    "supporting": [],
+    "size": 6,
     "keywords": [
-      "mba colleges in pune with hostel facility",
-      "mba colleges in bangalore with hostel facility",
-      "mba colleges with hostel in hyderabad",
-      "mba girls colleges in pune"
+      "amity noida mba admission last date",
+      "jaipuria noida mba application last date",
+      "jaipuria institute of management noida mba admission last date",
+      "amity noida mba admission 2025 last date",
+      "amity noida mba application last date",
+      "amity university noida mba admission 2026 last date"
     ]
   },
   {
-    "id": "cutoff-percentile:noida",
-    "name": "MBA cut-offs & percentiles — noida",
-    "intent": "commercial",
+    "id": "cutoff-percentile:ghaziabad",
+    "name": "MBA cut-offs & percentiles — ghaziabad",
+    "intent": "informational",
     "pillar": "/mba-cutoff-delhi-ncr",
     "supporting": [],
     "size": 5,
     "keywords": [
-      "mba sibm noida cutoff",
-      "jaipuria noida mba cutoff",
-      "jaipuria institute of management noida mba cutoff",
-      "bimtech noida mba cutoff",
-      "symbiosis noida mba cutoff"
+      "imt ghaziabad mba cutoff",
+      "imt ghaziabad mba cutoff sc category",
+      "its ghaziabad mba cut off",
+      "imt ghaziabad mba cut off for obc",
+      "imt ghaziabad mba cut off 2025"
+    ]
+  },
+  {
+    "id": "exam-dates-prep:ghaziabad",
+    "name": "MBA entrance exam dates & prep — ghaziabad",
+    "intent": "transactional",
+    "pillar": "/mba-colleges-in-delhi-ncr",
+    "supporting": [],
+    "size": 6,
+    "keywords": [
+      "imt ghaziabad mba admission last date",
+      "imt ghaziabad mba application form",
+      "imt ghaziabad mba admission result 2026",
+      "imt ghaziabad mba application form last date",
+      "imt ghaziabad mba admission form",
+      "imt ghaziabad mba application last date"
+    ]
+  },
+  {
+    "id": "specialization:healthcare:lucknow",
+    "name": "MBA in healthcare — lucknow",
+    "intent": "informational",
+    "pillar": "/mba-colleges-in-lucknow",
+    "supporting": [],
+    "size": 4,
+    "keywords": [
+      "mba hospital management colleges in lucknow",
+      "mba in healthcare management colleges in lucknow",
+      "mba in hospital administration colleges in lucknow",
+      "mba in healthcare and hospital management colleges in lucknow"
     ]
   },
   {

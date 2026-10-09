@@ -15,7 +15,7 @@ const ACCESSED = "2026-10-05"
 export interface PublishedCutoff {
   institution: string
   program: string
-  city: "Delhi" | "Noida" | "Greater Noida" | "Gurugram" | "Ghaziabad"
+  city: "Delhi" | "Noida" | "Greater Noida" | "Gurugram" | "Ghaziabad" | "Lucknow" | "Kashipur" | "Dehradun"
   admissionYear: string           // batch the cut-off was used for
   exam: string                    // exam slug in src/data/mba/exams.ts
   examCycle: string               // e.g. "CAT 2025"
@@ -63,6 +63,47 @@ export const publishedCutoffs: PublishedCutoff[] = [
       { label: "IIFT — MBA (IB) & MBA (BA) Prospectus 2026–28 (uses CAT 2025 for shortlisting)", url: "https://www.iift.ac.in/uploads/manage-files/2025/11/brochure-mbaib_mbaba_2026.pdf", type: "official", accessed: ACCESSED },
       { label: "CareerChoice360 — IIFT cut-off 2026 (official sectional cut-offs)", url: "https://careerchoice360.in/news/iift-cutoff-2026-official-out/", type: "secondary", accessed: ACCESSED },
       { label: "Collegedunia — IIFT 2026 cut-off and selection criteria", url: "https://collegedunia.com/exams/iift", type: "secondary", accessed: ACCESSED },
+    ],
+  },
+  {
+    institution: "Sharda University, Greater Noida",
+    program: "MBA (Sharda School of Business Studies)",
+    city: "Greater Noida",
+    admissionYear: "2026 admissions (session not named on the page)",
+    exam: "cat",
+    examCycle: "Minimums stated on the admission page",
+    measure: "Minimum percentile stated for each accepted exam",
+    values: [
+      { category: "MAT", value: "75 percentile or above" },
+      { category: "CAT / XAT", value: "65 percentile or above, followed by a group discussion and personal interview" },
+      { category: "SUAT (Sharda's own test)", value: "No minimum stated" },
+    ],
+    howItWorks: "Sharda lists these as its eligibility routes: a score on its own SUAT test, on MAT, or on CAT or XAT. Meeting the minimum makes you eligible. Admission also needs graduation with 50% and English proficiency.",
+    caveats: "These are eligibility minimums stated by the university, not the closing score of a past batch. The page does not name an intake session, so confirm the current figures with Sharda before you apply.",
+    sources: [
+      { label: "Sharda University — MBA admissions", url: "https://www.sharda.ac.in/mba-admission/", type: "official", accessed: "2026-10-09" },
+    ],
+  },
+  {
+    institution: "Indian Institute of Management (IIM) Kashipur",
+    program: "MBA",
+    city: "Kashipur",
+    admissionYear: "2025–27 (CAT 2024 figures; 2026–28 update pending)",
+    exam: "cat",
+    examCycle: "CAT 2024",
+    measure: "Minimum CAT percentile used to select candidates for the personal interview (QA / DILR / VRC / overall)",
+    values: [
+      { category: "General", value: "75 / 75 / 75 / 95" },
+      { category: "EWS", value: "55 / 55 / 55 / 81" },
+      { category: "NC-OBC", value: "52 / 52 / 52 / 81" },
+      { category: "SC", value: "45 / 45 / 45 / 66" },
+      { category: "ST", value: "30 / 25 / 25 / 42" },
+      { category: "DAP", value: "30 / 25 / 25 / 42" },
+    ],
+    howItWorks: "IIM Kashipur says these were the minimum percentiles used to select eligible candidates for the personal interview. Meeting them is the first filter; final selection adds the interview and the institute's other criteria.",
+    caveats: "These are the figures IIM Kashipur publishes for CAT 2024, not for the 2026–28 batch. The institute says the 2026–28 cut-offs will be updated in line with its admission guidelines, so check the page before relying on them.",
+    sources: [
+      { label: "IIM Kashipur — MBA admission (minimum CAT-2024 percentiles)", url: "https://www.iimkashipur.ac.in/academics/mba/mba-admission", type: "official", accessed: "2026-10-09" },
     ],
   },
 ]
@@ -117,6 +158,38 @@ export const noPublishedCutoff: NoPublishedCutoff[] = [
     examsNote: "CAT 2026, XAT 2027, CMAT, MAT, GMAT (verified)",
     shortlisting: "Admission is based on a valid aptitude-test score and the institute's own selection process. No official percentile cut-off is published.",
     source: { label: "Jaipuria Institute of Management — Admissions", url: "https://www.jaipuria.ac.in/admissions/", type: "official", accessed: ACCESSED },
+  },
+  {
+    institution: "Indian Institute of Management (IIM) Lucknow",
+    city: "Lucknow",
+    program: "MBA (PGP)",
+    examsNote: "CAT only (verified)",
+    shortlisting: "Interview shortlisting uses CAT performance, scholastic record and work experience, then a written ability test and personal interview. The admission page we checked states no minimum percentile.",
+    source: { label: "IIM Lucknow — MBA (PGP) admission policy", url: "https://www.iiml.ac.in/master-business-administration", type: "official", accessed: "2026-10-09" },
+  },
+  {
+    institution: "Jaypee Business School (JBS), Noida",
+    city: "Noida",
+    program: "MBA",
+    examsNote: "CAT, MAT, CMAT, XAT, GMAT, ATMA, CUET-PG (verified)",
+    shortlisting: "Applications are shortlisted on a valid score, then a group discussion and personal interview decide selection. No cut-off is published on the admission page.",
+    source: { label: "Jaypee Business School — MBA admission procedure", url: "https://jbs.ac.in/mba-admission-procedure", type: "official", accessed: "2026-10-09" },
+  },
+  {
+    institution: "Graphic Era (Deemed to be University), Dehradun",
+    city: "Dehradun",
+    program: "MBA",
+    examsNote: "CAT, MAT, XAT, CMAT, GMAT and the university's GEU Entrance Test (verified)",
+    shortlisting: "Admission is on entrance-test scores and a personal interview. No cut-off is published on the programme page.",
+    source: { label: "Graphic Era — MBA programme page", url: "https://geu.ac.in/course/master-of-business-administration-mba", type: "official", accessed: "2026-10-09" },
+  },
+  {
+    institution: "UPES, Dehradun",
+    city: "Dehradun",
+    program: "MBA",
+    examsNote: "UPESMET and national-level exams (individual exams not named on the page)",
+    shortlisting: "Selection is an entrance test followed by a personal interview. No entrance score or cut-off is published on the programme page.",
+    source: { label: "UPES School of Business — MBA", url: "https://www.upes.ac.in/school-of-business/mba", type: "official", accessed: "2026-10-09" },
   },
 ]
 

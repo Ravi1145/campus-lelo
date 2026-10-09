@@ -50,6 +50,12 @@ const streams = [
       { name: "MBA vs PGDM →",              href: "/mba-vs-pgdm" },
       { name: "MBA Cutoff Delhi NCR →",     href: "/mba-cutoff-delhi-ncr" },
       { name: "MBA Cutoff Mumbai →",        href: "/mba-cutoff-mumbai" },
+      { name: "MBA Colleges Uttar Pradesh →", href: "/mba-colleges-in-uttar-pradesh" },
+      { name: "MBA Colleges Lucknow →",     href: "/mba-colleges-in-lucknow" },
+      { name: "MBA Colleges Dehradun →",    href: "/mba-colleges-in-dehradun" },
+      { name: "MBA Colleges Uttarakhand →", href: "/mba-colleges-in-uttarakhand" },
+      { name: "MBA Cutoff Noida & UP →",    href: "/mba-cutoff-uttar-pradesh" },
+      { name: "MBA Cutoff Uttarakhand →",   href: "/mba-cutoff-uttarakhand" },
       { name: "All MBA Colleges →",         href: "/colleges?stream=MBA" },
     ],
     courses: [

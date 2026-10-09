@@ -48,7 +48,7 @@ const noidaLinks = [
   { label: "MBA Colleges in Noida 2026",          href: "/mba-colleges-noida" },
   { label: "PGDM Colleges in Noida 2026",        href: "/pgdm-colleges-noida" },
   { label: "Colleges in Greater Noida",          href: "/colleges-in-greater-noida" },
-  { label: "MBA in Noida",                       href: "/mba-in-noida" },
+  { label: "MBA in Noida",                       href: "/mba-colleges-noida" },
 ]
 
 export default function PuneCollegeGuide() {

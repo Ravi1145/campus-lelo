@@ -11,7 +11,7 @@ import { BUDGET_TOTAL, utmFromLocation } from "./leadOptions"
 // with the lead so counsellors know what the student was reading.
 
 const EXAMS = ["CAT", "XAT", "CMAT", "MAT", "MAH MBA CET", "SNAP", "NMAT", "ATMA", "GMAT", "Not taken yet"]
-const CITIES = ["Pune", "Mumbai", "Noida", "Greater Noida", "Delhi NCR", "Open to any"]
+const CITIES = ["Pune", "Mumbai", "Noida", "Greater Noida", "Delhi NCR", "Lucknow", "Dehradun", "Open to any"]
 const PROGRAMS = ["MBA", "PGDM", "Both", "Not sure"] as const
 
 declare global {

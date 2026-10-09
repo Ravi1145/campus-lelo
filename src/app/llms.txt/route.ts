@@ -154,6 +154,10 @@ Key profiles:
 - ${BASE}/scholarships — MahaDBT, NSP, and college-specific scholarships
 - ${BASE}/mba — MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
 - ${BASE}/mba-exam-calendar — Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
+- ${BASE}/mba-colleges-in-uttar-pradesh — Verified MBA/PGDM programmes in Noida, Greater Noida, Ghaziabad and Lucknow with accepted exams
+- ${BASE}/mba-colleges-in-lucknow, ${BASE}/mba-colleges-in-dehradun, ${BASE}/mba-colleges-in-uttarakhand — Verified MBA programmes (IIM Lucknow, Graphic Era, UPES, IIM Kashipur)
+- ${BASE}/mba-cutoff-uttarakhand — IIM Kashipur's published CAT minimum percentiles (CAT 2024) and Dehradun colleges that publish none
+- ${BASE}/mba-cutoff-uttar-pradesh — Noida, Greater Noida, Lucknow: who publishes a cut-off; UPTAC route
 - ${BASE}/mba-cutoff-mumbai — JBIMS and Maharashtra CAP: what is published, where official cut-offs are, reported closing percentiles (labelled)
 - ${BASE}/mba-cutoff-pune — How Pune MBA programmes select students; no expected percentiles
 - ${BASE}/mba-cutoff-delhi-ncr — Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none

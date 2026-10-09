@@ -90,7 +90,7 @@ export interface ProgramAdmission {
   institution: string
   program: string
   programType: ProgramType
-  city: "Pune" | "Noida" | "Greater Noida" | "Delhi" | "Gurugram" | "Ghaziabad"
+  city: "Pune" | "Noida" | "Greater Noida" | "Delhi" | "Gurugram" | "Ghaziabad" | "Lucknow" | "Kashipur" | "Dehradun"
   /** /colleges/[slug] page, when one exists */
   collegeSlug?: string
   route: AdmissionRoute
