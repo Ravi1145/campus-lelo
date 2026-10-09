@@ -154,6 +154,8 @@ Key profiles:
 - ${BASE}/scholarships — MahaDBT, NSP, and college-specific scholarships
 - ${BASE}/mba — MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
 - ${BASE}/mba-exam-calendar — Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
+- ${BASE}/mba-cutoff-mumbai — JBIMS and Maharashtra CAP: what is published, where official cut-offs are, reported closing percentiles (labelled)
+- ${BASE}/mba-cutoff-pune — How Pune MBA programmes select students; no expected percentiles
 - ${BASE}/mba-cutoff-delhi-ncr — Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none
 - ${BASE}/mba-vs-pgdm — MBA vs PGDM explained
 - ${BASE}/editorial-policy — How facts are sourced and corrected

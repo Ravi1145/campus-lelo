@@ -102,6 +102,8 @@ const SEARCH_TITLES: Record<string, string> = {
   "neet-2026-pune-medical-college-cutoff": "NEET 2026 Cutoff for Pune Medical Colleges: AFMC, BJMC",
   "pune-vs-noida-colleges-comparison-2026": "Pune vs Noida for Engineering & MBA 2026: Which Is Better?",
   "mba-admission-process-in-india": "MBA Admission Process in India: Steps, Dates, Documents",
+  "mah-mba-cet-cap-cutoff-explained": "MAH MBA CET CAP Cut-off Explained: Closing Percentiles",
+  "cuet-pg-mba-colleges-and-cutoff-explained": "CUET PG for MBA: Colleges, Cut-off, How It Works",
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

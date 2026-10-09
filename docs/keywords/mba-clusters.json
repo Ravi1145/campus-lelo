@@ -1432,7 +1432,7 @@
   "pillar": null,
   "supporting": [],
   "article": false,
-  "coverage": 0,
+  "coverage": 46,
   "keywords": [
    "mba colleges in mumbai cut off",
    "welingkar mba cutoff",
@@ -1881,9 +1881,12 @@
   "size": 25,
   "signal": 171,
   "intent": "informational",
-  "pillar": null,
-  "supporting": [],
-  "article": false,
+  "pillar": "/blog/cuet-pg-mba-colleges-and-cutoff-explained",
+  "supporting": [
+   "/blog/mba-cutoff-vs-percentile-explained",
+   "/mba-counselling"
+  ],
+  "article": true,
   "coverage": 0,
   "keywords": [
    "mba cutoff cuet pg",

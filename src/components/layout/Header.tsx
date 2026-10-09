@@ -49,6 +49,7 @@ const streams = [
       { name: "MBA Colleges Greater Noida →", href: "/mba-colleges-in-greater-noida" },
       { name: "MBA vs PGDM →",              href: "/mba-vs-pgdm" },
       { name: "MBA Cutoff Delhi NCR →",     href: "/mba-cutoff-delhi-ncr" },
+      { name: "MBA Cutoff Mumbai →",        href: "/mba-cutoff-mumbai" },
       { name: "All MBA Colleges →",         href: "/colleges?stream=MBA" },
     ],
     courses: [

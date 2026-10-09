@@ -127,7 +127,7 @@ export default function MbaHubPage() {
             {[
               ["MBA colleges in Delhi", "/mba-colleges-in-delhi"], ["MBA colleges in Delhi NCR", "/mba-colleges-in-delhi-ncr"], ["PGDM colleges in Delhi NCR", "/pgdm-colleges-in-delhi-ncr"],
               ["MBA colleges in Greater Noida", "/mba-colleges-in-greater-noida"], ["MBA colleges in Noida", "/mba-colleges-noida"], ["MBA without CAT in Delhi NCR", "/mba-colleges-in-delhi-ncr-without-cat"],
-              ["MBA colleges in Pune", "/mba-colleges-in-pune"],
+              ["MBA colleges in Pune", "/mba-colleges-in-pune"], ["MBA cut-offs in Mumbai", "/mba-cutoff-mumbai"], ["MBA cut-offs in Pune", "/mba-cutoff-pune"], ["CUET PG for MBA", "/blog/cuet-pg-mba-colleges-and-cutoff-explained"],
             ].map(([label, href]) => (
               <li key={href}><Link href={href} className="inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">{label}</Link></li>
             ))}

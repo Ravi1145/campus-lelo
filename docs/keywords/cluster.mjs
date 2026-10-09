@@ -147,7 +147,8 @@ function landing(kw, c) {
     if (c.topic === "cutoff-percentile") return P("/mba-cutoff-delhi-ncr")
     return BLOG
   }
-  if (loc) return null // Mumbai / Bangalore / Hyderabad — no page yet
+  if (loc === "mumbai" && c.topic === "cutoff-percentile") return P("/mba-cutoff-mumbai")
+  if (loc) return null // Bangalore / Hyderabad / other Mumbai topics — no page yet
   // Location-less / national queries
   if (/vs|pgdm/.test(kw) && /pgdm/.test(kw) && c.topic === "comparison") return "/mba-vs-pgdm"
   if (/pgdm/.test(kw) && /full form|meaning|what is|equal|valid|recogni[sz]ed/.test(kw)) return "/mba-vs-pgdm"
@@ -208,6 +209,7 @@ const ARTICLE_FOR = {
   "fees-funding:india": { url: B("mba-fees-in-india-guide"), supporting: ["/low-fees-mba-colleges-pune", "/mba-colleges-noida"] },
   "placements-salary:india": { url: B("mba-placements-and-salary-how-to-read-reports"), supporting: ["/mba-placements-pune", "/mba-colleges-noida"] },
   "best-top-ranking:india": { url: B("how-to-choose-an-mba-college-in-india"), supporting: ["/mba-colleges-pune", "/mba-colleges-noida", "/compare"] },
+  "exam:cuet-pg:score": { url: B("cuet-pg-mba-colleges-and-cutoff-explained"), supporting: ["/blog/mba-cutoff-vs-percentile-explained", "/mba-counselling"] },
   "cutoff-percentile:india": { url: B("mba-cutoff-vs-percentile-explained"), supporting: ["/mba-cutoff-pune", "/mba-cutoff-delhi-ncr"] },
   "admission-process:india": { url: B("mba-admission-process-in-india"), supporting: ["/mba-admission-process-pune", "/exams"] },
   "eligibility-profile:india": { url: B("mba-eligibility-criteria-in-india"), supporting: ["/exams", "/mba-admission-process-pune"] },

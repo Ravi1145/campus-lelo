@@ -74,7 +74,7 @@ Every query is tagged on four independent axes (see `mba-keywords.csv`).
 
 ## 3. Clusters
 
-116 clusters (topic × city, or exam × topic). Clusters with a page that covers ≥ 50% of their queries use that page as the **pillar**; the rest are served by a new article (section 4) or listed as gaps (section 5). **5,600 of 7,119 queries (79%) now have a target page or article** — 3,192 match an existing page exactly, 2,346 are served by the new articles and 62 by their cluster's pillar page.
+116 clusters (topic × city, or exam × topic). Clusters with a page that covers ≥ 50% of their queries use that page as the **pillar**; the rest are served by a new article (section 4) or listed as gaps (section 5). **5,642 of 7,119 queries (79%) now have a target page or article** — 3,209 match an existing page exactly, 2,371 are served by the new articles and 62 by their cluster's pillar page.
 
 | Cluster | Queries | Intent | Pillar page | Supporting pages | Top real queries |
 | --- | --- | --- | --- | --- | --- |
@@ -123,6 +123,7 @@ Every query is tagged on four independent axes (see `mba-keywords.csv`).
 | NMAT score, percentile & cut-off | 34 | commercial | /exams/nmat/score-vs-percentile | /exams/nmat/syllabus | nmat cutoff for nmims; nmat percentile; nmat cutoff |
 | MBA cut-offs & percentiles — delhi-ncr | 27 | commercial | /mba-cutoff-delhi-ncr | — | mba colleges in delhi for 50 percentile; mba cutoff for iit delhi; mba iit delhi cutoff |
 | XAT score, percentile & cut-off | 29 | commercial | /exams/xat/score-vs-percentile | /exams/xat/syllabus<br>/mba-cutoff-delhi-ncr | xat cutoff; bimtech mba cutoff xat; bitsom mba cutoff xat |
+| CUET PG score, percentile & cut-off | 25 | informational | /blog/cuet-pg-mba-colleges-and-cutoff-explained | /blog/mba-cutoff-vs-percentile-explained<br>/mba-counselling | mba cutoff cuet pg; cuet pg cutoff; cuet pg percentile calculator |
 | MBA without entrance exam / direct admission — pune | 16 | transactional | /mba-colleges-in-pune-without-entrance-exam | /mba-colleges-in-pune-accepting-cat<br>/mba-colleges-in-pune-direct-admission<br>/mba-admission-pune-without-cat<br>/pgdm-colleges-pune | mba colleges in pune without entrance exam; mba colleges in pune direct admission; mba colleges in pune without cat |
 | College-specific MBA queries — delhi-ncr | 23 | commercial | /mba-colleges-in-delhi | /mba-colleges-in-delhi-ncr<br>/mba-colleges-in-delhi-ncr-accepting-gmat | fms delhi mba ranking; fms delhi mba review; mdi gurgaon mba ranking in india |
 | MBA eligibility & profile — pune | 23 | informational | /mba-admission-process-pune | /mba-colleges-in-pune-for-finance | sibm pune mba eligibility; scmhrd mba eligibility; mit wpu mba eligibility |
@@ -172,6 +173,7 @@ Every query is tagged on four independent axes (see `mba-keywords.csv`).
 | /blog/mba-eligibility-criteria-in-india | eligibility-profile:india | 104 | mba eligibility criteria; mba colleges eligibility criteria; mba in india eligibility; mba in usa after bcom in india |
 | /blog/executive-online-part-time-mba-india | mode-format:india | 124 | executive mba in india eligibility; mba in india part time; mba executive india; executive mba in india online |
 | /blog/mba-specialisations-explained | specialization:india<br>specialization:finance:india<br>specialization:marketing:india<br>specialization:business-analytics:india<br>specialization:operations:india<br>specialization:healthcare:india<br>specialization:international-business:india<br>specialization:supply-chain:india<br>specialization:hr:india<br>specialization:data-science:india<br>specialization:entrepreneurship:india | 286 | mba in hospital management colleges in greater noida; mba in hospital management colleges in noida; mba marketing colleges in delhi; mba hr colleges in noida |
+| /blog/cuet-pg-mba-colleges-and-cutoff-explained | exam:cuet-pg:score | 25 | mba cutoff cuet pg; cuet pg cutoff; cuet pg percentile calculator; cuet pg cutoff 2026 |
 
 Writing rules: no fee, package, cut-off or date is written by hand. Exam facts (conducting body, frequency, eligibility, dates, scoring, published cut-offs) are generated from the sourced files in `src/data/mba/`; everything else is method and explanation, with official links.
 
@@ -198,7 +200,6 @@ Writing rules: no fee, package, cut-off or date is written by hand. Exam facts (
 | placements-salary:bangalore | 34 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in bangalore with placements; mba colleges in bangalore with good placements; mba in iisc bangalore placements |
 | placements-salary:hyderabad | 30 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in hyderabad with placements; top mba colleges in hyderabad with placements; mba colleges in hyderabad with good placements |
 | general:mumbai | 23 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in mumbai accepting cat score; mba colleges in mumbai accepting mat score; pgdm colleges in mumbai |
-| exam:cuet-pg:score | 25 | CUET PG for MBA needs official-source verification first | mba cutoff cuet pg; cuet pg cutoff; cuet pg percentile calculator |
 | mode-format:hyderabad | 25 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in hyderabad distance education; mba in hyderabad online; executive mba in hyderabad |
 | no-exam-direct:bangalore | 19 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in bangalore direct admission; best mba colleges in bangalore without cat; mba colleges in bangalore direct admission fees |
 | general:hyderabad | 20 | City outside the current Pune / Noida / Delhi NCR focus | pgdm colleges in hyderabad; mba courses in hyderabad; mba colleges at hyderabad |

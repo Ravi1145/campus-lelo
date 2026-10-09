@@ -1,86 +1,105 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { AlertTriangle, CheckCircle2, ShieldCheck } from "lucide-react"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
-import { mbaColleges } from "@/data/mbaColleges"
 import { safeJsonLd } from "@/lib/jsonld"
+import { admissionsByCity, maharashtraCap } from "@/data/mba/programAdmissions"
+import { getMbaExam } from "@/data/mba/exams"
+import { QuickAnswer, SourceNote } from "@/components/exams/MbaExamPage"
+import MbaLeadForm from "@/components/leads/MbaLeadForm"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
+import type { SourceRef } from "@/data/mba/types"
+
+export const revalidate = 3600
+
+const PATH = "/mba-cutoff-pune"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
+const REVIEWED = "2026-10-09"
 
 export const metadata: Metadata = genMeta({
-  title: "MBA Cutoff Pune 2026 | MAH-CET MBA, CAT & SNAP Cutoffs All Colleges",
-  description: "MBA cutoff 2026 for all Pune colleges. MAH-CET MBA, CAT, SNAP, CMAT cutoffs for SIBM, SCMHRD, PUMBA, MIT-SOM and 120+ Pune MBA colleges. Category-wise cutoffs.",
-  path: "/mba-cutoff-pune",
-  keywords: ["mba cutoff pune", "mba college cutoff pune 2026", "mah cet mba cutoff pune 2026", "cat cutoff mba pune", "snap cutoff pune", "pumba cutoff", "sibm cutoff"],
+  title: "MBA Cutoff Pune: MAH-CET, SNAP & CAT, Sourced",
+  description: "MBA cut-offs in Pune without guesswork: how SIBM, SCMHRD, MIT-WPU and Maharashtra CAP seats are selected, which exams count, and where official cut-offs are.",
+  path: PATH,
+  keywords: ["mba cutoff pune", "mba colleges in pune cut off", "mah cet mba cutoff pune", "snap cutoff sibm pune", "pumba cutoff", "cat cutoff mba pune"],
 })
-export const revalidate = 300
+
+const CET_CELL: SourceRef = { label: "State CET Cell Maharashtra: CAP pages and Cutoff Explorer", url: "https://cetcell.mahacet.org/cutoff-explorer/", type: "official", accessed: REVIEWED }
+
+const pune = admissionsByCity("Pune")
+const examName = (slug: string) => getMbaExam(slug)?.name ?? slug
+
+const QUICK = "Pune's MBA programmes do not share one cut-off. Symbiosis institutes such as SIBM and SCMHRD admit through the SNAP test followed by their own selection rounds, MIT-WPU lists the exams it accepts and its own selection stages, and many other seats are filled through Maharashtra's centralised admission process (CAP), where each round closes at a different percentile by category. We print no expected percentiles, because they cannot be verified. Official CAP lists come from the State CET Cell."
+
+const faqs = [
+  { question: "What is the MAH-CET MBA cut-off for Pune colleges?", answer: "There is no single cut-off. In the CAP, each institute and seat category closes at a different percentile in each round, and the figures change every year. The official lists are published by the State CET Cell Maharashtra. Percentiles quoted for a college on other sites are usually estimates." },
+  { question: "What is the SNAP cut-off for SIBM Pune?", answer: "SIBM admits through the SNAP test and then runs its own selection process. We have not verified an official SNAP cut-off, so we do not print one. Check SIBM's admissions page for the current process." },
+  { question: "Which exams do Pune MBA colleges accept?", answer: "It depends on the college and the seat. SNAP is used for Symbiosis programmes, MAH-MBA CET is used for state CAP seats, and many institutes also accept CAT, XAT, CMAT, MAT, NMAT or GMAT. The table on this page shows what we have verified from official sources." },
+  { question: "Can I get into a Pune MBA college with 50 percentile?", answer: "We cannot promise a seat at any percentile. Admission depends on your category, the seats left in each CAP round and each college's own criteria. A counsellor can compare your score with options that are realistic for you." },
+  { question: "How are MBA cut-offs decided in Maharashtra?", answer: "For CAP seats, the closing percentile of a round is the lowest percentile that got a seat in that institute and category. It depends on how many candidates apply, their scores and their preferences, so it moves every year and every round." },
+]
 
 export default function MBACutoffPune() {
-  const faqs = [
-    { question: "What is the MAH-CET MBA cutoff for Pune colleges 2026?", answer: "MAH-CET MBA 2026 cutoffs for Pune (Open category): PUMBA 95+ percentile, MIT-SOM 85-95, DYPIM 75-85, BVIMR 65-75, Indira MBA 70-80. These are expected cutoffs based on 2022-2025 trends. Official cutoffs will be released by DTE Maharashtra after CAP rounds." },
-    { question: "What is the SNAP cutoff for SIBM Pune 2026?", answer: "SNAP cutoff for SIBM Pune 2026 (expected): 95+ percentile overall SNAP score. Additionally, SIBM shortlists based on SNAP score + WAT + PI. CAT 90+ percentile is an alternative. SIBM's overall acceptance rate is ~3-5% of applicants." },
-    { question: "What is the MAH-CET cutoff for PUMBA MBA?", answer: "PUMBA (Pune University MBA) MAH-CET cutoff: 95+ percentile for Open category, 85+ for OBC, 75+ for SC, 65+ for ST. This is one of the highest cutoffs among Maharashtra MBA colleges because PUMBA has limited seats (~120) and very high demand due to low fees (₹1.25L/yr)." },
-    { question: "What is the MBA cutoff for 50 percentile in Pune?", answer: "With 50 percentile in MAH-CET MBA, you can get admission in 3rd or 4th CAP round in many private SPPU-affiliated MBA colleges in Pune. These colleges have reasonable NAAC grades and placement records. Direct admission/management quota is also possible at 50 percentile at many private Pune MBA colleges." },
-    { question: "How is MBA cutoff decided in Maharashtra?", answer: "MBA cutoffs in Maharashtra (for CAP seats) are determined by DTE Maharashtra based on: MAH-CET percentile, category (Open/OBC/SC/ST/NT/EBC), domicile (Maharashtra/non-Maharashtra), and preference order. After each CAP round, the lowest percentile admitted = that round's closing cutoff. Cutoffs typically drop 2-5 percentile in each subsequent round." },
-  ]
-
-  const faqSchema = generateFAQSchema(faqs)
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "MBA Colleges in Pune", url: "/mba-colleges-in-pune" },
-    { name: "MBA Cutoff Pune", url: "/mba-cutoff-pune" },
-  ])
-
+  const cap = maharashtraCap
+  const sources: SourceRef[] = [CET_CELL, cap.source, ...pune.map((p) => p.source)].filter((s, i, arr) => arr.findIndex((x) => x.url === s.url) === i)
   return (
     <>
-      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateBreadcrumbSchema([
+        { name: "Home", url: "/" }, { name: "MBA Colleges in Pune", url: "/mba-colleges-in-pune" }, { name: "MBA Cutoff Pune", url: PATH },
+      ])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${BASE_URL}${PATH}`,
+        url: `${BASE_URL}${PATH}`,
+        name: "MBA cut-offs in Pune",
+        description: QUICK,
+        inLanguage: "en-IN",
+        dateModified: REVIEWED,
+        isPartOf: { "@id": `${BASE_URL}/#website` },
+        publisher: { "@type": "Organization", name: "CampusLelo", url: BASE_URL, publishingPrinciples: `${BASE_URL}/editorial-policy` },
+        speakable: { "@type": "SpeakableSpecification", cssSelector: [".quick-answer"] },
+        citation: sources.map((s) => ({ "@type": "CreativeWork", name: s.label, url: s.url })),
+      }) }} />
 
-      <div className="bg-gray-50 min-h-screen">
-        <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <nav className="text-xs text-blue-300 mb-4 flex flex-wrap items-center gap-1.5">
+      <div className="min-h-screen bg-gray-50">
+        <div className="bg-[#012858] text-white">
+          <div className="max-w-5xl mx-auto px-4 py-10 md:py-14">
+            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs text-blue-200 mb-6">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
               <Link href="/mba-colleges-in-pune" className="hover:text-white">MBA Colleges Pune</Link><span>›</span>
               <span className="text-white">MBA Cutoff Pune</span>
             </nav>
-            <h1 className="text-3xl md:text-4xl font-extrabold mb-3">MBA Cutoff Pune 2026</h1>
-            <p className="text-blue-100 mb-5">MAH-CET MBA, CAT, SNAP & CMAT cutoffs for all major Pune MBA colleges. Category-wise data.</p>
-            <div className="bg-yellow-400/20 border border-yellow-400/30 rounded-xl p-4 max-w-3xl">
-              <p className="text-yellow-200 text-xs font-bold uppercase mb-1">📢 Notice</p>
-              <p className="text-white text-sm">MAH-CET MBA 2026 results expected June 2026. Cutoffs below are based on 2022–2025 trends. Actual DTE Maharashtra cutoffs will be updated live after each CAP round.</p>
-            </div>
+            <h1 className="text-2xl md:text-4xl font-extrabold mb-3">MBA cut-offs in Pune: what is published and what is not</h1>
+            <p className="text-blue-100 max-w-3xl">How Pune&apos;s MBA programmes select students, which exams count, and where the official cut-offs are. No &quot;expected&quot; percentiles.</p>
+            <p className="text-xs text-blue-200 mt-2">Last reviewed 9 Oct 2026 · Updated after each CAP round</p>
           </div>
-        </section>
+        </div>
 
-        <div className="max-w-6xl mx-auto px-4 py-10 space-y-8">
+        <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+          <QuickAnswer text={QUICK} />
 
-          {/* MAH-CET Cutoff Table */}
-          <section className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-            <div className="px-6 py-4 border-b border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900">MAH-CET MBA Cutoff 2026 — Pune Colleges (Expected)</h2>
-            </div>
+          <section className="bg-amber-50 border border-amber-100 rounded-2xl p-5 text-sm text-gray-800 flex gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+            <p>
+              <span className="font-semibold">Why we removed the old percentile table:</span> earlier versions of this page showed expected cut-offs by college. We could not verify them against official sources, so we took them down.
+              A wrong cut-off can send a student to the wrong shortlist, so we show only what we can source.
+            </p>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-1 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-orange-500" /> How verified Pune programmes select students</h2>
+            <p className="text-sm text-gray-600 mb-4">From each institute&apos;s own admissions page. We add institutes as we verify them.</p>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-gray-50 text-left text-gray-600">
-                    <th className="px-4 py-3 font-semibold">College</th>
-                    <th className="px-4 py-3 font-semibold">Type</th>
-                    <th className="px-4 py-3 font-semibold">Open</th>
-                    <th className="px-4 py-3 font-semibold">OBC</th>
-                    <th className="px-4 py-3 font-semibold">SC/ST</th>
-                    <th className="px-4 py-3 font-semibold">CAP Round</th>
-                  </tr>
-                </thead>
+              <table className="w-full text-sm min-w-[640px]">
+                <thead><tr className="text-left text-xs uppercase tracking-wide text-gray-500 border-b border-gray-100"><th className="py-2 pr-3">Institute</th><th className="py-2 pr-3">Route</th><th className="py-2 pr-3">Exams accepted</th><th className="py-2">Notes</th></tr></thead>
                 <tbody>
-                  {mbaColleges.filter(c => c.mahCetCutoff).map((c, i) => (
-                    <tr key={c.shortName} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
-                      <td className="px-4 py-3 font-medium">
-                        <Link href={`/colleges/${c.slug}`} className="text-blue-700 hover:underline">{c.shortName}</Link>
-                      </td>
-                      <td className="px-4 py-3 text-gray-600">{c.type}</td>
-                      <td className="px-4 py-3 font-semibold text-blue-700">{c.mahCetCutoff}</td>
-                      <td className="px-4 py-3 text-gray-600">{c.mahCetCutoff ? `${parseInt(c.mahCetCutoff) - 10}–${parseInt(c.mahCetCutoff) + 5}` : "—"}</td>
-                      <td className="px-4 py-3 text-gray-600">Lower by 20–25 pts</td>
-                      <td className="px-4 py-3 text-gray-500 text-xs">Round 1</td>
+                  {pune.map((p) => (
+                    <tr key={p.id} className="border-b border-gray-50 align-top">
+                      <td className="py-3 pr-3"><span className="font-semibold text-gray-900">{p.institution}</span><span className="block text-xs text-gray-500">{p.program} · {p.intake}</span></td>
+                      <td className="py-3 pr-3 text-gray-700">{p.route}</td>
+                      <td className="py-3 pr-3 text-gray-700">{p.examsAccepted.map((s) => examName(s)).join(", ")}</td>
+                      <td className="py-3 text-gray-700">{p.notes} <a href={p.source.url} target="_blank" rel="noopener noreferrer" className="text-xs underline text-gray-500 hover:text-orange-600">source</a></td>
                     </tr>
                   ))}
                 </tbody>
@@ -88,102 +107,60 @@ export default function MBACutoffPune() {
             </div>
           </section>
 
-          {/* SNAP Cutoff */}
-          <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">SNAP Cutoff 2026 — Symbiosis MBA Colleges Pune</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-gray-50 text-left text-gray-600">
-                    <th className="px-4 py-3 font-semibold">College</th>
-                    <th className="px-4 py-3 font-semibold">SNAP Cutoff (Expected)</th>
-                    <th className="px-4 py-3 font-semibold">Selection Process</th>
-                    <th className="px-4 py-3 font-semibold">Avg Package</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { name: "SIBM Pune", snap: "95+ percentile", process: "SNAP + WAT + PI", avg: "₹24 LPA" },
-                    { name: "SCMHRD", snap: "90+ percentile", process: "SNAP + GE + PI", avg: "₹19 LPA" },
-                    { name: "SIIB Pune", snap: "85+ percentile", process: "SNAP + GE + PI", avg: "₹14 LPA" },
-                    { name: "SIMMC Pune", snap: "75+ percentile", process: "SNAP + PI", avg: "₹10 LPA" },
-                  ].map((r, i) => (
-                    <tr key={r.name} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
-                      <td className="px-4 py-3 font-medium text-gray-800">{r.name}</td>
-                      <td className="px-4 py-3 font-semibold text-blue-700">{r.snap}</td>
-                      <td className="px-4 py-3 text-gray-600 text-xs">{r.process}</td>
-                      <td className="px-4 py-3 font-semibold text-green-700">{r.avg}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">Maharashtra CAP seats: where cut-offs really come from</h2>
+            <p className="text-sm text-gray-700">{cap.summary}</p>
+            <p className="text-sm text-gray-700 mt-3">The closing percentile of a round is the lowest percentile that got a seat in that institute and category. It differs by round, category and year. Use the State CET Cell&apos;s own lists for your year, then read them with our guide.</p>
+            <SourceNote source={CET_CELL} />
+            <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 text-sm font-semibold">
+              <Link href="/blog/mah-mba-cet-cap-cutoff-explained" className="text-orange-600 hover:underline">How to read CAP cut-offs →</Link>
+              <Link href="/exams/mah-mba-cet/score-vs-percentile" className="text-orange-600 hover:underline">How MAH-CET percentiles work →</Link>
+              <Link href="/exams/snap/score-vs-percentile" className="text-orange-600 hover:underline">How SNAP percentiles work →</Link>
             </div>
           </section>
 
-          {/* CAT Cutoff */}
-          <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">CAT Cutoff 2025-26 — Top MBA Colleges Pune</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-gray-50 text-left text-gray-600">
-                    <th className="px-4 py-3 font-semibold">College</th>
-                    <th className="px-4 py-3 font-semibold">CAT Cutoff</th>
-                    <th className="px-4 py-3 font-semibold">Use of CAT</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {mbaColleges.filter(c => c.catCutoff).map((c, i) => (
-                    <tr key={c.shortName} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
-                      <td className="px-4 py-3 font-medium text-gray-800">{c.shortName}</td>
-                      <td className="px-4 py-3 font-semibold text-blue-700">{c.catCutoff}</td>
-                      <td className="px-4 py-3 text-gray-600 text-xs">{c.type === "Deemed" ? "Primary exam" : "Alternative to MAH-CET"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQ — MBA Cutoff in Pune 2026</h2>
-            <div className="space-y-3">
-              {faqs.map(faq => (
-                <details key={faq.question} className="border border-gray-100 rounded-xl p-4">
-                  <summary className="cursor-pointer font-semibold text-gray-800 text-sm flex justify-between items-center">
-                    {faq.question}
-                    <span className="text-gray-400 shrink-0 ml-2">▾</span>
-                  </summary>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </section>
-
-          <section className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <h2 className="text-base font-bold text-gray-900 mb-3">Related Pages</h2>
-            <div className="flex flex-wrap gap-2 text-sm">
+          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">How to use cut-offs when you choose</h2>
+            <ul className="space-y-2">
               {[
-                { label: "MBA Admission Process Pune", href: "/mba-admission-process-pune" },
-                { label: "MBA Accepting MAH-CET", href: "/mba-colleges-in-pune-accepting-mh-cet" },
-                { label: "MBA Accepting CAT", href: "/mba-colleges-in-pune-accepting-cat" },
-                { label: "MBA 50 Percentile Colleges", href: "/mba-colleges-in-pune-cutoff-50-percentile" },
-                { label: "MBA Direct Admission", href: "/mba-colleges-in-pune-direct-admission" },
-              ].map(l => (
-                <Link key={l.href} href={l.href} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors">{l.label}</Link>
+                "A cut-off is a past closing point, not a minimum you must clear or a promise for this year.",
+                "MAH-CET, SNAP and CAT percentiles are different scales. Do not compare them directly.",
+                "Compare your score with your own category and pool, not the headline number.",
+                "Apply to a mix: one or two reach options, several targets and a few safe colleges that accept more than one exam.",
+              ].map((t) => <li key={t} className="flex gap-2 text-sm text-gray-700"><CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />{t}</li>)}
+            </ul>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 text-sm font-semibold">
+              <Link href="/blog/mba-cutoff-vs-percentile-explained" className="text-orange-600 hover:underline">Cut-off vs percentile explained →</Link>
+              <Link href="/mba-admission-process-pune" className="text-orange-600 hover:underline">MBA admission process in Pune →</Link>
+              <Link href="/mba-colleges-in-pune-accepting-mh-cet" className="text-orange-600 hover:underline">Pune MBA colleges accepting MAH-CET →</Link>
+              <Link href="/mba-colleges-in-pune-accepting-cat" className="text-orange-600 hover:underline">Pune MBA colleges accepting CAT →</Link>
+              <Link href="/mba-cutoff-mumbai" className="text-orange-600 hover:underline">MBA cut-offs in Mumbai →</Link>
+              <Link href="/mba-counselling" className="text-orange-600 hover:underline">Free MBA counselling →</Link>
+            </div>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-4">Frequently asked questions</h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <div key={f.question} className="border-b border-gray-100 last:border-0 pb-4 last:pb-0">
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{f.question}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+                </div>
               ))}
             </div>
           </section>
 
-          <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-2">Know Your Cutoff Range? Get Your College List</h2>
-            <p className="text-gray-300 mb-5 text-sm">Free counselling — get personalised MBA college predictions based on your MAH-CET/CAT score.</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/predictor" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg">College Predictor →</Link>
-              <Link href="/counselling" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg">Free Counselling</Link>
-            </div>
-          </section>
+          <div id="shortlist" className="max-w-xl">
+            <MbaLeadForm
+              city="Pune"
+              placement="cutoff:pune"
+              heading="Got your score? Get a realistic Pune shortlist"
+              subheading="A counsellor will compare your MAH-CET, SNAP or CAT score with Pune options and deadlines, free."
+            />
+          </div>
+
+          <p className="text-xs text-gray-500">How we verify: <Link href="/editorial-policy" className="underline">editorial policy</Link>. Spotted an official cut-off we missed? Email <a href="mailto:support@campuslelo.com" className="underline">support@campuslelo.com</a>.</p>
         </div>
       </div>
       <RelatedMbaSearches path="/mba-cutoff-pune" />

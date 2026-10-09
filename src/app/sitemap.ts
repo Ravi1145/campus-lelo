@@ -221,6 +221,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/about`,                                          lastModified: "2026-10-08", changeFrequency: "yearly",  priority: 0.5 },
     { url: `${BASE_URL}/press`,                                              lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/mba-cutoff-mumbai`,                              lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mba-cutoff-delhi-ncr`,                                 lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/editorial-policy`,                                     lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.4 },
     { url: `${BASE_URL}/mba-colleges-in-pune-without-entrance-exam`,          lastModified: "2026-06-11", changeFrequency: "monthly", priority: 0.88 },

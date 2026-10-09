@@ -1065,6 +1065,29 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
+    "id": "exam:cuet-pg:score",
+    "name": "CUET PG score, percentile & cut-off",
+    "intent": "informational",
+    "pillar": "/blog/cuet-pg-mba-colleges-and-cutoff-explained",
+    "supporting": [
+      "/blog/mba-cutoff-vs-percentile-explained",
+      "/mba-counselling"
+    ],
+    "size": 25,
+    "keywords": [
+      "mba cutoff cuet pg",
+      "cuet pg cutoff",
+      "cuet pg percentile calculator",
+      "cuet pg cutoff 2026",
+      "cuet pg percentile 2026",
+      "mba bhu cutoff cuet pg",
+      "cuet pg cutoff for jnu",
+      "cuet pg percentile calculator 2026",
+      "cuet pg cutoff for du",
+      "cuet pg percentile"
+    ]
+  },
+  {
     "id": "no-exam-direct:pune",
     "name": "MBA without entrance exam / direct admission — pune",
     "intent": "transactional",
