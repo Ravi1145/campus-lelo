@@ -213,7 +213,7 @@ export default async function BlogPostPage({ params }: Props) {
     mainEntityOfPage: { "@type": "WebPage", "@id": `${BASE_URL}/blog/${slug}` },
     headline: post.title.slice(0, 110),
     description: post.excerpt,
-    author: { "@type": "Person", name: post.author, url: `${BASE_URL}/blog` },
+    author: { "@type": /team|campuslelo$/i.test(post.author ?? "") ? "Organization" : "Person", name: post.author, url: `${BASE_URL}/blog` },
     publisher: {
       "@type": "Organization", name: "CampusLelo", url: BASE_URL,
       logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.webp`, width: 200, height: 60 },

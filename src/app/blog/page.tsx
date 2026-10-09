@@ -125,7 +125,7 @@ export default async function BlogPage({
       headline: post.title,
       description: post.excerpt,
       url: `${BASE_URL}/blog/${post.slug}`,
-      author: { "@type": "Person", name: post.author ?? "CampusLelo" },
+      author: { "@type": /team|campuslelo$/i.test(post.author ?? "CampusLelo") ? "Organization" : "Person", name: post.author ?? "CampusLelo" },
       datePublished: post.published_at ?? post.date ?? new Date().toISOString(),
       articleSection: post.category,
     })),

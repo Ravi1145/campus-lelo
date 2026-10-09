@@ -370,9 +370,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     }))
 
-  // College sub-pages: fees, placements, cutoff, admission, scholarship
+  // College sub-pages: fees, cutoff, admission, scholarship (placements pages are noindex: figures removed)
   const collegeSubPages: MetadataRoute.Sitemap = colleges.flatMap(c =>
-    ["fees", "placements", "cutoff", "admission", "scholarship"].map(sub => ({
+    ["fees", "cutoff", "admission", "scholarship"].map(sub => ({
       url: `${BASE_URL}/colleges/${c.slug}/${sub}`,
       lastModified: "2026-06-10",
       changeFrequency: "monthly" as const,

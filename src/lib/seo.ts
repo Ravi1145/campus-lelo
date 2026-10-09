@@ -565,7 +565,7 @@ export function generateArticleSchema(article: {
     headline: article.title.slice(0, 110),
     description: article.description,
     author: {
-      "@type": "Person",
+      "@type": /team|campuslelo$/i.test(article.author ?? "") ? "Organization" : "Person",
       name: article.author,
       url: `${BASE_URL}/blog`,
       ...(article.authorJobTitle ? { jobTitle: article.authorJobTitle } : {}),
