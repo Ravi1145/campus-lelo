@@ -211,7 +211,7 @@ export default async function CityStreamPage({ params }: Props) {
                               {college.rating > 0 && (
                                 <div className="flex items-center gap-1">
                                   <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                                  <span className="text-sm font-semibold text-gray-800">{college.rating}</span>
+                                  <span className="text-sm font-semibold text-gray-800">{college.reviewCount > 0 ? college.rating : "—"}</span>
                                 </div>
                               )}
                             </div>

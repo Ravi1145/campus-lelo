@@ -11,7 +11,7 @@ const streamLinks = [
   { label: "Best Arts Colleges in Pune 2026",              href: "/arts-colleges-pune",               count: "20+" },
   { label: "Government Colleges in Pune 2026",             href: "/government-colleges-pune",         count: "30+" },
   { label: "NAAC A+ Colleges in Pune 2026",                href: "/naac-a-plus-colleges-pune",        count: "25+" },
-  { label: "Top Placement Colleges in Pune 2026",          href: "/top-placement-colleges-pune",      count: "15+" },
+  { label: "Top Placement Colleges in Pune 2026",          href: "/colleges",      count: "15+" },
   { label: "Colleges in Pune with Hostel 2026",            href: "/colleges-in-pune-with-hostel",     count: "40+" },
 ]
 
@@ -35,7 +35,7 @@ const toolLinks = [
 
 const resourceLinks = [
   { label: "Pune College Admission Guide 2026",   href: "/admission-guide" },
-  { label: "College Placements in Pune 2026",     href: "/placements" },
+  { label: "College Placements in Pune 2026",     href: "/colleges" },
   { label: "Scholarships for Pune Students 2026", href: "/scholarships" },
   { label: "Upcoming College Events 2026",        href: "/events" },
   { label: "Entrance Exam Calendar 2026",         href: "/exams" },

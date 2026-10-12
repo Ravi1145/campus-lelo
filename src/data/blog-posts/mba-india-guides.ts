@@ -154,7 +154,7 @@ ${ol([
 <p>A claim of "100% placement" is only meaningful with a definition. Ask: 100% of which students? Does it include internships, pre-placement offers or offers that were later declined? Does it count students who did not sit for placements? If the institute cannot answer in writing, treat the number with caution.</p>
 
 <h2>How placements differ by city</h2>
-<p>Recruiters concentrate in certain cities, so internship access and local offers differ. For city-level pages with our verified information, see ${a("/mba-placements-pune", "MBA placements in Pune")}, ${a("/mba-colleges-noida", "MBA colleges in Noida")} and our ${a("/blog/mba-colleges-delhi-ncr-noida-guide", "Delhi NCR guide")}.</p>
+<p>Recruiters concentrate in certain cities, so internship access and local offers differ. For city-level pages with our verified information, see ${a("/mba-colleges-in-pune", "MBA placements in Pune")}, ${a("/mba-colleges-noida", "MBA colleges in Noida")} and our ${a("/blog/mba-colleges-delhi-ncr-noida-guide", "Delhi NCR guide")}.</p>
 
 <h2>Placement versus cost</h2>
 <p>Put the placement figure next to the total cost from our ${a("/blog/mba-fees-in-india-guide", "MBA fees guide")}. A simple check: how many years of the median salary would it take to repay the total cost (and any loan)? Use the median where it is available, not the highest package.</p>

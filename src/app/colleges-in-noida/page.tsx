@@ -164,7 +164,7 @@ export default function CollegesInNoidaPage() {
                         </div>
                         <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
                           <Star size={13} fill="#E0170F" />
-                          {college.rating}
+                          {college.reviewCount > 0 ? college.rating : "—"}
                           <span className="text-xs text-gray-400 font-normal">({college.reviewCount})</span>
                         </div>
                       </div>

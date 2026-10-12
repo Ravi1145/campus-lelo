@@ -517,7 +517,7 @@ export default function Top10MBACollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-pune-placement", icon: "💼" },
+              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },

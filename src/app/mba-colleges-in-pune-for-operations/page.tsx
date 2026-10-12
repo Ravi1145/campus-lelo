@@ -26,22 +26,22 @@ export default function MBAOperations() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="MBA in Operations Management â€” Colleges in Pune 2026"
+        h1="MBA in Operations Management — Colleges in Pune 2026"
         subtitle="Top MBA Operations Management colleges in Pune with manufacturing, supply chain and logistics placements."
         quickAnswer="MIT-SOM and SIBM Pune lead for MBA Operations. Pune's auto/manufacturing sector (Tata Motors, Bajaj, Mahindra) is the top recruiter. Admission via MAH-CET MBA or SNAP."
         stats={[{ value: "8+", label: "MBA Ops Colleges" }, { value: "See the college's official website for current details.", label: "Avg Placement" }, { value: "Manufacturing", label: "Top Sector" }, { value: "MAH-CET", label: "Exam" }]}
                 colleges={mbaColleges.filter(c => c.specializations.includes("Operations"))}
-        introHeading="MBA Operations in Pune â€” Why Pune's Manufacturing Hub Matters"
+        introHeading="MBA Operations in Pune — Why Pune's Manufacturing Hub Matters"
         introParagraphs={[
           "Pune is India's manufacturing capital with Tata Motors, Bajaj Auto, Mahindra, KPIT, Bosch, and 500+ auto sector companies. MBA Operations graduates from Pune have unmatched access to supply chain, production management, quality control, and operations analytics roles.",
-          "Operations Management MBA curriculum covers supply chain management, lean manufacturing, Six Sigma, ERP, logistics, procurement, and operations analytics â€” all directly applicable to Pune's industrial base.",
+          "Operations Management MBA curriculum covers supply chain management, lean manufacturing, Six Sigma, ERP, logistics, procurement, and operations analytics — all directly applicable to Pune's industrial base.",
           "Top operations roles post-MBA from Pune: Supply Chain Manager, Production Manager, Operations Analyst, Logistics Manager.",
         ]}
         faqs={faqs}
         internalLinks={[
           { label: "MBA for Supply Chain", href: "/mba-colleges-in-pune-for-supply-chain" },
           { label: "MBA for Finance", href: "/mba-colleges-in-pune-for-finance" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
         ctaHeading="Find the Best MBA Operations College in Pune"
         ctaSubtext="Free counselling to choose between SIBM, MIT-SOM for MBA Operations based on your profile."

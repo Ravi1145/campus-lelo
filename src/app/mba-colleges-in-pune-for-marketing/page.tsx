@@ -30,19 +30,19 @@ export default function MBAMarketing() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="MBA in Marketing â€” Colleges in Pune 2026"
+        h1="MBA in Marketing — Colleges in Pune 2026"
         subtitle="Best MBA Marketing colleges in Pune with top placements in FMCG, e-commerce, automotive and digital marketing."
         quickAnswer="SIBM Pune is the best MBA Marketing college in Pune. Top recruiters: Amazon, Flipkart, P&G, HUL, ITC. Key exams: SNAP (Symbiosis), MAH-CET MBA (others)."
         stats={[
           { value: `${marketingColleges.length}+`, label: "MBA Mktg Colleges" },
           { value: "FMCG/E-com", label: "Top Sectors" },
-          { value: "â‚¹1.25Lâ€“16L/yr", label: "Fees" },
+          { value: "₹1.25L–16L/yr", label: "Fees" },
         ]}
                 colleges={mbaColleges.filter(c => c.specializations.includes("Marketing"))}
-        introHeading="MBA Marketing in Pune â€” Industry, Scope & Colleges"
+        introHeading="MBA Marketing in Pune — Industry, Scope & Colleges"
         introParagraphs={[
           "Pune is an ideal city for MBA Marketing because of its diverse industrial base: Bajaj Auto, Tata Motors, Mahindra for automotive marketing; 500+ IT companies for B2B/tech marketing; and proximity to Mumbai's media and FMCG headquarters. MBA Marketing from Pune gives graduates access to multiple high-paying marketing career tracks.",
-          "MBA Marketing specialization covers consumer behaviour, brand management, digital marketing, market research, advertising, product management, and sales strategy. Pune MBA colleges have updated their Marketing curriculum to include data analytics, performance marketing, and e-commerce â€” skills in highest demand.",
+          "MBA Marketing specialization covers consumer behaviour, brand management, digital marketing, market research, advertising, product management, and sales strategy. Pune MBA colleges have updated their Marketing curriculum to include data analytics, performance marketing, and e-commerce — skills in highest demand.",
           "Pune's growing startup ecosystem (200+ funded startups in 2024-25) is also creating Marketing roles in product growth, content strategy, and performance marketing, offering MBA Marketing graduates from Pune an exciting alternative to traditional FMCG roles.",
         ]}
         faqs={faqs}
@@ -50,10 +50,10 @@ export default function MBAMarketing() {
           { label: "MBA for Finance", href: "/mba-colleges-in-pune-for-finance" },
           { label: "MBA for HR", href: "/mba-colleges-in-pune-for-hr" },
           { label: "MBA for Business Analytics", href: "/mba-colleges-in-pune-for-business-analytics" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
           { label: "Best MBA Colleges Pune", href: "/mba-colleges-pune" },
         ]}
-        ctaHeading="MBA Marketing â€” Choose the Right Pune College"
+        ctaHeading="MBA Marketing — Choose the Right Pune College"
         ctaSubtext="Free counselling to pick the right MBA Marketing college based on your target industry and budget."
       />
       <RelatedMbaSearches path="/mba-colleges-in-pune-for-marketing" />

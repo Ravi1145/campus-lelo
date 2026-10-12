@@ -122,7 +122,9 @@ export function scrubCollege<C extends College>(c: C): C {
     highlights: (c.highlights ?? []).filter((h) => !FIGURE.test(h)),
     tags: (c.tags ?? []).filter((t) => !FIGURE.test(t)),
     faqs,
-    reviews: (c.reviews ?? []).map((r) => ({ ...r, body: scrubText(r.body) || r.body.slice(0, 0) })).filter((r) => r.body),
+    // Seeded student reviews and counts are unverified; real, moderated reviews load from the database
+    reviews: [],
+    reviewCount: 0,
     details: c.details ? scrubDeep(c.details) : c.details,
   }
 }

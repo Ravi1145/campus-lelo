@@ -18,7 +18,7 @@ const streams = [
     staticLinks: [
       { name: "Engineering Colleges Guide 2026 →", href: "/engineering-colleges-pune" },
       { name: "Top 10 Engineering Colleges →",     href: "/top-10-engineering-colleges-in-pune" },
-      { name: "Placement Rankings 2026 →",          href: "/engineering-colleges-pune-placement" },
+      { name: "Placement Rankings 2026 →",          href: "/engineering-colleges-pune" },
       { name: "Low Fees Colleges →",               href: "/low-fees-engineering-colleges-pune" },
       { name: "All Engineering Colleges →",         href: "/colleges?stream=Engineering" },
     ],
@@ -136,7 +136,7 @@ const tools = [
   { label: "Compare Colleges",     href: "/compare",                                icon: BarChart3,     desc: "Side-by-side comparison",        color: "text-blue-600 bg-blue-50" },
   { label: "ROI Calculator",       href: "/roi-calculator",                         icon: Calculator,    desc: "Calculate education returns",     color: "text-green-600 bg-green-50" },
   { label: "Fees Calculator",      href: "/pune-college-fees-calculator",           icon: Calculator,    desc: "Total course fee estimator",      color: "text-yellow-600 bg-yellow-50" },
-  { label: "Placement Comparator", href: "/pune-college-placement-comparator",      icon: TrendingUp,    desc: "Compare placement data",          color: "text-indigo-600 bg-indigo-50" },
+  { label: "Placement Comparator", href: "/colleges",      icon: TrendingUp,    desc: "Compare placement data",          color: "text-indigo-600 bg-indigo-50" },
   { label: "Admission Deadlines",  href: "/pune-admission-deadline-tracker-2026",   icon: Star,          desc: "2026 deadline tracker",           color: "text-red-600 bg-red-50" },
   { label: "AI College Finder",    href: "/ai-finder",                              icon: Sparkles,      desc: "AI-powered matching",             color: "text-pink-600 bg-pink-50" },
   { label: "AI Career Counselor",  href: "/ai-counselor",                           icon: Sparkles,      desc: "Chat with Aarav AI",              color: "text-orange-600 bg-orange-50" },
@@ -428,7 +428,7 @@ export default function Header() {
               {[
                 { label: "Blogs",           href: "/blog" },
                 { label: "Events",          href: "/events" },
-                { label: "Placements",      href: "/placements" },
+                { label: "Placements",      href: "/colleges" },
                 { label: "Admission Guide", href: "/admission-guide" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className={cn(
@@ -529,7 +529,7 @@ export default function Header() {
               {[
                 { label: "Blogs",           href: "/blog",            icon: Newspaper },
                 { label: "Events",          href: "/events",          icon: Star },
-                { label: "Placements",      href: "/placements",      icon: TrendingUp },
+                { label: "Placements",      href: "/colleges",      icon: TrendingUp },
                 { label: "Admission Guide", href: "/admission-guide", icon: BookOpen },
                 { label: "Scholarships",    href: "/scholarships",    icon: Gift },
                 { label: "Community Q&A",   href: "/qa",              icon: MessageCircle },

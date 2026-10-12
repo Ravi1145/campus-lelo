@@ -45,7 +45,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/blog/mba-placements-and-salary-how-to-read-reports",
     "supporting": [
-      "/mba-placements-pune",
+      "/mba-colleges-in-pune",
       "/mba-colleges-noida"
     ],
     "size": 439,

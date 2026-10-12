@@ -229,9 +229,9 @@ export default function PuneAdmissionDeadlineTrackerPage() {
               { label: "NAAC A+ Colleges in Pune", href: "/naac-a-plus-colleges-pune", icon: "⭐" },
               { label: "Low Fee Colleges in Pune", href: "/low-fee-colleges-pune", icon: "💰" },
               { label: "Pune Colleges Fees Guide 2026", href: "/colleges-pune-fees", icon: "📊" },
-              { label: "Top Placement Colleges in Pune", href: "/top-placement-colleges-pune", icon: "💼" },
+              { label: "Top Placement Colleges in Pune", href: "/colleges", icon: "💼" },
               { label: "College Fees Calculator", href: "/pune-college-fees-calculator", icon: "🧮" },
-              { label: "Placement Comparator Tool", href: "/pune-college-placement-comparator", icon: "📈" },
+              { label: "Placement Comparator Tool", href: "/colleges", icon: "📈" },
               { label: "Engineering vs MBA Comparison", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
               ].map(({ label, href, icon }) => (
                 <Link key={href} href={href} className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 hover:border-orange-200 hover:shadow transition-all group">

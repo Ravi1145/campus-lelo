@@ -83,7 +83,7 @@ export default function BTechCollegesInPune() {
         internalLinks={[
           { label: "Best BTech Colleges Pune", href: "/best-btech-colleges-in-pune" },
           { label: "BTech with Fees", href: "/btech-colleges-in-pune-with-fees" },
-          { label: "BTech Placements", href: "/btech-colleges-in-pune-with-placement" },
+          { label: "BTech Placements", href: "/btech-colleges-in-pune" },
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },
           { label: "BTech without JEE", href: "/btech-colleges-in-pune-without-jee" },
           { label: "BTech Under 5 Lakh", href: "/btech-colleges-in-pune-under-5-lakh" },

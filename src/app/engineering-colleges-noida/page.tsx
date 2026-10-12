@@ -124,7 +124,7 @@ export default function EngineeringCollegesNoidaPage() {
                           <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><MapPin size={11} />{college.location}</p>
                         </div>
                         <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
-                          <Star size={13} fill="#E0170F" />{college.rating}
+                          <Star size={13} fill="#E0170F" />{college.reviewCount > 0 ? college.rating : "—"}
                           <span className="text-xs text-gray-400 font-normal">({college.reviewCount})</span>
                         </div>
                       </div>

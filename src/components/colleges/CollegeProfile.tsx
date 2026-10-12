@@ -422,7 +422,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
             {[
               { label: "Annual Fees", value: formatFeesRange(college.feesRange.min, college.feesRange.max), icon: IndianRupee },
               { label: "Avg Package", value: formatCurrency(college.avgPlacement), icon: TrendingUp },
-              { label: "Rating", value: `${college.rating}/5 ⭐`, icon: Star },
+              { label: "Rating", value: college.reviewCount > 0 ? `${college.rating}/5 ⭐` : "Not yet rated", icon: Star },
             ].map(({ label, value, icon: Icon }) => (
               <div key={label} className="bg-white/10 rounded-xl p-3">
                 <p className="text-xs text-blue-300 mb-0.5">{label}</p>
@@ -1115,7 +1115,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                 staticReviews={
                   (college as unknown as { reviews?: { id: number; studentName: string; course: string; year: string; rating: number; title: string; body: string; pros: string[]; cons: string[] }[] }).reviews ?? []
                 }
-                staticRating={college.rating}
+                staticRating={college.reviewCount > 0 ? college.rating : 0}
               />
             )}
 
@@ -1222,7 +1222,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
             {[
               { label: `Best ${college.stream} Colleges in Pune`, href: STREAM_HUBS[college.stream] ?? `/colleges?stream=${encodeURIComponent(college.stream)}` },
               { label: `${college.type} Colleges in Pune`, href: college.type === "Government" ? "/government-colleges-pune" : `/colleges?type=${encodeURIComponent(college.type)}` },
-              { label: "Colleges with Best Placements Pune", href: "/top-placement-colleges-pune" },
+              { label: "Colleges with Best Placements Pune", href: "/colleges" },
               { label: "NAAC A+ Colleges Pune", href: "/naac-a-plus-colleges-pune" },
               { label: `Compare ${college.shortName}`, href: "/compare" },
               { label: "Free Admission Counselling", href: "/counselling" },

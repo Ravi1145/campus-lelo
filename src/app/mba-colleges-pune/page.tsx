@@ -338,14 +338,14 @@ export default function MBACollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
                 { label: "Top 10 MBA Colleges in Pune — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-                { label: "MBA Placement Rankings 2026", href: "/mba-colleges-pune-placement", icon: "💼" },
+                { label: "MBA Placement Rankings 2026", href: "/mba-colleges-in-pune", icon: "💼" },
                 { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
                 { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
                 { label: "Private MBA Colleges Pune", href: "/private-mba-colleges-pune", icon: "🏛️" },
                 { label: "MBA Without CAT (MAT/CMAT/SNAP)", href: "/mba-admission-pune-without-cat", icon: "📝" },
                 { label: "Direct Admission MBA Pune", href: "/direct-admission-mba-colleges-pune", icon: "🚀" },
                 { label: "Engineering vs MBA — Which is Better?", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
-                { label: "Placement Comparator Tool", href: "/pune-college-placement-comparator", icon: "📊" },
+                { label: "Placement Comparator Tool", href: "/colleges", icon: "📊" },
               ].map(({ label, href, icon }) => (
                 <Link key={href} href={href} className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 hover:border-orange-200 hover:shadow transition-all group">
                   <span className="text-xl">{icon}</span>

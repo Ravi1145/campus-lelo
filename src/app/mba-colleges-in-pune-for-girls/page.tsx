@@ -48,7 +48,7 @@ export default function Page() {
           { label: "MBA Colleges in Pune", href: "/mba-colleges-in-pune" },
           { label: "MBA Cutoff Pune", href: "/mba-cutoff-pune" },
           { label: "MBA Admission Process", href: "/mba-admission-process-pune" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
         ctaHeading="Get Personalised MBA Guidance for Pune"
         ctaSubtext="Free counselling from our Pune-based MBA experts — 15 minutes, zero cost."

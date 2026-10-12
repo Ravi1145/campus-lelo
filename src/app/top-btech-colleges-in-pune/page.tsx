@@ -64,7 +64,7 @@ export default function TopBTechCollegesInPune() {
           { label: "Best BTech Colleges Pune", href: "/best-btech-colleges-in-pune" },
           { label: "All BTech Colleges Pune", href: "/btech-colleges-in-pune" },
           { label: "BTech Fees Comparison", href: "/btech-colleges-in-pune-with-fees" },
-          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune-with-placement" },
+          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune" },
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },
         ]}
         ctaHeading="Get Into a Top BTech College in Pune"

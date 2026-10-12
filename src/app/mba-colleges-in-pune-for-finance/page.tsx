@@ -47,9 +47,9 @@ export default function MBAFinance() {
         internalLinks={[
           { label: "MBA for Marketing", href: "/mba-colleges-in-pune-for-marketing" },
           { label: "MBA for Business Analytics", href: "/mba-colleges-in-pune-for-business-analytics" },
-          { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune-highest-package" },
+          { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune" },
           { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
         ctaHeading="MBA Finance in Pune — Get Personalised Guidance"
         ctaSubtext="Our counsellors will help you target SIBM, SCMHRD or PUMBA based on your CAT/MAH-CET score."

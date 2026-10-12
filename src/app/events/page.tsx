@@ -307,7 +307,7 @@ export default function EventsPage() {
                 <div className="space-y-2">
                   {[
                     { label: "Admission Guide 2026",     href: "/admission-guide",   icon: FileText },
-                    { label: "Placements in Pune",       href: "/placements",        icon: Building2 },
+                    { label: "Placements in Pune",       href: "/colleges",        icon: Building2 },
                     { label: "Scholarships 2026",        href: "/scholarships",      icon: GraduationCap },
                     { label: "Entrance Exams",           href: "/exams",             icon: FileText },
                     { label: "College Predictor",        href: "/predictor",         icon: GraduationCap },

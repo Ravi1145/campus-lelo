@@ -294,9 +294,9 @@ export default function MBAInPune() {
                 {
                   heading: "By Placement",
                   links: [
-                    { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune-highest-package"   },
-                    { label: "MBA 100% Placement Pune",  href: "/mba-colleges-in-pune-with-100-placement"},
-                    { label: "MBA Placements in Pune",   href: "/mba-placements-pune"                   },
+                    { label: "MBA Highest Package Pune", href: "/mba-colleges-in-pune"   },
+                    { label: "MBA 100% Placement Pune",  href: "/mba-colleges-in-pune"},
+                    { label: "MBA Placements in Pune",   href: "/mba-colleges-in-pune"                   },
                     { label: "Best MBA Colleges Pune",   href: "/mba-colleges-pune"                },
                     { label: "Top 10 MBA Colleges Pune", href: "/top-10-mba-colleges-in-pune"           },
                   ],

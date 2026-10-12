@@ -55,7 +55,7 @@ export default function BTechUnder10Lakh() {
           { label: "BTech Under 5 Lakh", href: "/btech-colleges-in-pune-under-5-lakh" },
           { label: "BTech Fees Comparison", href: "/btech-colleges-in-pune-with-fees" },
           { label: "Best BTech Colleges", href: "/best-btech-colleges-in-pune" },
-          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune-with-placement" },
+          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune" },
           { label: "Engineering Scholarships", href: "/engineering-colleges-pune-scholarship" },
         ]}
         ctaHeading="Find the Best BTech College in Your Budget"

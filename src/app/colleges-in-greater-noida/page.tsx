@@ -209,10 +209,6 @@ export default function CollegesInGreaterNoidaPage() {
                           <Link href={`/colleges/${college.slug}`} className="font-bold text-base hover:underline" style={{ color: "#012858" }}>{college.name}</Link>
                           <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><MapPin size={11} />{college.location}</p>
                         </div>
-                        <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
-                          <Star size={13} fill="#E0170F" />{college.rating}
-                          <span className="text-xs text-gray-400 font-normal">({college.reviews})</span>
-                        </div>
                       </div>
                       <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
                         <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>{college.type}</span>

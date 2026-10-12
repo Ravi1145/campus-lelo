@@ -59,7 +59,7 @@ export default function BestBTechCollegesInPune() {
           { label: "All BTech Colleges Pune", href: "/btech-colleges-in-pune" },
           { label: "Top BTech Colleges", href: "/top-btech-colleges-in-pune" },
           { label: "BTech Fees Comparison", href: "/btech-colleges-in-pune-with-fees" },
-          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune-with-placement" },
+          { label: "BTech Placements Pune", href: "/btech-colleges-in-pune" },
           { label: "COEP Profile", href: "/colleges/coep-college-of-engineering-pune" },
           { label: "PICT Profile", href: "/colleges/pict-pune-institute-of-computer-technology" },
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },

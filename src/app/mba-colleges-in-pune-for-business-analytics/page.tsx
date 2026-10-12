@@ -49,7 +49,7 @@ export default function MBABusinessAnalytics() {
           { label: "MBA for Finance", href: "/mba-colleges-in-pune-for-finance" },
           { label: "MBA for Marketing", href: "/mba-colleges-in-pune-for-marketing" },
           { label: "MBA for IT Management", href: "/mba-colleges-in-pune-for-it" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
           { label: "Data Science Colleges Pune", href: "/data-science-colleges-pune" },
         ]}
         ctaHeading="MBA Analytics — Is It Right for You?"

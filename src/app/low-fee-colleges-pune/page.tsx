@@ -93,9 +93,9 @@ export default function LowFeeCollegesPunePage() {
       relatedGuides={[
         { label: "NAAC A+ Colleges in Pune", href: "/naac-a-plus-colleges-pune", icon: "⭐" },
         { label: "Pune Colleges Fees Guide 2026", href: "/colleges-pune-fees", icon: "📊" },
-        { label: "Top Placement Colleges in Pune", href: "/top-placement-colleges-pune", icon: "💼" },
+        { label: "Top Placement Colleges in Pune", href: "/colleges", icon: "💼" },
         { label: "College Fees Calculator", href: "/pune-college-fees-calculator", icon: "🧮" },
-        { label: "Placement Comparator Tool", href: "/pune-college-placement-comparator", icon: "📈" },
+        { label: "Placement Comparator Tool", href: "/colleges", icon: "📈" },
         { label: "Engineering vs MBA Comparison", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
         { label: "Admission Deadline Tracker 2026", href: "/pune-admission-deadline-tracker-2026", icon: "📅" },
       ]}

@@ -48,7 +48,7 @@ export default function MBAHR() {
           { label: "MBA for Marketing", href: "/mba-colleges-in-pune-for-marketing" },
           { label: "MBA for Operations", href: "/mba-colleges-in-pune-for-operations" },
           { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
-          { label: "MBA Placements Pune", href: "/mba-placements-pune" },
+          { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
         ctaHeading="MBA HR in Pune — Get Your College Shortlist"
         ctaSubtext="Free counselling to choose between SCMHRD, SIBM, PUMBA for MBA HR based on your profile."

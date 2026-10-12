@@ -26,7 +26,7 @@ const clusterLinks = [
   { label: "CAT Score", href: "/mba-colleges-in-pune-accepting-cat" },
   { label: "CMAT Score", href: "/mba-colleges-in-pune-accepting-cmat" },
   { label: "MAH-CET Admission", href: "/mba-colleges-in-pune-accepting-mh-cet" },
-  { label: "Best Placements", href: "/mba-colleges-in-pune-with-100-placement" },
+  { label: "Best Placements", href: "/mba-colleges-in-pune" },
   { label: "Direct Admission", href: "/mba-colleges-in-pune-direct-admission" },
   { label: "Marketing Specialization", href: "/mba-colleges-in-pune-for-marketing" },
   { label: "Finance Specialization", href: "/mba-colleges-in-pune-for-finance" },
@@ -254,7 +254,7 @@ export default function MBACollegesInPune() {
             <div className="flex flex-wrap gap-2 text-sm">
               {[
                 { label: "Best MBA Colleges Pune", href: "/mba-colleges-pune" },
-                { label: "MBA Placements Pune", href: "/mba-colleges-pune-placement" },
+                { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
                 { label: "Low Fees MBA Pune", href: "/low-fees-mba-colleges-pune" },
                 { label: "MBA Direct Admission", href: "/direct-admission-mba-colleges-pune" },
                 { label: "MBA Scholarship Pune", href: "/mba-colleges-pune-scholarship" },
