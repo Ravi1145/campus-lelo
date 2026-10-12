@@ -92,11 +92,11 @@ const faqs = [
   },
   {
     question: "Which is the best MBA college in Pune that accepts MAT?",
-    answer: "MIT School of Management (MIT-SOM) Pune is the best MBA college accepting MAT, with NAAC A+ grade, ₹12 LPA average placement, and fees of ₹7–11L total. BIMM Pune is the best budget option accepting MAT (₹5–7.5L, ₹8.5 LPA avg). Both accept MAT, CMAT, and CAT — giving you multiple chances to qualify.",
+    answer: "MIT School of Management (MIT-SOM) Pune is the best MBA college accepting MAT, with NAAC A+ grade average placement, and fees of ₹7–11L total. BIMM Pune is the best budget option accepting MAT. Both accept MAT, CMAT, and CAT — giving you multiple chances to qualify.",
   },
   {
     question: "Can I get MBA admission in Pune after scoring 50 percentile in MAT?",
-    answer: "Yes. Colleges accepting 50 percentile in MAT include Indira Institute of Management (₹4.2–6.5L), Suryadatta Institute (₹2.8–4.5L), and IIMM Pune (₹3.8–5.5L). These colleges are AICTE-approved with decent placements (₹5–7 LPA). With 50 percentile MAT, focus on these colleges and also explore direct/management quota options.",
+    answer: "Yes. Colleges accepting 50 percentile in MAT include Indira Institute of Management (₹4.2–6.5L), Suryadatta Institute (₹2.8–4.5L), and IIMM Pune (₹3.8–5.5L). These colleges are AICTE-approved with decent placements. With 50 percentile MAT, focus on these colleges and also explore direct/management quota options.",
   },
 ]
 

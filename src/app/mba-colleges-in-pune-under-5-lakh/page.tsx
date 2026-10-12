@@ -17,7 +17,6 @@ const filtered = mbaColleges.filter(c => c.feesTotal <= 500000)
 
 const faqs = [
   { question: "Which MBA colleges in Pune have total fees under 5 lakh?", answer: "PUMBA (Pune University MBA / SPPU) has the lowest total MBA fees of â‚¹2.5 lakh (â‚¹1.25L/year Ã— 2 years). Several SPPU-affiliated government-aided MBA colleges also charge â‚¹2Lâ€“4.5L total. These seats are available via MAH-CET MBA CAP rounds. Cutoff is high â€” PUMBA requires 95+ percentile in MAH-CET MBA." },
-  { question: "Is the quality of MBA good at low-fee colleges in Pune?", answer: "PUMBA (â‚¹2.5L total) is ranked among the top 35 MBA colleges in India by NIRF. Quality is excellent â€” the low fees are subsidized by the state government, not a reflection of academic standards. Placement average at PUMBA is â‚¹8.5 LPA â€” comparable to private colleges charging 3Ã— more." },
   { question: "How to get admission in low-fee MBA colleges in Pune?", answer: "Admission to government and low-fee MBA colleges in Pune is through MAH-CET MBA. Register on the DTE Maharashtra portal after results. Fill college preferences including PUMBA and government-aided colleges. Seat allotment is merit-based. PUMBA cutoff: 95+ percentile Open category." },
   { question: "Are there any MBA scholarships to reduce fees further?", answer: "Yes. MahaDBT scholarship covers full tuition for SC/ST/OBC/EBC students at any Maharashtra college. EBC Freeship covers full fees for Open category students with family income under â‚¹8 lakh/year. Education loans from SBI/Bank of Maharashtra are available at 8-9% interest." },
 ]
@@ -39,14 +38,12 @@ export default function MBAUnder5Lakh() {
         stats={[
           { value: `${filtered.length}+`, label: "Colleges Under â‚¹5L" },
           { value: "â‚¹1.25L/yr", label: "Lowest (PUMBA)" },
-          { value: "â‚¹8.5 LPA", label: "PUMBA Avg Pkg" },
           { value: "MAH-CET", label: "Entrance Exam" },
         ]}
                 colleges={mbaColleges.filter(c => c.feesTotal <= 500000)}
         introHeading="MBA Under 5 Lakh in Pune â€” Is It Worth It?"
         introParagraphs={[
           "MBA colleges in Pune under â‚¹5 lakh are primarily government institutions and SPPU-affiliated colleges that receive state government grants, allowing them to charge significantly lower fees than private or deemed university programs.",
-          "PUMBA (Department of Management Sciences, SPPU) is the gold standard of affordable MBA in Pune. With NIRF rank 35, average placement of â‚¹8.5 LPA, and total fees of just â‚¹2.5 lakh, PUMBA offers exceptional return on investment. However, admission requires 95+ percentile in MAH-CET MBA for Open category.",
           "For students who cannot achieve PUMBA's cutoff, several SPPU-affiliated MBA colleges charge â‚¹3Lâ€“4.5L total with reasonable placement outcomes. These are filled in later CAP rounds with lower percentile requirements.",
         ]}
         faqs={faqs}

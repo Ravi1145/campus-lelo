@@ -13,13 +13,13 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "₹5.5 LPA avg", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
+  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "Not published", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
   { name: "Garware College of Commerce", location: "Karve Road", naac: "A", fees: "₹15K-40K/yr", placement: "Govt. Aided", slug: "garware-college-of-commerce-pune" },
   { name: "SP College (Science & Commerce)", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Government", slug: "sp-college-pune-sir-parashurambhau-college" },
-  { name: "Symbiosis College of Arts & Commerce (SCAC)", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "₹5 LPA avg", slug: "symbiosis-college-of-arts-commerce-pune" },
+  { name: "Symbiosis College of Arts & Commerce (SCAC)", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "Not published", slug: "symbiosis-college-of-arts-commerce-pune" },
   { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Govt. Aided", slug: "modern-college-of-arts-science-commerce-pune" },
   { name: "Nowrosjee Wadia College", location: "Pune", naac: "A", fees: "₹18K-45K/yr", placement: "Government", slug: "nowrosjee-wadia-college-pune" },
-  { name: "MIT College of Commerce - MIT-WPU", location: "Kothrud", naac: "A+", fees: "₹55K-1L/yr", placement: "₹4.8 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "MIT College of Commerce - MIT-WPU", location: "Kothrud", naac: "A+", fees: "₹55K-1L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
   { name: "Abhinav Education Society's College of Commerce", location: "Narayan Peth", naac: "A", fees: "₹18K-38K/yr", placement: "Govt. Aided", slug: "abhinav-college-commerce-pune" },
 ]
 

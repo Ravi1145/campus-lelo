@@ -13,18 +13,17 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "₹7.5 LPA avg", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "AISSMS College of Engineering", location: "Kennedy Road", naac: "A", fees: "₹1.1L-1.55L/yr", placement: "₹4.8 LPA avg", slug: "aissms-college-of-engineering-pune" },
-  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L-1.55L/yr", placement: "₹5.1 LPA avg", slug: "dy-patil-college-engineering-akurdi-pune" },
-  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "₹5.6 LPA avg", slug: "bharati-vidyapeeth-college-engineering-pune" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "AISSMS College of Engineering", location: "Kennedy Road", naac: "A", fees: "₹1.1L-1.55L/yr", placement: "Not published", slug: "aissms-college-of-engineering-pune" },
+  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L-1.55L/yr", placement: "Not published", slug: "dy-patil-college-engineering-akurdi-pune" },
+  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "Not published", slug: "bharati-vidyapeeth-college-engineering-pune" },
 ]
 
 const faqs = [
-  { q: "Which BTech college in Pune is best for Computer Science?", a: "PICT (Pune Institute of Computer Technology) is considered the best for CS/IT BTech in Pune with ₹7.5 LPA average placement and 98%+ placement rate. COEP is best for overall CS but harder to get into (99.5+ percentile)." },
   { q: "What is the duration of BTech in Pune colleges?", a: "BTech (Bachelor of Technology) is a 4-year full-time program. Semesters run from June-November and December-May. Some colleges also offer integrated BTech + MTech (5-year) programs." },
   { q: "What is the minimum MHT-CET score for BTech in Pune?", a: "For top BTech colleges like COEP, you need 95+ percentile. For mid-tier autonomous colleges (VIT Pune, MIT-WPU), 80-90 percentile suffices. Private unaided colleges accept 60-70 percentile for most branches." },
   { q: "Can I do BTech in Pune without MHT-CET?", a: "Yes. Several Pune BTech colleges accept JEE Main, SET (Symbiosis), or direct admission under management quota without MHT-CET. Deemed universities like SIT Pune and MIT-WPU have their own entrance routes." },

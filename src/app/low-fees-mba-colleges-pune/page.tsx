@@ -98,32 +98,22 @@ const faqs = [
   {
     question: "Can I do MBA in Pune under 5 lakh total fees?",
     answer:
-      "Yes, you can complete MBA in Pune under ₹5 lakh total fees at Suryadatta Institute (₹2.8L), IIMM Pune (₹3.8L), and Indira Institute of Management (₹4.2L). BIMM charges exactly ₹5L for the full 2-year program. These colleges offer PGDM and MBA programs affiliated to SPPU with average placements of ₹4–6 LPA.",
+      "Yes, you can complete MBA in Pune under ₹5 lakh total fees at Suryadatta Institute (₹2.8L), IIMM Pune (₹3.8L), and Indira Institute of Management (₹4.2L). BIMM charges exactly ₹5L for the full 2-year program. These colleges offer PGDM and MBA programs affiliated to SPPU with average placements of ₹4.",
   },
   {
     question: "What is the fee for MBA at MIT-SOM Pune?",
     answer:
-      "MIT School of Management (MIT-SOM) in Pune charges ₹7–11 lakh for the full 2-year MBA program depending on the specialization and batch. The MBA fee at MIT-SOM is approximately ₹3.5–5.5L per year. It is a deemed university with NAAC A+ grade and accepts MAH-CET, CAT, XAT, and CMAT scores. Average placement is ₹7–9 LPA.",
-  },
-  {
-    question: "What is the ROI on an affordable MBA from Pune?",
-    answer:
-      "The ROI (Return on Investment) for an affordable MBA from Pune is excellent. If you pay ₹4L total fees and get placed at ₹5 LPA, you recover the full investment in under 1 year. Compared to premier MBA colleges charging ₹22–25L, budget Pune MBA colleges offer salary-to-fees ratios of 1:1 to 2:1 within 2 years. Over 5 years, even ₹5 LPA placement yields ₹25L total income vs ₹4L investment.",
-  },
-  {
-    question: "Should I take education loan for MBA in Pune?",
-    answer:
-      "For affordable MBA colleges in Pune charging ₹3–5L, education loans may not be necessary if you have savings. However, for MIT-SOM (₹7–11L) or SIBM (₹22L+), education loans make sense. Banks like SBI, HDFC, and Axis offer MBA education loans at 8.5–12% interest. The loan amount of ₹5L at 9% for 5 years means EMI of ~₹10,400/month — manageable with a ₹5 LPA salary.",
+      "MIT School of Management (MIT-SOM) in Pune charges ₹7–11 lakh for the full 2-year MBA program depending on the specialization and batch. The MBA fee at MIT-SOM is approximately ₹3.5–5.5L per year. It is a deemed university with NAAC A+ grade and accepts MAH-CET, CAT, XAT, and CMAT scores. Average placement is ₹7.",
   },
   {
     question: "Which MBA college in Pune has the best salary-to-fees ratio?",
     answer:
-      "Indira Institute of Management (Pune) offers the best salary-to-fees ratio among affordable MBA colleges. With total fees of ₹4.2L and average placement of ₹5.5 LPA, you recover investment in under 1 year. IIMM Pune (₹3.8L fees, ₹4.5 LPA avg) and BIMM (₹5L fees, ₹5.8 LPA avg) also offer excellent ROI. All three are NAAC A/A+ accredited.",
+      "Indira Institute of Management (Pune) offers the best salary-to-fees ratio among affordable MBA colleges. With total fees of ₹4.2L and, you recover investment in under 1 year. IIMM Pune and BIMM also offer excellent ROI. All three are NAAC A/A+ accredited.",
   },
   {
     question: "Are MBA colleges in Pune under 5 lakh worth it?",
     answer:
-      "Yes, affordable MBA colleges in Pune under ₹5 lakh are worth it if you have clear career goals and leverage networking opportunities. Colleges like Indira Institute of Management, IIMM Pune, and Suryadatta are NAAC accredited and AICTE approved. They offer placements in reputed companies in the ₹4–7 LPA range. For banking, finance, or marketing careers in Pune/Maharashtra, these colleges provide good value compared to taking ₹20L+ loans for tier-2 national MBA colleges.",
+      "Yes, affordable MBA colleges in Pune under ₹5 lakh are worth it if you have clear career goals and leverage networking opportunities. Colleges like Indira Institute of Management, IIMM Pune, and Suryadatta are NAAC accredited and AICTE approved. They offer placements in reputed companies in the ₹4 range. For banking, finance, or marketing careers in Pune/Maharashtra, these colleges provide good value compared to taking ₹20L+ loans for tier-2 national MBA colleges.",
   },
 ]
 
@@ -162,7 +152,7 @@ export default function LowFeesMBACollegesPunePage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer — Cheapest MBA Colleges in Pune</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Suryadatta Institute</strong> is cheapest at ₹2.8L total (2 years). <strong>IIMM Pune</strong> ₹3.8L, <strong>Indira Institute</strong> ₹4.2L, <strong>BIMM</strong> ₹5L. All under ₹5L and NAAC accredited. Admission via <strong>MAH-CET</strong> or <strong>CAT</strong>. Average placement ₹4–6 LPA. MIT-SOM (₹7–11L) offers higher placements of ₹7–9 LPA.
+                <strong>Suryadatta Institute</strong> is cheapest at ₹2.8L total (2 years). <strong>IIMM Pune</strong> ₹3.8L, <strong>Indira Institute</strong> ₹4.2L, <strong>BIMM</strong> ₹5L. All under ₹5L and NAAC accredited. Admission via <strong>MAH-CET</strong> or <strong>CAT</strong>. Average placement ₹4. MIT-SOM (₹7–11L) offers higher placements of ₹7.
               </p>
             </div>
           </div>
@@ -174,7 +164,6 @@ export default function LowFeesMBACollegesPunePage() {
             {[
               { label: "Cheapest MBA (2 yrs)", value: "₹2.8L", icon: "🏛️" },
               { label: "Under ₹5L Options", value: "4 Colleges", icon: "💰" },
-              { label: "Min Avg Placement", value: "₹4 LPA", icon: "📈" },
               { label: "ROI Recovery", value: "< 1 Year", icon: "🎯" },
             ].map(({ label, value, icon }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">
@@ -307,9 +296,9 @@ export default function LowFeesMBACollegesPunePage() {
                 <h3 className="font-semibold text-gray-900 mb-3 text-sm">ROI Comparison — MBA Fees vs Salary</h3>
                 <div className="space-y-3">
                   {[
-                    { college: "Suryadatta / IIMM", fees: "₹2.8–3.8L", placement: "₹4–5 LPA", recovery: "< 1 year" },
-                    { college: "Indira / BIMM", fees: "₹4.2–5L", placement: "₹5–6 LPA", recovery: "~1 year" },
-                    { college: "MIT-SOM", fees: "₹7–11L", placement: "₹7–9 LPA", recovery: "1.5–2 years" },
+                    { college: "Suryadatta / IIMM", fees: "₹2.8–3.8L", placement: "Not published", recovery: "< 1 year" },
+                    { college: "Indira / BIMM", fees: "₹4.2–5L", placement: "Not published", recovery: "~1 year" },
+                    { college: "MIT-SOM", fees: "₹7–11L", placement: "Not published", recovery: "1.5–2 years" },
                   ].map(({ college, fees, placement, recovery }) => (
                     <div key={college} className="bg-gray-50 rounded-xl p-3">
                       <p className="font-semibold text-gray-900 text-sm">{college}</p>

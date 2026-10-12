@@ -25,7 +25,7 @@ interface FinderResult {
 
 const STREAMS = ["Engineering (B.Tech/BE)", "MBA / PGDM", "Medical (MBBS/BDS)", "Science (BSc)", "Commerce (BCom/BBA)", "Arts (BA)", "Pharmacy (BPharm)", "Law (LLB)", "Design", "BCA / MCA"]
 const CATEGORIES = ["General (No caste reservation)", "OBC", "SC (Scheduled Caste)", "ST (Scheduled Tribe)", "EBC (Economically Backward Class)", "NT / VJNT / SBC", "Minority (Muslim/Sikh/Christian/Buddhist/Jain/Parsi)"]
-const INCOMES = ["Below ₹2 LPA", "₹2–4.5 LPA", "₹4.5–8 LPA", "Above ₹8 LPA"]
+const INCOMES = ["Below ₹2 LPA", "₹2", "₹4.5", "Above ₹8 LPA"]
 
 export default function ScholarshipFinder() {
   const [step, setStep] = useState<"form" | "loading" | "results">("form")

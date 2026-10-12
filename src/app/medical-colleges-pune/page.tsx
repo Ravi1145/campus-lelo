@@ -8,7 +8,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Medical Colleges in Pune 2026 | NEET Cutoff, Fees & MBBS Seats",
-  description: "Top medical colleges in Pune 2026 with NEET cutoffs, NIRF ranks, annual fees (₹50K–₹15L), and MBBS/BDS seat count. Compare AFMC (NIRF #4), BJ Medical College (NIRF #18), DY Patil & Bharati Vidyapeeth.",
+  description: "Top medical colleges in Pune 2026 with NEET cutoffs, NIRF ranks, annual fees (₹50K–₹15L), and MBBS/BDS seat count. Compare AFMC, BJ Medical College, DY Patil & Bharati Vidyapeeth.",
   path: "/medical-colleges-pune",
   keywords: [
     "best medical college in pune",
@@ -28,8 +28,8 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { rank: 1, name: "AFMC – Armed Forces Medical College", type: "Government (Defence)", nirf: 4, naac: "A++", fees: "₹50,000 (total 4.5 yrs)", seats: 130, neet: "650+", slug: "afmc-armed-forces-medical-college-pune", highlight: "NIRF #4 | Nearly Free | Best in India" },
-  { rank: 2, name: "BJ Medical College (BJMC)", type: "Government", nirf: 18, naac: "A+", fees: "₹60K–₹1.2L/yr", seats: 250, neet: "625+ (Open)", slug: "bj-medical-college-pune", highlight: "NIRF #18 | Best Govt for State Quota" },
+  { rank: 1, name: "AFMC – Armed Forces Medical College", type: "Government (Defence)", nirf: null, naac: "A++", fees: "₹50,000 (total 4.5 yrs)", seats: 130, neet: "650+", slug: "afmc-armed-forces-medical-college-pune", highlight: " | Nearly Free | Best in India" },
+  { rank: 2, name: "BJ Medical College (BJMC)", type: "Government", nirf: null, naac: "A+", fees: "₹60K–₹1.2L/yr", seats: 250, neet: "625+ (Open)", slug: "bj-medical-college-pune", highlight: " | Best Govt for State Quota" },
   { rank: 3, name: "D.Y. Patil Medical College, Pune", type: "Deemed", nirf: null, naac: "A", fees: "₹11L–₹15L/yr", seats: 150, neet: "500–550 (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune", highlight: "Most Seats | Management Quota Available" },
   { rank: 4, name: "Bharati Vidyapeeth Medical College", type: "Deemed", nirf: null, naac: "A", fees: "₹8.5L–₹12L/yr", seats: 150, neet: "490–540 (Mgmt)", slug: "bharati-vidyapeeth-medical-college-pune", highlight: "Affordable Deemed | Good Facilities" },
   { rank: 5, name: "Dr. D.Y. Patil Medical College, Pimpri", type: "Deemed", nirf: null, naac: "A", fees: "₹10L–₹14L/yr", seats: 150, neet: "510–560 (Mgmt)", slug: "dy-patil-medical-college-pimpri-pune", highlight: "Large Hospital Attached" },
@@ -39,7 +39,6 @@ const colleges = [
 ]
 
 const faqs = [
-  { question: "Which is the best medical college in Pune?", answer: "AFMC (Armed Forces Medical College) is the best medical college in Pune with NIRF Rank 4, NAAC A++ grade, and near-zero fees (₹50,000 total for 4.5 years MBBS). It requires 650+ NEET score + AFMC entrance test + SSB interview. BJ Medical College (NIRF #18) is the best accessible government option at 625+ NEET for open category students." },
   { question: "What NEET score is required for AFMC Pune?", answer: "AFMC requires 650+ NEET 2026 score (out of 720) along with a separate AFMC screening test and SSB (Service Selection Board) interview. It has 130 MBBS seats. Fees are nearly free — just ₹50,000 for the entire 4.5-year course. Candidates must be unmarried Indian nationals aged 17–24." },
   { question: "What is the NEET cutoff for BJ Medical College Pune 2026?", answer: "BJ Medical College (BJMC) Pune's expected NEET 2026 cutoff for open category (state quota) is 625–640 marks. For OBC: 595–610 marks. For SC/ST: 500–530 marks. Government quota seats are filled through Maharashtra State CET Cell (NEET CAP) process. BJ Medical College has 250 MBBS seats and fees of ₹60K–1.2L/yr." },
   { question: "What is the fee for MBBS at DY Patil Medical College Pune?", answer: "D.Y. Patil Medical College Pune charges ₹11L–₹15L per year for MBBS (management quota). For NRI quota, fees can be ₹25–35L per year. State quota seats (through NEET state merit) have fee capped at ₹2–3L/yr. Management quota at DY Patil requires 500–550 NEET score." },
@@ -72,7 +71,7 @@ export default function MedicalCollegesPunePage() {
     "@id": PAGE_URL,
     url: PAGE_URL,
     name: "Best Medical Colleges in Pune 2026 | MBBS Fees & NEET Cutoff",
-    description: "AFMC Pune (NIRF #4) is the best medical college in Pune with near-zero fees and 650+ NEET score requirement. BJ Medical College is the best government option (620+ NEET). Compare 8 medical colleges.",
+    description: "AFMC Pune is the best medical college in Pune with near-zero fees and 650+ NEET score requirement. BJ Medical College is the best government option (620+ NEET). Compare 8 medical colleges.",
     inLanguage: "en-IN",
     dateModified: TODAY,
     isPartOf: { "@id": `${BASE_URL}/#website` },
@@ -116,7 +115,7 @@ export default function MedicalCollegesPunePage() {
                 Best Medical Colleges in Pune 2026
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Compare AFMC (NIRF #4), BJ Medical College (NIRF #18), DY Patil, and Bharati Vidyapeeth by NEET cutoff, annual fees (₹50K–₹15L/yr), MBBS seats, and hospital attachment quality.
+                Compare AFMC (), BJ Medical College (), DY Patil, and Bharati Vidyapeeth by NEET cutoff, annual fees (₹50K–₹15L/yr), MBBS seats, and hospital attachment quality.
               </p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <span className="flex items-center gap-1 text-green-400"><CheckCircle className="w-4 h-4" /> NEET 2026 Cutoffs</span>
@@ -132,8 +131,8 @@ export default function MedicalCollegesPunePage() {
           <div className="bg-green-50 border-l-4 border-green-500 rounded-xl p-5 sm:p-6" data-speakable="true">
             <h2 className="text-lg font-bold text-green-800 mb-2">Quick Answer: Best Medical College in Pune 2026</h2>
             <p className="text-green-900 text-sm leading-relaxed">
-              <strong>AFMC Pune</strong> (NIRF Rank 4, NAAC A++) is the best medical college in Pune — nearly free education (₹50,000 total) but requires 650+ NEET + separate test + SSB.{" "}
-              <strong>Best govt option:</strong> BJ Medical College (NIRF #18) — 625+ NEET, ₹60K–1.2L/yr fees.{" "}
+              <strong>AFMC Pune</strong> (NAAC A++) is the best medical college in Pune — nearly free education (₹50,000 total) but requires 650+ NEET + separate test + SSB.{" "}
+              <strong>Best govt option:</strong> BJ Medical College — 625+ NEET, ₹60K–1.2L/yr fees.{" "}
               <strong>Best private:</strong> DY Patil Medical College — 500+ NEET (mgmt quota), ₹11–15L/yr.
             </p>
           </div>
@@ -158,7 +157,6 @@ export default function MedicalCollegesPunePage() {
             <div className="border-2 border-orange-200 rounded-2xl p-5 bg-orange-50">
               <div className="flex items-center justify-between mb-3">
                 <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">#1 Best Medical</span>
-                <span className="text-xs text-gray-500">NIRF 4</span>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-3">AFMC – Armed Forces Medical College</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
@@ -176,7 +174,6 @@ export default function MedicalCollegesPunePage() {
             <div className="border border-gray-200 rounded-2xl p-5 bg-white">
               <div className="flex items-center justify-between mb-3">
                 <span className="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">#2 Best Govt</span>
-                <span className="text-xs text-gray-500">NIRF 18</span>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-3">BJ Medical College (BJMC) Pune</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
@@ -264,7 +261,6 @@ export default function MedicalCollegesPunePage() {
                 <h3 className="font-bold text-blue-900 text-lg mb-4">Government Medical Colleges (AFMC, BJMC)</h3>
                 <ul className="space-y-2 text-sm text-blue-800">
                   <li className="flex gap-2"><CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>Extremely low fees — ₹50K (AFMC) to ₹1.2L/yr (BJMC)</span></li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>NIRF ranked #4 (AFMC) and #18 (BJMC) — nationally recognized</span></li>
                   <li className="flex gap-2"><CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>Large government hospital exposure — 500–1,000 bed hospitals</span></li>
                   <li className="flex gap-2"><CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>Strong alumni network in government and private hospitals</span></li>
                   <li className="flex gap-2 text-red-700"><AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>Very high NEET cutoff — 625–650+ marks required</span></li>

@@ -87,24 +87,15 @@ export default function MBAClusterPage({
                       {col.hostel && <span className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">🏠 Hostel</span>}
                       <span className="bg-orange-50 text-orange-700 px-2 py-0.5 rounded-full">{col.entranceExams[0]}</span>
                     </div>
-                    <div className="grid grid-cols-3 gap-2 text-xs">
+                    <div className="grid grid-cols-1 gap-2 text-xs">
                       <div className="bg-gray-50 rounded-lg p-2 text-center">
                         <p className="font-bold text-gray-900">₹{(col.feesPerYear / 100000).toFixed(1)}L/yr</p>
                         <p className="text-gray-500">Fees</p>
-                      </div>
-                      <div className="bg-gray-50 rounded-lg p-2 text-center">
-                        <p className="font-bold text-green-700">₹{(col.avgPlacement / 100000).toFixed(1)} LPA</p>
-                        <p className="text-gray-500">Avg Pkg</p>
-                      </div>
-                      <div className="bg-gray-50 rounded-lg p-2 text-center">
-                        <p className="font-bold text-blue-700">₹{(col.highestPlacement / 100000).toFixed(1)} LPA</p>
-                        <p className="text-gray-500">Highest</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-2 shrink-0">
                     <Link href={`/colleges/${col.slug}`} className="hidden md:block px-3 py-1.5 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 font-medium">View</Link>
-                    <Link href={`/colleges/${col.slug}/fees`} className="hidden md:block px-3 py-1.5 bg-gray-100 text-gray-600 text-xs rounded-lg hover:bg-gray-200">Fees</Link>
                   </div>
                 </div>
               </article>

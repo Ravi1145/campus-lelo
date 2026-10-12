@@ -37,8 +37,8 @@ const greaterNoidaColleges = [
     location: "Yamuna Expressway, Greater Noida",
     courses: ["B.Tech", "MBA", "BBA", "BCA", "M.Tech", "MCA"],
     feesRange: "₹1.5L–4L/yr",
-    avgPkg: "₹5.2 LPA",
-    highestPkg: "₹28 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 25000,
     rating: 3.8,
     reviews: 1840,
@@ -49,12 +49,12 @@ const greaterNoidaColleges = [
     slug: "sharda-university-noida",
     type: "Private University",
     naac: "A",
-    nirf: 101,
+    nirf: null,
     location: "Knowledge Park III, Greater Noida",
     courses: ["B.Tech", "MBBS", "MBA", "BBA", "LLB", "BArch"],
     feesRange: "₹1.8L–4.8L/yr",
-    avgPkg: "₹5.5 LPA",
-    highestPkg: "₹18 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 18000,
     rating: 3.9,
     reviews: 1420,
@@ -69,8 +69,8 @@ const greaterNoidaColleges = [
     location: "Greater Noida",
     courses: ["B.Tech", "PGDM", "MBA", "M.Tech"],
     feesRange: "₹1.2L–2.8L/yr",
-    avgPkg: "₹5.2 LPA",
-    highestPkg: "₹14 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 6000,
     rating: 3.9,
     reviews: 820,
@@ -85,12 +85,12 @@ const greaterNoidaColleges = [
     location: "TechZone II, Greater Noida",
     courses: ["B.Tech", "MBA", "BBA", "M.Tech", "Law"],
     feesRange: "₹3L–6L/yr",
-    avgPkg: "₹9 LPA",
-    highestPkg: "₹55 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 5000,
     rating: 4.3,
     reviews: 520,
-    highlight: "Times Group college — highest placement pkg in Greater Noida (₹55 LPA), Google/Microsoft recruit",
+    highlight: "Times Group college — highest placement pkg in Greater Noida, Google/Microsoft recruit",
   },
   {
     name: "KIET Group of Institutions, Ghaziabad",
@@ -101,8 +101,8 @@ const greaterNoidaColleges = [
     location: "Ghaziabad (Near Greater Noida)",
     courses: ["B.Tech", "MBA", "MCA", "M.Tech"],
     feesRange: "₹1.4L–3L/yr",
-    avgPkg: "₹5.8 LPA",
-    highestPkg: "₹20 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 7000,
     rating: 4.0,
     reviews: 960,
@@ -113,23 +113,23 @@ const greaterNoidaColleges = [
     slug: "amity-university-noida",
     type: "Private University",
     naac: "A+",
-    nirf: 51,
+    nirf: null,
     location: "Sector 125, Noida (near Greater Noida)",
     courses: ["B.Tech", "MBA", "BBA", "BCA", "Law", "Journalism"],
     feesRange: "₹2L–5.5L/yr",
-    avgPkg: "₹7.5 LPA",
-    highestPkg: "₹38 LPA",
+    avgPkg: "Not published",
+    highestPkg: "Not published",
     strength: 20000,
     rating: 4.2,
     reviews: 2100,
-    highlight: "Top-ranked private university in NCR — NIRF #51, NAAC A+, 20,000+ students",
+    highlight: "Top-ranked private university in NCR, NAAC A+, 20,000+ students",
   },
 ]
 
 const faqData = [
   {
     question: "Which is the best college in Greater Noida 2026?",
-    answer: "Bennett University (NAAC A, highest pkg ₹55 LPA, Google/Microsoft recruit) is the best for placements. Sharda University (NAAC A, NIRF #101) is best for variety — it offers MBBS, Law, Architecture plus Engineering. Galgotias University is the largest (25,000+ students) and most affordable. For engineering specifically: Bennett University (#1 CSE placements), KIET Ghaziabad (#2 for AKTU-affiliated), Galgotias (#3 for budget B.Tech). For MBA/PGDM in Greater Noida: GL Bajaj is the best value, Sharda offers international exposure.",
+    answer: "Bennett University is the best for placements. Sharda University (NAAC A) is best for variety — it offers MBBS, Law, Architecture plus Engineering. Galgotias University is the largest (25,000+ students) and most affordable. For engineering specifically: Bennett University (#1 CSE placements), KIET Ghaziabad (#2 for AKTU-affiliated), Galgotias (#3 for budget B.Tech). For MBA/PGDM in Greater Noida: GL Bajaj is the best value, Sharda offers international exposure.",
   },
   {
     question: "What courses are available in Greater Noida colleges 2026?",
@@ -180,7 +180,7 @@ export default function CollegesInGreaterNoidaPage() {
               GL Bajaj, Bennett University, KIET &amp; Amity. JEE/CAT/CMAT 2026 admission, fees &amp; placements.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
-              {[["50+", "Colleges"], ["₹1.2L–6L", "Fees/yr"], ["₹55 LPA", "Highest Pkg"], ["JEE/CAT/CMAT", "Entrance"]].map(([val, label]) => (
+              {[["50+", "Colleges"], ["₹1.2L–6L", "Fees/yr"], ["JEE/CAT/CMAT", "Entrance"]].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
                   <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>
@@ -297,7 +297,6 @@ export default function CollegesInGreaterNoidaPage() {
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600 leading-relaxed">
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">How to Choose a College in Greater Noida?</h3>
-                <p>For B.Tech placements: Bennett University (avg ₹9 LPA, Google/Microsoft) or Galgotias (budget, avg ₹5.2 LPA). For MBA/PGDM: GL Bajaj (cheapest, NAAC A) or Sharda (international exposure, diverse MBA specializations). For MBBS or Law: Sharda University is the only Greater Noida option. GL Bajaj and Galgotias offer the best value for budget-conscious students from UP, Bihar, Rajasthan and Uttarakhand who want Delhi NCR placements without Delhi-level fees.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Greater Noida Knowledge Park — College Hub</h3>

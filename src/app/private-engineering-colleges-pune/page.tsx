@@ -25,7 +25,7 @@ const colleges = [
     type: "Autonomous",
     naac: "A",
     fees: "₹1.4L–₹1.9L/yr",
-    placement: "₹7.5 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET / JEE",
     slug: "pict-pune-institute-of-computer-technology",
     highlight: "Best for CS/IT",
@@ -36,10 +36,10 @@ const colleges = [
     type: "Autonomous",
     naac: "A+",
     fees: "₹1.6L–₹2.2L/yr",
-    placement: "₹8.5 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET / JEE",
     slug: "vit-pune-vishwakarma-institute-of-technology",
-    highlight: "NIRF #101",
+    highlight: "",
   },
   {
     rank: 3,
@@ -47,7 +47,7 @@ const colleges = [
     type: "Deemed",
     naac: "A+",
     fees: "₹3.6L–₹4.8L/yr",
-    placement: "₹9.8 LPA avg",
+    placement: "Not published",
     exam: "SET / JEE",
     slug: "symbiosis-institute-of-technology-pune",
     highlight: "Best Deemed",
@@ -58,7 +58,7 @@ const colleges = [
     type: "Deemed",
     naac: "A+",
     fees: "₹2.0L–₹3.8L/yr",
-    placement: "₹7.2 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET / JEE",
     slug: "mit-wpu-mit-world-peace-university",
     highlight: "Best Infrastructure",
@@ -69,7 +69,7 @@ const colleges = [
     type: "Autonomous",
     naac: "A+",
     fees: "₹1.3L–₹1.75L/yr",
-    placement: "₹6.8 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET / JEE",
     slug: "cummins-college-of-engineering-pune",
     highlight: "Best Women's College",
@@ -80,7 +80,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹1.2L–₹1.7L/yr",
-    placement: "₹5.2 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET",
     slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering",
     highlight: "Budget Pick",
@@ -91,7 +91,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹1.1L–₹1.55L/yr",
-    placement: "₹4.8 LPA avg",
+    placement: "Not published",
     exam: "MHT-CET",
     slug: "aissms-college-of-engineering-pune",
     highlight: "Affordable & Reliable",
@@ -99,11 +99,6 @@ const colleges = [
 ]
 
 const faqs = [
-  {
-    question: "Which is the best private engineering college in Pune?",
-    answer:
-      "PICT (Pune Institute of Computer Technology) is considered the best private autonomous engineering college in Pune for CS/IT. VIT Pune is best overall among autonomous private colleges. SIT Pune (Symbiosis) leads among deemed private universities with ₹9.8 LPA average placement.",
-  },
   {
     question: "What is the difference between private autonomous, deemed, and government engineering colleges in Pune?",
     answer:
@@ -122,17 +117,12 @@ const faqs = [
   {
     question: "Are private engineering colleges in Pune worth it?",
     answer:
-      "Yes, top private engineering colleges like PICT and VIT Pune offer excellent placements (₹7.5–₹8.5 LPA average) and strong industry connections. The fee investment of ₹1.4L–₹2.2L/year is recovered within 1–2 years of employment. NAAC A+ colleges (VIT Pune, MIT-WPU, Cummins) also have strong national recognition.",
+      "Yes, top private engineering colleges like PICT and VIT Pune offer excellent placements and strong industry connections. The fee investment of ₹1.4L–₹2.2L/year is recovered within 1–2 years of employment. NAAC A+ colleges (VIT Pune, MIT-WPU, Cummins) also have strong national recognition.",
   },
   {
     question: "What is the fee range for private engineering colleges in Pune?",
     answer:
       "Private engineering college fees in Pune range from ₹1.1L/year (AISSMS — most affordable) to ₹4.8L/year (SIT Pune — deemed university). Autonomous private colleges charge ₹1.2L–₹2.2L/year. Deemed universities charge ₹2L–₹4.8L/year. SC/ST students are eligible for Maharashtra government scholarships and fee concessions.",
-  },
-  {
-    question: "Which private engineering college in Pune has the best placements?",
-    answer:
-      "SIT Pune (Symbiosis) leads with ₹9.8 LPA average and ₹42 LPA highest package. VIT Pune comes second with ₹8.5 LPA average. PICT has the highest placement rate for CS/IT branches. Top recruiters include TCS, Infosys, Wipro, Bajaj Auto, Siemens, and international tech companies.",
   },
 ]
 
@@ -171,7 +161,7 @@ export default function PrivateEngineeringCollegesPunePage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                The best private engineering colleges in Pune are <strong>PICT</strong> (CS/IT specialist, ₹7.5 LPA avg), <strong>VIT Pune</strong> (NAAC A+, NIRF #101, ₹8.5 LPA avg), <strong>SIT Pune</strong> (best deemed, ₹9.8 LPA avg), and <strong>MIT-WPU</strong> (excellent infrastructure, ₹7.2 LPA avg). Admission is via <strong>MHT-CET CAP</strong> for most colleges or <strong>SET/JEE</strong> for deemed universities.
+                The best private engineering colleges in Pune are <strong>PICT</strong>, <strong>VIT Pune</strong>, <strong>SIT Pune</strong>, and <strong>MIT-WPU</strong>. Admission is via <strong>MHT-CET CAP</strong> for most colleges or <strong>SET/JEE</strong> for deemed universities.
               </p>
             </div>
           </div>
@@ -183,7 +173,6 @@ export default function PrivateEngineeringCollegesPunePage() {
             {[
               { label: "Private Eng. Colleges", value: "70+", icon: "🏛️" },
               { label: "Lowest Fees/yr", value: "₹1.1L", icon: "💰" },
-              { label: "Highest Avg Package", value: "₹9.8 LPA", icon: "📈" },
               { label: "Top NAAC Grade", value: "A+", icon: "🏆" },
             ].map(({ label, value, icon }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">

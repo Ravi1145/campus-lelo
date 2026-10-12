@@ -158,9 +158,9 @@ export default function PuneCollegeGuide() {
               {[
                 ["500+", "Colleges in Pune"],
                 ["50+", "Courses & Streams"],
-                ["NIRF #4", "Highest Ranked (AFMC)"],
+                ["", "Highest Ranked (AFMC)"],
                 ["₹15K–25L", "Fee Range / Year"],
-                ["₹85 LPA", "Highest MBA Package"],
+
               ].map(([val, label]) => (
                 <div key={label} className="flex justify-between items-center py-1 border-b border-gray-100 last:border-0">
                   <span style={{ color: "#475569" }}>{label}</span>
@@ -199,7 +199,7 @@ export default function PuneCollegeGuide() {
           <div>
             <h4 className="font-semibold text-gray-700 mb-2">Top Engineering Colleges in Pune 2026</h4>
             <p>
-              COEP Pune (NIRF #49, NAAC A+), PICT (NAAC A), VIT Pune (NIRF #101, NAAC A+), SIT Pune (NAAC A+),
+              COEP Pune (NAAC A+), PICT (NAAC A), VIT Pune (NAAC A+), SIT Pune (NAAC A+),
               Cummins College (NAAC A+), MIT-WPU and JSPM RSCOE are the top B.Tech colleges in Pune.
               Admission via MHT-CET 2026 (April–May) or JEE Main. Fees range from ₹80K to ₹4.5L per year.
             </p>
@@ -207,7 +207,7 @@ export default function PuneCollegeGuide() {
           <div>
             <h4 className="font-semibold text-gray-700 mb-2">Top MBA Colleges in Pune 2026</h4>
             <p>
-              SIBM Pune (NIRF #13, avg ₹24 LPA), SCMHRD (NIRF #22, avg ₹19 LPA), PUMBA (government, ₹1.25L fees),
+              SIBM Pune, SCMHRD, PUMBA (government, ₹1.25L fees),
               MIT-SOM, DYPIM and Indira Institute are top MBA colleges in Pune. Admission via SNAP, CAT or MAH-MBA-CET 2026.
               Total fees range from ₹2.5L (PUMBA) to ₹24L (SIBM).
             </p>

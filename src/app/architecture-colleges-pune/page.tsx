@@ -31,7 +31,7 @@ const colleges = [
     type: "Deemed University",
     naac: "A+",
     fees: "₹2.2L–₹2.8L/yr",
-    placement: "₹5–10 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "NATA 130+ / JEE Paper 2",
     highlight: "Top Architecture Brand | Modern Design Studios | Industry Exposure",
@@ -43,7 +43,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹1.8L–₹2.4L/yr",
-    placement: "₹4.5–8 LPA",
+    placement: "Not published",
     seats: 40,
     cutoff: "NATA 120+ / MHT-CET",
     highlight: "NAAC A | Experienced Faculty | Strong Portfolio Training",
@@ -55,7 +55,7 @@ const colleges = [
     type: "Private (Autonomous)",
     naac: "A",
     fees: "₹1.5L–₹2L/yr",
-    placement: "₹4–7 LPA",
+    placement: "Not published",
     seats: 40,
     cutoff: "NATA 115+ / MHT-CET",
     highlight: "Affordable Fees | Strong Alumni Network | Design-First Approach",
@@ -67,7 +67,7 @@ const colleges = [
     type: "Private",
     naac: "B+",
     fees: "₹1.2L–₹1.6L/yr",
-    placement: "₹3.5–6 LPA",
+    placement: "Not published",
     seats: 40,
     cutoff: "NATA 110+",
     highlight: "Budget Option | Good Infrastructure | Practical Training",
@@ -79,7 +79,7 @@ const colleges = [
     type: "Private",
     naac: "B+",
     fees: "₹1.1L–₹1.5L/yr",
-    placement: "₹3–5.5 LPA",
+    placement: "Not published",
     seats: 40,
     cutoff: "NATA 105+",
     highlight: "Sinhgad Group | Decent Facilities | Affordable",
@@ -91,7 +91,7 @@ const colleges = [
     type: "Private",
     naac: "B+",
     fees: "₹1.3L–₹1.8L/yr",
-    placement: "₹3.5–6 LPA",
+    placement: "Not published",
     seats: 40,
     cutoff: "NATA 110+",
     highlight: "Design Focus | Industry Partnerships | Good Faculty",
@@ -114,11 +114,11 @@ const faqs = [
   },
   {
     question: "What is the scope of architecture after B.Arch from Pune?",
-    answer: "After B.Arch from Pune: Architecture firms (₹4–10 LPA starting), Interior design (₹3.5–8 LPA), Urban planning, Real estate development, M.Arch (PG degree), Teaching. Top recruiters include L&T Construction, Tata Housing, Lodha Group, Godrej Properties, and boutique architecture firms. Many graduates start their own practice after 3–5 years.",
+    answer: "After B.Arch from Pune: Architecture firms, Interior design, Urban planning, Real estate development, M.Arch (PG degree), Teaching. Top recruiters include L&T Construction, Tata Housing, Lodha Group, Godrej Properties, and boutique architecture firms. Many graduates start their own practice after 3–5 years.",
   },
   {
     question: "Is B.Arch a good career in 2026?",
-    answer: "B.Arch is excellent in 2026 with India's real estate sector booming. The construction market is ₹80,000 crore+ with massive demand for architects. Average starting salary ₹4–6 LPA; 5 years experience: ₹10–25 LPA; own practice: unlimited. B.Arch from Pune gives exposure to Maharashtra's infrastructure boom — smart cities, Metro projects, and IT park construction.",
+    answer: "B.Arch is excellent in 2026 with India's real estate sector booming. The construction market is ₹80,000 crore+ with massive demand for architects. Average starting salary ₹4; 5 years experience: ₹10; own practice: unlimited. B.Arch from Pune gives exposure to Maharashtra's infrastructure boom — smart cities, Metro projects, and IT park construction.",
   },
 ]
 
@@ -154,7 +154,7 @@ export default function ArchitectureCollegesPunePage() {
                 { icon: "🏛️", label: "6 Top Colleges" },
                 { icon: "📐", label: "NATA / JEE Paper 2" },
                 { icon: "💰", label: "Fees ₹1.1L–₹2.8L/yr" },
-                { icon: "📈", label: "Avg Placement ₹3.5–10 LPA" },
+                { icon: "📈", label: "Avg Placement ₹3.5" },
               ].map(({ icon, label }) => (
                 <div key={label} className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full text-white text-sm">
                   <span>{icon}</span><span>{label}</span>

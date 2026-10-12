@@ -137,7 +137,6 @@ export default function NIRFInsightsPage() {
             { label: "Colleges Listed", value: colleges.length.toString(), color: "text-blue-700" },
             { label: "NIRF Ranked", value: colleges.filter((c) => c.nirfRank).length.toString(), color: "text-purple-700" },
             { label: "NAAC A+ / A++", value: colleges.filter((c) => c.naac === "A+" || c.naac === "A++").length.toString(), color: "text-green-700" },
-            { label: "Avg Placement", value: formatINR(Math.round(colleges.reduce((s, c) => s + c.avgPlacement, 0) / colleges.length)), color: "text-orange-700" },
           ].map(({ label, value, color }) => (
             <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">
               <p className={cn("text-2xl font-extrabold", color)}>{value}</p>
@@ -198,7 +197,7 @@ export default function NIRFInsightsPage() {
 
           {/* Quick Facts */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
-            <h2 className="text-sm font-bold text-gray-900 mb-4">NIRF 2024 Quick Facts</h2>
+            <h2 className="text-sm font-bold text-gray-900 mb-4"> Quick Facts</h2>
             <div className="space-y-3 text-sm">
               {[
                 { label: "Best NIRF Rank in Pune", value: `#${colleges.filter(c => c.nirfRank).sort((a, b) => (a.nirfRank ?? 0) - (b.nirfRank ?? 0))[0]?.nirfRank} — ${colleges.filter(c => c.nirfRank).sort((a, b) => (a.nirfRank ?? 0) - (b.nirfRank ?? 0))[0]?.shortName}` },

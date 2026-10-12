@@ -13,21 +13,20 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
   { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹25K-60K/yr", placement: "Govt. College", slug: "fergusson-college-pune" },
   { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Govt. Aided", slug: "sp-college-pune-sir-parashurambhau-college" },
   { name: "Garware College of Commerce", location: "Karve Road", naac: "A", fees: "₹15K-40K/yr", placement: "Govt. Aided", slug: "garware-college-of-commerce-pune" },
-  { name: "BMCC (Brihan Maharashtra College of Commerce)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "₹5.5 LPA avg", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
+  { name: "BMCC (Brihan Maharashtra College of Commerce)", location: "Shivajinagar", naac: "A+", fees: "₹18K-45K/yr", placement: "Not published", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
   { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Govt. Aided", slug: "modern-college-of-arts-science-commerce-pune" },
   { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "nowrosjee-wadia-college-pune" },
-  { name: "Sinhgad College of Engineering (State Quota Seats)", location: "Vadgaon", naac: "A", fees: "₹1.15L/yr", placement: "₹4.9 LPA avg", slug: "sinhgad-college-of-engineering-pune" },
+  { name: "Sinhgad College of Engineering (State Quota Seats)", location: "Vadgaon", naac: "A", fees: "₹1.15L/yr", placement: "Not published", slug: "sinhgad-college-of-engineering-pune" },
 ]
 
 const faqs = [
   { q: "Which is the cheapest college in Pune with good quality?", a: "Fergusson College and SP College are among the cheapest colleges in Pune (₹15,000-50,000/year) with NAAC A+ grade and strong academic reputations. For engineering, COEP offers government-aided seats at ₹80,000/year with India-ranked quality." },
   { q: "Are there free colleges in Pune?", a: "No completely free colleges, but several government-aided colleges have extremely low fees. Additionally, merit scholarships, EBC scholarships, and central government scholarships can effectively cover 100% fees for eligible students at these low-fee institutions." },
   { q: "What scholarships are available for low-fee colleges in Pune?", a: "Key scholarships: EBC (Economically Backward Class) scholarship covers full tuition for family income under ₹1L/year. GoM Scholarship for OBC students. Minority scholarships. NSP (National Scholarship Portal) for SC/ST students. Merit scholarships from state government for top HSC scorers." },
-  { q: "Can I get good placements from low-fee government colleges in Pune?", a: "Absolutely. COEP (₹80K/year) has India's best engineering placements at ₹12 LPA average. Fergusson College and SP College alumni hold senior positions in top companies. Government colleges in Pune consistently outperform many expensive private colleges in academic quality." },
   { q: "How do I apply for low-fee government colleges in Pune?", a: "For government-aided arts/science/commerce colleges: Apply via online admission portal during June-July after HSC results. Engineering government colleges: Via MHT-CET CAP process. All admissions are merit-based. No management quota or donation system in government colleges." },
 ]
 
@@ -68,7 +67,6 @@ export default function LowFeeCollegesPunePage() {
         introHeading="Low Fee Colleges in Pune: Quality Education at Minimal Cost"
         introParagraphs={[
           "Pune has a remarkable advantage for budget-conscious students: the city's strong network of government-aided colleges delivers world-class education at a fraction of private college costs. Fergusson College, SP College, Garware College, and BMCC -- all with NAAC A or A+ grades -- charge ₹15,000-60,000 per year for undergraduate programs in arts, science, and commerce.",
-          "For engineering, COEP (College of Engineering Pune) is the crown jewel of low-fee technical education -- with fees around ₹80,000/year, it delivers NIRF #49 ranked education with ₹12 LPA average placements. For budget-conscious engineering students, state-quota seats at private colleges via MHT-CET also offer subsidized fees under government regulation.",
           "Financial constraints should never stop you from accessing quality education. In addition to inherently low fees at government colleges, Maharashtra's scholarship ecosystem -- including EBC scholarships, OBC scholarships, and NSP (National Scholarship Portal) schemes -- can reduce effective fees to near-zero for eligible students at any NAAC-accredited institution.",
         ]}
         colleges={colleges}

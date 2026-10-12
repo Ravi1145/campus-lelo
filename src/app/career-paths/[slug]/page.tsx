@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = getCareerPath(slug)
   if (!path) return {}
   return genMeta({
-    title: `${path.title} Career Path 2026 — Salary, Roadmap & Pune Colleges`,
-    description: `Complete ${path.title} career guide: entry salary ₹${path.avgSalaryEntry}L → senior ₹${path.avgSalarySenior}L PA. Step-by-step roadmap, top recruiters, required courses, and best Pune colleges. Free career guidance.`,
+    title: `${path.title} Career Path 2026: Roadmap & Courses`,
+    description: `Complete ${path.title} career guide: step-by-step roadmap, top recruiters, required courses, and best Pune colleges. Free career guidance.`,
     path: `/career-paths/${slug}`,
     keywords: [`${path.title.toLowerCase()} career path`, `${path.title.toLowerCase()} salary india`, `${path.title.toLowerCase()} courses pune`, `career in ${path.title.toLowerCase()}`],
   })
@@ -70,15 +70,6 @@ export default async function CareerPathDetailPage({ params }: Props) {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 
-        {/* Salary overview */}
-        <div>
-          <h2 className="text-xl font-extrabold text-gray-900 mb-4">💰 Salary Journey</h2>
-          <div className="grid grid-cols-3 gap-4">
-            <SalaryBadge label="Entry Level" value={`₹${path.avgSalaryEntry}L PA`} color="bg-green-50" />
-            <SalaryBadge label="5 Years" value={`₹${path.avgSalaryMid}L PA`} color="bg-blue-50" />
-            <SalaryBadge label="Senior (10yr+)" value={`₹${path.avgSalarySenior}L PA`} color="bg-purple-50" />
-          </div>
-        </div>
 
         {/* Career Roadmap */}
         <div>

@@ -17,8 +17,8 @@ const colleges = [
   { name: "SP College of Science & Commerce", location: "Shivajinagar", naac: "A+", fees: "₹20K-50K/yr", placement: "Government Aided", slug: "sp-college-pune-sir-parashurambhau-college" },
   { name: "Modern College of Arts Science & Commerce", location: "Shivajinagar", naac: "A", fees: "₹22K-55K/yr", placement: "Government Aided", slug: "modern-college-of-arts-science-commerce-pune" },
   { name: "Wadia College of Science", location: "Pune", naac: "A", fees: "₹18K-40K/yr", placement: "Government", slug: "nowrosjee-wadia-college-pune" },
-  { name: "MIT College of Science - MIT-WPU", location: "Kothrud", naac: "A+", fees: "₹60K-1.2L/yr", placement: "₹4.5 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "₹5 LPA avg", slug: "symbiosis-college-of-arts-commerce-pune" },
+  { name: "MIT College of Science - MIT-WPU", location: "Kothrud", naac: "A+", fees: "₹60K-1.2L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Road", naac: "A+", fees: "₹45K-80K/yr", placement: "Not published", slug: "symbiosis-college-of-arts-commerce-pune" },
   { name: "Marathwada Mitra Mandal College of Science", location: "Deccan", naac: "A", fees: "₹20K-50K/yr", placement: "Govt. Aided", slug: "mmmcs-pune" },
   { name: "Sir Parashurambhau College (SP College)", location: "Shivajinagar", naac: "A+", fees: "₹20K-48K/yr", placement: "Research", slug: "sp-college-pune-sir-parashurambhau-college" },
 ]
@@ -79,7 +79,7 @@ export default function ScienceCollegesPunePage() {
           { title: "IISER Pune Pathway", description: "High-performing BSc students from Pune colleges can qualify for IISER Pune integrated PhD programs, one of India's most prestigious science research pathways, through IISER aptitude test (IAT)." },
           { title: "Affordable Quality Education", description: "Government science colleges in Pune charge ₹18,000-60,000/year for undergraduate programs with NAAC A+ quality -- making quality science education accessible to all income groups." },
           { title: "GRE & Abroad Opportunities", description: "Science graduates from Pune colleges routinely pursue MS/PhD programs in USA, Europe, and Australia. The strong research culture at Fergusson and SP College prepares students for competitive GRE scores." },
-          { title: "IT & Data Science Crossover", description: "BSc Computer Science and Statistics graduates from Pune colleges are increasingly hired by IT companies (Infosys, TCS, Wipro) and data analytics firms at ₹4-8 LPA -- comparable to engineering graduates." },
+          { title: "IT & Data Science Crossover", description: "BSc Computer Science and Statistics graduates from Pune colleges are increasingly hired by IT companies (Infosys, TCS, Wipro) and data analytics firms at ₹4 -- comparable to engineering graduates." },
         ]}
         admissionHeading="BSc Admission Process in Pune Science Colleges 2026"
         admissionSteps={[

@@ -27,34 +27,34 @@ const comparison = [
   { param: "Eligibility", engineering: "12th PCM, 45%+ marks", mba: "Graduation (any stream), 50%+" },
   { param: "Entrance Exam", engineering: "MHT-CET / JEE Main", mba: "CAT / MAT / CMAT / SNAP" },
   { param: "Fees Range (Total)", engineering: "₹4L–₹19L (4 years)", mba: "₹3L–₹22L (2 years)" },
-  { param: "Avg Starting Salary (Pune)", engineering: "₹4–12 LPA", mba: "₹6–28 LPA" },
-  { param: "Highest Package (Pune)", engineering: "₹40–45 LPA (top college)", mba: "₹55–65 LPA (SIBM Pune)" },
+  { param: "Avg Starting Salary (Pune)", engineering: "₹4", mba: "₹6" },
+  { param: "Highest Package (Pune)", engineering: "₹40", mba: "₹55" },
   { param: "Top Entrance Exam Difficulty", engineering: "JEE Advanced (hardest), MHT-CET (moderate)", mba: "CAT (hard), SNAP (moderate), MAT (easy)" },
-  { param: "Return on Investment", engineering: "Best at govt. colleges (COEP ₹5L fee → ₹12 LPA avg)", mba: "Best at Indira Institute (₹5L fee → ₹7 LPA avg)" },
+  { param: "Return on Investment", engineering: "Best at govt. colleges", mba: "Best at Indira Institute" },
   { param: "Job Market in Pune", engineering: "Excellent — IT, auto, manufacturing", mba: "Excellent — BFSI, consulting, FMCG" },
   { param: "Further Study Options", engineering: "M.Tech, MBA, MS abroad", mba: "CFA, CA, PhD, Executive MBA" },
 ]
 
 const topEngineeringColleges = [
-  { rank: 1, name: "COEP Pune", fees: "₹80K–₹1.8L/yr", placement: "₹12 LPA avg", exam: "MHT-CET 95+ %ile" },
-  { rank: 2, name: "PICT Pune", fees: "₹1.4L–₹1.9L/yr", placement: "₹7.5 LPA avg", exam: "MHT-CET 92–95 %ile" },
-  { rank: 3, name: "VIT Pune", fees: "₹1.6L–₹2.2L/yr", placement: "₹8.5 LPA avg", exam: "MHT-CET 88–92 %ile" },
-  { rank: 4, name: "SIT Pune", fees: "₹3.6L–₹4.8L/yr", placement: "₹9.8 LPA avg", exam: "SET / JEE" },
-  { rank: 5, name: "MIT-WPU Pune", fees: "₹2L–₹3.8L/yr", placement: "₹7.2 LPA avg", exam: "MHT-CET 75–85 %ile" },
+  { rank: 1, name: "COEP Pune", fees: "₹80K–₹1.8L/yr", placement: "Not published", exam: "MHT-CET 95+ %ile" },
+  { rank: 2, name: "PICT Pune", fees: "₹1.4L–₹1.9L/yr", placement: "Not published", exam: "MHT-CET 92–95 %ile" },
+  { rank: 3, name: "VIT Pune", fees: "₹1.6L–₹2.2L/yr", placement: "Not published", exam: "MHT-CET 88–92 %ile" },
+  { rank: 4, name: "SIT Pune", fees: "₹3.6L–₹4.8L/yr", placement: "Not published", exam: "SET / JEE" },
+  { rank: 5, name: "MIT-WPU Pune", fees: "₹2L–₹3.8L/yr", placement: "Not published", exam: "MHT-CET 75–85 %ile" },
 ]
 
 const topMBAColleges = [
-  { rank: 1, name: "SIBM Pune", fees: "₹16L–₹22L total", placement: "₹28 LPA avg", exam: "SNAP 60+ %ile" },
-  { rank: 2, name: "SCMHRD Pune", fees: "₹12L–₹16L total", placement: "₹22 LPA avg", exam: "SNAP 55+ %ile" },
-  { rank: 3, name: "SCIT Pune", fees: "₹14L–₹18L total", placement: "₹18 LPA avg", exam: "SNAP 50+ %ile" },
-  { rank: 4, name: "MIT-SOM Pune", fees: "₹7L–₹11L total", placement: "₹12 LPA avg", exam: "CAT / MAT / CMAT" },
-  { rank: 5, name: "BIMM Pune", fees: "₹5L–₹7.5L total", placement: "₹8.5 LPA avg", exam: "CAT / MAT / CMAT" },
+  { rank: 1, name: "SIBM Pune", fees: "₹16L–₹22L total", placement: "Not published", exam: "SNAP 60+ %ile" },
+  { rank: 2, name: "SCMHRD Pune", fees: "₹12L–₹16L total", placement: "Not published", exam: "SNAP 55+ %ile" },
+  { rank: 3, name: "SCIT Pune", fees: "₹14L–₹18L total", placement: "Not published", exam: "SNAP 50+ %ile" },
+  { rank: 4, name: "MIT-SOM Pune", fees: "₹7L–₹11L total", placement: "Not published", exam: "CAT / MAT / CMAT" },
+  { rank: 5, name: "BIMM Pune", fees: "₹5L–₹7.5L total", placement: "Not published", exam: "CAT / MAT / CMAT" },
 ]
 
 const faqs = [
   {
     question: "Is B.Tech or MBA better in Pune in 2026?",
-    answer: "It depends on your background and goals. If you're in 12th grade, B.Tech at COEP or PICT is an excellent choice — low fees (₹4–8L total), great Pune IT/manufacturing placements. If you already have a degree and want to fast-track to management roles, MBA at SIBM Pune (₹28 LPA avg) or MIT-SOM (₹12 LPA avg, better ROI) is the better path. Engineering gives more career flexibility; MBA gives faster salary jumps.",
+    answer: "It depends on your background and goals. If you're in 12th grade, B.Tech at COEP or PICT is an excellent choice — low fees (₹4–8L total), great Pune IT/manufacturing placements. If you already have a degree and want to fast-track to management roles, MBA at SIBM Pune or MIT-SOM is the better path. Engineering gives more career flexibility; MBA gives faster salary jumps.",
   },
   {
     question: "Can I do MBA after B.Tech in Pune?",
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     question: "Which has a better return on investment — Engineering or MBA in Pune?",
-    answer: "Government engineering colleges offer the best ROI: COEP total fee ₹4–7L → ₹12 LPA average placement = break-even in 6 months. For MBA, Indira Institute of Management (₹4.2–6.5L total, ₹7.2 LPA avg) offers the best ROI. SIBM Pune (₹22L fees, ₹28 LPA avg) has good ROI but takes longer to break even. Avoid deemed private engineering colleges with ₹16–20L total fees and only ₹5–7 LPA placements.",
+    answer: "For MBA, Indira Institute of Management offers the best ROI. SIBM Pune has good ROI but takes longer to break even. Avoid deemed private engineering colleges with ₹16–20L total fees and only ₹5 placements.",
   },
   {
     question: "What are the fees for engineering vs MBA in Pune?",
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     question: "Which Pune stream has better placement — Engineering or MBA?",
-    answer: "MBA colleges in Pune have higher absolute placement packages (SIBM at ₹28 LPA avg), but engineering colleges have broader employment (more graduates placed overall). For the best engineering placement in Pune: COEP (₹12 LPA avg), VIT Pune (₹8.5 LPA). For MBA: SIBM Pune (₹28 LPA), SCMHRD (₹22 LPA). Top MBA salaries are higher, but you need a prior degree + MBA exam to qualify.",
+    answer: "MBA colleges in Pune have higher absolute placement packages, but engineering colleges have broader employment (more graduates placed overall). For the best engineering placement in Pune: COEP, VIT Pune. For MBA: SIBM Pune, SCMHRD. Top MBA salaries are higher, but you need a prior degree + MBA exam to qualify.",
   },
   {
     question: "Is Pune good for both engineering and MBA students?",
@@ -117,7 +117,7 @@ export default function PuneCollegesComparisonPage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Choose Engineering</strong> if you&apos;re in 12th grade with PCM — COEP (₹5L fees, ₹12 LPA avg) gives best value. <strong>Choose MBA</strong> if you have a degree and want fast management growth — SIBM Pune (₹28 LPA avg) or MIT-SOM (₹12 LPA avg, better ROI). <strong>Best path</strong>: B.Tech at COEP/PICT → 2 years work → MBA at SIBM/MIT-SOM = maximum long-term salary.
+                <strong>Choose Engineering</strong> if you&apos;re in 12th grade with PCM — COEP gives best value. <strong>Choose MBA</strong> if you have a degree and want fast management growth — SIBM Pune or MIT-SOM. <strong>Best path</strong>: B.Tech at COEP/PICT → 2 years work → MBA at SIBM/MIT-SOM = maximum long-term salary.
               </p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function PuneCollegesComparisonPage() {
                   "You already have a graduation degree (any stream)",
                   "You want to move into management, consulting, or finance",
                   "You have strong communication and leadership skills",
-                  "You're targeting ₹15–30 LPA within 2 years of graduation",
+                  "You're targeting ₹15 within 2 years of graduation",
                   "You're okay with higher fees for faster salary growth",
                   "You have 0–3 years of work experience and want to pivot careers",
                 ],

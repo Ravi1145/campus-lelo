@@ -20,8 +20,6 @@ const affordableColleges = btechColleges.filter(c => c.feesTotal.min <= 500000)
 
 const faqs = [
   { question: "Which BTech colleges in Pune have total fees under 5 lakh?", answer: "BTech colleges in Pune with total 4-year fees under ₹5 lakh: COEP (₹3.2L–7.2L, govt — cheapest option), PICT (₹5.6L–7.6L — just above ₹5L minimum), PCCOE (₹5.4L–7.4L), DYPCOE (₹4.2L–6.2L), AISSMS COE (₹4.4L–6.2L). Government-aided colleges are the only ones consistently under ₹5L total." },
-  { question: "Is COEP BTech fees really under 5 lakh total?", answer: "Yes. COEP's 4-year B.Tech fees range from ₹3.2L to ₹7.2L total depending on the course. For most branches (CS, Mechanical, Civil), fees are approximately ₹80,000–1,80,000/year, making the total 4-year cost around ₹3.2L–7.2L. For government seats (MHT-CET CAP), fees are on the lower end. This is extraordinary value for a NIRF #49 college." },
-  { question: "What is the quality of BTech education at low-fee Pune colleges?", answer: "COEP (lowest fees in Pune) is NIRF #49 — one of India's top 50 engineering colleges. PICT and VIT Pune (₹5.6L–8.8L total) have NAAC A and A+ grades respectively with 85%+ placement rates. Low fees in Pune do NOT mean low quality — government subsidies make excellence affordable." },
   { question: "Can I get scholarship to further reduce BTech fees in Pune?", answer: "Yes. MahaDBT scholarship covers full tuition for SC/ST/OBC/EBC students (family income < ₹8L/year). AICTE Pragati gives girl students ₹50,000/year. EBC Freeship gives full fee waiver for Open category with income < ₹8L. With these schemes, BTech from COEP can cost under ₹50,000 total for qualifying students." },
 ]
 
@@ -40,12 +38,11 @@ export default function BTechUnder5Lakh() {
       <BTechClusterPage
         h1="BTech Colleges in Pune Under 5 Lakh Total Fees 2026"
         subtitle="Top NAAC-accredited BTech colleges in Pune with 4-year total fees under ₹5 lakh. Government and affordable autonomous engineering colleges."
-        quickAnswer="COEP has the lowest BTech fees in Pune at ₹3.2L–7.2L total (4 years), government subsidized. DYPCOE and AISSMS also offer BTech under ₹5L total. COEP is NIRF #49 — proof that low fees doesn't mean low quality. Admission via MHT-CET CAP."
+        quickAnswer="COEP has the lowest BTech fees in Pune at ₹3.2L–7.2L total (4 years), government subsidized. DYPCOE and AISSMS also offer BTech under ₹5L total. COEP is — proof that low fees doesn't mean low quality. Admission via MHT-CET CAP."
         stats={[
           { value: `${affordableColleges.length}+`, label: "Colleges Under ₹5L" },
           { value: "₹3.2L", label: "COEP Total (4yr)" },
-          { value: "NIRF #49", label: "COEP Rank" },
-          { value: "₹12 LPA", label: "COEP Avg Pkg" },
+          { value: "", label: "COEP Rank" },
         ]}
         colleges={affordableColleges.length > 0 ? affordableColleges : btechColleges.slice(0, 4)}
         breadcrumbLabel="Under 5 Lakh"

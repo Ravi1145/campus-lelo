@@ -1,3 +1,4 @@
+import { scrubCollege, scrubDetails } from "@/lib/verified"
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { colleges as staticColleges } from '@/data/colleges'
@@ -75,7 +76,7 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const mapped = (data as Record<string, unknown>[]).map((c, i) => mapRowToCollege(c, i))
+    const mapped = (data as Record<string, unknown>[]).map((c, i) => scrubCollege(mapRowToCollege(c, i)))
     return NextResponse.json(
       { colleges: mapped, total: mapped.length, source: 'supabase' },
       { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' } }

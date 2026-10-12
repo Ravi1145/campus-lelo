@@ -14,14 +14,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Symbiosis Centre for Management & HRD (SCMHRD)", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "₹24 LPA avg", slug: "scmhrd-symbiosis-centre-management-hrd" },
-  { name: "Balaji Institute of Modern Management (BIMM)", location: "Tathawade", naac: "A", fees: "₹5.5L (2yr)", placement: "₹9.5 LPA avg", slug: "balaji-institute-of-modern-management-pune" },
-  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud", naac: "A+", fees: "₹6.5L (2yr)", placement: "₹10.5 LPA avg", slug: "mit-school-of-business-pune" },
-  { name: "AIMS Institute of Management (Pune)", location: "Viman Nagar", naac: "A", fees: "₹4.8L (2yr)", placement: "₹8.5 LPA avg", slug: "aims-institute-management-pune" },
-  { name: "IndSearch Institute of Management", location: "Baner", naac: "A", fees: "₹4.5L (2yr)", placement: "₹8 LPA avg", slug: "indsearch-institute-of-management-pune" },
-  { name: "Flame University - BBA/PGDM", location: "Lavale", naac: "A+", fees: "₹12L (2yr)", placement: "₹14 LPA avg", slug: "flame-university-pune" },
-  { name: "Suryadatta Institute of Management", location: "Wakad", naac: "B+", fees: "₹3.8L (2yr)", placement: "₹6.5 LPA avg", slug: "suryadatta-institute-management-pune" },
-  { name: "MAEER MIT Institute of Management", location: "Kothrud", naac: "A+", fees: "₹5.5L (2yr)", placement: "₹9.2 LPA avg", slug: "maeer-mit-institute-management-pune" },
+  { name: "Symbiosis Centre for Management & HRD (SCMHRD)", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "Not published", slug: "scmhrd-symbiosis-centre-management-hrd" },
+  { name: "Balaji Institute of Modern Management (BIMM)", location: "Tathawade", naac: "A", fees: "₹5.5L (2yr)", placement: "Not published", slug: "balaji-institute-of-modern-management-pune" },
+  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud", naac: "A+", fees: "₹6.5L (2yr)", placement: "Not published", slug: "mit-school-of-business-pune" },
+  { name: "AIMS Institute of Management (Pune)", location: "Viman Nagar", naac: "A", fees: "₹4.8L (2yr)", placement: "Not published", slug: "aims-institute-management-pune" },
+  { name: "IndSearch Institute of Management", location: "Baner", naac: "A", fees: "₹4.5L (2yr)", placement: "Not published", slug: "indsearch-institute-of-management-pune" },
+  { name: "Flame University - BBA/PGDM", location: "Lavale", naac: "A+", fees: "₹12L (2yr)", placement: "Not published", slug: "flame-university-pune" },
+  { name: "Suryadatta Institute of Management", location: "Wakad", naac: "B+", fees: "₹3.8L (2yr)", placement: "Not published", slug: "suryadatta-institute-management-pune" },
+  { name: "MAEER MIT Institute of Management", location: "Kothrud", naac: "A+", fees: "₹5.5L (2yr)", placement: "Not published", slug: "maeer-mit-institute-management-pune" },
 ]
 
 const faqs = [
@@ -63,7 +63,6 @@ export default function PgdmCollegesPunePage() {
         heroStats={[
           { value: "20+", label: "PGDM Institutes" },
           { value: "₹3.8L-12L", label: "Program Fees" },
-          { value: "₹24 LPA", label: "Best Avg Placement" },
           { value: "AICTE", label: "Approved Programs" },
         ]}
         introHeading="PGDM Colleges in Pune: Your Complete Guide for 2026"

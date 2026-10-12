@@ -276,31 +276,6 @@ export const keywordClusters: KeywordCluster[] = [
     ]
   },
   {
-    "id": "placements-salary:pune",
-    "name": "MBA placements & salary — pune",
-    "intent": "commercial",
-    "pillar": "/mba-placements-pune",
-    "supporting": [
-      "/mba-colleges-in-pune-for-hr",
-      "/mba-colleges-in-pune-for-finance",
-      "/mba-colleges-in-pune-executive",
-      "/mba-colleges-in-pune-for-marketing"
-    ],
-    "size": 140,
-    "keywords": [
-      "mba colleges in pune with good placements",
-      "sibm pune mba placements",
-      "scmhrd mba average package",
-      "mba best colleges in pune placement wise",
-      "pumba mba average package",
-      "mba colleges in pune with placement",
-      "mba in symbiosis pune placements",
-      "mba colleges in pune with low fees and good placements",
-      "mba sibm pune average package",
-      "mba jobs in pune for freshers"
-    ]
-  },
-  {
     "id": "exam:mah-mba-cet:exam-info",
     "name": "MAH MBA-CET dates, syllabus & prep",
     "intent": "informational",

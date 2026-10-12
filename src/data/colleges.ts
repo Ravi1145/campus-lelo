@@ -1,6 +1,7 @@
 import { College } from "@/types"
+import { scrubCollege } from "@/lib/verified"
 
-export const colleges: College[] = [
+const rawColleges: College[] = [
   {
     id: 1,
     slug: "coep-college-of-engineering-pune",
@@ -9459,6 +9460,9 @@ export const colleges: College[] = [
   },
 ]
 
+// Placement packages, NIRF ranks and recruiter lists are removed here until they are sourced (src/lib/verified.ts)
+export const colleges: College[] = rawColleges.map(scrubCollege)
+
 export const getCollegeBySlug = (slug: string): College | undefined => {
   return colleges.find(c => c.slug === slug)
 }
@@ -9468,7 +9472,7 @@ export const getCollegesByStream = (stream: string): College[] => {
 }
 
 export const getFeaturedColleges = (): College[] => {
-  return colleges.filter(c => c.nirfRank !== null).sort((a, b) => (a.nirfRank ?? 999) - (b.nirfRank ?? 999)).slice(0, 8)
+  return [...colleges].sort((a, b) => b.reviewCount - a.reviewCount).slice(0, 8)
 }
 
 export const getTopEngineeringColleges = (): College[] => {
@@ -9476,9 +9480,9 @@ export const getTopEngineeringColleges = (): College[] => {
 }
 
 export const getTopMBAColleges = (): College[] => {
-  return colleges.filter(c => c.stream === "MBA").sort((a, b) => b.avgPlacement - a.avgPlacement).slice(0, 10)
+  return colleges.filter(c => c.stream === "MBA").sort((a, b) => b.rating - a.rating).slice(0, 10)
 }
 
 export const getTopMedicalColleges = (): College[] => {
-  return colleges.filter(c => c.stream === "Medical").sort((a, b) => (a.nirfRank ?? 999) - (b.nirfRank ?? 999))
+  return colleges.filter(c => c.stream === "Medical").sort((a, b) => b.rating - a.rating)
 }

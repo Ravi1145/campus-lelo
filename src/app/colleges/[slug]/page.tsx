@@ -1,3 +1,4 @@
+import { scrubCollege, scrubDetails } from "@/lib/verified"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
@@ -230,7 +231,7 @@ async function resolveCollege(slug: string): Promise<{ college: College; details
           ? { faqs: dbCollege.faqs }
           : undefined
       const details = normalizeDetails(rawDetails)
-      return { college: mapDBToCollege(dbCollege), details }
+      return { college: scrubCollege(mapDBToCollege(dbCollege)), details: scrubDetails(details) }
     }
   } catch {
     // ignore DB errors, fall through
@@ -458,27 +459,6 @@ export default async function CollegePage({ params }: Props) {
                 </details>
               ))}
             </div>
-            {/* Sub-page links — drive crawlers to fee/placement/cutoff pages */}
-            {colleges.some((c) => c.slug === slug) && (
-            <div className="mt-8 flex flex-wrap gap-2 text-sm">
-              <span className="text-xs text-gray-400 font-medium self-center">More about {college.shortName}:</span>
-              {[
-                { label: `${college.shortName} Fees`, href: `/colleges/${slug}/fees` },
-                { label: `${college.shortName} Placements`, href: `/colleges/${slug}/placements` },
-                { label: `${college.shortName} Cutoff`, href: `/colleges/${slug}/cutoff` },
-                { label: `${college.shortName} Admission`, href: `/colleges/${slug}/admission` },
-                { label: `${college.shortName} Scholarship`, href: `/colleges/${slug}/scholarship` },
-              ].map(l => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-600 transition-colors text-xs font-medium"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-            )}
           </div>
         </section>
 

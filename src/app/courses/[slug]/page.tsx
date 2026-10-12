@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!course) return {}
   return genMeta({
     title: `${course.fullName} in Pune 2025 — Fees, Top Colleges & Salary`,
-    description: `${course.fullName} in Pune: ${course.duration} ${course.level} program. Fees: ${formatFeesRange(course.avgFees.min, course.avgFees.max)}. Average salary: ${formatCurrency(course.avgSalary)}. Top colleges: ${course.topColleges.slice(0, 3).join(", ")}.`,
+    description: `${course.fullName} in Pune: ${course.duration} ${course.level} program. Fees: ${formatFeesRange(course.avgFees.min, course.avgFees.max)}. Top colleges: ${course.topColleges.slice(0, 3).join(", ")}.`,
     path: `/courses/${slug}`,
     keywords: [`${course.name} in pune`, `${course.fullName.toLowerCase()}`, `${course.name.toLowerCase()} colleges pune`, "courses in pune"],
   })
@@ -103,7 +103,6 @@ export default async function CoursePage({ params }: Props) {
                 {[
                   { label: "Duration", value: course.duration },
                   { label: "Avg Annual Fees", value: formatFeesRange(course.avgFees.min, course.avgFees.max) },
-                  { label: "Avg Starting Salary", value: formatCurrency(course.avgSalary) },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-white/10 rounded-xl p-3">
                     <p className="text-xs text-gray-400 mb-1">{label}</p>
@@ -190,7 +189,6 @@ export default async function CoursePage({ params }: Props) {
                   { label: "Duration", value: course.duration },
                   { label: "Stream", value: course.stream },
                   { label: "Annual Fees", value: formatFeesRange(course.avgFees.min, course.avgFees.max) },
-                  { label: "Avg Starting Salary", value: formatCurrency(course.avgSalary) },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between gap-2">
                     <span className="text-sm text-gray-500">{label}</span>

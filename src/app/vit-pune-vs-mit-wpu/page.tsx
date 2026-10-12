@@ -6,7 +6,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "VIT Pune vs MIT-WPU 2026 | Fees, Placements, MHT-CET Cutoff Comparison",
-  description: "VIT Pune vs MIT-WPU 2026: Compare fees (₹1.6L vs ₹2.5L), MHT-CET cutoffs, placements (₹8.5 LPA vs ₹9 LPA), NIRF ranks, hostel & campus. Which private engineering college is better?",
+  description: "VIT Pune vs MIT-WPU 2026: Compare fees (₹1.6L vs ₹2.5L), MHT-CET cutoffs, placements, NIRF ranks, hostel & campus. Which private engineering college is better?",
   path: "/vit-pune-vs-mit-wpu",
   keywords: [
     "vit pune vs mit wpu", "vit pune vs mit world peace university", "vit pune vs mitwpu 2026",
@@ -16,15 +16,12 @@ export const metadata: Metadata = genMeta({
 })
 
 const rows = [
-  { param: "NIRF Rank", vit: "#101 (Engineering)", mit: "Not ranked (new university)" },
   { param: "NAAC Grade", vit: "A+", mit: "A+" },
   { param: "Type", vit: "Private Autonomous", mit: "Deemed University" },
   { param: "Established", vit: "1983", mit: "1983 (University 2017)" },
   { param: "Annual Fees (BTech)", vit: "₹1.6L – ₹2.2L", mit: "₹2.2L – ₹3.5L" },
   { param: "4-Year Total Cost", vit: "₹6.4L – ₹8.8L", mit: "₹8.8L – ₹14L" },
   { param: "MHT-CET Cutoff (CSE)", vit: "88–92 percentile", mit: "82–88 percentile" },
-  { param: "Average Placement", vit: "₹8.5 LPA", mit: "₹9 LPA" },
-  { param: "Highest Package", vit: "₹32 LPA", mit: "₹42 LPA" },
   { param: "Top Recruiters", vit: "TCS, Cognizant, Persistent", mit: "TCS, Wipro, Capgemini, L&T" },
   { param: "BTech Seats (CSE)", vit: "120", mit: "180" },
   { param: "Campus Area", vit: "7 acres (Bibwewadi)", mit: "130 acres (Kothrud + Loni)" },
@@ -80,7 +77,6 @@ export default function VitVsMitWpu() {
                 <li>You want newer specialisations (AI/ML, Data Science)</li>
                 <li>Larger campus (130 acres) matters to you</li>
                 <li>You may want MBA later — MIT School of Management on campus</li>
-                <li>Higher highest package ceiling (₹42 LPA vs ₹32 LPA)</li>
               </ul>
             </div>
           </div>
@@ -120,9 +116,7 @@ export default function VitVsMitWpu() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — VIT Pune vs MIT-WPU 2026</h2>
           <div className="space-y-4">
             {[
-              { q: "Is VIT Pune better than MIT-WPU in 2026?", a: "VIT Pune has a higher NIRF rank (#101) and lower fees (₹1.6L vs ₹2.5L/yr), making it better value for money. MIT-WPU has a larger campus, more modern specialisations (AI/ML, Data Science), and slightly higher average placement (₹9 LPA vs ₹8.5 LPA). For MHT-CET students in the 88–95 percentile range, VIT Pune is generally preferred." },
               { q: "What is the MHT-CET cutoff for VIT Pune CSE 2026?", a: "VIT Pune BTech CSE MHT-CET cutoff (2025, Open category Round 1) was approximately 88–92 percentile. MIT-WPU CSE cutoff was 82–88 percentile. Expect similar cutoffs in 2026." },
-              { q: "Which has better placement — VIT Pune or MIT-WPU?", a: "MIT-WPU has a slightly higher average package (₹9 LPA vs ₹8.5 LPA at VIT Pune) and higher ceiling (₹42 LPA vs ₹32 LPA). Both colleges have strong industry connections. VIT Pune has a longer placement track record (since 1983), while MIT-WPU is expanding its corporate outreach significantly." },
               { q: "Does VIT Pune or MIT-WPU have better campus facilities?", a: "MIT-WPU wins on campus size — 130 acres across Kothrud and Loni Kalbhor vs VIT Pune's 7 acres in Bibwewadi. MIT-WPU has a full university campus with sports complex, cultural centre, and multiple schools. VIT Pune is more compact but very well-equipped for engineering labs." },
             ].map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">

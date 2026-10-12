@@ -23,16 +23,16 @@ export const metadata: Metadata = genMeta({
 })
 
 const placementData = [
-  { rank: 1, name: "College of Engineering Pune (COEP)", type: "Government", avg: "₹12 LPA", highest: "₹45 LPA", rate: "92%", slug: "coep-college-of-engineering-pune", recruiters: "TCS Digital, Bajaj Auto, Mercedes-Benz, Siemens, L&T, Volkswagen" },
-  { rank: 2, name: "Symbiosis Institute of Technology (SIT Pune)", type: "Deemed", avg: "₹9.8 LPA", highest: "₹42 LPA", rate: "94%", slug: "symbiosis-institute-of-technology-pune", recruiters: "Google, Microsoft, Capgemini, Wipro, Honeywell, Amazon" },
-  { rank: 3, name: "Vishwakarma Institute of Technology (VIT Pune)", type: "Autonomous", avg: "₹8.5 LPA", highest: "₹40 LPA", rate: "88%", slug: "vit-pune-vishwakarma-institute-of-technology", recruiters: "TCS, Infosys, Bajaj Auto, Bosch, Cummins, Tata Technologies" },
-  { rank: 4, name: "Pune Institute of Computer Technology (PICT)", type: "Autonomous", avg: "₹7.5 LPA", highest: "₹35 LPA", rate: "90%", slug: "pict-pune-institute-of-computer-technology", recruiters: "Goldman Sachs, Amazon, Deutsche Bank, Persistent, JPMC" },
-  { rank: 5, name: "MIT World Peace University (MIT-WPU)", type: "Deemed", avg: "₹7.2 LPA", highest: "₹38 LPA", rate: "85%", slug: "mit-wpu-mit-world-peace-university", recruiters: "TCS, Wipro, Capgemini, Tech Mahindra, Accenture, Mindtree" },
-  { rank: 6, name: "Cummins College of Engineering for Women", type: "Autonomous", avg: "₹6.8 LPA", highest: "₹28 LPA", rate: "87%", slug: "cummins-college-of-engineering-pune", recruiters: "Cummins India, Eaton, Emerson, Tata Technologies, KPIT" },
-  { rank: 7, name: "JSPM Rajarshi Shahu College of Engineering", type: "Private", avg: "₹5.2 LPA", highest: "₹22 LPA", rate: "78%", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", recruiters: "TCS, Infosys, Wipro, HCL, Hexaware, Mphasis" },
-  { rank: 8, name: "AISSMS College of Engineering", type: "Private", avg: "₹4.8 LPA", highest: "₹20 LPA", rate: "75%", slug: "aissms-college-of-engineering-pune", recruiters: "TCS, Wipro, Zensar, Persistent, Cognizant, L&T Infotech" },
-  { rank: 9, name: "Sinhgad College of Engineering", type: "Private", avg: "₹4.9 LPA", highest: "₹18 LPA", rate: "76%", slug: "sinhgad-college-of-engineering-pune", recruiters: "TCS, Infosys, HCL, Mphasis, NIIT Technologies" },
-  { rank: 10, name: "Bharati Vidyapeeth College of Engineering", type: "Deemed", avg: "₹5.6 LPA", highest: "₹22 LPA", rate: "80%", slug: "bharati-vidyapeeth-college-engineering-pune", recruiters: "TCS, Wipro, Infosys, Capgemini, Persistent" },
+  { rank: 1, name: "College of Engineering Pune (COEP)", type: "Government", avg: "Not published", highest: "Not published", rate: "92%", slug: "coep-college-of-engineering-pune", recruiters: "TCS Digital, Bajaj Auto, Mercedes-Benz, Siemens, L&T, Volkswagen" },
+  { rank: 2, name: "Symbiosis Institute of Technology (SIT Pune)", type: "Deemed", avg: "Not published", highest: "Not published", rate: "94%", slug: "symbiosis-institute-of-technology-pune", recruiters: "Google, Microsoft, Capgemini, Wipro, Honeywell, Amazon" },
+  { rank: 3, name: "Vishwakarma Institute of Technology (VIT Pune)", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "88%", slug: "vit-pune-vishwakarma-institute-of-technology", recruiters: "TCS, Infosys, Bajaj Auto, Bosch, Cummins, Tata Technologies" },
+  { rank: 4, name: "Pune Institute of Computer Technology (PICT)", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "90%", slug: "pict-pune-institute-of-computer-technology", recruiters: "Goldman Sachs, Amazon, Deutsche Bank, Persistent, JPMC" },
+  { rank: 5, name: "MIT World Peace University (MIT-WPU)", type: "Deemed", avg: "Not published", highest: "Not published", rate: "85%", slug: "mit-wpu-mit-world-peace-university", recruiters: "TCS, Wipro, Capgemini, Tech Mahindra, Accenture, Mindtree" },
+  { rank: 6, name: "Cummins College of Engineering for Women", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "87%", slug: "cummins-college-of-engineering-pune", recruiters: "Cummins India, Eaton, Emerson, Tata Technologies, KPIT" },
+  { rank: 7, name: "JSPM Rajarshi Shahu College of Engineering", type: "Private", avg: "Not published", highest: "Not published", rate: "78%", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", recruiters: "TCS, Infosys, Wipro, HCL, Hexaware, Mphasis" },
+  { rank: 8, name: "AISSMS College of Engineering", type: "Private", avg: "Not published", highest: "Not published", rate: "75%", slug: "aissms-college-of-engineering-pune", recruiters: "TCS, Wipro, Zensar, Persistent, Cognizant, L&T Infotech" },
+  { rank: 9, name: "Sinhgad College of Engineering", type: "Private", avg: "Not published", highest: "Not published", rate: "76%", slug: "sinhgad-college-of-engineering-pune", recruiters: "TCS, Infosys, HCL, Mphasis, NIIT Technologies" },
+  { rank: 10, name: "Bharati Vidyapeeth College of Engineering", type: "Deemed", avg: "Not published", highest: "Not published", rate: "80%", slug: "bharati-vidyapeeth-college-engineering-pune", recruiters: "TCS, Wipro, Infosys, Capgemini, Persistent" },
 ]
 
 const topRecruiters = [
@@ -45,11 +45,11 @@ const topRecruiters = [
 const faqs = [
   {
     question: "Which engineering college in Pune has the best placement package?",
-    answer: "COEP Pune (College of Engineering Pune) has the best average placement package at ₹12 LPA with a highest package of ₹45 LPA. SIT Pune (Symbiosis) is the best private/deemed college for placements at ₹9.8 LPA avg. For CS/IT specifically, PICT Pune offers excellent placements at top tech firms like Goldman Sachs and Amazon (₹7.5 LPA avg).",
+    answer: "COEP Pune (College of Engineering Pune) has the best average placement package at ₹12 LPA. SIT Pune (Symbiosis) is the best private/deemed college for placements at ₹9.8 LPA avg. For CS/IT specifically, PICT Pune offers excellent placements at top tech firms like Goldman Sachs and Amazon.",
   },
   {
     question: "What is the average placement package at engineering colleges in Pune?",
-    answer: "Average placement packages at Pune engineering colleges vary by type: Government (COEP): ₹12 LPA avg. Autonomous private (VIT Pune, PICT): ₹7.5–8.5 LPA avg. Deemed (SIT Pune): ₹9.8 LPA avg. Private (JSPM, AISSMS, Sinhgad): ₹4.8–5.6 LPA avg. The citywide average across all Pune engineering colleges is approximately ₹6–7 LPA.",
+    answer: "Average placement packages at Pune engineering colleges vary by type: Government (COEP): ₹12 LPA avg. Autonomous private (VIT Pune, PICT): ₹7.5. Deemed (SIT Pune): ₹9.8 LPA avg. Private (JSPM, AISSMS, Sinhgad): ₹4.8. The citywide average across all Pune engineering colleges is approximately ₹6.",
   },
   {
     question: "Do engineering colleges in Pune have 100% placement?",
@@ -65,11 +65,11 @@ const faqs = [
   },
   {
     question: "What is the average engineering salary in Pune for freshers?",
-    answer: "Fresher engineering salary in Pune (2025): Computer Science/IT graduates from top colleges (COEP, PICT): ₹7–15 LPA. CS graduates from private colleges: ₹3.5–6 LPA. Mechanical/Civil from government colleges: ₹4–8 LPA. Mechanical from private colleges: ₹3–5 LPA. The highest-paying roles are in software development, data science, and VLSI design at MNCs.",
+    answer: "Fresher engineering salary in Pune (2025): Computer Science/IT graduates from top colleges (COEP, PICT): ₹7. CS graduates from private colleges: ₹3.5. Mechanical/Civil from government colleges: ₹4. Mechanical from private colleges: ₹3. The highest-paying roles are in software development, data science, and VLSI design at MNCs.",
   },
   {
     question: "Which is better for placements — VIT Pune or PICT Pune?",
-    answer: "PICT Pune (average ₹7.5 LPA, highest ₹35 LPA) and VIT Pune (average ₹8.5 LPA, highest ₹40 LPA) are comparable. VIT Pune has a slightly higher average due to strong Mechanical/Electronics placements in the auto sector. PICT Pune has better CS/IT-specific placements (Goldman Sachs, Deutsche Bank, JPMC). For software jobs, PICT is preferred; for core/manufacturing, VIT Pune is stronger.",
+    answer: "PICT Pune and VIT Pune are comparable. VIT Pune has a slightly higher average due to strong Mechanical/Electronics placements in the auto sector. PICT Pune has better CS/IT-specific placements (Goldman Sachs, Deutsche Bank, JPMC). For software jobs, PICT is preferred; for core/manufacturing, VIT Pune is stronger.",
   },
 ]
 
@@ -121,7 +121,7 @@ export default function EngineeringCollegesPunePlacementPage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>COEP Pune</strong> has the best average placement (₹12 LPA avg, ₹45 LPA highest) among all Pune engineering colleges. <strong>SIT Pune</strong> is the top private/deemed college (₹9.8 LPA avg). <strong>PICT Pune</strong> is best specifically for CS/IT placements (Goldman Sachs, Amazon, Deutsche Bank). Top recruiters: TCS, Bajaj Auto, Mercedes-Benz, Goldman Sachs, Google.
+                <strong>COEP Pune</strong> has the best average placement among all Pune engineering colleges. <strong>SIT Pune</strong> is the top private/deemed college. <strong>PICT Pune</strong> is best specifically for CS/IT placements (Goldman Sachs, Amazon, Deutsche Bank). Top recruiters: TCS, Bajaj Auto, Mercedes-Benz, Goldman Sachs, Google.
               </p>
             </div>
           </div>

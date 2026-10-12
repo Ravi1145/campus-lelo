@@ -18,8 +18,8 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const rankingData = [
-  { college: "COEP", nirf: 49, naac: "A+", type: "Govt", avgLPA: 12, feesLakh: 0.8 },
-  { college: "VIT Pune", nirf: 101, naac: "A+", type: "Auto", avgLPA: 8.5, feesLakh: 1.6 },
+  { college: "COEP", nirf: null, naac: "A+", type: "Govt", avgLPA: 12, feesLakh: 0.8 },
+  { college: "VIT Pune", nirf: null, naac: "A+", type: "Auto", avgLPA: 8.5, feesLakh: 1.6 },
   { college: "PICT", nirf: "—", naac: "A", type: "Auto", avgLPA: 7.5, feesLakh: 1.4 },
   { college: "MIT-WPU", nirf: "—", naac: "A+", type: "Deemed", avgLPA: 7.2, feesLakh: 2.0 },
   { college: "SIT Pune", nirf: "—", naac: "A+", type: "Deemed", avgLPA: 9.8, feesLakh: 3.6 },
@@ -46,20 +46,18 @@ export default function TopBTechCollegesInPune() {
       <BTechClusterPage
         h1="Top BTech Colleges in Pune 2026"
         subtitle="NIRF and NAAC ranked top BTech engineering colleges in Pune with fees, cutoffs, and placement data for 2026 admission."
-        quickAnswer="Top BTech colleges in Pune by NIRF 2024: #1 COEP (NIRF 49, Govt, ₹12 LPA avg), #2 VIT Pune (NIRF 101, ₹8.5 LPA), followed by PICT, MIT-WPU, SIT Pune and PCCOE (all NAAC A+). Admission via MHT-CET CAP rounds."
+        quickAnswer="Top BTech colleges in Pune by: #1 COEP, #2 VIT Pune, followed by PICT, MIT-WPU, SIT Pune and PCCOE (all NAAC A+). Admission via MHT-CET CAP rounds."
         stats={[
-          { value: "NIRF #49", label: "COEP Rank" },
-          { value: "NIRF #101", label: "VIT Pune Rank" },
+          { value: "", label: "COEP Rank" },
+          { value: "", label: "VIT Pune Rank" },
           { value: "6 NAAC A+", label: "Top Colleges" },
-          { value: "₹9.8 LPA", label: "Highest Avg (SIT)" },
         ]}
         colleges={btechColleges}
         breadcrumbLabel="Top BTech Colleges"
         introHeading="Top BTech Colleges in Pune — NIRF & NAAC Rankings 2026"
         introParagraphs={[
-          "The National Institutional Ranking Framework (NIRF) by the Government of India is the most authoritative ranking for engineering colleges. Among Pune colleges, COEP is ranked #49 nationally (Engineering category, NIRF 2024) — the only Pune engineering college in the top 50. VIT Pune holds NIRF #101.",
+          "The National Institutional Ranking Framework (NIRF) by the Government of India is the most authoritative ranking for engineering colleges. Among Pune colleges, COEP is ranked #49 nationally (Engineering category,) — the only Pune engineering college in the top 50. VIT Pune holds.",
           "NAAC accreditation is a key quality signal. Six Pune BTech colleges hold the top NAAC A+ grade: COEP, VIT Pune, MIT-WPU, SIT Pune, PCCOE, and Bharati Vidyapeeth College of Engineering. NAAC A+ means the college has been independently assessed as excellent in academics, research, and governance.",
-          "Beyond NIRF and NAAC, placement outcomes are the most practical measure for students. SIT Pune leads private colleges with ₹9.8 LPA average. COEP leads government colleges with ₹12 LPA. PICT leads in placement rate (98%+) and finance-sector placements.",
         ]}
         faqs={btechFAQs.general.slice(0, 5)}
         internalLinks={[
@@ -68,7 +66,6 @@ export default function TopBTechCollegesInPune() {
           { label: "BTech Fees Comparison", href: "/btech-colleges-in-pune-with-fees" },
           { label: "BTech Placements Pune", href: "/btech-colleges-in-pune-with-placement" },
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },
-          { label: "NIRF Rankings Pune", href: "/nirf-insights" },
         ]}
         ctaHeading="Get Into a Top BTech College in Pune"
         ctaSubtext="Free counselling — identify your best-fit college based on your MHT-CET percentile and branch preference."

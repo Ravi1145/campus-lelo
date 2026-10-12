@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Government Colleges in Pune 2026 | Low Fees & NIRF | CampusLelo",
-  description: "Top government colleges in Pune 2026 — COEP (NIRF #49), AFMC (NIRF #4), BJ Medical (NIRF #18). Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
+  description: "Top government colleges in Pune 2026 — COEP, AFMC, BJ Medical. Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
   path: "/government-colleges-pune",
   keywords: [
     "government colleges in pune 2026",
@@ -30,7 +30,7 @@ const categories = [
     type: "Government Engineering",
     emoji: "⚙️",
     colleges: [
-      { name: "COEP Technological University", fees: "₹80K–₹1.8L/yr", naac: "A+", nirf: 49, program: "BTech, MTech, PhD", slug: "coep-college-of-engineering-pune", note: "Best Govt Engineering | Est. 1854 | NIRF #49" },
+      { name: "COEP Technological University", fees: "₹80K–₹1.8L/yr", naac: "A+", nirf: null, program: "BTech, MTech, PhD", slug: "coep-college-of-engineering-pune", note: "Best Govt Engineering | Est. 1854" },
       { name: "Army Institute of Technology (AIT)", fees: "₹1.5L–₹2L/yr", naac: "A", nirf: null, program: "BTech (4 branches)", slug: "army-institute-of-technology-pune", note: "Defence-backed | Pune Cantonment | Very selective" },
       { name: "Government Polytechnic, Pune", fees: "₹15K–₹25K/yr", naac: "–", nirf: null, program: "Diploma Engineering", slug: "government-polytechnic-pune", note: "Cheapest Technical | MHT-CET Diploma" },
     ],
@@ -50,8 +50,8 @@ const categories = [
     type: "Government Medical",
     emoji: "🏥",
     colleges: [
-      { name: "AFMC — Armed Forces Medical College", fees: "₹50,000 (total 4.5 yrs)", naac: "A++", nirf: 4, program: "MBBS (Defence)", slug: "afmc-armed-forces-medical-college-pune", note: "NIRF #4 | Free for Defence | 650+ NEET" },
-      { name: "BJ Medical College, Pune (BJMC)", fees: "₹60K–₹1.2L/yr", naac: "A+", nirf: 18, program: "MBBS, MD, MS", slug: "bj-medical-college-pune", note: "NIRF #18 | Best Govt for Open Category | 625+ NEET" },
+      { name: "AFMC — Armed Forces Medical College", fees: "₹50,000 (total 4.5 yrs)", naac: "A++", nirf: null, program: "MBBS (Defence)", slug: "afmc-armed-forces-medical-college-pune", note: " | Free for Defence | 650+ NEET" },
+      { name: "BJ Medical College, Pune (BJMC)", fees: "₹60K–₹1.2L/yr", naac: "A+", nirf: null, program: "MBBS, MD, MS", slug: "bj-medical-college-pune", note: " | Best Govt for Open Category | 625+ NEET" },
       { name: "Byramjee Jeejeebhoy Government Medical College (BJGMC)", fees: "₹50K–₹80K/yr", naac: "A", nirf: null, program: "MBBS", slug: "byramjee-jeejeebhoy-government-medical-college", note: "Govt Medical | Pune City Centre" },
       { name: "Pune Dental College & Hospital", fees: "₹1.5L–₹2.5L/yr", naac: "A", nirf: null, program: "BDS, MDS", slug: "pune-dental-college-pune", note: "Best Govt Dental College Pune | 500+ NEET BDS" },
     ],
@@ -79,7 +79,7 @@ const categories = [
 const faqs = [
   {
     question: "Which are the best government colleges in Pune?",
-    answer: "The best government colleges in Pune are: (1) COEP Technological University — best government engineering college (NIRF #49), (2) AFMC — best government medical college (NIRF #4, nearly free), (3) BJ Medical College (NIRF #18), (4) ILS Law College — most prestigious government law college (est. 1924), (5) Fergusson College — best government arts college (est. 1885, NAAC A+), (6) PUMBA — best government MBA.",
+    answer: "The best government colleges in Pune are: (1) COEP Technological University — best government engineering college, (2) AFMC — best government medical college (nearly free), (3) BJ Medical College, (4) ILS Law College — most prestigious government law college (est. 1924), (5) Fergusson College — best government arts college (est. 1885, NAAC A+), (6) PUMBA — best government MBA.",
   },
   {
     question: "What is the fee for government colleges in Pune?",
@@ -109,10 +109,10 @@ export const revalidate = 86400
 
 // ItemList schema — flat list of all profiled government colleges for AI + rich results
 const govCollegesItemList = generateItemListSchema([
-  { name: "College of Engineering Pune (COEP)", url: "/colleges/coep-college-of-engineering-pune", description: "Best government engineering college in Pune, NIRF #49, NAAC A+" },
+  { name: "College of Engineering Pune (COEP)", url: "/colleges/coep-college-of-engineering-pune", description: "Best government engineering college in Pune, NAAC A+" },
   { name: "Army Institute of Technology (AIT)", url: "/colleges/army-institute-of-technology-pune", description: "Defence-backed government engineering college" },
-  { name: "Armed Forces Medical College (AFMC)", url: "/colleges/afmc-armed-forces-medical-college-pune", description: "NIRF #4 medical college, near-zero fees for defence students" },
-  { name: "BJ Government Medical College (BJMC)", url: "/colleges/bj-medical-college-pune", description: "NIRF #18, best government MBBS college in Pune" },
+  { name: "Armed Forces Medical College (AFMC)", url: "/colleges/afmc-armed-forces-medical-college-pune", description: " medical college, near-zero fees for defence students" },
+  { name: "BJ Government Medical College (BJMC)", url: "/colleges/bj-medical-college-pune", description: ", best government MBBS college in Pune" },
   { name: "Fergusson College", url: "/colleges/fergusson-college-pune", description: "NAAC A+, best government arts college in Pune, est. 1885" },
   { name: "SP College (Sir Parashurambhau)", url: "/colleges/sp-college-pune-sir-parashurambhau-college", description: "NAAC A+, top government science college Pune" },
   { name: "BMCC (Brihan Maharashtra College of Commerce)", url: "/colleges/bmcc-brihan-maharashtra-college-of-commerce-pune", description: "Cheapest BCom in Pune, government-aided" },
@@ -163,7 +163,7 @@ export default function GovernmentCollegesPune() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-10">
             <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Best Government Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
-              <strong>Engineering:</strong> COEP (NIRF #49) · <strong>Medical:</strong> AFMC (NIRF #4, free!) / BJ Medical (NIRF #18) ·{" "}
+              <strong>Engineering:</strong> COEP · <strong>Medical:</strong> AFMC (free!) / BJ Medical ·{" "}
               <strong>Arts:</strong> Fergusson College · <strong>Commerce:</strong> BMCC · <strong>MBA:</strong> PUMBA ·{" "}
               <strong>Law:</strong> ILS Law College · <strong>Research:</strong> IISER Pune
             </p>
@@ -263,7 +263,6 @@ export default function GovernmentCollegesPune() {
               { label: "Arts & Science Colleges", href: "/arts-colleges-pune" },
               { label: "Law Colleges Pune", href: "/law-colleges-pune" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune" },
-              { label: "NIRF Rankings Pune", href: "/nirf-insights" },
             ].map(({ label, href }) => (
               <Link key={href} href={href} className="text-sm text-blue-600 hover:text-orange-600 bg-white border border-gray-100 rounded-lg px-4 py-3 text-center shadow-sm transition-colors">
                 {label}

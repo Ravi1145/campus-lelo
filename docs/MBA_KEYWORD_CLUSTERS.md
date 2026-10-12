@@ -79,7 +79,7 @@ Every query is tagged on four independent axes (see `mba-keywords.csv`).
 
 ## 3. Clusters
 
-165 clusters (topic × city, or exam × topic). Clusters with a page that covers ≥ 50% of their queries use that page as the **pillar**; the rest are served by a new article (section 4) or listed as gaps (section 5). **7,253 of 8,819 queries (82%) now have a target page or article** — 4,403 match an existing page exactly, 2,754 are served by the new articles and 96 by their cluster's pillar page.
+165 clusters (topic × city, or exam × topic). Clusters with a page that covers ≥ 50% of their queries use that page as the **pillar**; the rest are served by a new article (section 4) or listed as gaps (section 5). **7,139 of 8,819 queries (81%) now have a target page or article** — 4,294 match an existing page exactly, 2,754 are served by the new articles and 91 by their cluster's pillar page.
 
 | Cluster | Queries | Intent | Pillar page | Supporting pages | Top real queries |
 | --- | --- | --- | --- | --- | --- |
@@ -94,7 +94,6 @@ Every query is tagged on four independent axes (see `mba-keywords.csv`).
 | Executive, online, part-time MBA | 152 | informational | /blog/executive-online-part-time-mba-india | /mba-colleges-in-pune-executive<br>/mba-colleges-in-pune-online<br>/mba-colleges-in-pune-part-time | distance mba colleges in faridabad; executive mba in india eligibility; mba in india part time |
 | MBA eligibility & profile | 135 | informational | /blog/mba-eligibility-criteria-in-india | /exams<br>/mba-admission-process-pune | mba eligibility criteria; sharda university mba eligibility criteria; bml munjal mba admission criteria |
 | MBA entrance exam dates & prep | 150 | transactional | /blog/mba-entrance-exams-in-india | /exams<br>/exams/cat | fore school mba application last date; what is the syllabus of mba; mba india syllabus |
-| MBA placements & salary — pune | 140 | commercial | /mba-placements-pune | /mba-colleges-in-pune-for-hr<br>/mba-colleges-in-pune-for-finance<br>/mba-colleges-in-pune-executive<br>/mba-colleges-in-pune-for-marketing | mba colleges in pune with good placements; sibm pune mba placements; scmhrd mba average package |
 | MAH MBA-CET dates, syllabus & prep | 141 | informational | /exams/mah-mba-cet | /exams/mah-mba-cet/syllabus<br>/exams/mah-mba-cet/preparation<br>/exams/mah-mba-cet/score-vs-percentile<br>/exams/mah-mba-cet/colleges | mah cet eligibility; mah cet exam pattern; mah cet fees |
 | MBA fees, scholarships & loans — pune | 129 | commercial | /low-fees-mba-colleges-pune | /mba-colleges-in-pune-online<br>/pgdm-colleges-pune<br>/mba-colleges-in-pune-with-hostel<br>/mba-colleges-in-pune-executive | mba colleges in pune fees; mba colleges in pune low fees; mba colleges in pune with scholarship |
 | Best / top MBA colleges — delhi-ncr | 111 | commercial | /mba-colleges-in-delhi-ncr | /mba-colleges-in-delhi<br>/pgdm-colleges-in-delhi-ncr<br>/mba-colleges-in-delhi-ncr-accepting-cat<br>/mba-colleges-in-delhi-ncr-accepting-cmat | best mba colleges in delhi ncr; top mba colleges in delhi ncr; mba in delhi best colleges |
@@ -235,6 +234,7 @@ Writing rules: no fee, package, cut-off or date is written by hand. Exam facts (
 | Cluster | Queries | Why not covered | Example queries |
 | --- | --- | --- | --- |
 | general:india | 424 | Mixed brand/general queries — need dedicated college pages with verified data | pgdm colleges in india; mba colleges in india accepting cmat score; mba colleges in faridabad |
+| placements-salary:pune | 140 | Mixed brand/general queries — need dedicated college pages with verified data | mba colleges in pune with good placements; sibm pune mba placements; scmhrd mba average package |
 | college-specific:india | 111 | Mixed brand/general queries — need dedicated college pages with verified data | iift mba ranking; iift mba review; bimtech mba review |
 | fees-funding:mumbai | 100 | City outside the current Pune / Noida / Delhi NCR focus | mba colleges in mumbai fees; spjimr mba fees; pgdm colleges in mumbai with low fees |
 | placements-salary:mumbai | 103 | City outside the current Pune / Noida / Delhi NCR focus | spjimr mba average package; mba colleges in mumbai with good placements; nmims mba placements |

@@ -13,18 +13,17 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud, Pune", naac: "A+", fees: "₹2L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "MAEER MIT College of Engineering", location: "Paud Road, Kothrud", naac: "A+", fees: "₹1.8L-2.5L/yr", placement: "₹6.5 LPA avg", slug: "maeer-mit-college-engineering-pune" },
-  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud, Pune", naac: "A+", fees: "₹6.5L (2yr MBA)", placement: "₹10.5 LPA avg", slug: "mit-school-of-business-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud, Pune", naac: "A+", fees: "₹2L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "MAEER MIT College of Engineering", location: "Paud Road, Kothrud", naac: "A+", fees: "₹1.8L-2.5L/yr", placement: "Not published", slug: "maeer-mit-college-engineering-pune" },
+  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud, Pune", naac: "A+", fees: "₹6.5L (2yr MBA)", placement: "Not published", slug: "mit-school-of-business-pune" },
   { name: "MIT College of Arts, Commerce & Science", location: "Kothrud, Pune", naac: "A+", fees: "₹45K-1.2L/yr", placement: "Government Aided", slug: "mit-arts-commerce-science-college-pune" },
-  { name: "MAEER MIT Polytechnic", location: "Kothrud, Pune", naac: "A", fees: "₹50K-80K/yr", placement: "₹3.5 LPA avg", slug: "maeer-mit-polytechnic-pune" },
-  { name: "MIT College of Commerce", location: "Kothrud, Pune", naac: "A+", fees: "₹55K-1L/yr", placement: "₹4.8 LPA avg", slug: "mit-college-commerce-pune" },
-  { name: "Cummins College of Engineering for Women", location: "Karvenagar (near Kothrud)", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "₹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
+  { name: "MAEER MIT Polytechnic", location: "Kothrud, Pune", naac: "A", fees: "₹50K-80K/yr", placement: "Not published", slug: "maeer-mit-polytechnic-pune" },
+  { name: "MIT College of Commerce", location: "Kothrud, Pune", naac: "A+", fees: "₹55K-1L/yr", placement: "Not published", slug: "mit-college-commerce-pune" },
+  { name: "Cummins College of Engineering for Women", location: "Karvenagar (near Kothrud)", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
   { name: "MIT School of Law", location: "Kothrud, Pune", naac: "A+", fees: "₹1.5L-2.5L/yr", placement: "Law Careers", slug: "mit-school-of-law-pune" },
 ]
 
 const faqs = [
-  { q: "Which is the best college in Kothrud, Pune?", a: "MIT World Peace University (MIT-WPU) is the best college in Kothrud, Pune, offering engineering, MBA, science, law, and arts programs under one university with NAAC A+ grade and excellent placement records (₹7.2 LPA average for engineering)." },
   { q: "Is Kothrud a good area for students in Pune?", a: "Yes. Kothrud is one of Pune's most student-friendly areas with excellent connectivity (PMPML buses, metro planned), affordable PG accommodation (₹6,000-12,000/month), good restaurants, study cafes, and proximity to Hinjewadi IT Park for internships." },
   { q: "What programs does MIT-WPU Kothrud offer?", a: "MIT-WPU Kothrud offers: B.Tech (CSE, Mechanical, Civil, Electronics, AI/ML), MBA/PGDM, BBA, BCom, BSc, BA, LLB, PhD programs. It is a deemed university with 20,000+ students across all programs. Fees range from ₹45,000/yr (BSc) to ₹3.8L/yr (B.Tech)." },
   { q: "What is the accommodation situation near Kothrud colleges?", a: "Kothrud has abundant student accommodation: PG (₹6,000-12,000/month), hostels (₹60,000-1L/year), and shared apartments (₹8,000-15,000/month per person). MIT-WPU has on-campus hostels. Paud Road and Karve Road are popular student residential areas." },

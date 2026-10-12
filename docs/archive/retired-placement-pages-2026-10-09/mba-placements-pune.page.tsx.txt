@@ -15,7 +15,6 @@ export const revalidate = 300
 
 export default function MBAPlacementsPune() {
   const faqs = [
-    { question: "What is the average MBA placement package in Pune?", answer: "Average MBA placement packages in Pune (2024 batch): SIBM ₹24 LPA, SCMHRD ₹19 LPA, MIT-SOM ₹11 LPA, PUMBA ₹8.5 LPA, DYPIM ₹9 LPA, BVIMR ₹7 LPA, Indira MBA ₹7.5 LPA. Overall Pune MBA average (across all 120+ colleges) is approximately ₹7–8 LPA." },
     { question: "Which sector hires most MBA graduates from Pune?", answer: "MBA hiring sectors in Pune: IT/Software 30%, BFSI 25%, Consulting 15%, FMCG 10%, Manufacturing/Auto 10%, Pharma 5%, Others 5%. Top companies: TCS, Infosys, Deloitte, Amazon, HDFC Bank, Bajaj Auto, Tata Motors, Goldman Sachs, Accenture." },
     { question: "How is Pune MBA placement compared to Mumbai and Bangalore?", answer: "Pune MBA placement is strong but slightly below Mumbai (SPJIMR, Jamnalal Bajaj) and Bangalore (IIM-B, ISB Hyderabad nearby) for top-tier colleges. However, for mid-tier MBA, Pune offers better placement outcomes than most cities because of its large corporate base. SIBM/SCMHRD placements are at par with IIM-Kozhikode/Lucknow." },
   ]
@@ -45,9 +44,9 @@ export default function MBAPlacementsPune() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>SIBM Pune</strong> has the highest MBA placement: avg ₹24 LPA, highest ₹85 LPA.
-                <strong> SCMHRD</strong>: avg ₹19 LPA. <strong>MIT-SOM</strong>: avg ₹11 LPA.
-                <strong> PUMBA</strong> (government): avg ₹8.5 LPA. Overall Pune MBA average: ₹7–8 LPA across 120+ colleges.
+                <strong>SIBM Pune</strong> has the highest MBA placement:.
+                <strong> SCMHRD</strong>:. <strong>MIT-SOM</strong>:.
+                <strong> PUMBA</strong> (government):. Overall Pune MBA average: ₹7 across 120+ colleges.
               </p>
             </div>
           </div>

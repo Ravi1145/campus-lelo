@@ -16,10 +16,7 @@ export const revalidate = 300
 const marketingColleges = mbaColleges.filter(c => c.specializations.includes("Marketing"))
 
 const faqs = [
-  { question: "Which is the best MBA Marketing college in Pune?", answer: "SIBM Pune (NIRF #14) is the best MBA Marketing college in Pune with â‚¹24 LPA average placement and top FMCG/e-commerce recruiters like Amazon, Flipkart, P&G, HUL, and ITC. SCMHRD (NIRF #22, â‚¹19 LPA avg) is #2. For affordable MBA Marketing, MIT-SOM (â‚¹11 LPA avg, â‚¹7L/yr fees) is excellent." },
   { question: "What is the scope of MBA Marketing from Pune?", answer: "MBA Marketing graduates from Pune are hired by FMCG companies (HUL, ITC, Nestle), e-commerce (Amazon, Flipkart, Meesho), automotive (Tata Motors, Bajaj, Mahindra in Pune), fintech, and digital marketing agencies. Pune's proximity to Mumbai's advertising hub gives Marketing MBA students unique internship access." },
-  { question: "What are the career options after MBA Marketing from Pune?", answer: "Career options after MBA Marketing from Pune: Brand Manager (â‚¹8â€“18 LPA), Product Manager (â‚¹12â€“25 LPA), Digital Marketing Manager (â‚¹7â€“15 LPA), Sales Manager (â‚¹8â€“16 LPA), Marketing Analytics (â‚¹10â€“20 LPA), Business Development Manager (â‚¹8â€“14 LPA). FMCG and e-commerce pay the highest for Marketing MBAs." },
-  { question: "What is the average salary for MBA Marketing from Pune colleges?", answer: "Average MBA Marketing placement: SIBM Pune â‚¹24 LPA, SCMHRD â‚¹19 LPA, MIT-SOM â‚¹11 LPA (marketing stream), DYPIM â‚¹9 LPA, BVIMR â‚¹7 LPA. Highest packages (â‚¹40â€“85 LPA) go to Marketing-Analytics combined roles at consulting and tech companies." },
 ]
 
 export default function MBAMarketing() {
@@ -35,10 +32,9 @@ export default function MBAMarketing() {
       <MBAClusterPage
         h1="MBA in Marketing â€” Colleges in Pune 2026"
         subtitle="Best MBA Marketing colleges in Pune with top placements in FMCG, e-commerce, automotive and digital marketing."
-        quickAnswer="SIBM Pune (avg â‚¹24 LPA) is the best MBA Marketing college in Pune. Top recruiters: Amazon, Flipkart, P&G, HUL, ITC. MIT-SOM offers â‚¹11 LPA avg at â‚¹7L/yr â€” best value MBA Marketing in Pune. Key exams: SNAP (Symbiosis), MAH-CET MBA (others)."
+        quickAnswer="SIBM Pune is the best MBA Marketing college in Pune. Top recruiters: Amazon, Flipkart, P&G, HUL, ITC. Key exams: SNAP (Symbiosis), MAH-CET MBA (others)."
         stats={[
           { value: `${marketingColleges.length}+`, label: "MBA Mktg Colleges" },
-          { value: "â‚¹7â€“24 LPA", label: "Placement Range" },
           { value: "FMCG/E-com", label: "Top Sectors" },
           { value: "â‚¹1.25Lâ€“16L/yr", label: "Fees" },
         ]}

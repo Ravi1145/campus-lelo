@@ -368,15 +368,10 @@
   "size": 140,
   "signal": 994,
   "intent": "commercial",
-  "pillar": "/mba-placements-pune",
-  "supporting": [
-   "/mba-colleges-in-pune-for-hr",
-   "/mba-colleges-in-pune-for-finance",
-   "/mba-colleges-in-pune-executive",
-   "/mba-colleges-in-pune-for-marketing"
-  ],
+  "pillar": null,
+  "supporting": [],
   "article": false,
-  "coverage": 96,
+  "coverage": 19,
   "keywords": [
    "mba colleges in pune with good placements",
    "sibm pune mba placements",

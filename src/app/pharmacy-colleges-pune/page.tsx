@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     question: "What are placements like after pharmacy from Pune colleges?",
-    answer: "Pharmacy graduates from Pune colleges get placed in roles like Quality Assurance/QC executive (₹3–5 LPA), Medical Representative (₹3.5–6 LPA), Drug Inspector (Government, ₹6–10 LPA), Hospital Pharmacist (₹3–5 LPA), and R&D roles in pharma companies like Sun Pharma, Cipla, Dr. Reddy's, Lupin, Wockhardt, and Serum Institute of India — all of which have offices near Pune.",
+    answer: "Pharmacy graduates from Pune colleges get placed in roles like Quality Assurance/QC executive, Medical Representative, Drug Inspector, Hospital Pharmacist, and R&D roles in pharma companies like Sun Pharma, Cipla, Dr. Reddy's, Lupin, Wockhardt, and Serum Institute of India — all of which have offices near Pune.",
   },
   {
     question: "Is NEET required for B.Pharm admission in Pune?",
@@ -164,7 +164,7 @@ export default function PharmacyCollegesPune() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
               { icon: BookOpen, text: "7 Pharmacy Colleges" },
-              { icon: TrendingUp, text: "Avg ₹4–6 LPA" },
+              { icon: TrendingUp, text: "Avg ₹4" },
               { icon: Award, text: "NAAC Accredited" },
               { icon: Users, text: "D.Pharm · B.Pharm · M.Pharm" },
             ].map(({ icon: Icon, text }) => (

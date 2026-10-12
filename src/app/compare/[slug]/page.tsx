@@ -69,9 +69,8 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
   const colB = colleges.find(c => c.slug === slugB)!
 
   const faqs = [
-    { question: `Which is better: ${colA.shortName} or ${colB.shortName}?`, answer: `${colA.shortName} is known for ${colA.tags?.[0] ?? 'quality education'} with an average placement of ₹${(colA.avgPlacement/100000).toFixed(1)} LPA. ${colB.shortName} offers ${colB.tags?.[0] ?? 'quality education'} with ₹${(colB.avgPlacement/100000).toFixed(1)} LPA average. The better choice depends on your branch preference, budget, and career goals.` },
+    { question: `Which is better: ${colA.shortName} or ${colB.shortName}?`, answer: `${colA.shortName} is known for ${colA.tags?.[0] ?? 'quality education'} and ${colB.shortName} offers ${colB.tags?.[0] ?? 'quality education'}. The better choice depends on your branch preference, budget, and career goals.` },
     { question: `What are the fees at ${colA.shortName} vs ${colB.shortName}?`, answer: `${colA.name} fees range from ₹${(colA.feesRange.min/100000).toFixed(1)}L to ₹${(colA.feesRange.max/100000).toFixed(1)}L per year. ${colB.name} fees range from ₹${(colB.feesRange.min/100000).toFixed(1)}L to ₹${(colB.feesRange.max/100000).toFixed(1)}L per year.` },
-    { question: `What is the placement record at ${colA.shortName} vs ${colB.shortName}?`, answer: `${colA.name} has an average placement package of ₹${(colA.avgPlacement/100000).toFixed(1)} LPA with highest at ₹${(colA.highestPlacement/100000).toFixed(1)} LPA. ${colB.name} offers ₹${(colB.avgPlacement/100000).toFixed(1)} LPA average with ₹${(colB.highestPlacement/100000).toFixed(1)} LPA highest package.` },
     { question: `Which entrance exam is required for ${colA.shortName} and ${colB.shortName}?`, answer: `${colA.name} accepts ${colA.entranceExams.join(", ")}. ${colB.name} accepts ${colB.entranceExams.join(", ")}.` },
     { question: `Does ${colA.shortName} or ${colB.shortName} have hostel?`, answer: `${colA.shortName} ${colA.hostel ? 'provides on-campus hostel facilities' : 'does not have on-campus hostel'}. ${colB.shortName} ${colB.hostel ? 'provides on-campus hostel facilities' : 'does not have on-campus hostel'}.` },
   ]
@@ -100,12 +99,9 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
     { label: "Type", a: colA.type, b: colB.type },
     { label: "Established", a: colA.established.toString(), b: colB.established.toString() },
     { label: "NAAC Grade", a: colA.naac ?? "N/A", b: colB.naac ?? "N/A" },
-    { label: "NIRF Rank", a: colA.nirfRank ? `#${colA.nirfRank}` : "Unranked", b: colB.nirfRank ? `#${colB.nirfRank}` : "Unranked" },
     { label: "Location", a: colA.location, b: colB.location },
     { label: "Fees (Min/yr)", a: `₹${(colA.feesRange.min/100000).toFixed(1)} L`, b: `₹${(colB.feesRange.min/100000).toFixed(1)} L` },
     { label: "Fees (Max/yr)", a: `₹${(colA.feesRange.max/100000).toFixed(1)} L`, b: `₹${(colB.feesRange.max/100000).toFixed(1)} L` },
-    { label: "Avg Placement", a: `₹${(colA.avgPlacement/100000).toFixed(1)} LPA`, b: `₹${(colB.avgPlacement/100000).toFixed(1)} LPA` },
-    { label: "Highest Package", a: `₹${(colA.highestPlacement/100000).toFixed(1)} LPA`, b: `₹${(colB.highestPlacement/100000).toFixed(1)} LPA` },
     { label: "Hostel", a: colA.hostel ? "✓ Available" : "✗ No", b: colB.hostel ? "✓ Available" : "✗ No" },
     { label: "Entrance Exams", a: colA.entranceExams.join(", "), b: colB.entranceExams.join(", ") },
     { label: "Courses", a: colA.courses.join(", "), b: colB.courses.join(", ") },
@@ -170,10 +166,6 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
                 </div>
                 <div className="grid grid-cols-2 gap-3 mt-5">
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
-                    <p className="text-lg font-bold text-gray-900">₹{(col.avgPlacement/100000).toFixed(1)} LPA</p>
-                    <p className="text-xs text-gray-500">Avg Placement</p>
-                  </div>
-                  <div className="text-center p-3 bg-gray-50 rounded-lg">
                     <p className="text-lg font-bold text-gray-900">₹{(col.feesRange.min/100000).toFixed(1)}L</p>
                     <p className="text-xs text-gray-500">Min Fees/yr</p>
                   </div>
@@ -212,37 +204,14 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
             </div>
           </div>
 
-          {/* Placement Detail */}
+          {/* Placement: figures are not published until sourced */}
           <div className="bg-white rounded-xl shadow p-6 border border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Placement Comparison 2024</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[colA, colB].map((col) => (
-                <div key={col.slug}>
-                  <h3 className="font-semibold text-gray-800 mb-3">{col.shortName} Placements</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between py-2 border-b border-gray-100">
-                      <span className="text-gray-600">Average Package</span>
-                      <span className="font-semibold">₹{(col.avgPlacement/100000).toFixed(1)} LPA</span>
-                    </div>
-                    <div className="flex justify-between py-2 border-b border-gray-100">
-                      <span className="text-gray-600">Highest Package</span>
-                      <span className="font-semibold">₹{(col.highestPlacement/100000).toFixed(1)} LPA</span>
-                    </div>
-                    <div className="pt-1">
-                      <p className="text-gray-600 mb-1.5">Top Recruiters:</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {col.topRecruiters.slice(0, 6).map(r => (
-                          <span key={r} className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">{r}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Placements</h2>
+            <p className="text-sm text-gray-700 leading-relaxed">We do not publish placement figures for these colleges until we can source and date them. Ask each college for its latest programme-wise placement report, including median package and how many students were placed. See our guide on <a href="/blog/mba-placements-and-salary-how-to-read-reports" className="font-bold text-[#C90D11] hover:underline">how to read a placement report</a>.</p>
           </div>
 
           {/* Verdict */}
+
           <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
             <h2 className="text-xl font-bold text-gray-900 mb-3">Verdict: {colA.shortName} vs {colB.shortName}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -253,7 +222,6 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
                   <li>• Your budget is ₹{(colA.feesRange.min/100000).toFixed(1)}L–{(colA.feesRange.max/100000).toFixed(1)}L/yr</li>
                   <li>• You prefer {colA.location}</li>
                   {colA.nirfRank && colB.nirfRank && colA.nirfRank < colB.nirfRank && <li>• Better NIRF rank (#{colA.nirfRank})</li>}
-                  {colA.avgPlacement > colB.avgPlacement && <li>• Higher average placement (₹{(colA.avgPlacement/100000).toFixed(1)} LPA)</li>}
                 </ul>
               </div>
               <div>
@@ -263,7 +231,6 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
                   <li>• Your budget is ₹{(colB.feesRange.min/100000).toFixed(1)}L–{(colB.feesRange.max/100000).toFixed(1)}L/yr</li>
                   <li>• You prefer {colB.location}</li>
                   {colA.nirfRank && colB.nirfRank && colB.nirfRank < colA.nirfRank && <li>• Better NIRF rank (#{colB.nirfRank})</li>}
-                  {colB.avgPlacement > colA.avgPlacement && <li>• Higher average placement (₹{(colB.avgPlacement/100000).toFixed(1)} LPA)</li>}
                 </ul>
               </div>
             </div>

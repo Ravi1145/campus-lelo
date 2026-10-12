@@ -21,9 +21,9 @@ const categories = [
   {
     stream: "Engineering",
     colleges: [
-      { name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: 49, naac: "A+", note: "Autonomous — SPPU affiliated" },
+      { name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: null, naac: "A+", note: "Autonomous — SPPU affiliated" },
       { name: "PICT Pune", slug: "pict-pune-institute-of-computer-technology", nirf: null, naac: "A", note: "Autonomous" },
-      { name: "VIT Pune", slug: "vit-pune-vishwakarma-institute-of-technology", nirf: 101, naac: "A+", note: "Autonomous" },
+      { name: "VIT Pune", slug: "vit-pune-vishwakarma-institute-of-technology", nirf: null, naac: "A+", note: "Autonomous" },
       { name: "JSPM RSCOE", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", nirf: null, naac: "A", note: "SPPU Affiliated" },
     ],
   },
@@ -48,9 +48,7 @@ const categories = [
 const allColleges = categories.flatMap(c => c.colleges)
 
 const faqs = [
-  { question: "What is SPPU and which colleges are affiliated to it?", answer: "SPPU (Savitribai Phule Pune University), formerly Pune University, is the main university in Pune. It has 800+ affiliated colleges in Pune, Nashik, Ahmednagar, and Kolhapur districts. Top SPPU colleges in Pune: COEP (NIRF #49), VIT Pune (NIRF #101), PICT, Fergusson College, SP College, JSPM RSCOE." },
   { question: "Is COEP affiliated to SPPU?", answer: "COEP Technological University was formerly affiliated to SPPU but is now an autonomous deemed-to-be university (COEP-TU) under the Government of Maharashtra. Similarly, VIT Pune, PICT, and Fergusson College are 'autonomous' under SPPU, meaning they design their own curriculum but degrees are awarded by SPPU." },
-  { question: "Which is the best SPPU affiliated college in Pune?", answer: "Among SPPU-affiliated/autonomous colleges, COEP (NIRF #49) is the best engineering college, PUMBA is the best for MBA, and Fergusson College is the best for Arts & Science. For BCom, Garware College is top-ranked. All these hold NAAC A or A+ accreditation." },
   { question: "How to apply for SPPU affiliated colleges in Pune 2026?", answer: "SPPU engineering college admissions are through MHT-CET CAP rounds via DTE Maharashtra (July 2026). For Arts/Science/Commerce, apply directly to the college (merit-based, June–July 2026). For MBA, MAH-MBA-CET or CAT scores are used (CAP counselling in September 2026). All applications are online." },
 ]
 
@@ -89,7 +87,7 @@ export default function SPPUAffiliatedColleges() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-purple-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>SPPU (Savitribai Phule Pune University)</strong> has 800+ affiliated colleges. Top autonomous colleges: <strong>COEP</strong> (Engineering, NIRF #49), <strong>Fergusson College</strong> (Arts/Science, NAAC A+), <strong>PUMBA</strong> (MBA). Admissions via MHT-CET CAP (Engineering) or merit-based (Arts/Commerce).
+                <strong>SPPU (Savitribai Phule Pune University)</strong> has 800+ affiliated colleges. Top autonomous colleges: <strong>COEP</strong> (Engineering), <strong>Fergusson College</strong> (Arts/Science, NAAC A+), <strong>PUMBA</strong> (MBA). Admissions via MHT-CET CAP (Engineering) or merit-based (Arts/Commerce).
               </p>
             </div>
           </div>

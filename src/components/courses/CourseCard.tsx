@@ -98,15 +98,6 @@ export default function CourseCard({ course }: CourseCardProps) {
                 {formatFeesRange(course.avgFees.min, course.avgFees.max)}
               </p>
             </div>
-            <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5">
-              <div className="flex items-center gap-1 mb-1">
-                <TrendingUp className="w-3 h-3 text-blue-400 shrink-0" />
-                <span className="text-xs text-blue-500 font-semibold uppercase tracking-wider">Avg Salary</span>
-              </div>
-              <p className="text-xs font-bold text-gray-900 leading-tight">
-                {formatCurrency(course.avgSalary)}
-              </p>
-            </div>
           </div>
 
           {/* Description */}

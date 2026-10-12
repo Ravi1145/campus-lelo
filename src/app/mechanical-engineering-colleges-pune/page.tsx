@@ -13,19 +13,18 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP) - Mech", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹10 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "MIT World Peace University - Mech", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "₹6.8 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Symbiosis Institute of Technology - Mech", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹7.5 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "₹5.2 LPA avg", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
-  { name: "Sinhgad College of Engineering - Mech", location: "Vadgaon", naac: "A", fees: "₹1.15L-1.6L/yr", placement: "₹4.5 LPA avg", slug: "sinhgad-college-of-engineering-pune" },
-  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "₹5.2 LPA avg", slug: "bharati-vidyapeeth-college-engineering-pune" },
-  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L-1.55L/yr", placement: "₹4.8 LPA avg", slug: "dy-patil-college-engineering-akurdi-pune" },
+  { name: "College of Engineering Pune (COEP) - Mech", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "MIT World Peace University - Mech", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Symbiosis Institute of Technology - Mech", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "Not published", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
+  { name: "Sinhgad College of Engineering - Mech", location: "Vadgaon", naac: "A", fees: "₹1.15L-1.6L/yr", placement: "Not published", slug: "sinhgad-college-of-engineering-pune" },
+  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "Not published", slug: "bharati-vidyapeeth-college-engineering-pune" },
+  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L-1.55L/yr", placement: "Not published", slug: "dy-patil-college-engineering-akurdi-pune" },
 ]
 
 const faqs = [
   { q: "Which is the best mechanical engineering college in Pune?", a: "COEP (College of Engineering Pune) is best for Mechanical Engineering in Pune due to its government status, NIRF ranking, and strong ties with Bajaj Auto, Tata Motors, and Cummins India. VIT Pune is the top private option for Mech." },
-  { q: "What are the job opportunities for mechanical engineers from Pune?", a: "Pune's auto sector (Bajaj Auto, Tata Motors, Force Motors, Mahindra), manufacturing companies (Thermax, Cummins, Honeywell), and defense sector (HAL, DRDO) are major recruiters. Average starting salary is ₹4-8 LPA." },
   { q: "What is the MHT-CET cutoff for mechanical engineering in Pune?", a: "COEP Mechanical requires 90-95 percentile in MHT-CET. VIT Pune Mech requires 80-88 percentile. MIT-WPU Mech requires 70-80 percentile. Private colleges like JSPM and Sinhgad accept 55-65 percentile." },
   { q: "Is mechanical engineering a good choice in Pune in 2026?", a: "Yes. Pune remains India's manufacturing capital with Bajaj Auto, Tata Motors, Force Motors, Kirloskar, and 500+ auto-ancillary companies offering strong mechanical engineering placements. The electric vehicle transition also creates new opportunities in EV design and battery systems." },
   { q: "Which companies recruit mechanical engineers from Pune colleges?", a: "Top recruiters for Mech from Pune colleges include Bajaj Auto (highest recruiter), Tata Motors, Cummins India, Thermax, L&T, Emerson, Bosch India, KPIT, Honeywell, and multinational auto component manufacturers." },
@@ -63,7 +62,6 @@ export default function MechanicalEngineeringCollegesPunePage() {
           { value: "30+", label: "Mech Colleges" },
           { value: "₹80K-3.8L", label: "Annual Fees" },
           { value: "Bajaj Auto", label: "Top Recruiter" },
-          { value: "₹10 LPA", label: "Best Avg Package" },
         ]}
         introHeading="Mechanical Engineering Colleges in Pune: The Auto Capital's Best"
         introParagraphs={[
@@ -76,10 +74,10 @@ export default function MechanicalEngineeringCollegesPunePage() {
         whyPoints={[
           { title: "Auto Industry Access", description: "Pune hosts Bajaj Auto, Tata Motors, Force Motors, Mahindra, and 500+ auto-ancillary firms. Mechanical engineering students get direct campus placement opportunities from these industry leaders." },
           { title: "Advanced Lab Infrastructure", description: "Top Pune mech colleges have CNC machining centers, FEM analysis labs, rapid prototyping facilities, and CAD/CAM suites sponsored by industry partners like Siemens, ANSYS, and Autodesk." },
-          { title: "EV & Future Tech Readiness", description: "Pune's leadership in EV adoption means mech engineers learn EV powertrain design, battery systems, and motor engineering - skills valued at ₹8-15 LPA by EV companies like Ather, Ola Electric, and Bajaj." },
+          { title: "EV & Future Tech Readiness", description: "Pune's leadership in EV adoption means mech engineers learn EV powertrain design, battery systems, and motor engineering - skills valued at ₹8 by EV companies like Ather, Ola Electric, and Bajaj." },
           { title: "Diverse Industry Base", description: "Beyond autos, Pune has aerospace (HAL, Bharat Forge), defense (DRDO), FMCG machinery, and IT hardware companies creating diverse mechanical engineering career paths." },
           { title: "Research Opportunities", description: "COEP and VIT Pune have active mechanical engineering research labs funded by DST and industry, offering students publication opportunities and exposure to cutting-edge R&D." },
-          { title: "Core + IT Hybrid Roles", description: "Pune mechanical engineers are increasingly recruited into product design, simulation engineering, and digital manufacturing roles at IT companies and global MNCs at ₹6-12 LPA." },
+          { title: "Core + IT Hybrid Roles", description: "Pune mechanical engineers are increasingly recruited into product design, simulation engineering, and digital manufacturing roles at IT companies and global MNCs at ₹6." },
         ]}
         admissionHeading="Mechanical Engineering Admission Process in Pune 2026"
         admissionSteps={[

@@ -1,3 +1,4 @@
+import { scrubCollege, scrubDetails } from "@/lib/verified"
 import { NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { colleges as staticColleges } from '@/data/colleges'
@@ -66,7 +67,7 @@ export async function GET() {
       )
     }
 
-    const mapped = (data as Record<string, unknown>[]).map(mapRow)
+    const mapped = (data as Record<string, unknown>[]).map((r) => scrubCollege(mapRow(r)))
 
     // Track which slugs are featured so the UI can badge them
     const featuredSlugs = (data as Record<string, unknown>[])

@@ -6,7 +6,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "SIBM vs SCMHRD Pune 2026 | MBA Fees, CAT Cutoff & Placement Comparison",
-  description: "SIBM vs SCMHRD Pune 2026: Compare MBA fees (₹16–22L vs ₹14–18L), SNAP/CAT cutoffs, placements (₹28 LPA vs ₹24 LPA), campus, specialisations & admission process.",
+  description: "SIBM vs SCMHRD Pune 2026: Compare MBA fees (₹16–22L vs ₹14–18L), SNAP/CAT cutoffs, placements, campus, specialisations & admission process.",
   path: "/sibm-vs-scmhrd-pune",
   keywords: [
     "sibm vs scmhrd pune", "sibm pune vs scmhrd pune", "sibm scmhrd comparison 2026",
@@ -16,13 +16,10 @@ export const metadata: Metadata = genMeta({
 })
 
 const rows = [
-  { param: "NIRF Rank (Management)", sibm: "#13", scmhrd: "#18" },
   { param: "NAAC Grade", sibm: "A+", scmhrd: "A+" },
   { param: "Program", sibm: "MBA (2-year)", scmhrd: "MBA-HRD (2-year)" },
   { param: "Total Fees", sibm: "₹16L–₹22L", scmhrd: "₹14L–₹18L" },
   { param: "SNAP Cutoff 2025", sibm: "98+ percentile", scmhrd: "95+ percentile" },
-  { param: "Average Placement", sibm: "₹28 LPA", scmhrd: "₹24 LPA" },
-  { param: "Highest Package", sibm: "₹65 LPA", scmhrd: "₹48 LPA" },
   { param: "Batch Size", sibm: "~180", scmhrd: "~120" },
   { param: "Specialisation", sibm: "Finance, Marketing, HR, Operations", scmhrd: "HRM focused + Marketing, Finance" },
   { param: "Top Recruiters", sibm: "McKinsey, BCG, P&G, Deloitte", scmhrd: "Deloitte, KPMG, HUL, Accenture" },
@@ -116,9 +113,7 @@ export default function SibmVsScmhrd() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — SIBM vs SCMHRD Pune</h2>
           <div className="space-y-4">
             {[
-              { q: "Is SIBM or SCMHRD better for MBA in Pune 2026?", a: "SIBM Pune (NIRF #13) is ranked higher and offers better placements (₹28 LPA avg vs ₹24 LPA). However, SCMHRD (NIRF #18) has lower fees (₹14–18L vs ₹16–22L) and a smaller, more intimate batch. For consulting and finance, choose SIBM. For HR and people management roles, SCMHRD is specialised and preferred." },
               { q: "What is the SNAP cutoff for SIBM and SCMHRD in 2026?", a: "SIBM Pune SNAP 2025 cutoff was 98+ percentile (sectional cutoffs also apply). SCMHRD SNAP 2025 cutoff was 95+ percentile. Both require GD-PI rounds after clearing SNAP. Scores above 99 percentile significantly improve your chances at SIBM." },
-              { q: "Which has better placement — SIBM or SCMHRD?", a: "SIBM Pune has higher placement numbers — ₹28 LPA average CTC with McKinsey, BCG, and P&G as top recruiters. SCMHRD placed its batch at ₹24 LPA average with Deloitte, KPMG, and HUL as top recruiters. Both are excellent for corporate placements." },
               { q: "Are SIBM and SCMHRD on the same campus?", a: "Yes, both SIBM and SCMHRD are part of the Symbiosis International University campus at Lavale, Pune. Students have access to shared facilities including library, sports complex, and health centre." },
             ].map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">

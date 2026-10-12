@@ -94,7 +94,7 @@ const under10LColleges = [
     naac: "A+",
     exam: "MHT-CET / JEE",
     slug: "vit-pune-vishwakarma-institute-of-technology",
-    note: "NIRF #101",
+    note: "",
   },
 ]
 

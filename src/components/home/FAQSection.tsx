@@ -7,15 +7,15 @@ import { ChevronDown, Headphones, HelpCircle, Plus } from "lucide-react"
 const faqs = [
   {
     q: "Which is the best college in Pune for B.Tech / engineering in 2026?",
-    a: "COEP (College of Engineering Pune) is the best engineering college in Pune in 2026. It is a government autonomous institute established in 1854, NAAC A+ accredited with NIRF Rank 49. Annual fees: ₹80,000–1.8L. Average placement: ₹12 LPA, highest ₹45 LPA. MHT-CET 2026 cutoff: 97+ percentile for Computer Engineering. Other top options: PICT (best for CS/IT, avg ₹7.5 LPA), VIT Pune (NIRF #101, avg ₹8.5 LPA), and SIT Pune — Symbiosis (best deemed, avg ₹9.8 LPA)."
+    a: "COEP (College of Engineering Pune) is the best engineering college in Pune in 2026. It is a government autonomous institute established in 1854, NAAC A+ accredited with. Annual fees: ₹80,000–1.8L.. MHT-CET 2026 cutoff: 97+ percentile for Computer Engineering. Other top options: PICT, VIT Pune, and SIT Pune — Symbiosis."
   },
   {
     q: "What is the best MBA college in Pune for 2026 admissions?",
-    a: "SIBM Pune (Symbiosis Institute of Business Management) is the top MBA college in Pune, NIRF Rank 13, average placements ₹28 LPA. Recruiters: McKinsey, BCG, P&G, Deloitte. SNAP 2026 cutoff: 60+ percentile. Fees: ₹16–22L total. Other strong options: MIT-SOM (avg ₹12 LPA, fees ₹7–11L), BIMM (avg ₹8.5 LPA, fees ₹5–7.5L), Indira Institute of Management (best ROI, avg ₹7.2 LPA, fees ₹4.2–6.5L)."
+    a: "Recruiters: McKinsey, BCG, P&G, Deloitte. SNAP 2026 cutoff: 60+ percentile. Fees: ₹16–22L total. Other strong options: MIT-SOM, BIMM, Indira Institute of Management."
   },
   {
     q: "Which medical college in Pune has the best NEET cutoff and facilities?",
-    a: "AFMC (Armed Forces Medical College) is Pune's best medical college — NIRF Rank 4, NAAC A++, nearly free (₹50,000 total). Requires 650+ NEET 2026 score + separate AFMC test + SSB. BJ Medical College (NIRF #18) is the best government option accessible through NEET state quota (625+ for open category). For private options: D.Y. Patil Medical College and Bharati Vidyapeeth Medical College have good facilities at ₹11–15 LPA fees."
+    a: "AFMC (Armed Forces Medical College) is Pune's best medical college —, NAAC A++, nearly free (₹50,000 total). Requires 650+ NEET 2026 score + separate AFMC test + SSB. BJ Medical College is the best government option accessible through NEET state quota (625+ for open category). For private options: D.Y. Patil Medical College and Bharati Vidyapeeth Medical College have good facilities at ₹11 fees."
   },
   {
     q: "What is MHT-CET 2026 and which Pune colleges accept it?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Which is the No. 1 college in Pune in 2026?",
-    a: "AFMC (Armed Forces Medical College) is Pune's highest NIRF-ranked college at #4 nationally. Among engineering colleges, COEP is #1 in Pune (NIRF #49, NAAC A+, fees ₹80K/yr). Among MBA colleges, SIBM Pune is #1 (NIRF #13, avg ₹28 LPA). For arts and science, Fergusson College (est. 1885, NAAC A+) is the most prestigious. For design, Symbiosis Institute of Design (SID) ranks among India's top 5."
+    a: "AFMC (Armed Forces Medical College) is Pune's highest NIRF-ranked college at #4 nationally. Among engineering colleges, COEP is #1 in Pune (NAAC A+, fees ₹80K/yr). Among MBA colleges, SIBM Pune is #1. For arts and science, Fergusson College (est. 1885, NAAC A+) is the most prestigious. For design, Symbiosis Institute of Design (SID) ranks among India's top 5."
   },
   {
     q: "When does college admission start in Pune 2026?",

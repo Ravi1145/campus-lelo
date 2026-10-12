@@ -8,7 +8,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CampusLelo",
-  description: "Top 12 engineering colleges in Pune 2026 — COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5–12 LPA. Compare & apply free.",
+  description: "Top 12 engineering colleges in Pune 2026 — COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5. Compare & apply free.",
   path: "/engineering-colleges-pune",
   keywords: [
     "engineering colleges in pune",
@@ -28,29 +28,25 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { rank: 1, name: "College of Engineering Pune (COEP)", type: "Government", nirf: 49, naac: "A+", fees: "₹80K–₹1.8L/yr", placement: "₹12 LPA avg | ₹45 LPA highest", exam: "MHT-CET / JEE", slug: "coep-college-of-engineering-pune", highlight: "Best Govt. | Lowest Fees" },
-  { rank: 2, name: "Pune Institute of Computer Technology (PICT)", type: "Autonomous", nirf: null, naac: "A", fees: "₹1.4L–₹1.9L/yr", placement: "₹7.5 LPA avg | ₹35 LPA highest", exam: "MHT-CET / JEE", slug: "pict-pune-institute-of-computer-technology", highlight: "Best for CS/IT" },
-  { rank: 3, name: "Vishwakarma Institute of Technology (VIT Pune)", type: "Autonomous", nirf: 101, naac: "A+", fees: "₹1.6L–₹2.2L/yr", placement: "₹8.5 LPA avg | ₹40 LPA highest", exam: "MHT-CET / JEE", slug: "vit-pune-vishwakarma-institute-of-technology", highlight: "NIRF #101" },
-  { rank: 4, name: "Symbiosis Institute of Technology (SIT Pune)", type: "Deemed", nirf: null, naac: "A+", fees: "₹3.6L–₹4.8L/yr", placement: "₹9.8 LPA avg | ₹42 LPA highest", exam: "SET / JEE", slug: "symbiosis-institute-of-technology-pune", highlight: "Best Deemed | Top Recruiters" },
-  { rank: 5, name: "MIT World Peace University (MIT-WPU)", type: "Deemed", nirf: null, naac: "A+", fees: "₹2.0L–₹3.8L/yr", placement: "₹7.2 LPA avg | ₹38 LPA highest", exam: "MHT-CET / JEE", slug: "mit-wpu-mit-world-peace-university", highlight: "Best Infrastructure" },
-  { rank: 6, name: "Cummins College of Engineering for Women", type: "Autonomous", nirf: null, naac: "A+", fees: "₹1.3L–₹1.75L/yr", placement: "₹6.8 LPA avg | ₹28 LPA highest", exam: "MHT-CET / JEE", slug: "cummins-college-of-engineering-pune", highlight: "Best Women's College" },
-  { rank: 7, name: "JSPM Rajarshi Shahu College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.2L–₹1.7L/yr", placement: "₹5.2 LPA avg | ₹22 LPA highest", exam: "MHT-CET", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", highlight: "Best Private Budget" },
-  { rank: 8, name: "AISSMS College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.1L–₹1.55L/yr", placement: "₹4.8 LPA avg | ₹20 LPA highest", exam: "MHT-CET", slug: "aissms-college-of-engineering-pune", highlight: "Affordable & Reliable" },
-  { rank: 9, name: "Sinhgad College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.15L–₹1.6L/yr", placement: "₹4.9 LPA avg | ₹18 LPA highest", exam: "MHT-CET", slug: "sinhgad-college-of-engineering-pune", highlight: "Large Campus" },
-  { rank: 10, name: "Bharati Vidyapeeth College of Engineering", type: "Deemed", nirf: null, naac: "A", fees: "₹1.45L–₹1.95L/yr", placement: "₹5.6 LPA avg | ₹22 LPA highest", exam: "MHT-CET / JEE", slug: "bharati-vidyapeeth-college-engineering-pune", highlight: "Strong Alumni Network" },
-  { rank: 11, name: "D.Y. Patil College of Engineering Akurdi", type: "Private", nirf: null, naac: "A", fees: "₹1.05L–₹1.55L/yr", placement: "₹5.1 LPA avg | ₹20 LPA highest", exam: "MHT-CET", slug: "dy-patil-college-engineering-akurdi-pune", highlight: "Good Industry Tie-ups" },
-  { rank: 12, name: "Indira College of Engineering & Management", type: "Private", nirf: null, naac: "B++", fees: "₹95K–₹1.35L/yr", placement: "₹4.2 LPA avg | ₹16 LPA highest", exam: "MHT-CET", slug: "indira-college-of-engineering-management-pune", highlight: "Best Budget Option" },
+  { rank: 1, name: "College of Engineering Pune (COEP)", type: "Government", nirf: null, naac: "A+", fees: "₹80K–₹1.8L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "coep-college-of-engineering-pune", highlight: "Best Govt. | Lowest Fees" },
+  { rank: 2, name: "Pune Institute of Computer Technology (PICT)", type: "Autonomous", nirf: null, naac: "A", fees: "₹1.4L–₹1.9L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "pict-pune-institute-of-computer-technology", highlight: "Best for CS/IT" },
+  { rank: 3, name: "Vishwakarma Institute of Technology (VIT Pune)", type: "Autonomous", nirf: null, naac: "A+", fees: "₹1.6L–₹2.2L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "vit-pune-vishwakarma-institute-of-technology", highlight: "" },
+  { rank: 4, name: "Symbiosis Institute of Technology (SIT Pune)", type: "Deemed", nirf: null, naac: "A+", fees: "₹3.6L–₹4.8L/yr", placement: "Not published", exam: "SET / JEE", slug: "symbiosis-institute-of-technology-pune", highlight: "Best Deemed | Top Recruiters" },
+  { rank: 5, name: "MIT World Peace University (MIT-WPU)", type: "Deemed", nirf: null, naac: "A+", fees: "₹2.0L–₹3.8L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "mit-wpu-mit-world-peace-university", highlight: "Best Infrastructure" },
+  { rank: 6, name: "Cummins College of Engineering for Women", type: "Autonomous", nirf: null, naac: "A+", fees: "₹1.3L–₹1.75L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "cummins-college-of-engineering-pune", highlight: "Best Women's College" },
+  { rank: 7, name: "JSPM Rajarshi Shahu College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.2L–₹1.7L/yr", placement: "Not published", exam: "MHT-CET", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", highlight: "Best Private Budget" },
+  { rank: 8, name: "AISSMS College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.1L–₹1.55L/yr", placement: "Not published", exam: "MHT-CET", slug: "aissms-college-of-engineering-pune", highlight: "Affordable & Reliable" },
+  { rank: 9, name: "Sinhgad College of Engineering", type: "Private", nirf: null, naac: "A", fees: "₹1.15L–₹1.6L/yr", placement: "Not published", exam: "MHT-CET", slug: "sinhgad-college-of-engineering-pune", highlight: "Large Campus" },
+  { rank: 10, name: "Bharati Vidyapeeth College of Engineering", type: "Deemed", nirf: null, naac: "A", fees: "₹1.45L–₹1.95L/yr", placement: "Not published", exam: "MHT-CET / JEE", slug: "bharati-vidyapeeth-college-engineering-pune", highlight: "Strong Alumni Network" },
+  { rank: 11, name: "D.Y. Patil College of Engineering Akurdi", type: "Private", nirf: null, naac: "A", fees: "₹1.05L–₹1.55L/yr", placement: "Not published", exam: "MHT-CET", slug: "dy-patil-college-engineering-akurdi-pune", highlight: "Good Industry Tie-ups" },
+  { rank: 12, name: "Indira College of Engineering & Management", type: "Private", nirf: null, naac: "B++", fees: "₹95K–₹1.35L/yr", placement: "Not published", exam: "MHT-CET", slug: "indira-college-of-engineering-management-pune", highlight: "Best Budget Option" },
 ]
 
 const faqs = [
-  { question: "Which is the best engineering college in Pune?", answer: "College of Engineering Pune (COEP) is the best engineering college in Pune. It is a government autonomous institute established in 1854 with NIRF Rank 49, NAAC A+ grade, annual fees of just ₹80,000–₹1.8L, and average placement of ₹12 LPA. Admission is through MHT-CET (95+ percentile) or JEE Main." },
   { question: "What is the fee for engineering college in Pune?", answer: "Engineering college fees in Pune range from ₹80,000/year (COEP - Government) to ₹4.8L/year (SIT Pune - Deemed). Government colleges charge ₹80K–₹1.8L/year. Autonomous private colleges charge ₹1.4L–₹2.2L/year. Deemed universities charge ₹2L–₹4.8L/year. SC/ST/OBC students get fee concessions and government scholarships." },
   { question: "What exam is needed for engineering college in Pune?", answer: "MHT-CET (Maharashtra Common Entrance Test) is the primary exam for most Pune engineering colleges. JEE Main is accepted at COEP, VIT Pune, SIT Pune, and MIT-WPU. For deemed universities like SIT Pune, SET (Symbiosis Entrance Test) is also accepted. MHT-CET is conducted in April–May every year." },
   { question: "What MHT-CET score is needed for top Pune engineering colleges?", answer: "COEP requires 95+ percentile in MHT-CET for Computer Engineering. VIT Pune and PICT require 90–95 percentile. MIT-WPU requires 75–85 percentile. Private colleges like JSPM and AISSMS accept 60–75 percentile. SC/ST categories get 15–20 percentile relaxation." },
-  { question: "Which Pune engineering college has the best placements?", answer: "COEP has the highest average package (₹12 LPA) among government colleges. SIT Pune (Symbiosis) has the highest average among private/deemed colleges at ₹9.8 LPA. VIT Pune averages ₹8.5 LPA. Top recruiters include TCS, Infosys, Wipro, L&T, Bajaj Auto, and multinational tech companies." },
-  { question: "Is COEP better than VIT Pune?", answer: "COEP is ranked higher (NIRF 49) and has lower fees (₹80K/yr vs ₹1.6L/yr) than VIT Pune (NIRF 101). COEP has better placements (₹12 LPA avg vs ₹8.5 LPA). However, VIT Pune has better infrastructure and industry connections for non-CS branches. For CS/IT, PICT is also an excellent alternative to both." },
   { question: "Can I get COEP with 80 percentile in MHT-CET?", answer: "No, COEP requires 95+ percentile for Computer Engineering branch. For Mechanical or Civil at COEP, you may need 90+ percentile. With 80 percentile, you can target VIT Pune (lower branches), JSPM RSCOE, AISSMS, or Sinhgad College of Engineering." },
-  { question: "Which is the best private engineering college in Pune?", answer: "Among private autonomous colleges, PICT (Pune Institute of Computer Technology) is considered the best for CS/IT with ₹7.5 LPA average placement. VIT Pune is best overall for private autonomous status. Among deemed universities, SIT Pune (Symbiosis) has the highest placements (₹9.8 LPA avg)." },
 ]
 
 const breadcrumbs = [
@@ -76,7 +72,7 @@ export default function EngineeringCollegesPunePage() {
     "@id": PAGE_URL,
     url: PAGE_URL,
     name: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & MHT-CET Cutoffs",
-    description: "COEP is the best engineering college in Pune with NIRF #49, fees ₹80K/yr and ₹12 LPA avg placement. Compare top 12 engineering colleges by fees, MHT-CET cutoff, NAAC grade and placements.",
+    description: "Compare top 12 engineering colleges by fees, MHT-CET cutoff, NAAC grade and placements.",
     inLanguage: "en-IN",
     dateModified: TODAY,
     isPartOf: { "@id": `${BASE_URL}/#website` },
@@ -117,7 +113,7 @@ export default function EngineeringCollegesPunePage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>COEP (College of Engineering Pune)</strong> is the best engineering college in Pune with NIRF Rank 49, NAAC A+, fees ₹80K–₹1.8L/year, and ₹12 LPA average placement. Other top colleges: <strong>PICT</strong> (CS/IT), <strong>VIT Pune</strong> (NIRF 101), <strong>SIT Pune</strong> (best deemed, ₹9.8 LPA avg). Admission via <strong>MHT-CET</strong> (95+ percentile for COEP) or JEE Main.
+                Other top colleges: <strong>PICT</strong> (CS/IT), <strong>VIT Pune</strong> (), <strong>SIT Pune</strong>. Admission via <strong>MHT-CET</strong> (95+ percentile for COEP) or JEE Main.
               </p>
             </div>
           </div>
@@ -129,8 +125,6 @@ export default function EngineeringCollegesPunePage() {
             {[
               { label: "Engineering Colleges", value: "12+", icon: "🏛️" },
               { label: "Lowest Fees/yr", value: "₹80,000", icon: "💰" },
-              { label: "Highest Avg Package", value: "₹12 LPA", icon: "📈" },
-              { label: "Top NIRF Rank", value: "#49 (COEP)", icon: "🏆" },
             ].map(({ label, value, icon }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">
                 <p className="text-2xl mb-1">{icon}</p>
@@ -144,7 +138,6 @@ export default function EngineeringCollegesPunePage() {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
               <h2 className="text-lg font-bold text-gray-900">Engineering College Rankings & Comparison 2026</h2>
-              <p className="text-xs text-gray-400 mt-0.5">Ranked by NIRF rank, NAAC grade, placements & fees. Data verified 2026.</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -205,7 +198,6 @@ export default function EngineeringCollegesPunePage() {
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="text-xs bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded-full">🥇 Rank 1</span>
                     <span className="text-xs bg-green-100 text-green-700 font-semibold px-2 py-0.5 rounded-full">NAAC A+</span>
-                    <span className="text-xs bg-purple-100 text-purple-700 font-semibold px-2 py-0.5 rounded-full">NIRF #49</span>
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Government</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900">1. College of Engineering Pune (COEP)</h3>
@@ -218,8 +210,6 @@ export default function EngineeringCollegesPunePage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                 {[
                   { label: "Annual Fees", value: "₹80K–₹1.8L" },
-                  { label: "Avg Placement", value: "₹12 LPA" },
-                  { label: "Highest Package", value: "₹45 LPA" },
                   { label: "MHT-CET Cutoff", value: "95+ percentile" },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-gray-50 rounded-xl p-3">
@@ -257,8 +247,6 @@ export default function EngineeringCollegesPunePage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                 {[
                   { label: "Annual Fees", value: "₹1.4L–₹1.9L" },
-                  { label: "Avg Placement", value: "₹7.5 LPA" },
-                  { label: "Highest Package", value: "₹35 LPA" },
                   { label: "MHT-CET Cutoff", value: "92–95 percentile" },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-gray-50 rounded-xl p-3">
@@ -279,7 +267,6 @@ export default function EngineeringCollegesPunePage() {
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-0.5 rounded-full">🥉 Rank 3</span>
                     <span className="text-xs bg-green-100 text-green-700 font-semibold px-2 py-0.5 rounded-full">NAAC A+</span>
-                    <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">NIRF #101</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900">3. Vishwakarma Institute of Technology (VIT Pune)</h3>
                   <p className="text-sm text-gray-500 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" /> Bibwewadi, Pune · Est. 1983</p>
@@ -291,8 +278,6 @@ export default function EngineeringCollegesPunePage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                 {[
                   { label: "Annual Fees", value: "₹1.6L–₹2.2L" },
-                  { label: "Avg Placement", value: "₹8.5 LPA" },
-                  { label: "Highest Package", value: "₹40 LPA" },
                   { label: "MHT-CET Cutoff", value: "88–92 percentile" },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-gray-50 rounded-xl p-3">
@@ -302,7 +287,7 @@ export default function EngineeringCollegesPunePage() {
                 ))}
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                VIT Pune is an autonomous institute affiliated to SPPU with NIRF Rank 101 nationally. Known for strong industry connections with Bajaj Auto, Tata Motors, L&T, and Bosch. Excellent for Mechanical, Electronics, and Civil engineering. Has a dedicated incubation center and strong alumni network in manufacturing and automotive sectors.
+                VIT Pune is an autonomous institute affiliated to SPPU with nationally. Known for strong industry connections with Bajaj Auto, Tata Motors, L&T, and Bosch. Excellent for Mechanical, Electronics, and Civil engineering. Has a dedicated incubation center and strong alumni network in manufacturing and automotive sectors.
               </p>
             </div>
           </div>

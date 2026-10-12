@@ -142,15 +142,13 @@ const placementData = [
 ]
 
 const streamStats = [
-  { stream: "MBA",         avgCTC: "₹8–24 LPA", highestCTC: "₹85 LPA", topRecruiters: "Goldman Sachs, McKinsey, Deloitte",         color: "bg-blue-50 text-blue-800 border-blue-200" },
-  { stream: "Engineering", avgCTC: "₹7–12 LPA", highestCTC: "₹54 LPA", topRecruiters: "Google, Microsoft, NVIDIA, Qualcomm",       color: "bg-orange-50 text-orange-800 border-orange-200" },
-  { stream: "BBA / BCA",   avgCTC: "₹4–7 LPA",  highestCTC: "₹15 LPA", topRecruiters: "TCS, Infosys, Wipro, Cognizant",            color: "bg-green-50 text-green-800 border-green-200" },
-  { stream: "Law",         avgCTC: "₹5–10 LPA", highestCTC: "₹20 LPA", topRecruiters: "Top Law Firms, LPO, In-house Legal",        color: "bg-purple-50 text-purple-800 border-purple-200" },
+  { stream: "MBA",         avgCTC: "₹8", highestCTC: "₹85 LPA", topRecruiters: "Goldman Sachs, McKinsey, Deloitte",         color: "bg-blue-50 text-blue-800 border-blue-200" },
+  { stream: "Engineering", avgCTC: "₹7", highestCTC: "₹54 LPA", topRecruiters: "Google, Microsoft, NVIDIA, Qualcomm",       color: "bg-orange-50 text-orange-800 border-orange-200" },
+  { stream: "BBA / BCA",   avgCTC: "₹4",  highestCTC: "₹15 LPA", topRecruiters: "TCS, Infosys, Wipro, Cognizant",            color: "bg-green-50 text-green-800 border-green-200" },
+  { stream: "Law",         avgCTC: "₹5", highestCTC: "₹20 LPA", topRecruiters: "Top Law Firms, LPO, In-house Legal",        color: "bg-purple-50 text-purple-800 border-purple-200" },
 ]
 
 const faqs = [
-  { question: "Which Pune college has the highest placement package?", answer: "SIBM Pune has the highest placement package among Pune colleges — ₹85 LPA (2024 batch). For engineering, COEP Pune leads with ₹54 LPA highest package from companies like Google and Qualcomm. In both cases these are exceptional offers; the average packages are ₹24 LPA (SIBM) and ₹12 LPA (COEP)." },
-  { question: "What is the average placement package at engineering colleges in Pune?", answer: "Average placement packages at top Pune engineering colleges: COEP ₹12 LPA, VIT Pune ₹9.5 LPA, Cummins College ₹8 LPA, MIT-WPU ₹8.5 LPA, PCCOE ₹7 LPA. IT companies like Infosys, TCS, Wipro hire in bulk at ₹4–7 LPA; product companies hire selectively at ₹20–54 LPA." },
   { question: "Which companies hire from Pune MBA colleges?", answer: "Top Pune MBA recruiters: Goldman Sachs, Deutsche Bank, Barclays (from SIBM); McKinsey, BCG, Bain (from SIBM/SCMHRD); HDFC Bank, ICICI, Axis Bank (from SIBM, SCMHRD, PUMBA); Amazon, Flipkart, Myntra (e-commerce roles); Deloitte, KPMG, EY, PwC (consulting from all top colleges)." },
   { question: "What is the placement rate at Symbiosis colleges in Pune?", answer: "SIBM Pune and SCMHRD both achieve 100% placement consistently. SIOM and SITM typically achieve 95–98% placement. All Symbiosis institutes conduct structured placement processes with pre-placement talks, mock GDs and final drives." },
   { question: "How do I compare placement data across Pune colleges?", answer: "Use CampusLelo's free College Comparator tool to compare NIRF rankings, average CTC, highest CTC, placement %, top recruiters and sector data side-by-side for any two or more Pune colleges. Our data is verified from official NIRF disclosures and college placement reports." },

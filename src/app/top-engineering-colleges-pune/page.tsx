@@ -13,19 +13,17 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "₹7.5 LPA avg", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "₹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
-  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "₹5.2 LPA avg", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
-  { name: "Sinhgad College of Engineering", location: "Vadgaon", naac: "A", fees: "₹1.15L-1.6L/yr", placement: "₹4.9 LPA avg", slug: "sinhgad-college-of-engineering-pune" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
+  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "Not published", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
+  { name: "Sinhgad College of Engineering", location: "Vadgaon", naac: "A", fees: "₹1.15L-1.6L/yr", placement: "Not published", slug: "sinhgad-college-of-engineering-pune" },
 ]
 
 const faqs = [
-  { q: "Which is the top engineering college in Pune?", a: "COEP (College of Engineering Pune) is the top engineering college in Pune with NIRF Rank 49, NAAC A+, fees from ₹80K/year, and ₹12 LPA average placement. It is a 170-year-old government autonomous institution." },
-  { q: "What is the ranking of engineering colleges in Pune?", a: "Top ranked: 1. COEP (NIRF 49), 2. VIT Pune (NIRF 101), 3. PICT (not NIRF ranked but top for CS), 4. SIT Pune (Symbiosis), 5. MIT-WPU. These rankings are based on NIRF, NAAC grades, and placement data." },
   { q: "How to get into top engineering colleges in Pune?", a: "Clear MHT-CET (aim 95+ percentile for COEP/PICT) or JEE Main. Register on MHT-CET CAP portal and participate in centralized admission rounds. For deemed universities like SIT Pune, apply directly with JEE/SET scores." },
   { q: "What is the fee structure of top engineering colleges in Pune?", a: "COEP: ₹80K/yr (government), VIT Pune: ₹1.6L-2.2L/yr (autonomous), SIT Pune: ₹3.6L-4.8L/yr (deemed). Government colleges are cheapest, deemed universities are most expensive but offer premium placement." },
   { q: "Do top Pune engineering colleges offer hostel facilities?", a: "Yes. COEP, VIT Pune, SIT Pune, MIT-WPU, and Cummins all offer hostel facilities. COEP hostels cost approximately ₹60,000-80,000/year. Private colleges offer both on-campus and off-campus accommodation options." },
@@ -61,8 +59,7 @@ export default function TopEngineeringCollegesPunePage() {
         subtitle="Ranked by NIRF, NAAC grades, fees, and placement packages - the definitive guide to the best engineering institutions in Pune for 2026 admission."
         heroStats={[
           { value: "50+", label: "Engineering Colleges" },
-          { value: "NIRF #49", label: "Best Rank (COEP)" },
-          { value: "₹12 LPA", label: "Best Avg Placement" },
+          { value: "", label: "Best Rank (COEP)" },
           { value: "MHT-CET/JEE", label: "Primary Entrance" },
         ]}
         introHeading="Top Engineering Colleges in Pune: 2026 Ranking Guide"
@@ -74,7 +71,7 @@ export default function TopEngineeringCollegesPunePage() {
         colleges={colleges}
         whyHeading="Why Pune Engineering Colleges Rank Among India's Best"
         whyPoints={[
-          { title: "NIRF Top 101 Institutions", description: "COEP (NIRF #49) and VIT Pune (NIRF #101) are among India's top 101 engineering institutions, validated by the Ministry of Education's independent ranking framework." },
+          { title: "NIRF Top 101 Institutions", description: "COEP and VIT Pune are among India's top 101 engineering institutions, validated by the Ministry of Education's independent ranking framework." },
           { title: "Industry-Integrated Curriculum", description: "Top Pune engineering colleges offer internship programs with Bajaj Auto, Thermax, Cummins India, and 500+ IT companies, bridging the gap between academia and industry requirements." },
           { title: "Research & Innovation Culture", description: "COEP's startup incubation center, MIT-WPU's innovation lab, and SIT Pune's research clusters produce 100+ patents annually, making them nationally recognized research institutions." },
           { title: "Diverse Branch Options", description: "From Computer Science to Mechanical, Civil, Electronics, Chemical, and emerging AI/ML engineering specializations - Pune colleges offer 30+ branch options to match every interest." },

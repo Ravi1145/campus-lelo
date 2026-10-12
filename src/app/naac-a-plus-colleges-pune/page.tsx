@@ -13,12 +13,12 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Symbiosis International University", location: "Lavale", naac: "A+", fees: "₹4L-18L", placement: "₹28 LPA avg (MBA)", slug: "symbiosis-international-university-pune" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L", placement: "₹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
-  { name: "SNDT Women's University Pune Campus", location: "Karve Road", naac: "A+", fees: "₹30K-1.2L", placement: "₹5.5 LPA avg", slug: "sndt-womens-university-pune" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Symbiosis International University", location: "Lavale", naac: "A+", fees: "₹4L-18L", placement: "Not published", slug: "symbiosis-international-university-pune" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
+  { name: "SNDT Women's University Pune Campus", location: "Karve Road", naac: "A+", fees: "₹30K-1.2L", placement: "Not published", slug: "sndt-womens-university-pune" },
   { name: "D.Y. Patil University (Pimpri)", location: "Pimpri", naac: "A+", fees: "₹1.5L-22L", placement: "Varies by program", slug: "dy-patil-university-pimpri-pune" },
   { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹25K-60K", placement: "Govt. College", slug: "fergusson-college-pune" },
 ]

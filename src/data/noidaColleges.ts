@@ -1,6 +1,8 @@
 import { College } from "@/types"
 
-export const noidaColleges: College[] = [
+import { scrubCollege } from "@/lib/verified"
+
+const rawNoidaColleges: College[] = [
   {
     id: 101,
     slug: "amity-university-noida",
@@ -707,3 +709,6 @@ export const noidaColleges: College[] = [
     email: "admissions@gdgoenka.ac.in"
   },
 ]
+
+// Packages, NIRF ranks and recruiter lists are removed until sourced (src/lib/verified.ts)
+export const noidaColleges: College[] = rawNoidaColleges.map(scrubCollege)

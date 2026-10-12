@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Computer Engineering Colleges in Pune 2026 | CS/IT BTech Admission",
-  description: "Best computer engineering colleges in Pune 2026. PICT, COEP, VIT Pune, SIT - compare CS fees, MHT-CET cutoffs, placement packages up to ₹45 LPA. Free admission guidance.",
+  description: "Best computer engineering colleges in Pune 2026. Free admission guidance.",
   path: "/computer-engineering-colleges-pune",
   keywords: ["computer engineering colleges pune", "cs colleges pune", "it engineering colleges pune 2026", "best cs college pune"],
 })
@@ -13,20 +13,18 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "₹7.5 LPA avg | ₹35 LPA highest", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "College of Engineering Pune (COEP) - CSE", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg | ₹45 LPA highest", slug: "coep-college-of-engineering-pune" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "MIT World Peace University - CSE/AIML", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "₹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
-  { name: "JSPM RSCOE - Computer Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "₹5.2 LPA avg", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
-  { name: "AISSMS College of Engineering - CS/IT", location: "Kennedy Road", naac: "A", fees: "₹1.1L-1.55L/yr", placement: "₹4.8 LPA avg", slug: "aissms-college-of-engineering-pune" },
+  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "College of Engineering Pune (COEP) - CSE", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "MIT World Peace University - CSE/AIML", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
+  { name: "JSPM RSCOE - Computer Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "Not published", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
+  { name: "AISSMS College of Engineering - CS/IT", location: "Kennedy Road", naac: "A", fees: "₹1.1L-1.55L/yr", placement: "Not published", slug: "aissms-college-of-engineering-pune" },
 ]
 
 const faqs = [
-  { q: "Which is the best computer engineering college in Pune?", a: "PICT (Pune Institute of Computer Technology) is the top CS-focused college in Pune, with 98%+ placement rate and ₹7.5 LPA average. For overall prestige, COEP CSE branch (NIRF #49, ₹12 LPA avg) is the best option if you can get 99.5+ percentile." },
   { q: "What is the MHT-CET cutoff for computer engineering in Pune?", a: "COEP CSE requires 99.5+ percentile. PICT requires 95-97 percentile. VIT Pune CS requires 88-92 percentile. MIT-WPU CS/AIML requires 75-85 percentile. JSPM RSCOE accepts 60-70 percentile for CS." },
-  { q: "What is the placement package for computer engineers from Pune colleges?", a: "COEP CS graduates earn ₹12 LPA average with ₹45 LPA highest. PICT averages ₹7.5 LPA with ₹35 LPA highest. SIT Pune (Symbiosis) averages ₹9.8 LPA. Top recruiters: Google, Microsoft, Amazon, TCS Digital, Infosys, Goldman Sachs." },
   { q: "Is there any college in Pune that specializes only in computer engineering?", a: "Yes, PICT (Pune Institute of Computer Technology) is exclusively a computer and IT engineering college. It offers only CS, IT, and related branches, making it the most specialized CS college in Pune with exceptional industry connections." },
   { q: "What new CS specializations are available in Pune colleges for 2026?", a: "For 2026, several Pune colleges offer specialized CS branches: AI & Machine Learning (MIT-WPU, SIT Pune), Data Science (VIT Pune, MIT-WPU), Cyber Security (COEP, VIT Pune), Cloud Computing, and IoT Engineering. These have slightly lower cutoffs than core CSE." },
 ]
@@ -61,7 +59,6 @@ export default function ComputerEngineeringCollegesPunePage() {
         subtitle="Find the best CS, IT, and AI/ML engineering colleges in Pune. Compare MHT-CET cutoffs, fees, placement packages, and new specializations for 2026 admission."
         heroStats={[
           { value: "25+", label: "CS/IT Colleges" },
-          { value: "₹45 LPA", label: "Highest Package" },
           { value: "98%+", label: "Best Placement Rate" },
           { value: "99.5%ile", label: "COEP CSE Cutoff" },
         ]}
@@ -75,7 +72,7 @@ export default function ComputerEngineeringCollegesPunePage() {
         whyHeading="Why Study Computer Engineering in Pune?"
         whyPoints={[
           { title: "Direct Access to IT Jobs", description: "Hinjewadi IT Park (10 km from most colleges) hosts Infosys, Wipro, Cognizant, HSBC Tech, and 300+ companies - the world's most accessible IT employment hub for Pune CS students." },
-          { title: "Highest Starting Salaries", description: "CS/IT engineers from top Pune colleges start at ₹6-12 LPA, with product companies offering ₹15-45 LPA packages. The average salary for Pune CS graduates is 40% higher than national average." },
+          { title: "Highest Starting Salaries", description: "CS/IT engineers from top Pune colleges start at ₹6, with product companies offering ₹15 packages. The average salary for Pune CS graduates is 40% higher than national average." },
           { title: "AI & Emerging Tech Focus", description: "Pune colleges now offer AI/ML, Data Science, and Cyber Security specializations with industry-partnered curricula, preparing students for the next decade of tech evolution." },
           { title: "Internship Ecosystem", description: "Pune's IT density means CS students can secure internships at paid rates of ₹15,000-50,000/month from second year, gaining 2+ years of industry experience before graduation." },
           { title: "Startup & Entrepreneurship Support", description: "COEP's E-Cell, PICT's startup community, and MIT-WPU's incubator have launched 100+ funded startups, making Pune CS colleges excellent launchpads for entrepreneurial engineers." },

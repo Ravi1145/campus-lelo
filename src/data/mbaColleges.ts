@@ -23,7 +23,9 @@ export interface MBACollege {
   highlights: string[]
 }
 
-export const mbaColleges: MBACollege[] = [
+import { scrubText, hasFigure, scrubStrings } from "@/lib/verified"
+
+const rawMbaColleges: MBACollege[] = [
   {
     rank: 1,
     name: "Symbiosis Institute of Business Management",
@@ -207,9 +209,22 @@ export const mbaColleges: MBACollege[] = [
   },
 ]
 
+// Packages, NIRF ranks, recruiter lists and unsourced cut-off ranges are removed until sourced (src/lib/verified.ts)
+export const mbaColleges: MBACollege[] = rawMbaColleges.map((c) => ({
+  ...c,
+  nirfRank: null,
+  avgPlacement: 0,
+  highestPlacement: 0,
+  topRecruiters: [],
+  mahCetCutoff: undefined,
+  catCutoff: undefined,
+  cmatCutoff: undefined,
+  highlights: c.highlights.filter((h) => !hasFigure(h)).map((h) => scrubText(h)),
+}))
+
 export const mbaSlugs = mbaColleges.map(c => c.slug)
 
-export const mbaFAQs = {
+const rawMbaFAQs = {
   general: [
     { question: "Which is the best MBA college in Pune?", answer: "Symbiosis Institute of Business Management (SIBM Pune) is the #1 MBA college in Pune with NIRF rank 14 and average placement of ₹24 LPA. SCMHRD (NIRF #22, avg ₹19 LPA) and PUMBA (government, ₹1.25L/yr fees) are close runners-up. For budget-conscious students, PUMBA offers exceptional value." },
     { question: "What is the MBA fee in Pune?", answer: "MBA fees in Pune range from ₹1.25L/year at PUMBA (government) to ₹16L/year at FLAME University. Mid-tier MBA colleges charge ₹3.5L–7L/year. Total 2-year MBA cost: ₹2.5L (PUMBA) to ₹32L (FLAME/SIBM). Most MAH-CET MBA colleges fall in the ₹3L–10L total range." },
@@ -229,3 +244,6 @@ export const mbaFAQs = {
     { question: "What is the highest package after MBA in Pune?", answer: "The highest MBA placement package in Pune is ₹85 LPA from SIBM Pune (2024). SCMHRD's highest is ₹62 LPA. Mid-tier colleges see highest packages of ₹18–36 LPA. The sector average for Finance and Analytics specializations is 20-30% higher than Marketing/HR." },
   ],
 }
+
+// FAQ answers lose any package or NIRF figure until sourced (src/lib/verified.ts)
+export const mbaFAQs = scrubStrings(rawMbaFAQs)

@@ -80,7 +80,7 @@ const qaData = [
     stream: "Engineering",
     college: "PICT / VIT Pune",
     tags: ["PICT", "VIT Pune", "CSE Comparison"],
-    answer: "PICT vs VIT Pune for CSE: PICT — NAAC A, fees ₹1.4–1.9L/yr, avg placement ₹7.5 LPA, very strong in CS/IT, product companies like Goldman Sachs visit. VIT Pune — NIRF #101, NAAC A+, fees ₹1.6–2.2L/yr, avg placement ₹8.5 LPA, better for core + IT combined. For pure CS/IT career, PICT edges out slightly. For mechanical + electronics, VIT Pune is better. COEP > PICT ≈ VIT Pune for CS.",
+    answer: "PICT vs VIT Pune for CSE: PICT — NAAC A, fees ₹1.4–1.9L/yr, very strong in CS/IT, product companies like Goldman Sachs visit. VIT Pune, NAAC A+, fees ₹1.6–2.2L/yr, better for core + IT combined. For pure CS/IT career, PICT edges out slightly. For mechanical + electronics, VIT Pune is better. COEP > PICT ≈ VIT Pune for CS.",
     answeredBy: "CampusLelo Research",
     date: "2025-12-15",
     helpful: 115,

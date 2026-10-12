@@ -164,11 +164,11 @@ const faqs = [
   },
   {
     question: "Is BCom from BMCC Pune good for placements?",
-    answer: "Yes, BCom from BMCC (Brihan Maharashtra College of Commerce) is well-respected in Pune's corporate and banking sector. BMCC graduates get placed in banks (HDFC, ICICI), accounting firms (Deloitte, EY), and companies like Infosys and TCS via campus recruitment. Average starting salary is ₹3–5 LPA. Many students pursue CA/CMA/MBA after BCom from BMCC.",
+    answer: "Yes, BCom from BMCC (Brihan Maharashtra College of Commerce) is well-respected in Pune's corporate and banking sector. BMCC graduates get placed in banks (HDFC, ICICI), accounting firms (Deloitte, EY), and companies like Infosys and TCS via campus recruitment. Average starting salary is ₹3. Many students pursue CA/CMA/MBA after BCom from BMCC.",
   },
   {
     question: "What career can I do after BA/BSc from Pune colleges?",
-    answer: "After BA from Pune colleges, careers include civil services (UPSC/MPSC), MBA/MMS admissions, journalism, content writing, teaching (B.Ed), law (BA LLB), and government exams. After BSc, options include MSc/MTech, government research jobs, MBA, data science, and pharma. Most graduates earn ₹3–8 LPA in their first job, rising to ₹8–15 LPA within 5 years.",
+    answer: "After BA from Pune colleges, careers include civil services (UPSC/MPSC), MBA/MMS admissions, journalism, content writing, teaching (B.Ed), law (BA LLB), and government exams. After BSc, options include MSc/MTech, government research jobs, MBA, data science, and pharma. Most graduates earn ₹3 in their first job, rising to ₹8 within 5 years.",
   },
 ]
 

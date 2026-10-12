@@ -8,6 +8,7 @@ import { seoPages as seoPageData } from "@/data/seoPages"
 import { mbaExams, getMbaExam, EXAM_TOPICS, prepPageIndexable, type ExamTopic } from "@/data/mba/exams"
 import { collegesPageIndexable } from "@/data/mba/programAdmissions"
 import { regionPages } from "@/data/mba/regionPages"
+import { retiredPages } from "@/data/retiredPages"
 import { createClient } from "@supabase/supabase-js"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -370,16 +371,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     }))
 
-  // College sub-pages: fees, cutoff, admission, scholarship (placements pages are noindex: figures removed)
-  const collegeSubPages: MetadataRoute.Sitemap = colleges.flatMap(c =>
-    ["fees", "cutoff", "admission", "scholarship"].map(sub => ({
-      url: `${BASE_URL}/colleges/${c.slug}/${sub}`,
-      lastModified: "2026-06-10",
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    }))
-  )
-
   // Dynamic comparison pages
   const { COMPARISON_PAIRS } = await import("@/app/compare/[slug]/page")
   const knownSlugs = new Set(colleges.map((c) => c.slug))
@@ -390,13 +381,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }))
 
+  const retired = new Set(retiredPages.map((r) => `${BASE_URL}${r.source}`))
+
   return [
     ...staticPages,
     ...seoPages,
     ...regionEntries,
     ...collegePages,
     ...dbCollegePages,
-    ...collegeSubPages,
     ...comparisonPages,
     ...collegesInPunePages,
     ...blogPages,
@@ -406,5 +398,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...mbaExamPages,
     ...courseDetailPages,
     ...careerPathPages,
-  ]
+  ].filter((e) => !retired.has(e.url))
 }

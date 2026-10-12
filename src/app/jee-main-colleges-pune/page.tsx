@@ -7,7 +7,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "JEE Main Colleges in Pune 2026 | JEE Accepting Engineering Colleges",
-  description: "Top engineering colleges in Pune accepting JEE Main 2026 scores — COEP (NIRF #49), VIT Pune (NIRF #101), SIT Pune, MIT-WPU. Fees ₹80K–₹4.8L/yr, cutoffs & admission process.",
+  description: "Top engineering colleges in Pune accepting JEE Main 2026 scores — COEP, VIT Pune, SIT Pune, MIT-WPU. Fees ₹80K–₹4.8L/yr, cutoffs & admission process.",
   path: "/jee-main-colleges-pune",
   keywords: [
     "jee main colleges pune 2026", "jee main accepting colleges pune", "engineering colleges pune jee main",
@@ -17,8 +17,8 @@ export const metadata: Metadata = genMeta({
 })
 
 const colleges = [
-  { rank: 1, name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: 49, naac: "A+", fees: "₹80K–₹1.8L/yr", jeeNote: "AIQ 15% seats via JEE Main; 50+ percentile required", highlight: "Best Govt. | NIRF #49" },
-  { rank: 2, name: "VIT Pune (Vishwakarma Institute of Technology)", slug: "vit-pune-vishwakarma-institute-of-technology", nirf: 101, naac: "A+", fees: "₹1.6L–₹2.2L/yr", jeeNote: "JEE Main 70+ percentile accepted", highlight: "NIRF #101" },
+  { rank: 1, name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: null, naac: "A+", fees: "₹80K–₹1.8L/yr", jeeNote: "AIQ 15% seats via JEE Main; 50+ percentile required", highlight: "Best Govt." },
+  { rank: 2, name: "VIT Pune (Vishwakarma Institute of Technology)", slug: "vit-pune-vishwakarma-institute-of-technology", nirf: null, naac: "A+", fees: "₹1.6L–₹2.2L/yr", jeeNote: "JEE Main 70+ percentile accepted", highlight: "" },
   { rank: 3, name: "Symbiosis Institute of Technology (SIT Pune)", slug: "symbiosis-institute-of-technology-pune", nirf: null, naac: "A+", fees: "₹3.6L–₹4.8L/yr", jeeNote: "JEE Main + SITEEE accepted", highlight: "Best Deemed" },
   { rank: 4, name: "MIT World Peace University (MIT-WPU)", slug: "mit-wpu-mit-world-peace-university", nirf: null, naac: "A+", fees: "₹2.0L–₹3.8L/yr", jeeNote: "JEE Main 60+ percentile accepted", highlight: "Large Campus" },
   { rank: 5, name: "Cummins College of Engineering for Women", slug: "cummins-college-of-engineering-pune", nirf: null, naac: "A+", fees: "₹1.3L–₹1.75L/yr", jeeNote: "JEE Main 65+ percentile", highlight: "Best Women's College" },
@@ -26,9 +26,7 @@ const colleges = [
 ]
 
 const faqs = [
-  { question: "Which Pune engineering colleges accept JEE Main 2026?", answer: "COEP Pune (NIRF #49) accepts JEE Main for 15% AIQ seats at 50+ percentile. VIT Pune (NIRF #101) accepts 70+ percentile. SIT Pune (Symbiosis) accepts JEE Main + SITEEE. MIT-WPU accepts 60+ percentile. Cummins College accepts 65+ percentile. All these are top-ranked autonomous or government colleges." },
   { question: "What JEE Main score is required for COEP Pune?", answer: "COEP Pune requires approximately 50+ percentile in JEE Main for AIQ seats in most branches. For Computer Engineering, the JEE Main cutoff is higher — approximately 95+ percentile. COEP gets 15% of seats filled via AIQ (JEE Main) and 85% via MHT-CET state quota." },
-  { question: "Is JEE Main accepted in Pune colleges for 2026?", answer: "Yes. Major Pune engineering colleges accepting JEE Main 2026: COEP (NIRF #49), VIT Pune (NIRF #101), SIT Pune (Symbiosis), MIT-WPU, Cummins College, Bharati Vidyapeeth, D.Y. Patil Engineering. All process admissions through DTE Maharashtra CAP rounds after JEE Main results (April 2026)." },
   { question: "Is MHT-CET better than JEE for Pune engineering admission?", answer: "For Pune students targeting local colleges, MHT-CET is better — 85% of seats in SPPU-affiliated colleges are filled via MHT-CET state quota. JEE Main only fills 15% AIQ seats. However, for COEP top branches (CS/IT), JEE Main can give a better chance than competing with all Maharashtra MHT-CET toppers." },
 ]
 
@@ -67,7 +65,7 @@ export default function JeeMainCollegesPune() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>COEP Pune</strong> (NIRF #49) is the best JEE Main accepting college in Pune — 15% AIQ seats, fees ₹80K/yr. Minimum 50+ percentile required for most branches. <strong>VIT Pune</strong> (NIRF #101) requires 70+ percentile. Admission via <strong>DTE Maharashtra CAP</strong> after JEE Main results.
+                <strong>COEP Pune</strong> () is the best JEE Main accepting college in Pune — 15% AIQ seats, fees ₹80K/yr. Minimum 50+ percentile required for most branches. <strong>VIT Pune</strong> () requires 70+ percentile. Admission via <strong>DTE Maharashtra CAP</strong> after JEE Main results.
               </p>
             </div>
           </div>

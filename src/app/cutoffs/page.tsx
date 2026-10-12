@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "What is SNAP cutoff for SIBM Pune MBA 2026?",
-    answer: "SIBM Pune SNAP 2026 cutoff is approximately 99+ percentile (Open category). SNAP score + GDPI (Group Discussion + Personal Interview) determines final admission. Fees: ₹16–22L for 2-year MBA. Average placement: ₹28 LPA.",
+    answer: "SIBM Pune SNAP 2026 cutoff is approximately 99+ percentile (Open category). SNAP score + GDPI (Group Discussion + Personal Interview) determines final admission. Fees: ₹16–22L for 2-year MBA..",
   },
   {
     question: "Are 2026 cutoffs available or just estimates?",

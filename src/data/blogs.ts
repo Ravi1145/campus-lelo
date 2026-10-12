@@ -1,9 +1,10 @@
 import { BlogPost } from "@/types"
+import { scrubArticle, scrubText } from "@/lib/verified"
 import { mbaDelhiNcrGuide } from "./blog-posts/mba-delhi-ncr-noida"
 import { mbaIndiaGuides } from "./blog-posts/mba-india-guides"
 import { mbaCutoffGuides } from "./blog-posts/mba-cutoff-guides"
 
-export const blogs: BlogPost[] = [
+const rawBlogs: BlogPost[] = [
   {
     id: 1,
     slug: "best-btech-colleges-pune-2026",
@@ -1067,6 +1068,13 @@ Pune has a unique recruitment ecosystem that differs significantly from Bangalor
   ...mbaIndiaGuides,
   ...mbaCutoffGuides,
 ]
+
+// Package and NIRF figures are removed from articles until they are sourced (src/lib/verified.ts)
+export const blogs: BlogPost[] = rawBlogs.map((b) => ({
+  ...b,
+  excerpt: scrubText(b.excerpt) || b.title,
+  body: scrubArticle(b.body),
+}))
 
 export const getBlogBySlug = (slug: string): BlogPost | undefined => {
   return blogs.find(b => b.slug === slug)

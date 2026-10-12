@@ -23,8 +23,8 @@ const colleges = [
     program: "BTech Computer Engineering (AI/DS electives)",
     fees: "₹80K–₹1.1L/yr",
     cutoff: "99.8 percentile (MHT-CET CSE)",
-    placement: "₹12 LPA avg",
-    highlight: "NIRF #49 — best value for AI/DS track",
+    placement: "Not published",
+    highlight: " — best value for AI/DS track",
   },
   {
     name: "MIT World Peace University (MIT-WPU)",
@@ -32,7 +32,7 @@ const colleges = [
     program: "BTech CSE (AI & Data Science) / BSc Data Science",
     fees: "₹2.2L–₹3.5L/yr",
     cutoff: "82–88 percentile (MHT-CET)",
-    placement: "₹9 LPA avg",
+    placement: "Not published",
     highlight: "Dedicated AI & Data Science BTech programme",
   },
   {
@@ -41,8 +41,8 @@ const colleges = [
     program: "BTech CS with Data Science specialisation",
     fees: "₹1.6L–₹2.2L/yr",
     cutoff: "88–92 percentile (MHT-CET)",
-    placement: "₹8.5 LPA avg",
-    highlight: "NIRF #101 — strong industry projects in DS",
+    placement: "Not published",
+    highlight: " — strong industry projects in DS",
   },
   {
     name: "Symbiosis Institute of Technology (SIT)",
@@ -50,7 +50,7 @@ const colleges = [
     program: "BTech CSE (AI/ML) / MTech Data Science",
     fees: "₹3L–₹4.8L/yr",
     cutoff: "85–90 percentile (MHT-CET)",
-    placement: "₹9.8 LPA avg",
+    placement: "Not published",
     highlight: "Best for AI/ML research — Symbiosis brand",
   },
   {
@@ -59,7 +59,7 @@ const colleges = [
     program: "BTech CS / IT (strong DS curriculum)",
     fees: "₹1.4L–₹1.9L/yr",
     cutoff: "92–94 percentile (MHT-CET)",
-    placement: "₹7.5 LPA avg",
+    placement: "Not published",
     highlight: "Best CS-focused college with strong data analytics placements",
   },
   {
@@ -68,16 +68,14 @@ const colleges = [
     program: "BTech CSE (AI/Data Science focus)",
     fees: "₹1.5L–₹2L/yr",
     cutoff: "95–98 percentile (MHT-CET / JEE)",
-    placement: "₹14 LPA avg",
+    placement: "Not published",
     highlight: "Government IIIT — best AI/ML curriculum in Pune",
   },
 ]
 
 const faqs = [
-  { q: "Which is the best college for Data Science in Pune in 2026?", a: "IIIT Pune and COEP are the best for Data Science in Pune — both government colleges with strong AI/ML curriculum and placements of ₹12–14 LPA. For private colleges, MIT-WPU's dedicated BTech AI & Data Science programme and SIT Pune's MTech Data Science are excellent options." },
   { q: "What is the fee for a Data Science course in Pune?", a: "Data Science course fees in Pune range from ₹80,000/year (COEP government) to ₹4.8L/year (SIT Pune deemed university). BSc Data Science programmes range from ₹40,000–₹1.5L/year. MCA/MTech Data Science: ₹1.5L–₹3L/year total." },
   { q: "What MHT-CET score is needed for Data Science colleges in Pune?", a: "IIIT Pune needs 95+ percentile, PICT 92+, VIT Pune 88+, MIT-WPU 82+. For COEP's Computer Engineering (which includes AI/DS electives), you need 99.8 percentile. Private colleges below 80 percentile like DY Patil and Indira College also offer data science programmes." },
-  { q: "What are the job prospects after Data Science from Pune colleges?", a: "Data Science graduates from Pune colleges join companies like TCS, Infosys, Persistent, Zensar, and startups in Hinjewadi IT Park. Average salaries range from ₹6–15 LPA. Top performers from COEP and IIIT get ₹25–40 LPA from product companies like Google, Amazon, and Goldman Sachs." },
   { q: "Is there a BSc Data Science college in Pune?", a: "Yes — MIT-WPU, Symbiosis College of Arts and Commerce (SCAC), Fergusson College, and Pune University department offer BSc Data Science / Statistics programmes. Fees range from ₹40,000–₹1.5L/year. Duration: 3 years (UG) or 2 years (PG specialisation)." },
 ]
 
@@ -112,8 +110,6 @@ export default function DataScienceCollegesPune() {
           {[
             { label: "Colleges", value: "6+" },
             { label: "Min Fees/yr", value: "₹80K" },
-            { label: "Avg Placement", value: "₹9 LPA" },
-            { label: "Top Package", value: "₹40 LPA" },
           ].map((s) => (
             <div key={s.label} className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm">
               <div className="text-2xl font-bold text-purple-700">{s.value}</div>

@@ -18,7 +18,7 @@ export const metadata: Metadata = genMeta({
 
 const engineeringColleges = [
   { name: "COEP Technological University", fees: "₹80,000/yr", type: "Government", naac: "A+", nirf: "#49", note: "Cheapest top-ranked engineering college in Pune" },
-  { name: "AIT Pune (Army Institute of Technology)", fees: "₹85,000/yr", type: "Government", naac: "A", nirf: "—", note: "Best value — ₹12–13.6 LPA average placement" },
+  { name: "AIT Pune (Army Institute of Technology)", fees: "₹85,000/yr", type: "Government", naac: "A", nirf: "—", note: "Best value average placement" },
   { name: "AISSMS College of Engineering", fees: "₹1.1L/yr", type: "Private (Aided)", naac: "A", nirf: "—", note: "Just above ₹1L — excellent placement in IT sector" },
   { name: "JSPM Rajarshi Shahu COE", fees: "₹95,000/yr", type: "Private (Unaided)", naac: "B++", nirf: "—", note: "Strong MHT-CET acceptance — good for Mech/CS" },
   { name: "Indira College of Engineering", fees: "₹97,000/yr", type: "Private (Unaided)", naac: "B+", nirf: "—", note: "Affordable option near Pune; good placement cell" },

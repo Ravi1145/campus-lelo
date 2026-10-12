@@ -23,7 +23,7 @@ export const metadata: Metadata = genMeta({
 })
 
 const mhtCetOnlyColleges = [
-  { name: "College of Engineering Pune (COEP)", type: "Government", naac: "A+", nirf: 49, jeeRequired: false, note: "MHT-CET 95+ %ile for CSE" },
+  { name: "College of Engineering Pune (COEP)", type: "Government", naac: "A+", nirf: null, jeeRequired: false, note: "MHT-CET 95+ %ile for CSE" },
   { name: "JSPM Rajarshi Shahu College of Engineering", type: "Private", naac: "A", nirf: null, jeeRequired: false, note: "MHT-CET 60–75 %ile" },
   { name: "AISSMS College of Engineering", type: "Private", naac: "A", nirf: null, jeeRequired: false, note: "MHT-CET 60–70 %ile" },
   { name: "Sinhgad College of Engineering", type: "Private", naac: "A", nirf: null, jeeRequired: false, note: "MHT-CET 65–75 %ile" },
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     question: "Can I get admission in a top Pune engineering college with only MHT-CET?",
-    answer: "Yes. COEP (NIRF #49), PICT (best CS college in Pune), and VIT Pune (NIRF #101) all accept MHT-CET as the primary entrance exam. You don't need JEE to get into these top-ranked colleges. PICT and VIT Pune accept MHT-CET; JEE score is optional and rarely changes the allocation.",
+    answer: "Yes. COEP, PICT (best CS college in Pune), and VIT Pune all accept MHT-CET as the primary entrance exam. You don't need JEE to get into these top-ranked colleges. PICT and VIT Pune accept MHT-CET; JEE score is optional and rarely changes the allocation.",
   },
   {
     question: "What is lateral entry admission in Pune engineering colleges without JEE?",
@@ -108,7 +108,7 @@ export default function EngineeringAdmissionWithoutJEEPage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Yes, you can get B.Tech admission in Pune without JEE Main.</strong> Over 80% of Pune engineering colleges — including <strong>COEP</strong> (NIRF #49), <strong>PICT</strong>, <strong>JSPM</strong>, and <strong>AISSMS</strong> — admit students through <strong>MHT-CET only</strong>. Alternatives: lateral entry (diploma holders, no entrance exam), management quota (12th pass sufficient, no JEE/MHT-CET needed).
+                <strong>Yes, you can get B.Tech admission in Pune without JEE Main.</strong> Over 80% of Pune engineering colleges — including <strong>COEP</strong> (), <strong>PICT</strong>, <strong>JSPM</strong>, and <strong>AISSMS</strong> — admit students through <strong>MHT-CET only</strong>. Alternatives: lateral entry (diploma holders, no entrance exam), management quota (12th pass sufficient, no JEE/MHT-CET needed).
               </p>
             </div>
           </div>

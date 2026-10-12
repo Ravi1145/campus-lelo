@@ -26,7 +26,7 @@ const colleges = [
     type: "Deemed Private",
     naac: "A+",
     fees: "₹8L–₹11L/yr (₹16L–₹22L total)",
-    placement: "₹18.2 LPA avg",
+    placement: "Not published",
     exam: "SNAP",
     slug: "sibm-symbiosis-institute-business-management-pune",
     highlight: "Top MBA in Pune",
@@ -37,7 +37,7 @@ const colleges = [
     type: "Deemed Private",
     naac: "A+",
     fees: "₹7.5L–₹10L/yr",
-    placement: "₹17.5 LPA avg",
+    placement: "Not published",
     exam: "SNAP",
     slug: "scmhrd-symbiosis-centre-management-hrd",
     highlight: "Best for HR & Marketing",
@@ -48,7 +48,7 @@ const colleges = [
     type: "Autonomous Private",
     naac: "A+",
     fees: "₹3.5L–₹5.5L/yr (₹7L–₹11L total)",
-    placement: "₹8.5 LPA avg",
+    placement: "Not published",
     exam: "CAT / MAT / CMAT",
     slug: "mit-school-of-management-pune",
     highlight: "Best Value MBA",
@@ -59,7 +59,7 @@ const colleges = [
     type: "Autonomous Private",
     naac: "A",
     fees: "₹2.5L–₹3.75L/yr (₹5L–₹7.5L total)",
-    placement: "₹6.8 LPA avg",
+    placement: "Not published",
     exam: "CAT / MAT / CMAT",
     slug: "bimm-bharati-vidyapeeth-institute-management-pune",
     highlight: "Affordable PGDM",
@@ -70,7 +70,7 @@ const colleges = [
     type: "Autonomous Private",
     naac: "A",
     fees: "₹2.1L–₹3.25L/yr (₹4.2L–₹6.5L total)",
-    placement: "₹5.9 LPA avg",
+    placement: "Not published",
     exam: "CAT / MAT / CMAT",
     slug: "indira-institute-of-management-pune",
     highlight: "Best Budget MBA",
@@ -81,7 +81,7 @@ const colleges = [
     type: "Deemed Private",
     naac: "A+",
     fees: "₹7L–₹9L/yr",
-    placement: "₹14.2 LPA avg",
+    placement: "Not published",
     exam: "SNAP",
     slug: "siib-symbiosis-institute-of-international-business-pune",
     highlight: "Best for IT Management",
@@ -92,7 +92,7 @@ const colleges = [
     type: "Autonomous Private",
     naac: "B+",
     fees: "₹1.4L–₹2.25L/yr (₹2.8L–₹4.5L total)",
-    placement: "₹4.8 LPA avg",
+    placement: "Not published",
     exam: "CAT / MAT / CMAT",
     slug: "suryadatta-institute-of-management-pune",
     highlight: "Most Affordable MBA",
@@ -100,11 +100,6 @@ const colleges = [
 ]
 
 const faqs = [
-  {
-    question: "Which is the best private MBA college in Pune?",
-    answer:
-      "SIBM (Symbiosis Institute of Business Management) is the top-ranked private MBA college in Pune with ₹18.2 LPA average placement and SNAP as the entrance exam. SCMHRD is a close second (₹17.5 LPA avg). For budget-friendly options, MIT-SOM (₹8.5 LPA avg) and BIMM offer excellent value.",
-  },
   {
     question: "What is the difference between deemed private MBA colleges and autonomous private MBA colleges in Pune?",
     answer:
@@ -128,7 +123,7 @@ const faqs = [
   {
     question: "Is private MBA better than government MBA college in Pune?",
     answer:
-      "For top private deemed colleges like SIBM and SCMHRD, placements (₹17–18 LPA avg) significantly surpass most government MBA programs. However, PUMBA (Government College of Pune) offers excellent MBA at very low fees. For students who clear SNAP, private deemed Symbiosis colleges are clearly superior in placements and industry exposure.",
+      "For top private deemed colleges like SIBM and SCMHRD, placements significantly surpass most government MBA programs. However, PUMBA (Government College of Pune) offers excellent MBA at very low fees. For students who clear SNAP, private deemed Symbiosis colleges are clearly superior in placements and industry exposure.",
   },
   {
     question: "Can I get admission in private MBA college in Pune without CAT?",
@@ -172,7 +167,7 @@ export default function PrivateMBACollegesPunePage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                Top private MBA colleges in Pune: <strong>SIBM</strong> (₹18.2 LPA avg, SNAP required), <strong>SCMHRD</strong> (₹17.5 LPA avg), <strong>MIT-SOM</strong> (₹8.5 LPA avg, CAT/CMAT), <strong>BIMM</strong> (₹6.8 LPA avg), <strong>Indira Institute</strong> (₹5.9 LPA avg). Deemed private (SIBM, SCMHRD): use <strong>SNAP</strong>. Autonomous private (MIT-SOM, BIMM): use <strong>CAT/MAT/CMAT</strong>.
+                Top private MBA colleges in Pune: <strong>SIBM</strong>, <strong>SCMHRD</strong>, <strong>MIT-SOM</strong>, <strong>BIMM</strong>, <strong>Indira Institute</strong>. Deemed private (SIBM, SCMHRD): use <strong>SNAP</strong>. Autonomous private (MIT-SOM, BIMM): use <strong>CAT/MAT/CMAT</strong>.
               </p>
             </div>
           </div>
@@ -184,7 +179,6 @@ export default function PrivateMBACollegesPunePage() {
             {[
               { label: "Private MBA Colleges", value: "50+", icon: "🏛️" },
               { label: "Lowest Total Fees", value: "₹2.8L", icon: "💰" },
-              { label: "Highest Avg Package", value: "₹18.2 LPA", icon: "📈" },
               { label: "Top Entrance Exam", value: "SNAP / CAT", icon: "📝" },
             ].map(({ label, value, icon }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">
@@ -258,7 +252,6 @@ export default function PrivateMBACollegesPunePage() {
                 <div className="space-y-1 text-xs text-gray-700">
                   <p><strong>Entrance:</strong> SNAP (December, 60 mins)</p>
                   <p><strong>Total Fees:</strong> ₹14L–₹22L (2 years)</p>
-                  <p><strong>Avg Package:</strong> ₹14–18 LPA</p>
                   <p className="text-green-700"><strong>Best for:</strong> Premium MBA, national recognition, top FMCG/Finance/Consulting recruiters</p>
                   <p className="text-red-700"><strong>Challenge:</strong> SNAP 95+ percentile needed, very competitive</p>
                 </div>
@@ -269,7 +262,6 @@ export default function PrivateMBACollegesPunePage() {
                 <div className="space-y-1 text-xs text-gray-700">
                   <p><strong>Entrance:</strong> CAT / MAT / CMAT / XAT / MH-CET</p>
                   <p><strong>Total Fees:</strong> ₹2.8L–₹11L (2 years)</p>
-                  <p><strong>Avg Package:</strong> ₹5–8.5 LPA</p>
                   <p className="text-green-700"><strong>Best for:</strong> Affordable MBA, flexible exam acceptance, good ROI</p>
                   <p className="text-red-700"><strong>Challenge:</strong> Lower brand value vs Symbiosis for premium recruiters</p>
                 </div>

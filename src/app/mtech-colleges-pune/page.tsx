@@ -13,12 +13,12 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K–1.2L/yr", placement: "₹14 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹90K–1.4L/yr", placement: "₹10 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹1.8L–2.5L/yr", placement: "₹12 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹1.5L–2.2L/yr", placement: "₹11 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "PICT — Pune Institute of Computer Technology", location: "Dhankawadi", naac: "A", fees: "₹95K–1.3L/yr", placement: "₹9.5 LPA avg", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "PCCOE — Pimpri Chinchwad College of Engineering", location: "Akurdi", naac: "A+", fees: "₹1.0L–1.5L/yr", placement: "₹9 LPA avg", slug: "pccoe-pimpri-chinchwad-college-of-engineering" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K–1.2L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹90K–1.4L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹1.8L–2.5L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹1.5L–2.2L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "PICT — Pune Institute of Computer Technology", location: "Dhankawadi", naac: "A", fees: "₹95K–1.3L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "PCCOE — Pimpri Chinchwad College of Engineering", location: "Akurdi", naac: "A+", fees: "₹1.0L–1.5L/yr", placement: "Not published", slug: "pccoe-pimpri-chinchwad-college-of-engineering" },
 ]
 
 const faqs = [
@@ -26,7 +26,6 @@ const faqs = [
   { q: "Can I do M.Tech in Pune without GATE?", a: "Yes. Many private M.Tech colleges in Pune (MIT-WPU, SIT, PCCOE) offer M.Tech without GATE through their own entrance tests or merit-based admission. Non-GATE M.Tech seats don't receive GATE stipend but otherwise offer the same degree." },
   { q: "What is the M.Tech fee in Pune colleges?", a: "M.Tech fees in Pune range from ₹80,000–₹1.2L/year at government/SPPU colleges (COEP, VIT Pune) to ₹1.5L–3.8L/year at private deemed universities. GATE-qualified students at AICTE-approved colleges receive ₹12,400/month stipend." },
   { q: "What are the best M.Tech specializations in Pune?", a: "Top M.Tech specializations in Pune based on placement demand: Computer Science & Engineering (CSE), VLSI & Embedded Systems, Artificial Intelligence & ML, Structural Engineering, Mechanical Design, and Data Science. CSE and AI/ML have the highest placement packages." },
-  { q: "Is M.Tech or MBA better after B.Tech?", a: "M.Tech is better if you want to pursue research, core engineering, or academic careers. MBA is better for management, business, and faster salary growth. For Pune's IT sector, M.Tech in CSE/AI can match MBA salaries (₹10–20 LPA). Choose based on your career direction, not just package." },
 ]
 
 export default function MtechCollegesPune() {
@@ -62,7 +61,7 @@ export default function MtechCollegesPune() {
           { title: "GATE Stipend Benefits", description: "M.Tech students with valid GATE score at AICTE-approved Pune colleges receive ₹12,400/month stipend from MHRD, covering most living expenses during the 2-year program." },
           { title: "Research Ecosystem", description: "Proximity to IISER Pune, NCL (National Chemical Laboratory), IUCAA, and CSIR labs provides M.Tech students unique research collaboration opportunities." },
           { title: "Industry-Ready Specializations", description: "Pune's IT and manufacturing industries drive demand for M.Tech graduates in AI/ML, VLSI, Structural Engineering, and Mechanical Design — fields where Pune colleges have strong industry MOUs." },
-          { title: "Higher Salary Premium", description: "M.Tech graduates from top Pune colleges command 30–40% salary premium over B.Tech graduates in core engineering roles. Average M.Tech placement: ₹12–18 LPA." },
+          { title: "Higher Salary Premium", description: "M.Tech graduates from top Pune colleges command 30–40% salary premium over B.Tech graduates in core engineering roles. Average M.Tech placement: ₹12." },
         ]}
         admissionHeading="M.Tech Admission Process in Pune 2025"
         admissionSteps={[

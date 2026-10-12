@@ -30,7 +30,6 @@ const faqs = [
   { question: "Which is the best BCom college in Pune in 2026?", answer: "Fergusson College (NAAC A+, Est. 1885) is the most prestigious BCom college in Pune. For lowest fees, Garware College of Commerce is excellent at ₹10K–₹28K/yr. For placements and industry exposure, Symbiosis College of Arts & Commerce (SCAC) is the top private option." },
   { question: "What is the fee for BCom in Pune 2026?", answer: "BCom fees in Pune range from ₹10,000–₹42,000/year for government-aided colleges (Fergusson, SP College, Garware). Private autonomous colleges charge ₹60,000–₹1.5L/year. Total 3-year BCom cost: ₹30,000–₹1.5L at government colleges." },
   { question: "How to get admission in BCom in Pune 2026?", answer: "BCom admission in Pune is merit-based (12th marks) or via CUET for central university seats. SPPU-affiliated colleges take direct applications online in June–July. Key documents: 12th marksheet, domicile certificate, caste certificate (if applicable), and CUET scorecard." },
-  { question: "What is the scope of BCom from Pune?", answer: "BCom graduates from Pune colleges can pursue CA (ICAI), CMA, MBA, M.Com, CS, or direct jobs in banking, finance, accounting, and consulting. Average starting salary: ₹2.5–₹4.5 LPA. Top employers: KPMG, Deloitte, PwC, Axis Bank, HDFC Bank, and Pune-based NBFCs." },
 ]
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"

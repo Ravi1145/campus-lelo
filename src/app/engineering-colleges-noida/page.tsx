@@ -11,7 +11,7 @@ const engineeringColleges = noidaColleges.filter(c => c.stream === "Engineering"
 
 export const metadata: Metadata = genMeta({
   title: "Best Engineering Colleges in Noida 2026 | JEE, AKTU | Fees & Placements",
-  description: "Top engineering colleges in Noida 2026 — JIIT Noida (₹8.5L avg pkg), Amity University (NIRF #51), Bennett University, Galgotias, GL Bajaj, KIET. JEE Main & AKTU UPSEE admission. Fees ₹1.2L–6L/yr.",
+  description: "Top engineering colleges in Noida 2026 — JIIT Noida (₹8.5L avg pkg), Amity University, Bennett University, Galgotias, GL Bajaj, KIET. JEE Main & AKTU UPSEE admission. Fees ₹1.2L–6L/yr.",
   path: "/engineering-colleges-noida",
   keywords: [
     "engineering colleges in noida 2026",
@@ -35,7 +35,7 @@ export const metadata: Metadata = genMeta({
 const faqData = [
   {
     question: "Which is the best engineering college in Noida in 2026?",
-    answer: "JIIT (Jaypee Institute of Information Technology) Sector 62 Noida is the best engineering college in Noida for CSE/IT — average placement ₹8.5 LPA, recruiters Amazon, Microsoft, Google. Amity University (NIRF #51, NAAC A+) is the best for overall campus and diversity. Bennett University is best for product company placements.",
+    answer: "JIIT (Jaypee Institute of Information Technology) Sector 62 Noida is the best engineering college in Noida for CSE/IT —, recruiters Amazon, Microsoft, Google. Amity University (NAAC A+) is the best for overall campus and diversity. Bennett University is best for product company placements.",
   },
   {
     question: "What is the fee for B.Tech in Noida colleges 2026?",
@@ -47,7 +47,7 @@ const faqData = [
   },
   {
     question: "Which CSE college in Noida gives the best placements?",
-    answer: "For CSE placements in Noida 2026: JIIT Sector 62 (#1 — Amazon, Google, Microsoft, Adobe; avg ₹8.5 LPA). Bennett University (#2 — Microsoft, Google, Adobe; avg ₹9 LPA). Amity University (#3 — TCS, Amazon, Deloitte; avg ₹7.5 LPA). GL Bajaj (Best value — TCS, Infosys; avg ₹5.2 LPA at ₹1.2L/yr fees).",
+    answer: "For CSE placements in Noida 2026: JIIT Sector 62. Bennett University. Amity University. GL Bajaj.",
   },
 ]
 
@@ -92,7 +92,7 @@ export default function EngineeringCollegesNoidaPage() {
               JEE Main &amp; AKTU UPSEE 2026 admission guide, fees and placement data.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
-              {[["40+", "Engineering Colleges"], ["₹1.2L–6L", "Fees/yr"], ["₹55 LPA", "Highest Package"], ["JEE/AKTU", "Entrance"]].map(([val, label]) => (
+              {[["40+", "Engineering Colleges"], ["₹1.2L–6L", "Fees/yr"], ["JEE/AKTU", "Entrance"]].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
                   <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>

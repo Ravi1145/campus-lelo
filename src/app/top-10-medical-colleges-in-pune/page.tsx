@@ -25,7 +25,7 @@ const colleges = [
     rank: 1,
     name: "Armed Forces Medical College (AFMC)",
     type: "Government (Defence)",
-    nirf: 4,
+    nirf: null,
     naac: "A++",
     fees: "₹50K (total)",
     neetCutoff: "655+",
@@ -39,14 +39,14 @@ const colleges = [
     rank: 2,
     name: "BJ Government Medical College (BJMC)",
     type: "Government",
-    nirf: 18,
+    nirf: null,
     naac: "A",
     fees: "₹60K–₹1.2L/yr",
     neetCutoff: "625+",
     seats: 200,
     exam: "NEET (State Quota)",
     slug: "bj-medical-college-pune",
-    highlight: "Best Govt. MBBS | NIRF #18",
+    highlight: "Best Govt. MBBS",
     location: "Sassoon Road, Pune",
   },
   {
@@ -166,7 +166,7 @@ const colleges = [
 const faqData = [
   {
     question: "Which is the best medical college in Pune in 2026?",
-    answer: "AFMC (Armed Forces Medical College) is ranked #4 by NIRF nationally and is the best medical college in Pune with near-zero fees (₹50,000 total). For civilian government MBBS, BJ Medical College (NIRF #18) is the top choice with NEET cutoff 625+.",
+    answer: "AFMC (Armed Forces Medical College) is ranked #4 by NIRF nationally and is the best medical college in Pune with near-zero fees (₹50,000 total). For civilian government MBBS, BJ Medical College is the top choice with NEET cutoff 625+.",
   },
   {
     question: "What NEET score is required for MBBS in Pune?",
@@ -304,7 +304,7 @@ export default function Top10MedicalCollegesPage() {
           {/* Key Insights */}
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { icon: "🏆", title: "NIRF #4 Nationally", desc: "AFMC Pune is India's 4th ranked medical college — and among the most affordable anywhere in the country." },
+              { icon: "🏆", title: " Nationally", desc: "AFMC Pune is India's 4th ranked medical college — and among the most affordable anywhere in the country." },
               { icon: "💰", title: "Govt vs Private Cost", desc: "Government MBBS seats cost ₹60K–1.5L/year vs ₹10L–18L/year at private deemed universities in Pune." },
               { icon: "🎯", title: "NEET Score Range", desc: "Competitive range in Pune: 490–655. AFMC + BJ need 625+ while private colleges accept 490+." },
             ].map(({ icon, title, desc }) => (

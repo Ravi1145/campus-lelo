@@ -6,7 +6,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "PGDM in Pune 2026 | Best PGDM Colleges, Fees & Admission",
-  description: "Complete guide to PGDM in Pune 2026 — AICTE-approved colleges, fees ₹3.8L–₹12L, placements ₹6.5–₹24 LPA. SCMHRD, MIT-SOB, BIMM, FLAME compared. PGDM vs MBA explained.",
+  description: "Complete guide to PGDM in Pune 2026 — AICTE-approved colleges, fees ₹3.8L–₹12L, placements ₹6.5. SCMHRD, MIT-SOB, BIMM, FLAME compared. PGDM vs MBA explained.",
   path: "/pgdm-in-pune",
   keywords: [
     "pgdm in pune",
@@ -31,14 +31,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const COLLEGES = [
-  { rank: 1, name: "SCMHRD – Symbiosis Centre for Management & HRD", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", avgPkg: "₹22 LPA", exam: "SNAP 55+ %ile",    slug: "scmhrd-symbiosis-centre-management-hrd",          highlight: "Best PGDM for HR & Operations" },
-  { rank: 2, name: "FLAME University – School of Business",           location: "Lavale",     naac: "A+", fees: "₹12L (2yr)",  avgPkg: "₹14 LPA", exam: "CAT 75+ / GMAT",  slug: "flame-university-pune",                          highlight: "Liberal arts PGDM"             },
-  { rank: 3, name: "MIT School of Business (MIT-SOB)",                location: "Kothrud",    naac: "A+", fees: "₹6.5L (2yr)", avgPkg: "₹10.5 LPA",exam: "CAT / MAT / CMAT",slug: "mit-school-of-business-pune",                    highlight: "Best ROI private PGDM"         },
-  { rank: 4, name: "BIMM – Balaji Institute of Modern Management",    location: "Tathawade",  naac: "A",  fees: "₹5.5L (2yr)", avgPkg: "₹9.5 LPA", exam: "CAT / MAT / CMAT",slug: "balaji-institute-of-modern-management-pune",     highlight: "Budget PGDM with good placements" },
-  { rank: 5, name: "AIMS Institute of Management",                    location: "Viman Nagar",naac: "A",  fees: "₹4.8L (2yr)", avgPkg: "₹8.5 LPA", exam: "CAT / MAT / CMAT",slug: "aims-institute-management-pune",                 highlight: "Affordable with industry focus" },
-  { rank: 6, name: "IndSearch Institute of Management",               location: "Baner",      naac: "A",  fees: "₹4.5L (2yr)", avgPkg: "₹8 LPA",   exam: "CAT / MAT / CMAT",slug: "indsearch-institute-of-management-pune",            highlight: "70+ years of management education" },
-  { rank: 7, name: "MAEER MIT Institute of Management",               location: "Kothrud",    naac: "A+", fees: "₹5.5L (2yr)", avgPkg: "₹9.2 LPA", exam: "CAT / MAT / CMAT",slug: "maeer-mit-institute-management-pune",            highlight: "MIT group, strong alumni" },
-  { rank: 8, name: "Suryadatta Institute of Management",              location: "Wakad",      naac: "B+", fees: "₹3.8L (2yr)", avgPkg: "₹6.5 LPA", exam: "MAT / CMAT",      slug: "suryadatta-institute-management-pune",           highlight: "Most affordable PGDM in Pune" },
+  { rank: 1, name: "SCMHRD – Symbiosis Centre for Management & HRD", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", avgPkg: "Not published", exam: "SNAP 55+ %ile",    slug: "scmhrd-symbiosis-centre-management-hrd",          highlight: "Best PGDM for HR & Operations" },
+  { rank: 2, name: "FLAME University – School of Business",           location: "Lavale",     naac: "A+", fees: "₹12L (2yr)",  avgPkg: "Not published", exam: "CAT 75+ / GMAT",  slug: "flame-university-pune",                          highlight: "Liberal arts PGDM"             },
+  { rank: 3, name: "MIT School of Business (MIT-SOB)",                location: "Kothrud",    naac: "A+", fees: "₹6.5L (2yr)", avgPkg: "Not published",exam: "CAT / MAT / CMAT",slug: "mit-school-of-business-pune",                    highlight: "Best ROI private PGDM"         },
+  { rank: 4, name: "BIMM – Balaji Institute of Modern Management",    location: "Tathawade",  naac: "A",  fees: "₹5.5L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "balaji-institute-of-modern-management-pune",     highlight: "Budget PGDM with good placements" },
+  { rank: 5, name: "AIMS Institute of Management",                    location: "Viman Nagar",naac: "A",  fees: "₹4.8L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "aims-institute-management-pune",                 highlight: "Affordable with industry focus" },
+  { rank: 6, name: "IndSearch Institute of Management",               location: "Baner",      naac: "A",  fees: "₹4.5L (2yr)", avgPkg: "Not published",   exam: "CAT / MAT / CMAT",slug: "indsearch-institute-of-management-pune",            highlight: "70+ years of management education" },
+  { rank: 7, name: "MAEER MIT Institute of Management",               location: "Kothrud",    naac: "A+", fees: "₹5.5L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "maeer-mit-institute-management-pune",            highlight: "MIT group, strong alumni" },
+  { rank: 8, name: "Suryadatta Institute of Management",              location: "Wakad",      naac: "B+", fees: "₹3.8L (2yr)", avgPkg: "Not published", exam: "MAT / CMAT",      slug: "suryadatta-institute-management-pune",           highlight: "Most affordable PGDM in Pune" },
 ]
 
 const COMPARISON = [
@@ -49,14 +49,14 @@ const COMPARISON = [
   { aspect: "Fees (Pune)",     mba: "₹1.25L–₹8.5L/yr",                       pgdm: "₹2L–₹6L/yr"                               },
   { aspect: "Curriculum",      mba: "University-fixed syllabus",               pgdm: "Industry-driven, flexible curriculum"      },
   { aspect: "Top institutes",  mba: "SIBM, PUMBA, MIT-SOM",                   pgdm: "SCMHRD, FLAME, BIMM, MIT-SOB"             },
-  { aspect: "Avg placement",   mba: "₹10–28 LPA (SIBM/PUMBA)",               pgdm: "₹9.5–22 LPA (BIMM/SCMHRD)"               },
+  { aspect: "Avg placement",   mba: "₹10",               pgdm: "₹9.5"               },
   { aspect: "Recognition",     mba: "Degree valid everywhere",                 pgdm: "Diploma; MBA-equivalent only if AIU has granted it to the programme" },
 ]
 
 const FAQS = [
   {
     question: "Is PGDM in Pune better than MBA?",
-    answer: "PGDM and MBA are equivalent for employment purposes in India. PGDM from top Pune institutes like SCMHRD (NIRF #22) often has better industry-aligned curriculum and placements than many MBA colleges. Choose PGDM if: you want SCMHRD or MIT-SOB (which don't offer MBA). Choose MBA if: you want PUMBA (government, cheapest) or SIBM Pune (NIRF #13). Both give equal career outcomes.",
+    answer: "PGDM and MBA are equivalent for employment purposes in India. PGDM from top Pune institutes like SCMHRD often has better industry-aligned curriculum and placements than many MBA colleges. Choose PGDM if: you want SCMHRD or MIT-SOB (which don't offer MBA). Choose MBA if: you want PUMBA (government, cheapest) or SIBM Pune. Both give equal career outcomes.",
   },
   {
     question: "What is the eligibility for PGDM in Pune?",
@@ -64,7 +64,7 @@ const FAQS = [
   },
   {
     question: "What is the fee for PGDM in Pune 2026?",
-    answer: "PGDM fees in Pune 2026: Suryadatta ₹3.8L (2yr) — cheapest. AIMS/IndSearch ₹4.5–4.8L (2yr). BIMM ₹5.5L (2yr). MIT-SOB ₹6.5L (2yr). SCMHRD ₹8.2L (2yr). FLAME ₹12L (2yr) — most expensive. Note: SCMHRD's fee is justified by ₹22 LPA average placement. All fees are for 2-year full program.",
+    answer: "PGDM fees in Pune 2026: Suryadatta ₹3.8L (2yr) — cheapest. AIMS/IndSearch ₹4.5–4.8L (2yr). BIMM ₹5.5L (2yr). MIT-SOB ₹6.5L (2yr). SCMHRD ₹8.2L (2yr). FLAME ₹12L (2yr) — most expensive. All fees are for 2-year full program.",
   },
   {
     question: "Is PGDM recognized by the government for jobs?",
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     question: "What is the salary after PGDM from Pune?",
-    answer: "PGDM placement in Pune 2026: SCMHRD ₹22 LPA avg (HR specialization), FLAME ₹14 LPA avg, MIT-SOB ₹10.5 LPA, BIMM ₹9.5 LPA, AIMS ₹8.5 LPA, Suryadatta ₹6.5 LPA. Finance and analytics specializations pay ₹12–25 LPA. IT-MBA/PGDM from SCMHRD and MIT-SOB can reach ₹18–30 LPA in Pune's tech corridor.",
+    answer: "Finance and analytics specializations pay ₹12. IT-MBA/PGDM from SCMHRD and MIT-SOB can reach ₹18 in Pune's tech corridor.",
   },
   {
     question: "Can I do PGDM in Pune without CAT?",
@@ -109,7 +109,7 @@ export default function PGDMInPune() {
               PGDM in Pune 2026
             </h1>
             <p className="text-base mb-6" style={{ color: "rgba(255,255,255,0.68)", lineHeight: "1.65", maxWidth: "640px" }}>
-              AICTE-approved PGDM programmes in Pune — fees ₹3.8L–₹12L, placements ₹6.5–₹22 LPA.
+              AICTE-approved PGDM programmes in Pune — fees ₹3.8L–₹12L, placements ₹6.5.
               Compare SCMHRD, FLAME, MIT-SOB, BIMM and find the right PGDM for your career.
             </p>
             <div className="flex flex-wrap gap-3">

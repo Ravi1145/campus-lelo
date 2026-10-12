@@ -6,7 +6,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Best MBA Colleges in Pune 2026 | Top Ranked MBA Programs",
-  description: "Best MBA colleges in Pune 2026. SIBM, SCMHRD, IIMS Pune, Flame University -- compare CAT cutoffs, fees (₹4L-18L), placement packages up to ₹28 LPA. Apply now.",
+  description: "Best MBA colleges in Pune 2026. Apply now.",
   path: "/mba-colleges-pune",
   keywords: ["best mba colleges pune", "top mba colleges in pune 2026", "ranked mba colleges pune", "mba programs pune"],
 })
@@ -14,21 +14,19 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
-  { name: "Symbiosis Centre for Management & HRD (SCMHRD)", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "₹24 LPA avg", slug: "scmhrd-symbiosis-centre-management-hrd" },
-  { name: "IIMS Pune (International Institute of Management Studies)", location: "Karve Nagar", naac: "A", fees: "₹5.5L (2yr)", placement: "₹12 LPA avg", slug: "iims-pune" },
-  { name: "Flame University School of Business", location: "Lavale", naac: "A+", fees: "₹12L (2yr)", placement: "₹14 LPA avg", slug: "flame-university-pune" },
-  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud", naac: "A+", fees: "₹6.5L (2yr)", placement: "₹10.5 LPA avg", slug: "mit-school-of-business-pune" },
-  { name: "Indira College of Engineering & Management - MBA", location: "Pune", naac: "B++", fees: "₹4.5L (2yr)", placement: "₹8 LPA avg", slug: "indira-college-pune" },
-  { name: "Balaji Institute of Management & Research (BIMR)", location: "Tathawade", naac: "A", fees: "₹5.2L (2yr)", placement: "₹9 LPA avg", slug: "balaji-institute-management-research-pune" },
-  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹1.8L (2yr)", placement: "₹7 LPA avg", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
+  { name: "Symbiosis Institute of Business Management (SIBM)", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "Not published", slug: "sibm-symbiosis-institute-business-management-pune" },
+  { name: "Symbiosis Centre for Management & HRD (SCMHRD)", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "Not published", slug: "scmhrd-symbiosis-centre-management-hrd" },
+  { name: "IIMS Pune (International Institute of Management Studies)", location: "Karve Nagar", naac: "A", fees: "₹5.5L (2yr)", placement: "Not published", slug: "iims-pune" },
+  { name: "Flame University School of Business", location: "Lavale", naac: "A+", fees: "₹12L (2yr)", placement: "Not published", slug: "flame-university-pune" },
+  { name: "MIT School of Business (MIT-SOB)", location: "Kothrud", naac: "A+", fees: "₹6.5L (2yr)", placement: "Not published", slug: "mit-school-of-business-pune" },
+  { name: "Indira College of Engineering & Management - MBA", location: "Pune", naac: "B++", fees: "₹4.5L (2yr)", placement: "Not published", slug: "indira-college-pune" },
+  { name: "Balaji Institute of Management & Research (BIMR)", location: "Tathawade", naac: "A", fees: "₹5.2L (2yr)", placement: "Not published", slug: "balaji-institute-management-research-pune" },
+  { name: "Brihan Maharashtra College of Commerce (BMCC)", location: "Shivajinagar", naac: "A+", fees: "₹1.8L (2yr)", placement: "Not published", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune" },
 ]
 
 const faqs = [
-  { q: "Which is the best MBA college in Pune?", a: "SIBM (Symbiosis Institute of Business Management) is the best MBA college in Pune, consistently ranked in India's top 15 B-schools. It has a CAT cutoff of 85+ percentile, total fees of ₹8.5L, and average placement of ₹28 LPA. SCMHRD is a close second with ₹24 LPA avg." },
   { q: "What is the CAT cutoff for top MBA colleges in Pune?", a: "SIBM requires 85+ CAT percentile. SCMHRD requires 80+ percentile. FLAME University requires 75+ percentile. IIMS Pune and MIT-SOB accept 60-70 percentile. Most Pune MBA colleges also accept MAH-CET, XAT, and GMAT scores." },
   { q: "What is the fee for MBA in Pune?", a: "MBA fees in Pune range from ₹1.8L (BMCC, government college) to ₹12L+ (FLAME University) for 2 years. Mid-tier private colleges charge ₹4-6L. Top Symbiosis institutes charge ₹8-9L for 2 years including all fees." },
-  { q: "What is the average placement package from MBA colleges in Pune?", a: "SIBM Pune: ₹28 LPA avg. SCMHRD: ₹24 LPA avg. FLAME University: ₹14 LPA avg. MIT-SOB: ₹10.5 LPA avg. IIMS Pune: ₹12 LPA avg. Mid-tier colleges average ₹7-9 LPA. Finance and consulting roles command the highest packages." },
   { q: "Is Pune a good city for MBA?", a: "Yes. Pune has top MBA colleges like SIBM, SCMHRD, and FLAME, proximity to Mumbai's financial sector, thriving IT companies hiring for MBA roles, and a low cost of living compared to Delhi/Mumbai. It's one of India's top 3 cities for MBA education and careers." },
 ]
 
@@ -62,7 +60,6 @@ export default function BestMbaCollegesPunePage() {
         subtitle="The definitive ranking of Pune's top MBA programs. Compare CAT cutoffs, total fees, placement packages, specializations, and admission processes for 2026."
         heroStats={[
           { value: "30+", label: "MBA Colleges" },
-          { value: "₹28 LPA", label: "Best Avg Package" },
           { value: "₹1.8L-18L", label: "Total Fees Range" },
           { value: "CAT/MAH-CET", label: "Primary Entrance" },
         ]}

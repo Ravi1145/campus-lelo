@@ -168,11 +168,11 @@ const faqs = [
   },
   {
     question: "Can engineering students get scholarship in Pune?",
-    answer: "Yes — multiple scholarships available for Pune engineering students 2026: (1) MahaDBT Freeship — full fee waiver for EBC students (income < ₹8 LPA). (2) OBC Scholarship — ₹2,000–5,000/year for OBC/VJNT/NT students. (3) SC/ST Post-Matric — full fees + monthly maintenance. (4) NSP Central Sector Scheme — ₹10,000–20,000/year for merit students. (5) COEP Merit Scholarship — ₹25,000–50,000/year for top performers.",
+    answer: "Yes — multiple scholarships available for Pune engineering students 2026: (1) MahaDBT Freeship — full fee waiver for EBC students. (2) OBC Scholarship — ₹2,000–5,000/year for OBC/VJNT/NT students. (3) SC/ST Post-Matric — full fees + monthly maintenance. (4) NSP Central Sector Scheme — ₹10,000–20,000/year for merit students. (5) COEP Merit Scholarship — ₹25,000–50,000/year for top performers.",
   },
   {
     question: "What scholarships are available for MBA students in Pune?",
-    answer: "Scholarships for MBA students in Pune 2026: (1) Symbiosis Scholarship — 25%–100% fee waiver for top SNAP ranks. (2) Aditya Birla Scholarship — ₹1 LPA for CAT top 20 rankers. (3) MahaDBT OBC/SC/ST — available for MBA courses too. (4) Many Pune MBA colleges like BIMM and MAEER's offer need-based freeships internally. Contact your college's scholarship cell after admission.",
+    answer: "Scholarships for MBA students in Pune 2026: (1) Symbiosis Scholarship — 25%–100% fee waiver for top SNAP ranks. (2) Aditya Birla Scholarship for CAT top 20 rankers. (3) MahaDBT OBC/SC/ST — available for MBA courses too. (4) Many Pune MBA colleges like BIMM and MAEER's offer need-based freeships internally. Contact your college's scholarship cell after admission.",
   },
   {
     question: "What documents are needed for MahaDBT scholarship?",

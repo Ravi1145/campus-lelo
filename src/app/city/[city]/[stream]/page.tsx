@@ -87,7 +87,6 @@ export default async function CityStreamPage({ params }: Props) {
     { question: `What is the fee range for ${streamLabel} in ${cityLabel}?`, answer: `${streamLabel} college fees in ${cityLabel} range from ₹80,000 to ₹3,00,000 per year depending on whether it is a government or private institution.` },
     { question: `What entrance exams are required for ${streamLabel} in ${cityLabel}?`, answer: stream === "engineering" ? "MHT-CET and JEE Main are the primary entrance exams for engineering colleges in Maharashtra." : stream === "mba" ? "CAT, SNAP, MAT, CMAT, and XAT scores are accepted by MBA colleges." : stream === "medical" ? "NEET is mandatory for all medical colleges in India." : "Entrance requirements vary by college and course." },
     { question: `Is hostel facility available in ${cityLabel} ${streamLabel} colleges?`, answer: `Most ${streamLabel} colleges in ${cityLabel} offer hostel facilities for outstation students. Hostel fees typically range from ₹60,000 to ₹1,20,000 per year.` },
-    { question: `What is the placement scenario for ${streamLabel} colleges in ${cityLabel}?`, answer: `${streamLabel} colleges in ${cityLabel} have strong industry connections. Average placement packages range from ₹5 LPA to ₹15 LPA depending on the college and specialization.` },
   ]
 
   const faqs: { question: string; answer: string }[] = pageContent?.faqs?.length

@@ -7,7 +7,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in Pune 2026 | Best Colleges, Fees, Admission & Scope",
-  description: "Complete guide to MBA in Pune 2026 — 120+ colleges, fees ₹1.25L–₹8.5L/yr, CAT/SNAP/MAH-CET cutoffs, placements ₹7–28 LPA. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
+  description: "Complete guide to MBA in Pune 2026 — 120+ colleges, fees ₹1.25L–₹8.5L/yr, CAT/SNAP/MAH-CET cutoffs, placements ₹7. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
   path: "/mba-in-pune",
   keywords: [
     "mba in pune",
@@ -36,16 +36,16 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const TOP_COLLEGES = [
-  { rank: 1,  name: "SIBM Pune – Symbiosis Institute of Business Management", nirf: 13,  naac: "A+", fees: "₹8.5L/2yr", avgPkg: "₹28 LPA", exam: "SNAP 60+ %ile",          slug: "sibm-symbiosis-institute-business-management-pune",  highlight: "India's #1 private MBA for Pune"        },
-  { rank: 2,  name: "SCMHRD – Symbiosis Centre for Management & HRD",         nirf: 22,  naac: "A+", fees: "₹8.2L/2yr", avgPkg: "₹22 LPA", exam: "SNAP 55+ %ile",          slug: "scmhrd-symbiosis-centre-management-hrd",           highlight: "Best for HR & Operations"                },
-  { rank: 3,  name: "PUMBA – Pune University MBA (Government)",                nirf: null,naac: "A+", fees: "₹1.25L/yr", avgPkg: "₹10 LPA", exam: "MAH-CET 80+ %ile",       slug: "pumba-pune-university-mba",                        highlight: "Best value MBA in Pune"                  },
-  { rank: 4,  name: "SCIT – Symbiosis Centre for Information Technology",      nirf: null,naac: "A+", fees: "₹7L/2yr",  avgPkg: "₹18 LPA", exam: "SNAP 50+ %ile",          slug: "symbiosis-centre-information-technology-pune",     highlight: "Best MBA+IT combo"                       },
-  { rank: 5,  name: "MIT School of Management (MIT-SOM)",                      nirf: null,naac: "A+", fees: "₹5.5L/2yr", avgPkg: "₹12 LPA", exam: "CAT / MAT / CMAT",       slug: "mit-school-of-management-pune",                    highlight: "Best ROI after PUMBA"                    },
-  { rank: 6,  name: "FLAME University – School of Business",                   nirf: null,naac: "A+", fees: "₹12L/2yr", avgPkg: "₹14 LPA", exam: "CAT 75+ %ile / GMAT",    slug: "flame-university-pune",                            highlight: "Liberal arts + MBA"                      },
-  { rank: 7,  name: "BIMM – Balaji Institute of Modern Management",            nirf: null,naac: "A",  fees: "₹5L/2yr",  avgPkg: "₹8.5 LPA", exam: "CAT / MAT / CMAT",      slug: "balaji-institute-of-modern-management-pune",       highlight: "Best budget private MBA"                 },
-  { rank: 8,  name: "Indira Institute of Management Pune (IIMP)",              nirf: null,naac: "A",  fees: "₹4.2L/2yr", avgPkg: "₹7.2 LPA", exam: "CAT / MAT / CMAT",     slug: "indira-institute-of-management-pune",              highlight: "Highest ROI in Pune"                     },
-  { rank: 9,  name: "COEP – College of Engineering Pune (MBA program)",        nirf: 49,  naac: "A+", fees: "₹1.8L/yr", avgPkg: "₹11 LPA", exam: "MAH-CET / CAT",          slug: "coep-college-of-engineering-pune",                  highlight: "Government, NIRF #49"                    },
-  { rank: 10, name: "Suryadatta Institute of Management",                      nirf: null,naac: "B+", fees: "₹2.8L/2yr", avgPkg: "₹5.8 LPA", exam: "MAT / CMAT",           slug: "suryadatta-institute-management-pune",              highlight: "Most affordable option"                  },
+  { rank: 1,  name: "SIBM Pune – Symbiosis Institute of Business Management", nirf: null,  naac: "A+", fees: "₹8.5L/2yr", avgPkg: "Not published", exam: "SNAP 60+ %ile",          slug: "sibm-symbiosis-institute-business-management-pune",  highlight: "India's #1 private MBA for Pune"        },
+  { rank: 2,  name: "SCMHRD – Symbiosis Centre for Management & HRD",         nirf: null,  naac: "A+", fees: "₹8.2L/2yr", avgPkg: "Not published", exam: "SNAP 55+ %ile",          slug: "scmhrd-symbiosis-centre-management-hrd",           highlight: "Best for HR & Operations"                },
+  { rank: 3,  name: "PUMBA – Pune University MBA (Government)",                nirf: null,naac: "A+", fees: "₹1.25L/yr", avgPkg: "Not published", exam: "MAH-CET 80+ %ile",       slug: "pumba-pune-university-mba",                        highlight: "Best value MBA in Pune"                  },
+  { rank: 4,  name: "SCIT – Symbiosis Centre for Information Technology",      nirf: null,naac: "A+", fees: "₹7L/2yr",  avgPkg: "Not published", exam: "SNAP 50+ %ile",          slug: "symbiosis-centre-information-technology-pune",     highlight: "Best MBA+IT combo"                       },
+  { rank: 5,  name: "MIT School of Management (MIT-SOM)",                      nirf: null,naac: "A+", fees: "₹5.5L/2yr", avgPkg: "Not published", exam: "CAT / MAT / CMAT",       slug: "mit-school-of-management-pune",                    highlight: "Best ROI after PUMBA"                    },
+  { rank: 6,  name: "FLAME University – School of Business",                   nirf: null,naac: "A+", fees: "₹12L/2yr", avgPkg: "Not published", exam: "CAT 75+ %ile / GMAT",    slug: "flame-university-pune",                            highlight: "Liberal arts + MBA"                      },
+  { rank: 7,  name: "BIMM – Balaji Institute of Modern Management",            nirf: null,naac: "A",  fees: "₹5L/2yr",  avgPkg: "Not published", exam: "CAT / MAT / CMAT",      slug: "balaji-institute-of-modern-management-pune",       highlight: "Best budget private MBA"                 },
+  { rank: 8,  name: "Indira Institute of Management Pune (IIMP)",              nirf: null,naac: "A",  fees: "₹4.2L/2yr", avgPkg: "Not published", exam: "CAT / MAT / CMAT",     slug: "indira-institute-of-management-pune",              highlight: "Highest ROI in Pune"                     },
+  { rank: 9,  name: "COEP – College of Engineering Pune (MBA program)",        nirf: null,  naac: "A+", fees: "₹1.8L/yr", avgPkg: "Not published", exam: "MAH-CET / CAT",          slug: "coep-college-of-engineering-pune",                  highlight: "Government"                    },
+  { rank: 10, name: "Suryadatta Institute of Management",                      nirf: null,naac: "B+", fees: "₹2.8L/2yr", avgPkg: "Not published", exam: "MAT / CMAT",           slug: "suryadatta-institute-management-pune",              highlight: "Most affordable option"                  },
 ]
 
 const SPECIALIZATIONS = [
@@ -83,15 +83,15 @@ const FAQS = [
   },
   {
     question: "What is the salary after MBA from Pune?",
-    answer: "MBA salary in Pune by college: SIBM ₹28 LPA avg (Finance/Consulting: ₹40–65 LPA), SCMHRD ₹22 LPA avg, PUMBA ₹10 LPA avg, MIT-SOM ₹12 LPA avg, BIMM ₹8.5 LPA avg. Finance and consulting specializations command highest salaries. Pune's IT corridor (Hinjewadi) offers ₹15–30 LPA for MBA+IT roles. Average across all Pune MBA colleges is ₹9–12 LPA.",
+    answer: "Finance and consulting specializations command highest salaries. Pune's IT corridor (Hinjewadi) offers ₹15 for MBA+IT roles. Average across all Pune MBA colleges is ₹9.",
   },
   {
     question: "Is MBA in Pune worth it in 2026?",
-    answer: "Yes — MBA in Pune is excellent value in 2026. Pune's 500+ IT companies, manufacturing giants (Tata, Bajaj, KPIT), and growing startup ecosystem create strong MBA demand. SIBM Pune ROI: fees ₹8.5L → avg package ₹28 LPA (3.3x ROI in Year 1). PUMBA ROI: fees ₹2.5L total → avg ₹10 LPA (4x ROI). Even mid-tier colleges like MIT-SOM offer strong 2x ROI.",
+    answer: "Yes — MBA in Pune is excellent value in 2026. Pune's 500+ IT companies, manufacturing giants (Tata, Bajaj, KPIT), and growing startup ecosystem create strong MBA demand. SIBM Pune ROI: fees ₹8.5L → (3.3x ROI in Year 1). PUMBA ROI: fees ₹2.5L total → (4x ROI). Even mid-tier colleges like MIT-SOM offer strong 2x ROI.",
   },
   {
     question: "Which is better — MBA from SIBM Pune or IIM Indore?",
-    answer: "IIM Indore (NIRF #5) has stronger national brand and higher average placement (₹35+ LPA). SIBM Pune (NIRF #13) offers comparable fees (₹8.5L vs ₹22L at IIM Indore) with near-equal placement in Pune-Mumbai corridor. For Pune/Mumbai jobs: SIBM Pune is often preferred by local recruiters. For national/international placements: IIM Indore is better. Budget and target geography should decide.",
+    answer: "IIM Indore has stronger national brand and higher average placement (₹35+ LPA). SIBM Pune offers comparable fees (₹8.5L vs ₹22L at IIM Indore) with near-equal placement in Pune-Mumbai corridor. For Pune/Mumbai jobs: SIBM Pune is often preferred by local recruiters. For national/international placements: IIM Indore is better. Budget and target geography should decide.",
   },
   {
     question: "What is the difference between MBA and PGDM in Pune?",
@@ -134,7 +134,7 @@ export default function MBAInPune() {
               MBA in Pune 2026
             </h1>
             <p className="mb-6 text-base" style={{ color: "rgba(255,255,255,0.68)", lineHeight: "1.65", maxWidth: "640px" }}>
-              120+ MBA colleges in Pune — fees ₹1.25L–₹8.5L/yr, placements ₹7–28 LPA, NAAC A+ institutes.
+              120+ MBA colleges in Pune — fees ₹1.25L–₹8.5L/yr, placements ₹7, NAAC A+ institutes.
               Compare SIBM, SCMHRD, PUMBA, MIT-SOM and find your best-fit MBA program.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -158,7 +158,6 @@ export default function MBAInPune() {
             {[
               { icon: GraduationCap, value: "120+",      label: "MBA colleges in Pune"     },
               { icon: IndianRupee,   value: "₹1.25L/yr", label: "Lowest fees (PUMBA govt)" },
-              { icon: TrendingUp,    value: "₹28 LPA",   label: "Highest avg placement"    },
               { icon: Users,         value: "6 exams",   label: "CAT · SNAP · MAH-CET +"   },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex items-start gap-3">
@@ -215,7 +214,6 @@ export default function MBAInPune() {
                 </tbody>
               </table>
             </div>
-            <p className="text-right text-xs mt-2" style={{ color: "#94A3B8" }}>Data: NIRF 2024, college placement reports. Updated Oct 2026.</p>
           </section>
 
           {/* ── Specializations ── */}

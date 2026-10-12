@@ -422,7 +422,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
             {[
               { label: "Annual Fees", value: formatFeesRange(college.feesRange.min, college.feesRange.max), icon: IndianRupee },
               { label: "Avg Package", value: formatCurrency(college.avgPlacement), icon: TrendingUp },
-              { label: "Highest Package", value: formatCurrency(college.highestPlacement), icon: Award },
               { label: "Rating", value: `${college.rating}/5 ⭐`, icon: Star },
             ].map(({ label, value, icon: Icon }) => (
               <div key={label} className="bg-white/10 rounded-xl p-3">
@@ -543,7 +542,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                     <strong>{college.name}</strong> ({college.shortName}) is a {college.type.toLowerCase()} college
                     located in {college.location}, established in {college.established}.
                     {college.naac && ` It holds NAAC ${college.naac} accreditation`}
-                    {college.nirfRank ? ` and is ranked #${college.nirfRank} in NIRF 2025.` : '.'}
+                    {college.nirfRank ? ` and is ranked #${college.nirfRank} in.` : '.'}
                   </p>
                   <p>
                     <strong>Fees:</strong> Annual fees at {college.shortName} range from{' '}
@@ -787,7 +786,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-5">
                       {[
                         { label: "Average Package", value: formatCurrency(college.avgPlacement), color: "text-green-700" },
-                        { label: "Highest Package", value: formatCurrency(college.highestPlacement), color: "text-orange-600" },
                       ].map(({ label, value, color }) => (
                         <div key={label} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                           <p className="text-xs text-gray-500 mb-1">{label}</p>
@@ -934,7 +932,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                     {college.nirfRank && (
                       <div className="bg-orange-50 rounded-xl p-4 text-center mb-4">
                         <p className="text-3xl font-extrabold text-orange-600">#{college.nirfRank}</p>
-                        <p className="text-sm text-gray-600">NIRF Ranking 2025</p>
                       </div>
                     )}
                     <pre className="text-sm text-gray-700 whitespace-pre-wrap leading-relaxed font-sans">
@@ -947,7 +944,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                       {college.nirfRank && (
                         <div className="bg-orange-50 rounded-xl p-5 text-center">
                           <p className="text-4xl font-extrabold text-orange-600 mb-1">#{college.nirfRank}</p>
-                          <p className="text-sm text-gray-600 font-medium">NIRF Ranking 2025</p>
                           <p className="text-xs text-gray-400 mt-1">National Institutional Ranking Framework, Ministry of Education, Govt of India</p>
                         </div>
                       )}

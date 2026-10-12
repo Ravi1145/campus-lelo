@@ -23,7 +23,6 @@ export const revalidate = 3600
 const STARTER_QUESTIONS = [
   "I scored 85 percentile in MHT-CET. Which engineering colleges in Pune can I get?",
   "Should I choose COEP or MIT-WPU for Computer Engineering?",
-  "What's the best MBA college in Pune under ₹5 LPA fees?",
   "I want to become a product manager. Which course should I do?",
   "Compare VIT Pune vs PICT for CSE placements",
   "Which Pune college has best placements for mechanical engineering?",

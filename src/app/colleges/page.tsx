@@ -23,8 +23,6 @@ export const metadata: Metadata = genMeta({
 
 const listingFaqs = [
   { question: "How many colleges are there in Pune?", answer: "Pune has over 800 colleges including 400+ engineering colleges, 100+ MBA institutes, and 50+ medical colleges. CampusLelo profiles 103+ top colleges with verified fees, placements, and NAAC data." },
-  { question: "Which is the best government college in Pune?", answer: "COEP (College of Engineering Pune) is the best government engineering college — NIRF #49, NAAC A+, fees ₹80K–1.8L/yr, avg placement ₹12 LPA. For medical: AFMC (NIRF #4, NAAC A++). For arts/commerce: BMCC and Fergusson College." },
-  { question: "Which Pune college has the best placements?", answer: "For MBA: SIBM Pune with ₹28 LPA average and McKinsey/BCG recruiters. For engineering: COEP with ₹12 LPA average and ₹45 LPA highest package. For overall placement salary, SIBM Pune leads all Pune colleges." },
   { question: "What is the fee range for engineering colleges in Pune?", answer: "Engineering fees in Pune 2026: Government (COEP) ₹80K–1.8L/yr; Autonomous private (PICT, VIT Pune) ₹1.4L–2.2L/yr; Deemed universities (SIT, MIT-WPU) ₹2L–4.8L/yr. SC/ST students get full fee waiver at government colleges." },
   { question: "Which entrance exam is needed for Pune college admission?", answer: "MHT-CET (April–May 2026) for engineering at SPPU-affiliated colleges. NEET 2026 (May 3) for medical. CAT 2026 (November) for PUMBA/IMT MBA. SNAP 2026 (December) for Symbiosis MBA colleges. SET 2026 (May) for Symbiosis UG programs." },
 ]
@@ -43,7 +41,7 @@ export default function CollegesPage() {
   ]
   const topColleges = colleges.slice(0, 10)
   const itemList = generateItemListSchema(
-    topColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}`, description: `${c.type} college, NAAC ${c.naac}, avg placement ₹${(c.avgPlacement/100000).toFixed(1)} LPA` }))
+    topColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}`, description: `${c.type} college, NAAC ${c.naac}` }))
   )
 
   return (
@@ -125,7 +123,6 @@ export default function CollegesPage() {
                 { label: "MBA Colleges Pune", href: "/colleges-in-pune/mba-colleges-pune" },
                 { label: "Government Colleges Pune", href: "/government-colleges-pune" },
                 { label: "NAAC A+ Colleges Pune", href: "/colleges-in-pune/naac-a-plus-colleges-pune" },
-                { label: "NIRF Ranked Colleges Pune", href: "/colleges-in-pune/nirf-ranked-colleges-pune" },
                 { label: "Low Fee Colleges Pune", href: "/colleges-in-pune/low-fee-colleges-pune" },
                 { label: "MHT-CET Colleges Pune", href: "/engineering-colleges-pune" },
                 { label: "Top Placement Colleges Pune", href: "/colleges-in-pune/top-placement-colleges-pune" },

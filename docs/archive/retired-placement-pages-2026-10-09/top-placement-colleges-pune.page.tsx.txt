@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Top Placement Colleges in Pune 2026 | Highest LPA & Best Recruiters",
-  description: "Colleges in Pune with best placements 2026. SIBM (₹28 LPA avg), COEP (₹12 LPA), SIT (₹9.8 LPA) -- compare average packages, highest packages, and top recruiters.",
+  description: "Colleges in Pune with best placements 2026. SIBM, COEP, SIT -- compare average packages, highest packages, and top recruiters.",
   path: "/top-placement-colleges-pune",
   keywords: ["top placement colleges pune", "best placement colleges pune 2026", "highest package colleges pune", "best placement engineering mba pune"],
 })
@@ -13,21 +13,18 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "SIBM Pune - MBA", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "₹28 LPA avg | ₹72 LPA highest", slug: "sibm-symbiosis-institute-business-management-pune" },
-  { name: "SCMHRD Pune - MBA", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "₹24 LPA avg | ₹60 LPA highest", slug: "scmhrd-symbiosis-centre-management-hrd" },
-  { name: "COEP Pune - Engineering", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg | ₹45 LPA highest", slug: "coep-college-of-engineering-pune" },
-  { name: "SIT Pune - Engineering (Symbiosis)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg | ₹42 LPA highest", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "VIT Pune - Engineering", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg | ₹40 LPA highest", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "PICT Pune - CS Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "₹7.5 LPA avg | ₹35 LPA highest", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "MIT-WPU Pune - Engineering/MBA", location: "Kothrud", naac: "A+", fees: "₹2L-6.5L", placement: "₹7.2 LPA avg | ₹38 LPA highest", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "IIMS Pune - MBA", location: "Karve Nagar", naac: "A", fees: "₹5.5L (2yr)", placement: "₹12 LPA avg | ₹28 LPA highest", slug: "iims-pune" },
+  { name: "SIBM Pune - MBA", location: "Lavale", naac: "A+", fees: "₹8.5L (2yr)", placement: "Not published", slug: "sibm-symbiosis-institute-business-management-pune" },
+  { name: "SCMHRD Pune - MBA", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", placement: "Not published", slug: "scmhrd-symbiosis-centre-management-hrd" },
+  { name: "COEP Pune - Engineering", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "SIT Pune - Engineering (Symbiosis)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "VIT Pune - Engineering", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "PICT Pune - CS Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "MIT-WPU Pune - Engineering/MBA", location: "Kothrud", naac: "A+", fees: "₹2L-6.5L", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "IIMS Pune - MBA", location: "Karve Nagar", naac: "A", fees: "₹5.5L (2yr)", placement: "Not published", slug: "iims-pune" },
 ]
 
 const faqs = [
-  { q: "Which college in Pune has the best placement for engineering?", a: "COEP (College of Engineering Pune) has the best engineering placements in Pune with ₹12 LPA average and ₹45 LPA highest package. For CS-specific placements, PICT Pune has the highest CS placement rate (98%+). SIT Pune (Symbiosis) has the best placements among private/deemed engineering colleges (₹9.8 LPA avg)." },
-  { q: "Which MBA college in Pune has the highest placement package?", a: "SIBM Pune has the highest MBA placement in Pune with ₹28 LPA average and ₹72 LPA highest package in recent batches. SCMHRD is close behind with ₹24 LPA average. Both are Symbiosis colleges requiring SNAP + CAT for admission." },
   { q: "Which companies recruit from Pune colleges?", a: "Top engineering recruiters: TCS Digital, Infosys, Wipro, Bajaj Auto, L&T, KPIT, Persistent. Top MBA recruiters from Pune: McKinsey, BCG, KPMG, Deloitte, Amazon, HDFC Bank, Deutsche Bank, Asian Paints. Tech product companies like Google and Microsoft visit COEP, PICT, and SIT for engineering placement." },
-  { q: "What is the average placement package across all Pune colleges?", a: "Overall average placement across all Pune colleges: ₹4-5 LPA. Top-tier colleges (COEP, SIBM, SIT): ₹8-28 LPA avg. Mid-tier colleges (VIT Pune, PICT, IIMS): ₹5-12 LPA avg. Budget private colleges: ₹3.5-5 LPA avg. MBA placements are generally higher than engineering across equivalent college tiers." },
   { q: "Is placement guaranteed in Pune colleges?", a: "No college legally guarantees 100% placement. However, COEP, PICT, SIT, and SIBM historically achieve 90-98% placement rates. These figures mean 90-98% of registered students receive job offers by final year end. Not all students participate in campus placements -- some pursue higher education (CAT for MBA, GATE for MTech, MS abroad)." },
 ]
 
@@ -60,15 +57,12 @@ export default function TopPlacementCollegesPunePage() {
         h1="Top Placement Colleges in Pune 2026"
         subtitle="Colleges in Pune ranked by placement outcomes. Average and highest LPA packages for engineering, MBA, and management programs -- real data from 2024-2026 batches."
         heroStats={[
-          { value: "₹28 LPA", label: "Best MBA Avg (SIBM)" },
-          { value: "₹12 LPA", label: "Best Engg Avg (COEP)" },
-          { value: "₹72 LPA", label: "Highest Package" },
           { value: "98%+", label: "Best Placement Rate" },
         ]}
         introHeading="Top Placement Colleges in Pune: Data-Driven Rankings 2026"
         introParagraphs={[
           "Placement outcomes are the ultimate measure of a college's real value. This guide ranks Pune colleges strictly by placement data: average package, median package, highest package, placement rate (%), and recruiter quality. Data is sourced from official placement brochures, LinkedIn verification, and CampusLelo alumni network surveys for the 2024-2026 batch.",
-          "Pune's top placement colleges span two distinct categories: MBA colleges led by SIBM and SCMHRD (₹24-28 LPA average), and engineering colleges led by COEP and PICT (₹7.5-12 LPA average). Understanding which category has better ROI for your investment is crucial -- a ₹8.5L MBA at SIBM with ₹28 LPA average yields better ROI than a ₹4.8L engineering degree at COEP in pure financial terms.",
+          "Pune's top placement colleges span two distinct categories: MBA colleges led by SIBM and SCMHRD, and engineering colleges led by COEP and PICT. Understanding which category has better ROI for your investment is crucial -- a ₹8.5L MBA at SIBM with ₹28 LPA average yields better ROI than a ₹4.8L engineering degree at COEP in pure financial terms.",
           "Placement rates should be interpreted carefully. 100% placement claims often include PPOs (Pre-Placement Offers) and student-driven placements alongside campus placements. The more meaningful metric is: what percentage of students received job offers through the college placement cell, and what was the median (not average) package to eliminate outlier impact from a few high-paying offers.",
         ]}
         colleges={colleges}

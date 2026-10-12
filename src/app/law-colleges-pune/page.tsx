@@ -35,8 +35,6 @@ const faqs = [
   { question: "Which is the best law college in Pune 2026?", answer: "ILS Law College is the most prestigious government-aided law college in Pune (est. 1924) with the lowest fees (₹20–40K/yr). Symbiosis Law School (SLS) is the best private option with top 5 national ranking and excellent placements in law firms and corporate legal departments. MNLU Pune is the NLU (National Law University) for Maharashtra with CLAT-based admission." },
   { question: "What is the fee for law colleges in Pune?", answer: "Law college fees in Pune range widely: Government-aided colleges like ILS (₹20–40K/yr) and New Law College (₹15–25K/yr) are the most affordable. Private colleges charge ₹60K–₹90K/yr. Deemed universities like Symbiosis Law School charge ₹1.8–2.5 lakh/year. Total 5-year BA LLB course costs ₹1 lakh (govt) to ₹12.5 lakh (private)." },
   { question: "Is CLAT required for law colleges in Pune?", answer: "CLAT (Common Law Admission Test) is required only for MNLU Pune (NLU status). Most other law colleges in Pune use MH-CET Law (Maharashtra common entrance test for law) for BA LLB and LLB admissions. Symbiosis Law School uses its own SLAT (Symbiosis Law Admission Test). Top scorers in Class 12 can apply directly to ILS Law College." },
-  { question: "What are career opportunities after law from Pune colleges?", answer: "Law graduates from Pune colleges pursue careers as advocates in High Court / District Courts, corporate lawyers in MNCs, legal officers in banks & government departments, judicial services (MPSC/UPSC), and in law firms. SLS graduates command ₹6–15 LPA in top law firms. MNLU Pune graduates frequently join Delhi NCR law firms and LLM programs abroad." },
-  { question: "Which law college in Pune has the best placements?", answer: "Symbiosis Law School (SLS) has the best placements among Pune law colleges with an average package of ₹6–8 LPA and top offers up to ₹18 LPA from firms like AZB & Partners, Trilegal, Khaitan & Co, and corporate legal departments of Infosys, TCS, and Wipro. MNLU Pune also has strong placement in government and top law firms." },
 ]
 
 const breadcrumb = [
@@ -70,7 +68,6 @@ export default function LawCollegesPune() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
               { icon: BookOpen, text: "6 Top Law Colleges" },
-              { icon: TrendingUp, text: "Up to ₹18 LPA" },
               { icon: Award, text: "NLU + NAAC Ranked" },
               { icon: Users, text: "BA LLB / LLB / LLM" },
             ].map(({ icon: Icon, text }) => (
@@ -88,7 +85,7 @@ export default function LawCollegesPune() {
             <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Top Law Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Most prestigious:</strong> ILS Law College · <strong>Best private:</strong> Symbiosis Law School (SLS) · <strong>NLU option:</strong> MNLU Pune ·{" "}
-              <strong>Cheapest:</strong> New Law College (₹15K/yr) · <strong>Best placement:</strong> SLS (₹18 LPA top offer)
+              <strong>Cheapest:</strong> New Law College (₹15K/yr) · <strong>Best placement:</strong> SLS
             </p>
           </div>
 

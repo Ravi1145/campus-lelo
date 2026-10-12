@@ -10,7 +10,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
   title: "Best Colleges in Noida 2026 | Fees, Rankings & Placements | CampusLelo",
-  description: "Compare top colleges in Noida 2026 — Amity University (NIRF #51), JIIT Noida, Bennett University, Galgotias, Sharda, GL Bajaj. Fees ₹1.2L–6L/yr. Placements up to ₹55 LPA. JEE, CUET admission guide.",
+  description: "Compare top colleges in Noida 2026 — Amity University, JIIT Noida, Bennett University, Galgotias, Sharda, GL Bajaj. Fees ₹1.2L–6L/yr. JEE, CUET admission guide.",
   path: "/colleges-in-noida",
   keywords: [
     "colleges in noida 2026",
@@ -39,7 +39,7 @@ export const metadata: Metadata = genMeta({
 const faqData = [
   {
     question: "Which is the best college in Noida in 2026?",
-    answer: "JIIT (Jaypee Institute of Information Technology), Sector 62 Noida is the best CSE/engineering college in Noida with average placement ₹8.5 LPA and recruiters like Amazon, Microsoft, Google. Amity University (NIRF #51, NAAC A+) is the best overall private university in Noida across all streams. Bennett University (Times Group) is best for product company placements.",
+    answer: "JIIT (Jaypee Institute of Information Technology), Sector 62 Noida is the best CSE/engineering college in Noida and recruiters like Amazon, Microsoft, Google. Amity University (NAAC A+) is the best overall private university in Noida across all streams. Bennett University (Times Group) is best for product company placements.",
   },
   {
     question: "What are the fees for engineering colleges in Noida 2026?",
@@ -51,15 +51,15 @@ const faqData = [
   },
   {
     question: "Which Noida college has the highest placement package in 2026?",
-    answer: "Bennett University (Times Group) offers the highest average placement at ₹9 LPA with highest package ₹55 LPA. JIIT Noida averages ₹8.5 LPA with highest ₹50 LPA (product companies). Amity University averages ₹7.5 LPA with Amazon, Microsoft, Deloitte recruiters. For MBA, Amity Business School Noida averages ₹8 LPA.",
+    answer: "Bennett University (Times Group) offers the highest.",
   },
   {
     question: "Is Amity University Noida good for B.Tech?",
-    answer: "Yes, Amity University Noida (NIRF #51, NAAC A+) is the top-ranked private university in Noida for B.Tech. CSE placements are strong — TCS, Infosys, Amazon, Microsoft recruit from campus. Average placement ₹7.5 LPA, highest ₹42 LPA. Fees are ₹2L–5.5L/yr. Best for students wanting a large campus, diverse programs, and strong brand recognition in NCR.",
+    answer: "Yes, Amity University Noida (NAAC A+) is the top-ranked private university in Noida for B.Tech. CSE placements are strong — TCS, Infosys, Amazon, Microsoft recruit from campus.. Fees are ₹2L–5.5L/yr. Best for students wanting a large campus, diverse programs, and strong brand recognition in NCR.",
   },
   {
     question: "What is the difference between JIIT, Amity, and Bennett University?",
-    answer: "JIIT Sector 62: Best CSE/IT focused, highest avg placement (₹8.5 LPA), product company recruiters (Amazon, Google), fees ₹2.8L–3.8L. Amity: Largest campus, most diverse programs (engineering+MBA+law+design), NIRF #51, fees ₹2L–5.5L. Bennett (Times Group): Premium placements, strong industry connections, AI/Cybersecurity programs, fees ₹3L–6L — best for product company aspirants with budget.",
+    answer: "JIIT Sector 62: Best CSE/IT focused, highest avg placement, product company recruiters (Amazon, Google), fees ₹2.8L–3.8L. Amity: Largest campus, most diverse programs (engineering+MBA+law+design), fees ₹2L–5.5L. Bennett (Times Group): Premium placements, strong industry connections, AI/Cybersecurity programs, fees ₹3L–6L — best for product company aspirants with budget.",
   },
 ]
 
@@ -96,7 +96,7 @@ export default function CollegesInNoidaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuickAnswer
             question="Which is the best college in Noida in 2026?"
-            answer="JIIT Noida (Sector 62) is the best engineering college in Noida — NAAC A, average placement ₹8.5 LPA, strong CS/IT. Amity University (NIRF #51, NAAC A+) is the best overall private university across all streams. Bennett University (Times Group) leads for product company placements at ₹9 LPA average."
+            answer="JIIT Noida (Sector 62) is the best engineering college in Noida — NAAC A, strong CS/IT. Amity University (NAAC A+) is the best overall private university across all streams."
             note="Data verified October 2026. Source: CampusLelo placement research."
           />
         </div>
@@ -114,7 +114,7 @@ export default function CollegesInNoidaPage() {
               Best Colleges in Noida 2026
             </h1>
             <p className="text-blue-100 text-base sm:text-lg max-w-3xl mb-6">
-              Compare {noidaColleges.length}+ top colleges in Noida &amp; Greater Noida — Amity University (NIRF #51),
+              Compare {noidaColleges.length}+ top colleges in Noida &amp; Greater Noida — Amity University (),
               JIIT Noida, Bennett University, Galgotias, Sharda &amp; GL Bajaj.
               Real fees, 2026 cutoffs, placement data &amp; reviews.
             </p>
@@ -122,7 +122,7 @@ export default function CollegesInNoidaPage() {
               {[
                 ["50+", "Colleges in Noida"],
                 ["₹1.2L–6L", "Fee Range/yr"],
-                ["₹55 LPA", "Highest Package"],
+
                 ["JEE/CUET", "Entrance Exams"],
               ].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
@@ -329,8 +329,8 @@ export default function CollegesInNoidaPage() {
                 <p>
                   Noida&apos;s location in Delhi NCR gives its colleges a major advantage — the Noida/Gurgaon tech corridor
                   houses Amazon, Microsoft, HCL, Infosys, TCS, Accenture, Wipro and hundreds of startups.
-                  JIIT Noida leads with ₹8.5 LPA average and ₹50 LPA highest. Bennett averages ₹9 LPA.
-                  Amity averages ₹7.5 LPA. GL Bajaj and KIET (AKTU) average ₹5–6 LPA — strong for their fee bracket.
+                  
+                  GL Bajaj and KIET (AKTU) average ₹5 — strong for their fee bracket.
                 </p>
               </div>
               <div>

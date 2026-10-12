@@ -21,7 +21,9 @@ export interface BTechCollege {
   highlights: string[]
 }
 
-export const btechColleges: BTechCollege[] = [
+import { scrubText, hasFigure, scrubStrings } from "@/lib/verified"
+
+const rawBtechColleges: BTechCollege[] = [
   {
     rank: 1,
     name: "College of Engineering Pune",
@@ -192,7 +194,19 @@ export const btechColleges: BTechCollege[] = [
   },
 ]
 
-export const btechFAQs = {
+// Packages, NIRF ranks, recruiter lists and unsourced cut-off ranges are removed until sourced (src/lib/verified.ts)
+export const btechColleges: BTechCollege[] = rawBtechColleges.map((c) => ({
+  ...c,
+  nirfRank: null,
+  avgPlacement: 0,
+  highestPlacement: 0,
+  topRecruiters: [],
+  mhtCetCutoff: undefined,
+  jeeMainCutoff: undefined,
+  highlights: c.highlights.filter((h) => !hasFigure(h)).map((h) => scrubText(h)),
+}))
+
+const rawBtechFAQs = {
   general: [
     { question: "Which is the best BTech college in Pune?", answer: "COEP (College of Engineering Pune) is the best BTech college in Pune with NIRF rank 49, NAAC A+ accreditation, and an average placement of ₹12 LPA. For Computer Science specifically, PICT Pune is considered the best with Goldman Sachs and Deutsche Bank recruiting on campus. For newer branches like AI/ML, MIT-WPU and SIT Pune are top choices." },
     { question: "What is the BTech fee in Pune colleges?", answer: "BTech fees in Pune range from ₹80,000/year at COEP (government) to ₹4.8 lakh/year at SIT Pune (deemed). Autonomous SPPU-affiliated colleges like PICT, VIT Pune, and PCCOE charge ₹1.4L–2.2L/year. Total 4-year BTech cost ranges from ₹3.2L (COEP) to ₹19.2L (SIT Pune)." },
@@ -204,3 +218,6 @@ export const btechFAQs = {
     { question: "Which BTech branch is best in Pune?", answer: "Computer Science Engineering (CSE) and Information Technology (IT) are the highest-paying BTech branches in Pune with ₹8–25 LPA starting packages. Mechanical Engineering benefits from Pune's auto sector. Electronics (E&TC) is strong at COEP and VIT Pune. AI & ML is a fast-growing branch at MIT-WPU and SIT Pune." },
   ],
 }
+
+// FAQ answers lose any package or NIRF figure until sourced (src/lib/verified.ts)
+export const btechFAQs = scrubStrings(rawBtechFAQs)

@@ -13,14 +13,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "₹12 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "₹9.8 LPA avg", slug: "symbiosis-institute-of-technology-pune" },
-  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "₹7.2 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "₹8.5 LPA avg", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "₹5.6 LPA avg", slug: "bharati-vidyapeeth-college-engineering-pune" },
-  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "₹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
-  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "₹7.5 LPA avg", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "₹5.2 LPA avg", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K-1.8L/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹3.6L-4.8L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
+  { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹2.0L-3.8L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L-2.2L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L-1.95L/yr", placement: "Not published", slug: "bharati-vidyapeeth-college-engineering-pune" },
+  { name: "Cummins College of Engineering for Women", location: "Karvenagar", naac: "A+", fees: "₹1.3L-1.75L/yr", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
+  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L-1.9L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L-1.7L/yr", placement: "Not published", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
 ]
 
 const faqs = [
@@ -74,7 +74,7 @@ export default function JeeCollegesPunePage() {
         colleges={colleges}
         whyHeading="JEE Main Advantages for Pune College Admission"
         whyPoints={[
-          { title: "Access to Premium Deemed Universities", description: "SIT Pune, MIT-WPU, and DY Patil University accept JEE Main for direct admission without MHT-CET. These institutions offer excellent placement at ₹7-10 LPA average for qualified JEE students." },
+          { title: "Access to Premium Deemed Universities", description: "SIT Pune, MIT-WPU, and DY Patil University accept JEE Main for direct admission without MHT-CET. These institutions offer excellent placement at ₹7 average for qualified JEE students." },
           { title: "Management Quota Flexibility", description: "Private engineering colleges in Pune fill management quota seats based on JEE Main scores (and sometimes direct payment). This provides a parallel admission route alongside MHT-CET CAP." },
           { title: "All India Quota at COEP", description: "COEP (India's #49 engineering college) reserves seats for All India Quota filled through JoSAA counselling based on JEE Main scores - giving non-Maharashtra students access to COEP's exceptional education." },
           { title: "Two Attempts Per Year", description: "JEE Main in January and April allows students to improve scores. The better of two scores is used. This gives an advantage over MHT-CET (one attempt per year) for strategic test-takers." },

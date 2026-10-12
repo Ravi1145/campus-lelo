@@ -22,7 +22,9 @@ export interface CareerPath {
   relatedPaths: string[]
 }
 
-export const careerPaths: CareerPath[] = [
+import { scrubStrings } from "@/lib/verified"
+
+const rawCareerPaths: CareerPath[] = [
   {
     slug: "software-engineering",
     title: "Software Engineering",
@@ -325,6 +327,9 @@ export const careerPaths: CareerPath[] = [
     relatedPaths: ["civil-engineering", "software-engineering"],
   },
 ]
+
+// Salary figures in the text are removed until they are sourced (src/lib/verified.ts)
+export const careerPaths: CareerPath[] = rawCareerPaths.map((p) => scrubStrings(p))
 
 export function getCareerPath(slug: string): CareerPath | undefined {
   return careerPaths.find(p => p.slug === slug)

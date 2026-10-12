@@ -18,12 +18,12 @@ export const metadata: Metadata = { ...genMeta({
 }), robots: { index: false, follow: true } }
 
 const featuredAlumni = [
-  { slug: "rahul-sharma-coep-2023", name: "Rahul Sharma", college: "COEP Pune", course: "B.Tech CSE", year: 2023, company: "Google", package: "₹32 LPA", avatar: null },
-  { slug: "priya-desai-sibm-2022",  name: "Priya Desai",  college: "SIBM Pune", course: "MBA", year: 2022, company: "McKinsey & Co.", package: "₹28 LPA", avatar: null },
-  { slug: "aditya-kulkarni-pict-2023", name: "Aditya Kulkarni", college: "PICT Pune", course: "B.Tech IT", year: 2023, company: "Microsoft", package: "₹25 LPA", avatar: null },
+  { slug: "rahul-sharma-coep-2023", name: "Rahul Sharma", college: "COEP Pune", course: "B.Tech CSE", year: 2023, company: "Google", package: "Not published", avatar: null },
+  { slug: "priya-desai-sibm-2022",  name: "Priya Desai",  college: "SIBM Pune", course: "MBA", year: 2022, company: "McKinsey & Co.", package: "Not published", avatar: null },
+  { slug: "aditya-kulkarni-pict-2023", name: "Aditya Kulkarni", college: "PICT Pune", course: "B.Tech IT", year: 2023, company: "Microsoft", package: "Not published", avatar: null },
   { slug: "sneha-patil-afmc-2021",  name: "Sneha Patil",  college: "AFMC Pune", course: "MBBS", year: 2021, company: "Army Medical Corps", package: "—", avatar: null },
-  { slug: "karan-mehta-vit-2023",   name: "Karan Mehta",  college: "VIT Pune", course: "B.Tech Mechanical", year: 2023, company: "Cummins India", package: "₹9.5 LPA", avatar: null },
-  { slug: "ananya-joshi-mit-wpu-2022", name: "Ananya Joshi", college: "MIT-WPU Pune", course: "B.Tech CSE", year: 2022, company: "Persistent Systems", package: "₹8 LPA", avatar: null },
+  { slug: "karan-mehta-vit-2023",   name: "Karan Mehta",  college: "VIT Pune", course: "B.Tech Mechanical", year: 2023, company: "Cummins India", package: "Not published", avatar: null },
+  { slug: "ananya-joshi-mit-wpu-2022", name: "Ananya Joshi", college: "MIT-WPU Pune", course: "B.Tech CSE", year: 2022, company: "Persistent Systems", package: "Not published", avatar: null },
 ]
 
 function Initials({ name, className = "" }: { name: string; className?: string }) {

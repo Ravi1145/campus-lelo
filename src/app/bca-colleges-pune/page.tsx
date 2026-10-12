@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best BCA Colleges in Pune 2026 | Fees, MHT-CET Cutoff & IT Placements",
-  description: "Top BCA (Bachelor of Computer Applications) colleges in Pune 2026. Compare Symbiosis, MIT, Fergusson, Indira and more. Fees ₹30K–₹2L/yr, MHT-CET cutoffs, placement packages up to ₹12 LPA & admission process.",
+  description: "Top BCA (Bachelor of Computer Applications) colleges in Pune 2026. Compare Symbiosis, MIT, Fergusson, Indira and more.",
   path: "/bca-colleges-pune",
   keywords: [
     "bca colleges in pune 2026",
@@ -32,7 +32,7 @@ const colleges = [
     type: "Deemed",
     naac: "A",
     fees: "₹1.2L–₹1.8L/yr",
-    placement: "₹8–12 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "Merit + Entrance",
     highlight: "Best BCA Brand | Tech-forward curriculum | MNCs",
@@ -44,7 +44,7 @@ const colleges = [
     type: "Private (Autonomous)",
     naac: "A+",
     fees: "₹80K–₹1.2L/yr",
-    placement: "₹6–10 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 60%+",
     highlight: "MIT Brand | Modern Labs | Strong Placements",
@@ -56,7 +56,7 @@ const colleges = [
     type: "Govt-aided (Autonomous)",
     naac: "A+",
     fees: "₹30K–₹50K/yr",
-    placement: "₹4–7 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "HSC 65%+",
     highlight: "Heritage + Tech | Most Affordable BCA",
@@ -68,7 +68,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹60K–₹90K/yr",
-    placement: "₹5–8 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 55%+",
     highlight: "IT-focused BCA | Pune-Nashik Highway",
@@ -80,7 +80,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹50K–₹75K/yr",
-    placement: "₹4–7 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 55%+",
     highlight: "Sinhgad Group | Large BCA Batch",
@@ -92,7 +92,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹55K–₹80K/yr",
-    placement: "₹4–6 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "HSC 55%+",
     highlight: "DY Patil Group | Pimpri Campus",
@@ -104,7 +104,7 @@ const colleges = [
     type: "Govt-aided",
     naac: "A",
     fees: "₹20K–₹35K/yr",
-    placement: "₹3–5 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "HSC 60%+",
     highlight: "Cheapest BCA Pune | BMCC Brand",
@@ -115,7 +115,7 @@ const colleges = [
 const faqs = [
   {
     question: "Which is the best BCA college in Pune 2026?",
-    answer: "Symbiosis College of Arts & Commerce offers the best BCA in Pune with placements at top IT companies (TCS, Infosys, Wipro, Cognizant) averaging ₹8–12 LPA. MIT Arts, Commerce & Science College is the best for the MIT brand with modern computer labs. Fergusson College is the most affordable option with NAAC A+ accreditation at just ₹30–50K/year.",
+    answer: "Symbiosis College of Arts & Commerce offers the best BCA in Pune with placements at top IT companies (TCS, Infosys, Wipro, Cognizant) averaging ₹8. MIT Arts, Commerce & Science College is the best for the MIT brand with modern computer labs. Fergusson College is the most affordable option with NAAC A+ accreditation at just ₹30–50K/year.",
   },
   {
     question: "What is the fee for BCA in Pune?",
@@ -127,7 +127,7 @@ const faqs = [
   },
   {
     question: "What are the career opportunities after BCA from Pune?",
-    answer: "BCA graduates from Pune colleges work as: Software Developers (₹4–8 LPA), Web Developers (₹4–7 LPA), Data Analysts (₹5–9 LPA), System Administrators (₹4–6 LPA), and IT Consultants (₹6–12 LPA). Top recruiters: TCS, Infosys, Wipro, Capgemini, Cognizant, Accenture. Many BCA graduates from Symbiosis and MIT also start their own tech startups. Pursuing MCA after BCA can push salaries to ₹10–20 LPA.",
+    answer: "BCA graduates from Pune colleges work as: Software Developers, Web Developers, Data Analysts, System Administrators, and IT Consultants. Top recruiters: TCS, Infosys, Wipro, Capgemini, Cognizant, Accenture. Many BCA graduates from Symbiosis and MIT also start their own tech startups. Pursuing MCA after BCA can push salaries to ₹10.",
   },
   {
     question: "What percentage is required for BCA admission in Pune?",
@@ -161,12 +161,11 @@ export default function BCACollegesPune() {
           </nav>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Best BCA Colleges in Pune 2026</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Compare top BCA &amp; BSc Computer Science colleges in Pune — fees from ₹20K to ₹1.8L/year, IT placements up to ₹12 LPA, and admission without MHT-CET.
+            
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
               { icon: BookOpen, text: "7 BCA Colleges" },
-              { icon: TrendingUp, text: "Up to ₹12 LPA" },
               { icon: Award, text: "NAAC A+ Colleges" },
               { icon: Users, text: "BCA · BSc CS · BCA IT" },
             ].map(({ icon: Icon, text }) => (
@@ -183,7 +182,7 @@ export default function BCACollegesPune() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
             <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — BCA Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
-              <strong>Best placement:</strong> Symbiosis (₹12 LPA) · <strong>Best brand:</strong> MIT Arts ·{" "}
+              <strong>Best placement:</strong> Symbiosis · <strong>Best brand:</strong> MIT Arts ·{" "}
               <strong>Cheapest:</strong> BMCC (₹20K/yr) · <strong>Best NAAC:</strong> Fergusson &amp; MIT (A+) ·{" "}
               <strong>No entrance needed:</strong> Most colleges (HSC merit)
             </p>

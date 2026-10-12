@@ -32,10 +32,8 @@ const colleges = [
 ]
 
 const faqs = [
-  { question: "Which is the best design college in Pune 2026?", answer: "MIT Institute of Design (MIT-ID) is the top design college in Pune offering B.Des and M.Des programs with strong industry connections and placements up to ₹12 LPA. Symbiosis School of Design (SSD) is a close second, especially for fashion and communication design." },
   { question: "What is the fee for design colleges in Pune?", answer: "Design college fees in Pune range from ₹15,000/year at government colleges like Fergusson College to ₹5.5 lakh/year at premium institutes like Symbiosis School of Design. MIT-ID charges ₹3.5–5 lakh/year. Total 4-year course cost ranges from ₹60,000 to ₹22 lakh." },
   { question: "Is NATA required for architecture colleges in Pune?", answer: "Yes, NATA (National Aptitude Test in Architecture) is mandatory for B.Arch admissions at most architecture colleges in Pune. A score of 70+ is required for private colleges, while government-aided institutions may require 80+. NATA 2026 exams are held in March and April." },
-  { question: "What are placements like at design colleges in Pune?", answer: "MIT-ID graduates get placed at companies like Titan, Mahindra, Godrej, and international studios with average packages of ₹6–8 LPA and top offers up to ₹12 LPA. Symbiosis School of Design has placements averaging ₹5–7 LPA in product design, UX, and fashion firms." },
   { question: "Which design entrance exams are accepted in Pune?", answer: "Pune design colleges accept NID DAT (National Institute of Design), NIFT entrance test, CEED (for M.Des), NATA (for B.Arch), and MHT-CET for architecture. MIT-ID and SSD conduct their own portfolio-based aptitude tests and studio interviews." },
 ]
 
@@ -70,7 +68,6 @@ export default function DesignCollegesPune() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
               { icon: BookOpen, text: "6 Design Colleges" },
-              { icon: TrendingUp, text: "Up to ₹12 LPA" },
               { icon: Award, text: "NAAC Accredited" },
               { icon: Users, text: "B.Des / B.Arch / M.Des" },
             ].map(({ icon: Icon, text }) => (
@@ -88,7 +85,7 @@ export default function DesignCollegesPune() {
             <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Top Design Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Best overall:</strong> MIT Institute of Design (MIT-ID) · <strong>Best deemed:</strong> Symbiosis School of Design · <strong>Best B.Arch:</strong> MIT AOA ·{" "}
-              <strong>Lowest fees:</strong> Fergusson College (₹15K/yr) · <strong>Highest placement:</strong> MIT-ID (₹12 LPA top offer)
+              <strong>Lowest fees:</strong> Fergusson College (₹15K/yr) · <strong>Highest placement:</strong> MIT-ID
             </p>
           </div>
 

@@ -13,14 +13,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K/yr", placement: "₹12 LPA avg | Cutoff: 99.5%ile CSE", slug: "coep-college-of-engineering-pune" },
-  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L/yr", placement: "₹7.5 LPA avg | Cutoff: 95-97%ile CS", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L/yr", placement: "₹8.5 LPA avg | Cutoff: 88-92%ile", slug: "vit-pune-vishwakarma-institute-of-technology" },
-  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L/yr", placement: "₹5.2 LPA avg | Cutoff: 65-75%ile", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
-  { name: "Sinhgad College of Engineering", location: "Vadgaon", naac: "A", fees: "₹1.15L/yr", placement: "₹4.9 LPA avg | Cutoff: 60-70%ile", slug: "sinhgad-college-of-engineering-pune" },
-  { name: "AISSMS College of Engineering", location: "Kennedy Road", naac: "A", fees: "₹1.1L/yr", placement: "₹4.8 LPA avg | Cutoff: 60-70%ile", slug: "aissms-college-of-engineering-pune" },
-  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L/yr", placement: "₹5.6 LPA avg | Cutoff: 68-78%ile", slug: "bharati-vidyapeeth-college-engineering-pune" },
-  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L/yr", placement: "₹5.1 LPA avg | Cutoff: 55-65%ile", slug: "dy-patil-college-engineering-akurdi-pune" },
+  { name: "College of Engineering Pune (COEP)", location: "Shivajinagar", naac: "A+", fees: "₹80K/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Pune Institute of Computer Technology (PICT)", location: "Dhankawadi", naac: "A", fees: "₹1.4L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹1.6L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
+  { name: "JSPM Rajarshi Shahu College of Engineering", location: "Tathawade", naac: "A", fees: "₹1.2L/yr", placement: "Not published", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering" },
+  { name: "Sinhgad College of Engineering", location: "Vadgaon", naac: "A", fees: "₹1.15L/yr", placement: "Not published", slug: "sinhgad-college-of-engineering-pune" },
+  { name: "AISSMS College of Engineering", location: "Kennedy Road", naac: "A", fees: "₹1.1L/yr", placement: "Not published", slug: "aissms-college-of-engineering-pune" },
+  { name: "Bharati Vidyapeeth College of Engineering", location: "Dhankawadi", naac: "A", fees: "₹1.45L/yr", placement: "Not published", slug: "bharati-vidyapeeth-college-engineering-pune" },
+  { name: "D.Y. Patil College of Engineering Akurdi", location: "Akurdi", naac: "A", fees: "₹1.05L/yr", placement: "Not published", slug: "dy-patil-college-engineering-akurdi-pune" },
 ]
 
 const faqs = [

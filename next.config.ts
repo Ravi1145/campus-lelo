@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { collegeRedirects } from "./src/data/collegeRedirects"
+import { retiredPages } from "./src/data/retiredPages"
 import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
@@ -159,6 +160,10 @@ const nextConfig: NextConfig = {
       { source: "/compare/mit-wpu-mit-world-peace-university-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
       { source: "/compare/symbiosis-institute-of-business-management-sibm-vs-mit-wpu-mit-world-peace-university", destination: "/compare/mit-wpu-mit-world-peace-university-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
       { source: "/compare/flame-university-pune-vs-symbiosis-institute-of-business-management-sibm", destination: "/compare/flame-university-pune-vs-sibm-symbiosis-institute-business-management-pune", permanent: true },
+      // Templated college sub-pages (fees, cutoff, admission, scholarship, placements) used generic or invented figures
+      { source: "/colleges/:slug/:sub(fees|cutoff|admission|scholarship|placements)", destination: "/colleges/:slug", permanent: true },
+      // Placement-figure pages retired (see src/data/retiredPages.ts)
+      ...retiredPages.map((r) => ({ source: r.source, destination: r.destination, permanent: true })),
       // Guessed college slugs linked from landing pages (see src/data/collegeRedirects.ts)
       ...Object.entries(collegeRedirects).map(([slug, destination]) => ({ source: `/colleges/${slug}`, destination, permanent: true })),
       { source: "/colleges/colleges", destination: "/colleges", permanent: true },

@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     question: "What is the total MBA fee at SIBM Pune?",
-    answer: "The total 2-year MBA fee at SIBM Pune (Symbiosis Institute of Business Management) is ₹16L–₹22L for the complete program (2026–27 batch). This includes tuition, hostel, and other charges. With a merit scholarship (top SNAP scorers), you can get ₹1–3L off. SIBM Pune's ROI is strong — average placement is ₹28 LPA.",
+    answer: "The total 2-year MBA fee at SIBM Pune (Symbiosis Institute of Business Management) is ₹16L–₹22L for the complete program (2026–27 batch). This includes tuition, hostel, and other charges. With a merit scholarship (top SNAP scorers), you can get ₹1–3L off. SIBM Pune's ROI is strong —.",
   },
   {
     question: "Which is the cheapest engineering college in Pune with good placements?",
-    answer: "COEP Pune is the cheapest top engineering college (₹80K–₹1.8L/yr) with excellent placements (₹12 LPA avg). Among private colleges, AISSMS (₹1.1L–₹1.55L/yr) and Sinhgad College (₹1.15L/yr) are affordable with decent placements (₹4.5–5 LPA). Indira College of Engineering (₹95K/yr) is the lowest-fee private college in Pune.",
+    answer: "COEP Pune is the cheapest top engineering college (₹80K–₹1.8L/yr) with excellent placements. Among private colleges, AISSMS (₹1.1L–₹1.55L/yr) and Sinhgad College (₹1.15L/yr) are affordable with decent placements. Indira College of Engineering (₹95K/yr) is the lowest-fee private college in Pune.",
   },
   {
     question: "Which is the cheapest MBA college in Pune?",

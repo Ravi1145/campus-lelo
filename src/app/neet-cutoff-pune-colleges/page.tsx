@@ -18,8 +18,8 @@ export const metadata: Metadata = genMeta({
 })
 
 const cutoffs = [
-  { rank: 1, name: "AFMC Pune (Armed Forces Medical College)", slug: "afmc-armed-forces-medical-college-pune", type: "Government (Defence)", nirf: 4, fees: "₹50K total (4.5 yrs)", open: "650+ (NEET + AFMC test)", obc: "640+", sc: "620+", st: "610+", note: "NIRF #4 — Best in Pune" },
-  { rank: 2, name: "BJ Medical College Pune", slug: "bj-medical-college-pune", type: "Government State", nirf: 18, fees: "₹60K/yr", open: "632 (State) / 641 (AIQ)", obc: "596+ (State)", sc: "548+", st: "528+", note: "Best Govt. Option" },
+  { rank: 1, name: "AFMC Pune (Armed Forces Medical College)", slug: "afmc-armed-forces-medical-college-pune", type: "Government (Defence)", nirf: null, fees: "₹50K total (4.5 yrs)", open: "650+ (NEET + AFMC test)", obc: "640+", sc: "620+", st: "610+", note: " — Best in Pune" },
+  { rank: 2, name: "BJ Medical College Pune", slug: "bj-medical-college-pune", type: "Government State", nirf: null, fees: "₹60K/yr", open: "632 (State) / 641 (AIQ)", obc: "596+ (State)", sc: "548+", st: "528+", note: "Best Govt. Option" },
   { rank: 3, name: "D.Y. Patil Medical College (Deemed)", slug: "dy-patil-medical-college-pimpri-pune", type: "Deemed Private", nirf: null, fees: "₹14L–₹18L/yr", open: "550+", obc: "530+", sc: "500+", st: "480+", note: "Largest Private MBBS" },
   { rank: 4, name: "Bharati Vidyapeeth Medical College", slug: "bharati-vidyapeeth-medical-college-pune", type: "Deemed", nirf: null, fees: "₹12L–₹15L/yr", open: "560+", obc: "540+", sc: "510+", st: "490+", note: "Established 1989" },
   { rank: 5, name: "Symbiosis Medical College for Women (SMCW)", slug: "symbiosis-medical-college-for-women-pune", type: "Deemed (Women only)", nirf: null, fees: "₹12.5L/yr", open: "565+ (Women)", obc: "545+", sc: "515+", st: "495+", note: "Women Only | SIU Campus" },
@@ -27,7 +27,6 @@ const cutoffs = [
 
 const faqs = [
   { question: "What is the NEET cutoff for Pune medical colleges in 2026?", answer: "NEET 2026 expected cutoffs for Pune medical colleges: AFMC (650+ marks + AFMC test), BJ Medical College state quota 620+ (open), AIQ 641+, D.Y. Patil Medical 550+, Bharati Vidyapeeth 560+, SMCW 565+ (women). OBC/SC/ST categories get 10–20 mark relaxation at government colleges." },
-  { question: "What NEET score is needed for government medical college in Pune?", answer: "BJ Medical College Pune (NIRF #18) requires 632 marks (State Open quota). AFMC Pune (NIRF #4) needs 650+ marks in NEET plus clearing the AFMC entrance test. These are the only 2 government MBBS seats in Pune. Both have near-zero fees compared to private colleges." },
   { question: "What NEET score is needed for AFMC Pune?", answer: "AFMC Pune requires approximately 650+ marks in NEET UG 2026 (General category) plus qualifying the AFMC Written Entrance Test (100 marks). The selection is based on NEET score + AFMC test + Personal Interview. Post-selection, students get a 7-year bond for Armed Forces service. Fees are approximately ₹50,000 total for 4.5-year MBBS." },
   { question: "Which is the cheapest MBBS college in Pune via NEET?", answer: "AFMC Pune is the cheapest — total fees ₹50,000 for the entire 4.5-year MBBS (requires 650+ NEET). BJ Medical College charges ₹60,000/year (requires 620+ NEET state quota). These are government colleges. Private deemed colleges charge ₹12–18L/year and have lower NEET cutoffs (550–565+)." },
 ]
@@ -67,7 +66,7 @@ export default function NeetCutoffPuneColleges() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>AFMC Pune</strong> (NIRF #4) needs <strong>650+ NEET marks</strong> + AFMC test. <strong>BJ Medical College</strong> (NIRF #18) state quota cutoff is <strong>632 marks</strong> (Open). Private colleges like DY Patil require 550+ marks. Government college fees: ₹50K–₹60K/yr vs private ₹12–18L/yr.
+                <strong>AFMC Pune</strong> () needs <strong>650+ NEET marks</strong> + AFMC test. <strong>BJ Medical College</strong> () state quota cutoff is <strong>632 marks</strong> (Open). Private colleges like DY Patil require 550+ marks. Government college fees: ₹50K–₹60K/yr vs private ₹12–18L/yr.
               </p>
             </div>
           </div>

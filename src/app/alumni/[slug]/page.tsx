@@ -22,7 +22,7 @@ const allAlumni = [
     course: "B.Tech CSE",
     year: 2023,
     company: "Google",
-    package: "₹32 LPA",
+    package: "Not published",
     bio: "Specialised in ML systems. Interned at Amazon before joining Google.",
     highlights: [
       "Won Smart India Hackathon 2022",
@@ -37,7 +37,7 @@ const allAlumni = [
     course: "MBA",
     year: 2022,
     company: "McKinsey & Co.",
-    package: "₹28 LPA",
+    package: "Not published",
     bio: "Specialised in strategy consulting. Led SIBM's consulting club.",
     highlights: [
       "Gold Medal MBA Batch 2022",
@@ -52,7 +52,7 @@ const allAlumni = [
     course: "B.Tech IT",
     year: 2023,
     company: "Microsoft",
-    package: "₹25 LPA",
+    package: "Not published",
     bio: "Full-stack developer. Won multiple hackathons. Core team ACM PICT.",
     highlights: [
       "Best Final Year Project Award",
@@ -82,7 +82,7 @@ const allAlumni = [
     course: "B.Tech Mechanical",
     year: 2023,
     company: "Cummins India",
-    package: "₹9.5 LPA",
+    package: "Not published",
     bio: "Design engineer at Cummins. Led VIT's Formula SAE team.",
     highlights: [
       "Formula SAE Team Captain",
@@ -97,7 +97,7 @@ const allAlumni = [
     course: "B.Tech CSE",
     year: 2022,
     company: "Persistent Systems",
-    package: "₹8 LPA",
+    package: "Not published",
     bio: "Cloud engineer at Persistent. Led MIT-WPU coding club.",
     highlights: [
       "AWS Certified Solutions Architect",

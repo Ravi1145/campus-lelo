@@ -10,7 +10,7 @@ export const revalidate = 300
 export const metadata: Metadata = genMeta({
   title: "Top 10 MBA Colleges in Pune 2026 | SNAP/CAT Cutoff, Fees & Placements",
   description:
-    "Top 10 MBA colleges in Pune 2026: SIBM (NIRF #13, ₹28 LPA avg), SCMHRD (₹22 LPA), MIT-SOM (₹8–10L fees). SNAP cutoff 88–97 %ile. Fees ₹2.5L–₹21L. Compare free.",
+    "Top 10 MBA colleges in Pune 2026: SIBM, SCMHRD, MIT-SOM (₹8–10L fees). SNAP cutoff 88–97 %ile. Fees ₹2.5L–₹21L. Compare free.",
   path: "/top-10-mba-colleges-in-pune",
   keywords: [
     "top 10 mba colleges in pune",
@@ -25,15 +25,15 @@ const colleges = [
     rank: 1,
     name: "Symbiosis Institute of Business Management (SIBM Pune)",
     type: "Deemed University",
-    nirf: 13,
+    nirf: null,
     naac: "A+",
     fees: "₹19L–₹21L (2yr)",
-    avgPackage: "₹28 LPA",
-    highestPackage: "₹65 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "100%",
     exam: "SNAP",
     slug: "sibm-symbiosis-institute-business-management-pune",
-    highlight: "NIRF #13 | Best MBA Pune",
+    highlight: " | Best MBA Pune",
     location: "Viman Nagar, Pune",
   },
   {
@@ -43,8 +43,8 @@ const colleges = [
     nirf: null,
     naac: "A+",
     fees: "₹16L–₹18L (2yr)",
-    avgPackage: "₹22 LPA",
-    highestPackage: "₹55 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "100%",
     exam: "SNAP",
     slug: "scmhrd-symbiosis-centre-management-hrd",
@@ -58,8 +58,8 @@ const colleges = [
     nirf: null,
     naac: "A+",
     fees: "₹8L–₹10L (2yr)",
-    avgPackage: "₹12 LPA",
-    highestPackage: "₹32 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "95%",
     exam: "CAT / MAT / CMAT",
     slug: "mit-school-of-management-pune",
@@ -73,8 +73,8 @@ const colleges = [
     nirf: null,
     naac: "A+",
     fees: "₹14L–₹16L (2yr)",
-    avgPackage: "₹16 LPA",
-    highestPackage: "₹38 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "98%",
     exam: "SNAP",
     slug: "siib-symbiosis-institute-of-international-business-pune",
@@ -88,8 +88,8 @@ const colleges = [
     nirf: null,
     naac: "A",
     fees: "₹6L–₹8L (2yr)",
-    avgPackage: "₹10 LPA",
-    highestPackage: "₹28 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "92%",
     exam: "CAT / MAT / CMAT / XAT",
     slug: "balaji-institute-of-modern-management-pune",
@@ -103,8 +103,8 @@ const colleges = [
     nirf: null,
     naac: "A",
     fees: "₹5.5L–₹7L (2yr)",
-    avgPackage: "₹8.5 LPA",
-    highestPackage: "₹24 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "89%",
     exam: "CAT / MAT / CMAT",
     slug: "indira-institute-of-management-pune",
@@ -118,8 +118,8 @@ const colleges = [
     nirf: null,
     naac: "A",
     fees: "₹4.5L–₹6L (2yr)",
-    avgPackage: "₹7.8 LPA",
-    highestPackage: "₹20 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "87%",
     exam: "CAT / MAT / CMAT",
     slug: "iimc-pune-indian-institute-management-commerce",
@@ -133,8 +133,8 @@ const colleges = [
     nirf: null,
     naac: "B++",
     fees: "₹3.5L–₹5L (2yr)",
-    avgPackage: "₹6.5 LPA",
-    highestPackage: "₹18 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "83%",
     exam: "MAT / CMAT",
     slug: "suryadatta-institute-management-pune",
@@ -148,8 +148,8 @@ const colleges = [
     nirf: null,
     naac: "A",
     fees: "₹2.5L–₹4L (2yr)",
-    avgPackage: "₹5.8 LPA",
-    highestPackage: "₹16 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "80%",
     exam: "MAH-MBA CET / CAT",
     slug: "batu-school-management-studies-pune",
@@ -163,8 +163,8 @@ const colleges = [
     nirf: null,
     naac: "A",
     fees: "₹3.8L–₹5.5L (2yr)",
-    avgPackage: "₹7.2 LPA",
-    highestPackage: "₹22 LPA",
+    avgPackage: "Not published",
+    highestPackage: "Not published",
     placement: "86%",
     exam: "CAT / MAT / CMAT",
     slug: "mit-school-of-management-pune",
@@ -181,17 +181,15 @@ const topFiveDetails = [
     name: "Symbiosis Institute of Business Management (SIBM Pune)",
     slug: "sibm-symbiosis-institute-business-management-pune",
     location: "Viman Nagar, Pune · Est. 1978",
-    nirf: 13,
+    nirf: null,
     naac: "A+",
     type: "Deemed University",
     stats: [
       { label: "Total Fees (2yr)", value: "₹19L–₹21L" },
-      { label: "Avg Placement", value: "₹28 LPA" },
-      { label: "Highest Package", value: "₹65 LPA" },
       { label: "SNAP Cutoff", value: "97+ percentile" },
     ],
     description:
-      "SIBM Pune is ranked #13 in India by NIRF (Management category) and is consistently rated Pune's best MBA college. With 100% placement and an average package of ₹28 LPA, it attracts top recruiters like McKinsey, BCG, Deloitte, Goldman Sachs, Amazon, and ITC. Admission is purely through SNAP followed by a group exercise and personal interaction (PI). The 2-year MBA programme covers Finance, Marketing, HR and Operations specializations.",
+      "SIBM Pune is ranked #13 in India by NIRF (Management category) and is consistently rated Pune's best MBA college. With 100% placement and, it attracts top recruiters like McKinsey, BCG, Deloitte, Goldman Sachs, Amazon, and ITC. Admission is purely through SNAP followed by a group exercise and personal interaction (PI). The 2-year MBA programme covers Finance, Marketing, HR and Operations specializations.",
     courses: ["MBA Finance", "MBA Marketing", "MBA HR", "MBA Operations", "MBA Business Analytics"],
   },
   {
@@ -206,8 +204,6 @@ const topFiveDetails = [
     type: "Deemed University",
     stats: [
       { label: "Total Fees (2yr)", value: "₹16L–₹18L" },
-      { label: "Avg Placement", value: "₹22 LPA" },
-      { label: "Highest Package", value: "₹55 LPA" },
       { label: "SNAP Cutoff", value: "94+ percentile" },
     ],
     description:
@@ -226,8 +222,6 @@ const topFiveDetails = [
     type: "Deemed University",
     stats: [
       { label: "Total Fees (2yr)", value: "₹8L–₹10L" },
-      { label: "Avg Placement", value: "₹12 LPA" },
-      { label: "Highest Package", value: "₹32 LPA" },
       { label: "CAT / CMAT Cutoff", value: "CAT 70+ / CMAT 150+" },
     ],
     description:
@@ -246,8 +240,6 @@ const topFiveDetails = [
     type: "Deemed University",
     stats: [
       { label: "Total Fees (2yr)", value: "₹14L–₹16L" },
-      { label: "Avg Placement", value: "₹16 LPA" },
-      { label: "Highest Package", value: "₹38 LPA" },
       { label: "SNAP Cutoff", value: "88+ percentile" },
     ],
     description:
@@ -266,8 +258,6 @@ const topFiveDetails = [
     type: "Private",
     stats: [
       { label: "Total Fees (2yr)", value: "₹6L–₹8L" },
-      { label: "Avg Placement", value: "₹10 LPA" },
-      { label: "Highest Package", value: "₹28 LPA" },
       { label: "CAT / MAT Cutoff", value: "CAT 60+ / MAT 500+" },
     ],
     description:
@@ -277,11 +267,6 @@ const topFiveDetails = [
 ]
 
 const faqs = [
-  {
-    question: "Which is the No. 1 MBA college in Pune?",
-    answer:
-      "Symbiosis Institute of Business Management (SIBM Pune) is the No. 1 MBA college in Pune with NIRF Rank 13 (Management), NAAC A+, 100% placement record, and ₹28 LPA average package. Admission is through SNAP (97+ percentile required) followed by Group Exercise and Personal Interaction.",
-  },
   {
     question: "What is the SNAP cutoff for SIBM Pune and SCMHRD in 2026?",
     answer:
@@ -298,19 +283,9 @@ const faqs = [
       "Yes, MIT-SOM, BIMM, Indira Institute, IIMC and MIT College of Management accept CAT scores. Symbiosis institutions (SIBM, SCMHRD, SCIT) exclusively use SNAP. MAH-MBA CET (conducted by Maharashtra government) is accepted at state universities and many private colleges. CMAT, MAT, XAT and ATMA are also widely accepted at Pune MBA colleges.",
   },
   {
-    question: "Which Pune MBA college has the highest average placement package?",
-    answer:
-      "SIBM Pune has the highest average MBA placement package in Pune at ₹28 LPA with a highest package of ₹65 LPA. SCMHRD is second at ₹22 LPA average. SCIT averages ₹16 LPA. MIT-SOM averages ₹12 LPA. BIMM averages ₹10 LPA. All Symbiosis institutions report 100% placement within 3 months of final semester.",
-  },
-  {
     question: "What are the top recruiters for MBA graduates in Pune?",
     answer:
       "Top MBA recruiters in Pune include McKinsey, BCG, Deloitte, EY, KPMG, Amazon, Flipkart, HDFC Bank, ICICI Bank, Axis Bank, Bajaj Finserv, Mahindra, TCS, Infosys, Wipro, Capgemini, ITC, HUL, Asian Paints, Marico, and Reliance. Management consulting, BFSI, and FMCG are the dominant sectors for MBA placements from Pune colleges.",
-  },
-  {
-    question: "Is SIBM Pune worth the ₹20 lakh fees?",
-    answer:
-      "Yes, given SIBM Pune's ₹28 LPA average placement, the ROI is strong — students typically recover their investment within 1–1.5 years of working. The college has NIRF Rank 13 (Management), 100% placement, and alumni in senior positions at top global firms. Compared to IIMs (₹25–32 LPA fees), SIBM Pune offers comparable placements at lower cost for Tier-1 companies.",
   },
 ]
 
@@ -363,7 +338,7 @@ export default function Top10MBACollegesPunePage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>SIBM Pune (NIRF #13)</strong> is Pune&apos;s best MBA college with ₹28 LPA avg, 100% placement. Top 5: <strong>SCMHRD</strong> (₹22 LPA avg), <strong>MIT-SOM</strong> (best value, ₹12 LPA), <strong>SCIT</strong> (best for IT, ₹16 LPA), <strong>BIMM</strong> (budget pick, ₹10 LPA). Symbiosis colleges need <strong>SNAP</strong>; others accept <strong>CAT/MAT/CMAT</strong>.
+                Top 5: <strong>SCMHRD</strong>, <strong>MIT-SOM</strong>, <strong>SCIT</strong>, <strong>BIMM</strong>. Symbiosis colleges need <strong>SNAP</strong>; others accept <strong>CAT/MAT/CMAT</strong>.
               </p>
             </div>
           </div>
@@ -375,8 +350,6 @@ export default function Top10MBACollegesPunePage() {
             {[
               { label: "MBA Colleges Ranked", value: "Top 10", icon: "🏛️" },
               { label: "Lowest Total Fees", value: "₹2.5L (2yr)", icon: "💰" },
-              { label: "Best Avg Package", value: "₹28 LPA", icon: "📈" },
-              { label: "Top NIRF Rank", value: "#13 (SIBM)", icon: "🏆" },
             ].map(({ label, value, icon }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 text-center">
                 <p className="text-2xl mb-1">{icon}</p>
@@ -390,7 +363,6 @@ export default function Top10MBACollegesPunePage() {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
               <h2 className="text-lg font-bold text-gray-900">Top 10 MBA Colleges in Pune — Ranking Table 2026</h2>
-              <p className="text-xs text-gray-400 mt-0.5">Ranked by NIRF rank, NAAC grade, placement average & entrance exam. Data verified 2026.</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

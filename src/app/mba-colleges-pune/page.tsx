@@ -9,7 +9,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CampusLelo",
-  description: "Best 10 MBA colleges in Pune 2026 — SIBM (NIRF #13, ₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7–28 LPA. Compare & check eligibility free.",
+  description: "Best 10 MBA colleges in Pune 2026 — SIBM (₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7. Compare & check eligibility free.",
   path: "/mba-colleges-pune",
   keywords: [
     "best mba college in pune",
@@ -29,25 +29,21 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { rank: 1, name: "SIBM Pune – Symbiosis Institute of Business Management", type: "Deemed", nirf: 13, naac: "A+", fees: "₹16L–₹22L total", placement: "₹28 LPA avg | ₹65 LPA highest", exam: "SNAP 2026 (60+ %ile)", slug: "sibm-symbiosis-institute-business-management-pune", highlight: "NIRF #13 | McKinsey, BCG Recruiters" },
-  { rank: 2, name: "MIT School of Management (MIT-SOM)", type: "Autonomous", nirf: null, naac: "A+", fees: "₹7L–₹11L total", placement: "₹12 LPA avg | ₹32 LPA highest", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "Best Value | Strong Alumni" },
-  { rank: 3, name: "Balaji Institute of Modern Management (BIMM)", type: "Autonomous", nirf: null, naac: "A", fees: "₹5L–₹7.5L total", placement: "₹8.5 LPA avg | ₹22 LPA highest", exam: "CAT / MAT / CMAT", slug: "balaji-institute-of-modern-management-pune", highlight: "Best Budget MBA" },
-  { rank: 4, name: "Indira Institute of Management Pune (IIMP)", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.2L–₹6.5L total", placement: "₹7.2 LPA avg | ₹18 LPA highest", exam: "CAT / MAT / CMAT", slug: "indira-institute-of-management-pune", highlight: "Best ROI in Pune" },
-  { rank: 5, name: "SCIT – Symbiosis Centre for Information Technology", type: "Deemed", nirf: null, naac: "A+", fees: "₹14L–₹18L total", placement: "₹18 LPA avg | ₹45 LPA highest", exam: "SNAP 2026 (50+ %ile)", slug: "symbiosis-centre-information-technology-pune", highlight: "Best for IT+MBA" },
-  { rank: 6, name: "SCMHRD – Symbiosis Centre for Management & HRD", type: "Deemed", nirf: null, naac: "A+", fees: "₹12L–₹16L total", placement: "₹22 LPA avg | ₹55 LPA highest", exam: "SNAP 2026 (55+ %ile)", slug: "scmhrd-symbiosis-centre-management-hrd", highlight: "Best for Operations/HR" },
-  { rank: 7, name: "IIMM – Indian Institute of Materials Management", type: "Autonomous", nirf: null, naac: "B++", fees: "₹3.8L–₹5.5L total", placement: "₹6.5 LPA avg | ₹16 LPA highest", exam: "CAT / MAT / CMAT", slug: "pumba-pune-university-mba", highlight: "Specialization in Supply Chain" },
-  { rank: 8, name: "Suryadatta Institute of Management", type: "Private", nirf: null, naac: "B+", fees: "₹2.8L–₹4.5L total", placement: "₹5.8 LPA avg | ₹14 LPA highest", exam: "MAT / CMAT / XAT", slug: "suryadatta-institute-management-pune", highlight: "Most Affordable Pune MBA" },
-  { rank: 9, name: "BATU – Bharati Vidyapeeth Institute of Management", type: "Deemed", nirf: null, naac: "A", fees: "₹4L–₹6.8L total", placement: "₹6.8 LPA avg | ₹16 LPA highest", exam: "CAT / MAT / CMAT", slug: "bharati-vidyapeeth-institute-management-pune", highlight: "Part of Deemed University" },
-  { rank: 10, name: "MAEER MIT College of Management", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.5L–₹7L total", placement: "₹7.5 LPA avg | ₹20 LPA highest", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "MIT Group – Strong Placements" },
+  { rank: 1, name: "SIBM Pune – Symbiosis Institute of Business Management", type: "Deemed", nirf: null, naac: "A+", fees: "₹16L–₹22L total", placement: "Not published", exam: "SNAP 2026 (60+ %ile)", slug: "sibm-symbiosis-institute-business-management-pune", highlight: " | McKinsey, BCG Recruiters" },
+  { rank: 2, name: "MIT School of Management (MIT-SOM)", type: "Autonomous", nirf: null, naac: "A+", fees: "₹7L–₹11L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "Best Value | Strong Alumni" },
+  { rank: 3, name: "Balaji Institute of Modern Management (BIMM)", type: "Autonomous", nirf: null, naac: "A", fees: "₹5L–₹7.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "balaji-institute-of-modern-management-pune", highlight: "Best Budget MBA" },
+  { rank: 4, name: "Indira Institute of Management Pune (IIMP)", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.2L–₹6.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "indira-institute-of-management-pune", highlight: "Best ROI in Pune" },
+  { rank: 5, name: "SCIT – Symbiosis Centre for Information Technology", type: "Deemed", nirf: null, naac: "A+", fees: "₹14L–₹18L total", placement: "Not published", exam: "SNAP 2026 (50+ %ile)", slug: "symbiosis-centre-information-technology-pune", highlight: "Best for IT+MBA" },
+  { rank: 6, name: "SCMHRD – Symbiosis Centre for Management & HRD", type: "Deemed", nirf: null, naac: "A+", fees: "₹12L–₹16L total", placement: "Not published", exam: "SNAP 2026 (55+ %ile)", slug: "scmhrd-symbiosis-centre-management-hrd", highlight: "Best for Operations/HR" },
+  { rank: 7, name: "IIMM – Indian Institute of Materials Management", type: "Autonomous", nirf: null, naac: "B++", fees: "₹3.8L–₹5.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "pumba-pune-university-mba", highlight: "Specialization in Supply Chain" },
+  { rank: 8, name: "Suryadatta Institute of Management", type: "Private", nirf: null, naac: "B+", fees: "₹2.8L–₹4.5L total", placement: "Not published", exam: "MAT / CMAT / XAT", slug: "suryadatta-institute-management-pune", highlight: "Most Affordable Pune MBA" },
+  { rank: 9, name: "BATU – Bharati Vidyapeeth Institute of Management", type: "Deemed", nirf: null, naac: "A", fees: "₹4L–₹6.8L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "bharati-vidyapeeth-institute-management-pune", highlight: "Part of Deemed University" },
+  { rank: 10, name: "MAEER MIT College of Management", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.5L–₹7L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "MIT Group – Strong Placements" },
 ]
 
 const faqs = [
-  { question: "Which is the best MBA college in Pune in 2026?", answer: "SIBM Pune (Symbiosis Institute of Business Management) is the best MBA college in Pune in 2026 with NIRF Rank 13, NAAC A+, average placement of ₹28 LPA, and top recruiters like McKinsey, BCG, P&G, Deloitte. Admission is through SNAP 2026 with 60+ percentile required. Total fees: ₹16–22L." },
   { question: "What is the SNAP 2026 cutoff for SIBM Pune?", answer: "The expected SNAP 2026 cutoff for SIBM Pune is 60+ percentile. SNAP is conducted 3 times (December 6, 13, 20, 2026) — best score is considered. Application open August–November 2026. SIBM also accepts CAT scores for direct admission to some programs." },
   { question: "What are the fees for MBA colleges in Pune 2026?", answer: "MBA fees in Pune 2026 range from ₹2.8L (Suryadatta) to ₹22L (SIBM Pune) for the full program. SIBM Pune: ₹16–22L. SCMHRD: ₹12–16L. SCIT: ₹14–18L. MIT-SOM: ₹7–11L. BIMM: ₹5–7.5L. Indira Institute: ₹4.2–6.5L (best ROI). All Symbiosis institutes require SNAP score." },
-  { question: "Can I get MBA in Pune with low SNAP score?", answer: "Yes. With SNAP score below 60 percentile, you can apply to MIT-SOM (no SNAP cutoff, accepts CAT/MAT/CMAT), BIMM (₹5–7.5L fees, ₹8.5 LPA avg placement), Indira Institute of Management (₹4.2–6.5L fees, best ROI), and IIMM Pune. MAT and CMAT scores are widely accepted by 7+ Pune MBA colleges." },
-  { question: "Which Pune MBA college has the best placements in 2026?", answer: "SIBM Pune leads with ₹28 LPA average MBA placement. Top individual offers from McKinsey, BCG, Goldman Sachs reach ₹55–65 LPA. SCMHRD is second with ₹22 LPA avg. SCIT Pune is best for IT-MBA with ₹18 LPA avg. MIT-SOM offers ₹12 LPA avg at much lower fees (₹7–11L total) — best ROI after SIBM." },
-  { question: "Is SIBM Pune better than IIM Nagpur for MBA?", answer: "SIBM Pune (NIRF 13) vs IIM Nagpur depends on goals. SIBM Pune has stronger industry connections in Pune-Mumbai corridor, better mass placements (₹28 LPA avg) but costs ₹16–22L. IIM Nagpur has IIM brand recognition but smaller batch. For Pune/Mumbai placement geography, SIBM is preferred by most recruiters." },
   { question: "What is the difference between CAT and SNAP for Pune MBA colleges?", answer: "CAT 2026 (November 23) is accepted by SIBM Pune, MIT-SOM, BIMM, Indira Institute, and most Pune MBA colleges. SNAP 2026 (December 6, 13, 20) is mandatory ONLY for Symbiosis group colleges (SIBM, SCMHRD, SCIT). For non-Symbiosis colleges like MIT-SOM, BIMM, Indira — CAT/MAT/CMAT is enough." },
   { question: "How to get admission in SIBM Pune 2026?", answer: "Step 1: Register for SNAP 2026 at snaptest.org (August 2026). Step 2: Appear for SNAP (Dec 6/13/20, 2026) — target 60+ percentile. Step 3: Apply to SIBM Pune separately (collegium.siu.edu.in). Step 4: Attend Written Ability Test (WAT) and Personal Interview (PI) in Jan–Feb 2027. Step 5: Accept admission offer. Fees: ₹16–22L total." },
 ]
@@ -75,7 +71,7 @@ export default function MBACollegesPunePage() {
     "@id": PAGE_URL,
     url: PAGE_URL,
     name: "Best MBA Colleges in Pune 2026 | Fees, SNAP Cutoff & Placements",
-    description: "SIBM Pune (NIRF #13) is the best MBA college in Pune with ₹28 LPA avg placement and McKinsey, BCG as recruiters. Compare top 10 MBA colleges by SNAP cutoff, fees ₹14–22L, and placements.",
+    description: "Compare top 10 MBA colleges by SNAP cutoff, fees ₹14–22L, and placements.",
     inLanguage: "en-IN",
     dateModified: TODAY,
     isPartOf: { "@id": `${BASE_URL}/#website` },
@@ -119,7 +115,7 @@ export default function MBACollegesPunePage() {
                 Best MBA Colleges in Pune 2026
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Compare top MBA colleges in Pune by NIRF ranking, SNAP/CAT cutoff, total fees (₹4.2L–₹22L), average placements (₹7–28 LPA), and recruiter quality for 2026 admissions.
+                Compare top MBA colleges in Pune by NIRF ranking, SNAP/CAT cutoff, total fees (₹4.2L–₹22L), average placements, and recruiter quality for 2026 admissions.
               </p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <span className="flex items-center gap-1 text-green-400"><CheckCircle className="w-4 h-4" /> NIRF &amp; NAAC Verified</span>
@@ -135,8 +131,8 @@ export default function MBACollegesPunePage() {
           <div className="bg-green-50 border-l-4 border-green-500 rounded-xl p-5 sm:p-6" data-speakable="true">
             <h2 className="text-lg font-bold text-green-800 mb-2">Quick Answer: Best MBA College in Pune 2026</h2>
             <p className="text-green-900 text-sm leading-relaxed">
-              <strong>SIBM Pune</strong> (NIRF Rank 13, NAAC A+) is the best MBA college in Pune in 2026 with ₹28 LPA average placement, recruiters McKinsey/BCG/P&amp;G, and 60+ SNAP percentile requirement. Total fees ₹16–22L.{" "}
-              <strong>Best value:</strong> MIT-SOM (₹7–11L fees, ₹12 LPA avg). <strong>Best ROI:</strong> Indira Institute (₹4.2–6.5L fees, ₹7.2 LPA avg).
+              Total fees ₹16–22L.{" "}
+              <strong>Best value:</strong> MIT-SOM. <strong>Best ROI:</strong> Indira Institute.
             </p>
           </div>
         </section>
@@ -149,11 +145,9 @@ export default function MBACollegesPunePage() {
             <div className="border-2 border-orange-200 rounded-2xl p-5 bg-orange-50">
               <div className="flex items-center justify-between mb-3">
                 <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">#1 Best MBA</span>
-                <span className="text-xs text-gray-500">NIRF 13</span>
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-3">SIBM Pune – Symbiosis Institute of Business Management</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
-                <li className="flex gap-2"><TrendingUp className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>Avg Placement: <strong>₹28 LPA</strong></span></li>
                 <li className="flex gap-2"><Award className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>NAAC Grade: <strong>A+</strong></span></li>
                 <li className="flex gap-2"><BookOpen className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>Total Fees: <strong>₹16L–₹22L</strong></span></li>
                 <li className="flex gap-2"><Star className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>Exam: <strong>SNAP 2026 (60+ %ile)</strong></span></li>
@@ -171,7 +165,6 @@ export default function MBACollegesPunePage() {
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-3">MIT School of Management (MIT-SOM)</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
-                <li className="flex gap-2"><TrendingUp className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" /><span>Avg Placement: <strong>₹12 LPA</strong></span></li>
                 <li className="flex gap-2"><Award className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" /><span>NAAC Grade: <strong>A+</strong></span></li>
                 <li className="flex gap-2"><BookOpen className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" /><span>Total Fees: <strong>₹7L–₹11L</strong></span></li>
                 <li className="flex gap-2"><Star className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" /><span>Exam: <strong>CAT / MAT / CMAT</strong></span></li>
@@ -189,7 +182,6 @@ export default function MBACollegesPunePage() {
               </div>
               <h3 className="font-bold text-gray-900 text-base mb-3">Indira Institute of Management Pune</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
-                <li className="flex gap-2"><TrendingUp className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>Avg Placement: <strong>₹7.2 LPA</strong></span></li>
                 <li className="flex gap-2"><Award className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>NAAC Grade: <strong>A</strong></span></li>
                 <li className="flex gap-2"><BookOpen className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>Total Fees: <strong>₹4.2L–₹6.5L</strong></span></li>
                 <li className="flex gap-2"><Star className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" /><span>Exam: <strong>CAT / MAT / CMAT</strong></span></li>

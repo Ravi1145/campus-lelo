@@ -91,20 +91,6 @@ export default function CareerPathsPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-                    <div className="bg-green-50 rounded-xl py-2">
-                      <p className="text-xs text-gray-500">Entry</p>
-                      <p className="font-extrabold text-green-700 text-sm">{formatLPA(path.avgSalaryEntry)} PA</p>
-                    </div>
-                    <div className="bg-blue-50 rounded-xl py-2">
-                      <p className="text-xs text-gray-500">5 Years</p>
-                      <p className="font-extrabold text-blue-700 text-sm">{formatLPA(path.avgSalaryMid)} PA</p>
-                    </div>
-                    <div className="bg-purple-50 rounded-xl py-2">
-                      <p className="text-xs text-gray-500">Senior</p>
-                      <p className="font-extrabold text-purple-700 text-sm">{formatLPA(path.avgSalarySenior)} PA</p>
-                    </div>
-                  </div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2">

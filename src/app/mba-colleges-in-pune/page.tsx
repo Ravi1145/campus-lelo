@@ -8,7 +8,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Colleges in Pune 2026 | Fees, Cutoff & Placement",
-  description: "120+ MBA colleges in Pune 2026. Fees ₹1.25L–16L/yr, MAH-CET cutoffs, placements ₹7–24 LPA, NAAC grades. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
+  description: "120+ MBA colleges in Pune 2026. Fees ₹1.25L–16L/yr, MAH-CET cutoffs, placements ₹7, NAAC grades. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
   path: "/mba-colleges-in-pune",
   keywords: [
     "mba colleges in pune", "best mba colleges in pune", "top mba colleges in pune",
@@ -27,7 +27,6 @@ const clusterLinks = [
   { label: "CMAT Score", href: "/mba-colleges-in-pune-accepting-cmat" },
   { label: "MAH-CET Admission", href: "/mba-colleges-in-pune-accepting-mh-cet" },
   { label: "Best Placements", href: "/mba-colleges-in-pune-with-100-placement" },
-  { label: "Highest Package", href: "/mba-colleges-in-pune-highest-package" },
   { label: "Direct Admission", href: "/mba-colleges-in-pune-direct-admission" },
   { label: "Marketing Specialization", href: "/mba-colleges-in-pune-for-marketing" },
   { label: "Finance Specialization", href: "/mba-colleges-in-pune-for-finance" },
@@ -86,7 +85,7 @@ export default function MBACollegesInPune() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-5 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>SIBM Pune</strong> (NIRF #14, avg ₹24 LPA) is the best MBA college in Pune.
+                <strong>SIBM Pune</strong> is the best MBA college in Pune.
                 <strong> PUMBA</strong> is the best government MBA at ₹1.25L/yr. MBA fees range ₹1.25L–16L/year.
                 Admission via <strong>MAH-CET MBA</strong> (most colleges), SNAP (Symbiosis), or CAT/CMAT.
               </p>
@@ -96,7 +95,7 @@ export default function MBACollegesInPune() {
               {[
                 { v: "120+", l: "MBA Colleges" },
                 { v: "₹1.25L–16L", l: "Annual Fees" },
-                { v: "₹7–24 LPA", l: "Avg Placement" },
+                { v: "₹7", l: "Avg Placement" },
                 { v: "MAH-CET/CAT", l: "Entrance Exams" },
               ].map(s => (
                 <div key={s.l} className="bg-white/10 rounded-xl px-4 py-3 text-center">
@@ -217,7 +216,7 @@ export default function MBACollegesInPune() {
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm prose prose-sm max-w-none">
             <h2 className="text-xl font-bold text-gray-900 mb-4">MBA Colleges in Pune — Complete Guide 2026</h2>
             <p className="text-gray-700 leading-relaxed">
-              Pune is India&apos;s third-largest MBA education hub after Mumbai and Bangalore, with over 120 AICTE-approved MBA colleges. The city offers the widest range of MBA options — from the prestigious SIBM Pune (NIRF #14) to the ultra-affordable PUMBA (government, ₹1.25L/yr) and a full spectrum of private and deemed university programs in between.
+              Pune is India&apos;s third-largest MBA education hub after Mumbai and Bangalore, with over 120 AICTE-approved MBA colleges. The city offers the widest range of MBA options — from the prestigious SIBM Pune to the ultra-affordable PUMBA (government, ₹1.25L/yr) and a full spectrum of private and deemed university programs in between.
             </p>
             <p className="text-gray-700 leading-relaxed mt-3">
               The primary admission route for most Pune MBA colleges is through <strong>MAH-CET MBA</strong> (Maharashtra Common Entrance Test for MBA), conducted by the Maharashtra State CET Cell. DTE Maharashtra then runs the Centralized Admission Process (CAP) for seat allotment across state-level and institutional quota seats. Symbiosis group colleges (SIBM, SCMHRD, SIIB) require the <strong>SNAP exam</strong> specifically.

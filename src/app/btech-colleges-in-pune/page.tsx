@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune 2026 | Complete List | Fees, Cutoff & Placement",
-  description: "Complete list of 50+ BTech colleges in Pune 2026. Compare fees (₹80K–4.8L/yr), MHT-CET cutoffs, average placements (₹5–12 LPA), NAAC grades for B.Tech admission in Pune.",
+  description: "Complete list of 50+ BTech colleges in Pune 2026. Compare fees (₹80K–4.8L/yr), MHT-CET cutoffs, average placements, NAAC grades for B.Tech admission in Pune.",
   path: "/btech-colleges-in-pune",
   keywords: [
     "btech colleges in pune", "b.tech colleges in pune", "btech colleges pune 2026",
@@ -50,27 +50,26 @@ export default function BTechCollegesInPune() {
         <p>Pune has 50+ AICTE-approved BTech colleges across government, autonomous, private and deemed university categories.
         B.Tech (Bachelor of Technology) is a 4-year undergraduate engineering degree. Admission is primarily through
         MHT-CET (Maharashtra Common Entrance Test) via DTE Maharashtra CAP rounds.</p>
-        <p>Best BTech colleges in Pune: COEP (NIRF rank 49, government, fees ₹80,000 per year, average placement ₹12 LPA),
-        PICT Pune (best for Computer Science, Goldman Sachs recruiter, fees ₹1.4 lakh per year, average placement ₹7.5 LPA),
-        VIT Pune (NAAC A+, NIRF rank 101, fees ₹1.6 lakh per year, average placement ₹8.5 LPA),
+        <p>Best BTech colleges in Pune: COEP,
+        PICT Pune,
+        VIT Pune,
         MIT-WPU (NAAC A+, AI and ML branches available, fees ₹2 lakh per year),
-        SIT Pune (highest private placement ₹9.8 LPA, Microsoft and Amazon recruiter).</p>
+        SIT Pune.</p>
         <p>MHT-CET cutoffs for top BTech colleges in Pune 2026: COEP Computer Engineering requires 99 percentile or above.
         PICT requires 97 to 99 percentile. VIT Pune requires 92 to 97 percentile. MIT-WPU requires 82 to 90 percentile.
         JEE Main is not required for MHT-CET seats. Direct admission through management quota is available at private colleges.</p>
         <p>BTech fees in Pune range from ₹80,000 per year at COEP (government) to ₹4.8 lakh per year at SIT Pune (deemed university).
-        Scholarships including MahaDBT, EBC Freeship, and AICTE Pragati can reduce fees significantly for eligible students.
-        Average BTech placement packages from Pune colleges range from ₹5 LPA at tier-3 colleges to ₹12 LPA at COEP.</p>
+        Scholarships including MahaDBT, EBC Freeship, and AICTE Pragati can reduce fees significantly for eligible students.</p>
+        
       </div>
 
       <BTechClusterPage
         h1="BTech Colleges in Pune 2026"
         subtitle="Complete list of 50+ BTech engineering colleges in Pune. Compare fees, MHT-CET cutoffs, placements, NAAC grades and admission process for 2026."
-        quickAnswer="Pune has 50+ BTech colleges. COEP (NIRF #49, ₹80K/yr, avg ₹12 LPA) is the best government BTech college. PICT is best for CS/IT (₹7.5 LPA avg, Goldman Sachs recruiter). Admission is primarily via MHT-CET; JEE Main for management quota. Fees range ₹80K–4.8L/year."
+        quickAnswer="Pune has 50+ BTech colleges. COEP is the best government BTech college. PICT is best for CS/IT. Admission is primarily via MHT-CET; JEE Main for management quota. Fees range ₹80K–4.8L/year."
         stats={[
           { value: "50+", label: "BTech Colleges" },
           { value: "₹80K–4.8L", label: "Annual Fees" },
-          { value: "₹5–12 LPA", label: "Avg Placement" },
           { value: "MHT-CET", label: "Primary Exam" },
         ]}
         colleges={btechColleges}
@@ -78,7 +77,7 @@ export default function BTechCollegesInPune() {
         introParagraphs={[
           "Pune is one of India's top cities for BTech education, offering 50+ AICTE-approved colleges across government, autonomous, private, and deemed university categories. The city's unique industrial base — India's largest auto manufacturing cluster, a major IT corridor, and defence/aerospace R&D — gives BTech graduates from Pune direct access to diverse and high-paying career paths.",
           "B.Tech (Bachelor of Technology) is a 4-year undergraduate engineering degree. In Pune, admission is primarily through MHT-CET (Maharashtra Common Entrance Test), managed by DTE Maharashtra through the CAP (Centralized Admission Process). Most colleges also accept JEE Main scores for management quota seats.",
-          "Pune BTech colleges span a wide range: COEP (Government, ₹80K/yr, NIRF #49) at the top to mid-range autonomous colleges (PICT, VIT Pune, PCCOE at ₹1.4L–2.2L/yr) to premium deemed universities (SIT Pune, MIT-WPU at ₹3.6L–4.8L/yr). Branches range from traditional CS/Mechanical/Civil to cutting-edge AI, Data Science, Robotics, and Cybersecurity.",
+          "Pune BTech colleges span a wide range: COEP (Government, ₹80K/yr) at the top to mid-range autonomous colleges (PICT, VIT Pune, PCCOE at ₹1.4L–2.2L/yr) to premium deemed universities (SIT Pune, MIT-WPU at ₹3.6L–4.8L/yr). Branches range from traditional CS/Mechanical/Civil to cutting-edge AI, Data Science, Robotics, and Cybersecurity.",
         ]}
         faqs={btechFAQs.general}
         internalLinks={[

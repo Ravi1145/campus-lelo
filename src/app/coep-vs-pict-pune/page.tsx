@@ -6,7 +6,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "COEP vs PICT Pune 2026 | Fees, Placements, Cutoff Comparison",
-  description: "COEP vs PICT Pune 2026: Compare fees (COEP ₹80K vs PICT ₹1.4L), MHT-CET cutoff (99.8 vs 92 percentile), placements (₹12 LPA vs ₹7.5 LPA), courses & hostel. Which is better for CSE?",
+  description: "COEP vs PICT Pune 2026: Compare fees (COEP ₹80K vs PICT ₹1.4L), MHT-CET cutoff (99.8 vs 92 percentile), placements, courses & hostel. Which is better for CSE?",
   path: "/coep-vs-pict-pune",
   keywords: [
     "coep vs pict pune", "coep vs pict which is better", "coep pict comparison 2026",
@@ -16,15 +16,12 @@ export const metadata: Metadata = genMeta({
 })
 
 const rows = [
-  { param: "NIRF Rank", coep: "#49 (National)", pict: "Not ranked" },
   { param: "NAAC Grade", coep: "A+", pict: "A" },
   { param: "Type", coep: "Government Autonomous", pict: "Private Autonomous" },
   { param: "Established", coep: "1854", pict: "1983" },
   { param: "Annual Fees (BTech)", coep: "₹80,000 – ₹1.8L", pict: "₹1.4L – ₹1.9L" },
   { param: "4-Year Total Cost", coep: "₹3.2L – ₹7.2L", pict: "₹5.6L – ₹7.6L" },
   { param: "MHT-CET Cutoff (CSE)", coep: "99.8 percentile", pict: "92+ percentile" },
-  { param: "Average Placement", coep: "₹12 LPA", pict: "₹7.5 LPA" },
-  { param: "Highest Package", coep: "₹45 LPA", pict: "₹40 LPA" },
   { param: "Top Recruiters", coep: "Google, Goldman Sachs, ISRO", pict: "TCS, Infosys, Persistent" },
   { param: "CSE Seats", coep: "120", pict: "180" },
   { param: "Hostel", coep: "Yes (₹55K–70K/yr)", pict: "No on-campus hostel" },
@@ -153,8 +150,6 @@ export default function CoepVsPict() {
             <div>
               <h3 className="font-semibold text-blue-700 mb-3">COEP Placements 2025</h3>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Average CTC (CSE)</span><strong>₹12 LPA</strong></div>
-                <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Highest CTC</span><strong>₹45 LPA</strong></div>
                 <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Placement %</span><strong>96%</strong></div>
                 <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Companies visited</span><strong>85+</strong></div>
                 <div className="flex justify-between"><span className="text-gray-600">Top recruiters</span><strong>Google, Goldman, ISRO</strong></div>
@@ -163,8 +158,6 @@ export default function CoepVsPict() {
             <div>
               <h3 className="font-semibold text-orange-700 mb-3">PICT Placements 2025</h3>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Average CTC (CSE)</span><strong>₹7.5 LPA</strong></div>
-                <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Highest CTC</span><strong>₹40 LPA</strong></div>
                 <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Placement %</span><strong>92%</strong></div>
                 <div className="flex justify-between border-b pb-1"><span className="text-gray-600">Companies visited</span><strong>60+</strong></div>
                 <div className="flex justify-between"><span className="text-gray-600">Top recruiters</span><strong>TCS, Persistent, Infosys</strong></div>
@@ -178,10 +171,8 @@ export default function CoepVsPict() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — COEP vs PICT Pune</h2>
           <div className="space-y-4">
             {[
-              { q: "Which is better — COEP or PICT Pune for CSE in 2026?", a: "COEP is better overall for CSE — higher NIRF rank (#49), better average placement (₹12 LPA vs ₹7.5 LPA), government fees (₹80K/yr vs ₹1.4L), and on-campus hostel. However, PICT is a solid choice if your MHT-CET score is in the 90–97 percentile range and you want a CS-focused environment." },
               { q: "What is the MHT-CET cutoff for COEP CSE 2026?", a: "COEP CSE MHT-CET 2025 cutoff (Round 1, Open category) was 99.8 percentile. Expected 2026 cutoff: 99.7–99.9 percentile. PICT CS cutoff was 92–94 percentile in 2025." },
               { q: "Does PICT Pune have hostel?", a: "No, PICT Pune does not have an on-campus hostel. Students typically stay in PGs near Dhankawadi (₹8,000–₹15,000/month). COEP has 5 boys' hostels and 3 girls' hostels at ₹55,000–70,000/year." },
-              { q: "Is COEP or PICT better for placements?", a: "COEP has significantly higher placement figures — ₹12 LPA average vs ₹7.5 LPA at PICT. COEP also attracts top companies like Google and Goldman Sachs. Both colleges have ~90%+ placement rates." },
             ].map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">
                 <summary className="font-semibold text-gray-800 cursor-pointer">{q}</summary>

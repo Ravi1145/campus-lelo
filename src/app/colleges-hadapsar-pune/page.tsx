@@ -13,14 +13,14 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Indira College of Engineering & Management", location: "Hadapsar / Nhosari, Pune", naac: "B++", fees: "â‚¹95Kâ€“1.35L/yr", placement: "â‚¹4.2 LPA avg", slug: "indira-college-of-engineering-management-pune" },
-  { name: "Sinhgad College of Engineering (Hadapsar Campus)", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹1.15Lâ€“1.6L/yr", placement: "â‚¹4.9 LPA avg", slug: "sinhgad-college-of-engineering-pune" },
-  { name: "Dr. D.Y. Patil School of Management", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹4Lâ€“6L (2yr MBA)", placement: "â‚¹8.5 LPA avg", slug: "dy-patil-school-of-management-hadapsar-pune" },
-  { name: "Zeal College of Engineering and Research", location: "Dhankawadi/Hadapsar", naac: "B+", fees: "â‚¹90Kâ€“1.3L/yr", placement: "â‚¹4 LPA avg", slug: "zeal-college-of-engineering-research-pune" },
-  { name: "International Institute of Information Technology (IIITP)", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹1.5Lâ€“2.5L/yr", placement: "â‚¹5.5 LPA avg", slug: "iiitp-international-institute-information-technology-pune" },
-  { name: "Genba Sopanrao Moze College of Engineering", location: "Hadapsar, Pune", naac: "B+", fees: "â‚¹85Kâ€“1.2L/yr", placement: "â‚¹3.8 LPA avg", slug: "gsmoze-college-engineering-pune" },
-  { name: "MKSSS Cummins College (nearby Hadapsar area)", location: "Karvenagar/Hadapsar belt", naac: "A+", fees: "â‚¹1.3Lâ€“1.75L/yr", placement: "â‚¹6.8 LPA avg", slug: "cummins-college-of-engineering-pune" },
-  { name: "Smt. Kashibai Navale College of Engineering", location: "Vadgaon / Hadapsar belt", naac: "A", fees: "â‚¹1.1Lâ€“1.5L/yr", placement: "â‚¹4.5 LPA avg", slug: "skncoe-smt-kashibai-navale-college-of-engineering" },
+  { name: "Indira College of Engineering & Management", location: "Hadapsar / Nhosari, Pune", naac: "B++", fees: "â‚¹95Kâ€“1.35L/yr", placement: "Not published", slug: "indira-college-of-engineering-management-pune" },
+  { name: "Sinhgad College of Engineering (Hadapsar Campus)", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹1.15Lâ€“1.6L/yr", placement: "Not published", slug: "sinhgad-college-of-engineering-pune" },
+  { name: "Dr. D.Y. Patil School of Management", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹4Lâ€“6L (2yr MBA)", placement: "Not published", slug: "dy-patil-school-of-management-hadapsar-pune" },
+  { name: "Zeal College of Engineering and Research", location: "Dhankawadi/Hadapsar", naac: "B+", fees: "â‚¹90Kâ€“1.3L/yr", placement: "Not published", slug: "zeal-college-of-engineering-research-pune" },
+  { name: "International Institute of Information Technology (IIITP)", location: "Hadapsar, Pune", naac: "A", fees: "â‚¹1.5Lâ€“2.5L/yr", placement: "Not published", slug: "iiitp-international-institute-information-technology-pune" },
+  { name: "Genba Sopanrao Moze College of Engineering", location: "Hadapsar, Pune", naac: "B+", fees: "â‚¹85Kâ€“1.2L/yr", placement: "Not published", slug: "gsmoze-college-engineering-pune" },
+  { name: "MKSSS Cummins College (nearby Hadapsar area)", location: "Karvenagar/Hadapsar belt", naac: "A+", fees: "â‚¹1.3Lâ€“1.75L/yr", placement: "Not published", slug: "cummins-college-of-engineering-pune" },
+  { name: "Smt. Kashibai Navale College of Engineering", location: "Vadgaon / Hadapsar belt", naac: "A", fees: "â‚¹1.1Lâ€“1.5L/yr", placement: "Not published", slug: "skncoe-smt-kashibai-navale-college-of-engineering" },
 ]
 
 const faqs = [

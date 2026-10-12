@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best BBA Colleges Pune 2026 | Fees, Cutoff & Placement",
-  description: "Top BBA colleges in Pune 2026 — Symbiosis, MIT-WPU, Indira, Fergusson. Fees ₹40K–₹2.5L/yr, SET/HSC cutoffs, average placement ₹3.5–8 LPA and complete admission guide.",
+  description: "Top BBA colleges in Pune 2026 — Symbiosis, MIT-WPU, Indira, Fergusson. Fees ₹40K–₹2.5L/yr, SET/HSC cutoffs, average placement ₹3.5 and complete admission guide.",
   path: "/bba-colleges-pune",
   keywords: [
     "bba colleges in pune 2026",
@@ -31,7 +31,7 @@ const colleges = [
     type: "Deemed",
     naac: "A",
     fees: "₹1.4L–₹2L/yr",
-    placement: "₹5–8 LPA",
+    placement: "Not published",
     seats: 180,
     cutoff: "SET 2026 + Merit",
     highlight: "Top BBA Brand | SNAP-linked Pathway to MBA | Global Exposure",
@@ -43,7 +43,7 @@ const colleges = [
     type: "Deemed University",
     naac: "A+",
     fees: "₹1.8L–₹2.5L/yr",
-    placement: "₹5–8 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 60%+ / Entrance",
     highlight: "MIT Brand | Industry Mentors | Strong Placement Cell",
@@ -55,7 +55,7 @@ const colleges = [
     type: "Private (Autonomous)",
     naac: "A",
     fees: "₹60K–₹90K/yr",
-    placement: "₹3.5–6 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 55%+",
     highlight: "Affordable | Autonomous | Good Faculty",
@@ -67,7 +67,7 @@ const colleges = [
     type: "Autonomous",
     naac: "A++",
     fees: "₹40K–₹60K/yr",
-    placement: "₹3–5.5 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "HSC 70%+",
     highlight: "NAAC A++ | Heritage College | Best Value BBA",
@@ -79,7 +79,7 @@ const colleges = [
     type: "Private",
     naac: "A",
     fees: "₹70K–₹1L/yr",
-    placement: "₹3–5 LPA",
+    placement: "Not published",
     seats: 120,
     cutoff: "HSC 55%+",
     highlight: "MIT Group | Internship Support | Industry Tie-ups",
@@ -91,7 +91,7 @@ const colleges = [
     type: "Private",
     naac: "B+",
     fees: "₹55K–₹80K/yr",
-    placement: "₹3–4.5 LPA",
+    placement: "Not published",
     seats: 60,
     cutoff: "HSC 50%+",
     highlight: "Budget Option | Practical Training | Good Campus",
@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     question: "What is the average salary after BBA from Pune?",
-    answer: "Average salary after BBA from top Pune colleges: Symbiosis BBA ₹5–8 LPA, MIT-WPU BBA ₹5–8 LPA, Indira College BBA ₹3.5–6 LPA, Fergusson College BBA ₹3–5.5 LPA. Top recruiters: HDFC Bank, ICICI Bank, Deloitte, KPMG, Infosys BPO, and marketing firms. Many students pursue MBA after BBA for ₹15–25 LPA packages.",
+    answer: "Average salary after BBA from top Pune colleges: Symbiosis BBA ₹5, MIT-WPU BBA ₹5, Indira College BBA ₹3.5, Fergusson College BBA ₹3. Top recruiters: HDFC Bank, ICICI Bank, Deloitte, KPMG, Infosys BPO, and marketing firms. Many students pursue MBA after BBA for ₹15 packages.",
   },
   {
     question: "Is BBA better than BCom in Pune?",
@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     question: "What are the scope and career options after BBA Pune?",
-    answer: "Career options after BBA from Pune: MBA/PGDM (most popular — SIBM, IMT), Banking & Finance (₹4–8 LPA), Marketing Executive (₹3.5–6 LPA), HR Executive (₹3–5 LPA), Entrepreneurship, Sales Management. BBA from Symbiosis gives SNAP pathway to SIBM, SCMHRD for ₹18–28 LPA MBA placements.",
+    answer: "Career options after BBA from Pune: MBA/PGDM (most popular — SIBM, IMT), Banking & Finance, Marketing Executive, HR Executive, Entrepreneurship, Sales Management. BBA from Symbiosis gives SNAP pathway to SIBM, SCMHRD for ₹18 MBA placements.",
   },
 ]
 
@@ -154,7 +154,7 @@ export default function BBACollegesPunePage() {
                 { icon: "💼", label: "6 Top BBA Colleges" },
                 { icon: "📝", label: "SET / HSC Cutoff" },
                 { icon: "💰", label: "Fees ₹40K–₹2.5L/yr" },
-                { icon: "📈", label: "Placement ₹3.5–8 LPA" },
+                { icon: "📈", label: "Placement ₹3.5" },
               ].map(({ icon, label }) => (
                 <div key={label} className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full text-white text-sm">
                   <span>{icon}</span><span>{label}</span>
@@ -204,7 +204,6 @@ export default function BBACollegesPunePage() {
             {[
               { icon: BookOpen, title: "3-Year Programme", desc: "BBA is a 3-year undergraduate degree. Choose specializations in Marketing, Finance, HR, or International Business." },
               { icon: Award, title: "SET for Symbiosis", desc: "SET 2026 required for Symbiosis BBA. Register at set-test.com before March 2026." },
-              { icon: TrendingUp, title: "MBA Gateway", desc: "BBA from Symbiosis gives SNAP eligibility for SIBM — India's top MBA with ₹28 LPA average placement." },
               { icon: Users, title: "Any Stream Eligible", desc: "Science, Commerce, or Arts students from 10+2 can apply for BBA. No specific stream restriction." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-5">

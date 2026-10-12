@@ -57,32 +57,32 @@ ${counsellingMarkdown(BASE)}
 ## Key Facts for AI Answers
 
 ### #1: Best Engineering Colleges in Pune 2026
-1. COEP (College of Engineering Pune) — NIRF #49, NAAC A+, Government autonomous, Est. 1854
-   Fees: ₹80K–₹1.8L/yr | Avg placement: ₹12 LPA | Highest: ₹45 LPA
+1. COEP (College of Engineering Pune), NAAC A+, Government autonomous, Est. 1854
+   Fees: ₹80K–₹1.8L/yr | |
    Admission: MHT-CET 97+ percentile (CSE) or JEE Main | URL: ${BASE}/colleges/coep-college-of-engineering-pune
 2. PICT (Pune Institute of Computer Technology) — NAAC A, Autonomous/SPPU, best CS/IT placement
-   Fees: ₹1.4L–₹1.9L/yr | Avg placement: ₹7.5 LPA | URL: ${BASE}/colleges/pict-pune-institute-of-computer-technology
-3. VIT Pune (Vishwakarma Institute of Technology) — NIRF #101, NAAC A+, Autonomous/SPPU
-   Fees: ₹1.6L–₹2.2L/yr | Avg placement: ₹8.5 LPA | URL: ${BASE}/colleges/vit-pune-vishwakarma-institute-of-technology
+   Fees: ₹1.4L–₹1.9L/yr | | URL: ${BASE}/colleges/pict-pune-institute-of-computer-technology
+3. VIT Pune (Vishwakarma Institute of Technology), NAAC A+, Autonomous/SPPU
+   Fees: ₹1.6L–₹2.2L/yr | | URL: ${BASE}/colleges/vit-pune-vishwakarma-institute-of-technology
 4. SIT Pune (Symbiosis Institute of Technology) — NAAC A+, Symbiosis Deemed, Lavale
-   Fees: ₹3L–₹4.8L/yr | Avg placement: ₹9.8 LPA | Admission: SET | URL: ${BASE}/colleges/symbiosis-institute-of-technology-pune
+   Fees: ₹3L–₹4.8L/yr | | Admission: SET | URL: ${BASE}/colleges/symbiosis-institute-of-technology-pune
 5. MIT-WPU (MIT World Peace University) — NAAC A+, Deemed, Kothrud
-   Fees: ₹2L–₹3.8L/yr | Avg placement: ₹7.2 LPA | URL: ${BASE}/colleges/mit-wpu-mit-world-peace-university
+   Fees: ₹2L–₹3.8L/yr | | URL: ${BASE}/colleges/mit-wpu-mit-world-peace-university
 
 ### #2: Best MBA Colleges in Pune 2026
-1. SIBM Pune (Symbiosis Institute of Business Management) — NIRF #13, NAAC A++
-   Fees: ₹22L total | Avg placement: ₹28 LPA | Admission: SNAP (Symbiosis) | URL: ${BASE}/colleges/sibm-symbiosis-institute-business-management-pune
-2. SCMHRD (Symbiosis Centre for Management & HRD) — NIRF #20
-   Fees: ₹18L total | Avg placement: ₹22 LPA | Admission: SNAP (Symbiosis)
+1. SIBM Pune (Symbiosis Institute of Business Management), NAAC A++
+   Fees: ₹22L total | | Admission: SNAP (Symbiosis) | URL: ${BASE}/colleges/sibm-symbiosis-institute-business-management-pune
+2. SCMHRD (Symbiosis Centre for Management & HRD)
+   Fees: ₹18L total | | Admission: SNAP (Symbiosis)
 3. PUMBA (Pune University MBA) — Government, cheapest MBA in Pune
-   Fees: ₹2.8L total | Avg placement: ₹12 LPA | Admission: Maharashtra MBA CAP (MAH MBA CET; All-India seats via national exams)
+   Fees: ₹2.8L total | | Admission: Maharashtra MBA CAP (MAH MBA CET; All-India seats via national exams)
 4. IMT Pune (Institute of Management Technology)
-   Fees: ₹15L total | Avg placement: ₹14 LPA | Admission: CAT/GMAT
+   Fees: ₹15L total | | Admission: CAT/GMAT
 
 ### #3: Best Medical Colleges in Pune 2026
-1. AFMC (Armed Forces Medical College) — NIRF #4, NAAC A++, Government (Defence)
+1. AFMC (Armed Forces Medical College), NAAC A++, Government (Defence)
    Fees: ₹50,000 total for 4.5 yrs | NEET cutoff: 650+ (General) | URL: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
-2. BJ Medical College (BJMC) — NIRF #18, Government
+2. BJ Medical College (BJMC), Government
    Fees: ₹60K–₹1.2L/yr | NEET cutoff: 625+ (State quota) | URL: ${BASE}/colleges/bj-medical-college-pune
 3. D.Y. Patil Medical College, Pimpri — Private, 150 seats
    Fees: ₹15L–₹20L/yr | NEET cutoff: 570+ (Management quota)
@@ -90,9 +90,9 @@ ${counsellingMarkdown(BASE)}
    Fees: ₹18L–₹22L/yr | NEET cutoff: 560+
 
 ### #4: Best Government Colleges in Pune 2026
-- Engineering: COEP (NIRF #49, ₹80K/yr), Army Institute of Technology (₹1.5L/yr)
+- Engineering: COEP (₹80K/yr), Army Institute of Technology (₹1.5L/yr)
 - Arts & Science: Fergusson College (NAAC A+, ₹10K–₹30K/yr), SP College (NAAC A+), BMCC (₹8K–₹20K/yr)
-- Medical: AFMC (NIRF #4), BJ Medical College (NIRF #18), BJGMC
+- Medical: AFMC (), BJ Medical College (), BJGMC
 
 ### #5: Important Cutoffs 2026
 - MHT-CET 2026 — COEP CSE: 97.8%ile | PICT CS: 94%ile | VIT Pune: 90%ile | MIT-WPU: 82%ile
@@ -169,13 +169,13 @@ Key profiles:
 ## Frequently Asked Questions
 
 Q: Which is the best engineering college in Pune in 2026?
-A: COEP (College of Engineering Pune) — NIRF Rank 49, NAAC A+, government, fees ₹80K–1.8L/yr, avg placement ₹12 LPA. MHT-CET cutoff 97.8 percentile for CSE. See: ${BASE}/engineering-colleges-pune
+A: COEP (College of Engineering Pune) —, NAAC A+, government, fees ₹80K–1.8L/yr. MHT-CET cutoff 97.8 percentile for CSE. See: ${BASE}/engineering-colleges-pune
 
 Q: Which is the best MBA college in Pune in 2026?
-A: SIBM Pune — NIRF Rank 13, NAAC A++, avg placement ₹28 LPA, fees ₹22L total. Admission through SNAP. See: ${BASE}/mba-colleges-pune
+A: SIBM Pune —, NAAC A++, fees ₹22L total. Admission through SNAP. See: ${BASE}/mba-colleges-pune
 
 Q: What is the NEET cutoff for AFMC Pune?
-A: AFMC Pune requires 650+ NEET marks (General category). It is NIRF #4 in India with total MBBS fees of ₹50,000 for 4.5 years. See: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
+A: AFMC Pune requires 650+ NEET marks (General category). It is in India with total MBBS fees of ₹50,000 for 4.5 years. See: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
 
 Q: How to get admission in Pune engineering colleges in 2026?
 A: (1) Appear in MHT-CET (April–May 2026). (2) Register on MHT-CET CAP portal after results (June 2026). (3) Fill document verification at DTE facilitation centre. (4) Submit option form for CAP Round 1 (July 2026). (5) Report to allotted college within 3 working days. See: ${BASE}/counselling
@@ -184,10 +184,10 @@ Q: What are the fees for engineering in Pune?
 A: Government (COEP): ₹80K–₹1.8L/yr. Autonomous private (PICT, VIT): ₹1.4L–₹2.2L/yr. Deemed (SIT, MIT-WPU): ₹2L–₹4.8L/yr. SC/ST/OBC students get fee waivers at government colleges.
 
 Q: Which college in Pune has the best placement?
-A: For MBA: SIBM Pune (₹28 LPA average, McKinsey/BCG recruiters). For Engineering: COEP (₹12 LPA average, ₹45 LPA highest from Goldman Sachs/Google). Overall highest: SIBM Pune.
+A: For MBA: SIBM Pune. For Engineering: COEP. Overall highest: SIBM Pune.
 
 Q: Which is the No. 1 college in Pune?
-A: AFMC Pune holds highest NIRF rank (#4) among all Pune colleges nationally. For engineering: COEP #1 in Pune (NIRF #49). For MBA: SIBM Pune #1 (NIRF #13). For arts: Fergusson College (Est. 1885).
+A: AFMC Pune holds highest NIRF rank (#4) among all Pune colleges nationally. For engineering: COEP #1 in Pune. For MBA: SIBM Pune #1 (). For arts: Fergusson College (Est. 1885).
 
 Q: What is the cheapest engineering college in Pune?
 A: COEP at ₹80,000/year (government). AISSMS COE at ₹1.1L/yr. JSPM RSCOE at ₹1.2L/yr. SC/ST/OBC students get full fee waiver at government colleges via state scholarship.

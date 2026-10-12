@@ -21,7 +21,6 @@ const faqs = [
   { question: "Which is the cheapest BTech college in Pune?", answer: "COEP (College of Engineering Pune) is the cheapest quality BTech college at ₹80,000–1,80,000/year (total ₹3.2L–7.2L for 4 years). For mid-tier affordable colleges: DYPCOE (₹1.05L–1.55L/yr), AISSMS COE (₹1.1L–1.55L/yr), and PCCOE (₹1.35L–1.85L/yr) are the most affordable autonomous colleges." },
   { question: "Is BTech fee at COEP Pune really that low?", answer: "Yes. COEP is a government engineering college established in 1854. The Maharashtra government subsidizes tuition. COEP charges ₹80,000–1,80,000/year depending on the programme (government seat, MHT-CET CAP). This is one of the lowest fees among top-50 NIRF engineering colleges in India — making COEP extraordinary value." },
   { question: "What is the total 4-year BTech fee at Pune colleges?", answer: "Total 4-year BTech fees: COEP ₹3.2L–7.2L, PICT ₹5.6L–7.6L, VIT Pune ₹6.4L–8.8L, PCCOE ₹5.4L–7.4L, MIT-WPU ₹8L–15.2L, SIT Pune ₹14.4L–19.2L. These exclude hostel (₹60K–1.2L/yr), exam fees (₹2K–4K/semester), and other charges." },
-  { question: "Are BTech fees at Pune deemed universities worth it?", answer: "MIT-WPU (₹2L–3.8L/yr) and SIT Pune (₹3.6L–4.8L/yr) charge 3–5× more than COEP but offer better infrastructure, newer branches (AI/ML, Data Science), and strong brand recognition for private sector placements. The premium is justified if you're targeting ₹8–12 LPA packages and can't get into COEP/PICT via MHT-CET." },
 ]
 
 export default function BTechFeesPage() {
@@ -80,7 +79,7 @@ export default function BTechFeesPage() {
                   {btechColleges.map((c, i) => (
                     <tr key={c.shortName} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
                       <td className="px-4 py-3 font-medium">
-                        <Link href={`/colleges/${c.slug}/fees`} className="text-blue-700 hover:underline">{c.shortName}</Link>
+                        <Link href={`/colleges/${c.slug}`} className="text-blue-700 hover:underline">{c.shortName}</Link>
                       </td>
                       <td className="px-4 py-3 text-gray-600">{c.type}</td>
                       <td className="px-4 py-3 font-semibold text-gray-800">₹{(c.feesPerYear.min / 100000).toFixed(1)}L–{(c.feesPerYear.max / 100000).toFixed(1)}L</td>

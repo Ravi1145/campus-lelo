@@ -13,20 +13,18 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹12K–30K/yr", placement: "₹3.5 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Rd", naac: "A+", fees: "₹55K–1.2L/yr", placement: "₹4.2 LPA avg", slug: "sibm-symbiosis-institute-business-management-pune" },
-  { name: "MIT World Peace University", location: "Kothrud", naac: "A+", fees: "₹1.0L–2.0L/yr", placement: "₹5.5 LPA avg", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "SP College Pune", location: "Tilak Road", naac: "A+", fees: "₹10K–25K/yr", placement: "₹3.2 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "Modern College of Arts, Science & Commerce", location: "Ganeshkhind", naac: "A", fees: "₹15K–40K/yr", placement: "₹3.0 LPA avg", slug: "coep-college-of-engineering-pune" },
-  { name: "DY Patil International University", location: "Akurdi", naac: "A+", fees: "₹80K–1.5L/yr", placement: "₹4.8 LPA avg", slug: "dy-patil-university-pune" },
+  { name: "Fergusson College (Autonomous)", location: "Shivajinagar", naac: "A+", fees: "₹12K–30K/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Symbiosis College of Arts & Commerce", location: "Senapati Bapat Rd", naac: "A+", fees: "₹55K–1.2L/yr", placement: "Not published", slug: "sibm-symbiosis-institute-business-management-pune" },
+  { name: "MIT World Peace University", location: "Kothrud", naac: "A+", fees: "₹1.0L–2.0L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
+  { name: "SP College Pune", location: "Tilak Road", naac: "A+", fees: "₹10K–25K/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "Modern College of Arts, Science & Commerce", location: "Ganeshkhind", naac: "A", fees: "₹15K–40K/yr", placement: "Not published", slug: "coep-college-of-engineering-pune" },
+  { name: "DY Patil International University", location: "Akurdi", naac: "A+", fees: "₹80K–1.5L/yr", placement: "Not published", slug: "dy-patil-university-pune" },
 ]
 
 const faqs = [
   { q: "Which is the best BSc college in Pune?", a: "Fergusson College (Autonomous) with NAAC A+ is the most prestigious BSc college in Pune, established in 1885. For BSc CS/IT with placement focus, MIT-WPU is preferred. For lowest fees with quality education, SP College and Garware College (both government-aided) are excellent choices." },
   { q: "What BSc courses are available in Pune?", a: "Pune colleges offer BSc in Physics, Chemistry, Mathematics, Computer Science, IT, Biotechnology, Microbiology, Data Science, Environmental Science, Electronics, Statistics, Forensic Science, Animation, and Hospitality Management. New-age BSc programs in AI, Data Science, and Cloud Computing are growing rapidly." },
   { q: "What is the BSc fee in Pune colleges?", a: "BSc fees in Pune range from ₹10,000–₹30,000/year at government-aided colleges (Fergusson, SP College, Garware) to ₹1.5L–2L/year at private universities. 3-year total BSc cost: ₹30,000–₹6 lakh depending on college type." },
-  { q: "What is the scope after BSc from Pune?", a: "BSc graduates from Pune can pursue MSc, MCA, MBA, B.Ed, or directly work in labs, pharma, IT, and analytics. BSc Data Science / BSc CS from Pune colleges gets ₹3–6 LPA starting salary. Pharma BSc (Biotech/Microbiology) graduates find roles in Pune's 200+ pharma companies." },
-  { q: "Is BSc or B.Tech better in Pune?", a: "B.Tech has higher salary potential (₹5–12 LPA starting) vs BSc (₹2.5–5 LPA). But BSc is better if you want research, teaching, or science careers. BSc Data Science / CS from premium colleges is closing the gap. Choose based on your aptitude and career goal, not just immediate salary." },
 ]
 
 export default function BscCollegesPune() {
@@ -54,7 +52,7 @@ export default function BscCollegesPune() {
         introParagraphs={[
           "Pune has over 80 BSc colleges spanning government-aided, autonomous, and private institutions. Bachelor of Science (BSc) programs in Pune cover traditional science streams (Physics, Chemistry, Mathematics, Biology) and new-age specializations like Data Science, Computer Science, Biotechnology, Forensic Science, and Animation.",
           "Government-aided BSc colleges like Fergusson College, SP College, and Garware College offer exceptional education at ₹10,000–₹30,000/year — making Pune the most affordable city for science education in Maharashtra. These colleges have 100+ year legacies and alumni networks spanning IIT, IISc, TIFR, and Fortune 500 companies.",
-          "Pune's pharma industry (20,000+ pharma companies in Maharashtra), biotech sector, and IT companies create diverse career paths for BSc graduates. BSc Computer Science and BSc Data Science graduates from Pune's autonomous colleges are increasingly competing with BCA/B.Tech graduates for IT jobs at ₹4–8 LPA.",
+          "Pune's pharma industry (20,000+ pharma companies in Maharashtra), biotech sector, and IT companies create diverse career paths for BSc graduates. BSc Computer Science and BSc Data Science graduates from Pune's autonomous colleges are increasingly competing with BCA/B.Tech graduates for IT jobs at ₹4.",
         ]}
         colleges={colleges}
         whyHeading="Why BSc from Pune?"

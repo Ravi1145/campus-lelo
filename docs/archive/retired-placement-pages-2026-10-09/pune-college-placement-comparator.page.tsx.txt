@@ -23,25 +23,25 @@ export const metadata: Metadata = genMeta({
 })
 
 const engineeringData = [
-  { name: "COEP Pune", type: "Government", avg: "₹12 LPA", highest: "₹45 LPA", rate: "92%", recruiters: "TCS, Bajaj, Mercedes, Siemens, L&T" },
-  { name: "SIT Pune", type: "Deemed", avg: "₹9.8 LPA", highest: "₹42 LPA", rate: "94%", recruiters: "Google, Microsoft, Capgemini, Wipro, Honeywell" },
-  { name: "VIT Pune", type: "Autonomous", avg: "₹8.5 LPA", highest: "₹40 LPA", rate: "88%", recruiters: "TCS, Infosys, Bajaj Auto, Bosch, Cummins" },
-  { name: "PICT Pune", type: "Autonomous", avg: "₹7.5 LPA", highest: "₹35 LPA", rate: "90%", recruiters: "Goldman Sachs, Amazon, Deutsche Bank, Persistent" },
-  { name: "MIT-WPU Pune", type: "Deemed", avg: "₹7.2 LPA", highest: "₹38 LPA", rate: "85%", recruiters: "TCS, Wipro, Capgemini, Tech Mahindra, Accenture" },
-  { name: "Cummins College", type: "Autonomous", avg: "₹6.8 LPA", highest: "₹28 LPA", rate: "87%", recruiters: "Cummins, Eaton, Emerson, Tata Technologies" },
-  { name: "JSPM RSCOE", type: "Private", avg: "₹5.2 LPA", highest: "₹22 LPA", rate: "78%", recruiters: "TCS, Infosys, Wipro, HCL, Hexaware" },
-  { name: "AISSMS College", type: "Private", avg: "₹4.8 LPA", highest: "₹20 LPA", rate: "75%", recruiters: "TCS, Wipro, Zensar, Persistent, Cognizant" },
-  { name: "Sinhgad College", type: "Private", avg: "₹4.9 LPA", highest: "₹18 LPA", rate: "76%", recruiters: "TCS, Infosys, HCL, Mphasis, NIIT Technologies" },
+  { name: "COEP Pune", type: "Government", avg: "Not published", highest: "Not published", rate: "92%", recruiters: "TCS, Bajaj, Mercedes, Siemens, L&T" },
+  { name: "SIT Pune", type: "Deemed", avg: "Not published", highest: "Not published", rate: "94%", recruiters: "Google, Microsoft, Capgemini, Wipro, Honeywell" },
+  { name: "VIT Pune", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "88%", recruiters: "TCS, Infosys, Bajaj Auto, Bosch, Cummins" },
+  { name: "PICT Pune", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "90%", recruiters: "Goldman Sachs, Amazon, Deutsche Bank, Persistent" },
+  { name: "MIT-WPU Pune", type: "Deemed", avg: "Not published", highest: "Not published", rate: "85%", recruiters: "TCS, Wipro, Capgemini, Tech Mahindra, Accenture" },
+  { name: "Cummins College", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "87%", recruiters: "Cummins, Eaton, Emerson, Tata Technologies" },
+  { name: "JSPM RSCOE", type: "Private", avg: "Not published", highest: "Not published", rate: "78%", recruiters: "TCS, Infosys, Wipro, HCL, Hexaware" },
+  { name: "AISSMS College", type: "Private", avg: "Not published", highest: "Not published", rate: "75%", recruiters: "TCS, Wipro, Zensar, Persistent, Cognizant" },
+  { name: "Sinhgad College", type: "Private", avg: "Not published", highest: "Not published", rate: "76%", recruiters: "TCS, Infosys, HCL, Mphasis, NIIT Technologies" },
 ]
 
 const mbaData = [
-  { name: "SIBM Pune", type: "Deemed", avg: "₹28 LPA", highest: "₹65 LPA", rate: "100%", recruiters: "McKinsey, BCG, Goldman Sachs, P&G, Deloitte" },
-  { name: "SCMHRD Pune", type: "Deemed", avg: "₹22 LPA", highest: "₹55 LPA", rate: "100%", recruiters: "Amazon, Accenture, Capgemini, EY, KPMG" },
-  { name: "SCIT Pune", type: "Deemed", avg: "₹18 LPA", highest: "₹45 LPA", rate: "98%", recruiters: "Microsoft, TCS, Cognizant, Infosys BPM, Wipro" },
-  { name: "MIT-SOM Pune", type: "Autonomous", avg: "₹12 LPA", highest: "₹32 LPA", rate: "92%", recruiters: "HDFC Bank, ICICI, Bajaj Finserv, Mahindra, Tata" },
-  { name: "BIMM Pune", type: "Autonomous", avg: "₹8.5 LPA", highest: "₹22 LPA", rate: "88%", recruiters: "HDFC, Axis Bank, Reliance, HUL, Aditya Birla" },
-  { name: "Indira Institute", type: "Autonomous", avg: "₹7.2 LPA", highest: "₹18 LPA", rate: "85%", recruiters: "Pune-based SMEs, BFSI companies, FMCG firms" },
-  { name: "Suryadatta Institute", type: "Private", avg: "₹5.8 LPA", highest: "₹14 LPA", rate: "80%", recruiters: "Local Pune companies, Banking sector, Insurance" },
+  { name: "SIBM Pune", type: "Deemed", avg: "Not published", highest: "Not published", rate: "100%", recruiters: "McKinsey, BCG, Goldman Sachs, P&G, Deloitte" },
+  { name: "SCMHRD Pune", type: "Deemed", avg: "Not published", highest: "Not published", rate: "100%", recruiters: "Amazon, Accenture, Capgemini, EY, KPMG" },
+  { name: "SCIT Pune", type: "Deemed", avg: "Not published", highest: "Not published", rate: "98%", recruiters: "Microsoft, TCS, Cognizant, Infosys BPM, Wipro" },
+  { name: "MIT-SOM Pune", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "92%", recruiters: "HDFC Bank, ICICI, Bajaj Finserv, Mahindra, Tata" },
+  { name: "BIMM Pune", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "88%", recruiters: "HDFC, Axis Bank, Reliance, HUL, Aditya Birla" },
+  { name: "Indira Institute", type: "Autonomous", avg: "Not published", highest: "Not published", rate: "85%", recruiters: "Pune-based SMEs, BFSI companies, FMCG firms" },
+  { name: "Suryadatta Institute", type: "Private", avg: "Not published", highest: "Not published", rate: "80%", recruiters: "Local Pune companies, Banking sector, Insurance" },
 ]
 
 const topRecruiters = [
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: "What is the placement percentage at SIBM Pune?",
-    answer: "SIBM Pune achieves near 100% placement for its MBA batch. The 2024 batch saw 100% placement with average salary of ₹28 LPA and highest international package of ₹65 LPA. McKinsey, BCG, P&G, Goldman Sachs, and Hindustan Unilever are among the top recruiters visiting SIBM Pune campus annually.",
+    answer: "SIBM Pune achieves near 100% placement for its MBA batch. The 2024 batch saw 100% placement and highest international package of ₹65 LPA. McKinsey, BCG, P&G, Goldman Sachs, and Hindustan Unilever are among the top recruiters visiting SIBM Pune campus annually.",
   },
 ]
 

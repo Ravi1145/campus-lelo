@@ -1,0 +1,9 @@
+src\app\scholarships\page.tsx:34: income: "< ₹8 LPA family income",
+src\app\scholarships\page.tsx:47: income: "< ₹8 LPA",
+src\app\scholarships\page.tsx:60: income: "SC: < ₹2.5 LPA · ST: < ₹2.5 LPA",
+src\app\scholarships\page.tsx:74: income: "Family income < ₹4.5 LPA",
+src\app\scholarships\page.tsx:87: income: "Family income < ₹2 LPA",
+src\app\scholarships\page.tsx:126: amount: "₹65,000/year (Engineering) · ₹1 LPA (MBA)",
+src\app\scholarships\page.tsx:153: income: "Family annual income < ₹2.5 LPA",
+src\app\scholarships\page.tsx:183: answer: "MahaDBT Freeship (Tuition Fee Waiver) income limit: Family annual income must be below ₹8 LPA (₹8 lakh per annum) for EBC Freeship. SC/ST Post-Matric scholarship
+src\components\scholarships\ScholarshipFinder.tsx:28: const INCOMES = ["Below ₹2 LPA", "₹2", "₹4.5", "Above ₹8 LPA"]

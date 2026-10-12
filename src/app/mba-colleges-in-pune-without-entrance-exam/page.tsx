@@ -14,7 +14,6 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const faqs = [
-  { question: "What is the best option for Mba Colleges In Pune Without Entrance Exam in Pune?", answer: "Top MBA colleges in Pune for this category: SIBM Pune (avg ₹24 LPA), SCMHRD (₹19 LPA), MIT-SOM (₹11 LPA, ₹7L/yr fees), and PUMBA (government, ₹1.25L/yr). Choose based on your entrance score, budget and specialisation preference." },
   { question: "How to apply for MBA in Pune 2026?", answer: "MBA admission in Pune: Appear in MAH-CET MBA (March 2026) or SNAP (December 2025 for Symbiosis). Register on DTE Maharashtra portal after results. Fill college preferences. Attend CAP Rounds (July-August 2026). Classes begin August 2026." },
 ]
 
@@ -32,10 +31,9 @@ export default function Page() {
       <MBAClusterPage
         h1="Mba Colleges In Pune Without Entrance Exam — Pune 2026"
         subtitle="Complete guide to Mba Colleges In Pune Without Entrance Exam in Pune. Compare top MBA colleges, fees, cutoffs and placements."
-        quickAnswer="Top Pune MBA colleges: SIBM (avg ₹24 LPA), SCMHRD (₹19 LPA), MIT-SOM (₹11 LPA, ₹7L/yr). Admission via MAH-CET MBA or SNAP. Classes begin August 2026."
+        quickAnswer="Top Pune MBA colleges: SIBM, SCMHRD, MIT-SOM. Admission via MAH-CET MBA or SNAP. Classes begin August 2026."
         stats={[
           { value: "120+", label: "MBA Colleges" },
-          { value: "₹7–24 LPA", label: "Avg Placement" },
           { value: "₹1.25L–16L", label: "Annual Fees" },
           { value: "MAH-CET", label: "Primary Exam" },
         ]}

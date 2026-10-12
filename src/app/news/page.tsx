@@ -58,8 +58,8 @@ const latestNews = [
   },
   {
     id: "n2",
-    title: "COEP Pune NIRF Rank 2025: Maintains Top 50 in Engineering Category",
-    excerpt: "College of Engineering Pune ranked #49 in NIRF 2025 Engineering category, maintaining its position as top government engineering college in Pune.",
+    title: "COEP Pune: Maintains Top 50 in Engineering Category",
+    excerpt: "College of Engineering Pune ranked #49 in Engineering category, maintaining its position as top government engineering college in Pune.",
     date: "2026-01-05",
     category: "Engineering",
     source: "NIRF India",

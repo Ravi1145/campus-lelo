@@ -13,10 +13,7 @@ export const metadata: Metadata = genMeta({
 })
 export const revalidate = 300
 
-const faqs = [
-  { question: "Which Pune MBA college is best for IT Management?", answer: "MIT-SOM and SIBM Pune are the best for MBA IT Management in Pune. Pune's 500+ IT companies in Hinjewadi and Kharadi IT parks recruit MBA IT graduates for technology management, IT strategy, and digital transformation roles. Avg package: ₹10–18 LPA." },
-  { question: "What is the scope of MBA IT Management from Pune?", answer: "MBA IT Management graduates from Pune are hired for IT Project Management (₹10-18 LPA), Technology Consulting (₹12-22 LPA), Product Management (₹12-25 LPA), Digital Transformation roles (₹14-24 LPA), and IT Business Analyst (₹9-16 LPA) positions at Pune's IT companies." },
-]
+const faqs: { question: string; answer: string }[] = []
 
 export default function MBAForIT() {
   const faqSchema = generateFAQSchema(faqs)
@@ -31,8 +28,8 @@ export default function MBAForIT() {
       <MBAClusterPage
         h1="MBA IT Management — Colleges in Pune 2026"
         subtitle="Best MBA IT Management and Tech MBA programs in Pune with top IT company placements in Hinjewadi, Kharadi and Baner IT parks."
-        quickAnswer="MIT-SOM and SIBM Pune are the best MBA IT Management colleges. Pune IT sector (TCS, Infosys, Wipro, Persistent) is the top recruiter. Avg package: ₹10–18 LPA. Admission via MAH-CET MBA."
-        stats={[{ value: "6+", label: "MBA IT Colleges" }, { value: "₹10–18 LPA", label: "Avg Placement" }, { value: "IT/Consulting", label: "Top Sectors" }, { value: "MAH-CET/SNAP", label: "Exams" }]}
+        quickAnswer="MIT-SOM and SIBM Pune are the best MBA IT Management colleges. Pune IT sector (TCS, Infosys, Wipro, Persistent) is the top recruiter. Avg package: ₹10. Admission via MAH-CET MBA."
+        stats={[{ value: "6+", label: "MBA IT Colleges" }, { value: "₹10", label: "Avg Placement" }, { value: "IT/Consulting", label: "Top Sectors" }, { value: "MAH-CET/SNAP", label: "Exams" }]}
         colleges={mbaColleges}
         introHeading="MBA IT Management in Pune — Leveraging the IT Hub"
         introParagraphs={[

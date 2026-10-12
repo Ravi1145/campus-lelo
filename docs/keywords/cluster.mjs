@@ -13,6 +13,7 @@ const raw = JSON.parse(fs.readFileSync(path.join(here, "raw-suggestions.json"), 
 const routes = new Set(fs.readdirSync(path.join(root, "src/app"), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => "/" + d.name))
 // Pages that redirect elsewhere (next.config.ts) must never be a keyword target
 const redirected = new Set([...fs.readFileSync(path.join(root, "next.config.ts"), "utf8").matchAll(/source:\s*"(\/[a-z0-9-]+)"/g)].map((m) => m[1]))
+for (const m of fs.readFileSync(path.join(root, "src/data/retiredPages.ts"), "utf8").matchAll(/source:\s*"(\/[a-z0-9-]+)"/g)) redirected.add(m[1])
 const has = (u) => routes.has(u) && !redirected.has(u)
 const BLOG = "/blog/mba-colleges-delhi-ncr-noida-guide"
 

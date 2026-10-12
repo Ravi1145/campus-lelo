@@ -51,7 +51,7 @@ export default function BTechWithoutJEE() {
         introHeading="BTech in Pune Without JEE — The Complete Picture"
         introParagraphs={[
           "One of the biggest misconceptions about Pune engineering admissions is that JEE Main is required. It is not. Maharashtra has its own state-level engineering entrance exam — MHT-CET — which is the primary (and often only) requirement for 90%+ of BTech seats across all 50+ engineering colleges in Pune.",
-          "COEP (NIRF #49), PICT, VIT Pune, MIT-WPU, SIT Pune — every single one of these top colleges fills its main intake through MHT-CET via the DTE Maharashtra CAP process. JEE Main is only relevant if you're targeting IITs or NITs, or if you want to use it as an alternative route for management quota seats at some private colleges.",
+          "COEP, PICT, VIT Pune, MIT-WPU, SIT Pune — every single one of these top colleges fills its main intake through MHT-CET via the DTE Maharashtra CAP process. JEE Main is only relevant if you're targeting IITs or NITs, or if you want to use it as an alternative route for management quota seats at some private colleges.",
           "The MHT-CET PCM exam covers Physics, Chemistry, and Mathematics from Maharashtra state board and NCERT syllabus. It is offered in Computer-Based Test (CBT) mode in April–May each year. Students from any state board (not just Maharashtra) can appear — but domicile certificate matters for reservations in Maharashtra colleges.",
         ]}
         faqs={faqs}
