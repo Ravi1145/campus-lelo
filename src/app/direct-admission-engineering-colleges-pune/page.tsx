@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { CheckCircle, AlertCircle, BookOpen, Users, Phone } from "lucide-react"
@@ -557,6 +558,7 @@ export default function DirectAdmissionEngineeringPage() {
           </div>
         </div>
       </div>
+      <MoreInCluster pool="btech" path="/direct-admission-engineering-colleges-pune" />
     </>
   )
 }

@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, Award, MapPin, ExternalLink, BookOpen, Users } from "lucide-react"
@@ -411,6 +412,7 @@ export default function EngineeringCollegesPunePage() {
           </div>
         </div>
       </div>
+      <MoreInCluster pool="btech" path="/engineering-colleges-pune" />
     </>
   )
 }

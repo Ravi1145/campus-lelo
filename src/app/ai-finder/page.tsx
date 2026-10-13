@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import AIRecommender from "@/components/ai/AIRecommender"
 import AIChatWidget from "@/components/ai/AIChatWidget"
@@ -63,6 +64,7 @@ export default function AIFinderPage() {
           </p>
         </div>
       </div>
+      <NextSteps exclude="/ai-finder" />
     </div>
   )
 }

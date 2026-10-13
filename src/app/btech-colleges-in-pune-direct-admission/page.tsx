@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
@@ -66,6 +67,7 @@ export default function BTechDirectAdmission() {
         ctaHeading="Need Help with BTech Direct Admission in Pune?"
         ctaSubtext="Our counsellors know which colleges have management quota available — free guidance, no middleman fees."
       />
+      <MoreInCluster pool="btech" path="/btech-colleges-in-pune-direct-admission" />
     </>
   )
 }

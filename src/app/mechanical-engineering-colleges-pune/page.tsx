@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import SEOLandingPage from "@/components/seo/SEOLandingPage"
@@ -102,6 +103,7 @@ export default function MechanicalEngineeringCollegesPunePage() {
         { label: "Government Colleges in Pune", href: "/government-colleges-pune", icon: "🏛️" },
       ]}
       />
+      <MoreInCluster pool="btech" path="/mechanical-engineering-colleges-pune" />
     </>
   )
 }

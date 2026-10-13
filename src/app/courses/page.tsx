@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import CoursesClient from "@/components/courses/CoursesClient"
 import CourseRecommender from "@/components/courses/CourseRecommender"
@@ -52,6 +53,7 @@ export default function CoursesPage() {
       </div>
 
       <CoursesClient />
+      <NextSteps exclude="/courses" />
     </div>
   )
 }

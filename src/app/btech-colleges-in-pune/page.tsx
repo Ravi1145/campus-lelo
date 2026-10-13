@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { btechColleges, btechFAQs } from "@/data/btechColleges"
@@ -94,6 +95,7 @@ export default function BTechCollegesInPune() {
         ctaHeading="Find the Right BTech College in Pune"
         ctaSubtext="Free personalised guidance from our Pune engineering college counsellors — 15 minutes, zero cost."
       />
+      <MoreInCluster pool="btech" path="/btech-colleges-in-pune" />
     </>
   )
 }

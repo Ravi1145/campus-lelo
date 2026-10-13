@@ -21,6 +21,7 @@ const FAQSection          = dynamic(() => import("@/components/home/FAQSection")
 const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
 import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
 import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
+import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 
@@ -154,6 +155,30 @@ export default function HomePage() {
         {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
         <WhatIsCampusLelo />
         <PuneCollegeGuide />
+
+        {/* 14. Explore: plain links to sections that otherwise have few inbound links */}
+        <NextSteps
+          title="Explore CampusLelo"
+          steps={[
+            { href: "/colleges-in-pune", label: "Colleges in Pune" },
+            { href: "/colleges-in-noida", label: "Colleges in Noida" },
+            { href: "/colleges-in-greater-noida", label: "Colleges in Greater Noida" },
+            { href: "/career-paths", label: "Career paths" },
+            { href: "/courses", label: "Courses" },
+            { href: "/events", label: "Admission events" },
+            { href: "/news", label: "Admission news" },
+            { href: "/qa", label: "Student Q&A" },
+            { href: "/ask", label: "Ask a question" },
+            { href: "/ai-counselor", label: "AI career counsellor" },
+            { href: "/ai-finder", label: "AI college finder" },
+            { href: "/predictor", label: "College predictor" },
+            { href: "/compare", label: "Compare colleges" },
+            { href: "/roi-calculator", label: "Degree ROI calculator" },
+            { href: "/about", label: "About CampusLelo" },
+            { href: "/press", label: "Press kit" },
+            { href: "/site-map", label: "Site map" },
+          ]}
+        />
       </div>
     </>
   )

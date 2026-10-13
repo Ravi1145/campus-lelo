@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
@@ -66,6 +67,7 @@ export default function BTechWithoutJEE() {
         ctaHeading="MHT-CET Score Ready? Find Your Best BTech College"
         ctaSubtext="Free counselling — get a personalised college list based on your MHT-CET percentile, branch, and budget."
       />
+      <MoreInCluster pool="btech" path="/btech-colleges-in-pune-without-jee" />
     </>
   )
 }

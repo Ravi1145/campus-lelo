@@ -1,4 +1,5 @@
 ﻿"use client"
+import NextSteps from "@/components/seo/NextSteps"
 import { useState, useMemo } from "react"
 import { Calculator, TrendingUp, IndianRupee, Clock, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
@@ -276,6 +277,7 @@ export default function ROICalculatorPage() {
           </p>
         </div>
       </div>
+      <NextSteps exclude="/roi-calculator" />
     </div>
   )
 }

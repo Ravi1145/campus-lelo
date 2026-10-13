@@ -1,4 +1,5 @@
 ﻿"use client"
+import NextSteps from "@/components/seo/NextSteps"
 import { useState } from "react"
 import { GraduationCap, Search, ChevronRight, MapPin, TrendingUp, Award, ExternalLink, Sparkles } from "lucide-react"
 import Link from "next/link"
@@ -266,6 +267,7 @@ export default function PredictorPage() {
         </div>
       </div>
       </div>
+      <NextSteps exclude="/predictor" />
     </div>
   )
 }

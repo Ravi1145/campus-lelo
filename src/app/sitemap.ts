@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: BASE_URL,                               lastModified: "2026-10-05", changeFrequency: "daily",   priority: 1.0 },
     { url: `${BASE_URL}/colleges`,                 lastModified: "2026-10-05", changeFrequency: "daily",   priority: 0.9 },
     { url: `${BASE_URL}/colleges-in-pune`,         lastModified: "2026-06-01", changeFrequency: "daily",   priority: 0.9 },
-    { url: `${BASE_URL}/blog`,                     lastModified: new Date(),   changeFrequency: "daily",   priority: 0.8 },
+    { url: `${BASE_URL}/blog`,                     lastModified: "2026-10-13",   changeFrequency: "daily",   priority: 0.8 },
     { url: `${BASE_URL}/exams`,                    lastModified: "2026-04-01", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/courses`,                  lastModified: "2026-04-01", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/ai-finder`,                lastModified: "2026-03-01", changeFrequency: "monthly", priority: 0.8 },
@@ -144,17 +144,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Comparison page
     { url: `${BASE_URL}/pune-colleges-comparison-engineering-mba`,  lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.8 },
     // Deadline tracker
-    { url: `${BASE_URL}/pune-admission-deadline-tracker-2026`,      lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE_URL}/pune-admission-deadline-tracker-2026`,      lastModified: "2026-10-13", changeFrequency: "weekly",  priority: 0.8 },
     // Interactive tools
     { url: `${BASE_URL}/pune-college-fees-calculator`,              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/pune-college-placement-comparator`,         lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.75 },
     // New content pages
     { url: `${BASE_URL}/scholarships`,                              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE_URL}/events`,                                    lastModified: new Date(), changeFrequency: "weekly",  priority: 0.85 },
-    { url: `${BASE_URL}/placements`,                                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.90 },
-    { url: `${BASE_URL}/admission-guide`,                           lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
-    { url: `${BASE_URL}/news`,                                      lastModified: new Date(), changeFrequency: "daily",   priority: 0.85 },
-    { url: `${BASE_URL}/qa`,                                        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE_URL}/events`,                                    lastModified: "2026-10-13", changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${BASE_URL}/placements`,                                lastModified: "2026-10-13", changeFrequency: "weekly",  priority: 0.90 },
+    { url: `${BASE_URL}/admission-guide`,                           lastModified: "2026-10-13", changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE_URL}/news`,                                      lastModified: "2026-10-13", changeFrequency: "daily",   priority: 0.85 },
+    { url: `${BASE_URL}/qa`,                                        lastModified: "2026-10-13", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/ask`,                                       lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.7 },
     // ScholarPath AI features
     { url: `${BASE_URL}/ai-counselor`,                              lastModified: "2026-05-01", changeFrequency: "monthly", priority: 0.85 },
@@ -290,7 +290,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Cutoff pages â€" one per [exam, college] pair
   const cutoffIndexPage: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/cutoffs`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${BASE_URL}/cutoffs`, lastModified: "2026-10-13", changeFrequency: "weekly" as const, priority: 0.9 },
   ]
   const cutoffPages: MetadataRoute.Sitemap = getAllCutoffParams().map(({ exam, college }) => ({
     url: `${BASE_URL}/cutoffs/${exam}/${college}`,

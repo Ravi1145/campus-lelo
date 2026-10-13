@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/seo"
@@ -199,6 +200,7 @@ export default function BTechAdmissionInPune() {
           </section>
         </div>
       </div>
+      <MoreInCluster pool="btech" path="/btech-admission-in-pune" />
     </>
   )
 }

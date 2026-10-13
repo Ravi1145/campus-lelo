@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { btechColleges } from "@/data/btechColleges"
@@ -76,6 +77,7 @@ export default function BTechThroughMHTCET() {
         ctaHeading="Know Your MHT-CET Score? Get Your College List"
         ctaSubtext="Free counselling — personalised CAP option form strategy based on your percentile, branch, and category."
       />
+      <MoreInCluster pool="btech" path="/btech-colleges-in-pune-through-mht-cet" />
     </>
   )
 }

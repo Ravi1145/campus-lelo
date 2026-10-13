@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import AIComparison from "@/components/ai/AIComparison"
 import { colleges } from "@/data/colleges"
@@ -30,6 +31,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <AIComparison initialCollege1={valid(c1)} initialCollege2={valid(c2)} />
       </div>
+      <NextSteps exclude="/compare" />
     </div>
   )
 }

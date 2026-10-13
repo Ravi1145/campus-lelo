@@ -1,11 +1,12 @@
 import Link from "next/link"
 import { Search, ArrowRight } from "lucide-react"
 import { clustersForPath, relatedSearches } from "@/lib/mbaKeywords"
+import MoreInCluster from "@/components/seo/MoreInCluster"
 
 // "Related searches" block for MBA pages. Server component: the links are in
 // the HTML (crawlable). Each chip is a real query that people type into Google
 // (harvested from autocomplete) and links to the best page for that query.
-export default function RelatedMbaSearches({ path, title = "Related MBA searches", inline = false, requireCluster = false }: { path: string; title?: string; inline?: boolean; requireCluster?: boolean }) {
+function RelatedChips({ path, title = "Related MBA searches", inline = false, requireCluster = false }: { path: string; title?: string; inline?: boolean; requireCluster?: boolean }) {
   if (requireCluster && clustersForPath(path).length === 0) return null
   const items = relatedSearches(path, 12)
   if (items.length === 0) return null
@@ -51,5 +52,14 @@ export default function RelatedMbaSearches({ path, title = "Related MBA searches
         </ul>
       </div>
     </section>
+  )
+}
+
+export default function RelatedMbaSearches(props: { path: string; title?: string; inline?: boolean; requireCluster?: boolean }) {
+  return (
+    <>
+      <RelatedChips {...props} />
+      <MoreInCluster pool="mba" path={props.path} />
+    </>
   )
 }

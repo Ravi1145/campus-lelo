@@ -1,3 +1,4 @@
+import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { btechColleges, btechFAQs } from "@/data/btechColleges"
@@ -67,6 +68,7 @@ export default function BestBTechCollegesInPune() {
         ctaHeading="Which BTech College is Best for You?"
         ctaSubtext="Free counselling — our engineers help you pick based on your MHT-CET score, branch preference and budget."
       />
+      <MoreInCluster pool="btech" path="/best-btech-colleges-in-pune" />
     </>
   )
 }
