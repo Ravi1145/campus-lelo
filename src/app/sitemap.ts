@@ -9,6 +9,7 @@ import { mbaExams, getMbaExam, EXAM_TOPICS, prepPageIndexable, type ExamTopic } 
 import { collegesPageIndexable } from "@/data/mba/programAdmissions"
 import { regionPages } from "@/data/mba/regionPages"
 import { retiredPages } from "@/data/retiredPages"
+import { isNoindexPath } from "@/data/noindexPages"
 import { createClient } from "@supabase/supabase-js"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -398,5 +399,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...mbaExamPages,
     ...courseDetailPages,
     ...careerPathPages,
-  ].filter((e) => !retired.has(e.url))
+  ].filter((e) => !retired.has(e.url) && !isNoindexPath(new URL(e.url).pathname))
 }

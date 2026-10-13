@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { collegeRedirects } from "./src/data/collegeRedirects"
 import { retiredPages } from "./src/data/retiredPages"
+import { noindexExact, noindexPrefixes } from "./src/data/noindexPages"
 import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
@@ -224,6 +225,9 @@ const nextConfig: NextConfig = {
           { key: "X-Robots-Tag", value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
         ],
       },
+      // Thin pages: keep out of search until enriched (see src/data/noindexPages.ts). Must come after the rule above.
+      ...noindexExact.map((source) => ({ source, headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }] })),
+      ...noindexPrefixes.map((p) => ({ source: `${p}:slug+`, headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }] })),
       // Embeddable widgets (/embed/*): may be framed by other sites; noindex; minimal CSP
       {
         source: "/embed/:path*",
