@@ -6,8 +6,8 @@ import BTechClusterPage from "@/components/btech/BTechClusterPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "BTech Colleges in Pune 2026 | Complete List | Fees, Cutoff & Placement",
-  description: "Complete list of 50+ BTech colleges in Pune 2026. Compare fees (₹80K–4.8L/yr), MHT-CET cutoffs, average placements, NAAC grades for B.Tech admission in Pune.",
+  title: "BTech Colleges in Pune 2026: List & Admission",
+  description: "BTech colleges in Pune with the MHT-CET and JEE Main routes, branches offered and how to apply. Compare options and get a free shortlist.",
   path: "/btech-colleges-in-pune",
   keywords: [
     "btech colleges in pune", "b.tech colleges in pune", "btech colleges pune 2026",

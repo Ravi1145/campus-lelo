@@ -4,8 +4,8 @@ import SEOLandingPage from "@/components/seo/SEOLandingPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "MCA Colleges in Pune 2025-26 | Fees, Cutoff & Placements | CampusLelo",
-  description: "Top MCA colleges in Pune 2025-26. Compare fees (₹40K–2.2L/yr), MAH-MCA-CET cutoffs, placements, eligibility & direct admission options.",
+  title: "MCA Colleges in Pune 2026: Exams & Admission",
+  description: "MCA colleges in Pune with the MAH-MCA-CET route, eligibility and direct admission options. Compare colleges and get a free shortlist.",
   path: "/mca-colleges-pune",
   keywords: ["mca colleges in pune", "mca colleges pune 2025", "mca admission pune", "mca fees pune", "mah mca cet pune colleges", "best mca college pune"],
 })

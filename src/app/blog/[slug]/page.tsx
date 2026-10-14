@@ -81,7 +81,7 @@ const SEARCH_TITLES: Record<string, string> = {
   "top-recruiters-pune-colleges-2025-2026": "Top Recruiters in Pune Colleges 2025–26: Salaries",
   "placement-records-pune-engineering-2025": "Pune Engineering Placement Records 2025: Salaries",
   "government-vs-private-college-fees-pune-2026": "Government vs Private Colleges Pune 2026: Fees & ROI",
-  "top-10-engineering-colleges-pune-2026-nirf-rankings": "Top 10 Engineering Colleges in Pune 2026: NIRF, Fees",
+  "top-10-engineering-colleges-pune-2026-nirf-rankings": "Top 10 Engineering Colleges in Pune 2026: Admission Guide",
   "mba-after-engineering-pune-noida-2026": "MBA After Engineering 2026: ROI, Top Colleges, Timeline",
   "highest-paying-jobs-after-engineering-pune-2026": "Highest Paying Jobs After Engineering in Pune 2026",
   "mba-specialisations-explained": "MBA Specialisations Explained: Marketing, Finance, HR",

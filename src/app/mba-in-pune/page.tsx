@@ -7,8 +7,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "MBA in Pune 2026 | Best Colleges, Fees, Admission & Scope",
-  description: "Complete guide to MBA in Pune 2026 to 120+ colleges, fees ₹1.25L–₹8.5L/yr, CAT/SNAP/MAH-CET cutoffs, placements ₹7. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
+  title: "MBA in Pune 2026: Colleges, Exams & Admission",
+  description: "MBA in Pune explained: SIBM, SCMHRD, PUMBA and MIT-SOM, the CAT, SNAP and MAH-CET routes, and how to apply. Compare colleges and shortlist free.",
   path: "/mba-in-pune",
   keywords: [
     "mba in pune",

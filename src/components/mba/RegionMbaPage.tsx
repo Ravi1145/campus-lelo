@@ -80,7 +80,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
       answer: [
         ...cutoffs.map((c) => `${c.institution}: ${c.values.map((v) => `${v.category} ${v.value}`).join("; ")} (${c.measure}, ${c.examCycle})`),
         noCutoff.length ? `${list(noCutoff.map((n) => n.institution.replace(/\s*\(.*?\)/, "").split(",")[0]))} ${noCutoff.length === 1 ? "does" : "do"} not publish a fixed percentile cut-off.` : "",
-      ].filter(Boolean).join(". ") + ".",
+      ].filter(Boolean).join(". ").replace(/\.+$/, "") + ".",
     }] : []),
     {
       question: "How do you verify this information?",

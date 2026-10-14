@@ -392,11 +392,13 @@ export default async function CollegePage({ params }: Props) {
   ]
   const faqSchema = generateFAQSchema(faqsForSchema.map((f) => ({ question: f.q, answer: f.a })))
 
-  // Similar colleges — same stream, exclude current, pick up to 4
-  const similarColleges = colleges
-    .filter((c) => c.stream === college.stream && c.slug !== slug)
-    .sort((a, b) => (b.nirfRank ? 1 : 0) - (a.nirfRank ? 1 : 0))
-    .slice(0, 4)
+  // Similar colleges — same stream, the next 4 after this one in the list (wrapping around), so
+  // every profile in a stream gets internal links instead of the same first four colleges
+  const sameStream = colleges.filter((c) => c.stream === college.stream)
+  const at = sameStream.findIndex((c) => c.slug === slug)
+  const similarColleges = sameStream.length <= 1
+    ? []
+    : Array.from({ length: Math.min(4, sameStream.length - 1) }, (_, k) => sameStream[(Math.max(at, 0) + 1 + k) % sameStream.length])
 
   // Stream hub URL mapping
   // Comparison page chips — extend as new vs-pages are created

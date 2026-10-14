@@ -9,9 +9,9 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Top 10 MBA Colleges in Pune 2026 | SNAP/CAT Cutoff, Fees & Placements",
+  title: "Top 10 MBA Colleges in Pune 2026: Exams & Admission",
   description:
-    "Top 10 MBA colleges in Pune 2026: SIBM, SCMHRD, MIT-SOM (₹8–10L fees). SNAP cutoff 88–97 %ile. Fees ₹2.5L–₹21L. Compare free.",
+    "Ten well-known MBA colleges in Pune, with SIBM, SCMHRD and MIT-SOM among them, the exams each accepts and how admission works. Compare and shortlist free.",
   path: "/top-10-mba-colleges-in-pune",
   keywords: [
     "top 10 mba colleges in pune",

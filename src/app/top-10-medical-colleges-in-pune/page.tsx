@@ -8,9 +8,9 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Top 10 Medical Colleges in Pune 2026 (NIRF Ranked)",
+  title: "Top 10 Medical Colleges in Pune 2026: NEET Admission",
   description:
-    "Ranked list of top 10 medical colleges in Pune 2026 by NIRF rank, NAAC grade, NEET cutoff & fees. AFMC #4, BJ Medical #18, compare all data in one place.",
+    "Medical colleges in Pune, including AFMC and BJ Medical, with the NEET admission route and how counselling works. Compare options free.",
   path: "/top-10-medical-colleges-in-pune",
   keywords: [
     "top 10 medical colleges in pune",

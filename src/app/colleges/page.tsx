@@ -12,8 +12,8 @@ import { seoPageHref } from "@/data/seoPages"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Colleges in Pune 2026 | Fees, Rankings & Reviews | CampusLelo",
-  description: "Browse 103+ colleges in Pune 2026. Filter by stream, fees, NAAC grade & location. Engineering, MBA, Medical: government, private & deemed colleges with real placement data.",
+  title: "Colleges in Pune 2026: Compare by Stream & Fees",
+  description: "Browse colleges in Pune by stream, fees and location: engineering, MBA, medical, government, private and deemed. Compare and shortlist free.",
   path: "/colleges",
   keywords: [
     "colleges in pune", "engineering colleges pune", "mba colleges pune",
@@ -126,7 +126,6 @@ export default function CollegesPage() {
                 { label: "NAAC A+ Colleges Pune", href: "/colleges-in-pune/naac-a-plus-colleges-pune" },
                 { label: "Low Fee Colleges Pune", href: "/colleges-in-pune/low-fee-colleges-pune" },
                 { label: "MHT-CET Colleges Pune", href: "/engineering-colleges-pune" },
-                { label: "Top Placement Colleges Pune", href: "/colleges-in-pune/top-placement-colleges-pune" },
                 { label: "Colleges with Hostel Pune", href: "/colleges-in-pune-with-hostel" },
                 { label: "Medical Colleges Pune", href: "/colleges-in-pune/medical-colleges-pune" },
               ].map(link => (

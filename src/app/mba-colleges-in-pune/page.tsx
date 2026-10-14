@@ -8,8 +8,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "MBA Colleges in Pune 2026 | Fees, Cutoff & Placement",
-  description: "120+ MBA colleges in Pune 2026. Fees ₹1.25L–16L/yr, MAH-CET cutoffs, placements ₹7, NAAC grades. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
+  title: "MBA Colleges in Pune 2026: Exams & Admission",
+  description: "MBA colleges in Pune, including SIBM, SCMHRD and MIT-WPU, with the exams each accepts, how Maharashtra CAP works and how to apply. Free counselling.",
   path: "/mba-colleges-in-pune",
   keywords: [
     "mba colleges in pune", "best mba colleges in pune", "top mba colleges in pune",

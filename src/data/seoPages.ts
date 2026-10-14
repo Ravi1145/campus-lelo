@@ -135,14 +135,6 @@ export const seoPages: SEOPage[] = [
     filterKey: 'feesMax',
     filterValue: 100000,
   },
-  {
-    slug: 'top-placement-colleges-pune',
-    title: 'Colleges with Best Placements in Pune 2026: Highest Packages',
-    h1: 'Colleges with Best Placements in Pune 2026',
-    description: 'Pune colleges with highest average placement packages. COEP, SIBM, Symbiosis Tech & more. Compare average and highest packages, top recruiters.',
-    keywords: ['best placement colleges pune', 'highest package college pune', 'top placement record pune', '100 percent placement college pune'],
-    category: 'specialty',
-  },
 
   // Exam-based pages
   {
@@ -295,7 +287,7 @@ export function getSEOPageBySlug(slug: string): SEOPage | undefined {
 const STANDALONE = new Set([
   "engineering-colleges-pune", "mba-colleges-pune", "medical-colleges-pune", "law-colleges-pune", "arts-colleges-pune",
   "science-colleges-pune", "commerce-colleges-pune", "design-colleges-pune", "government-colleges-pune", "low-fee-colleges-pune",
-  "top-placement-colleges-pune", "mht-cet-colleges-pune", "jee-main-colleges-pune", "neet-colleges-pune", "naac-a-plus-colleges-pune",
+  "mht-cet-colleges-pune", "jee-main-colleges-pune", "neet-colleges-pune", "naac-a-plus-colleges-pune",
 ])
 const MOVED: Record<string, string> = {
   "cat-mba-colleges-pune": "/mba-colleges-in-pune-accepting-cat",

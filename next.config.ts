@@ -135,7 +135,6 @@ const nextConfig: NextConfig = {
       { source: "/colleges/pccoe-pimpri-chinchwad-college-pune", destination: "/colleges/pccoer-pimpri-chinchwad-college-of-engineering", permanent: true },
       { source: "/colleges/pccoe-pune", destination: "/colleges/pccoer-pimpri-chinchwad-college-of-engineering", permanent: true },
       // Suryadatta
-      { source: "/colleges/suryadatta-institute-management-pune", destination: "/colleges/suryadatta-institute-of-management-pune", permanent: true },
       // IIMM (no page exists → fallback)
       { source: "/colleges/iimm-pune-indian-institute-materials-management", destination: "/colleges/pumba-pune-university-mba", permanent: true },
       { source: "/colleges/iimm-pune-indian-institute-management-commerce", destination: "/colleges/pumba-pune-university-mba", permanent: true },
@@ -147,7 +146,6 @@ const nextConfig: NextConfig = {
       // Bharati Vidyapeeth
       { source: "/colleges/bharati-vidyapeeth-institute-pune", destination: "/colleges/bharati-vidyapeeth-college-engineering-pune", permanent: true },
       // BATU School
-      { source: "/colleges/batu-school-management-studies-pune", destination: "/mba-colleges-pune", permanent: true },
       // /colleges-in-pune/* topic pages that duplicate a standalone page
       { source: "/colleges-in-pune/cat-mba-colleges-pune", destination: "/mba-colleges-in-pune-accepting-cat", permanent: true },
       { source: "/colleges-in-pune/colleges-in-kothrud-pune", destination: "/colleges-kothrud-pune", permanent: true },

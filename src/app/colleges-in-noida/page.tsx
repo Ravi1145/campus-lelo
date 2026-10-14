@@ -10,8 +10,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
-  title: "Best Colleges in Noida 2026 | Fees, Rankings & Placements | CampusLelo",
-  description: "Compare top colleges in Noida 2026. Amity University, JIIT Noida, Bennett University, Galgotias, Sharda, GL Bajaj. Fees ₹1.2L–6L/yr. JEE, CUET admission guide.",
+  title: "Colleges in Noida 2026: Engineering, MBA & Law List",
+  description: "Compare colleges in Noida, including Amity, JIIT, Bennett, Galgotias, Sharda and GL Bajaj, by course and entrance exam (JEE, CUET). Free shortlist.",
   path: "/colleges-in-noida",
   keywords: [
     "colleges in noida 2026",

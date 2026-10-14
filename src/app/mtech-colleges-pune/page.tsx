@@ -4,8 +4,8 @@ import SEOLandingPage from "@/components/seo/SEOLandingPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "M.Tech Colleges in Pune 2025-26 | GATE & Non-GATE Admission | Fees",
-  description: "Top M.Tech colleges in Pune 2025-26. Compare fees (₹80K–3.8L/yr), GATE cutoffs, specializations (CSE, VLSI, AI, Mechanical), part-time M.Tech & stipend details.",
+  title: "M.Tech Colleges in Pune 2026: GATE & Non-GATE",
+  description: "M.Tech colleges in Pune with GATE and non-GATE admission, specialisations such as CSE, VLSI and AI, and part-time options. Compare and shortlist free.",
   path: "/mtech-colleges-pune",
   keywords: ["mtech colleges in pune", "m.tech admission pune 2025", "mtech fees pune", "mtech without gate pune", "mtech gate colleges pune", "best mtech colleges pune"],
 })

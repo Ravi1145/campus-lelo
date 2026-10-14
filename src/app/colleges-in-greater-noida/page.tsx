@@ -8,8 +8,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
-  title: "Best Colleges in Greater Noida 2026 | Engineering, MBA, BBA | Fees",
-  description: "Top colleges in Greater Noida 2026. Galgotias University, Sharda University, GL Bajaj, Bennett University, Amity Noida. Engineering, MBA, BBA, Law. JEE, CAT, CMAT 2026. Fees ₹1.2L–6L/yr.",
+  title: "Colleges in Greater Noida 2026: Engineering, MBA, BBA",
+  description: "Colleges in Greater Noida, including Galgotias, Sharda, GL Bajaj, Bennett and Amity, by course and entrance exam (JEE, CAT, CMAT). Shortlist free.",
   path: "/colleges-in-greater-noida",
   keywords: [
     "colleges in greater noida 2026",

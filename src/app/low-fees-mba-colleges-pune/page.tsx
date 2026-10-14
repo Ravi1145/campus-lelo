@@ -9,9 +9,9 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Low Fees MBA Colleges in Pune 2026 | Under ₹5L & ₹10L Options",
+  title: "Low Fees MBA Colleges in Pune 2026: Budget Options",
   description:
-    "Affordable MBA colleges in Pune 2026 with fees under ₹5 lakh and ₹10 lakh. Suryadatta ₹2.8L, IIMM ₹3.8L, Indira Institute ₹4.2L total. Compare budget MBA programs.",
+    "Budget MBA colleges in Pune, with the exams each accepts and what to check before you apply. Compare programmes and ask a counsellor free.",
   path: "/low-fees-mba-colleges-pune",
   keywords: [
     "low fees mba colleges in pune",

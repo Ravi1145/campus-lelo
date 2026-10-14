@@ -8,6 +8,7 @@ export const retiredPages: { source: string; destination: string }[] = [
   { source: "/engineering-colleges-pune-placement", destination: "/engineering-colleges-pune" },
   { source: "/mba-colleges-in-pune-highest-package", destination: "/mba-colleges-in-pune" },
   { source: "/top-placement-colleges-pune", destination: "/colleges" },
+  { source: "/colleges-in-pune/top-placement-colleges-pune", destination: "/colleges" },
   { source: "/mba-colleges-in-pune-with-100-placement", destination: "/mba-colleges-in-pune" },
   { source: "/btech-colleges-in-pune-with-placement", destination: "/btech-colleges-in-pune" },
   { source: "/mba-colleges-in-pune-average-package", destination: "/mba-colleges-in-pune" },

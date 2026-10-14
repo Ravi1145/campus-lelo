@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users, ShieldCheck } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Government Colleges in Pune 2026 | Low Fees & NIRF | CampusLelo",
-  description: "Top government colleges in Pune 2026. COEP, AFMC, BJ Medical. Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
+  title: "Government Colleges in Pune 2026: Engineering, Medical",
+  description: "Government colleges in Pune, including COEP, AFMC and BJ Medical, with the CAP, NEET and MHT-CET admission routes. Compare and shortlist free.",
   path: "/government-colleges-pune",
   keywords: [
     "government colleges in pune 2026",

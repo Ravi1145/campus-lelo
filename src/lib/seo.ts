@@ -23,8 +23,35 @@ export function titleName(c: { name: string; shortName?: string }, max = 34): st
   return c.name.length > max && c.shortName ? c.shortName : c.name
 }
 
+// Figures we cannot source (fees, packages, ranks, cut-off numbers, seat counts). They are dropped from
+// meta descriptions so search results never show a claim the page itself does not back up.
+const UNSOURCED_FIGURE = /₹|\blpa\b|\d+\s?\+|%ile|percentile|\b\d{1,3}(\.\d+)?\s?%|\bnirf\b|\branked\b/i
+
+export function cleanDescription(text: string): string {
+  if (!UNSOURCED_FIGURE.test(text)) return text
+  const sentences = text.split(/(?<=\.)\s+/).map((sentence) => {
+    const parts = sentence.replace(/\.$/, "").split(/,\s+|;\s+/)
+    // a sentence whose opening clause carries the figure would be left as a fragment: drop it whole
+    if (UNSOURCED_FIGURE.test(parts[0])) return ""
+    const kept = parts.filter((part) => !UNSOURCED_FIGURE.test(part))
+    return kept.length ? kept.join(", ").replace(/^./, (c) => c.toUpperCase()) + "." : ""
+  }).filter(Boolean)
+  const out = sentences.join(" ").replace(/\s{2,}/g, " ").trim()
+  return out.length >= 40 ? out : text
+}
+
+// Titles: drop NIRF and NAAC-grade tags we cannot source.
+export function cleanTitle(title: string): string {
+  return title
+    .replace(/\s*\|\s*NIRF[ -]Ranked/i, "")
+    .replace(/\s*\|\s*NAAC [A-C]\+*/i, "")
+    .replace(/NIRF( Rankings?)?,\s*/i, "")
+    .replace(/\s*[|:]\s*$/, "")
+}
+
 /** …and descriptions at ~160: cut at a sentence end if possible, else at a word. */
-export function fitDescription(text: string, max = 145): string {
+export function fitDescription(text: string, max = 155): string {
+  text = cleanDescription(text)
   if (text.length <= max) return text
   const cut = text.slice(0, max - 1)
   const sentence = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("! "))
@@ -49,7 +76,7 @@ export function generateMetadata({
   const canonicalUrl = `${BASE_URL}${path}`
 
   return {
-    title: { absolute: fitTitle(title) },
+    title: { absolute: fitTitle(cleanTitle(title)) },
     description: fitDescription(description),
     keywords: [
       "colleges in pune",

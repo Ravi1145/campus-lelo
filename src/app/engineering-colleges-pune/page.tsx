@@ -9,8 +9,8 @@ import GatedCutoffChartClient from "@/components/ui/GatedCutoffChartClient"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CampusLelo",
-  description: "Top 12 engineering colleges in Pune 2026. COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5. Compare & apply free.",
+  title: "Best Engineering Colleges in Pune 2026: Admission",
+  description: "Engineering colleges in Pune, including COEP, PICT and VIT, with the MHT-CET and JEE routes, branches and how to apply. Compare and apply free.",
   path: "/engineering-colleges-pune",
   keywords: [
     "engineering colleges in pune",

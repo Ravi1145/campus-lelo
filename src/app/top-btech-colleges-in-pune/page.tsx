@@ -7,8 +7,8 @@ import BTechClusterPage from "@/components/btech/BTechClusterPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Top BTech Colleges in Pune 2026 | Rankings, Fees & Admission",
-  description: "Top BTech colleges in Pune 2026 with NIRF rankings, fees, MHT-CET cutoffs and placement data. COEP, PICT, VIT Pune, MIT-WPU, SIT Pune ranked and compared.",
+  title: "Top BTech Colleges in Pune 2026: Admission Guide",
+  description: "Well-known BTech colleges in Pune, including COEP, PICT, VIT Pune, MIT-WPU and SIT, with the MHT-CET and JEE routes. Compare and shortlist free.",
   path: "/top-btech-colleges-in-pune",
   keywords: [
     "top btech colleges in pune", "top engineering colleges in pune 2026",
