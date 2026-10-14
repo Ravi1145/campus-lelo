@@ -1,4 +1,5 @@
 ﻿"use client"
+import { collegeHref } from "@/lib/collegeHref"
 import NextSteps from "@/components/seo/NextSteps"
 import { useState } from "react"
 import { GraduationCap, Search, ChevronRight, MapPin, TrendingUp, Award, ExternalLink, Sparkles } from "lucide-react"
@@ -205,7 +206,7 @@ export default function PredictorPage() {
                           <span className={cn("text-xs font-bold px-2 py-0.5 rounded-full", color)}>{label}</span>
                         </div>
                         <Link
-                          href={`/colleges/${college.slug}`}
+                          href={collegeHref(college.slug)}
                           className="flex items-center gap-1 text-xs text-orange-600 font-semibold hover:underline whitespace-nowrap"
                         >
                           View Details <ExternalLink className="w-3 h-3" />

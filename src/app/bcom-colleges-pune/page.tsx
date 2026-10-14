@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
@@ -82,7 +83,7 @@ export default function BComCollegesPune() {
                 <div className="w-9 h-9 rounded-full bg-blue-600 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">{c.rank}</div>
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 text-lg">
-                    <Link href={`/colleges/${c.slug}`} className="hover:text-blue-700">{c.name}</Link>
+                    <Link href={collegeHref(c.slug)} className="hover:text-blue-700">{c.name}</Link>
                   </h3>
                   <div className="flex flex-wrap gap-2 mt-1 text-xs">
                     <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">NAAC {c.naac}</span>
@@ -91,7 +92,7 @@ export default function BComCollegesPune() {
                     <span className="bg-orange-50 text-orange-700 px-2 py-0.5 rounded-full">{c.highlight}</span>
                   </div>
                 </div>
-                <Link href={`/colleges/${c.slug}`} className="hidden md:block shrink-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700">View Profile</Link>
+                <Link href={collegeHref(c.slug)} className="hidden md:block shrink-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700">View Profile</Link>
               </div>
             </div>
           ))}

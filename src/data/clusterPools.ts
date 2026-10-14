@@ -5,7 +5,6 @@ export interface ClusterLink { href: string; label: string }
 
 export const clusterPools: Record<"mba" | "btech", ClusterLink[]> = {
   mba: [
-  { href: "/best-mba-colleges-pune", label: "Best MBA colleges Pune" },
   { href: "/low-fees-mba-colleges-pune", label: "Low fees MBA colleges Pune" },
   { href: "/mba-admission-process-pune", label: "MBA admission process Pune" },
   { href: "/mba-admission-pune-without-cat", label: "MBA admission Pune without CAT" },
@@ -60,7 +59,6 @@ export const clusterPools: Record<"mba" | "btech", ClusterLink[]> = {
   { href: "/btech-colleges-in-pune-through-mht-cet", label: "BTech colleges in Pune through MHT CET" },
   { href: "/btech-colleges-in-pune-with-fees", label: "BTech colleges in Pune with fees" },
   { href: "/btech-colleges-in-pune-without-jee", label: "BTech colleges in Pune without JEE" },
-  { href: "/btech-colleges-pune", label: "BTech colleges Pune" },
   { href: "/computer-engineering-colleges-pune", label: "Computer engineering colleges Pune" },
   { href: "/direct-admission-engineering-colleges-pune", label: "Direct admission engineering colleges Pune" },
   { href: "/engineering-admission-pune-without-jee", label: "Engineering admission Pune without JEE" },
@@ -72,6 +70,5 @@ export const clusterPools: Record<"mba" | "btech", ClusterLink[]> = {
   { href: "/private-engineering-colleges-pune", label: "Private engineering colleges Pune" },
   { href: "/top-10-engineering-colleges-in-pune", label: "Top 10 engineering colleges in Pune" },
   { href: "/top-btech-colleges-in-pune", label: "Top BTech colleges in Pune" },
-  { href: "/top-engineering-colleges-pune", label: "Top engineering colleges Pune" },
   ],
 }

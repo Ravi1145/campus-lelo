@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import Link from "next/link"
 import { MapPin, Star, IndianRupee, Trophy, ChevronRight, CheckCircle2 } from "lucide-react"
@@ -158,7 +159,7 @@ export default function CollegesInGreaterNoidaPage() {
         ])) }} />
       <script id="list-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(generateItemListSchema(
-          greaterNoidaColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}` }))
+          greaterNoidaColleges.map(c => ({ name: c.name, url: collegeHref(c.slug) }))
         )) }} />
 
       <div style={{ background: "#F7F9FC" }}>
@@ -206,7 +207,7 @@ export default function CollegesInGreaterNoidaPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-3 flex-wrap">
                         <div>
-                          <Link href={`/colleges/${college.slug}`} className="font-bold text-base hover:underline" style={{ color: "#012858" }}>{college.name}</Link>
+                          <Link href={collegeHref(college.slug)} className="font-bold text-base hover:underline" style={{ color: "#012858" }}>{college.name}</Link>
                           <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><MapPin size={11} />{college.location}</p>
                         </div>
                       </div>
@@ -231,7 +232,7 @@ export default function CollegesInGreaterNoidaPage() {
                       <p className="text-xs text-gray-500 mb-1">Courses: {college.courses.join(" · ")}</p>
                       <p className="text-xs text-gray-500">Students: {college.strength.toLocaleString()}+</p>
                       <div className="mt-3 flex gap-2">
-                        <Link href={`/colleges/${college.slug}`} className="text-xs px-4 py-1.5 rounded-lg font-medium text-white" style={{ background: "#E0170F" }}>View Details</Link>
+                        <Link href={collegeHref(college.slug)} className="text-xs px-4 py-1.5 rounded-lg font-medium text-white" style={{ background: "#E0170F" }}>View Details</Link>
                         <Link href="/counselling" className="text-xs px-4 py-1.5 rounded-lg font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>Free Counselling</Link>
                       </div>
                     </div>

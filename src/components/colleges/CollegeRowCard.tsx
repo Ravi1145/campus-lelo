@@ -1,5 +1,6 @@
 "use client"
 
+import { collegeHref } from "@/lib/collegeHref"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Award, BedDouble, Heart, MapPin, Star } from "lucide-react"
@@ -55,7 +56,7 @@ export default function CollegeRowCard({ college }: { college: College }) {
     } catch {}
   }
 
-  const href = `/colleges/${college.slug}`
+  const href = collegeHref(college.slug)
   const exams = Array.from(new Set(college.entranceExams.map(examLabel).filter(Boolean)))
   const hasFees = college.feesRange.min > 0 || college.feesRange.max > 0
 

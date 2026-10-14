@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
@@ -170,7 +171,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
                     <p className="text-xs text-gray-500">Min Fees/yr</p>
                   </div>
                 </div>
-                <Link href={`/colleges/${col.slug}`} className="mt-4 block w-full text-center text-sm text-blue-600 border border-blue-200 rounded-lg py-2 hover:bg-blue-50 transition-colors">
+                <Link href={collegeHref(col.slug)} className="mt-4 block w-full text-center text-sm text-blue-600 border border-blue-200 rounded-lg py-2 hover:bg-blue-50 transition-colors">
                   View Full Profile →
                 </Link>
               </div>

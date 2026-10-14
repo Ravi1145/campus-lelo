@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
@@ -168,7 +169,7 @@ export default async function CityStreamPage({ params }: Props) {
                     {cityColleges.map((college, index) => (
                       <Link
                         key={college.slug}
-                        href={`/colleges/${college.slug}`}
+                        href={collegeHref(college.slug)}
                         className="block bg-white rounded-2xl border border-gray-100 shadow-sm p-5 hover:border-orange-200 hover:shadow-md transition-all group"
                       >
                         <div className="flex items-start justify-between gap-4">

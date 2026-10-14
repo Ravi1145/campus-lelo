@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta } from "@/lib/seo"
@@ -130,7 +131,7 @@ export default function DataScienceCollegesPune() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-gray-900 text-lg">
-                      <Link href={`/colleges/${c.slug}`} className="hover:text-purple-700 transition-colors">
+                      <Link href={collegeHref(c.slug)} className="hover:text-purple-700 transition-colors">
                         {c.name}
                       </Link>
                     </h3>
@@ -142,7 +143,7 @@ export default function DataScienceCollegesPune() {
                     </div>
                     <p className="mt-2 text-xs text-gray-500 bg-gray-50 rounded-lg px-3 py-1.5">{c.highlight}</p>
                   </div>
-                  <Link href={`/colleges/${c.slug}`} className="hidden md:block shrink-0 px-4 py-2 bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-700 transition-colors">
+                  <Link href={collegeHref(c.slug)} className="hidden md:block shrink-0 px-4 py-2 bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-700 transition-colors">
                     View Profile
                   </Link>
                 </div>

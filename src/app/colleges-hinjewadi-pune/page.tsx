@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
@@ -93,14 +94,14 @@ export default function CollegesHinjewadiPune() {
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</div>
                     <div className="flex-1">
-                      <Link href={`/colleges/${col.slug}`} className="font-bold text-gray-900 hover:text-blue-700">{col.name}</Link>
+                      <Link href={collegeHref(col.slug)} className="font-bold text-gray-900 hover:text-blue-700">{col.name}</Link>
                       <div className="flex flex-wrap gap-2 mt-1.5 text-xs">
                         <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-medium">NAAC {col.naac}</span>
                         <span className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded-full">{col.courses}</span>
                         <span className="bg-orange-50 text-orange-700 px-2 py-0.5 rounded-full">📍 {col.distance}</span>
                       </div>
                     </div>
-                    <Link href={`/colleges/${col.slug}`} className="hidden md:block shrink-0 text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50">View →</Link>
+                    <Link href={collegeHref(col.slug)} className="hidden md:block shrink-0 text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50">View →</Link>
                   </div>
                 </div>
               ))}

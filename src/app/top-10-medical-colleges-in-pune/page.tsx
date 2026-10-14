@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateItemListSchema } from "@/lib/seo"
@@ -196,7 +197,7 @@ export default function Top10MedicalCollegesPage() {
   const itemListSchema = generateItemListSchema(
     colleges.map((c) => ({
       name: c.name,
-      url: `/colleges/${c.slug}`,
+      url: collegeHref(c.slug),
       description: `${c.type} | NAAC ${c.naac}${c.nirf ? ` | NIRF #${c.nirf}` : ""} | Fees ${c.fees} | NEET ${c.neetCutoff}`,
     }))
   )
@@ -256,7 +257,7 @@ export default function Top10MedicalCollegesPage() {
                       }`}>{c.rank}</span>
                     </td>
                     <td className="px-4 py-4">
-                      <Link href={`/colleges/${c.slug}`} className="font-bold text-gray-900 hover:text-orange-600 transition-colors block">
+                      <Link href={collegeHref(c.slug)} className="font-bold text-gray-900 hover:text-orange-600 transition-colors block">
                         {c.name}
                       </Link>
                       <div className="flex items-center gap-1 mt-1 text-xs text-gray-500">

@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
@@ -79,7 +80,7 @@ export default function JeeMainCollegesPune() {
                 <div className="w-9 h-9 rounded-full bg-indigo-600 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">{c.rank}</div>
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 text-lg">
-                    <Link href={`/colleges/${c.slug}`} className="hover:text-indigo-700">{c.name}</Link>
+                    <Link href={collegeHref(c.slug)} className="hover:text-indigo-700">{c.name}</Link>
                   </h3>
                   <div className="flex flex-wrap gap-2 mt-1 text-xs">
                     {c.nirf && <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full font-bold">NIRF #{c.nirf}</span>}
@@ -88,7 +89,7 @@ export default function JeeMainCollegesPune() {
                   </div>
                   <p className="text-xs text-indigo-700 mt-2 bg-indigo-50 px-3 py-1.5 rounded-lg inline-block">🎯 JEE: {c.jeeNote}</p>
                 </div>
-                <Link href={`/colleges/${c.slug}`} className="hidden md:block shrink-0 px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700">View Profile</Link>
+                <Link href={collegeHref(c.slug)} className="hidden md:block shrink-0 px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700">View Profile</Link>
               </div>
             </div>
           ))}

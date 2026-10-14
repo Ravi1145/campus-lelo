@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, Award, BookOpen, Users, Star } from "lucide-react"
@@ -216,7 +217,7 @@ export default function MBACollegesPunePage() {
                   <tr key={c.rank} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-3 sm:px-4 py-3 font-bold text-orange-600">{c.rank}</td>
                     <td className="px-3 sm:px-4 py-3">
-                      <Link href={`/colleges/${c.slug}`} className="font-semibold text-gray-900 hover:text-orange-600 transition-colors text-xs sm:text-sm">
+                      <Link href={collegeHref(c.slug)} className="font-semibold text-gray-900 hover:text-orange-600 transition-colors text-xs sm:text-sm">
                         {c.name}
                       </Link>
                       <div className="text-xs text-orange-600 font-medium mt-0.5">{c.highlight}</div>

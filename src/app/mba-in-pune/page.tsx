@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
@@ -199,7 +200,7 @@ export default function MBAInPune() {
                     <tr key={c.rank} style={{ borderBottom: i < TOP_COLLEGES.length - 1 ? "1px solid #F1F5F9" : undefined }}>
                       <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#E0170F" }}>{c.rank}</td>
                       <td className="px-4 py-3.5">
-                        <Link href={`/colleges/${c.slug}`} className="font-semibold hover:underline" style={{ color: "#011B40" }}>
+                        <Link href={collegeHref(c.slug)} className="font-semibold hover:underline" style={{ color: "#011B40" }}>
                           {c.name}
                         </Link>
                         {c.nirf && <span className="ml-2 text-xs font-bold px-1.5 py-0.5 rounded" style={{ background: "#EEF2FF", color: "#4338CA" }}>NIRF #{c.nirf}</span>}

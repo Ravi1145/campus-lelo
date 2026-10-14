@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -150,7 +151,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
             <h2 className="text-xl font-extrabold text-gray-900 mb-4">🏛️ Best Pune Colleges for {path.title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {path.puneColeges.map(college => (
-                <Link key={college.slug} href={`/colleges/${college.slug}`}
+                <Link key={college.slug} href={collegeHref(college.slug)}
                   className="bg-white rounded-2xl border border-gray-100 hover:border-orange-200 hover:shadow-md p-4 transition-all group">
                   <div className="flex items-center justify-between">
                     <div>

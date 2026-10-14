@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import MoreInCluster from "@/components/seo/MoreInCluster"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
@@ -226,7 +227,7 @@ export default function PrivateEngineeringCollegesPunePage() {
                       <td className="px-3 sm:px-4 py-3 text-right text-xs font-semibold text-green-700 hidden lg:table-cell">{c.placement}</td>
                       <td className="px-3 sm:px-4 py-3 text-center text-xs text-gray-500 hidden sm:table-cell">{c.exam}</td>
                       <td className="px-3 sm:px-4 py-3 text-center">
-                        <Link href={`/colleges/${c.slug}`} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
+                        <Link href={collegeHref(c.slug)} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
                           View <ExternalLink className="w-3 h-3" />
                         </Link>
                       </td>

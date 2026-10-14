@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -191,7 +192,7 @@ export default function Header() {
       if (!res.ok) return
       const data = await res.json()
       const cols: CollegeLink[] = (data.colleges ?? []).slice(0, 5).map((c: { name: string; shortName?: string; slug: string }) => ({
-        name: c.shortName ?? c.name, href: `/colleges/${c.slug}`,
+        name: c.shortName ?? c.name, href: collegeHref(c.slug),
       }))
       if (cols.length) setLiveColleges(prev => ({ ...prev, [label]: cols }))
     } catch {}

@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { Home, Shield, Star, Users } from "lucide-react"
@@ -207,7 +208,7 @@ export default function CollegesWithHostelPunePage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <Link href={`/colleges/${c.slug}`} className="font-bold text-gray-900 hover:text-orange-600 transition-colors text-base">
+                      <Link href={collegeHref(c.slug)} className="font-bold text-gray-900 hover:text-orange-600 transition-colors text-base">
                         {c.name}
                       </Link>
                       <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{c.stream}</span>
@@ -224,7 +225,7 @@ export default function CollegesWithHostelPunePage() {
                     </div>
                     <p className="text-xs text-amber-700 bg-amber-50 px-2 py-1 rounded-lg inline-block">⚠️ {c.note}</p>
                   </div>
-                  <Link href={`/colleges/${c.slug}`}
+                  <Link href={collegeHref(c.slug)}
                     className="shrink-0 text-xs font-semibold text-orange-600 hover:text-orange-700 border border-orange-200 hover:border-orange-400 px-3 py-1.5 rounded-lg transition-colors">
                     View →
                   </Link>

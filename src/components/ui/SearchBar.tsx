@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import { useState, useRef, useEffect } from "react"
 import { Search, X } from "lucide-react"
 import { useRouter } from "next/navigation"
@@ -40,7 +41,7 @@ export default function SearchBar({
           c.location.toLowerCase().includes(q)
       )
       .slice(0, 5)
-      .map((c) => ({ type: "College", name: c.name, slug: `/colleges/${c.slug}` }))
+      .map((c) => ({ type: "College", name: c.name, slug: collegeHref(c.slug) }))
 
     const courseSuggestions = courses
       .filter(

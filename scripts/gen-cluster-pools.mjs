@@ -9,6 +9,7 @@ const dirs = fs.readdirSync(path.join(root, "src/app"), { withFileTypes: true })
 const retired = new Set([...fs.readFileSync(path.join(root, "src/data/retiredPages.ts"), "utf8").matchAll(/source:\s*"(\/[a-z0-9-]+)"/g)].map((m) => m[1]))
 const noindexSrc = fs.readFileSync(path.join(root, "src/data/noindexPages.ts"), "utf8")
 const noindex = new Set([...noindexSrc.matchAll(/^\s*"(\/[a-z0-9/-]+)",/gm)].map((m) => m[1]))
+for (const m of fs.readFileSync(path.join(root, "next.config.ts"), "utf8").matchAll(/source:\s*"(\/[a-z0-9-]+)"/g)) retired.add(m[1])
 const ok = (name) => !retired.has("/" + name) && !noindex.has("/" + name)
 
 const pretty = (slug) =>

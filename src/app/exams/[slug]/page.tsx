@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
@@ -150,7 +151,7 @@ export default async function ExamDetailPage({ params }: Props) {
                     {acceptingColleges.map(c => (
                       <Link
                         key={c.slug}
-                        href={`/colleges/${c.slug}`}
+                        href={collegeHref(c.slug)}
                         className="flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:border-orange-200 hover:bg-orange-50 transition-all group"
                       >
                         <div>

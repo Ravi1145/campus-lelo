@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import Link from "next/link"
 import { Building2, MapPin, Star, IndianRupee, Users, Trophy, ChevronRight, CheckCircle2, BookOpen } from "lucide-react"
@@ -87,7 +88,7 @@ export default function CollegesInNoidaPage() {
         ])) }} />
       <script id="list-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(generateItemListSchema(
-          noidaColleges.map(c => ({ name: `${c.name}: ${c.location}`, url: `/colleges/${c.slug}` }))
+          noidaColleges.map(c => ({ name: `${c.name}: ${c.location}`, url: collegeHref(c.slug) }))
         )) }} />
 
       <div style={{ background: "#F7F9FC" }}>
@@ -154,7 +155,7 @@ export default function CollegesInNoidaPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-3 flex-wrap">
                         <div>
-                          <Link href={`/colleges/${college.slug}`}
+                          <Link href={collegeHref(college.slug)}
                             className="font-bold text-base hover:underline" style={{ color: "#012858" }}>
                             {college.name}
                           </Link>
@@ -201,7 +202,7 @@ export default function CollegesInNoidaPage() {
                       <p className="text-xs text-gray-600">{college.topRecruiters.slice(0, 6).join(" · ")}</p>
 
                       <div className="mt-3 flex gap-2">
-                        <Link href={`/colleges/${college.slug}`}
+                        <Link href={collegeHref(college.slug)}
                           className="text-xs px-4 py-1.5 rounded-lg font-medium text-white transition-colors"
                           style={{ background: "#E0170F" }}>
                           View Details

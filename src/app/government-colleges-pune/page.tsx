@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateItemListSchema } from "@/lib/seo"
 import { Award, BookOpen, TrendingUp, Users, ShieldCheck } from "lucide-react"
@@ -188,7 +189,7 @@ export default function GovernmentCollegesPune() {
                     {colleges.map((c, i) => (
                       <tr key={c.slug} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                         <td className="px-4 py-3">
-                          <Link href={`/colleges/${c.slug}`} className="font-semibold text-blue-700 hover:text-orange-600 transition-colors">
+                          <Link href={collegeHref(c.slug)} className="font-semibold text-blue-700 hover:text-orange-600 transition-colors">
                             {c.name}
                           </Link>
                         </td>

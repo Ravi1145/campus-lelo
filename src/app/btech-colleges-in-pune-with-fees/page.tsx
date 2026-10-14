@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import MoreInCluster from "@/components/seo/MoreInCluster"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -80,7 +81,7 @@ export default function BTechFeesPage() {
                   {btechColleges.map((c, i) => (
                     <tr key={c.shortName} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
                       <td className="px-4 py-3 font-medium">
-                        <Link href={`/colleges/${c.slug}`} className="text-blue-700 hover:underline">{c.shortName}</Link>
+                        <Link href={collegeHref(c.slug)} className="text-blue-700 hover:underline">{c.shortName}</Link>
                       </td>
                       <td className="px-4 py-3 text-gray-600">{c.type}</td>
                       <td className="px-4 py-3 font-semibold text-gray-800">₹{(c.feesPerYear.min / 100000).toFixed(1)}L–{(c.feesPerYear.max / 100000).toFixed(1)}L</td>

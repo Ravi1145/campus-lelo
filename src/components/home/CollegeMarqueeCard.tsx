@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { useState } from "react"
 
@@ -35,7 +36,7 @@ export default function CollegeMarqueeCard({ college }: { college: MarqueeColleg
 
   return (
     <Link
-      href={`/colleges/${college.slug}`}
+      href={collegeHref(college.slug)}
       className="group/card flex items-center gap-3 bg-white border border-gray-100 hover:border-gray-200 rounded-2xl px-3 sm:px-4 py-3 sm:py-3.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 min-w-[170px] sm:min-w-[210px] cursor-pointer"
     >
       {/* Logo or letter avatar */}

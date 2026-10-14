@@ -1,5 +1,6 @@
 "use client"
 
+import { collegeHref } from "@/lib/collegeHref"
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Lock, Phone, User, MapPin } from "lucide-react"
@@ -179,7 +180,7 @@ function NextButton({
 function CollegeCard({ college }: { college: College }) {
   return (
     <Link
-      href={`/colleges/${college.slug}`}
+      href={collegeHref(college.slug)}
       className="block border border-gray-200 rounded-xl p-4 hover:border-orange-300 hover:shadow-md transition-all group"
     >
       <div className="flex items-start justify-between gap-3">

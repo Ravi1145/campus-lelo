@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
@@ -96,7 +97,7 @@ export default function NeetCutoffPuneColleges() {
                   <tr key={c.rank} className="hover:bg-gray-50">
                     <td className="px-4 py-3 text-gray-500 font-medium">{c.rank}</td>
                     <td className="px-4 py-3">
-                      <Link href={`/colleges/${c.slug}`} className="font-semibold text-gray-900 hover:text-green-700">{c.name}</Link>
+                      <Link href={collegeHref(c.slug)} className="font-semibold text-gray-900 hover:text-green-700">{c.name}</Link>
                       {c.nirf && <span className="ml-2 text-xs bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded-full">NIRF #{c.nirf}</span>}
                     </td>
                     <td className="px-4 py-3 text-gray-600 text-xs">{c.type}</td>

@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
@@ -50,7 +51,7 @@ export default async function SiteMapPage() {
   if (rest.length) groups.push({ title: "More", items: rest })
 
   const collegeLinks = paths.filter((p) => p.startsWith("/colleges/") && p.split("/").length === 3)
-  const nameOf = new Map(colleges.map((c) => [`/colleges/${c.slug}`, c.name]))
+  const nameOf = new Map(colleges.map((c) => [collegeHref(c.slug), c.name]))
   const exams = paths.filter((p) => /^\/exams\/[^/]+$/.test(p))
   const careerPaths = paths.filter((p) => p.startsWith("/career-paths/"))
   const courses = paths.filter((p) => p.startsWith("/courses/"))

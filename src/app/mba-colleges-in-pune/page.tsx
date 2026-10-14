@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import MbaPuneExamAnswer from "@/components/seo/MbaPuneExamAnswer"
 import Link from "next/link"
@@ -136,7 +137,7 @@ export default function MBACollegesInPune() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-bold text-gray-900 text-lg">
-                        <Link href={`/colleges/${col.slug}`} className="hover:text-blue-700">{col.name}</Link>
+                        <Link href={collegeHref(col.slug)} className="hover:text-blue-700">{col.name}</Link>
                       </h3>
                       <p className="text-sm text-gray-500 mb-2">{col.location} · Est. {col.established}</p>
                       <div className="flex flex-wrap gap-2 text-xs mb-3">
@@ -159,7 +160,7 @@ export default function MBACollegesInPune() {
                       {/* Highlight */}
                       <p className="text-xs text-gray-600 mt-3 italic">{col.highlights[0]}</p>
                     </div>
-                    <Link href={`/colleges/${col.slug}`}
+                    <Link href={collegeHref(col.slug)}
                       className="hidden md:block shrink-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors font-medium">
                       View Details
                     </Link>
@@ -188,7 +189,7 @@ export default function MBACollegesInPune() {
                   {mbaColleges.map((c, i) => (
                     <tr key={c.shortName} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
                       <td className="px-4 py-3 font-medium">
-                        <Link href={`/colleges/${c.slug}`} className="text-blue-700 hover:underline">{c.shortName}</Link>
+                        <Link href={collegeHref(c.slug)} className="text-blue-700 hover:underline">{c.shortName}</Link>
                       </td>
                       <td className="px-4 py-3"><span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">{c.naac}</span></td>
                       <td className="px-4 py-3 font-semibold">₹{(c.feesPerYear / 100000).toFixed(1)}L</td>

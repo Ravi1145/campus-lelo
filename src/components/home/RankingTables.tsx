@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { ArrowRight, ArrowUpRight, Briefcase, Cog, Stethoscope, Trophy } from "lucide-react"
 import { getTopEngineeringColleges, getTopMBAColleges, getTopMedicalColleges } from "@/data/colleges"
@@ -41,7 +42,7 @@ function RankTable({ colleges, title }: { colleges: Row; title: string }) {
                     </span>
                   </td>
                   <td className="px-3 py-3.5">
-                    <Link href={`/colleges/${college.slug}`} className="block after:absolute after:inset-0 after:content-['']">
+                    <Link href={collegeHref(college.slug)} className="block after:absolute after:inset-0 after:content-['']">
                       <span className="block text-sm font-bold text-gray-900 transition-colors group-hover:text-[#C90D11]">{college.name}</span>
                       <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-xs text-gray-600">
                         {college.location}

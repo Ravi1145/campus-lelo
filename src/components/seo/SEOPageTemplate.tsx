@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import Image from "next/image"
 import { ExternalLink, MapPin, Star, TrendingUp, BookOpen, Building2 } from "lucide-react"
@@ -195,7 +196,7 @@ function CollegeCard({ college, rank }: { college: College; rank: number }) {
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div>
             <Link
-              href={`/colleges/${college.slug}`}
+              href={collegeHref(college.slug)}
               className="text-lg font-semibold text-gray-900 hover:text-blue-700 transition-colors"
             >
               {college.name}
@@ -249,7 +250,7 @@ function CollegeCard({ college, rank }: { college: College; rank: number }) {
 
         <div className="mt-4 flex flex-wrap gap-3">
           <Link
-            href={`/colleges/${college.slug}`}
+            href={collegeHref(college.slug)}
             className="px-4 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
             View Profile

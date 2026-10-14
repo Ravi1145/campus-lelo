@@ -148,7 +148,7 @@ export default async function CutoffPage({ params }: Props) {
   const breadcrumb = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Cutoffs", url: "/cutoffs" },
-    { name: examLabel, url: `/cutoffs/${exam}` },
+    { name: examLabel, url: `/cutoffs` },
     { name: data.college_short, url: `/cutoffs/${exam}/${slug}` },
   ])
   const faqSchema = generateFAQSchema(faqs.map((f) => ({ question: f.question, answer: f.answer })))
@@ -178,7 +178,7 @@ export default async function CutoffPage({ params }: Props) {
               <span>›</span>
               <Link href="/cutoffs" className="hover:text-white">Cutoffs</Link>
               <span>›</span>
-              <Link href={`/cutoffs/${exam}`} className="hover:text-white">{examLabel}</Link>
+              <Link href="/cutoffs" className="hover:text-white">{examLabel}</Link>
               <span>›</span>
               <span className="text-white">{data.college_short}</span>
             </nav>

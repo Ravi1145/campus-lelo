@@ -1,5 +1,6 @@
 "use client"
 
+import { collegeHref } from "@/lib/collegeHref"
 import { useState } from "react"
 import Link from "next/link"
 import { MapPin, Star } from "lucide-react"
@@ -26,7 +27,7 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
   const extra = Math.max(0, college.entranceExams.length - 2)
 
   return (
-    <Link href={`/colleges/${college.slug}`} className="group block h-full rounded-2xl">
+    <Link href={collegeHref(college.slug)} className="group block h-full rounded-2xl">
       <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/12 hover:ring-[#012858]/30">
         {/* Header: logo, name, location, badges */}
         <div className="relative p-4" style={{ backgroundImage: `url(${COLLEGE_BANNER})`, backgroundSize: "cover", backgroundPosition: "center" }}>

@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema, generateCollegeListSchema } from "@/lib/seo"
@@ -103,14 +104,14 @@ export default function SPPUAffiliatedColleges() {
                 {cat.colleges.map((c) => (
                   <div key={c.name} className="flex items-center gap-4 px-5 py-4 hover:bg-gray-50">
                     <div className="flex-1">
-                      <Link href={`/colleges/${c.slug}`} className="font-semibold text-gray-900 hover:text-purple-700">{c.name}</Link>
+                      <Link href={collegeHref(c.slug)} className="font-semibold text-gray-900 hover:text-purple-700">{c.name}</Link>
                       <div className="flex flex-wrap gap-1.5 mt-1">
                         <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">NAAC {c.naac}</span>
                         {c.nirf && <span className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full font-bold">NIRF #{c.nirf}</span>}
                         <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{c.note}</span>
                       </div>
                     </div>
-                    <Link href={`/colleges/${c.slug}`} className="text-xs text-purple-600 hover:underline shrink-0">View →</Link>
+                    <Link href={collegeHref(c.slug)} className="text-xs text-purple-600 hover:underline shrink-0">View →</Link>
                   </div>
                 ))}
               </div>

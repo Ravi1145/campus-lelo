@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { ChevronRight, GraduationCap, Phone, Shield } from "lucide-react"
 
@@ -136,7 +137,7 @@ export default function SEOLandingPage({
                     <tr key={col.slug} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium text-gray-500">{i + 1}</td>
                       <td className="px-4 py-3">
-                        <Link href={`/colleges/${col.slug}`} className="font-semibold text-orange-600 hover:underline">
+                        <Link href={collegeHref(col.slug)} className="font-semibold text-orange-600 hover:underline">
                           {col.name}
                         </Link>
                       </td>

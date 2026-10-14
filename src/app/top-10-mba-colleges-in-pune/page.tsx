@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { CheckCircle, MapPin, ExternalLink, BookOpen } from "lucide-react"
@@ -402,7 +403,7 @@ export default function Top10MBACollegesPunePage() {
                       <td className="px-3 sm:px-4 py-3 text-right text-xs font-semibold text-green-700 hidden lg:table-cell">{c.avgPackage}</td>
                       <td className="px-3 sm:px-4 py-3 text-center text-xs text-gray-500 hidden sm:table-cell">{c.exam}</td>
                       <td className="px-3 sm:px-4 py-3 text-center">
-                        <Link href={`/colleges/${c.slug}`} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
+                        <Link href={collegeHref(c.slug)} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
                           View <ExternalLink className="w-3 h-3" />
                         </Link>
                       </td>
@@ -429,7 +430,7 @@ export default function Top10MBACollegesPunePage() {
                     <h3 className="text-lg font-bold text-gray-900">{c.rank}. {c.name}</h3>
                     <p className="text-sm text-gray-500 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" /> {c.location}</p>
                   </div>
-                  <Link href={`/colleges/${c.slug}`} className="inline-flex items-center gap-2 bg-[#011B40] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#024692] transition-colors flex-shrink-0">
+                  <Link href={collegeHref(c.slug)} className="inline-flex items-center gap-2 bg-[#011B40] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#024692] transition-colors flex-shrink-0">
                     Full Details →
                   </Link>
                 </div>

@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import { Suspense } from "react"
 import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema, generateItemListSchema } from "@/lib/seo"
 import Link from "next/link"
@@ -41,7 +42,7 @@ export default function CollegesPage() {
   ]
   const topColleges = colleges.slice(0, 10)
   const itemList = generateItemListSchema(
-    topColleges.map(c => ({ name: c.name, url: `/colleges/${c.slug}`, description: `${c.type} college, NAAC ${c.naac}` }))
+    topColleges.map(c => ({ name: c.name, url: collegeHref(c.slug), description: `${c.type} college, NAAC ${c.naac}` }))
   )
 
   return (

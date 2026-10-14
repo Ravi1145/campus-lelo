@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
@@ -175,7 +176,7 @@ export default function BscITCollegesPunePage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <Link href={`/colleges/${c.slug}`} className="font-bold text-gray-900 hover:text-orange-600 transition-colors text-base">
+                      <Link href={collegeHref(c.slug)} className="font-bold text-gray-900 hover:text-orange-600 transition-colors text-base">
                         {c.name}
                       </Link>
                       <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">{c.type}</span>
@@ -189,7 +190,7 @@ export default function BscITCollegesPunePage() {
                       <div><span className="font-semibold">Cutoff:</span> {c.cutoff}</div>
                     </div>
                   </div>
-                  <Link href={`/colleges/${c.slug}`}
+                  <Link href={collegeHref(c.slug)}
                     className="shrink-0 text-xs font-semibold text-orange-600 hover:text-orange-700 border border-orange-200 hover:border-orange-400 px-3 py-1.5 rounded-lg transition-colors">
                     View →
                   </Link>

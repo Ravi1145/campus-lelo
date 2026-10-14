@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import { useEffect, useState } from "react"
 import { Sparkles, Loader2, TrendingUp, IndianRupee, MapPin, ChevronRight, Brain } from "lucide-react"
 import Link from "next/link"
@@ -283,7 +284,7 @@ export default function AIRecommender() {
                     )}
                     <div className="flex gap-2">
                       <Link
-                        href={`/colleges/${college.slug}`}
+                        href={collegeHref(college.slug)}
                         className="flex-1 bg-[#011B40] text-white text-sm font-semibold py-2.5 rounded-xl text-center hover:bg-[#024692] transition-colors"
                       >
                         Know More

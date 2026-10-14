@@ -1,5 +1,6 @@
 "use client"
 
+import { collegeHref } from "@/lib/collegeHref"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { MapPin, Heart, Star, ArrowUpRight, Award, BedDouble } from "lucide-react"
@@ -63,7 +64,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
   /* ── Compact variant ── */
   if (variant === "compact") {
     return (
-      <Link href={`/colleges/${college.slug}`} className="block">
+      <Link href={collegeHref(college.slug)} className="block">
         <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all group">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex-shrink-0 flex items-center justify-center overflow-hidden">
             {college.logo && !logoError ? (
@@ -172,7 +173,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
   )
 
   return (
-    <Link href={`/colleges/${college.slug}`} className="group block h-full rounded-2xl focus-visible:outline-offset-4">
+    <Link href={collegeHref(college.slug)} className="group block h-full rounded-2xl focus-visible:outline-offset-4">
       <article
         className={cn(
           "relative flex h-full overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300",

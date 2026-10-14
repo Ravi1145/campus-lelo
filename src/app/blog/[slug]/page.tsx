@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
@@ -509,7 +510,7 @@ export default async function BlogPostPage({ params }: Props) {
               <ul className="divide-y divide-gray-100">
                 {FEATURED_COLLEGES.map((c, i) => (
                   <li key={c.slug}>
-                    <Link href={`/colleges/${c.slug}`}
+                    <Link href={collegeHref(c.slug)}
                       className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group">
                       <span className="text-xs font-bold text-gray-400 w-5 shrink-0">{i + 1}</span>
                       <div className="flex-1 min-w-0">

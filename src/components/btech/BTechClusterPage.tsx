@@ -1,4 +1,5 @@
 "use client"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import type { BTechCollege } from "@/data/btechColleges"
 
@@ -66,7 +67,7 @@ export default function BTechClusterPage({
                   <div className="w-9 h-9 rounded-full bg-blue-600 text-white font-bold text-sm flex items-center justify-center shrink-0">{i + 1}</div>
                   <div className="flex-1 min-w-0">
                     <h2 className="font-bold text-gray-900 text-base">
-                      <Link href={`/colleges/${col.slug}`} className="hover:text-blue-700">{col.name}</Link>
+                      <Link href={collegeHref(col.slug)} className="hover:text-blue-700">{col.name}</Link>
                     </h2>
                     <p className="text-xs text-gray-500 mb-2">{col.location} · {col.type} · Est. {col.established}</p>
                     <div className="flex flex-wrap gap-2 text-xs mb-3">
@@ -84,7 +85,7 @@ export default function BTechClusterPage({
                     <p className="text-xs text-gray-500 mt-2 italic">{col.highlights[0]}</p>
                   </div>
                   <div className="flex flex-col gap-2 shrink-0">
-                    <Link href={`/colleges/${col.slug}`} className="hidden md:block px-3 py-1.5 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 font-medium text-center">View</Link>
+                    <Link href={collegeHref(col.slug)} className="hidden md:block px-3 py-1.5 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 font-medium text-center">View</Link>
                   </div>
                 </div>
               </article>

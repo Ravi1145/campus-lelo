@@ -1,3 +1,4 @@
+import { collegeHref } from "@/lib/collegeHref"
 import { scrubCollege, scrubDetails } from "@/lib/verified"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
@@ -478,7 +479,7 @@ export default async function CollegePage({ params }: Props) {
                 {similarColleges.map((c) => (
                   <Link
                     key={c.slug}
-                    href={`/colleges/${c.slug}`}
+                    href={collegeHref(c.slug)}
                     className="group bg-gray-50 hover:bg-orange-50 rounded-xl p-4 border border-gray-100 hover:border-orange-200 transition-all"
                   >
                     <p className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 leading-snug line-clamp-2">

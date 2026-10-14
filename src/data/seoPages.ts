@@ -240,14 +240,6 @@ export const seoPages: SEOPage[] = [
     category: 'specialty',
   },
   {
-    slug: 'nirf-ranked-colleges-pune',
-    title: 'NIRF Ranked Colleges in Pune 2026: Rankings',
-    h1: 'NIRF Ranked Colleges in Pune 2026',
-    description: 'Colleges in Pune with official. Compare research output, placements, perception scores, and overall NIRF score.',
-    keywords: ['nirf ranked colleges pune', 'nirf ranking pune college 2026', 'top nirf college pune'],
-    category: 'specialty',
-  },
-  {
     slug: 'hostel-facility-colleges-pune',
     title: 'Colleges with Hostel in Pune 2026: Boys & Girls Hostels',
     h1: 'Colleges with Hostel Facilities in Pune',

@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import { collegeHref } from "@/lib/collegeHref"
 import Link from "next/link"
 import { generateMetadata as genMeta, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { CheckCircle, TrendingUp, BookOpen, IndianRupee } from "lucide-react"
@@ -209,7 +210,7 @@ export default function LowFeesMBACollegesPunePage() {
                       <td className="px-4 py-3 text-right text-xs text-gray-700">{c.feesPerYear}</td>
                       <td className="px-4 py-3 text-right text-xs font-semibold text-green-700 hidden md:table-cell">{c.feesTotal}</td>
                       <td className="px-4 py-3 text-center">
-                        <Link href={`/colleges/${c.slug}`} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
+                        <Link href={collegeHref(c.slug)} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
                           View →
                         </Link>
                       </td>
@@ -255,7 +256,7 @@ export default function LowFeesMBACollegesPunePage() {
                       <td className="px-4 py-3 text-right text-xs text-gray-700">{c.feesPerYear}</td>
                       <td className="px-4 py-3 text-right text-xs font-semibold text-blue-700 hidden md:table-cell">{c.feesTotal}</td>
                       <td className="px-4 py-3 text-center">
-                        <Link href={`/colleges/${c.slug}`} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
+                        <Link href={collegeHref(c.slug)} className="inline-flex items-center gap-1 text-xs bg-orange-500 hover:bg-orange-600 text-white px-2.5 py-1.5 rounded-lg">
                           View →
                         </Link>
                       </td>
