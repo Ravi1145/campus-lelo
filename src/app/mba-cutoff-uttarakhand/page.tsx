@@ -16,16 +16,16 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const REVIEWED = "2026-10-09"
 
 export const metadata: Metadata = genMeta({
-  title: "MBA Cutoff Uttarakhand: IIM Kashipur and Dehradun",
+  title: "IIM Kashipur CAT Cutoff & Dehradun MBA Cutoff",
   description: "IIM Kashipur's own published CAT minimum percentiles by category, plus which Dehradun MBA colleges (Graphic Era, UPES) publish no cut-off. Official sources only.",
   path: PATH,
-  keywords: ["iim kashipur mba cutoff", "iim kashipur cutoff", "mba cutoff uttarakhand", "mba colleges in dehradun cut off", "doon business school mba cut off", "graphic era mba cutoff"],
+  keywords: ["iim kashipur cat cutoff", "iim kashipur mba cutoff", "iim kashipur cutoff", "mba cutoff uttarakhand", "mba colleges in dehradun cut off", "doon business school mba cut off", "graphic era mba cutoff"],
 })
 
 const iimk = publishedCutoffs.find((c) => c.institution.includes("Kashipur"))!
 const noCutoff = noPublishedCutoff.filter((n) => n.city === "Dehradun")
 
-const QUICK = "IIM Kashipur publishes the minimum CAT percentiles it used to pick candidates for the personal interview. For CAT 2024 the General category minimums were 75 in each of the three sections and 95 overall. These are the 2024 figures, and the institute says the 2026–28 cut-offs will be updated. Dehradun's Graphic Era and UPES publish no cut-off on the pages we checked: they admit on entrance scores and a personal interview."
+const QUICK = "The IIM Kashipur CAT cutoff is the set of minimum CAT percentiles the institute published for picking candidates for the personal interview. For CAT 2024 the General category minimums were 75 in each of the three sections and 95 overall. These are the 2024 figures, and the institute says the 2026–28 cut-offs will be updated. Dehradun's Graphic Era and UPES publish no cut-off on the pages we checked: they admit on entrance scores and a personal interview."
 
 const faqs = [
   { question: "What is the IIM Kashipur cut-off?", answer: "IIM Kashipur publishes minimum CAT percentiles used to select candidates for the personal interview. For CAT 2024 the General category minimums were 75 in QA, DILR and VRC and 95 overall. EWS was 55/55/55/81, NC-OBC 52/52/52/81, SC 45/45/45/66, and ST and DAP 30/25/25/42. These are CAT 2024 figures. The institute says the 2026–28 figures will be updated." },
@@ -63,7 +63,7 @@ export default function MbaCutoffUttarakhandPage() {
               <Link href="/mba-colleges-in-uttarakhand" className="hover:text-white">MBA Colleges Uttarakhand</Link><span>›</span>
               <span className="text-white">MBA Cutoff Uttarakhand</span>
             </nav>
-            <h1 className="text-2xl md:text-4xl font-extrabold mb-3">MBA cut-offs in Uttarakhand: IIM Kashipur and Dehradun</h1>
+            <h1 className="text-2xl md:text-4xl font-extrabold mb-3">IIM Kashipur CAT cutoff and MBA cutoff in Uttarakhand</h1>
             <p className="text-blue-100 max-w-3xl">What IIM Kashipur actually publishes, which Dehradun colleges publish nothing, and why we print no &quot;expected&quot; percentiles.</p>
             <p className="text-xs text-blue-200 mt-2">Last reviewed 9 Oct 2026 · Updated when IIM Kashipur releases 2026–28 figures</p>
           </div>

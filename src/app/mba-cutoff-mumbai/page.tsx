@@ -79,7 +79,7 @@ export default function MbaCutoffMumbaiPage() {
               <Link href="/mba" className="hover:text-white">MBA &amp; PGDM</Link><span>›</span>
               <span className="text-white">MBA Cutoff Mumbai</span>
             </nav>
-            <h1 className="text-2xl md:text-4xl font-extrabold mb-3">MBA cut-offs in Mumbai: JBIMS and MAH-CET CAP</h1>
+            <h1 className="text-2xl md:text-4xl font-extrabold mb-3">MBA cutoff Mumbai: JBIMS and MAH-CET CAP</h1>
             <p className="text-blue-100 max-w-3xl">What Mumbai&apos;s top government MBA institute actually publishes, where the official numbers are, and which reported figures to treat with caution. No &quot;expected&quot; percentiles.</p>
             <p className="text-xs text-blue-200 mt-2">Last reviewed 9 Oct 2026 · Updated after each CAP round</p>
           </div>
