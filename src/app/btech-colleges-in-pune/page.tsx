@@ -47,7 +47,7 @@ export default function BTechCollegesInPune() {
 
       {/* Server-rendered intro — visible to crawlers without JS, prevents thin-content flag */}
       <div className="sr-only" aria-hidden="false">
-        <h1>BTech Colleges in Pune 2026</h1>
+        <p>BTech Colleges in Pune 2026</p>
         <p>Pune has 50+ AICTE-approved BTech colleges across government, autonomous, private and deemed university categories.
         B.Tech (Bachelor of Technology) is a 4-year undergraduate engineering degree. Admission is primarily through
         MHT-CET (Maharashtra Common Entrance Test) via DTE Maharashtra CAP rounds.</p>

@@ -4,7 +4,7 @@ import { BookOpen, Building2, GraduationCap, MapPin, TrendingUp, Shield } from "
 import { seoPages, seoPageHref } from "@/data/seoPages"
 
 export const metadata: Metadata = {
-  title: "Colleges in Pune 2026: List by Stream, Exam & Area",
+  title: "Colleges in Pune 2026: List by Stream & Exam",
   description:
     "Browse colleges in Pune by stream, type, entrance exam and area. Compare options side by side and get a free shortlist from CampusLelo counsellors.",
   alternates: { canonical: `${process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"}/colleges-in-pune` },

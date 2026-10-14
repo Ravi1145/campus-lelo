@@ -6,8 +6,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "Mba Colleges In Pune Cutoff 50 Percentile | CampusLelo 2026",
-  description: "Complete guide to Mba Colleges In Pune Cutoff 50 Percentile in Pune 2026. Fees, cutoffs, placements and admission process for Pune MBA colleges.",
+  title: "MBA Colleges in Pune at 50 Percentile: Exams to Check",
+  description: "What a 50 percentile can get you in Pune MBA admissions: which exams and routes to check, how Maharashtra CAP and institute rounds work, and how to apply.",
   path: "/mba-colleges-in-pune-cutoff-50-percentile",
   keywords: ["mba colleges in pune cutoff 50 percentile", "mba colleges pune 2026", "mba admission pune"],
 })
@@ -22,15 +22,15 @@ export default function Page() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "MBA Colleges in Pune", url: "/mba-colleges-in-pune" },
-    { name: "Mba Colleges In Pune Cutoff 50 Percentile", url: "/mba-colleges-in-pune-cutoff-50-percentile" },
+    { name: "MBA Colleges in Pune at 50 Percentile", url: "/mba-colleges-in-pune-cutoff-50-percentile" },
   ])
   return (
     <>
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="Mba Colleges In Pune Cutoff 50 Percentile. Pune 2026"
-        subtitle="Complete guide to Mba Colleges In Pune Cutoff 50 Percentile in Pune. Compare top MBA colleges, fees, cutoffs and placements."
+        h1="MBA Colleges in Pune at 50 Percentile"
+        subtitle="Which Pune MBA routes to check at a 50 percentile, with the exams each college accepts."
         quickAnswer="Top Pune MBA colleges: SIBM, SCMHRD, MIT-SOM. Admission via MAH-CET MBA or SNAP. Classes begin August 2026."
         stats={[
           { value: "120+", label: "MBA Colleges" },
@@ -38,7 +38,7 @@ export default function Page() {
           { value: "MAH-CET", label: "Primary Exam" },
         ]}
         colleges={mbaColleges}
-        introHeading="Mba Colleges In Pune Cutoff 50 Percentile in Pune. Key Facts"
+        introHeading="MBA Colleges in Pune at 50 Percentile: Key Facts"
         introParagraphs={[
           "Pune has 120+ AICTE-approved MBA colleges covering every specialization, fee range, and entrance exam requirement. This page covers the best options for your specific search.",
           "For detailed fee comparison, cutoff predictions, and placement data, explore the related pages below or book a free counselling session.",

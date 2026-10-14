@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Architecture Colleges Pune 2026 | B.Arch Fees & NATA Cutoff",
-  description: "Top B.Arch colleges in Pune 2026. SPA, MIT-ADT, DY Patil, MAEER. Fees ₹1.5L–4.5L/yr, NATA cutoff 120+, placement guide and admission process for architecture in Pune.",
+  title: "Best Architecture Colleges in Pune 2026: B.Arch & NATA",
+  description: "B.Arch colleges in Pune, including SPA, MIT-ADT, DY Patil and MAEER, with the NATA and JEE Paper 2 routes and how to apply. Compare and shortlist free.",
   path: "/architecture-colleges-pune",
   keywords: [
     "architecture colleges in pune 2026",

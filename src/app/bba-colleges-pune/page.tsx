@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best BBA Colleges Pune 2026 | Fees, Cutoff & Placement",
-  description: "Top BBA colleges in Pune 2026. Symbiosis, MIT-WPU, Indira, Fergusson. Fees ₹40K–₹2.5L/yr, SET/HSC cutoffs, average placement ₹3.5 and complete admission guide.",
+  title: "Best BBA Colleges in Pune 2026: Exams & Admission",
+  description: "BBA colleges in Pune, including Symbiosis, MIT-WPU, Indira and Fergusson, with the SET and CET routes and how to apply. Compare and shortlist free.",
   path: "/bba-colleges-pune",
   keywords: [
     "bba colleges in pune 2026",

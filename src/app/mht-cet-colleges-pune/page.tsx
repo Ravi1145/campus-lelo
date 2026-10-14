@@ -5,8 +5,8 @@ import SEOLandingPage from "@/components/seo/SEOLandingPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "MHT-CET Colleges in Pune 2026 | Cutoffs, Seats & Admission Guide",
-  description: "Best colleges in Pune accepting MHT-CET 2026. Compare MHT-CET cutoffs (percentile-wise), seats, fees, and admission process for engineering colleges via CAP rounds.",
+  title: "MHT-CET Colleges in Pune 2026: CAP Admission Guide",
+  description: "Pune engineering colleges that admit through MHT-CET and the Maharashtra CAP rounds, how the process works and how to apply. Compare and shortlist free.",
   path: "/mht-cet-colleges-pune",
   keywords: ["mht cet colleges pune", "mht cet pune admission 2026", "mht cet cutoff pune", "cap round pune 2026", "mht cet engineering colleges pune"],
 })

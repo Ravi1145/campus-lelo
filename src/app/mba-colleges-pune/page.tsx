@@ -9,8 +9,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CampusLelo",
-  description: "Best 10 MBA colleges in Pune 2026. SIBM (₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7. Compare & check eligibility free.",
+  title: "Top MBA Colleges in Pune 2026: Exams & Admission",
+  description: "Well-known MBA colleges in Pune, including SIBM, SCMHRD and MIT-SOM, with the SNAP, CAT and MAH-CET routes, eligibility and how to apply. Compare free.",
   path: "/mba-colleges-pune",
   keywords: [
     "best mba college in pune",

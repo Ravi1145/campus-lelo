@@ -2,7 +2,7 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Terms of Use: CampusLelo",
+  title: "Terms of Use",
   description: "Terms and conditions for using CampusLelo. India's AI-powered college discovery portal for Pune.",
   alternates: { canonical: "https://campuslelo.com/terms" },
   robots: { index: true, follow: true },
