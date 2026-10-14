@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityLabel   = city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, " ")
   const streamLabel = STREAM_LABELS[stream] ?? stream
   return genMeta({
-    title: `Best ${streamLabel} Colleges in ${cityLabel} 2026 — Fees, Cutoff & Admissions | CampusLelo`,
+    title: `Best ${streamLabel} Colleges in ${cityLabel} 2026: Fees, Cutoff & Admissions | CampusLelo`,
     description: `Explore top ${streamLabel} colleges in ${cityLabel}, Maharashtra. Compare fees, NAAC grades, placements and get free counseling. Updated 2026.`,
     path: `/city/${city}/${stream}`,
   })
@@ -196,7 +196,7 @@ export default async function CityStreamPage({ params }: Props) {
                                 <div>
                                   <p className="text-xs text-gray-400 uppercase font-medium">Annual Fees</p>
                                   <p className="text-sm font-semibold text-gray-800">
-                                    ₹{(college.feesRange.min / 100000).toFixed(1)}L – ₹{(college.feesRange.max / 100000).toFixed(1)}L
+                                    ₹{(college.feesRange.min / 100000).toFixed(1)}L to ₹{(college.feesRange.max / 100000).toFixed(1)}L
                                   </p>
                                 </div>
                               )}

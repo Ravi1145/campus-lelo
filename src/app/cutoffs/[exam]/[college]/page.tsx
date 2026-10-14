@@ -125,7 +125,7 @@ export default async function CutoffPage({ params }: Props) {
   const faqs = [
     {
       question: `What is the ${examLabel} cutoff for ${data.college_short} Pune in 2026?`,
-      answer: `${data.college_short} ${examLabel} cutoff 2026 (estimated): Open category — ${latest.open} ${data.unit === "rank" ? "(rank)" : data.unit === "score" ? "marks" : "percentile"}; OBC — ${latest.obc}; SC — ${latest.sc}${latest.st !== undefined ? `; ST — ${latest.st}` : ""}. These are based on 2020–2025 trends from CET Cell Maharashtra / official admission data.`,
+      answer: `${data.college_short} ${examLabel} cutoff 2026 (estimated): Open category: ${latest.open} ${data.unit === "rank" ? "(rank)" : data.unit === "score" ? "marks" : "percentile"}; OBC: ${latest.obc}; SC: ${latest.sc}${latest.st !== undefined ? `; ST: ${latest.st}` : ""}. These are based on 2020–2025 trends from CET Cell Maharashtra / official admission data.`,
     },
     {
       question: `Is ${examLabel} score enough for ${data.college_short} or do I need other documents?`,
@@ -186,7 +186,7 @@ export default async function CutoffPage({ params }: Props) {
               {data.college_short} {examLabel} Cutoff 2026
             </h1>
             <p className="text-gray-300 text-base max-w-2xl mb-4">
-              {data.college_name} — Year-wise {examLabel} cutoff data (2020–2026) for Open, OBC, SC & ST categories.
+              {data.college_name}: Year-wise {examLabel} cutoff data (2020–2026) for Open, OBC, SC & ST categories.
             </p>
             <div className="flex flex-wrap gap-2">
               {[
@@ -239,7 +239,7 @@ export default async function CutoffPage({ params }: Props) {
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-5">
             <h3 className="font-extrabold text-gray-900 mb-1">Check Your Admission Chances</h3>
             <p className="text-sm text-gray-600 mb-4">
-              Enter your {examLabel} score to see all Pune colleges you can get admission in — across all categories.
+              Enter your {examLabel} score to see all Pune colleges you can get admission in, across all categories.
             </p>
             <div className="flex gap-2 flex-wrap">
               <Link
@@ -262,7 +262,7 @@ export default async function CutoffPage({ params }: Props) {
           {/* Lead form */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
             <h3 className="font-extrabold text-gray-900 mb-1">
-              Get {examLabel} Cutoff PDF on WhatsApp — Free
+              Get {examLabel} Cutoff PDF on WhatsApp. Free
             </h3>
             <p className="text-sm text-gray-500 mb-4">
               All 2020–2026 cutoffs for 25+ Pune colleges in a single PDF. Enter your number below.
@@ -302,7 +302,7 @@ export default async function CutoffPage({ params }: Props) {
           {/* FAQ */}
           <div>
             <h2 className="text-xl font-extrabold text-gray-900 mb-5">
-              Frequently Asked Questions — {data.college_short} {examLabel} Cutoff
+              Frequently Asked Questions: {data.college_short} {examLabel} Cutoff
             </h2>
             <div className="space-y-3">
               {faqs.map((faq) => (

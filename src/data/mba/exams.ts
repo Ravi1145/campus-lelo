@@ -19,14 +19,14 @@ const src = (label: string, url: string, type: SourceRef["type"] = "official"): 
 
 const CAT_SECONDARY = src("CAT 2026 notification as reported by Careers360 and iQuanta (iimcat.ac.in could not be machine-read)", "https://iimcat.ac.in", "secondary")
 const XAT_OFFICIAL = src("XAT official website (XLRI)", "https://xatonline.in")
-const NMAT_OFFICIAL = src("GMAC — NMAT 2026-27 key info", "https://www.gmac.com/resources/learners/how-to-apply/exams-preparation/nmat-exam")
+const NMAT_OFFICIAL = src("GMAC: NMAT 2026-27 key info", "https://www.gmac.com/resources/learners/how-to-apply/exams-preparation/nmat-exam")
 const SNAP_OFFICIAL = src("SNAP official website (Symbiosis International University)", "https://www.snaptest.org")
 const MAT_OFFICIAL = src("AIMA MAT official website", "https://mat.aima.in")
 const ATMA_OFFICIAL = src("ATMA official website (AIMS)", "https://atmaaims.com")
 const CMAT_SECONDARY = src("CMAT pattern & eligibility as reported by Careers360 and MBA Universe (NTA site blocked automated access)", "https://exams.nta.ac.in/CMAT/", "secondary")
 const MAHCET_OFFICIAL = src("State Common Entrance Test Cell, Maharashtra", "https://cetcell.mahacet.org")
 const MAHCET_SECONDARY = src("MAH MBA CET pattern & CAP process as reported by MBA Universe", "https://www.mbauniverse.com/mah-mba-cet", "secondary")
-const GMAT_OFFICIAL = src("GMAC — GMAT Focus Edition exam structure", "https://accounts.gmac.com/exams/gmat-exam/about/exam-structure")
+const GMAT_OFFICIAL = src("GMAC: GMAT Focus Edition exam structure", "https://accounts.gmac.com/exams/gmat-exam/about/exam-structure")
 
 export const mbaExams: ExamProfile[] = [
   // ── CAT ────────────────────────────────────────────────────────────────────
@@ -37,14 +37,14 @@ export const mbaExams: ExamProfile[] = [
     conductingBody: "Indian Institutes of Management (IIM Indore is convening CAT 2026)",
     officialSite: "https://iimcat.ac.in",
     frequency: "Once a year (November)",
-    cycleLabel: "CAT 2026 — for MBA/PGDM admissions 2027–29",
+    cycleLabel: "CAT 2026: for MBA/PGDM admissions 2027–29",
     programs: ["MBA", "PGDM"],
     summary: "CAT is the computer-based entrance test run by the IIMs. Its percentile is used by the IIMs and by many other MBA and PGDM programmes across India, including Pune and Delhi NCR institutes.",
     usage: "IIMs and a large number of non-IIM MBA/PGDM programmes. In Maharashtra, CAT scores are also accepted for All-India seats allotted through the State CET Cell's CAP process.",
     usageSource: MAHCET_SECONDARY,
     keyDates: [
-      { label: "Registration", value: "3 Aug 2026 – 22 Sep 2026 (deadline extended from 15 Sep)", source: CAT_SECONDARY },
-      { label: "Exam date", value: "Sunday, 29 Nov 2026 — three sessions", source: CAT_SECONDARY },
+      { label: "Registration", value: "3 Aug 2026 to 22 Sep 2026 (deadline extended from 15 Sep)", source: CAT_SECONDARY },
+      { label: "Exam date", value: "Sunday, 29 Nov 2026, three sessions", source: CAT_SECONDARY },
       { label: "Result", value: "Expected in the first week of January 2027 (not yet officially confirmed)", source: CAT_SECONDARY },
     ],
     eligibility: {
@@ -70,7 +70,7 @@ export const mbaExams: ExamProfile[] = [
       { section: "QA", topics: ["Arithmetic (percentages, ratios, time-speed-distance, work)", "Algebra (equations, inequalities, functions)", "Geometry and mensuration", "Number systems", "Modern maths (permutations, combinations, probability, progressions)"] },
     ],
     scoring: {
-      headline: "CAT percentiles are relative — there is no fixed score-to-percentile conversion.",
+      headline: "CAT percentiles are relative, there is no fixed score-to-percentile conversion.",
       points: [
         "Because CAT runs in multiple sessions, raw scores are normalised and reported as scaled scores.",
         "Your percentile is the share of all test-takers who scored at or below your scaled score, so the score needed for a given percentile changes every year with paper difficulty and the number of candidates.",
@@ -82,7 +82,7 @@ export const mbaExams: ExamProfile[] = [
     preparation: [
       { area: "VARC", tips: ["Read long-form opinion and analysis pieces daily to build RC speed.", "Practise para-jumbles and summaries untimed first, then under section time.", "Review every wrong RC answer against the passage to find the reasoning error."] },
       { area: "DILR", tips: ["Use sectional mocks to practise choosing which sets to attempt in 40 minutes.", "Learn to skim all sets in the first few minutes before committing.", "Keep a log of set types you consistently get wrong."] },
-      { area: "QA", tips: ["Arithmetic and algebra usually carry the most weight — build these first.", "Practise TITA questions, which carry no negative marking.", "Revise formulas weekly and track accuracy per topic."] },
+      { area: "QA", tips: ["Arithmetic and algebra usually carry the most weight, build these first.", "Practise TITA questions, which carry no negative marking.", "Revise formulas weekly and track accuracy per topic."] },
       { area: "Mocks", tips: ["Start full-length mocks a few months before the exam.", "Spend at least as long analysing a mock as taking it.", "Practise in the same 40-minute sectional format as the real test."] },
     ],
     faqs: [
@@ -100,18 +100,18 @@ export const mbaExams: ExamProfile[] = [
     slug: "xat",
     name: "XAT",
     fullName: "Xavier Aptitude Test",
-    conductingBody: "XLRI – Xavier School of Management, Jamshedpur (on behalf of XAMI)",
+    conductingBody: "XLRI: Xavier School of Management, Jamshedpur (on behalf of XAMI)",
     officialSite: "https://xatonline.in",
     frequency: "Once a year (early January)",
-    cycleLabel: "XAT 2027 — for MBA/PGDM admissions 2027–29",
+    cycleLabel: "XAT 2027: for MBA/PGDM admissions 2027–29",
     programs: ["MBA", "PGDM"],
     summary: "XAT is a national management entrance test run by XLRI. It is known for its Decision Making section and is accepted by XLRI and many other MBA and PGDM institutes.",
     usage: "XLRI and other XAMI member institutes. XAT's official site says 250+ B-schools accept the score.",
     usageSource: XAT_OFFICIAL,
     keyDates: [
-      { label: "Registration", value: "15 Jul 2026 – 6 Dec 2026", source: XAT_OFFICIAL },
+      { label: "Registration", value: "15 Jul 2026 to 6 Dec 2026", source: XAT_OFFICIAL },
       { label: "Admit card", value: "20 Dec 2026 (tentative)", source: XAT_OFFICIAL },
-      { label: "Exam date", value: "Sunday, 3 Jan 2027, 2:00 pm – 5:00 pm", source: XAT_OFFICIAL },
+      { label: "Exam date", value: "Sunday, 3 Jan 2027, 2:00 pm: 5:00 pm", source: XAT_OFFICIAL },
     ],
     eligibility: {
       text: "A bachelor's degree of at least three years in any discipline. Final-year students can apply if their results are declared in time for admission (reported as by June 2027). Reported as no minimum graduation percentage for XAT itself, though individual institutes may set their own.",
@@ -122,7 +122,7 @@ export const mbaExams: ExamProfile[] = [
       durationMinutes: 180,
       totalQuestions: 95,
       sections: [
-        { name: "Verbal Ability & Logical Reasoning (VALR)", questions: 26, notes: "Part 1 — VALR, DM and QA-DI share 170 minutes" },
+        { name: "Verbal Ability & Logical Reasoning (VALR)", questions: 26, notes: "Part 1: VALR, DM and QA-DI share 170 minutes" },
         { name: "Decision Making (DM)", questions: 21 },
         { name: "Quantitative Aptitude & Data Interpretation (QA & DI)", questions: 28 },
         { name: "General Knowledge (GK)", questions: 20, minutes: 10, notes: "Part 2" },
@@ -140,21 +140,21 @@ export const mbaExams: ExamProfile[] = [
       headline: "XAT percentiles depend on that year's candidate pool.",
       points: [
         "XLRI publishes overall and sectional percentiles for each candidate.",
-        "Institutes use XAT scores in different ways — some use the overall percentile, some add sectional cut-offs.",
+        "Institutes use XAT scores in different ways, some use the overall percentile, some add sectional cut-offs.",
         "GK is used by some institutes (including XLRI) at the interview stage rather than for shortlisting. Check each institute's process.",
       ],
       source: XAT_OFFICIAL,
     },
     preparation: [
-      { area: "Decision Making", tips: ["Practise caselets that weigh stakeholder interests, not just profit.", "Read the question carefully — options often differ in a single qualifier."] },
+      { area: "Decision Making", tips: ["Practise caselets that weigh stakeholder interests, not just profit.", "Read the question carefully, options often differ in a single qualifier."] },
       { area: "VALR", tips: ["XAT verbal is denser than CAT; practise philosophical and abstract passages.", "Critical reasoning questions reward eliminating options rather than guessing."] },
-      { area: "QA & DI", tips: ["Accuracy matters because of negative marking — attempt selectively.", "Practise data interpretation sets mixed with arithmetic."] },
+      { area: "QA & DI", tips: ["Accuracy matters because of negative marking, attempt selectively.", "Practise data interpretation sets mixed with arithmetic."] },
       { area: "GK", tips: ["Follow business news through the year; GK carries no negative marking."] },
     ],
     faqs: [
       { question: "When is XAT 2027?", answer: "XAT 2027 is on Sunday, 3 January 2027, from 2:00 pm to 5:00 pm, according to xatonline.in." },
       { question: "What is the last date to register for XAT 2027?", answer: "Registration runs from 15 July 2026 to 6 December 2026 on xatonline.in." },
-      { question: "Is there negative marking in XAT?", answer: "Yes — 0.25 marks are deducted for each wrong answer. Leaving more than 8 questions unanswered also costs 0.1 marks per extra question. The GK section has no negative marking." },
+      { question: "Is there negative marking in XAT?", answer: "Yes: 0.25 marks are deducted for each wrong answer. Leaving more than 8 questions unanswered also costs 0.1 marks per extra question. The GK section has no negative marking." },
     ],
     relatedExams: ["cat", "nmat", "snap", "cmat"],
     lastReviewed: ACCESSED,
@@ -168,7 +168,7 @@ export const mbaExams: ExamProfile[] = [
     conductingBody: "National Testing Agency (NTA)",
     officialSite: "https://exams.nta.ac.in/CMAT/",
     frequency: "Once a year",
-    cycleLabel: "CMAT 2027 — for MBA/PGDM admissions 2027–29",
+    cycleLabel: "CMAT 2027: for MBA/PGDM admissions 2027–29",
     programs: ["MBA", "PGDM"],
     summary: "CMAT is a national-level management entrance test conducted by the NTA for AICTE-approved MBA and PGDM programmes. In Maharashtra, it is accepted for All-India seats in the CAP process.",
     usage: "AICTE-approved MBA/PGDM programmes nationwide; Maharashtra CAP All-India seats.",
@@ -205,13 +205,13 @@ export const mbaExams: ExamProfile[] = [
       headline: "CMAT reports a score out of 400 and a percentile/rank for each candidate.",
       points: [
         "Institutes and the Maharashtra CAP use the CMAT score or percentile for merit lists.",
-        "There is no fixed score-to-percentile conversion — it depends on that year's candidates.",
+        "There is no fixed score-to-percentile conversion, it depends on that year's candidates.",
       ],
       source: CMAT_SECONDARY,
     },
     preparation: [
       { area: "General Awareness & I&E", tips: ["These two sections are knowledge-based and reward steady revision of current affairs and start-up news.", "Make short notes of government schemes and business news."] },
-      { area: "Quant, LR & Language", tips: ["Questions are generally more direct than CAT — accuracy and speed matter.", "With −1 marking, avoid blind guesses."] },
+      { area: "Quant, LR & Language", tips: ["Questions are generally more direct than CAT, accuracy and speed matter.", "With −1 marking, avoid blind guesses."] },
     ],
     faqs: [
       { question: "What is the CMAT exam pattern?", answer: "CMAT has 100 questions in 5 sections of 20 questions each, carrying 400 marks in 180 minutes. Each correct answer earns 4 marks and each wrong answer loses 1." },
@@ -236,11 +236,11 @@ export const mbaExams: ExamProfile[] = [
     usage: "MBA/PGDM institutes nationwide; Maharashtra CAP All-India seats.",
     usageSource: MAHCET_SECONDARY,
     keyDates: [
-      { label: "Paper-based test (PBT)", value: "Exam 20 Dec 2026 — registration closes 14 Dec 2026", source: MAT_OFFICIAL },
-      { label: "Computer-based test (CBT)", value: "Exam 27 Dec 2026 — registration closes 21 Dec 2026", source: MAT_OFFICIAL },
+      { label: "Paper-based test (PBT)", value: "Exam 20 Dec 2026, registration closes 14 Dec 2026", source: MAT_OFFICIAL },
+      { label: "Computer-based test (CBT)", value: "Exam 27 Dec 2026, registration closes 21 Dec 2026", source: MAT_OFFICIAL },
     ],
     eligibility: {
-      text: "Graduates in any discipline can apply, and final-year undergraduate students can appear provisionally. Many institutes require at least 50% in graduation (45% for reserved categories) for admission — check the institute you are applying to.",
+      text: "Graduates in any discipline can apply, and final-year undergraduate students can appear provisionally. Many institutes require at least 50% in graduation (45% for reserved categories) for admission, check the institute you are applying to.",
       source: src("MAT eligibility as reported by Careers360", "https://mat.aima.in", "secondary"),
     },
     fee: { text: "₹2,300 for one mode (PBT or CBT); ₹4,000 for both modes", source: MAT_OFFICIAL },
@@ -274,7 +274,7 @@ export const mbaExams: ExamProfile[] = [
       source: MAT_OFFICIAL,
     },
     preparation: [
-      { area: "Time management", tips: ["150 questions in 120 minutes means under a minute each — practise full-length timed papers.", "Choose PBT or CBT based on which format you perform better in."] },
+      { area: "Time management", tips: ["150 questions in 120 minutes means under a minute each, practise full-length timed papers.", "Choose PBT or CBT based on which format you perform better in."] },
       { area: "Economic & Business Environment", tips: ["Follow business news regularly; this section is knowledge-based."] },
     ],
     faqs: [
@@ -293,7 +293,7 @@ export const mbaExams: ExamProfile[] = [
     conductingBody: "State Common Entrance Test Cell, Maharashtra",
     officialSite: "https://cetcell.mahacet.org",
     frequency: "Once a year, with a first and a second attempt",
-    cycleLabel: "MAH MBA/MMS CET 2026 (admissions 2026–28) — the 2027 cycle has not been announced yet",
+    cycleLabel: "MAH MBA/MMS CET 2026 (admissions 2026–28), the 2027 cycle has not been announced yet",
     programs: ["MBA"],
     summary: "MAH MBA/MMS CET is Maharashtra's state entrance test for MBA and MMS programmes admitted through the centralised admission process (CAP). It is the main route into many Pune MBA programmes for Maharashtra-domicile candidates.",
     usage: "MBA/MMS programmes in Maharashtra that admit through the State CET Cell's CAP. It is not required for PGDM programmes, which run their own admissions.",
@@ -303,9 +303,9 @@ export const mbaExams: ExamProfile[] = [
       { label: "2026 second attempt", value: "9 May 2026", source: MAHCET_SECONDARY },
       { label: "2026 second-attempt result", value: "Declared 12 Jun 2026", source: MAHCET_OFFICIAL },
     ],
-    datesNote: "These are the 2026 cycle dates. The CET Cell has not yet announced the 2027 schedule — check cetcell.mahacet.org.",
+    datesNote: "These are the 2026 cycle dates. The CET Cell has not yet announced the 2027 schedule, check cetcell.mahacet.org.",
     eligibility: {
-      text: "A bachelor's degree in any discipline with at least 50% marks; final-year students can apply if they pass before admission. Relaxed marks apply to reserved-category candidates of Maharashtra domicile — see the CET Cell information brochure.",
+      text: "A bachelor's degree in any discipline with at least 50% marks; final-year students can apply if they pass before admission. Relaxed marks apply to reserved-category candidates of Maharashtra domicile, see the CET Cell information brochure.",
       source: MAHCET_SECONDARY,
     },
     pattern: {
@@ -333,12 +333,12 @@ export const mbaExams: ExamProfile[] = [
       points: [
         "Because the exam runs in several sessions, each candidate's percentile is calculated against candidates in the same session; the top scorer in each session gets the 100th percentile.",
         "Reported formula: percentile = (number of candidates in the session with a score equal to or lower than yours ÷ total candidates in the session) × 100.",
-        "CAP merit lists use these percentiles. Previous-year CAP cut-offs are a guide only — they change every year.",
+        "CAP merit lists use these percentiles. Previous-year CAP cut-offs are a guide only, they change every year.",
       ],
       source: MAHCET_SECONDARY,
     },
     preparation: [
-      { area: "Speed", tips: ["200 questions in 150 minutes with no negative marking — attempt every question.", "Logical and abstract reasoning make up half the paper; practise these daily."] },
+      { area: "Speed", tips: ["200 questions in 150 minutes with no negative marking, attempt every question.", "Logical and abstract reasoning make up half the paper; practise these daily."] },
       { area: "Mocks", tips: ["Practise full-length mocks in the CET interface style to build stamina for 150 minutes."] },
     ],
     faqs: [
@@ -359,10 +359,10 @@ export const mbaExams: ExamProfile[] = [
     conductingBody: "Symbiosis International (Deemed University)",
     officialSite: "https://www.snaptest.org",
     frequency: "Once a year, with up to three attempts in December",
-    cycleLabel: "SNAP 2026 — for Symbiosis MBA admissions 2027–29",
+    cycleLabel: "SNAP 2026: for Symbiosis MBA admissions 2027–29",
     programs: ["MBA"],
     summary: "SNAP is Symbiosis International University's entrance test for its MBA programmes, including SIBM Pune and SCMHRD. You can take it up to three times, and your best score counts.",
-    usage: "MBA programmes at Symbiosis International University institutes — 17 institutes and 32 MBA programmes, according to snaptest.org.",
+    usage: "MBA programmes at Symbiosis International University institutes, 17 institutes and 32 MBA programmes, according to snaptest.org.",
     usageSource: SNAP_OFFICIAL,
     keyDates: [
       { label: "SNAP tests", value: "13, 19 and 26 Dec 2026 (up to three attempts)", source: SNAP_OFFICIAL },
@@ -390,7 +390,7 @@ export const mbaExams: ExamProfile[] = [
       { section: "General English", topics: ["Reading comprehension", "Verbal reasoning", "Verbal ability"] },
       { section: "Analytical & Logical Reasoning", topics: ["Puzzles", "Arrangements", "Critical reasoning"] },
       { section: "Quantitative, DI & DS", topics: ["Arithmetic", "Data interpretation", "Data sufficiency"] },
-      { section: "Ethics, Morality & Values", topics: ["Situational and ethical judgement questions (new for 2026 — check the official SNAP bulletin for scope)"] },
+      { section: "Ethics, Morality & Values", topics: ["Situational and ethical judgement questions (new for 2026, check the official SNAP bulletin for scope)"] },
     ],
     scoring: {
       headline: "Your best SNAP attempt counts.",
@@ -401,8 +401,8 @@ export const mbaExams: ExamProfile[] = [
       source: SNAP_OFFICIAL,
     },
     preparation: [
-      { area: "Speed", tips: ["SNAP is short — practise answering quickly and skipping hard questions.", "Use the three attempts strategically: treat the first as a real exam, not a trial."] },
-      { area: "Programme registration", tips: ["Register and pay for each programme separately — the SNAP fee alone does not count as an application."] },
+      { area: "Speed", tips: ["SNAP is short: practise answering quickly and skipping hard questions.", "Use the three attempts strategically: treat the first as a real exam, not a trial."] },
+      { area: "Programme registration", tips: ["Register and pay for each programme separately, the SNAP fee alone does not count as an application."] },
     ],
     faqs: [
       { question: "Which colleges accept SNAP in Pune?", answer: "SNAP is used for admission to Symbiosis International University's MBA programmes, including SIBM Pune and SCMHRD in Pune." },
@@ -421,14 +421,14 @@ export const mbaExams: ExamProfile[] = [
     conductingBody: "Graduate Management Admission Council (GMAC)",
     officialSite: "https://www.mba.com/exams/nmat-by-gmac",
     frequency: "Once a year in a testing window, with up to three attempts",
-    cycleLabel: "NMAT 2026 — for MBA/PGDM admissions 2027",
+    cycleLabel: "NMAT 2026: for MBA/PGDM admissions 2027",
     programs: ["MBA", "PGDM"],
     summary: "NMAT by GMAC is a flexible, computer-based test. You choose your date, time and section order, and can take it up to three times in a testing year.",
     usage: "NMIMS and other MBA/PGDM programmes in India that list NMAT among accepted tests.",
     keyDates: [
-      { label: "Registration", value: "20 Aug – 10 Oct 2026", source: NMAT_OFFICIAL },
-      { label: "Test scheduling", value: "20 Aug – 22 Oct 2026", source: NMAT_OFFICIAL },
-      { label: "Testing window", value: "2 Nov – 20 Dec 2026", source: NMAT_OFFICIAL },
+      { label: "Registration", value: "20 Aug: 10 Oct 2026", source: NMAT_OFFICIAL },
+      { label: "Test scheduling", value: "20 Aug: 22 Oct 2026", source: NMAT_OFFICIAL },
+      { label: "Testing window", value: "2 Nov: 20 Dec 2026", source: NMAT_OFFICIAL },
     ],
     eligibility: {
       text: "Participating programmes generally require a graduate degree with at least 50% marks. Check each programme's own eligibility rules.",
@@ -457,13 +457,13 @@ export const mbaExams: ExamProfile[] = [
       headline: "NMAT scores range from 36 to 360 and are valid for one admission cycle.",
       points: [
         "There is no negative marking, so attempt every question.",
-        "You can take NMAT up to three times in a testing year, with at least 15 days between attempts. Programmes generally consider your best score — check each programme's policy.",
+        "You can take NMAT up to three times in a testing year, with at least 15 days between attempts. Programmes generally consider your best score, check each programme's policy.",
         "Section times are fixed per section (28, 52 and 40 minutes); section times are reported by MBA Universe.",
       ],
       source: NMAT_OFFICIAL,
     },
     preparation: [
-      { area: "Strategy", tips: ["Choose a section order that starts with your strongest section.", "Attempt every question — there is no negative marking.", "Use your first attempt early in the window so you have time to retake."] },
+      { area: "Strategy", tips: ["Choose a section order that starts with your strongest section.", "Attempt every question: there is no negative marking.", "Use your first attempt early in the window so you have time to retake."] },
     ],
     officialPractice: [{ label: "Official NMAT practice materials (mba.com)", url: "https://www.mba.com/exams/nmat-by-gmac" }],
     faqs: [
@@ -521,7 +521,7 @@ export const mbaExams: ExamProfile[] = [
       points: ["Institutes use the overall percentile or scaled score in their merit lists.", "Because ATMA has several sessions a year, you can retake it before admission deadlines."],
     },
     preparation: [
-      { area: "Pacing", tips: ["Each section is timed separately at 30 minutes — practise sectional timing.", "With −0.25 marking, skip questions you cannot narrow down."] },
+      { area: "Pacing", tips: ["Each section is timed separately at 30 minutes, practise sectional timing.", "With −0.25 marking, skip questions you cannot narrow down."] },
     ],
     faqs: [
       { question: "How often is ATMA held?", answer: "ATMA is held several times a year. Recent 2026 sessions were in February, May, July and August. Check atmaaims.com for upcoming dates." },
@@ -574,11 +574,11 @@ export const mbaExams: ExamProfile[] = [
       source: GMAT_OFFICIAL,
     },
     preparation: [
-      { area: "Strategy", tips: ["The test is adaptive — accuracy on early questions in each section matters.", "Use GMAC's official practice exams, which use real retired questions."] },
+      { area: "Strategy", tips: ["The test is adaptive, accuracy on early questions in each section matters.", "Use GMAC's official practice exams, which use real retired questions."] },
     ],
     officialPractice: [{ label: "Official GMAT practice (mba.com)", url: "https://www.mba.com/exams/gmat-exam" }],
     faqs: [
-      { question: "Is GMAT accepted for MBA in Pune?", answer: "Some Pune programmes list GMAT among accepted tests — for example, MIT-WPU's Department of Business brochure for 2026 lists GMAT. GMAT is also accepted for Maharashtra CAP All-India seats." },
+      { question: "Is GMAT accepted for MBA in Pune?", answer: "Some Pune programmes list GMAT among accepted tests, for example, MIT-WPU's Department of Business brochure for 2026 lists GMAT. GMAT is also accepted for Maharashtra CAP All-India seats." },
     ],
     relatedExams: ["nmat", "cat"],
     lastReviewed: ACCESSED,

@@ -107,7 +107,7 @@ const seoLinks = [
   { label: "Direct Admission MBA Pune",          href: "/direct-admission-mba-colleges-pune" },
   { label: "Pune University Colleges List",      href: "/colleges" },
   { label: "MHT-CET College Predictor",          href: "/predictor" },
-  { label: "Cutoffs 2026 — All Exams",           href: "/cutoffs" },
+  { label: "Cutoffs 2026: All Exams",           href: "/cutoffs" },
   { label: "ROI Calculator Pune",                href: "/roi-calculator" },
   { label: "Government Colleges Pune",           href: "/government-colleges-pune" },
   { label: "Law Colleges Pune",                  href: "/law-colleges-pune" },

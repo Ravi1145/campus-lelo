@@ -45,7 +45,7 @@ export const keywordClusters: KeywordCluster[] = [
     "intent": "commercial",
     "pillar": "/blog/mba-placements-and-salary-how-to-read-reports",
     "supporting": [
-      "/mba-colleges-in-pune",
+      "/mba-placements-pune",
       "/mba-colleges-noida"
     ],
     "size": 439,
@@ -182,7 +182,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:delhi-ncr",
-    "name": "General MBA queries — delhi-ncr",
+    "name": "General MBA queries (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -302,7 +302,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:pune",
-    "name": "MBA fees, scholarships & loans — pune",
+    "name": "MBA fees, scholarships & loans (pune)",
     "intent": "commercial",
     "pillar": "/low-fees-mba-colleges-pune",
     "supporting": [
@@ -327,7 +327,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:delhi-ncr",
-    "name": "Best / top MBA colleges — delhi-ncr",
+    "name": "Best / top MBA colleges (delhi-ncr)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [
@@ -424,7 +424,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:delhi-ncr",
-    "name": "MBA fees, scholarships & loans — delhi-ncr",
+    "name": "MBA fees, scholarships & loans (delhi-ncr)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -547,7 +547,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:pune",
-    "name": "General MBA queries — pune",
+    "name": "General MBA queries (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune",
     "supporting": [
@@ -572,7 +572,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:delhi-ncr",
-    "name": "MBA cut-offs & percentiles — delhi-ncr",
+    "name": "MBA cut-offs & percentiles (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-cutoff-delhi-ncr",
     "supporting": [],
@@ -617,7 +617,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:lucknow",
-    "name": "MBA fees, scholarships & loans — lucknow",
+    "name": "MBA fees, scholarships & loans (lucknow)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -637,7 +637,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:noida",
-    "name": "MBA fees, scholarships & loans — noida",
+    "name": "MBA fees, scholarships & loans (noida)",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -659,7 +659,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:delhi-ncr",
-    "name": "MBA placements & salary — delhi-ncr",
+    "name": "MBA placements & salary (delhi-ncr)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -681,7 +681,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:lucknow",
-    "name": "MBA placements & salary — lucknow",
+    "name": "MBA placements & salary (lucknow)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -724,7 +724,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:noida",
-    "name": "Best / top MBA colleges — noida",
+    "name": "Best / top MBA colleges (noida)",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -747,7 +747,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:delhi-ncr",
-    "name": "Executive, online, part-time MBA — delhi-ncr",
+    "name": "Executive, online, part-time MBA (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [
@@ -769,7 +769,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:noida",
-    "name": "General MBA queries — noida",
+    "name": "General MBA queries (noida)",
     "intent": "informational",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -792,7 +792,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:delhi-ncr",
-    "name": "MBA without entrance exam / direct admission — delhi-ncr",
+    "name": "MBA without entrance exam / direct admission (delhi-ncr)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
     "supporting": [],
@@ -812,7 +812,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:pune",
-    "name": "College-specific MBA queries — pune",
+    "name": "College-specific MBA queries (pune)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-pune",
     "supporting": [
@@ -834,7 +834,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:uttar pradesh",
-    "name": "Best / top MBA colleges — uttar pradesh",
+    "name": "Best / top MBA colleges (uttar pradesh)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
@@ -854,7 +854,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:dehradun",
-    "name": "MBA placements & salary — dehradun",
+    "name": "MBA placements & salary (dehradun)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -874,7 +874,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:lucknow",
-    "name": "General MBA queries — lucknow",
+    "name": "General MBA queries (lucknow)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -894,7 +894,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:dehradun",
-    "name": "MBA fees, scholarships & loans — dehradun",
+    "name": "MBA fees, scholarships & loans (dehradun)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -914,7 +914,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:noida",
-    "name": "MBA placements & salary — noida",
+    "name": "MBA placements & salary (noida)",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -937,7 +937,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:pune",
-    "name": "MBA cut-offs & percentiles — pune",
+    "name": "MBA cut-offs & percentiles (pune)",
     "intent": "commercial",
     "pillar": "/mba-cutoff-pune",
     "supporting": [
@@ -1005,7 +1005,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:dehradun",
-    "name": "Best / top MBA colleges — dehradun",
+    "name": "Best / top MBA colleges (dehradun)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -1025,7 +1025,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:dehradun",
-    "name": "General MBA queries — dehradun",
+    "name": "General MBA queries (dehradun)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -1045,7 +1045,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:pune",
-    "name": "MBA admission process — pune",
+    "name": "MBA admission process (pune)",
     "intent": "transactional",
     "pillar": "/mba-admission-process-pune",
     "supporting": [],
@@ -1111,7 +1111,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:uttar pradesh",
-    "name": "MBA fees, scholarships & loans — uttar pradesh",
+    "name": "MBA fees, scholarships & loans (uttar pradesh)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
@@ -1131,7 +1131,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:uttarakhand",
-    "name": "Best / top MBA colleges — uttarakhand",
+    "name": "Best / top MBA colleges (uttarakhand)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -1151,7 +1151,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:lucknow",
-    "name": "MBA admission process — lucknow",
+    "name": "MBA admission process (lucknow)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -1193,7 +1193,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:lucknow",
-    "name": "Best / top MBA colleges — lucknow",
+    "name": "Best / top MBA colleges (lucknow)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -1213,7 +1213,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:uttarakhand",
-    "name": "MBA fees, scholarships & loans — uttarakhand",
+    "name": "MBA fees, scholarships & loans (uttarakhand)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -1301,7 +1301,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:pune",
-    "name": "Executive, online, part-time MBA — pune",
+    "name": "Executive, online, part-time MBA (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune-executive",
     "supporting": [
@@ -1325,7 +1325,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "fees-funding:ghaziabad",
-    "name": "MBA fees, scholarships & loans — ghaziabad",
+    "name": "MBA fees, scholarships & loans (ghaziabad)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -1345,7 +1345,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:delhi-ncr",
-    "name": "MBA admission process — delhi-ncr",
+    "name": "MBA admission process (delhi-ncr)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -1367,7 +1367,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:uttarakhand",
-    "name": "MBA placements & salary — uttarakhand",
+    "name": "MBA placements & salary (uttarakhand)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -1409,7 +1409,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:pune",
-    "name": "MBA without entrance exam / direct admission — pune",
+    "name": "MBA without entrance exam / direct admission (pune)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-pune-without-entrance-exam",
     "supporting": [
@@ -1434,7 +1434,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:delhi-ncr",
-    "name": "College-specific MBA queries — delhi-ncr",
+    "name": "College-specific MBA queries (delhi-ncr)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -1457,7 +1457,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:ghaziabad",
-    "name": "MBA placements & salary — ghaziabad",
+    "name": "MBA placements & salary (ghaziabad)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -1477,7 +1477,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:noida",
-    "name": "Executive, online, part-time MBA — noida",
+    "name": "Executive, online, part-time MBA (noida)",
     "intent": "informational",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -1499,7 +1499,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:pune",
-    "name": "MBA eligibility & profile — pune",
+    "name": "MBA eligibility & profile (pune)",
     "intent": "informational",
     "pillar": "/mba-admission-process-pune",
     "supporting": [
@@ -1567,7 +1567,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "best-top-ranking:ghaziabad",
-    "name": "Best / top MBA colleges — ghaziabad",
+    "name": "Best / top MBA colleges (ghaziabad)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -1587,7 +1587,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:dehradun",
-    "name": "MBA admission process — dehradun",
+    "name": "MBA admission process (dehradun)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -1607,7 +1607,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:noida",
-    "name": "MBA cut-offs & percentiles — noida",
+    "name": "MBA cut-offs & percentiles (noida)",
     "intent": "informational",
     "pillar": "/mba-cutoff-uttar-pradesh",
     "supporting": [],
@@ -1694,7 +1694,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:delhi-ncr",
-    "name": "MBA eligibility & profile — delhi-ncr",
+    "name": "MBA eligibility & profile (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -1763,7 +1763,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:pune",
-    "name": "MBA entrance exam dates & prep — pune",
+    "name": "MBA entrance exam dates & prep (pune)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-pune",
     "supporting": [
@@ -1809,7 +1809,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:lucknow",
-    "name": "MBA cut-offs & percentiles — lucknow",
+    "name": "MBA cut-offs & percentiles (lucknow)",
     "intent": "commercial",
     "pillar": "/mba-cutoff-uttar-pradesh",
     "supporting": [],
@@ -1829,7 +1829,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:lucknow",
-    "name": "Executive, online, part-time MBA — lucknow",
+    "name": "Executive, online, part-time MBA (lucknow)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -1849,7 +1849,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:uttar pradesh",
-    "name": "Executive, online, part-time MBA — uttar pradesh",
+    "name": "Executive, online, part-time MBA (uttar pradesh)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
@@ -1869,7 +1869,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:uttar pradesh",
-    "name": "MBA admission process — uttar pradesh",
+    "name": "MBA admission process (uttar pradesh)",
     "intent": "transactional",
     "pillar": "/blog/mba-admission-in-uttar-pradesh",
     "supporting": [],
@@ -1912,7 +1912,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:noida",
-    "name": "College-specific MBA queries — noida",
+    "name": "College-specific MBA queries (noida)",
     "intent": "commercial",
     "pillar": "/mba-colleges-noida",
     "supporting": [],
@@ -1932,7 +1932,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:ghaziabad",
-    "name": "College-specific MBA queries — ghaziabad",
+    "name": "College-specific MBA queries (ghaziabad)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -1975,7 +1975,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:lucknow",
-    "name": "MBA without entrance exam / direct admission — lucknow",
+    "name": "MBA without entrance exam / direct admission (lucknow)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -1995,7 +1995,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:lucknow",
-    "name": "College-specific MBA queries — lucknow",
+    "name": "College-specific MBA queries (lucknow)",
     "intent": "navigational",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -2015,7 +2015,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:noida",
-    "name": "MBA without entrance exam / direct admission — noida",
+    "name": "MBA without entrance exam / direct admission (noida)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi-ncr-without-cat",
     "supporting": [],
@@ -2075,7 +2075,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:uttarakhand",
-    "name": "General MBA queries — uttarakhand",
+    "name": "General MBA queries (uttarakhand)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -2095,7 +2095,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:lucknow",
-    "name": "MBA eligibility & profile — lucknow",
+    "name": "MBA eligibility & profile (lucknow)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -2115,7 +2115,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:uttar pradesh",
-    "name": "MBA entrance exam dates & prep — uttar pradesh",
+    "name": "MBA entrance exam dates & prep (uttar pradesh)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
@@ -2135,7 +2135,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:dehradun",
-    "name": "Executive, online, part-time MBA — dehradun",
+    "name": "Executive, online, part-time MBA (dehradun)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -2155,7 +2155,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "placements-salary:uttar pradesh",
-    "name": "MBA placements & salary — uttar pradesh",
+    "name": "MBA placements & salary (uttar pradesh)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttar-pradesh",
     "supporting": [],
@@ -2175,7 +2175,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:noida",
-    "name": "MBA admission process — noida",
+    "name": "MBA admission process (noida)",
     "intent": "transactional",
     "pillar": "/mba-colleges-noida",
     "supporting": [
@@ -2196,7 +2196,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:dehradun",
-    "name": "MBA cut-offs & percentiles — dehradun",
+    "name": "MBA cut-offs & percentiles (dehradun)",
     "intent": "informational",
     "pillar": "/mba-cutoff-uttarakhand",
     "supporting": [],
@@ -2214,7 +2214,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:uttarakhand",
-    "name": "MBA admission process — uttarakhand",
+    "name": "MBA admission process (uttarakhand)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -2234,7 +2234,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:ghaziabad",
-    "name": "Executive, online, part-time MBA — ghaziabad",
+    "name": "Executive, online, part-time MBA (ghaziabad)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -2254,7 +2254,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:uttarakhand",
-    "name": "MBA cut-offs & percentiles — uttarakhand",
+    "name": "MBA cut-offs & percentiles (uttarakhand)",
     "intent": "commercial",
     "pillar": "/mba-cutoff-uttarakhand",
     "supporting": [],
@@ -2274,7 +2274,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "mode-format:uttarakhand",
-    "name": "Executive, online, part-time MBA — uttarakhand",
+    "name": "Executive, online, part-time MBA (uttarakhand)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -2293,7 +2293,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "general:ghaziabad",
-    "name": "General MBA queries — ghaziabad",
+    "name": "General MBA queries (ghaziabad)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -2311,7 +2311,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:noida",
-    "name": "MBA eligibility & profile — noida",
+    "name": "MBA eligibility & profile (noida)",
     "intent": "informational",
     "pillar": "/mba-colleges-noida",
     "supporting": [],
@@ -2328,7 +2328,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:dehradun",
-    "name": "MBA eligibility & profile — dehradun",
+    "name": "MBA eligibility & profile (dehradun)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -2346,7 +2346,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:dehradun",
-    "name": "MBA without entrance exam / direct admission — dehradun",
+    "name": "MBA without entrance exam / direct admission (dehradun)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -2361,7 +2361,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:dehradun",
-    "name": "MBA entrance exam dates & prep — dehradun",
+    "name": "MBA entrance exam dates & prep (dehradun)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-dehradun",
     "supporting": [],
@@ -2378,7 +2378,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "admission-process:ghaziabad",
-    "name": "MBA admission process — ghaziabad",
+    "name": "MBA admission process (ghaziabad)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -2395,7 +2395,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:lucknow",
-    "name": "MBA entrance exam dates & prep — lucknow",
+    "name": "MBA entrance exam dates & prep (lucknow)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -2415,7 +2415,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "college-specific:uttarakhand",
-    "name": "College-specific MBA queries — uttarakhand",
+    "name": "College-specific MBA queries (uttarakhand)",
     "intent": "commercial",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -2431,7 +2431,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "no-exam-direct:ghaziabad",
-    "name": "MBA without entrance exam / direct admission — ghaziabad",
+    "name": "MBA without entrance exam / direct admission (ghaziabad)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -2445,7 +2445,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:finance:pune",
-    "name": "MBA in finance — pune",
+    "name": "MBA in finance (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune-for-finance",
     "supporting": [],
@@ -2462,7 +2462,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:hr:delhi-ncr",
-    "name": "MBA in hr — delhi-ncr",
+    "name": "MBA in hr (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -2498,7 +2498,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "eligibility-profile:uttarakhand",
-    "name": "MBA eligibility & profile — uttarakhand",
+    "name": "MBA eligibility & profile (uttarakhand)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-uttarakhand",
     "supporting": [],
@@ -2514,7 +2514,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:delhi-ncr",
-    "name": "MBA entrance exam dates & prep — delhi-ncr",
+    "name": "MBA entrance exam dates & prep (delhi-ncr)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -2534,7 +2534,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:healthcare:delhi-ncr",
-    "name": "MBA in healthcare — delhi-ncr",
+    "name": "MBA in healthcare (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi",
     "supporting": [
@@ -2551,7 +2551,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:noida",
-    "name": "MBA entrance exam dates & prep — noida",
+    "name": "MBA entrance exam dates & prep (noida)",
     "intent": "transactional",
     "pillar": "/mba-colleges-noida",
     "supporting": [],
@@ -2567,7 +2567,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "cutoff-percentile:ghaziabad",
-    "name": "MBA cut-offs & percentiles — ghaziabad",
+    "name": "MBA cut-offs & percentiles (ghaziabad)",
     "intent": "informational",
     "pillar": "/mba-cutoff-delhi-ncr",
     "supporting": [],
@@ -2582,7 +2582,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "exam-dates-prep:ghaziabad",
-    "name": "MBA entrance exam dates & prep — ghaziabad",
+    "name": "MBA entrance exam dates & prep (ghaziabad)",
     "intent": "transactional",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [],
@@ -2598,7 +2598,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:healthcare:lucknow",
-    "name": "MBA in healthcare — lucknow",
+    "name": "MBA in healthcare (lucknow)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-lucknow",
     "supporting": [],
@@ -2612,7 +2612,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:business-analytics:pune",
-    "name": "MBA in business analytics — pune",
+    "name": "MBA in business analytics (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune-for-business-analytics",
     "supporting": [],
@@ -2627,7 +2627,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:hr:pune",
-    "name": "MBA in hr — pune",
+    "name": "MBA in hr (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune-for-hr",
     "supporting": [],
@@ -2642,7 +2642,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:marketing:pune",
-    "name": "MBA in marketing — pune",
+    "name": "MBA in marketing (pune)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-pune-for-marketing",
     "supporting": [],
@@ -2656,7 +2656,7 @@ export const keywordClusters: KeywordCluster[] = [
   },
   {
     "id": "specialization:finance:delhi-ncr",
-    "name": "MBA in finance — delhi-ncr",
+    "name": "MBA in finance (delhi-ncr)",
     "intent": "informational",
     "pillar": "/mba-colleges-in-delhi-ncr",
     "supporting": [

@@ -157,7 +157,7 @@ export default function AskPage() {
                 {/* Phone (optional for notification) */}
                 <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">
-                    Mobile Number <span className="text-gray-400 font-normal">(optional — to get notified on WhatsApp)</span>
+                    Mobile Number <span className="text-gray-400 font-normal">(optional: to get notified on WhatsApp)</span>
                   </label>
                   <input
                     type="tel"
@@ -193,7 +193,7 @@ export default function AskPage() {
                 <h3 className="font-bold text-gray-900 text-sm">Tips for better answers</h3>
               </div>
               <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Be specific — mention the exam, score, and year</li>
+                <li>• Be specific: mention the exam, score, and year</li>
                 <li>• Include your category (Open/OBC/SC/ST)</li>
                 <li>• Ask one question at a time</li>
                 <li>• Add your mobile to get WhatsApp notification</li>

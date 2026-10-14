@@ -13,7 +13,7 @@ export default function Reveal({ children, className = "", as: Tag = "div" }: { 
     const el = ref.current
     if (!el) return
     const r = el.getBoundingClientRect()
-    if (r.top < window.innerHeight && r.bottom > 0) return // already visible — don't hide it
+    if (r.top < window.innerHeight && r.bottom > 0) return // already visible, don't hide it
     el.dataset.reveal = "pending"
     const io = new IntersectionObserver(
       (entries) => {

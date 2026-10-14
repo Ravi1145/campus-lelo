@@ -130,7 +130,7 @@ export function CapExplainer({ examSlug }: { examSlug: string }) {
         {isState
           ? "For Maharashtra-domicile candidates, MAH MBA/MMS CET is the main exam for CAP MBA seats."
           : `${getMbaExam(examSlug)?.name} is one of the national exams accepted for CAP All-India seats.`}{" "}
-        CAP covers MBA/MMS programmes only. PGDM institutes run their own admissions — check each institute&apos;s accepted exams.
+        CAP covers MBA/MMS programmes only. PGDM institutes run their own admissions, check each institute&apos;s accepted exams.
       </p>
       <SourceNote source={maharashtraCap.source} />
     </section>
@@ -485,7 +485,7 @@ export function SourcesList({ sources }: { sources: SourceRef[] }) {
         {sources.map((s) => (
           <li key={s.label}>
             <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-600">{s.label}</a>
-            {" "}— {s.type === "official" ? "official" : "secondary, cross-checked"}, checked {formatDate(s.accessed)}
+            {": "}{s.type === "official" ? "official" : "secondary, cross-checked"}, checked {formatDate(s.accessed)}
           </li>
         ))}
       </ul>

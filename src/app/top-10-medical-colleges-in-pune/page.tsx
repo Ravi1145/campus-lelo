@@ -9,7 +9,7 @@ export const revalidate = 300
 export const metadata: Metadata = genMeta({
   title: "Top 10 Medical Colleges in Pune 2026 (NIRF Ranked)",
   description:
-    "Ranked list of top 10 medical colleges in Pune 2026 by NIRF rank, NAAC grade, NEET cutoff & fees. AFMC #4, BJ Medical #18 — compare all data in one place.",
+    "Ranked list of top 10 medical colleges in Pune 2026 by NIRF rank, NAAC grade, NEET cutoff & fees. AFMC #4, BJ Medical #18, compare all data in one place.",
   path: "/top-10-medical-colleges-in-pune",
   keywords: [
     "top 10 medical colleges in pune",
@@ -227,7 +227,7 @@ export default function Top10MedicalCollegesPage() {
               Top 10 Medical Colleges in Pune 2026
             </h1>
             <p className="text-white/75 text-lg max-w-2xl">
-              NIRF-ranked MBBS colleges in Pune — AFMC, BJ Medical, DY Patil and more. NEET cutoffs, fees, seats, and admission process compared.
+              NIRF-ranked MBBS colleges in Pune. AFMC, BJ Medical, DY Patil and more. NEET cutoffs, fees, seats, and admission process compared.
             </p>
           </div>
         </div>
@@ -304,7 +304,7 @@ export default function Top10MedicalCollegesPage() {
           {/* Key Insights */}
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { icon: "🏆", title: " Nationally", desc: "AFMC Pune is India's 4th ranked medical college — and among the most affordable anywhere in the country." },
+              { icon: "🏆", title: " Nationally", desc: "AFMC Pune is India's 4th ranked medical college, and among the most affordable anywhere in the country." },
               { icon: "💰", title: "Govt vs Private Cost", desc: "Government MBBS seats cost ₹60K–1.5L/year vs ₹10L–18L/year at private deemed universities in Pune." },
               { icon: "🎯", title: "NEET Score Range", desc: "Competitive range in Pune: 490–655. AFMC + BJ need 625+ while private colleges accept 490+." },
             ].map(({ icon, title, desc }) => (

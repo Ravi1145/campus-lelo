@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { colleges, getCollegeBySlug } from "@/data/colleges"
 
-export const revalidate = 300 // ISR — re-render every 5 min; on-demand revalidation via admin also busts this
+export const revalidate = 300 // ISR, re-render every 5 min; on-demand revalidation via admin also busts this
 import { getCollegeBySlug as getDBCollege, DBCollege, CollegeDetails } from "@/lib/db"
 import CollegeProfile from "@/components/colleges/CollegeProfile"
 import CollegeAtAGlance from "@/components/seo/CollegeAtAGlance"
@@ -213,7 +213,7 @@ export async function generateStaticParams() {
         slugSet.add(c.slug)
       }
     }
-  } catch { /* ignore — backend not running yet */ }
+  } catch { /* ignore: backend not running yet */ }
 
   return localSlugs
 }
@@ -271,7 +271,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return genMeta({
     title,
-    description: `${college.name} (${college.shortName}) — ${college.type}${streamText} College, Pune. ${naacText}${nirfText}${feesText}${placText}. Admission 2026 via ${exam1}${exam2}. Cutoffs, placements, hostel, scholarships & student reviews.`,
+    description: `${college.name} (${college.shortName}): ${college.type}${streamText} College, Pune. ${naacText}${nirfText}${feesText}${placText}. Admission 2026 via ${exam1}${exam2}. Cutoffs, placements, hostel, scholarships & student reviews.`,
     path: `/colleges/${slug}`,
     keywords: [
       college.name.toLowerCase(),
@@ -444,7 +444,7 @@ export default async function CollegePage({ params }: Props) {
         <section className="bg-white border-t py-10 px-4" id="faq-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions — {college.name}
+              Frequently Asked Questions: {college.name}
             </h2>
             <div className="space-y-0 divide-y divide-gray-100">
               {faqsForSchema.map((faq, i) => (

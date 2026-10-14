@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Editorial Policy: How CampusLelo Verifies Admission Data",
-  description: "How CampusLelo sources and verifies entrance exam dates, eligibility, exam patterns and college exam-acceptance — official vs secondary sources, review dates and corrections.",
+  description: "How CampusLelo sources and verifies entrance exam dates, eligibility, exam patterns and college exam-acceptance, official vs secondary sources, review dates and corrections.",
   path: "/editorial-policy",
   keywords: ["campuslelo editorial policy", "how campuslelo verifies data"],
 })
@@ -15,9 +15,9 @@ const LAST_UPDATED_ISO = "2026-10-05"
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 const principles = [
-  { title: "Official sources first", body: "Exam dates, eligibility, fees and patterns come from the conducting body's own website or notification wherever we can read it — for example xatonline.in for XAT, gmac.com for NMAT and GMAT, snaptest.org for SNAP and mat.aima.in for MAT." },
+  { title: "Official sources first", body: "Exam dates, eligibility, fees and patterns come from the conducting body's own website or notification wherever we can read it, for example xatonline.in for XAT, gmac.com for NMAT and GMAT, snaptest.org for SNAP and mat.aima.in for MAT." },
   { title: "Secondary sources are labelled", body: "When an official site cannot be read, we use a figure only if at least two independent education portals report the same value, and we label it \"secondary, cross-checked\" on the page." },
-  { title: "Conflicts mean we withhold", body: "If sources disagree — for example on an exam date — we do not publish a figure. We say it is unconfirmed and link to the official website instead." },
+  { title: "Conflicts mean we withhold", body: "If sources disagree: for example on an exam date, we do not publish a figure. We say it is unconfirmed and link to the official website instead." },
   { title: "Acceptance is checked per programme", body: "A college can accept an exam for one programme or campus and not another. We list a programme as accepting an exam only after reading that institute's own admission page or brochure for the stated intake." },
   { title: "No invented numbers", body: "We do not publish predicted cut-offs, score-to-percentile tables or placement figures unless they come from published data with a clear method. Where data does not exist yet, the page says so." },
   { title: "Every fact shows when it was checked", body: "Pages show the source of each time-sensitive fact and the date we last checked it. Exam guides show a \"last reviewed\" date, and we re-verify them each admission cycle." },
@@ -68,7 +68,7 @@ export default function EditorialPolicyPage() {
           <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-2">Corrections</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              If you spot an error — a changed date, a programme that no longer accepts an exam, an outdated fee — email{" "}
+              If you spot an error, a changed date, a programme that no longer accepts an exam, an outdated fee, email{" "}
               <a href="mailto:support@campuslelo.com" className="underline text-orange-600">support@campuslelo.com</a> with the page link and, ideally, the official source.
               We check the source and update the page and its &quot;last reviewed&quot; date.
             </p>

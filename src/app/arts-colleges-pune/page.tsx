@@ -53,7 +53,7 @@ const colleges = [
   },
   {
     rank: 3,
-    name: "BMCC — Brihan Maharashtra College of Commerce",
+    name: "BMCC: Brihan Maharashtra College of Commerce",
     type: "Government-aided",
     naac: "A",
     fees: "₹8K–₹20K/yr",
@@ -160,7 +160,7 @@ const faqs = [
   },
   {
     question: "How to get admission in Fergusson College Pune 2026?",
-    answer: "Fergusson College admissions are based on HSC (Class 12) merit through the Centralised Admission Process (CAP) by SPPU. You need 70%+ in HSC for Science, 60%+ for Commerce, and 55%+ for Arts. Apply online at the SPPU admission portal (admission.sppu.ac.in). Forms open in June 2026. There are no entrance tests — pure merit-based.",
+    answer: "Fergusson College admissions are based on HSC (Class 12) merit through the Centralised Admission Process (CAP) by SPPU. You need 70%+ in HSC for Science, 60%+ for Commerce, and 55%+ for Arts. Apply online at the SPPU admission portal (admission.sppu.ac.in). Forms open in June 2026. There are no entrance tests, pure merit-based.",
   },
   {
     question: "Is BCom from BMCC Pune good for placements?",
@@ -200,7 +200,7 @@ export default function ArtsCollegesPune() {
             Best Arts &amp; Science Colleges in Pune 2026
           </h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Compare top BA, BSc &amp; BCom colleges in Pune — fees from ₹8K to ₹80K/year, NAAC grades, SPPU CAP admissions &amp; career outcomes.
+            Compare top BA, BSc &amp; BCom colleges in Pune, fees from ₹8K to ₹80K/year, NAAC grades, SPPU CAP admissions &amp; career outcomes.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
@@ -220,7 +220,7 @@ export default function ArtsCollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Top Arts &amp; Science Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: Top Arts &amp; Science Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Best Arts:</strong> Fergusson College · <strong>Best Science:</strong> SP College ·{" "}
               <strong>Best Commerce (BCom):</strong> BMCC · <strong>Best Private:</strong> Symbiosis College ·{" "}
@@ -229,7 +229,7 @@ export default function ArtsCollegesPune() {
           </div>
 
           {/* Fee comparison cards */}
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Arts &amp; Science Colleges in Pune — Ranked 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Arts &amp; Science Colleges in Pune. Ranked 2026</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -263,7 +263,7 @@ export default function ArtsCollegesPune() {
           </div>
 
           {/* Program wise section */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Choose by Program — Best Colleges by Stream</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Choose by Program: Best Colleges by Stream</h2>
           <div className="grid sm:grid-cols-3 gap-4 mb-10">
             {[
               {
@@ -298,7 +298,7 @@ export default function ArtsCollegesPune() {
 
           {/* CTA */}
           <div className="rounded-2xl p-6 text-center mb-10" style={{ background: "linear-gradient(135deg,#011B40,#024692)" }}>
-            <p className="text-white font-bold text-lg mb-2">Not sure which stream — Arts, Science or Commerce?</p>
+            <p className="text-white font-bold text-lg mb-2">Not sure which stream. Arts, Science or Commerce?</p>
             <p className="text-blue-200 text-sm mb-4">Our AI College Finder matches you to the best college based on your Class 12 marks, stream preference &amp; budget.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/ai-finder" className="inline-flex items-center justify-center gap-2 font-bold text-white px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-all" style={{ background: "linear-gradient(90deg,var(--color-accent),color-mix(in srgb, var(--color-accent) 70%, #FFD000))" }}>
@@ -311,7 +311,7 @@ export default function ArtsCollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Arts &amp; Science Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Arts &amp; Science Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

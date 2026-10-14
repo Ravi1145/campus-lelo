@@ -16,7 +16,7 @@ declare global {
 const BENEFITS = [
   "A shortlist matched to your score, budget and city",
   "Fees and cut-offs taken from official sources",
-  "A counsellor who guides you — free for students",
+  "A counsellor who guides you, free for students",
 ]
 
 export default function ExitPopup() {

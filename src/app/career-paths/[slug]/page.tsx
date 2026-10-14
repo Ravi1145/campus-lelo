@@ -55,7 +55,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
           <div className="flex items-start gap-4">
             <span className="text-4xl sm:text-5xl">{path.icon}</span>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">{path.title} — Career Path</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">{path.title}: Career Path</h1>
               <p className="text-gray-300 text-base max-w-2xl">{path.tagline}</p>
               <div className="flex flex-wrap gap-2 mt-3">
                 <span className={`text-xs px-3 py-1 rounded-full font-semibold ${path.growth === "Very High" ? "bg-green-500/20 text-green-300" : "bg-blue-500/20 text-blue-300"}`}>

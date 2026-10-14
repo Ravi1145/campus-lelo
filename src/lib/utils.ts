@@ -20,7 +20,7 @@ export function formatFees(amount: number): string {
 }
 
 export function formatFeesRange(min: number, max: number): string {
-  return `${formatFees(min)} – ${formatFees(max)}/yr`
+  return `${formatFees(min)} to ${formatFees(max)}/yr`
 }
 
 export function slugify(text: string): string {

@@ -9,7 +9,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Engineering Colleges in Pune 2026 | Fees, NIRF & Cutoffs | CampusLelo",
-  description: "Top 12 engineering colleges in Pune 2026 — COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5. Compare & apply free.",
+  description: "Top 12 engineering colleges in Pune 2026. COEP, PICT, VIT Pune, SIT. Fees ₹80K–₹4.8L/yr, MHT-CET cutoffs, NAAC grades & placements ₹5. Compare & apply free.",
   path: "/engineering-colleges-pune",
   keywords: [
     "engineering colleges in pune",
@@ -190,7 +190,7 @@ export default function EngineeringCollegesPunePage() {
           </div>
 
           {/* Top 3 Deep Dive */}
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 3 Engineering Colleges in Pune — Detailed Review</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 3 Engineering Colleges in Pune. Detailed Review</h2>
           <div className="space-y-5 mb-10">
             {/* COEP */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
@@ -348,7 +348,7 @@ export default function EngineeringCollegesPunePage() {
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                   <div>
                     <h2 className="text-xl font-bold text-gray-900">COEP MHT-CET Cutoff Trend 2020–2026</h2>
-                    <p className="text-sm text-gray-500 mt-1">Open, OBC & SC category percentile trends. Unlock full data free.</p>
+                    <p className="text-sm text-gray-500 mt-1">Open, OBC & SC category percentile trends. See the full data free.</p>
                   </div>
                   <Link href="/cutoffs" className="text-xs text-orange-600 hover:underline font-semibold shrink-0">
                     All college cutoffs →
@@ -361,7 +361,7 @@ export default function EngineeringCollegesPunePage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Engineering Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Engineering Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -377,14 +377,14 @@ export default function EngineeringCollegesPunePage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">Related Engineering Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { label: "Top 10 Engineering Colleges in Pune — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-                { label: "Placement Guide — Avg & Highest LPA 2026", href: "/engineering-colleges-pune", icon: "💼" },
+                { label: "Top 10 Engineering Colleges in Pune. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+                { label: "Placement Guide: Avg & Highest LPA 2026", href: "/engineering-colleges-pune", icon: "💼" },
                 { label: "Low Fees Engineering Colleges (Under ₹5L)", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
                 { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
                 { label: "Private Engineering Colleges Pune", href: "/private-engineering-colleges-pune", icon: "🏛️" },
                 { label: "Admission Without JEE (MHT-CET Only)", href: "/engineering-admission-pune-without-jee", icon: "📝" },
-                { label: "Direct Admission — Management Quota", href: "/direct-admission-engineering-colleges-pune", icon: "🚀" },
-                { label: "Engineering vs MBA — Which is Better?", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
+                { label: "Direct Admission: Management Quota", href: "/direct-admission-engineering-colleges-pune", icon: "🚀" },
+                { label: "Engineering vs MBA: Which is Better?", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
                 { label: "Placement Comparator Tool", href: "/colleges", icon: "📊" },
               ].map(({ label, href, icon }) => (
                 <Link key={href} href={href} className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 hover:border-orange-200 hover:shadow transition-all group">

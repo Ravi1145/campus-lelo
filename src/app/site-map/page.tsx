@@ -10,7 +10,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
   title: "Site Map: All CampusLelo Pages",
-  description: "Every guide, college list, exam page and tool on CampusLelo in one place — Pune and Delhi NCR colleges, MBA and PGDM guides, exam calendars, counselling and scholarships.",
+  description: "Every guide, college list, exam page and tool on CampusLelo in one place. Pune and Delhi NCR colleges, MBA and PGDM guides, exam calendars, counselling and scholarships.",
   path: "/site-map",
   keywords: ["campuslelo site map", "campuslelo pages"],
 })

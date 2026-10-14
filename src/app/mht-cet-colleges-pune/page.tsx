@@ -70,7 +70,7 @@ export default function MhtCetCollegesPunePage() {
         introParagraphs={[
           "MHT-CET (Maharashtra Common Entrance Test) is the gateway to engineering admissions in Pune for Maharashtra residents. Conducted by Maharashtra State Common Entrance Test Cell, MHT-CET PCM tests Class 11 and 12 content in Physics, Chemistry, and Mathematics. The exam is conducted in April-May 2026 and results determine eligibility for 50+ engineering colleges in Pune via the Centralized Admission Process (CAP).",
           "The CAP (Centralized Admission Process) is Pune's seat allotment mechanism - a transparent, online merit-based system where students fill college preferences in priority order and seats are allotted based on percentile rank within category. Three rounds of allotment happen in July-August, with options to Freeze (keep current seat), Float (upgrade to better seat if available), or Slide (upgrade within same college).",
-          "MHT-CET cutoffs vary dramatically across branches and colleges. Computer Engineering is the most competitive branch at top colleges. Mechanical, Civil, and Chemical Engineering branches have lower cutoffs at the same colleges. Understanding category-wise cutoffs (Open, OBC, SC, ST, EWS) is crucial for planning your college preferences in CAP rounds.",
+          "MHT-CET cutoffs vary dramatically across branches and colleges. Computer Engineering is the most competitive branch at top colleges. Mechanical, Civil, and Chemical Engineering branches have lower cutoffs at the same colleges. Understanding category-wise cutoffs (Open, OBC, SC, ST, EWS) is important for planning your college preferences in CAP rounds.",
         ]}
         colleges={colleges}
         whyHeading="Understanding MHT-CET Admission in Pune"
@@ -95,8 +95,8 @@ export default function MhtCetCollegesPunePage() {
         ctaSubtext="Enter your MHT-CET percentile and category to see which engineering colleges in Pune you qualify for. Free AI-powered predictor with 95% accuracy based on last 5 years of CAP data."
       relatedGuides={[
         { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-        { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-        { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+        { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+        { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
         { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
         { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
         { label: "JEE Main Colleges in Pune", href: "/jee-colleges-pune", icon: "📚" },

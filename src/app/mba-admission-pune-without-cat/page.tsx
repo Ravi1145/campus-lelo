@@ -10,7 +10,7 @@ export const revalidate = 300
 export const metadata: Metadata = genMeta({
   title: "MBA Admission in Pune Without CAT 2026 | MAT, CMAT, SNAP Colleges",
   description:
-    "Get MBA admission in Pune without CAT 2026. Colleges accepting MAT, CMAT, SNAP, XAT, ATMA. MIT-SOM, BIMM, Indira Institute, IIMM — no CAT required. Full list with fees & cutoffs.",
+    "Get MBA admission in Pune without CAT 2026. Colleges accepting MAT, CMAT, SNAP, XAT, ATMA. MIT-SOM, BIMM, Indira Institute, IIMM, no CAT required. Full list with fees & cutoffs.",
   path: "/mba-admission-pune-without-cat",
   keywords: [
     "mba admission without cat pune",
@@ -72,15 +72,15 @@ const difficultyComparison = [
 const faqs = [
   {
     question: "Which MBA colleges in Pune don't require CAT?",
-    answer: "Most Pune MBA colleges don't require CAT. Colleges accepting alternatives: MIT-SOM (MAT/CMAT/CAT), BIMM (MAT/CMAT/XAT), Indira Institute of Management (MAT/CMAT), IIMM Pune (MAT/CMAT/CAT), Suryadatta Institute (MAT/CMAT/XAT), Bharati Vidyapeeth (BVP-CET/MAT). Only Symbiosis colleges (SIBM, SCMHRD, SCIT) mandate SNAP — not CAT.",
+    answer: "Most Pune MBA colleges don't require CAT. Colleges accepting alternatives: MIT-SOM (MAT/CMAT/CAT), BIMM (MAT/CMAT/XAT), Indira Institute of Management (MAT/CMAT), IIMM Pune (MAT/CMAT/CAT), Suryadatta Institute (MAT/CMAT/XAT), Bharati Vidyapeeth (BVP-CET/MAT). Only Symbiosis colleges (SIBM, SCMHRD, SCIT) mandate SNAP, not CAT.",
   },
   {
     question: "Is MAT easier than CAT for MBA admission in Pune?",
-    answer: "Yes, MAT is significantly easier than CAT. MAT is conducted 5 times a year (online + offline), has lower difficulty, and is accepted by 7+ Pune MBA colleges. CAT is conducted once yearly in November and is much harder — but CAT is also accepted at most Pune colleges (it's not mandatory, just one of many accepted exams).",
+    answer: "Yes, MAT is significantly easier than CAT. MAT is conducted 5 times a year (online + offline), has lower difficulty, and is accepted by 7+ Pune MBA colleges. CAT is conducted once yearly in November and is much harder, but CAT is also accepted at most Pune colleges (it's not mandatory, just one of many accepted exams).",
   },
   {
     question: "Can I get MBA admission in Pune without any entrance exam?",
-    answer: "Yes — through management quota / direct admission. Private MBA colleges like MIT-SOM, BIMM, Indira Institute, and Suryadatta offer direct admission in the management quota. No entrance exam is required — only a graduation degree is needed. Management quota fees are typically 20–30% higher than regular fees.",
+    answer: "Yes, through management quota / direct admission. Private MBA colleges like MIT-SOM, BIMM, Indira Institute, and Suryadatta offer direct admission in the management quota. No entrance exam is required, only a graduation degree is needed. Management quota fees are typically 20–30% higher than regular fees.",
   },
   {
     question: "What is the CMAT cutoff for MIT-SOM Pune?",
@@ -88,11 +88,11 @@ const faqs = [
   },
   {
     question: "Does SIBM Pune accept CAT score instead of SNAP?",
-    answer: "No — SIBM Pune (Symbiosis Institute of Business Management) is a Symbiosis institute and mandatorily requires SNAP score. CAT score alone is NOT accepted for SIBM admission. You must appear for SNAP 2026 (December 6, 13, 20) and score 60+ percentile to be eligible for SIBM Pune's selection process (WAT + PI).",
+    answer: "No: SIBM Pune (Symbiosis Institute of Business Management) is a Symbiosis institute and mandatorily requires SNAP score. CAT score alone is NOT accepted for SIBM admission. You must appear for SNAP 2026 (December 6, 13, 20) and score 60+ percentile to be eligible for SIBM Pune's selection process (WAT + PI).",
   },
   {
     question: "Which is the best MBA college in Pune that accepts MAT?",
-    answer: "MIT School of Management (MIT-SOM) Pune is the best MBA college accepting MAT, with NAAC A+ grade average placement, and fees of ₹7–11L total. BIMM Pune is the best budget option accepting MAT. Both accept MAT, CMAT, and CAT — giving you multiple chances to qualify.",
+    answer: "MIT School of Management (MIT-SOM) Pune is the best MBA college accepting MAT, with NAAC A+ grade average placement, and fees of ₹7–11L total. BIMM Pune is the best budget option accepting MAT. Both accept MAT, CMAT, and CAT, giving you multiple chances to qualify.",
   },
   {
     question: "Can I get MBA admission in Pune after scoring 50 percentile in MAT?",
@@ -132,12 +132,12 @@ export default function MBAAdmissionWithoutCATPage() {
               MBA Admission in Pune Without CAT 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Get MBA admission at top Pune colleges using MAT, CMAT, SNAP, or direct management quota — CAT is optional. Complete list of colleges, cutoffs, and fees.
+              Get MBA admission at top Pune colleges using MAT, CMAT, SNAP, or direct management quota. CAT is optional. Complete list of colleges, cutoffs, and fees.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>CAT is NOT compulsory for MBA in Pune.</strong> Most colleges — MIT-SOM, BIMM, Indira Institute, IIMM, Suryadatta — accept <strong>MAT</strong> (5 times/year, easy), <strong>CMAT</strong> (January), or <strong>direct admission</strong>. Only Symbiosis institutes (SIBM, SCMHRD, SCIT) require <strong>SNAP</strong> — not CAT. The easiest path: MAT score + direct apply to MIT-SOM or BIMM.
+                <strong>CAT is NOT compulsory for MBA in Pune.</strong> Most colleges: MIT-SOM, BIMM, Indira Institute, IIMM, Suryadatta, accept <strong>MAT</strong> (5 times/year, easy), <strong>CMAT</strong> (January), or <strong>direct admission</strong>. Only Symbiosis institutes (SIBM, SCMHRD, SCIT) require <strong>SNAP</strong>: not CAT. The easiest path: MAT score + direct apply to MIT-SOM or BIMM.
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function MBAAdmissionWithoutCATPage() {
           {/* Exam Difficulty Comparison */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">MBA Entrance Exam Comparison — Easiest to Hardest</h2>
+              <h2 className="text-lg font-bold text-gray-900">MBA Entrance Exam Comparison. Easiest to Hardest</h2>
               <p className="text-xs text-gray-400 mt-0.5">All these exams are accepted by Pune MBA colleges. CAT is hardest; MAT/ATMA are easiest.</p>
             </div>
             <div className="overflow-x-auto">
@@ -227,9 +227,9 @@ export default function MBAAdmissionWithoutCATPage() {
 
           {/* Direct Admission Box */}
           <div className="bg-green-50 border border-green-200 rounded-2xl p-5 sm:p-6 mb-8">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">🎯 MBA Without Any Entrance Exam — Direct / Management Quota</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">🎯 MBA Without Any Entrance Exam. Direct / Management Quota</h2>
             <p className="text-sm text-gray-600 mb-4">
-              If you don&apos;t want to appear for any exam — MAT, CMAT, or CAT — you can still get MBA admission in Pune through the <strong>management quota / direct admission</strong> route.
+              If you don&apos;t want to appear for any exam, MAT, CMAT, or CAT, you can still get MBA admission in Pune through the <strong>management quota / direct admission</strong> route.
             </p>
             <ul className="space-y-1.5 mb-4">
               {[
@@ -238,7 +238,7 @@ export default function MBAAdmissionWithoutCATPage() {
                 "Colleges: MIT-SOM, BIMM, Indira Institute, Suryadatta, IIMM",
                 "Fees 20–30% higher than merit quota",
                 "AICTE-approved, legally valid MBA degree",
-                "Contact colleges directly — admissions open till September 2026",
+                "Contact colleges directly: admissions open till September 2026",
               ].map((p, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                   <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -253,7 +253,7 @@ export default function MBAAdmissionWithoutCATPage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — MBA Admission in Pune Without CAT</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: MBA Admission in Pune Without CAT</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -270,8 +270,8 @@ export default function MBAAdmissionWithoutCATPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+              { label: "Top 10 MBA Colleges. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+              { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
@@ -289,7 +289,7 @@ export default function MBAAdmissionWithoutCATPage() {
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Need MBA admission guidance for Pune?</p>
-              <p className="text-blue-200 text-sm">Our counsellors help you choose the right exam and college — for free.</p>
+              <p className="text-blue-200 text-sm">Our counsellors help you choose the right exam and college, for free.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/counselling" className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">

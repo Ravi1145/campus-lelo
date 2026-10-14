@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Hadapsar Pune 2026 | Engineering & Management Colleges",
-  description: "Top colleges in Hadapsar, Pune 2026. Indira College, Sinhgad groups, IT park proximity — engineering, MBA, BCA programs. Fees, admissions, and area guide for Hadapsar colleges.",
+  description: "Top colleges in Hadapsar, Pune 2026. Indira College, Sinhgad groups, IT park proximity, engineering, MBA, BCA programs. Fees, admissions, and area guide for Hadapsar colleges.",
   path: "/colleges-hadapsar-pune",
   keywords: ["colleges in hadapsar pune", "hadapsar pune colleges 2026", "engineering colleges hadapsar", "mba colleges hadapsar pune"],
 })
@@ -58,7 +58,7 @@ export default function CollegesHadapsarPunePage() {
       <SEOLandingPage
         breadcrumb={[{ label: "Colleges in Hadapsar, Pune", href: "/colleges-hadapsar-pune" }]}
         h1="Colleges in Hadapsar, Pune 2026"
-        subtitle="Find colleges in Hadapsar, Pune — engineering, MBA, and BCA programs near Magarpatta IT City. Compare fees, NAAC grades, and placement opportunities for 2026 admission."
+        subtitle="Find colleges in Hadapsar, Pune, engineering, MBA, and BCA programs near Magarpatta IT City. Compare fees, NAAC grades, and placement opportunities for 2026 admission."
         heroStats={[
           { value: "8+", label: "Colleges in Hadapsar" },
           { value: "Magarpatta", label: "IT Hub Proximity" },
@@ -67,7 +67,7 @@ export default function CollegesHadapsarPunePage() {
         ]}
         introHeading="Colleges in Hadapsar: Pune's IT Hub for Students"
         introParagraphs={[
-          "Hadapsar is a rapidly developing residential and commercial area in eastern Pune, home to the iconic Magarpatta City — a self-contained township with IT parks housing over 3,000 technology companies including Accenture, Zensar, and WNS Holdings. This unique combination of educational institutions and immediate employment opportunities makes Hadapsar increasingly popular among students.",
+          "Hadapsar is a rapidly developing residential and commercial area in eastern Pune, home to the iconic Magarpatta City, a self-contained township with IT parks housing over 3,000 technology companies including Accenture, Zensar, and WNS Holdings. This unique combination of educational institutions and immediate employment opportunities makes Hadapsar increasingly popular among students.",
           "Engineering and management colleges in Hadapsar cater primarily to students who want good quality education at lower costs than central Pune colleges. Indira College of Engineering, Sinhgad College of Engineering, and Zeal College serve engineering students, while DY Patil School of Management and IIITP cater to MBA and IT management aspirants.",
           "The infrastructure around Hadapsar colleges is well-developed: affordable PG accommodation at ₹5,000–10,000/month, multiple canteens and student restaurants, coaching institutes for competitive exams, and direct PMPML bus connectivity to the rest of Pune. The upcoming Pune Metro expansion plans include stations in the Hadapsar-Fatimanagar corridor.",
         ]}
@@ -75,16 +75,16 @@ export default function CollegesHadapsarPunePage() {
         whyHeading="Why Study in Hadapsar, Pune?"
         whyPoints={[
           { title: "Magarpatta IT Park Access", description: "Students at Hadapsar colleges can walk or take 5-minute auto rides to Magarpatta IT City for internships, campus drives, and networking events with 3,000+ IT companies." },
-          { title: "Affordable Living Costs", description: "Hadapsar's student accommodation is among Pune's most affordable — PG hostels from ₹5,000/month, with meals included options from ₹7,000/month. Significantly cheaper than Shivajinagar or Baner." },
+          { title: "Affordable Living Costs", description: "Hadapsar's student accommodation is among Pune's most affordable: PG hostels from ₹5,000/month, with meals included options from ₹7,000/month. Significantly cheaper than Shivajinagar or Baner." },
           { title: "Growing Kharadi Tech Hub", description: "Adjacent Kharadi is emerging as Pune's second major IT corridor with global MNCs. Hadapsar students benefit from this growing employment hub for placements and internships." },
           { title: "Moderate Competition for Admission", description: "Hadapsar area engineering colleges have moderate MHT-CET cutoffs (55–75 percentile), making them accessible to a wider range of students who want Pune's IT ecosystem proximity without top-tier competition." },
-          { title: "Food & Social Infrastructure", description: "Hadapsar has diverse and affordable food options (₹60–100/meal), shopping malls, movie theaters, and recreational areas — ensuring a complete student lifestyle without commuting to central Pune." },
+          { title: "Food & Social Infrastructure", description: "Hadapsar has diverse and affordable food options (₹60–100/meal), shopping malls, movie theaters, and recreational areas, ensuring a complete student lifestyle without commuting to central Pune." },
           { title: "Pune-Solapur Highway Connectivity", description: "NH-65 (Pune-Solapur) passes through Hadapsar, providing excellent connectivity for outstation students. Pune Railway Station is 12 km away, and Pune Airport is just 8 km from Hadapsar." },
         ]}
         admissionHeading="Admission to Hadapsar Colleges in Pune 2026"
         admissionSteps={[
           { step: "1", title: "Determine Target Program & Entry Criteria", description: "Engineering colleges in Hadapsar use MHT-CET (55–75 percentile range). MBA colleges use MAH-CET/CAT. BCA/BSc IT colleges use HSC merit. Research each college's specific requirements." },
-          { step: "2", title: "Apply via MHT-CET CAP (Engineering)", description: "For engineering colleges like Indira College, Sinhgad, and Zeal — apply through MHT-CET CAP on cetcell.mahacet.org. List Hadapsar area colleges based on your percentile range." },
+          { step: "2", title: "Apply via MHT-CET CAP (Engineering)", description: "For engineering colleges like Indira College, Sinhgad, and Zeal, apply through MHT-CET CAP on cetcell.mahacet.org. List Hadapsar area colleges based on your percentile range." },
           { step: "3", title: "Direct Application for MBA Programs", description: "DY Patil School of Management Hadapsar accepts direct applications post-MAH-CET. Apply at their website, submit academic documents, and attend GD/PI. Process happens April–June 2026." },
           { step: "4", title: "Visit Campus Before Confirming", description: "Visit Hadapsar colleges in person before admission. Check lab infrastructure, hostel facilities, college transport, and placement cell activity. Talk to final-year students about industry connections." },
           { step: "5", title: "Arrange Student Accommodation Early", description: "Hadapsar accommodation books up by May–June. Start searching PG hostels from April 2026. Check coliving options near Magarpatta and Fatimanagar for best value." },
@@ -96,7 +96,7 @@ export default function CollegesHadapsarPunePage() {
         { label: "Colleges in Kothrud Pune", href: "/colleges-kothrud-pune", icon: "📍" },
         { label: "Colleges in Wakad Pune", href: "/colleges-wakad-pune", icon: "📍" },
         { label: "Colleges with Hostel in Pune", href: "/colleges-in-pune-with-hostel", icon: "🏠" },
-        { label: "All Colleges in Pune — Browse", href: "/colleges", icon: "🏛️" },
+        { label: "All Colleges in Pune. Browse", href: "/colleges", icon: "🏛️" },
         { label: "Government Colleges in Pune", href: "/government-colleges-pune", icon: "🏛️" },
         { label: "Best Engineering Colleges Pune", href: "/engineering-colleges-pune", icon: "⚙️" },
         { label: "Best MBA Colleges in Pune", href: "/mba-colleges-pune", icon: "📈" },

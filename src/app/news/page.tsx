@@ -8,7 +8,7 @@ import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import NewsAlert from "@/components/leads/NewsAlert"
 import { safeJsonLd } from "@/lib/jsonld"
 
-export const revalidate = 3600 // ISR — re-render every hour
+export const revalidate = 3600 // ISR, re-render every hour
 
 export const metadata: Metadata = genMeta({
   title: "Pune College News & Admission Updates 2026 | MHT-CET, NEET, CAT",
@@ -48,8 +48,8 @@ function formatDate(dateStr: string) {
 const latestNews = [
   {
     id: "n1",
-    title: "MHT-CET 2026 Schedule Released — Exams from April 20 to May 15",
-    excerpt: "MHT-CET 2026 timetable announced. PCM paper: April 20 – May 5. PCB paper: May 6–15. Application deadline: February 28, 2026.",
+    title: "MHT-CET 2026 Schedule Released: Exams from April 20 to May 15",
+    excerpt: "MHT-CET 2026 timetable announced. PCM paper: April 20: May 5. PCB paper: May 6–15. Application deadline: February 28, 2026.",
     date: "2026-01-10",
     category: "Exams",
     source: "CET Cell Maharashtra",
@@ -68,7 +68,7 @@ const latestNews = [
   },
   {
     id: "n3",
-    title: "SNAP 2025 Results Declared — SIBM Pune GE-PI-WAT Registration Opens",
+    title: "SNAP 2025 Results Declared: SIBM Pune GE-PI-WAT Registration Opens",
     excerpt: "SNAP 2025 results are out. SIBM Pune GE-PI shortlist cutoff: 98+ percentile. Registration for GE-PI-WAT at siu.edu.in closes February 15, 2026.",
     date: "2026-01-08",
     category: "MBA",
@@ -78,7 +78,7 @@ const latestNews = [
   },
   {
     id: "n4",
-    title: "NEET 2026 Application Form Live — Last Date March 10, 2026",
+    title: "NEET 2026 Application Form Live: Last Date March 10, 2026",
     excerpt: "NTA has opened NEET UG 2026 applications at nta.ac.in. Exam date: May 3, 2026. Application fee: ₹1,700 (General), ₹1,000 (SC/ST).",
     date: "2026-01-12",
     category: "Medical",
@@ -88,7 +88,7 @@ const latestNews = [
   },
   {
     id: "n5",
-    title: "MahaDBT Scholarship 2026 Portal Opens — Apply Before September 30",
+    title: "MahaDBT Scholarship 2026 Portal Opens: Apply Before September 30",
     excerpt: "MahaDBT scholarship portal for 2025–26 academic year is now accepting applications. EBC Freeship, OBC, SC/ST schemes open. Income certificate mandatory.",
     date: "2026-01-15",
     category: "admission",
@@ -99,7 +99,7 @@ const latestNews = [
   {
     id: "n6",
     title: "Pune MBA Colleges See 20% Increase in SNAP Applications for 2026",
-    excerpt: "SNAP 2025–26 applications crossed 1.5 lakh — a 20% increase over previous year. SIBM Pune and SCMHRD remain top choices among test-takers.",
+    excerpt: "SNAP 2025–26 applications crossed 1.5 lakh: a 20% increase over previous year. SIBM Pune and SCMHRD remain top choices among test-takers.",
     date: "2025-12-28",
     category: "MBA",
     source: "CampusLelo Research",
@@ -126,7 +126,7 @@ export default async function NewsPage() {
   const faqSchema = generateFAQSchema([
     { question: "When will MHT-CET 2026 results be declared?", answer: "MHT-CET 2026 results are expected in June 2026. PCM paper results typically come 3–4 weeks after the exam ends. CET Cell Maharashtra announces results at mahacet.org. Subscribe to our WhatsApp alerts to get notified the moment results are declared." },
     { question: "When does NEET 2026 happen?", answer: "NEET UG 2026 is scheduled for May 3, 2026 (Sunday). Application form deadline: March 10, 2026. Results: June 2026. AFMC Pune cutoff for 2026: 665+ NEET score. BJ Medical College Pune: 625+ marks." },
-    { question: "What is the CAP Round 2026 schedule for Pune engineering colleges?", answer: "MHT-CET 2026 CAP rounds for Pune engineering colleges: CAP Round 1 — July 2026, CAP Round 2 — August 2026, Institutional Round — August 2026. Dates will be confirmed by CET Cell after MHT-CET 2026 results in June." },
+    { question: "What is the CAP Round 2026 schedule for Pune engineering colleges?", answer: "MHT-CET 2026 CAP rounds for Pune engineering colleges: CAP Round 1: July 2026, CAP Round 2. August 2026, Institutional Round. August 2026. Dates will be confirmed by CET Cell after MHT-CET 2026 results in June." },
   ])
 
   return (
@@ -144,12 +144,12 @@ export default async function NewsPage() {
               <span className="text-white">News & Updates</span>
             </nav>
             <h1 className="text-3xl font-extrabold text-white mb-2">Pune College News 2026</h1>
-            <p className="text-gray-300 max-w-xl mb-4">MHT-CET results, admission dates, scholarship alerts, and exam news — updated daily.</p>
+            <p className="text-gray-300 max-w-xl mb-4">MHT-CET results, admission dates, scholarship alerts, and exam news, updated daily.</p>
             {/* Alert subscribe */}
             <div className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3 max-w-md">
               <span className="text-xl">📲</span>
               <div className="flex-1">
-                <p className="text-white text-xs font-semibold">Get alerts on WhatsApp — instantly</p>
+                <p className="text-white text-xs font-semibold">Get alerts on WhatsApp, instantly</p>
               </div>
               <InlineLeadForm context="news_alert" />
             </div>
@@ -249,7 +249,7 @@ export default async function NewsPage() {
                 <h3 className="font-extrabold text-gray-900 text-sm mb-4">📅 Key Dates 2026</h3>
                 <div className="space-y-3 text-xs">
                   {[
-                    { event: "MHT-CET 2026", date: "Apr 20 – May 15", color: "text-blue-700" },
+                    { event: "MHT-CET 2026", date: "Apr 20: May 15", color: "text-blue-700" },
                     { event: "NEET UG 2026", date: "May 3, 2026", color: "text-green-700" },
                     { event: "MHT-CET Results", date: "June 2026", color: "text-purple-700" },
                     { event: "CAT 2026", date: "Nov 23, 2026", color: "text-orange-700" },

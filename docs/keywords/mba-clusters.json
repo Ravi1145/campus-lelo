@@ -241,7 +241,7 @@
  },
  {
   "id": "general:delhi-ncr",
-  "name": "General MBA queries — delhi-ncr",
+  "name": "General MBA queries (delhi-ncr)",
   "size": 126,
   "signal": 1074,
   "intent": "informational",
@@ -364,7 +364,7 @@
  },
  {
   "id": "placements-salary:pune",
-  "name": "MBA placements & salary — pune",
+  "name": "MBA placements & salary (pune)",
   "size": 140,
   "signal": 994,
   "intent": "commercial",
@@ -423,7 +423,7 @@
  },
  {
   "id": "fees-funding:pune",
-  "name": "MBA fees, scholarships & loans — pune",
+  "name": "MBA fees, scholarships & loans (pune)",
   "size": 129,
   "signal": 917,
   "intent": "commercial",
@@ -455,7 +455,7 @@
  },
  {
   "id": "best-top-ranking:delhi-ncr",
-  "name": "Best / top MBA colleges — delhi-ncr",
+  "name": "Best / top MBA colleges (delhi-ncr)",
   "size": 111,
   "signal": 912,
   "intent": "commercial",
@@ -607,7 +607,7 @@
  },
  {
   "id": "fees-funding:delhi-ncr",
-  "name": "MBA fees, scholarships & loans — delhi-ncr",
+  "name": "MBA fees, scholarships & loans (delhi-ncr)",
   "size": 97,
   "signal": 782,
   "intent": "commercial",
@@ -765,7 +765,7 @@
  },
  {
   "id": "general:pune",
-  "name": "General MBA queries — pune",
+  "name": "General MBA queries (pune)",
   "size": 95,
   "signal": 738,
   "intent": "informational",
@@ -797,7 +797,7 @@
  },
  {
   "id": "fees-funding:mumbai",
-  "name": "MBA fees, scholarships & loans — mumbai",
+  "name": "MBA fees, scholarships & loans (mumbai)",
   "size": 100,
   "signal": 726,
   "intent": "commercial",
@@ -824,7 +824,7 @@
  },
  {
   "id": "placements-salary:mumbai",
-  "name": "MBA placements & salary — mumbai",
+  "name": "MBA placements & salary (mumbai)",
   "size": 103,
   "signal": 717,
   "intent": "commercial",
@@ -878,7 +878,7 @@
  },
  {
   "id": "cutoff-percentile:delhi-ncr",
-  "name": "MBA cut-offs & percentiles — delhi-ncr",
+  "name": "MBA cut-offs & percentiles (delhi-ncr)",
   "size": 81,
   "signal": 674,
   "intent": "informational",
@@ -937,7 +937,7 @@
  },
  {
   "id": "fees-funding:lucknow",
-  "name": "MBA fees, scholarships & loans — lucknow",
+  "name": "MBA fees, scholarships & loans (lucknow)",
   "size": 85,
   "signal": 651,
   "intent": "commercial",
@@ -964,7 +964,7 @@
  },
  {
   "id": "fees-funding:noida",
-  "name": "MBA fees, scholarships & loans — noida",
+  "name": "MBA fees, scholarships & loans (noida)",
   "size": 76,
   "signal": 624,
   "intent": "commercial",
@@ -993,7 +993,7 @@
  },
  {
   "id": "placements-salary:delhi-ncr",
-  "name": "MBA placements & salary — delhi-ncr",
+  "name": "MBA placements & salary (delhi-ncr)",
   "size": 84,
   "signal": 619,
   "intent": "commercial",
@@ -1022,7 +1022,7 @@
  },
  {
   "id": "placements-salary:lucknow",
-  "name": "MBA placements & salary — lucknow",
+  "name": "MBA placements & salary (lucknow)",
   "size": 74,
   "signal": 579,
   "intent": "commercial",
@@ -1079,7 +1079,7 @@
  },
  {
   "id": "best-top-ranking:noida",
-  "name": "Best / top MBA colleges — noida",
+  "name": "Best / top MBA colleges (noida)",
   "size": 63,
   "signal": 522,
   "intent": "commercial",
@@ -1109,7 +1109,7 @@
  },
  {
   "id": "mode-format:delhi-ncr",
-  "name": "Executive, online, part-time MBA — delhi-ncr",
+  "name": "Executive, online, part-time MBA (delhi-ncr)",
   "size": 55,
   "signal": 494,
   "intent": "informational",
@@ -1138,7 +1138,7 @@
  },
  {
   "id": "general:noida",
-  "name": "General MBA queries — noida",
+  "name": "General MBA queries (noida)",
   "size": 54,
   "signal": 484,
   "intent": "informational",
@@ -1168,7 +1168,7 @@
  },
  {
   "id": "no-exam-direct:delhi-ncr",
-  "name": "MBA without entrance exam / direct admission — delhi-ncr",
+  "name": "MBA without entrance exam / direct admission (delhi-ncr)",
   "size": 49,
   "signal": 478,
   "intent": "transactional",
@@ -1195,7 +1195,7 @@
  },
  {
   "id": "college-specific:pune",
-  "name": "College-specific MBA queries — pune",
+  "name": "College-specific MBA queries (pune)",
   "size": 61,
   "signal": 477,
   "intent": "commercial",
@@ -1224,7 +1224,7 @@
  },
  {
   "id": "best-top-ranking:uttar pradesh",
-  "name": "Best / top MBA colleges — uttar pradesh",
+  "name": "Best / top MBA colleges (uttar pradesh)",
   "size": 54,
   "signal": 466,
   "intent": "commercial",
@@ -1251,7 +1251,7 @@
  },
  {
   "id": "placements-salary:dehradun",
-  "name": "MBA placements & salary — dehradun",
+  "name": "MBA placements & salary (dehradun)",
   "size": 59,
   "signal": 453,
   "intent": "commercial",
@@ -1278,7 +1278,7 @@
  },
  {
   "id": "general:lucknow",
-  "name": "General MBA queries — lucknow",
+  "name": "General MBA queries (lucknow)",
   "size": 56,
   "signal": 450,
   "intent": "informational",
@@ -1305,7 +1305,7 @@
  },
  {
   "id": "fees-funding:dehradun",
-  "name": "MBA fees, scholarships & loans — dehradun",
+  "name": "MBA fees, scholarships & loans (dehradun)",
   "size": 60,
   "signal": 446,
   "intent": "commercial",
@@ -1332,7 +1332,7 @@
  },
  {
   "id": "placements-salary:noida",
-  "name": "MBA placements & salary — noida",
+  "name": "MBA placements & salary (noida)",
   "size": 56,
   "signal": 440,
   "intent": "commercial",
@@ -1362,7 +1362,7 @@
  },
  {
   "id": "fees-funding:hyderabad",
-  "name": "MBA fees, scholarships & loans — hyderabad",
+  "name": "MBA fees, scholarships & loans (hyderabad)",
   "size": 54,
   "signal": 440,
   "intent": "commercial",
@@ -1389,7 +1389,7 @@
  },
  {
   "id": "best-top-ranking:pune",
-  "name": "Best / top MBA colleges — pune",
+  "name": "Best / top MBA colleges (pune)",
   "size": 52,
   "signal": 435,
   "intent": "commercial",
@@ -1416,7 +1416,7 @@
  },
  {
   "id": "fees-funding:bangalore",
-  "name": "MBA fees, scholarships & loans — bangalore",
+  "name": "MBA fees, scholarships & loans (bangalore)",
   "size": 59,
   "signal": 424,
   "intent": "commercial",
@@ -1443,7 +1443,7 @@
  },
  {
   "id": "cutoff-percentile:pune",
-  "name": "MBA cut-offs & percentiles — pune",
+  "name": "MBA cut-offs & percentiles (pune)",
   "size": 54,
   "signal": 418,
   "intent": "commercial",
@@ -1505,7 +1505,7 @@
  },
  {
   "id": "college-specific:mumbai",
-  "name": "College-specific MBA queries — mumbai",
+  "name": "College-specific MBA queries (mumbai)",
   "size": 51,
   "signal": 391,
   "intent": "commercial",
@@ -1559,7 +1559,7 @@
  },
  {
   "id": "general:uttar pradesh",
-  "name": "General MBA queries — uttar pradesh",
+  "name": "General MBA queries (uttar pradesh)",
   "size": 37,
   "signal": 368,
   "intent": "informational",
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "best-top-ranking:hyderabad",
-  "name": "Best / top MBA colleges — hyderabad",
+  "name": "Best / top MBA colleges (hyderabad)",
   "size": 43,
   "signal": 331,
   "intent": "commercial",
@@ -1613,7 +1613,7 @@
  },
  {
   "id": "best-top-ranking:mumbai",
-  "name": "Best / top MBA colleges — mumbai",
+  "name": "Best / top MBA colleges (mumbai)",
   "size": 41,
   "signal": 317,
   "intent": "commercial",
@@ -1640,7 +1640,7 @@
  },
  {
   "id": "best-top-ranking:dehradun",
-  "name": "Best / top MBA colleges — dehradun",
+  "name": "Best / top MBA colleges (dehradun)",
   "size": 36,
   "signal": 315,
   "intent": "commercial",
@@ -1667,7 +1667,7 @@
  },
  {
   "id": "general:dehradun",
-  "name": "General MBA queries — dehradun",
+  "name": "General MBA queries (dehradun)",
   "size": 33,
   "signal": 307,
   "intent": "informational",
@@ -1694,7 +1694,7 @@
  },
  {
   "id": "best-top-ranking:bangalore",
-  "name": "Best / top MBA colleges — bangalore",
+  "name": "Best / top MBA colleges (bangalore)",
   "size": 41,
   "signal": 305,
   "intent": "commercial",
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "cutoff-percentile:mumbai",
-  "name": "MBA cut-offs & percentiles — mumbai",
+  "name": "MBA cut-offs & percentiles (mumbai)",
   "size": 37,
   "signal": 285,
   "intent": "commercial",
@@ -1748,7 +1748,7 @@
  },
  {
   "id": "admission-process:pune",
-  "name": "MBA admission process — pune",
+  "name": "MBA admission process (pune)",
   "size": 37,
   "signal": 283,
   "intent": "transactional",
@@ -1835,7 +1835,7 @@
  },
  {
   "id": "fees-funding:uttar pradesh",
-  "name": "MBA fees, scholarships & loans — uttar pradesh",
+  "name": "MBA fees, scholarships & loans (uttar pradesh)",
   "size": 31,
   "signal": 265,
   "intent": "commercial",
@@ -1862,7 +1862,7 @@
  },
  {
   "id": "admission-process:mumbai",
-  "name": "MBA admission process — mumbai",
+  "name": "MBA admission process (mumbai)",
   "size": 30,
   "signal": 241,
   "intent": "transactional",
@@ -1889,7 +1889,7 @@
  },
  {
   "id": "mode-format:bangalore",
-  "name": "Executive, online, part-time MBA — bangalore",
+  "name": "Executive, online, part-time MBA (bangalore)",
   "size": 33,
   "signal": 240,
   "intent": "informational",
@@ -1916,7 +1916,7 @@
  },
  {
   "id": "best-top-ranking:uttarakhand",
-  "name": "Best / top MBA colleges — uttarakhand",
+  "name": "Best / top MBA colleges (uttarakhand)",
   "size": 24,
   "signal": 240,
   "intent": "commercial",
@@ -1943,7 +1943,7 @@
  },
  {
   "id": "mode-format:mumbai",
-  "name": "Executive, online, part-time MBA — mumbai",
+  "name": "Executive, online, part-time MBA (mumbai)",
   "size": 32,
   "signal": 232,
   "intent": "informational",
@@ -1970,7 +1970,7 @@
  },
  {
   "id": "placements-salary:bangalore",
-  "name": "MBA placements & salary — bangalore",
+  "name": "MBA placements & salary (bangalore)",
   "size": 34,
   "signal": 230,
   "intent": "commercial",
@@ -1997,7 +1997,7 @@
  },
  {
   "id": "admission-process:lucknow",
-  "name": "MBA admission process — lucknow",
+  "name": "MBA admission process (lucknow)",
   "size": 26,
   "signal": 228,
   "intent": "transactional",
@@ -2024,7 +2024,7 @@
  },
  {
   "id": "placements-salary:hyderabad",
-  "name": "MBA placements & salary — hyderabad",
+  "name": "MBA placements & salary (hyderabad)",
   "size": 31,
   "signal": 227,
   "intent": "commercial",
@@ -2080,7 +2080,7 @@
  },
  {
   "id": "best-top-ranking:lucknow",
-  "name": "Best / top MBA colleges — lucknow",
+  "name": "Best / top MBA colleges (lucknow)",
   "size": 27,
   "signal": 222,
   "intent": "commercial",
@@ -2107,7 +2107,7 @@
  },
  {
   "id": "fees-funding:uttarakhand",
-  "name": "MBA fees, scholarships & loans — uttarakhand",
+  "name": "MBA fees, scholarships & loans (uttarakhand)",
   "size": 25,
   "signal": 218,
   "intent": "commercial",
@@ -2193,7 +2193,7 @@
  },
  {
   "id": "general:mumbai",
-  "name": "General MBA queries — mumbai",
+  "name": "General MBA queries (mumbai)",
   "size": 23,
   "signal": 212,
   "intent": "informational",
@@ -2250,7 +2250,7 @@
  },
  {
   "id": "mode-format:pune",
-  "name": "Executive, online, part-time MBA — pune",
+  "name": "Executive, online, part-time MBA (pune)",
   "size": 26,
   "signal": 201,
   "intent": "informational",
@@ -2281,7 +2281,7 @@
  },
  {
   "id": "fees-funding:ghaziabad",
-  "name": "MBA fees, scholarships & loans — ghaziabad",
+  "name": "MBA fees, scholarships & loans (ghaziabad)",
   "size": 28,
   "signal": 200,
   "intent": "commercial",
@@ -2308,7 +2308,7 @@
  },
  {
   "id": "admission-process:delhi-ncr",
-  "name": "MBA admission process — delhi-ncr",
+  "name": "MBA admission process (delhi-ncr)",
   "size": 23,
   "signal": 182,
   "intent": "transactional",
@@ -2337,7 +2337,7 @@
  },
  {
   "id": "placements-salary:uttarakhand",
-  "name": "MBA placements & salary — uttarakhand",
+  "name": "MBA placements & salary (uttarakhand)",
   "size": 25,
   "signal": 181,
   "intent": "commercial",
@@ -2364,7 +2364,7 @@
  },
  {
   "id": "general:hyderabad",
-  "name": "General MBA queries — hyderabad",
+  "name": "General MBA queries (hyderabad)",
   "size": 21,
   "signal": 172,
   "intent": "informational",
@@ -2391,7 +2391,7 @@
  },
  {
   "id": "mode-format:hyderabad",
-  "name": "Executive, online, part-time MBA — hyderabad",
+  "name": "Executive, online, part-time MBA (hyderabad)",
   "size": 25,
   "signal": 169,
   "intent": "informational",
@@ -2418,7 +2418,7 @@
  },
  {
   "id": "no-exam-direct:bangalore",
-  "name": "MBA without entrance exam / direct admission — bangalore",
+  "name": "MBA without entrance exam / direct admission (bangalore)",
   "size": 19,
   "signal": 168,
   "intent": "transactional",
@@ -2474,7 +2474,7 @@
  },
  {
   "id": "no-exam-direct:pune",
-  "name": "MBA without entrance exam / direct admission — pune",
+  "name": "MBA without entrance exam / direct admission (pune)",
   "size": 16,
   "signal": 167,
   "intent": "transactional",
@@ -2506,7 +2506,7 @@
  },
  {
   "id": "college-specific:delhi-ncr",
-  "name": "College-specific MBA queries — delhi-ncr",
+  "name": "College-specific MBA queries (delhi-ncr)",
   "size": 23,
   "signal": 167,
   "intent": "commercial",
@@ -2536,7 +2536,7 @@
  },
  {
   "id": "placements-salary:ghaziabad",
-  "name": "MBA placements & salary — ghaziabad",
+  "name": "MBA placements & salary (ghaziabad)",
   "size": 24,
   "signal": 167,
   "intent": "commercial",
@@ -2563,7 +2563,7 @@
  },
  {
   "id": "mode-format:noida",
-  "name": "Executive, online, part-time MBA — noida",
+  "name": "Executive, online, part-time MBA (noida)",
   "size": 16,
   "signal": 161,
   "intent": "informational",
@@ -2592,7 +2592,7 @@
  },
  {
   "id": "eligibility-profile:pune",
-  "name": "MBA eligibility & profile — pune",
+  "name": "MBA eligibility & profile (pune)",
   "size": 23,
   "signal": 159,
   "intent": "informational",
@@ -2621,7 +2621,7 @@
  },
  {
   "id": "general:bangalore",
-  "name": "General MBA queries — bangalore",
+  "name": "General MBA queries (bangalore)",
   "size": 19,
   "signal": 155,
   "intent": "informational",
@@ -2648,7 +2648,7 @@
  },
  {
   "id": "no-exam-direct:mumbai",
-  "name": "MBA without entrance exam / direct admission — mumbai",
+  "name": "MBA without entrance exam / direct admission (mumbai)",
   "size": 17,
   "signal": 154,
   "intent": "transactional",
@@ -2735,7 +2735,7 @@
  },
  {
   "id": "best-top-ranking:ghaziabad",
-  "name": "Best / top MBA colleges — ghaziabad",
+  "name": "Best / top MBA colleges (ghaziabad)",
   "size": 17,
   "signal": 149,
   "intent": "commercial",
@@ -2762,7 +2762,7 @@
  },
  {
   "id": "admission-process:dehradun",
-  "name": "MBA admission process — dehradun",
+  "name": "MBA admission process (dehradun)",
   "size": 18,
   "signal": 147,
   "intent": "transactional",
@@ -2789,7 +2789,7 @@
  },
  {
   "id": "cutoff-percentile:noida",
-  "name": "MBA cut-offs & percentiles — noida",
+  "name": "MBA cut-offs & percentiles (noida)",
   "size": 15,
   "signal": 146,
   "intent": "informational",
@@ -2904,7 +2904,7 @@
  },
  {
   "id": "eligibility-profile:delhi-ncr",
-  "name": "MBA eligibility & profile — delhi-ncr",
+  "name": "MBA eligibility & profile (delhi-ncr)",
   "size": 17,
   "signal": 139,
   "intent": "informational",
@@ -2994,7 +2994,7 @@
  },
  {
   "id": "exam-dates-prep:pune",
-  "name": "MBA entrance exam dates & prep — pune",
+  "name": "MBA entrance exam dates & prep (pune)",
   "size": 20,
   "signal": 137,
   "intent": "transactional",
@@ -3054,7 +3054,7 @@
  },
  {
   "id": "cutoff-percentile:lucknow",
-  "name": "MBA cut-offs & percentiles — lucknow",
+  "name": "MBA cut-offs & percentiles (lucknow)",
   "size": 15,
   "signal": 130,
   "intent": "commercial",
@@ -3081,7 +3081,7 @@
  },
  {
   "id": "mode-format:lucknow",
-  "name": "Executive, online, part-time MBA — lucknow",
+  "name": "Executive, online, part-time MBA (lucknow)",
   "size": 14,
   "signal": 129,
   "intent": "informational",
@@ -3108,7 +3108,7 @@
  },
  {
   "id": "mode-format:uttar pradesh",
-  "name": "Executive, online, part-time MBA — uttar pradesh",
+  "name": "Executive, online, part-time MBA (uttar pradesh)",
   "size": 13,
   "signal": 129,
   "intent": "informational",
@@ -3134,7 +3134,7 @@
  },
  {
   "id": "admission-process:uttar pradesh",
-  "name": "MBA admission process — uttar pradesh",
+  "name": "MBA admission process (uttar pradesh)",
   "size": 15,
   "signal": 125,
   "intent": "transactional",
@@ -3191,7 +3191,7 @@
  },
  {
   "id": "college-specific:noida",
-  "name": "College-specific MBA queries — noida",
+  "name": "College-specific MBA queries (noida)",
   "size": 15,
   "signal": 123,
   "intent": "commercial",
@@ -3218,7 +3218,7 @@
  },
  {
   "id": "college-specific:ghaziabad",
-  "name": "College-specific MBA queries — ghaziabad",
+  "name": "College-specific MBA queries (ghaziabad)",
   "size": 15,
   "signal": 120,
   "intent": "commercial",
@@ -3275,7 +3275,7 @@
  },
  {
   "id": "no-exam-direct:lucknow",
-  "name": "MBA without entrance exam / direct admission — lucknow",
+  "name": "MBA without entrance exam / direct admission (lucknow)",
   "size": 11,
   "signal": 119,
   "intent": "transactional",
@@ -3299,7 +3299,7 @@
  },
  {
   "id": "college-specific:lucknow",
-  "name": "College-specific MBA queries — lucknow",
+  "name": "College-specific MBA queries (lucknow)",
   "size": 12,
   "signal": 119,
   "intent": "navigational",
@@ -3324,7 +3324,7 @@
  },
  {
   "id": "no-exam-direct:noida",
-  "name": "MBA without entrance exam / direct admission — noida",
+  "name": "MBA without entrance exam / direct admission (noida)",
   "size": 11,
   "signal": 116,
   "intent": "transactional",
@@ -3402,7 +3402,7 @@
  },
  {
   "id": "general:uttarakhand",
-  "name": "General MBA queries — uttarakhand",
+  "name": "General MBA queries (uttarakhand)",
   "size": 12,
   "signal": 115,
   "intent": "informational",
@@ -3427,7 +3427,7 @@
  },
  {
   "id": "no-exam-direct:hyderabad",
-  "name": "MBA without entrance exam / direct admission — hyderabad",
+  "name": "MBA without entrance exam / direct admission (hyderabad)",
   "size": 12,
   "signal": 114,
   "intent": "transactional",
@@ -3452,7 +3452,7 @@
  },
  {
   "id": "exam-dates-prep:mumbai",
-  "name": "MBA entrance exam dates & prep — mumbai",
+  "name": "MBA entrance exam dates & prep (mumbai)",
   "size": 16,
   "signal": 112,
   "intent": "transactional",
@@ -3479,7 +3479,7 @@
  },
  {
   "id": "eligibility-profile:lucknow",
-  "name": "MBA eligibility & profile — lucknow",
+  "name": "MBA eligibility & profile (lucknow)",
   "size": 13,
   "signal": 111,
   "intent": "informational",
@@ -3505,7 +3505,7 @@
  },
  {
   "id": "exam-dates-prep:uttar pradesh",
-  "name": "MBA entrance exam dates & prep — uttar pradesh",
+  "name": "MBA entrance exam dates & prep (uttar pradesh)",
   "size": 16,
   "signal": 105,
   "intent": "transactional",
@@ -3532,7 +3532,7 @@
  },
  {
   "id": "mode-format:dehradun",
-  "name": "Executive, online, part-time MBA — dehradun",
+  "name": "Executive, online, part-time MBA (dehradun)",
   "size": 10,
   "signal": 100,
   "intent": "informational",
@@ -3555,7 +3555,7 @@
  },
  {
   "id": "eligibility-profile:mumbai",
-  "name": "MBA eligibility & profile — mumbai",
+  "name": "MBA eligibility & profile (mumbai)",
   "size": 11,
   "signal": 96,
   "intent": "informational",
@@ -3579,7 +3579,7 @@
  },
  {
   "id": "placements-salary:uttar pradesh",
-  "name": "MBA placements & salary — uttar pradesh",
+  "name": "MBA placements & salary (uttar pradesh)",
   "size": 10,
   "signal": 95,
   "intent": "commercial",
@@ -3602,7 +3602,7 @@
  },
  {
   "id": "admission-process:noida",
-  "name": "MBA admission process — noida",
+  "name": "MBA admission process (noida)",
   "size": 9,
   "signal": 94,
   "intent": "transactional",
@@ -3626,7 +3626,7 @@
  },
  {
   "id": "cutoff-percentile:dehradun",
-  "name": "MBA cut-offs & percentiles — dehradun",
+  "name": "MBA cut-offs & percentiles (dehradun)",
   "size": 8,
   "signal": 87,
   "intent": "informational",
@@ -3647,7 +3647,7 @@
  },
  {
   "id": "admission-process:uttarakhand",
-  "name": "MBA admission process — uttarakhand",
+  "name": "MBA admission process (uttarakhand)",
   "size": 10,
   "signal": 86,
   "intent": "transactional",
@@ -3670,7 +3670,7 @@
  },
  {
   "id": "mode-format:ghaziabad",
-  "name": "Executive, online, part-time MBA — ghaziabad",
+  "name": "Executive, online, part-time MBA (ghaziabad)",
   "size": 11,
   "signal": 85,
   "intent": "informational",
@@ -3694,7 +3694,7 @@
  },
  {
   "id": "cutoff-percentile:uttarakhand",
-  "name": "MBA cut-offs & percentiles — uttarakhand",
+  "name": "MBA cut-offs & percentiles (uttarakhand)",
   "size": 12,
   "signal": 83,
   "intent": "commercial",
@@ -3719,7 +3719,7 @@
  },
  {
   "id": "mode-format:uttarakhand",
-  "name": "Executive, online, part-time MBA — uttarakhand",
+  "name": "Executive, online, part-time MBA (uttarakhand)",
   "size": 9,
   "signal": 83,
   "intent": "informational",
@@ -3741,7 +3741,7 @@
  },
  {
   "id": "general:ghaziabad",
-  "name": "General MBA queries — ghaziabad",
+  "name": "General MBA queries (ghaziabad)",
   "size": 8,
   "signal": 74,
   "intent": "informational",
@@ -3762,7 +3762,7 @@
  },
  {
   "id": "admission-process:bangalore",
-  "name": "MBA admission process — bangalore",
+  "name": "MBA admission process (bangalore)",
   "size": 8,
   "signal": 69,
   "intent": "transactional",
@@ -3783,7 +3783,7 @@
  },
  {
   "id": "eligibility-profile:noida",
-  "name": "MBA eligibility & profile — noida",
+  "name": "MBA eligibility & profile (noida)",
   "size": 7,
   "signal": 66,
   "intent": "informational",
@@ -3803,7 +3803,7 @@
  },
  {
   "id": "admission-process:hyderabad",
-  "name": "MBA admission process — hyderabad",
+  "name": "MBA admission process (hyderabad)",
   "size": 9,
   "signal": 66,
   "intent": "transactional",
@@ -3825,7 +3825,7 @@
  },
  {
   "id": "eligibility-profile:dehradun",
-  "name": "MBA eligibility & profile — dehradun",
+  "name": "MBA eligibility & profile (dehradun)",
   "size": 8,
   "signal": 66,
   "intent": "informational",
@@ -3846,7 +3846,7 @@
  },
  {
   "id": "exam-dates-prep:bangalore",
-  "name": "MBA entrance exam dates & prep — bangalore",
+  "name": "MBA entrance exam dates & prep (bangalore)",
   "size": 8,
   "signal": 60,
   "intent": "informational",
@@ -3867,7 +3867,7 @@
  },
  {
   "id": "specialization:finance:mumbai",
-  "name": "MBA in finance — mumbai",
+  "name": "MBA in finance (mumbai)",
   "size": 9,
   "signal": 59,
   "intent": "informational",
@@ -3889,7 +3889,7 @@
  },
  {
   "id": "no-exam-direct:dehradun",
-  "name": "MBA without entrance exam / direct admission — dehradun",
+  "name": "MBA without entrance exam / direct admission (dehradun)",
   "size": 5,
   "signal": 58,
   "intent": "transactional",
@@ -3907,7 +3907,7 @@
  },
  {
   "id": "exam-dates-prep:dehradun",
-  "name": "MBA entrance exam dates & prep — dehradun",
+  "name": "MBA entrance exam dates & prep (dehradun)",
   "size": 7,
   "signal": 57,
   "intent": "transactional",
@@ -3927,7 +3927,7 @@
  },
  {
   "id": "admission-process:ghaziabad",
-  "name": "MBA admission process — ghaziabad",
+  "name": "MBA admission process (ghaziabad)",
   "size": 7,
   "signal": 56,
   "intent": "transactional",
@@ -3947,7 +3947,7 @@
  },
  {
   "id": "exam-dates-prep:lucknow",
-  "name": "MBA entrance exam dates & prep — lucknow",
+  "name": "MBA entrance exam dates & prep (lucknow)",
   "size": 11,
   "signal": 56,
   "intent": "transactional",
@@ -3971,7 +3971,7 @@
  },
  {
   "id": "college-specific:uttarakhand",
-  "name": "College-specific MBA queries — uttarakhand",
+  "name": "College-specific MBA queries (uttarakhand)",
   "size": 6,
   "signal": 53,
   "intent": "commercial",
@@ -3990,7 +3990,7 @@
  },
  {
   "id": "no-exam-direct:ghaziabad",
-  "name": "MBA without entrance exam / direct admission — ghaziabad",
+  "name": "MBA without entrance exam / direct admission (ghaziabad)",
   "size": 4,
   "signal": 49,
   "intent": "transactional",
@@ -4007,7 +4007,7 @@
  },
  {
   "id": "specialization:finance:pune",
-  "name": "MBA in finance — pune",
+  "name": "MBA in finance (pune)",
   "size": 7,
   "signal": 47,
   "intent": "informational",
@@ -4027,7 +4027,7 @@
  },
  {
   "id": "specialization:marketing:mumbai",
-  "name": "MBA in marketing — mumbai",
+  "name": "MBA in marketing (mumbai)",
   "size": 6,
   "signal": 47,
   "intent": "informational",
@@ -4046,7 +4046,7 @@
  },
  {
   "id": "specialization:hr:delhi-ncr",
-  "name": "MBA in hr — delhi-ncr",
+  "name": "MBA in hr (delhi-ncr)",
   "size": 6,
   "signal": 47,
   "intent": "informational",
@@ -4088,7 +4088,7 @@
  },
  {
   "id": "eligibility-profile:uttarakhand",
-  "name": "MBA eligibility & profile — uttarakhand",
+  "name": "MBA eligibility & profile (uttarakhand)",
   "size": 6,
   "signal": 46,
   "intent": "informational",
@@ -4107,7 +4107,7 @@
  },
  {
   "id": "exam-dates-prep:delhi-ncr",
-  "name": "MBA entrance exam dates & prep — delhi-ncr",
+  "name": "MBA entrance exam dates & prep (delhi-ncr)",
   "size": 8,
   "signal": 45,
   "intent": "transactional",
@@ -4130,7 +4130,7 @@
  },
  {
   "id": "specialization:healthcare:delhi-ncr",
-  "name": "MBA in healthcare — delhi-ncr",
+  "name": "MBA in healthcare (delhi-ncr)",
   "size": 5,
   "signal": 45,
   "intent": "informational",
@@ -4150,7 +4150,7 @@
  },
  {
   "id": "exam-dates-prep:noida",
-  "name": "MBA entrance exam dates & prep — noida",
+  "name": "MBA entrance exam dates & prep (noida)",
   "size": 6,
   "signal": 44,
   "intent": "transactional",
@@ -4169,7 +4169,7 @@
  },
  {
   "id": "cutoff-percentile:ghaziabad",
-  "name": "MBA cut-offs & percentiles — ghaziabad",
+  "name": "MBA cut-offs & percentiles (ghaziabad)",
   "size": 5,
   "signal": 37,
   "intent": "informational",
@@ -4187,7 +4187,7 @@
  },
  {
   "id": "cutoff-percentile:bangalore",
-  "name": "MBA cut-offs & percentiles — bangalore",
+  "name": "MBA cut-offs & percentiles (bangalore)",
   "size": 4,
   "signal": 36,
   "intent": "commercial",
@@ -4204,7 +4204,7 @@
  },
  {
   "id": "exam-dates-prep:ghaziabad",
-  "name": "MBA entrance exam dates & prep — ghaziabad",
+  "name": "MBA entrance exam dates & prep (ghaziabad)",
   "size": 6,
   "signal": 36,
   "intent": "transactional",
@@ -4223,7 +4223,7 @@
  },
  {
   "id": "specialization:healthcare:lucknow",
-  "name": "MBA in healthcare — lucknow",
+  "name": "MBA in healthcare (lucknow)",
   "size": 4,
   "signal": 36,
   "intent": "informational",
@@ -4240,7 +4240,7 @@
  },
  {
   "id": "eligibility-profile:bangalore",
-  "name": "MBA eligibility & profile — bangalore",
+  "name": "MBA eligibility & profile (bangalore)",
   "size": 4,
   "signal": 35,
   "intent": "informational",
@@ -4257,7 +4257,7 @@
  },
  {
   "id": "specialization:business-analytics:pune",
-  "name": "MBA in business analytics — pune",
+  "name": "MBA in business analytics (pune)",
   "size": 5,
   "signal": 32,
   "intent": "informational",
@@ -4275,7 +4275,7 @@
  },
  {
   "id": "specialization:hr:pune",
-  "name": "MBA in hr — pune",
+  "name": "MBA in hr (pune)",
   "size": 5,
   "signal": 31,
   "intent": "informational",
@@ -4293,7 +4293,7 @@
  },
  {
   "id": "specialization:hr:mumbai",
-  "name": "MBA in hr — mumbai",
+  "name": "MBA in hr (mumbai)",
   "size": 5,
   "signal": 30,
   "intent": "informational",
@@ -4311,7 +4311,7 @@
  },
  {
   "id": "specialization:marketing:pune",
-  "name": "MBA in marketing — pune",
+  "name": "MBA in marketing (pune)",
   "size": 4,
   "signal": 29,
   "intent": "informational",
@@ -4328,7 +4328,7 @@
  },
  {
   "id": "specialization:finance:delhi-ncr",
-  "name": "MBA in finance — delhi-ncr",
+  "name": "MBA in finance (delhi-ncr)",
   "size": 4,
   "signal": 21,
   "intent": "informational",
@@ -4347,7 +4347,7 @@
  },
  {
   "id": "eligibility-profile:hyderabad",
-  "name": "MBA eligibility & profile — hyderabad",
+  "name": "MBA eligibility & profile (hyderabad)",
   "size": 4,
   "signal": 16,
   "intent": "informational",

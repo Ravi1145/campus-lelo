@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const course = getCourseBySlug(slug)
   if (!course) return {}
   return genMeta({
-    title: `${course.fullName} in Pune 2025 — Fees, Top Colleges & Salary`,
+    title: `${course.fullName} in Pune 2025: Fees, Top Colleges & Salary`,
     description: `${course.fullName} in Pune: ${course.duration} ${course.level} program. Fees: ${formatFeesRange(course.avgFees.min, course.avgFees.max)}. Top colleges: ${course.topColleges.slice(0, 3).join(", ")}.`,
     path: `/courses/${slug}`,
     keywords: [`${course.name} in pune`, `${course.fullName.toLowerCase()}`, `${course.name.toLowerCase()} colleges pune`, "courses in pune"],

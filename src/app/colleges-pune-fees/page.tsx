@@ -67,7 +67,7 @@ export default function CollegesPuneFeesPage() {
         ]}
         introHeading="College Fees in Pune 2026: The Complete Breakdown"
         introParagraphs={[
-          "Understanding the fee structure of Pune colleges is essential for financial planning before admission. Fees vary dramatically by stream, institution type, and quota: from ₹15,000/year at government arts colleges to ₹22L/year at private medical colleges. This comprehensive guide breaks down fees for all major streams and institution types in Pune.",
+          "Understanding the fee structure of Pune colleges is essential for financial planning before admission. Fees vary dramatically by stream, institution type, and quota: from ₹15,000/year at government arts colleges to ₹22L/year at private medical colleges. This full guide breaks down fees for all major streams and institution types in Pune.",
           "The Maharashtra government regulates fees for all government and government-aided colleges. AICTE regulates engineering college fees for state-quota seats. For management quota and deemed university seats, fees are set by the Fee Regulation Authority (FRA) in Maharashtra, which prevents arbitrary fee hikes. This regulatory framework protects students from exploitative pricing.",
           "Beyond base tuition, students should budget for additional expenses: examination fees (₹1,000-5,000/semester), library and laboratory fees (₹2,000-10,000/year), development fees (allowed up to ₹5,000/year in aided colleges), hostel fees (₹60,000-1.5L/year), and living expenses (₹8,000-15,000/month in Pune depending on area and lifestyle).",
         ]}

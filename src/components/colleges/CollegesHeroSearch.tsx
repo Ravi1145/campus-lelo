@@ -27,7 +27,7 @@ export default function CollegesHeroSearch() {
             id="colleges-hero-q"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search college, course or exam — e.g. COEP, MBA, CAT"
+            placeholder="Search college, course or exam, e.g. COEP, MBA, CAT"
             className="w-full rounded-xl bg-gray-50 py-3.5 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#024692]/30"
           />
         </div>

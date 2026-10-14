@@ -231,7 +231,7 @@ export default function CollegeGrid() {
                 <Search className="h-9 w-9 text-[#012858]" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-extrabold text-[#012858]">No colleges match these filters</h3>
-              <p className="mx-auto mt-2 max-w-md text-sm text-gray-600">Try removing a filter or searching a broader term. Or tell us what you need and a counsellor will shortlist for you — free.</p>
+              <p className="mx-auto mt-2 max-w-md text-sm text-gray-600">Try removing a filter or searching a broader term. Or tell us what you need and a counsellor will shortlist for you, free.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <button type="button" onClick={clearAll} className="rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 hover:bg-[#C90D11]">Clear all filters</button>
                 <a href="/counselling" className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#012858] ring-1 ring-gray-200 hover:ring-[#012858]">

@@ -44,7 +44,7 @@ const rawBtechColleges: BTechCollege[] = [
     topRecruiters: ["TCS", "Infosys", "L&T", "Cummins", "Volkswagen", "Bosch", "Wipro", "Cognizant"],
     mhtCetCutoff: "99+ percentile",
     jeeMainCutoff: "Top 5,000 rank",
-    highlights: ["Est. 1854 — India's oldest engineering college", "NIRF #49", "Avg ₹12 LPA", "Govt fees ₹80K/yr", "NAAC A+"],
+    highlights: ["Est. 1854: India's oldest engineering college", "NIRF #49", "Avg ₹12 LPA", "Govt fees ₹80K/yr", "NAAC A+"],
   },
   {
     rank: 2,
@@ -211,10 +211,10 @@ const rawBtechFAQs = {
     { question: "Which is the best BTech college in Pune?", answer: "COEP (College of Engineering Pune) is the best BTech college in Pune with NIRF rank 49, NAAC A+ accreditation, and an average placement of ₹12 LPA. For Computer Science specifically, PICT Pune is considered the best with Goldman Sachs and Deutsche Bank recruiting on campus. For newer branches like AI/ML, MIT-WPU and SIT Pune are top choices." },
     { question: "What is the BTech fee in Pune colleges?", answer: "BTech fees in Pune range from ₹80,000/year at COEP (government) to ₹4.8 lakh/year at SIT Pune (deemed). Autonomous SPPU-affiliated colleges like PICT, VIT Pune, and PCCOE charge ₹1.4L–2.2L/year. Total 4-year BTech cost ranges from ₹3.2L (COEP) to ₹19.2L (SIT Pune)." },
     { question: "What entrance exam is required for BTech in Pune?", answer: "MHT-CET (Maharashtra Common Entrance Test) is the primary exam for BTech admission in Pune through DTE Maharashtra's CAP process. JEE Main scores are also accepted at many colleges for management quota seats. Deemed universities like SIT Pune and MIT-WPU accept SET (Symbiosis Entrance Test) or their own tests." },
-    { question: "What is the MHT-CET cutoff for top BTech colleges in Pune?", answer: "MHT-CET 2026 cutoffs (Open category, CSE): COEP: 99+ percentile, PICT: 97–99 percentile, VIT Pune: 92–97 percentile, PCCOE: 85–93 percentile, MIT-WPU: 82–90 percentile, DYPCOE: 70–82 percentile. Cutoffs vary significantly by branch — Mechanical and Civil are lower than CS/IT." },
+    { question: "What is the MHT-CET cutoff for top BTech colleges in Pune?", answer: "MHT-CET 2026 cutoffs (Open category, CSE): COEP: 99+ percentile, PICT: 97–99 percentile, VIT Pune: 92–97 percentile, PCCOE: 85–93 percentile, MIT-WPU: 82–90 percentile, DYPCOE: 70–82 percentile. Cutoffs vary significantly by branch. Mechanical and Civil are lower than CS/IT." },
     { question: "What is the average placement package for BTech from Pune?", answer: "Average BTech placement packages in Pune (2024): COEP ₹12 LPA, SIT Pune ₹9.8 LPA, VIT Pune ₹8.5 LPA, PICT ₹7.5 LPA, MIT-WPU ₹7.2 LPA, PCCOE ₹6.5 LPA, DYPCOE ₹5.1 LPA. CSE branch typically gets 30–50% higher packages than the college average." },
     { question: "Is Pune good for BTech education?", answer: "Yes, Pune is one of India's best cities for BTech education. The city has 50+ AICTE-approved engineering colleges, India's largest auto manufacturing cluster (Tata Motors, Bajaj, Mahindra), a major IT corridor (Hinjewadi, Kharadi), and defence/aerospace R&D (DRDO, HAL). BTech graduates from Pune colleges have direct access to diverse core and IT sector placements." },
-    { question: "Can I do BTech in Pune without JEE?", answer: "Yes. BTech admission in Pune is primarily through MHT-CET — JEE is not mandatory. MHT-CET is a Maharashtra state exam. For management quota seats, some colleges accept 12th PCM marks directly. Deemed universities like MIT-WPU accept their own entrance test or MHT-CET without requiring JEE." },
+    { question: "Can I do BTech in Pune without JEE?", answer: "Yes. BTech admission in Pune is primarily through MHT-CET. JEE is not mandatory. MHT-CET is a Maharashtra state exam. For management quota seats, some colleges accept 12th PCM marks directly. Deemed universities like MIT-WPU accept their own entrance test or MHT-CET without requiring JEE." },
     { question: "Which BTech branch is best in Pune?", answer: "Computer Science Engineering (CSE) and Information Technology (IT) are the highest-paying BTech branches in Pune with ₹8–25 LPA starting packages. Mechanical Engineering benefits from Pune's auto sector. Electronics (E&TC) is strong at COEP and VIT Pune. AI & ML is a fast-growing branch at MIT-WPU and SIT Pune." },
   ],
 }

@@ -38,10 +38,10 @@ export default function MBABusinessAnalytics() {
           { value: "+30%", label: "Salary Premium" },
         ]}
         colleges={mbaColleges.filter(c => c.specializations.includes("Business Analytics") || c.specializations.includes("Data Analytics"))}
-        introHeading="MBA Business Analytics in Pune — The Fastest Growing MBA Specialization"
+        introHeading="MBA Business Analytics in Pune. The Fastest Growing MBA Specialization"
         introParagraphs={[
           "MBA Business Analytics is the fastest growing MBA specialization in Pune, driven by explosive demand from Pune's IT sector (500+ companies in Hinjewadi, Kharadi), manufacturing companies digitizing operations, and BFSI firms implementing data-driven decision making.",
-          "Unlike traditional MBA specializations, Business Analytics combines management skills with technical data skills — Python, R, SQL, Machine Learning, and Tableau. This combination makes Analytics MBA graduates 40–60% more employable in Pune's IT corridor compared to single-domain specializations.",
+          "Unlike traditional MBA specializations, Business Analytics combines management skills with technical data skills. Python, R, SQL, Machine Learning, and Tableau. This combination makes Analytics MBA graduates 40–60% more employable in Pune's IT corridor compared to single-domain specializations.",
           "Pune's position as India's second-largest IT city (after Bengaluru) ensures that MBA Analytics graduates from good Pune colleges receive 5–8 campus offers on average, with a significant portion from Pune-based companies like Persistent, Zensar, KPIT, and Cyient.",
         ]}
         faqs={faqs}
@@ -52,7 +52,7 @@ export default function MBABusinessAnalytics() {
           { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
           { label: "Data Science Colleges Pune", href: "/data-science-colleges-pune" },
         ]}
-        ctaHeading="MBA Analytics — Is It Right for You?"
+        ctaHeading="MBA Analytics: Is It Right for You?"
         ctaSubtext="Free career counselling to assess if MBA Analytics fits your background and career goals."
       />
       <RelatedMbaSearches path="/mba-colleges-in-pune-for-business-analytics" />

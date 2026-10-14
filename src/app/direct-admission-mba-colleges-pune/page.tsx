@@ -23,10 +23,10 @@ export const metadata: Metadata = genMeta({
 const mbaCollegesDirectAdmission = [
   {
     name: "SIBM Pune (Symbiosis Institute of Business Management)",
-    mq: "No MQ — SNAP mandatory",
+    mq: "No MQ: SNAP mandatory",
     regularFees: "₹21L (2-yr total)",
     mgmtFees: "Not available",
-    note: "Must clear SNAP — no direct admission route",
+    note: "Must clear SNAP: no direct admission route",
     directAvailable: false,
   },
   {
@@ -34,7 +34,7 @@ const mbaCollegesDirectAdmission = [
     mq: "~20%",
     regularFees: "₹5L–₹7L/yr",
     mgmtFees: "₹7L–₹10L/yr",
-    note: "Direct admission possible — contact directly",
+    note: "Direct admission possible: contact directly",
     directAvailable: true,
   },
   {
@@ -74,8 +74,8 @@ const mbaCollegesDirectAdmission = [
 const pgdmVsMba = [
   {
     aspect: "Degree Type",
-    mba: "MBA — University degree (SPPU affiliated)",
-    pgdm: "PGDM — Diploma (AICTE approved; MBA equivalence only where AIU has granted it)",
+    mba: "MBA: University degree (SPPU affiliated)",
+    pgdm: "PGDM: Diploma (AICTE approved; MBA equivalence only where AIU has granted it)",
   },
   {
     aspect: "Regulatory Body",
@@ -84,13 +84,13 @@ const pgdmVsMba = [
   },
   {
     aspect: "Direct Admission",
-    mba: "Possible — management quota available",
-    pgdm: "Generally easier — autonomous institutions have flexibility",
+    mba: "Possible: management quota available",
+    pgdm: "Generally easier: autonomous institutions have flexibility",
   },
   {
     aspect: "Entrance Exam",
     mba: "CAT/MAT/CMAT/SNAP varies by college",
-    pgdm: "Often MAT/CMAT/own test — more flexible",
+    pgdm: "Often MAT/CMAT/own test: more flexible",
   },
   {
     aspect: "Fee Range",
@@ -100,7 +100,7 @@ const pgdmVsMba = [
   {
     aspect: "Industry Value",
     mba: "Traditional preference in large companies",
-    pgdm: "Equally valued — accepted across industries",
+    pgdm: "Equally valued: accepted across industries",
   },
 ]
 
@@ -128,7 +128,7 @@ const faqs = [
   {
     question: "What documents are needed for direct MBA admission in Pune?",
     answer:
-      "For direct MBA admission you need: graduation certificate and all semester marksheets, Class 10 and 12 certificates, entrance exam scorecard (if available — MAT/CMAT preferred but may not be mandatory for MQ), work experience certificate (if any), photo ID (Aadhar), recent passport photos, migration certificate, and gap certificate if there is a break in education. Some colleges also require a Statement of Purpose (SOP).",
+      "For direct MBA admission you need: graduation certificate and all semester marksheets, Class 10 and 12 certificates, entrance exam scorecard (if available. MAT/CMAT preferred but may not be mandatory for MQ), work experience certificate (if any), photo ID (Aadhar), recent passport photos, migration certificate, and gap certificate if there is a break in education. Some colleges also require a Statement of Purpose (SOP).",
   },
   {
     question: "Is management quota MBA from Pune colleges recognized by employers?",
@@ -190,8 +190,8 @@ export default function DirectAdmissionMBAPage() {
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl mb-6">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Yes — direct MBA admission is possible in Pune without SNAP or CAT</strong> at non-Symbiosis
-                colleges. <strong>SIBM Pune requires SNAP</strong> — no management quota there. MIT-SOM, BIMM Pune,
+                <strong>Yes: direct MBA admission is possible in Pune without SNAP or CAT</strong> at non-Symbiosis
+                colleges. <strong>SIBM Pune requires SNAP</strong>: no management quota there. MIT-SOM, BIMM Pune,
                 Indira Institute, and IIMM Pune offer direct/management quota MBA seats. Fees range from{" "}
                 <strong>₹5L–₹12L/year</strong> for direct admission.
               </p>
@@ -226,19 +226,19 @@ export default function DirectAdmissionMBAPage() {
           {/* Section 1: SNAP/CAT vs Direct */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-orange-500" /> SNAP/CAT Required vs Direct Admission — Pune MBA Colleges
+              <BookOpen className="w-5 h-5 text-orange-500" /> SNAP/CAT Required vs Direct Admission. Pune MBA Colleges
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2 text-sm text-red-700">
-                  Symbiosis Group — SNAP Mandatory
+                  Symbiosis Group: SNAP Mandatory
                 </h3>
                 <ul className="space-y-2">
                   {[
-                    "SIBM Pune — SNAP 95+ percentile required",
-                    "SCMHRD Pune — SNAP 97+ percentile required",
-                    "SIIB Pune — SNAP 90+ percentile required",
-                    "SIMS Pune — SNAP 85+ percentile required",
+                    "SIBM Pune: SNAP 95+ percentile required",
+                    "SCMHRD Pune: SNAP 97+ percentile required",
+                    "SIIB Pune: SNAP 90+ percentile required",
+                    "SIMS Pune: SNAP 85+ percentile required",
                     "No management quota at any Symbiosis institution",
                     "Direct admission is NOT possible at SIBM/Symbiosis",
                   ].map((item, i) => (
@@ -251,15 +251,15 @@ export default function DirectAdmissionMBAPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2 text-sm text-green-700">
-                  Non-Symbiosis — Direct Admission Possible
+                  Non-Symbiosis: Direct Admission Possible
                 </h3>
                 <ul className="space-y-2">
                   {[
-                    "MIT-SOM — MAT/CMAT preferred, MQ available",
-                    "BIMM Pune — accepts direct + MAT/CMAT",
-                    "Indira Institute — flexible MQ criteria",
-                    "IIMM Pune — management quota available",
-                    "AIMS Pune — direct admission possible",
+                    "MIT-SOM: MAT/CMAT preferred, MQ available",
+                    "BIMM Pune: accepts direct + MAT/CMAT",
+                    "Indira Institute: flexible MQ criteria",
+                    "IIMM Pune: management quota available",
+                    "AIMS Pune: direct admission possible",
                     "CAT score helpful but NOT mandatory for MQ",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -276,7 +276,7 @@ export default function DirectAdmissionMBAPage() {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
               <h2 className="text-lg font-bold text-gray-900">
-                MBA Colleges in Pune with Management Quota — 2026 Fees
+                MBA Colleges in Pune with Management Quota, 2026 Fees
               </h2>
               <p className="text-xs text-gray-400 mt-0.5">
                 Direct admission availability, fees, and notes. Data verified 2026.
@@ -374,7 +374,7 @@ export default function DirectAdmissionMBAPage() {
           {/* Section 4: PGDM vs MBA */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">PGDM vs MBA in Pune — Which Accepts Direct Admission?</h2>
+              <h2 className="text-lg font-bold text-gray-900">PGDM vs MBA in Pune. Which Accepts Direct Admission?</h2>
               <p className="text-xs text-gray-400 mt-0.5">
                 Key differences for direct admission seekers
               </p>
@@ -416,12 +416,12 @@ export default function DirectAdmissionMBAPage() {
                 {
                   step: "Verify your eligibility",
                   detail:
-                    "Ensure you have at least 50% in graduation (any stream). Check if the college requires a minimum entrance score — many don't for MQ seats.",
+                    "Ensure you have at least 50% in graduation (any stream). Check if the college requires a minimum entrance score, many don't for MQ seats.",
                 },
                 {
                   step: "Contact college admission office",
                   detail:
-                    "Call or visit directly and ask about 'management quota' or 'institute-level seats'. Avoid intermediary agents — deal directly with the college.",
+                    "Call or visit directly and ask about 'management quota' or 'institute-level seats'. Avoid intermediary agents: deal directly with the college.",
                 },
                 {
                   step: "Submit application with documents",
@@ -455,7 +455,7 @@ export default function DirectAdmissionMBAPage() {
           {/* FAQ Section */}
           <div className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-5">
-              Frequently Asked Questions — Direct MBA Admission in Pune
+              Frequently Asked Questions: Direct MBA Admission in Pune
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -473,8 +473,8 @@ export default function DirectAdmissionMBAPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+              { label: "Top 10 MBA Colleges. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+              { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
@@ -494,7 +494,7 @@ export default function DirectAdmissionMBAPage() {
             <div className="text-white">
               <p className="font-bold text-lg">Need guidance for direct MBA admission?</p>
               <p className="text-blue-200 text-sm">
-                Our counsellors help you navigate management quota and find the right MBA college in Pune.
+                Our counsellors help you work through management quota and find the right MBA college in Pune.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">

@@ -12,7 +12,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
   title: "MBA & PGDM Guide 2027: Exams, Colleges & Cut-offs",
-  description: "Everything about MBA and PGDM admissions in India: entrance exams and dates, colleges in Pune, Noida and Delhi NCR, cut-offs, fees, placements and how to choose — sourced, not guessed.",
+  description: "Everything about MBA and PGDM admissions in India: entrance exams and dates, colleges in Pune, Noida and Delhi NCR, cut-offs, fees, placements and how to choose, sourced, not guessed.",
   path: "/mba",
   keywords: ["mba", "mba admission 2027", "pgdm admission", "mba entrance exams", "mba colleges in india", "mba guide"],
 })
@@ -87,7 +87,7 @@ export default function MbaHubPage() {
             MBA &amp; PGDM in India: exams, colleges, cut-offs and guides
           </h1>
           <p className="hero-in mt-4 max-w-2xl text-base leading-relaxed text-blue-100 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
-            One place to start your MBA or PGDM search. Pick your city, your exam or your question — every page links to its official sources, and we show no number we cannot verify.
+            One place to start your MBA or PGDM search. Pick your city, your exam or your question, every page links to its official sources, and we show no number we cannot verify.
           </p>
           <p className="hero-in mt-3 text-xs text-blue-200" style={{ "--i": 2 } as React.CSSProperties}>Last updated <time dateTime="2026-10-05">5 October 2026</time></p>
           <div className="hero-in mt-7 flex flex-wrap gap-3" style={{ "--i": 3 } as React.CSSProperties}>
@@ -102,7 +102,7 @@ export default function MbaHubPage() {
         {/* Topic guides */}
         <section aria-labelledby="guides-h">
           <h2 id="guides-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><BookOpen className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> Guides to your biggest MBA questions</h2>
-          <p className="mt-1 text-sm text-gray-600">Fees, placements, cut-offs, eligibility, admission and more — explained step by step.</p>
+          <p className="mt-1 text-sm text-gray-600">Fees, placements, cut-offs, eligibility, admission and more, explained step by step.</p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {guides.map((c) => (
               <li key={c.pillar} className="group relative rounded-2xl bg-white p-5 ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-[#012858]/25">
@@ -115,7 +115,7 @@ export default function MbaHubPage() {
             ))}
             <li className="group relative rounded-2xl bg-white p-5 ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-[#012858]/25">
               <h3 className="text-base font-extrabold leading-snug text-[#012858]"><Link href="/mba-vs-pgdm" className="before:absolute before:inset-0 group-hover:text-[#C90D11]">MBA vs PGDM: which is better?</Link></h3>
-              <p className="mt-2 text-sm text-gray-600">Degree or diploma, approval and equivalence — what the difference means for you.</p>
+              <p className="mt-2 text-sm text-gray-600">Degree or diploma, approval and equivalence, what the difference means for you.</p>
             </li>
           </ul>
         </section>
@@ -147,7 +147,7 @@ export default function MbaHubPage() {
         {/* Exams */}
         <section aria-labelledby="exams-h">
           <h2 id="exams-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA entrance exams</h2>
-          <p className="mt-1 text-sm text-gray-600">Dates, pattern, eligibility, score vs percentile, preparation and accepting colleges — each with its official source. <Link href="/mba-exam-calendar" className="font-bold text-[#C90D11] hover:underline">See all dates in one calendar →</Link> Unsure which exam or college? <Link href="/mba-counselling" className="font-bold text-[#C90D11] hover:underline">Get free MBA counselling →</Link></p>
+          <p className="mt-1 text-sm text-gray-600">Dates, pattern, eligibility, score vs percentile, preparation and accepting colleges, each with its official source. <Link href="/mba-exam-calendar" className="font-bold text-[#C90D11] hover:underline">See all dates in one calendar →</Link> Unsure which exam or college? <Link href="/mba-counselling" className="font-bold text-[#C90D11] hover:underline">Get free MBA counselling →</Link></p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {mbaExams.map((e) => (
               <li key={e.slug} className="rounded-2xl bg-white p-5 ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/10">

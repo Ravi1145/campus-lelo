@@ -28,19 +28,19 @@ export default function MBAFinance() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="MBA in Finance — Top Colleges in Pune 2026"
-        subtitle="Best MBA Finance colleges in Pune — SIBM, SCMHRD, PUMBA with investment banking, BFSI and corporate finance placements."
-        quickAnswer="SIBM Pune is the top MBA Finance college — Goldman Sachs, Deutsche Bank, JPMorgan recruit here. SCMHRD is #2. PUMBA offers government MBA Finance at ₹1.25L/yr with banking sector placements."
+        h1="MBA in Finance: Top Colleges in Pune 2026"
+        subtitle="Best MBA Finance colleges in Pune. SIBM, SCMHRD, PUMBA with investment banking, BFSI and corporate finance placements."
+        quickAnswer="SIBM Pune is the top MBA Finance college. Goldman Sachs, Deutsche Bank, JPMorgan recruit here. SCMHRD is #2. PUMBA offers government MBA Finance at ₹1.25L/yr with banking sector placements."
         stats={[
           { value: "8+", label: "MBA Finance Colleges" },
           { value: "Banks/BFSI", label: "Top Sectors" },
           { value: "SNAP/CAT/MAH-CET", label: "Exams" },
         ]}
                 colleges={mbaColleges.filter(c => c.specializations.includes("Finance"))}
-        introHeading="MBA Finance in Pune — Why It's One of India's Best"
+        introHeading="MBA Finance in Pune. Why It's One of India's Best"
         introParagraphs={[
           "Pune is one of India's strongest cities for MBA Finance careers. The city hosts 50+ NBFCs, major bank regional offices (HDFC, ICICI, Axis, Kotak), insurance companies (LIC, Bajaj Allianz), and a fast-growing fintech sector. MBA Finance graduates from Pune have direct access to campus placements from India's top financial institutions.",
-          "SIBM Pune stands apart for Finance MBA — it's the only Pune college where global investment banks (Goldman Sachs, Deutsche Bank, Barclays) conduct campus placement. This makes SIBM's Finance MBA comparable to IIM-level opportunities in terms of career outcomes.",
+          "SIBM Pune stands apart for Finance MBA, it's the only Pune college where global investment banks (Goldman Sachs, Deutsche Bank, Barclays) conduct campus placement. This makes SIBM's Finance MBA comparable to IIM-level opportunities in terms of career outcomes.",
           "For students who cannot target SIBM/SCMHRD, PUMBA's Finance MBA (₹1.25L total fees) and MIT-SOM's Finance MBA (₹7L total) offer excellent placements in retail banking, corporate finance, and BFSI sector at ₹8 starting packages.",
         ]}
         faqs={faqs}
@@ -51,7 +51,7 @@ export default function MBAFinance() {
           { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
           { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
-        ctaHeading="MBA Finance in Pune — Get Personalised Guidance"
+        ctaHeading="MBA Finance in Pune. Get Personalised Guidance"
         ctaSubtext="Our counsellors will help you target SIBM, SCMHRD or PUMBA based on your CAT/MAH-CET score."
       />
       <RelatedMbaSearches path="/mba-colleges-in-pune-for-finance" />

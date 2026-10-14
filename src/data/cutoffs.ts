@@ -283,7 +283,7 @@ export const cutoffsData: CollegeCutoff[] = [
   },
   {
     college_slug: "iim-pune",
-    college_name: "IIM Pune (IIM Nagpur — Pune Campus)",
+    college_name: "IIM Pune (IIM Nagpur. Pune Campus)",
     college_short: "IIM Pune",
     exam: "cat",
     stream: "mba",

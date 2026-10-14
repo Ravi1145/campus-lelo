@@ -11,7 +11,7 @@ export const revalidate = 300
 export const metadata: Metadata = genMeta({
   title: "Pune College Blog 2026 | Admission Guides & Tips | CampusLelo",
   description:
-    "Expert articles on Pune college admissions 2026 — MHT-CET prep, MBA fees, NEET cutoffs, SNAP strategy & career planning. Latest guides from CampusLelo experts.",
+    "Expert articles on Pune college admissions 2026. MHT-CET prep, MBA fees, NEET cutoffs, SNAP strategy & career planning. Latest guides from CampusLelo experts.",
   path: "/blog",
   keywords: ["pune college guides", "mht-cet preparation", "mba admission pune", "best colleges pune blog"],
 })
@@ -149,7 +149,7 @@ export default async function BlogPage({
                 Guides, Tips & Expert Advice
               </h1>
               <p className="text-gray-500 mt-2 max-w-xl">
-                Everything you need for Pune college admissions — entrance exams, fees, placements, scholarships and more.
+                Everything you need for Pune college admissions, entrance exams, fees, placements, scholarships and more.
               </p>
             </div>
             {/* Search */}

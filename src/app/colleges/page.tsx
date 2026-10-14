@@ -12,7 +12,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Pune 2026 | Fees, Rankings & Reviews | CampusLelo",
-  description: "Browse 103+ colleges in Pune 2026. Filter by stream, fees, NAAC grade & location. Engineering, MBA, Medical — government, private & deemed colleges with real placement data.",
+  description: "Browse 103+ colleges in Pune 2026. Filter by stream, fees, NAAC grade & location. Engineering, MBA, Medical: government, private & deemed colleges with real placement data.",
   path: "/colleges",
   keywords: [
     "colleges in pune", "engineering colleges pune", "mba colleges pune",
@@ -67,7 +67,7 @@ export default function CollegesPage() {
                   All Colleges in Pune <span className="bg-gradient-to-r from-[#FB4312] to-[#FF9E8A] bg-clip-text text-transparent">2026</span>
                 </h1>
                 <p className="hero-in mt-4 text-base sm:text-lg text-blue-100 max-w-xl leading-relaxed" style={{ "--i": 2 } as React.CSSProperties}>
-                  Discover and compare {colleges.length}+ engineering, MBA, medical, law and arts colleges — fees, placements, NAAC grades and accepted exams in one place.
+                  Discover and compare {colleges.length}+ engineering, MBA, medical, law and arts colleges, fees, placements, NAAC grades and accepted exams in one place.
                 </p>
                 <div className="hero-in mt-7" style={{ "--i": 3 } as React.CSSProperties}>
                   <CollegesHeroSearch />
@@ -104,7 +104,7 @@ export default function CollegesPage() {
 
         {/* GEO + FAQ Section */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions — Pune Colleges 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions: Pune Colleges 2026</h2>
           <div className="space-y-4">
             {listingFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-200 p-5">

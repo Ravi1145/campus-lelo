@@ -2,8 +2,8 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Terms of Use — CampusLelo",
-  description: "Terms and conditions for using CampusLelo — India's AI-powered college discovery portal for Pune.",
+  title: "Terms of Use: CampusLelo",
+  description: "Terms and conditions for using CampusLelo. India's AI-powered college discovery portal for Pune.",
   alternates: { canonical: "https://campuslelo.com/terms" },
   robots: { index: true, follow: true },
 }
@@ -40,7 +40,7 @@ export default function TermsPage() {
       title: "4. AI-Powered Features",
       content: [
         "Our AI College Finder and comparison tools are powered by Anthropic's Claude AI and our proprietary matching algorithms.",
-        "AI-generated recommendations are based on the information you provide and our database — they are suggestions, not guarantees of admission.",
+        "AI-generated recommendations are based on the information you provide and our database, they are suggestions, not guarantees of admission.",
         "You should verify all AI-generated information with official college sources before making any admission decisions.",
       ],
     },
@@ -55,7 +55,7 @@ export default function TermsPage() {
     {
       title: "6. Intellectual Property",
       content: [
-        "All content on CampusLelo — including text, design, graphics, logos, and code — is the property of CampusLelo and is protected by applicable Indian intellectual property laws.",
+        "All content on CampusLelo, including text, design, graphics, logos, and code, is the property of CampusLelo and is protected by applicable Indian intellectual property laws.",
         "You may not copy, reproduce, or distribute any content from this site without express written permission.",
         "College logos and names are the trademarks of their respective institutions and are used for identification purposes only.",
       ],

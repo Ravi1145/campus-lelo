@@ -78,7 +78,7 @@ export default function CommerceCollegesPunePage() {
           { title: "CA Preparation Culture", description: "Pune's commerce colleges have strong CA coaching ecosystems with ICAI study centers in Shivajinagar and Kothrud. Many BCom students simultaneously prepare for CA while completing their degree." },
           { title: "Affordable Government Colleges", description: "BMCC, Garware, and SP College charge ₹15,000-50,000/year for excellent BCom education. These government-aided colleges provide the same SPPU degree at a fraction of private college costs." },
           { title: "MCom & Research Pathway", description: "Top BCom students can pursue MCom at SPPU's Department of Commerce or apply for SET/NET to become college lecturers -- a stable, well-paying career path for academic-minded students." },
-          { title: "BBA & MBA Bridge", description: "BCom provides an excellent foundation for MBA entrance exams (CAT, MAH-CET). Many SIBM and SCMHRD students come from BCom + work experience backgrounds, leveraging their commerce foundation." },
+          { title: "BBA & MBA Bridge", description: "BCom provides an excellent foundation for MBA entrance exams (CAT, MAH-CET). Many SIBM and SCMHRD students come from BCom + work experience backgrounds, using their commerce foundation." },
           { title: "Government Job Opportunities", description: "BCom graduates are eligible for banking exams (IBPS PO/Clerk, SBI PO), SSC CGL, state revenue exams, and Maharashtra Public Service Commission (MPSC) -- all high-competition but stable career paths." },
         ]}
         admissionHeading="BCom Admission Process in Pune 2026"

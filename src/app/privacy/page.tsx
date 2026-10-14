@@ -2,8 +2,8 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — CampusLelo",
-  description: "CampusLelo Privacy Policy — how we collect, use, and protect your personal information on campuslelo.com.",
+  title: "Privacy Policy: CampusLelo",
+  description: "CampusLelo Privacy Policy: how we collect, use, and protect your personal information on campuslelo.com.",
   alternates: { canonical: "https://campuslelo.com/privacy" },
   robots: { index: true, follow: true },
 }

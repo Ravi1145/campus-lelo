@@ -98,7 +98,7 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
     setLeadSubmitting(false)
     setMessages(prev => [...prev, {
       role: "assistant",
-      content: `Thanks ${leadName}! I've noted your contact details. Our team will also follow up with personalized college advice.\n\nNow, what else would you like to know? You can continue chatting — I'm here to help!`,
+      content: `Thanks ${leadName}! I've noted your contact details. Our team will also follow up with personalized college advice.\n\nNow, what else would you like to know? You can continue chatting. I'm here to help!`,
     }])
   }
 
@@ -117,7 +117,7 @@ export default function AICounselorClient({ starterQuestions }: { starterQuestio
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] px-4 py-3 flex items-center gap-3">
         <div className="w-9 h-9 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center text-base">🤖</div>
         <div className="flex-1">
-          <p className="font-extrabold text-white text-sm">Aarav — AI Career Counselor</p>
+          <p className="font-extrabold text-white text-sm">Aarav: AI Career Counselor</p>
           <p className="text-xs text-blue-300">Powered by Claude AI · Pune college specialist</p>
         </div>
         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>

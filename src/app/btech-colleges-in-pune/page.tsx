@@ -74,11 +74,11 @@ export default function BTechCollegesInPune() {
           { value: "MHT-CET", label: "Primary Exam" },
         ]}
         colleges={btechColleges}
-        introHeading="BTech Colleges in Pune — Complete Guide 2026"
+        introHeading="BTech Colleges in Pune. Complete Guide 2026"
         introParagraphs={[
-          "Pune is one of India's top cities for BTech education, offering 50+ AICTE-approved colleges across government, autonomous, private, and deemed university categories. The city's unique industrial base — India's largest auto manufacturing cluster, a major IT corridor, and defence/aerospace R&D — gives BTech graduates from Pune direct access to diverse and high-paying career paths.",
+          "Pune is one of India's top cities for BTech education, offering 50+ AICTE-approved colleges across government, autonomous, private, and deemed university categories. The city's unique industrial base, India's largest auto manufacturing cluster, a major IT corridor, and defence/aerospace R&D, gives BTech graduates from Pune direct access to diverse and high-paying career paths.",
           "B.Tech (Bachelor of Technology) is a 4-year undergraduate engineering degree. In Pune, admission is primarily through MHT-CET (Maharashtra Common Entrance Test), managed by DTE Maharashtra through the CAP (Centralized Admission Process). Most colleges also accept JEE Main scores for management quota seats.",
-          "Pune BTech colleges span a wide range: COEP (Government, ₹80K/yr) at the top to mid-range autonomous colleges (PICT, VIT Pune, PCCOE at ₹1.4L–2.2L/yr) to premium deemed universities (SIT Pune, MIT-WPU at ₹3.6L–4.8L/yr). Branches range from traditional CS/Mechanical/Civil to cutting-edge AI, Data Science, Robotics, and Cybersecurity.",
+          "Pune BTech colleges span a wide range: COEP (Government, ₹80K/yr) at the top to mid-range autonomous colleges (PICT, VIT Pune, PCCOE at ₹1.4L–2.2L/yr) to premium deemed universities (SIT Pune, MIT-WPU at ₹3.6L–4.8L/yr). Branches range from traditional CS/Mechanical/Civil to modern AI, Data Science, Robotics, and Cybersecurity.",
         ]}
         faqs={btechFAQs.general}
         internalLinks={[
@@ -93,7 +93,7 @@ export default function BTechCollegesInPune() {
           { label: "BTech Admission Guide", href: "/btech-admission-in-pune" },
         ]}
         ctaHeading="Find the Right BTech College in Pune"
-        ctaSubtext="Free personalised guidance from our Pune engineering college counsellors — 15 minutes, zero cost."
+        ctaSubtext="Free personalised guidance from our Pune engineering college counsellors, 15 minutes, zero cost."
       />
       <MoreInCluster pool="btech" path="/btech-colleges-in-pune" />
     </>

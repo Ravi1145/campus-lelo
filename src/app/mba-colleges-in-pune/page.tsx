@@ -79,7 +79,7 @@ export default function MBACollegesInPune() {
             </nav>
             <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">MBA Colleges in Pune 2026</h1>
             <p className="text-blue-100 text-lg max-w-3xl mb-6">
-              Complete guide to 120+ MBA colleges in Pune — fees, MAH-CET cutoffs, placements, NAAC grades and admission process for 2026 batch.
+              Complete guide to 120+ MBA colleges in Pune, fees, MAH-CET cutoffs, placements, NAAC grades and admission process for 2026 batch.
             </p>
             {/* Quick Answer Box — AI Overview target */}
             <div className="bg-white/10 border border-white/20 rounded-xl p-5 max-w-3xl" data-speakable="true">
@@ -126,7 +126,7 @@ export default function MBACollegesInPune() {
 
           {/* College Table */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Top MBA Colleges in Pune 2026 — Rankings & Fees</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Top MBA Colleges in Pune 2026. Rankings & Fees</h2>
             <div className="space-y-4">
               {mbaColleges.map((col) => (
                 <article key={col.slug} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -152,14 +152,6 @@ export default function MBACollegesInPune() {
                           <p className="text-xs text-gray-500">Annual Fees</p>
                         </div>
                         <div className="bg-gray-50 rounded-lg p-2.5 text-center">
-                          <p className="font-bold text-green-700">₹{(col.avgPlacement / 100000).toFixed(1)} LPA</p>
-                          <p className="text-xs text-gray-500">Avg Package</p>
-                        </div>
-                        <div className="bg-gray-50 rounded-lg p-2.5 text-center">
-                          <p className="font-bold text-blue-700">₹{(col.highestPlacement / 100000).toFixed(1)} LPA</p>
-                          <p className="text-xs text-gray-500">Highest Pkg</p>
-                        </div>
-                        <div className="bg-gray-50 rounded-lg p-2.5 text-center">
                           <p className="font-bold text-gray-900 text-xs leading-tight">{col.entranceExams.slice(0, 2).join(", ")}</p>
                           <p className="text-xs text-gray-500">Entrance Exam</p>
                         </div>
@@ -180,7 +172,7 @@ export default function MBACollegesInPune() {
           {/* Comparison Table */}
           <section className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
             <div className="px-6 py-4 border-b border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900">MBA Colleges in Pune — Quick Comparison 2026</h2>
+              <h2 className="text-xl font-bold text-gray-900">MBA Colleges in Pune. Quick Comparison 2026</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -189,9 +181,7 @@ export default function MBACollegesInPune() {
                     <th className="px-4 py-3 font-semibold">College</th>
                     <th className="px-4 py-3 font-semibold">NAAC</th>
                     <th className="px-4 py-3 font-semibold">Fees/yr</th>
-                    <th className="px-4 py-3 font-semibold">Avg LPA</th>
                     <th className="px-4 py-3 font-semibold">Exam</th>
-                    <th className="px-4 py-3 font-semibold">Cutoff</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -202,9 +192,7 @@ export default function MBACollegesInPune() {
                       </td>
                       <td className="px-4 py-3"><span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">{c.naac}</span></td>
                       <td className="px-4 py-3 font-semibold">₹{(c.feesPerYear / 100000).toFixed(1)}L</td>
-                      <td className="px-4 py-3 font-semibold text-green-700">₹{(c.avgPlacement / 100000).toFixed(1)}</td>
                       <td className="px-4 py-3 text-gray-600 text-xs">{c.entranceExams[0]}</td>
-                      <td className="px-4 py-3 text-gray-600 text-xs">{c.mahCetCutoff ?? c.catCutoff ?? "—"}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -214,19 +202,19 @@ export default function MBACollegesInPune() {
 
           {/* Intro Content — E-E-A-T */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm prose prose-sm max-w-none">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">MBA Colleges in Pune — Complete Guide 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">MBA Colleges in Pune. Complete Guide 2026</h2>
             <p className="text-gray-700 leading-relaxed">
-              Pune is India&apos;s third-largest MBA education hub after Mumbai and Bangalore, with over 120 AICTE-approved MBA colleges. The city offers the widest range of MBA options — from the prestigious SIBM Pune to the ultra-affordable PUMBA (government, ₹1.25L/yr) and a full spectrum of private and deemed university programs in between.
+              Pune is India&apos;s third-largest MBA education hub after Mumbai and Bangalore, with over 120 AICTE-approved MBA colleges. The city offers the widest range of MBA options, from the prestigious SIBM Pune to the ultra-affordable PUMBA (government, ₹1.25L/yr) and a full spectrum of private and deemed university programs in between.
             </p>
             <p className="text-gray-700 leading-relaxed mt-3">
               The primary admission route for most Pune MBA colleges is through <strong>MAH-CET MBA</strong> (Maharashtra Common Entrance Test for MBA), conducted by the Maharashtra State CET Cell. DTE Maharashtra then runs the Centralized Admission Process (CAP) for seat allotment across state-level and institutional quota seats. Symbiosis group colleges (SIBM, SCMHRD, SIIB) require the <strong>SNAP exam</strong> specifically.
             </p>
             <h3 className="text-lg font-bold text-gray-900 mt-5 mb-2">Types of MBA Colleges in Pune</h3>
             <ul className="text-gray-700 space-y-1">
-              <li><strong>Government:</strong> PUMBA (₹1.25L/yr) — lowest fees, highest CAP cutoff (95+ percentile)</li>
-              <li><strong>Deemed Universities:</strong> Symbiosis (SIBM, SCMHRD, SIIB), MIT-WPU, DYPIM — independent admission, accept SNAP/CAT/CMAT</li>
-              <li><strong>Autonomous Private:</strong> IIMP, Indira MBA, MAEER — accept MAH-CET, CAT, CMAT; moderate fees ₹4–9L</li>
-              <li><strong>SPPU Affiliated:</strong> 70+ colleges affiliated to Savitribai Phule Pune University — admission via CAP</li>
+              <li><strong>Government:</strong> PUMBA (₹1.25L/yr): lowest fees, highest CAP cutoff (95+ percentile)</li>
+              <li><strong>Deemed Universities:</strong> Symbiosis (SIBM, SCMHRD, SIIB), MIT-WPU, DYPIM, independent admission, accept SNAP/CAT/CMAT</li>
+              <li><strong>Autonomous Private:</strong> IIMP, Indira MBA, MAEER, accept MAH-CET, CAT, CMAT; moderate fees ₹4–9L</li>
+              <li><strong>SPPU Affiliated:</strong> 70+ colleges affiliated to Savitribai Phule Pune University, admission via CAP</li>
             </ul>
             <h3 className="text-lg font-bold text-gray-900 mt-5 mb-2">MBA Specializations in Pune</h3>
             <p className="text-gray-700">Pune MBA colleges offer specializations in Marketing, Finance, HR, Operations, Business Analytics, International Business, Supply Chain Management, Data Science, Entrepreneurship, and Healthcare Management. Finance and Analytics have the highest average placement packages (20–30% above average).</p>
@@ -234,7 +222,7 @@ export default function MBACollegesInPune() {
 
           {/* FAQ */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — MBA in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: MBA in Pune</h2>
             <div className="space-y-3">
               {mbaFAQs.general.map(faq => (
                 <details key={faq.question} className="group border border-gray-100 rounded-xl p-4">
@@ -270,7 +258,7 @@ export default function MBACollegesInPune() {
           {/* CTA */}
           <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Get Free MBA Admission Guidance</h2>
-            <p className="text-gray-300 mb-6 text-sm max-w-lg mx-auto">Our Pune-based counsellors will help you shortlist MBA colleges based on your MAH-CET score, budget, and career goals — free, no sales pressure.</p>
+            <p className="text-gray-300 mb-6 text-sm max-w-lg mx-auto">Our Pune-based counsellors will help you shortlist MBA colleges based on your MAH-CET score, budget, and career goals, free, no sales pressure.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Free Counselling →</Link>
               <Link href="/predictor" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors">College Predictor</Link>

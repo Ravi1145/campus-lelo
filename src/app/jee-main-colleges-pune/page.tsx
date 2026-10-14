@@ -7,7 +7,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "JEE Main Colleges in Pune 2026 | JEE Accepting Engineering Colleges",
-  description: "Top engineering colleges in Pune accepting JEE Main 2026 scores — COEP, VIT Pune, SIT Pune, MIT-WPU. Fees ₹80K–₹4.8L/yr, cutoffs & admission process.",
+  description: "Top engineering colleges in Pune accepting JEE Main 2026 scores. COEP, VIT Pune, SIT Pune, MIT-WPU. Fees ₹80K–₹4.8L/yr, cutoffs & admission process.",
   path: "/jee-main-colleges-pune",
   keywords: [
     "jee main colleges pune 2026", "jee main accepting colleges pune", "engineering colleges pune jee main",
@@ -26,8 +26,8 @@ const colleges = [
 ]
 
 const faqs = [
-  { question: "What JEE Main score is required for COEP Pune?", answer: "COEP Pune requires approximately 50+ percentile in JEE Main for AIQ seats in most branches. For Computer Engineering, the JEE Main cutoff is higher — approximately 95+ percentile. COEP gets 15% of seats filled via AIQ (JEE Main) and 85% via MHT-CET state quota." },
-  { question: "Is MHT-CET better than JEE for Pune engineering admission?", answer: "For Pune students targeting local colleges, MHT-CET is better — 85% of seats in SPPU-affiliated colleges are filled via MHT-CET state quota. JEE Main only fills 15% AIQ seats. However, for COEP top branches (CS/IT), JEE Main can give a better chance than competing with all Maharashtra MHT-CET toppers." },
+  { question: "What JEE Main score is required for COEP Pune?", answer: "COEP Pune requires approximately 50+ percentile in JEE Main for AIQ seats in most branches. For Computer Engineering, the JEE Main cutoff is higher, approximately 95+ percentile. COEP gets 15% of seats filled via AIQ (JEE Main) and 85% via MHT-CET state quota." },
+  { question: "Is MHT-CET better than JEE for Pune engineering admission?", answer: "For Pune students targeting local colleges, MHT-CET is better, 85% of seats in SPPU-affiliated colleges are filled via MHT-CET state quota. JEE Main only fills 15% AIQ seats. However, for COEP top branches (CS/IT), JEE Main can give a better chance than competing with all Maharashtra MHT-CET toppers." },
 ]
 
 const breadcrumbs = [
@@ -65,7 +65,7 @@ export default function JeeMainCollegesPune() {
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>COEP Pune</strong> () is the best JEE Main accepting college in Pune — 15% AIQ seats, fees ₹80K/yr. Minimum 50+ percentile required for most branches. <strong>VIT Pune</strong> () requires 70+ percentile. Admission via <strong>DTE Maharashtra CAP</strong> after JEE Main results.
+                <strong>COEP Pune</strong> () is the best JEE Main accepting college in Pune, 15% AIQ seats, fees ₹80K/yr. Minimum 50+ percentile required for most branches. <strong>VIT Pune</strong> () requires 70+ percentile. Admission via <strong>DTE Maharashtra CAP</strong> after JEE Main results.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function JeeMainCollegesPune() {
           ))}
 
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — JEE Main Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: JEE Main Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map(({ question, answer }) => (
                 <details key={question} className="border border-gray-100 rounded-xl p-4">

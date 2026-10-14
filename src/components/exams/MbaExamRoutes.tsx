@@ -92,11 +92,11 @@ export function quickAnswer(exam: ExamProfile, topic: "overview" | ExamTopic, pr
       return text
     }
     case "preparation":
-      return `Prepare for ${exam.name} section by section — ${exam.preparation.map((a) => a.area).join(", ")}. ${exam.preparation[0]?.tips[0] ?? ""} Practise in the official ${p.durationMinutes}-minute format.`.trim()
+      return `Prepare for ${exam.name} section by section: ${exam.preparation.map((a) => a.area).join(", ")}. ${exam.preparation[0]?.tips[0] ?? ""} Practise in the official ${p.durationMinutes}-minute format.`.trim()
     case "colleges": {
       const cap = maharashtraCap.allIndiaSeatExams.includes(exam.slug) ? ` ${exam.name} is also accepted for All-India seats in Maharashtra's MBA CAP.` : ""
       return programs.length
-        ? `We have verified ${programs.length} programme${programs.length > 1 ? "s" : ""} accepting ${exam.name}: ${programs.map((x) => `${x.institution.split(" (")[0].split(" — ")[0]} (${x.city})`).join("; ")}.${cap} Acceptance is per programme — confirm on each institute's admission page.`
+        ? `We have verified ${programs.length} programme${programs.length > 1 ? "s" : ""} accepting ${exam.name}: ${programs.map((x) => `${x.institution.split(" (")[0].split(", ")[0]} (${x.city})`).join("; ")}.${cap} Acceptance is per programme, confirm on each institute's admission page.`
         : `We have not yet verified individual programmes accepting ${exam.name}.${cap}`
     }
   }
@@ -115,7 +115,7 @@ function WebPageSchema({ exam, topic, title, answer, sources }: { exam: ExamProf
     dateModified: exam.lastReviewed,
     isPartOf: { "@id": `${BASE_URL}/#website` },
     publisher: { "@type": "Organization", name: "CampusLelo", url: BASE_URL },
-    about: { "@type": "Thing", name: `${exam.name} — ${exam.fullName}`, sameAs: exam.officialSite },
+    about: { "@type": "Thing", name: `${exam.name}: ${exam.fullName}`, sameAs: exam.officialSite },
     audience: { "@type": "EducationalAudience", educationalRole: "student" },
     speakable: { "@type": "SpeakableSpecification", cssSelector: [".quick-answer"] },
     citation: sources.map((s) => ({ "@type": "CreativeWork", name: s.label, url: s.url })),

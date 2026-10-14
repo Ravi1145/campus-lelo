@@ -104,7 +104,7 @@ const ADMISSION_STEPS: Record<string, { title: string; desc: (c: College) => str
     { title: "Appear for Entrance Exam", desc: c => `Register and appear for ${c.entranceExams.join(" / ")}. Scores are valid for Maharashtra CAP rounds.` },
     { title: "Register on MHT-CET CAP Portal", desc: () => "After results, fill the Maharashtra CAP application form at cetcell.mahacet.org with your score, category and preferences." },
     { title: "Document Verification", desc: () => "Submit Class 10 & 12 marksheets, domicile certificate, income certificate and caste certificate (if applicable) at a CAP facilitation centre." },
-    { title: "Fill Preference Form", desc: c => `Rank ${c.shortName} in your online preference list. Allotment is merit-based — the higher your score, the better your chances.` },
+    { title: "Fill Preference Form", desc: c => `Rank ${c.shortName} in your online preference list. Allotment is merit-based: the higher your score, the better your chances.` },
     { title: "Accept Allotment & Pay Fees", desc: c => `Visit ${c.shortName} to complete admission formalities and pay first-year fees within the deadline to confirm your seat.` },
   ],
   MBA: [
@@ -136,7 +136,7 @@ const ADMISSION_STEPS: Record<string, { title: string; desc: (c: College) => str
     { title: "Fee Payment & Joining", desc: c => `Report to ${c.shortName} with originals, pay first-year fees and collect your admission letter.` },
   ],
   "Arts & Science": [
-    { title: "Check Eligibility", desc: c => `Ensure you meet the eligibility criteria for your chosen programme at ${c.shortName} — usually 45%+ in Class 12 from a recognised board.` },
+    { title: "Check Eligibility", desc: c => `Ensure you meet the eligibility criteria for your chosen programme at ${c.shortName}: usually 45%+ in Class 12 from a recognised board.` },
     { title: "Apply Online / Offline", desc: c => `Fill the application form on ${c.shortName}'s official website or visit the admissions office. Pay the application fee.` },
     { title: "Merit List", desc: c => `${c.shortName} releases a merit list based on Class 12 percentage${c.entranceExams.length > 0 ? ` and ${c.entranceExams.join(" / ")} score` : ""}.` },
     { title: "Document Verification", desc: () => "Submit Class 10 & 12 marksheets, migration certificate, domicile proof and caste certificate (if applicable)." },
@@ -158,7 +158,7 @@ function buildAdmissionProcess(college: College) {
 }
 
 const MH_SCHOLARSHIPS = [
-  { name: "EBC — Economically Backward Class Scholarship", eligibility: "General category students with annual family income < ₹8 lakhs", amount: "Up to 50% tuition fee waiver", provider: "Govt of Maharashtra" },
+  { name: "EBC: Economically Backward Class Scholarship", eligibility: "General category students with annual family income < ₹8 lakhs", amount: "Up to 50% tuition fee waiver", provider: "Govt of Maharashtra" },
   { name: "OBC Non-Creamy Layer Scholarship", eligibility: "OBC students with family income < ₹6 lakhs", amount: "Full tuition fee reimbursement", provider: "Govt of Maharashtra" },
   { name: "SC / ST / VJNT Post-Matric Scholarship", eligibility: "SC, ST, VJNT & SBC category students (no income bar)", amount: "Full fees + maintenance allowance", provider: "Govt of Maharashtra / Social Welfare Dept" },
   { name: "Minority Community Scholarship", eligibility: "Muslim, Sikh, Christian, Buddhist, Zoroastrian students with income < ₹2.5L", amount: "Up to ₹30,000 per year", provider: "Ministry of Minority Affairs" },
@@ -168,8 +168,8 @@ const MH_SCHOLARSHIPS = [
 const STREAM_FACILITIES: Record<string, { name: string; description: string }[]> = {
   Engineering: [
     { name: "Central Library", description: "Well-stocked library with 50,000+ books, journals and digital resources including IEEE, Springer and Elsevier access." },
-    { name: "Computer Labs", description: "Multiple air-conditioned computer labs with high-speed internet and licensed software — MATLAB, AutoCAD, Visual Studio and more." },
-    { name: "Research & Project Labs", description: "Specialised labs for every department — Electronics, Mechanical, Civil and Chemical Engineering with modern instruments." },
+    { name: "Computer Labs", description: "Multiple air-conditioned computer labs with high-speed internet and licensed software. MATLAB, AutoCAD, Visual Studio and more." },
+    { name: "Research & Project Labs", description: "Specialised labs for every department. Electronics, Mechanical, Civil and Chemical Engineering with modern instruments." },
     { name: "Seminar Halls & Auditorium", description: "Air-conditioned seminar halls and a main auditorium for technical conferences, workshops and cultural events." },
     { name: "Sports Complex", description: "Cricket ground, basketball and volleyball courts, indoor badminton and table tennis facilities." },
     { name: "Cafeteria", description: "On-campus cafeteria serving affordable meals, snacks and beverages throughout the day." },
@@ -192,7 +192,7 @@ const STREAM_FACILITIES: Record<string, { name: string; description: string }[]>
   ],
   Law: [
     { name: "Moot Court", description: "Purpose-built moot court room for mock trials, client counselling sessions and advocacy training." },
-    { name: "Law Library", description: "Comprehensive library with SCC Online, Manupatra and AIR subscriptions plus physical law reporters and journals." },
+    { name: "Law Library", description: "Full library with SCC Online, Manupatra and AIR subscriptions plus physical law reporters and journals." },
     { name: "Legal Aid Clinic", description: "Student-run legal aid clinic providing free legal services to the community under faculty supervision." },
     { name: "Conference Room", description: "Air-conditioned room for seminars, legal workshops and visiting judge / advocate sessions." },
     { name: "Computer Lab", description: "Computer lab with internet access and legal research databases for case law research and drafting." },
@@ -237,7 +237,7 @@ function getFacilitiesFallback(college: College) {
 function buildFaqFallback(college: College): { q: string; a: string }[] {
   const exams = college.entranceExams.length > 0 ? college.entranceExams.join(", ") : "relevant entrance exams"
   const feesText = college.feesRange.min > 0
-    ? `₹${(college.feesRange.min / 100000).toFixed(1)}L – ₹${(college.feesRange.max / 100000).toFixed(1)}L per year`
+    ? `₹${(college.feesRange.min / 100000).toFixed(1)}L to ₹${(college.feesRange.max / 100000).toFixed(1)}L per year`
     : "Contact the college for the latest fee schedule"
   const affil = college.affiliation || "Savitribai Phule Pune University"
 
@@ -421,7 +421,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5" data-speakable="true">
             {[
               { label: "Annual Fees", value: formatFeesRange(college.feesRange.min, college.feesRange.max), icon: IndianRupee },
-              { label: "Avg Package", value: formatCurrency(college.avgPlacement), icon: TrendingUp },
               { label: "Rating", value: college.reviewCount > 0 ? `${college.rating}/5 ⭐` : "Not yet rated", icon: Star },
             ].map(({ label, value, icon: Icon }) => (
               <div key={label} className="bg-white/10 rounded-xl p-3">
@@ -536,7 +535,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                 {/* GEO Content Block — AI-readable direct answers */}
                 <section className="geo-content bg-blue-50 rounded-2xl border border-blue-100 p-6 text-sm text-gray-700 leading-relaxed space-y-3">
                   <h2 className="font-bold text-gray-900 text-base">
-                    {college.name} — Key Facts for 2026
+                    {college.name}: Key Facts for 2026
                   </h2>
                   <p>
                     <strong>{college.name}</strong> ({college.shortName}) is a {college.type.toLowerCase()} college
@@ -548,9 +547,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                     <strong>Fees:</strong> Annual fees at {college.shortName} range from{' '}
                     ₹{(college.feesRange.min / 100000).toFixed(1)}L to ₹{(college.feesRange.max / 100000).toFixed(1)}L per year
                     depending on the program.{' '}
-                    <strong>Placements:</strong> The average placement package is{' '}
-                    ₹{(college.avgPlacement / 100000).toFixed(1)} LPA with the highest package reaching{' '}
-                    ₹{(college.highestPlacement / 100000).toFixed(1)} LPA.
                   </p>
                   {college.entranceExams.length > 0 && (
                     <p>
@@ -781,26 +777,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                       </SectionCard>
                     ) : null}
                   </>
-                ) : (
-                  <SectionCard title="Placement Statistics" icon={TrendingUp}>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-5">
-                      {[
-                        { label: "Average Package", value: formatCurrency(college.avgPlacement), color: "text-green-700" },
-                      ].map(({ label, value, color }) => (
-                        <div key={label} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                          <p className="text-xs text-gray-500 mb-1">{label}</p>
-                          <p className={cn("text-base font-bold", color)}>{value}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <h3 className="font-semibold text-gray-800 mb-3 text-sm">Top Recruiters</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {college.topRecruiters.map(r => (
-                        <span key={r} className="bg-white border border-gray-200 text-sm text-gray-700 px-3 py-1.5 rounded-lg">{r}</span>
-                      ))}
-                    </div>
-                  </SectionCard>
-                )}
+                ) : null}
               </>
             )}
 
@@ -867,7 +844,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                   <SectionCard title={`${college.shortName} Cutoffs ${new Date().getFullYear()}`} icon={Percent}>
                     <div className="space-y-4">
                       <div className="bg-amber-50 border border-amber-100 rounded-xl p-4">
-                        <p className="text-sm font-semibold text-amber-800 mb-1">2026 Cutoffs — Updated After Results</p>
+                        <p className="text-sm font-semibold text-amber-800 mb-1">2026 Cutoffs: Updated After Results</p>
                         <p className="text-sm text-amber-700">
                           Cutoff data for {college.name} will be updated once{" "}
                           {college.entranceExams.length > 0 ? college.entranceExams.join(" / ") : "entrance exam"}{" "}
@@ -1121,7 +1098,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
 
             {/* ── FAQs TAB ── */}
             {activeTab === "faqs" && (
-              <SectionCard title={`${college.shortName} — Frequently Asked Questions`} icon={MessageSquare}>
+              <SectionCard title={`${college.shortName}: Frequently Asked Questions`} icon={MessageSquare}>
                 <div>
                   {faqs.map((faq, i) => (
                     <FAQItem key={i} q={faq.q} a={faq.a} />
@@ -1143,7 +1120,6 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                   <TableRow label="Type" value={college.type} />
                   <TableRow label="Established" value={college.established} />
                   <TableRow label="Annual Fees" value={formatFeesRange(college.feesRange.min, college.feesRange.max)} />
-                  <TableRow label="Avg Package" value={formatCurrency(college.avgPlacement)} />
                   {details?.total_students && <TableRow label="Students" value={details.total_students.toLocaleString()} />}
                 </tbody>
               </table>
@@ -1154,7 +1130,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
                   className="flex items-center justify-center gap-2 w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  Enquire Now — Free
+                  Enquire Now: Free
                 </button>
                 {college.website && (
                   <a

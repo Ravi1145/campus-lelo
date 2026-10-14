@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Colleges in Viman Nagar Pune 2025-26 | Engineering, MBA & IT Colleges",
-  description: "Colleges in Viman Nagar Pune — engineering, MBA, BBA and IT colleges near Viman Nagar and Nagar Road. Fees, courses and admission 2025-26.",
+  description: "Colleges in Viman Nagar Pune, engineering, MBA, BBA and IT colleges near Viman Nagar and Nagar Road. Fees, courses and admission 2025-26.",
   path: "/colleges-viman-nagar-pune",
   keywords: ["colleges in viman nagar pune", "viman nagar pune colleges", "college near viman nagar", "engineering college viman nagar pune", "mba college viman nagar"],
 })
@@ -46,13 +46,13 @@ export default function CollegesVimanNagarPune() {
               <span className="text-white">Viman Nagar Pune</span>
             </nav>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Colleges in Viman Nagar Pune 2025-26</h1>
-            <p className="text-gray-300 max-w-2xl">Engineering, MBA, and management colleges near Viman Nagar — ideal for East Pune students with access to Kharadi IT Park.</p>
+            <p className="text-gray-300 max-w-2xl">Engineering, MBA, and management colleges near Viman Nagar, ideal for East Pune students with access to Kharadi IT Park.</p>
           </div>
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
           <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-            <h2 className="font-bold text-blue-900 mb-2">Viman Nagar — Location Advantage</h2>
+            <h2 className="font-bold text-blue-900 mb-2">Viman Nagar: Location Advantage</h2>
             <p className="text-sm text-blue-800 leading-relaxed">Viman Nagar is located in East Pune, close to Pune International Airport, EON IT Park (Kharadi), and Nagar Road industrial corridor. Students in this area have excellent connectivity to IT companies in Kharadi, Viman Nagar, and Hadapsar for internships and placements.</p>
           </div>
 
@@ -78,7 +78,7 @@ export default function CollegesVimanNagarPune() {
           </div>
 
           <div className="bg-white rounded-xl shadow p-6 border border-gray-100">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">FAQs — Colleges Near Viman Nagar</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-4">FAQs: Colleges Near Viman Nagar</h2>
             <div className="space-y-3">
               {faqs.map(faq => (
                 <details key={faq.question} className="group border-b border-gray-100 pb-3 last:border-0">
@@ -108,7 +108,7 @@ export default function CollegesVimanNagarPune() {
 
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-6 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Need Help Finding a College?</h2>
-            <p className="text-gray-300 text-sm mb-4">Free Pune college counselling — personalised in 15 minutes.</p>
+            <p className="text-gray-300 text-sm mb-4">Free Pune college counselling, personalised in 15 minutes.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors inline-block">Free Counselling →</Link>
           </div>
         </div>

@@ -150,7 +150,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: page.description,
     keywords: page.keywords,
     alternates: { canonical },
-    robots: { index: false, follow: true }, // noindex duplicate — canonical page gets all equity
+    robots: { index: false, follow: true }, // noindex duplicate, canonical page gets all equity
   }
 }
 

@@ -62,9 +62,9 @@ export default function MCACollegesPune() {
           { value: "2 Years", label: "Duration" },
           { value: "MAH-MCA-CET", label: "Entrance Exam" },
         ]}
-        introHeading="MCA Colleges in Pune — Complete Guide 2025"
+        introHeading="MCA Colleges in Pune. Complete Guide 2025"
         introParagraphs={[
-          "Pune is one of the best cities in India to pursue MCA (Master of Computer Applications). The city's thriving IT ecosystem — with 500+ software companies in Hinjewadi, Kharadi, and Baner IT Parks — makes MCA graduates from Pune highly employable. Over 30 AICTE-approved colleges in Pune offer MCA programs with strong industry connections.",
+          "Pune is one of the best cities in India to pursue MCA (Master of Computer Applications). The city's thriving IT ecosystem, with 500+ software companies in Hinjewadi, Kharadi, and Baner IT Parks, makes MCA graduates from Pune highly employable. Over 30 AICTE-approved colleges in Pune offer MCA programs with strong industry connections.",
           "Admission to MCA in Pune is primarily through MAH-MCA-CET, a state-level entrance exam conducted by the Maharashtra State CET Cell. After the results, DTE Maharashtra runs the CAP (Centralized Admission Process) for seat allotment. Some deemed universities like Symbiosis also accept NIMCET and their own entrance scores.",
           "MCA in Pune is a 2-year (4-semester) program following the revised AICTE curriculum. Eligibility requires a BCA, BSc (CS/IT/Maths), or B.Tech degree with minimum 50% marks. Graduates are well-suited for roles in software development, cloud computing, data analytics, and IT management with starting salaries of ₹5.",
         ]}
@@ -72,7 +72,7 @@ export default function MCACollegesPune() {
         whyHeading="Why Choose MCA from Pune?"
         whyPoints={[
           { title: "IT Hub Advantage", description: "Pune's Hinjewadi, Kharadi, and Baner IT parks house 500+ companies including TCS, Infosys, Wipro, Persistent, Cognizant, and 200+ startups. MCA graduates get direct access to campus placements." },
-          { title: "Industry-Aligned Curriculum", description: "Pune MCA colleges have updated their curriculum to include cloud computing, machine learning, DevOps, and cybersecurity — skills in highest demand by Pune IT recruiters." },
+          { title: "Industry-Aligned Curriculum", description: "Pune MCA colleges have updated their curriculum to include cloud computing, machine learning, DevOps, and cybersecurity, skills in highest demand by Pune IT recruiters." },
           { title: "Affordable Education", description: "Government and SPPU-affiliated MCA colleges charge ₹40,000–₹80,000/year, making Pune one of the most cost-effective cities for MCA education compared to Delhi, Bangalore, or Hyderabad." },
           { title: "Strong Alumni Network", description: "Top MCA colleges in Pune have alumni at senior positions in companies like Google, Amazon, Microsoft, and Infosys who actively support campus placements and mentorship programs." },
         ]}
@@ -87,7 +87,7 @@ export default function MCACollegesPune() {
         ctaHeading="Find the Right MCA College in Pune"
         ctaSubtext="Get free personalised guidance from our Pune college counsellors. 15-minute call, zero cost."
         relatedGuides={[
-          { label: "MCA vs M.Tech — Which is Better?", href: "/blog", icon: "📊" },
+          { label: "MCA vs M.Tech: Which is Better?", href: "/blog", icon: "📊" },
           { label: "MAH-MCA-CET Cutoff 2025", href: "/cutoffs", icon: "📋" },
           { label: "BCA Colleges in Pune", href: "/bca-colleges-pune", icon: "🎓" },
           { label: "Free Counselling", href: "/counselling", icon: "🗣️" },

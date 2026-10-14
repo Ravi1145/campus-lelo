@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best BSc IT Colleges Pune 2026 | Fees, Cutoff & IT Placements",
-  description: "Top BSc IT / BSc Computer Science colleges in Pune 2026 — Fergusson, SP College, MIT, Symbiosis. Fees ₹20K–₹1.5L/yr, HSC cutoffs, IT placement ₹4 and admission guide.",
+  description: "Top BSc IT / BSc Computer Science colleges in Pune 2026. Fergusson, SP College, MIT, Symbiosis. Fees ₹20K–₹1.5L/yr, HSC cutoffs, IT placement ₹4 and admission guide.",
   path: "/bsc-it-colleges-pune",
   keywords: [
     "bsc it colleges in pune 2026",
@@ -26,7 +26,7 @@ export const metadata: Metadata = genMeta({
 const colleges = [
   {
     rank: 1,
-    name: "Fergusson College — BSc Computer Science",
+    name: "Fergusson College: BSc Computer Science",
     type: "Autonomous",
     naac: "A++",
     fees: "₹20K–₹35K/yr",
@@ -38,7 +38,7 @@ const colleges = [
   },
   {
     rank: 2,
-    name: "SP College (Sir Parashurambhau) — BSc CS",
+    name: "SP College (Sir Parashurambhau). BSc CS",
     type: "Autonomous",
     naac: "A+",
     fees: "₹18K–₹30K/yr",
@@ -50,7 +50,7 @@ const colleges = [
   },
   {
     rank: 3,
-    name: "MIT Arts, Commerce & Science College — BSc IT",
+    name: "MIT Arts, Commerce & Science College. BSc IT",
     type: "Private (Autonomous)",
     naac: "A+",
     fees: "₹60K–₹90K/yr",
@@ -62,7 +62,7 @@ const colleges = [
   },
   {
     rank: 4,
-    name: "Symbiosis College of Arts & Commerce — BSc CS",
+    name: "Symbiosis College of Arts & Commerce. BSc CS",
     type: "Deemed",
     naac: "A",
     fees: "₹90K–₹1.3L/yr",
@@ -74,7 +74,7 @@ const colleges = [
   },
   {
     rank: 5,
-    name: "Modern College of Arts & Science — BSc IT",
+    name: "Modern College of Arts & Science. BSc IT",
     type: "Autonomous",
     naac: "A",
     fees: "₹25K–₹40K/yr",
@@ -86,7 +86,7 @@ const colleges = [
   },
   {
     rank: 6,
-    name: "Wadia College — BSc Computer Science",
+    name: "Wadia College: BSc Computer Science",
     type: "Autonomous",
     naac: "A",
     fees: "₹22K–₹35K/yr",
@@ -105,7 +105,7 @@ const faqs = [
   },
   {
     question: "What is the difference between BSc IT and BSc CS in Pune?",
-    answer: "BSc IT vs BSc CS: BSc CS is more theory-heavy (algorithms, data structures, mathematics) — better for research and software development. BSc IT is more application-oriented (networking, databases, web development) — better for industry jobs. Both are 3-year degrees with similar placement outcomes. Fergusson and SP College offer BSc CS; MIT and Symbiosis offer BSc IT. Career outcomes: nearly identical ₹5 starting salary.",
+    answer: "BSc IT vs BSc CS: BSc CS is more theory-heavy (algorithms, data structures, mathematics), better for research and software development. BSc IT is more application-oriented (networking, databases, web development), better for industry jobs. Both are 3-year degrees with similar placement outcomes. Fergusson and SP College offer BSc CS; MIT and Symbiosis offer BSc IT. Career outcomes: nearly identical ₹5 starting salary.",
   },
   {
     question: "What is the cutoff for BSc IT / BSc CS in Pune colleges 2026?",
@@ -116,7 +116,7 @@ const faqs = [
     answer: "BSc IT placements from Pune colleges: Fergusson College ₹5, SP College ₹4.5, MIT College ₹5, Symbiosis ₹6. Top recruiters: TCS, Infosys, Wipro, Cognizant, Persistent Systems, Mphasis, LTI Mindtree. 70–85% placement rate. Many students also do M.Sc CS or MBA after BSc IT for ₹15 packages.",
   },
   {
-    question: "BSc IT vs BCA — which is better in Pune?",
+    question: "BSc IT vs BCA, which is better in Pune?",
     answer: "BSc IT vs BCA in Pune: BSc IT is cheaper (₹18K–1.5L/yr vs BCA ₹30K–2L/yr) and more science-focused. BCA is more management + CS combo, better for MCA pathway. Both lead to similar IT jobs. If budget is a concern: BSc IT from Fergusson/SP College is unbeatable value. If brand and placements matter more: BCA from Symbiosis or MIT is better.",
   },
 ]
@@ -202,7 +202,7 @@ export default function BscITCollegesPunePage() {
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: BookOpen, title: "3-Year Programme", desc: "BSc IT/CS is a 3-year degree. Semesters cover programming, databases, networking, and web development." },
-              { icon: Award, title: "Pune IT Hub", desc: "Pune has 3,000+ IT companies — TCS, Infosys, Wipro, Persistent. BSc IT graduates are in high demand." },
+              { icon: Award, title: "Pune IT Hub", desc: "Pune has 3,000+ IT companies. TCS, Infosys, Wipro, Persistent. BSc IT graduates are in high demand." },
               { icon: TrendingUp, title: "MCA / MBA Option", desc: "After BSc IT, pursue MCA (3-year PG) or MBA for ₹10 packages. Fergusson & SP alumni consistently top MCA entrances." },
               { icon: Users, title: "Certifications Boost Pay", desc: "AWS, Google Cloud, Python, Full Stack Development certifications can increase BSc IT salary from ₹5 to ₹12+ LPA." },
             ].map(({ icon: Icon, title, desc }) => (
@@ -218,7 +218,7 @@ export default function BscITCollegesPunePage() {
 
           {/* FAQ */}
           <div className="mt-10">
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions — BSc IT in Pune</h2>
+            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions: BSc IT in Pune</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 px-5 py-4 group">

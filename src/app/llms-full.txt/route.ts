@@ -25,7 +25,7 @@ export function GET() {
   const add = (...l: string[]) => lines.push(...l)
 
   add(
-    "# CampusLelo — LLMs Full Reference",
+    "# CampusLelo: LLMs Full Reference",
     `# Generated ${today} from the site's own data. Short version: ${BASE}/llms.txt | JSON: ${BASE}/api/ai-context`,
     "",
     `> CampusLelo (${BASE}) is a college discovery portal for Pune and Delhi NCR with a dedicated MBA/PGDM section.`,
@@ -38,7 +38,7 @@ export function GET() {
     "## MBA and PGDM entrance exams (current cycle)",
   )
   for (const e of mbaExams) {
-    add(`### ${e.name} — ${e.fullName}`, `Cycle: ${e.cycleLabel}. Conducted by: ${e.conductingBody}. Frequency: ${e.frequency}.`)
+    add(`### ${e.name}: ${e.fullName}`, `Cycle: ${e.cycleLabel}. Conducted by: ${e.conductingBody}. Frequency: ${e.frequency}.`)
     for (const d of e.keyDates) add(`- ${d.label}: ${d.value}`)
     if (e.datesNote) add(`- Note: ${e.datesNote}`)
     add(`- Eligibility: ${e.eligibility.text}`, `- Official site: ${e.officialSite}`, `- Guide: ${BASE}/exams/${e.slug}`, "")
@@ -46,7 +46,7 @@ export function GET() {
 
   add("## Published MBA cut-offs (Delhi NCR)", `Reviewed ${CUTOFFS_LAST_REVIEWED}. Only officially published or consistently reported cut-offs are listed, with what each number measures.`)
   for (const c of publishedCutoffs) {
-    add(`### ${c.institution} — ${c.program} (${c.admissionYear}, ${c.examCycle})`, `Measure: ${c.measure}.`)
+    add(`### ${c.institution}: ${c.program} (${c.admissionYear}, ${c.examCycle})`, `Measure: ${c.measure}.`)
     for (const v of c.values) add(`- ${v.category}: ${v.value}`)
     add(`- How it works: ${c.howItWorks}`, "")
   }
@@ -59,13 +59,13 @@ export function GET() {
   add("")
 
   const streams = Array.from(new Set(colleges.map((c) => c.stream)))
-  add(`## College profiles (${colleges.length})`, "Fields: name — type, NAAC grade, NIRF rank if any, fee range, entrance exams, profile URL.", "")
+  add(`## College profiles (${colleges.length})`, "Fields: name: type, NAAC grade, NIRF rank if any, fee range, entrance exams, profile URL.", "")
   for (const s of streams) {
     add(`### ${s}`)
     for (const c of colleges.filter((x) => x.stream === s)) {
       const fees = c.feesRange.min > 0 || c.feesRange.max > 0 ? formatFeesRange(c.feesRange.min, c.feesRange.max) : "fees on request"
       const pkg = c.avgPlacement > 0 ? `, avg package ${formatCurrency(c.avgPlacement)}` : ""
-      add(`- ${c.name} — ${c.type}, NAAC ${c.naac}${c.nirfRank ? `, NIRF #${c.nirfRank}` : ""}, ${fees}${pkg}, exams: ${c.entranceExams.slice(0, 4).join(", ") || "n/a"} — ${BASE}/colleges/${c.slug}`)
+      add(`- ${c.name}, ${c.type}, NAAC ${c.naac}${c.nirfRank ? `, NIRF #${c.nirfRank}` : ""}, ${fees}${pkg}, exams: ${c.entranceExams.slice(0, 4).join(", ") || "n/a"}, ${BASE}/colleges/${c.slug}`)
     }
     add("")
   }

@@ -367,7 +367,7 @@ export default function Top10EngineeringCollegesPunePage() {
           {/* Comparison Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Top 10 Engineering Colleges in Pune — Ranking Table 2026</h2>
+              <h2 className="text-lg font-bold text-gray-900">Top 10 Engineering Colleges in Pune. Ranking Table 2026</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -419,7 +419,7 @@ export default function Top10EngineeringCollegesPunePage() {
           </div>
 
           {/* Top 5 Deep Dive */}
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 5 Engineering Colleges in Pune — Detailed Review</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 5 Engineering Colleges in Pune. Detailed Review</h2>
           <div className="space-y-5 mb-10">
             {topFiveDetails.map((c) => (
               <div key={c.rank} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
@@ -506,7 +506,7 @@ export default function Top10EngineeringCollegesPunePage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Top 10 Engineering Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Top 10 Engineering Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -523,7 +523,7 @@ export default function Top10EngineeringCollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
               { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },

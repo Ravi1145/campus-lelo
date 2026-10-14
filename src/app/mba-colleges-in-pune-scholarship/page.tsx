@@ -13,11 +13,11 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const scholarships = [
-  { name: "MahaDBT — Post Matric Scholarship (SC/ST)", eligibility: "SC/ST students from Maharashtra", benefit: "Full tuition fee + maintenance allowance", agency: "Maharashtra Government", deadline: "November 2026", link: "mahadbt.maharashtra.gov.in" },
+  { name: "MahaDBT: Post Matric Scholarship (SC/ST)", eligibility: "SC/ST students from Maharashtra", benefit: "Full tuition fee + maintenance allowance", agency: "Maharashtra Government", deadline: "November 2026", link: "mahadbt.maharashtra.gov.in" },
   { name: "EBC (Economically Backward Class) Freeship", eligibility: "Open category, family income < ₹8L/year", benefit: "Full tuition fee waiver", agency: "Maharashtra Government", deadline: "October 2026", link: "mahadbt.maharashtra.gov.in" },
   { name: "OBC/NT/SBC Post Matric Scholarship", eligibility: "OBC/NT/SBC students from Maharashtra", benefit: "Partial/full tuition coverage", agency: "Maharashtra Government", deadline: "October 2026", link: "mahadbt.maharashtra.gov.in" },
   { name: "AICTE Pragati Scholarship (Girls)", eligibility: "Girl students in AICTE-approved MBA, family income < ₹8L/year", benefit: "₹50,000/year + contingency ₹20,000", agency: "AICTE / Central Government", deadline: "September 2026", link: "scholarships.gov.in" },
-  { name: "National Scholarship Portal — Merit Scholarship", eligibility: "Merit-based, income criteria applicable", benefit: "₹10,000–₹25,000/year", agency: "Central Government", deadline: "October 2026", link: "scholarships.gov.in" },
+  { name: "National Scholarship Portal: Merit Scholarship", eligibility: "Merit-based, income criteria applicable", benefit: "₹10,000–₹25,000/year", agency: "Central Government", deadline: "October 2026", link: "scholarships.gov.in" },
   { name: "Minority Scholarship (NSP)", eligibility: "Muslim/Christian/Sikh/Buddhist/Parsi/Jain students, income criteria", benefit: "Up to ₹25,000/year", agency: "Ministry of Minority Affairs", deadline: "September 2026", link: "scholarships.gov.in" },
   { name: "SIBM Pune Merit Scholarship", eligibility: "Top 5% SNAP scorers + SIBM academic merit", benefit: "25-50% fee waiver for 1 year", agency: "SIBM Pune / Symbiosis", deadline: "At admission", link: "sibm.edu" },
   { name: "MIT-SOM Merit Scholarship", eligibility: "MAH-CET 90+ percentile or CAT 80+ percentile", benefit: "₹50,000–₹1L fee reduction", agency: "MIT World Peace University", deadline: "At admission", link: "mitwpu.edu.in" },
@@ -55,7 +55,7 @@ export default function MBAScholarshipPune() {
             <p className="text-blue-100 mb-4">Government scholarships, college merit scholarships and central government schemes to fund your MBA in Pune.</p>
             <div className="bg-green-500/20 border border-green-400/30 rounded-xl p-4 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase mb-1">💰 Key Fact</p>
-              <p className="text-white text-sm">SC/ST and EBC students with family income below ₹8 lakh can get <strong>100% MBA tuition fee waiver</strong> through MahaDBT — making MBA effectively free at any AICTE-approved Pune college.</p>
+              <p className="text-white text-sm">SC/ST and EBC students with family income below ₹8 lakh can get <strong>100% MBA tuition fee waiver</strong> through MahaDBT: making MBA effectively free at any AICTE-approved Pune college.</p>
             </div>
           </div>
         </section>
@@ -111,7 +111,7 @@ export default function MBAScholarshipPune() {
 
           <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help with MBA Scholarship Applications?</h2>
-            <p className="text-gray-300 mb-5 text-sm">Our counsellors guide you through MahaDBT, AICTE, and college scholarship applications — free.</p>
+            <p className="text-gray-300 mb-5 text-sm">Our counsellors guide you through MahaDBT, AICTE, and college scholarship applications, free.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg inline-block">Free Counselling →</Link>
           </section>
         </div>

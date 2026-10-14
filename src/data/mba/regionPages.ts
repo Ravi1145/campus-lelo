@@ -36,7 +36,7 @@ export const regionPages: RegionPageDef[] = [
   {
     path: "/mba-colleges-in-delhi",
     title: "MBA Colleges in Delhi 2027: Exams, Cut-offs, Verified",
-    description: "MBA and PGDM programmes in Delhi — FMS, IIFT and IMI — with the entrance exams each accepts, published cut-offs and how to apply. Checked against official pages.",
+    description: "MBA and PGDM programmes in Delhi, FMS, IIFT and IMI, with the entrance exams each accepts, published cut-offs and how to apply. Checked against official pages.",
     h1: "MBA Colleges in Delhi 2027",
     place: "Delhi",
     cities: ["Delhi"],
@@ -62,7 +62,7 @@ export const regionPages: RegionPageDef[] = [
   {
     path: "/pgdm-colleges-in-delhi-ncr",
     title: "PGDM Colleges in Delhi NCR 2027: Exams Accepted",
-    description: "PGDM programmes in Delhi NCR — IMI, MDI, IMT, BIMTECH and Jaipuria — with the exams each accepts and what a PGDM means compared with an MBA.",
+    description: "PGDM programmes in Delhi NCR, IMI, MDI, IMT, BIMTECH and Jaipuria, with the exams each accepts and what a PGDM means compared with an MBA.",
     h1: "PGDM Colleges in Delhi NCR 2027",
     place: "Delhi NCR",
     cities: NCR,
@@ -173,7 +173,7 @@ export const regionPages: RegionPageDef[] = [
   {
     path: "/mba-colleges-in-delhi-accepting-cat",
     title: "MBA Colleges in Delhi Accepting CAT (Verified)",
-    description: "MBA and PGDM programmes in Delhi that use CAT scores — FMS, IIFT and IMI — with the intake each source refers to and how shortlisting works.",
+    description: "MBA and PGDM programmes in Delhi that use CAT scores, FMS, IIFT and IMI, with the intake each source refers to and how shortlisting works.",
     h1: "MBA Colleges in Delhi Accepting CAT",
     place: "Delhi",
     cities: ["Delhi"],

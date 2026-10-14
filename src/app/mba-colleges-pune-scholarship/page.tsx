@@ -94,11 +94,11 @@ const collegeFeeReduction = [
 const faqs = [
   {
     question: "Which MBA college in Pune gives the best scholarship?",
-    answer: "SIBM Pune offers merit scholarships (₹1–3L off) to top SNAP scorers. However, the best scholarship value is at affordable colleges like BIMM Pune, Indira Institute, and Suryadatta — where government EBC/SC/ST scholarships can cover 50–100% of fees, bringing total MBA cost below ₹3 lakh.",
+    answer: "SIBM Pune offers merit scholarships (₹1–3L off) to top SNAP scorers. However, the best scholarship value is at affordable colleges like BIMM Pune, Indira Institute, and Suryadatta, where government EBC/SC/ST scholarships can cover 50–100% of fees, bringing total MBA cost below ₹3 lakh.",
   },
   {
     question: "Can I get an MBA in Pune for free with a scholarship?",
-    answer: "Yes, for SC/ST students at government-aided MBA colleges in Pune (like Government College of Engineering's MBA program), full fee waiver is available under Maharashtra government post-matric scholarship. At private colleges, full fee waiver is rare — you can typically reduce fees by 30–50%.",
+    answer: "Yes, for SC/ST students at government-aided MBA colleges in Pune (like Government College of Engineering's MBA program), full fee waiver is available under Maharashtra government post-matric scholarship. At private colleges, full fee waiver is rare, you can typically reduce fees by 30–50%.",
   },
   {
     question: "What is the income limit for MBA scholarship in Maharashtra?",
@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     question: "Is there a scholarship for MBA without CAT in Pune?",
-    answer: "Yes. Most Maharashtra government scholarships (EBC, Post-Matric, NSP) are exam-agnostic — they're based on income and category, not CAT score. Colleges like BIMM, Indira Institute, and MIT-SOM offer institutional scholarships regardless of whether you used CAT, MAT, or CMAT for admission.",
+    answer: "Yes. Most Maharashtra government scholarships (EBC, Post-Matric, NSP) are exam-agnostic, they're based on income and category, not CAT score. Colleges like BIMM, Indira Institute, and MIT-SOM offer institutional scholarships regardless of whether you used CAT, MAT, or CMAT for admission.",
   },
 ]
 
@@ -153,12 +153,12 @@ export default function MBACollegesPuneScholarshipPage() {
               MBA Colleges in Pune with Scholarship 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Complete guide to MBA scholarships at Pune colleges — government fee waivers, institutional merit awards, and national fellowships. Reduce your MBA cost from ₹22L to under ₹5L.
+              Complete guide to MBA scholarships at Pune colleges, government fee waivers, institutional merit awards, and national fellowships. Reduce your MBA cost from ₹22L to under ₹5L.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                Top MBA scholarship options in Pune: <strong>Maharashtra Post-Matric Scholarship</strong> (SC/ST/OBC — full fee waiver), <strong>EBC Scholarship</strong> (Open category income &lt; ₹8L — 50% waiver), <strong>SIBM Merit Scholarship</strong> (top SNAP scorers — ₹1–3L off), <strong>AICTE Pragati</strong> (women students — ₹50K/yr). Apply via <strong>MahaDBT portal</strong> within 3 months of admission.
+                Top MBA scholarship options in Pune: <strong>Maharashtra Post-Matric Scholarship</strong> (SC/ST/OBC: full fee waiver), <strong>EBC Scholarship</strong> (Open category income &lt; ₹8L to 50% waiver), <strong>SIBM Merit Scholarship</strong> (top SNAP scorers: ₹1–3L off), <strong>AICTE Pragati</strong> (women students: ₹50K/yr). Apply via <strong>MahaDBT portal</strong> within 3 months of admission.
               </p>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function MBACollegesPuneScholarshipPage() {
           {/* Fee After Scholarship Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">MBA Fees After Scholarship — Pune Colleges 2026</h2>
+              <h2 className="text-lg font-bold text-gray-900">MBA Fees After Scholarship. Pune Colleges 2026</h2>
               <p className="text-xs text-gray-400 mt-0.5">Estimated fees after applying maximum available scholarships. Actual amount depends on eligibility.</p>
             </div>
             <div className="overflow-x-auto">
@@ -338,7 +338,7 @@ export default function MBACollegesPuneScholarshipPage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — MBA Scholarships in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: MBA Scholarships in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -371,7 +371,7 @@ export default function MBACollegesPuneScholarshipPage() {
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Need help finding MBA scholarships?</p>
-              <p className="text-blue-200 text-sm">Our counsellors help you identify every scholarship you qualify for — free of charge.</p>
+              <p className="text-blue-200 text-sm">Our counsellors help you identify every scholarship you qualify for, free of charge.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/counselling" className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">

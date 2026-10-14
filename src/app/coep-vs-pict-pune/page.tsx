@@ -19,8 +19,8 @@ const rows = [
   { param: "NAAC Grade", coep: "A+", pict: "A" },
   { param: "Type", coep: "Government Autonomous", pict: "Private Autonomous" },
   { param: "Established", coep: "1854", pict: "1983" },
-  { param: "Annual Fees (BTech)", coep: "₹80,000 – ₹1.8L", pict: "₹1.4L – ₹1.9L" },
-  { param: "4-Year Total Cost", coep: "₹3.2L – ₹7.2L", pict: "₹5.6L – ₹7.6L" },
+  { param: "Annual Fees (BTech)", coep: "₹80,000 to ₹1.8L", pict: "₹1.4L to ₹1.9L" },
+  { param: "4-Year Total Cost", coep: "₹3.2L, ₹7.2L", pict: "₹5.6L, ₹7.6L" },
   { param: "MHT-CET Cutoff (CSE)", coep: "99.8 percentile", pict: "92+ percentile" },
   { param: "Top Recruiters", coep: "Google, Goldman Sachs, ISRO", pict: "TCS, Infosys, Persistent" },
   { param: "CSE Seats", coep: "120", pict: "180" },
@@ -45,7 +45,7 @@ export default function CoepVsPict() {
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">COEP vs PICT Pune 2026</h1>
           <p className="text-blue-100 text-lg max-w-3xl">
-            A head-to-head comparison of Pune&apos;s two most-discussed engineering colleges — College of Engineering Pune (COEP) and Pune Institute of Computer Technology (PICT). Compare fees, MHT-CET cutoffs, placements, and more.
+            A head-to-head comparison of Pune&apos;s two most-discussed engineering colleges. College of Engineering Pune (COEP) and Pune Institute of Computer Technology (PICT). Compare fees, MHT-CET cutoffs, placements, and more.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <span className="bg-white/10 px-3 py-1 rounded-full">Updated June 2026</span>
@@ -87,7 +87,7 @@ export default function CoepVsPict() {
         {/* Comparison Table */}
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900">COEP vs PICT — Full Comparison 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900">COEP vs PICT: Full Comparison 2026</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -117,8 +117,8 @@ export default function CoepVsPict() {
 
         {/* Fees Breakdown */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Fees Comparison — COEP vs PICT 2026</h2>
-          <p className="text-gray-600 text-sm mb-4">COEP is a government college — fees are subsidised by Maharashtra government. PICT is a private autonomous college with higher but still reasonable fees.</p>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Fees Comparison: COEP vs PICT 2026</h2>
+          <p className="text-gray-600 text-sm mb-4">COEP is a government college, fees are subsidised by Maharashtra government. PICT is a private autonomous college with higher but still reasonable fees.</p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-blue-700 mb-2">COEP Pune Fees 2026</h3>
@@ -145,7 +145,7 @@ export default function CoepVsPict() {
 
         {/* Placement */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Placements — COEP vs PICT 2025 Batch</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Placements: COEP vs PICT 2025 Batch</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-blue-700 mb-3">COEP Placements 2025</h3>
@@ -168,7 +168,7 @@ export default function CoepVsPict() {
 
         {/* FAQ */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — COEP vs PICT Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: COEP vs PICT Pune</h2>
           <div className="space-y-4">
             {[
               { q: "What is the MHT-CET cutoff for COEP CSE 2026?", a: "COEP CSE MHT-CET 2025 cutoff (Round 1, Open category) was 99.8 percentile. Expected 2026 cutoff: 99.7–99.9 percentile. PICT CS cutoff was 92–94 percentile in 2025." },

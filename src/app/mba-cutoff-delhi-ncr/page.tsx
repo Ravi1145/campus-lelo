@@ -88,7 +88,7 @@ export default function MbaCutoffDelhiNcrPage() {
           </section>
 
           <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-orange-500" /> Published shortlist cut-offs — 2026–28 admissions ({fms.examCycle})</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-orange-500" /> Published shortlist cut-offs: 2026–28 admissions ({fms.examCycle})</h2>
             <div className="space-y-6">
               {[fms, iift].map((c) => (
                 <article key={c.institution} className="border-b border-gray-100 last:border-0 pb-6 last:pb-0">
@@ -134,7 +134,7 @@ export default function MbaCutoffDelhiNcrPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">How to use these cut-offs with your CAT score</h2>
             <ul className="space-y-2">
               {[
-                "A cut-off is the minimum for an interview call, not an admission guarantee — final selection adds WAT/GD/PI, academics and work experience.",
+                "A cut-off is the minimum for an interview call, not an admission guarantee, final selection adds WAT/GD/PI, academics and work experience.",
                 "FMS uses a composite score, not a percentile. Compare your CAT section scores, not your overall percentile.",
                 "IIFT's numbers are per-section minimums. A weak section can rule you out even with a high overall percentile.",
                 `${cat.scoring.headline} So last year's numbers are a guide, not a promise.`,
@@ -167,7 +167,7 @@ export default function MbaCutoffDelhiNcrPage() {
               city="Delhi NCR"
               placement="cutoff:delhi-ncr"
               heading="Got your CAT score? Get a realistic Delhi NCR shortlist"
-              subheading="A counsellor will map your sectional scores to Delhi NCR and Noida options and deadlines — free."
+              subheading="A counsellor will map your sectional scores to Delhi NCR and Noida options and deadlines, free."
             />
           </div>
 

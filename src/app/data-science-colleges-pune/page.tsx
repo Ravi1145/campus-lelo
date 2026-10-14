@@ -6,7 +6,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "Data Science Colleges in Pune 2026 | Fees, Courses & Admission",
-  description: "Best Data Science colleges in Pune 2026 — COEP, VIT Pune, MIT-WPU, Symbiosis. Compare BSc Data Science, BTech AI/ML & MTech DS fees (₹80K–₹3.5L/yr), placements & MHT-CET cutoffs.",
+  description: "Best Data Science colleges in Pune 2026. COEP, VIT Pune, MIT-WPU, Symbiosis. Compare BSc Data Science, BTech AI/ML & MTech DS fees (₹80K–₹3.5L/yr), placements & MHT-CET cutoffs.",
   path: "/data-science-colleges-pune",
   keywords: [
     "data science colleges pune", "data science course pune 2026", "bsc data science pune",
@@ -24,7 +24,7 @@ const colleges = [
     fees: "₹80K–₹1.1L/yr",
     cutoff: "99.8 percentile (MHT-CET CSE)",
     placement: "Not published",
-    highlight: " — best value for AI/DS track",
+    highlight: ": best value for AI/DS track",
   },
   {
     name: "MIT World Peace University (MIT-WPU)",
@@ -42,7 +42,7 @@ const colleges = [
     fees: "₹1.6L–₹2.2L/yr",
     cutoff: "88–92 percentile (MHT-CET)",
     placement: "Not published",
-    highlight: " — strong industry projects in DS",
+    highlight: ": strong industry projects in DS",
   },
   {
     name: "Symbiosis Institute of Technology (SIT)",
@@ -51,7 +51,7 @@ const colleges = [
     fees: "₹3L–₹4.8L/yr",
     cutoff: "85–90 percentile (MHT-CET)",
     placement: "Not published",
-    highlight: "Best for AI/ML research — Symbiosis brand",
+    highlight: "Best for AI/ML research. Symbiosis brand",
   },
   {
     name: "Pune Institute of Computer Technology (PICT)",
@@ -69,14 +69,14 @@ const colleges = [
     fees: "₹1.5L–₹2L/yr",
     cutoff: "95–98 percentile (MHT-CET / JEE)",
     placement: "Not published",
-    highlight: "Government IIIT — best AI/ML curriculum in Pune",
+    highlight: "Government IIIT: best AI/ML curriculum in Pune",
   },
 ]
 
 const faqs = [
   { q: "What is the fee for a Data Science course in Pune?", a: "Data Science course fees in Pune range from ₹80,000/year (COEP government) to ₹4.8L/year (SIT Pune deemed university). BSc Data Science programmes range from ₹40,000–₹1.5L/year. MCA/MTech Data Science: ₹1.5L–₹3L/year total." },
   { q: "What MHT-CET score is needed for Data Science colleges in Pune?", a: "IIIT Pune needs 95+ percentile, PICT 92+, VIT Pune 88+, MIT-WPU 82+. For COEP's Computer Engineering (which includes AI/DS electives), you need 99.8 percentile. Private colleges below 80 percentile like DY Patil and Indira College also offer data science programmes." },
-  { q: "Is there a BSc Data Science college in Pune?", a: "Yes — MIT-WPU, Symbiosis College of Arts and Commerce (SCAC), Fergusson College, and Pune University department offer BSc Data Science / Statistics programmes. Fees range from ₹40,000–₹1.5L/year. Duration: 3 years (UG) or 2 years (PG specialisation)." },
+  { q: "Is there a BSc Data Science college in Pune?", a: "Yes: MIT-WPU, Symbiosis College of Arts and Commerce (SCAC), Fergusson College, and Pune University department offer BSc Data Science / Statistics programmes. Fees range from ₹40,000–₹1.5L/year. Duration: 3 years (UG) or 2 years (PG specialisation)." },
 ]
 
 export default function DataScienceCollegesPune() {
@@ -153,7 +153,7 @@ export default function DataScienceCollegesPune() {
 
         {/* FAQ */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — Data Science Colleges in Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: Data Science Colleges in Pune</h2>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">

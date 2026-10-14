@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     question: "What are placements like after pharmacy from Pune colleges?",
-    answer: "Pharmacy graduates from Pune colleges get placed in roles like Quality Assurance/QC executive, Medical Representative, Drug Inspector, Hospital Pharmacist, and R&D roles in pharma companies like Sun Pharma, Cipla, Dr. Reddy's, Lupin, Wockhardt, and Serum Institute of India — all of which have offices near Pune.",
+    answer: "Pharmacy graduates from Pune colleges get placed in roles like Quality Assurance/QC executive, Medical Representative, Drug Inspector, Hospital Pharmacist, and R&D roles in pharma companies like Sun Pharma, Cipla, Dr. Reddy's, Lupin, Wockhardt, and Serum Institute of India, all of which have offices near Pune.",
   },
   {
     question: "Is NEET required for B.Pharm admission in Pune?",
@@ -159,7 +159,7 @@ export default function PharmacyCollegesPune() {
           </nav>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Best Pharmacy Colleges in Pune 2026</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Compare top B.Pharm, M.Pharm &amp; D.Pharm colleges in Pune — fees from ₹25K to ₹1.4L/year, MHT-CET cutoffs, placements &amp; Serum Institute connections.
+            Compare top B.Pharm, M.Pharm &amp; D.Pharm colleges in Pune, fees from ₹25K to ₹1.4L/year, MHT-CET cutoffs, placements &amp; Serum Institute connections.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
@@ -179,7 +179,7 @@ export default function PharmacyCollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Pharmacy Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: Pharmacy Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Best overall:</strong> Poona College of Pharmacy · <strong>Best NAAC A+:</strong> MIT ·{" "}
               <strong>Cheapest:</strong> Government College (₹25K/yr) · <strong>Biggest intake:</strong> Sinhgad ·{" "}
@@ -188,7 +188,7 @@ export default function PharmacyCollegesPune() {
           </div>
 
           {/* Table */}
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Pharmacy Colleges in Pune — Ranked 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Pharmacy Colleges in Pune. Ranked 2026</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -233,7 +233,7 @@ export default function PharmacyCollegesPune() {
 
           {/* CTA */}
           <div className="rounded-2xl p-6 text-center mb-10" style={{ background: "linear-gradient(135deg,#011B40,#024692)" }}>
-            <p className="text-white font-bold text-lg mb-2">B.Pharm or D.Pharm — which is right for you?</p>
+            <p className="text-white font-bold text-lg mb-2">B.Pharm or D.Pharm: which is right for you?</p>
             <p className="text-blue-200 text-sm mb-4">Our counsellors help you pick the best pharmacy college based on your MHT-CET score, budget &amp; career goal.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/ai-finder" className="inline-flex items-center justify-center gap-2 font-bold text-white px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-all" style={{ background: "linear-gradient(90deg,var(--color-accent),color-mix(in srgb, var(--color-accent) 70%, #FFD000))" }}>
@@ -246,7 +246,7 @@ export default function PharmacyCollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Pharmacy Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Pharmacy Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

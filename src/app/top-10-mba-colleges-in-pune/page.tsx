@@ -333,7 +333,7 @@ export default function Top10MBACollegesPunePage() {
               Top 10 MBA Colleges in Pune 2026 (NIRF Ranked &amp; SNAP/CAT)
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Definitive ranked list of Pune&apos;s top 10 MBA colleges for 2026. Compare NIRF rank, SNAP/CAT cutoffs, total fees, average placement packages, and top recruiters — all in one place.
+              Definitive ranked list of Pune&apos;s top 10 MBA colleges for 2026. Compare NIRF rank, SNAP/CAT cutoffs, total fees, average placement packages, and top recruiters, all in one place.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
@@ -362,7 +362,7 @@ export default function Top10MBACollegesPunePage() {
           {/* Comparison Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Top 10 MBA Colleges in Pune — Ranking Table 2026</h2>
+              <h2 className="text-lg font-bold text-gray-900">Top 10 MBA Colleges in Pune. Ranking Table 2026</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -414,7 +414,7 @@ export default function Top10MBACollegesPunePage() {
           </div>
 
           {/* Top 5 Deep Dive */}
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 5 MBA Colleges in Pune — Detailed Review</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Top 5 MBA Colleges in Pune. Detailed Review</h2>
           <div className="space-y-5 mb-10">
             {topFiveDetails.map((c) => (
               <div key={c.rank} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
@@ -465,7 +465,7 @@ export default function Top10MBACollegesPunePage() {
                     "Appear for SNAP exam (December)",
                     "Register separately on the Symbiosis admission portal",
                     "Shortlisted candidates appear for GE-PI (Feb–March)",
-                    "Merit list announced — accept admission offer online",
+                    "Merit list announced: accept admission offer online",
                     "Pay confirmation fees and report to campus",
                   ].map((step, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -500,7 +500,7 @@ export default function Top10MBACollegesPunePage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Top 10 MBA Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Top 10 MBA Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -517,7 +517,7 @@ export default function Top10MBACollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+              { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },

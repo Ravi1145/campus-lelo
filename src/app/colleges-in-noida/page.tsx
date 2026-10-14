@@ -10,7 +10,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
   title: "Best Colleges in Noida 2026 | Fees, Rankings & Placements | CampusLelo",
-  description: "Compare top colleges in Noida 2026 — Amity University, JIIT Noida, Bennett University, Galgotias, Sharda, GL Bajaj. Fees ₹1.2L–6L/yr. JEE, CUET admission guide.",
+  description: "Compare top colleges in Noida 2026. Amity University, JIIT Noida, Bennett University, Galgotias, Sharda, GL Bajaj. Fees ₹1.2L–6L/yr. JEE, CUET admission guide.",
   path: "/colleges-in-noida",
   keywords: [
     "colleges in noida 2026",
@@ -47,7 +47,7 @@ const faqData = [
   },
   {
     question: "Which entrance exam is needed for Noida colleges in 2026?",
-    answer: "For engineering: JEE Main 2026 (January/April sessions) + AKTU UPSEE 2026 for AKTU-affiliated colleges; for deemed universities (Amity, Sharda, JIIT) — JEE Main or their own entrance. For MBA: CAT 2026, MAT 2026, or CMAT 2026. Galgotias and Sharda also accept CUET 2026 scores for UG admissions.",
+    answer: "For engineering: JEE Main 2026 (January/April sessions) + AKTU UPSEE 2026 for AKTU-affiliated colleges; for deemed universities (Amity, Sharda, JIIT). JEE Main or their own entrance. For MBA: CAT 2026, MAT 2026, or CMAT 2026. Galgotias and Sharda also accept CUET 2026 scores for UG admissions.",
   },
   {
     question: "Which Noida college has the highest placement package in 2026?",
@@ -55,11 +55,11 @@ const faqData = [
   },
   {
     question: "Is Amity University Noida good for B.Tech?",
-    answer: "Yes, Amity University Noida (NAAC A+) is the top-ranked private university in Noida for B.Tech. CSE placements are strong — TCS, Infosys, Amazon, Microsoft recruit from campus.. Fees are ₹2L–5.5L/yr. Best for students wanting a large campus, diverse programs, and strong brand recognition in NCR.",
+    answer: "Yes, Amity University Noida (NAAC A+) is the top-ranked private university in Noida for B.Tech. CSE placements are strong. TCS, Infosys, Amazon, Microsoft recruit from campus.. Fees are ₹2L–5.5L/yr. Best for students wanting a large campus, diverse programs, and strong brand recognition in NCR.",
   },
   {
     question: "What is the difference between JIIT, Amity, and Bennett University?",
-    answer: "JIIT Sector 62: Best CSE/IT focused, highest avg placement, product company recruiters (Amazon, Google), fees ₹2.8L–3.8L. Amity: Largest campus, most diverse programs (engineering+MBA+law+design), fees ₹2L–5.5L. Bennett (Times Group): Premium placements, strong industry connections, AI/Cybersecurity programs, fees ₹3L–6L — best for product company aspirants with budget.",
+    answer: "JIIT Sector 62: Best CSE/IT focused, highest avg placement, product company recruiters (Amazon, Google), fees ₹2.8L–3.8L. Amity: Largest campus, most diverse programs (engineering+MBA+law+design), fees ₹2L–5.5L. Bennett (Times Group): Premium placements, strong industry connections, AI/Cybersecurity programs, fees ₹3L–6L, best for product company aspirants with budget.",
   },
 ]
 
@@ -87,7 +87,7 @@ export default function CollegesInNoidaPage() {
         ])) }} />
       <script id="list-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(generateItemListSchema(
-          noidaColleges.map(c => ({ name: `${c.name} — ${c.location}`, url: `/colleges/${c.slug}` }))
+          noidaColleges.map(c => ({ name: `${c.name}: ${c.location}`, url: `/colleges/${c.slug}` }))
         )) }} />
 
       <div style={{ background: "#F7F9FC" }}>
@@ -96,7 +96,7 @@ export default function CollegesInNoidaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuickAnswer
             question="Which is the best college in Noida in 2026?"
-            answer="JIIT Noida (Sector 62) is the best engineering college in Noida — NAAC A, strong CS/IT. Amity University (NAAC A+) is the best overall private university across all streams."
+            answer="JIIT Noida (Sector 62) is the best engineering college in Noida. NAAC A, strong CS/IT. Amity University (NAAC A+) is the best overall private university across all streams."
             note="Data verified October 2026. Source: CampusLelo placement research."
           />
         </div>
@@ -114,7 +114,7 @@ export default function CollegesInNoidaPage() {
               Best Colleges in Noida 2026
             </h1>
             <p className="text-blue-100 text-base sm:text-lg max-w-3xl mb-6">
-              Compare {noidaColleges.length}+ top colleges in Noida &amp; Greater Noida — Amity University (),
+              Compare {noidaColleges.length}+ top colleges in Noida &amp; Greater Noida. Amity University (),
               JIIT Noida, Bennett University, Galgotias, Sharda &amp; GL Bajaj.
               Real fees, 2026 cutoffs, placement data &amp; reviews.
             </p>
@@ -162,11 +162,6 @@ export default function CollegesInNoidaPage() {
                             <MapPin size={11} /> {college.location}
                           </p>
                         </div>
-                        <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
-                          <Star size={13} fill="#E0170F" />
-                          {college.reviewCount > 0 ? college.rating : "—"}
-                          <span className="text-xs text-gray-400 font-normal">({college.reviewCount})</span>
-                        </div>
                       </div>
 
                       {/* Tags */}
@@ -193,8 +188,6 @@ export default function CollegesInNoidaPage() {
                       <div className="grid grid-cols-3 gap-3 text-center mb-3">
                         {[
                           { icon: IndianRupee, label: "Fees/yr", val: formatFees(college.feesRange.min, college.feesRange.max) },
-                          { icon: Trophy, label: "Avg Pkg", val: `₹${(college.avgPlacement / 100000).toFixed(1)}L` },
-                          { icon: Users, label: "Reviews", val: college.reviewCount.toLocaleString() },
                         ].map(({ icon: Icon, label, val }) => (
                           <div key={label} className="rounded-xl p-2" style={{ background: "#F7F9FC" }}>
                             <p className="text-xs text-gray-500">{label}</p>
@@ -250,12 +243,12 @@ export default function CollegesInNoidaPage() {
                 <h3 className="font-bold mb-3 text-base">Why Study in Noida?</h3>
                 <ul className="space-y-2">
                   {[
-                    "Part of Delhi NCR — job market access",
+                    "Part of Delhi NCR, job market access",
                     "Lower fees vs Delhi city colleges",
                     "AKTU + private university options",
                     "Metro connectivity to Gurugram & Delhi",
                     "50+ IT companies in Sector 62 tech hub",
-                    "Bennett, JIIT, Amity — top product recruiters",
+                    "Bennett, JIIT, Amity: top product recruiters",
                   ].map(point => (
                     <li key={point} className="flex gap-2 text-blue-100">
                       <CheckCircle2 size={14} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />
@@ -302,7 +295,7 @@ export default function CollegesInNoidaPage() {
           {/* About Noida colleges — SEO text */}
           <section className="mt-12 bg-white rounded-2xl border border-gray-100 p-8">
             <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>
-              Colleges in Noida 2026 — Complete Guide
+              Colleges in Noida 2026. Complete Guide
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600 leading-relaxed">
               <div>
@@ -310,7 +303,7 @@ export default function CollegesInNoidaPage() {
                 <p>
                   Noida and Greater Noida have 50+ colleges spread across private universities (Amity, Sharda, Galgotias, Bennett),
                   deemed universities (JIIT), and AKTU-affiliated private colleges (GL Bajaj, KIET, IMSEC).
-                  Unlike Pune which has several government colleges (COEP, AFMC), Noida has primarily private institutions —
+                  Unlike Pune which has several government colleges (COEP, AFMC), Noida has primarily private institutions,
                   making fee comparison critical. AKTU-affiliated colleges offer the most affordable fees (₹1.2L–3L/yr)
                   while private deemed universities range from ₹1.8L–6L/yr.
                 </p>
@@ -327,16 +320,16 @@ export default function CollegesInNoidaPage() {
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Placements at Noida Colleges 2026</h3>
                 <p>
-                  Noida&apos;s location in Delhi NCR gives its colleges a major advantage — the Noida/Gurgaon tech corridor
+                  Noida&apos;s location in Delhi NCR gives its colleges a major advantage, the Noida/Gurgaon tech corridor
                   houses Amazon, Microsoft, HCL, Infosys, TCS, Accenture, Wipro and hundreds of startups.
                   
-                  GL Bajaj and KIET (AKTU) average ₹5 — strong for their fee bracket.
+                  GL Bajaj and KIET (AKTU) average ₹5, strong for their fee bracket.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Which Area of Noida Has Most Colleges?</h3>
                 <p>
-                  <strong>Sector 62, Noida:</strong> JIIT, multiple tech companies — best for CSE students.
+                  <strong>Sector 62, Noida:</strong> JIIT, multiple tech companies, best for CSE students.
                   <strong> Sector 125, Noida:</strong> Amity University main campus.
                   <strong> Knowledge Park, Greater Noida:</strong> Sharda University, GL Bajaj, multiple AKTU colleges.
                   <strong> Yamuna Expressway:</strong> Galgotias University, Sharda (alternate campus).
@@ -350,7 +343,7 @@ export default function CollegesInNoidaPage() {
           {/* FAQ */}
           <section className="mt-10">
             <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>
-              Frequently Asked Questions — Noida Colleges 2026
+              Frequently Asked Questions: Noida Colleges 2026
             </h2>
             <div className="space-y-4">
               {faqData.map((faq) => (

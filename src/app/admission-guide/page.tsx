@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Admission Guide 2026 | Step-by-Step Process for All Streams",
-  description: "Complete admission guide for Pune colleges 2026 — Engineering (MHT-CET/JEE), MBA (CAT/SNAP), Medical (NEET), Law (CLAT). Eligibility, dates, documents & fees. Free counselling.",
+  description: "Complete admission guide for Pune colleges 2026. Engineering (MHT-CET/JEE), MBA (CAT/SNAP), Medical (NEET), Law (CLAT). Eligibility, dates, documents & fees. Free counselling.",
   path: "/admission-guide",
   keywords: [
     "pune college admission guide 2026",
@@ -35,7 +35,7 @@ const streams = [
     accent: "#3B82F6",
     exams: ["MHT-CET (PCM)", "JEE Main", "JEE Advanced"],
     eligibility: "12th (PCM) with minimum 50% (45% for reserved). Maharashtra domicile required for state quota.",
-    seats: "Merit seats (80%) via MHT-CET/JEE. Management quota (20%) — direct admission.",
+    seats: "Merit seats (80%) via MHT-CET/JEE. Management quota (20%): direct admission.",
     keyDates: [
       { event: "MHT-CET Registration",      date: "Feb–March 2026" },
       { event: "MHT-CET PCM Exam",           date: "April–May 2026" },
@@ -58,7 +58,7 @@ const streams = [
       { name: "MIT-WPU",     href: "/colleges/mit-wpu-mit-world-peace-university", cutoff: "85+ percentile" },
       { name: "Cummins",     href: "/colleges/cummins-college-of-engineering-pune", cutoff: "88+ percentile" },
     ],
-    fees: "₹1.5L – ₹4.5L per year (government approved). Management quota: ₹3L – ₹8L per year.",
+    fees: "₹1.5L, ₹4.5L per year (government approved). Management quota: ₹3L, ₹8L per year.",
   },
   {
     id: "mba",
@@ -145,7 +145,7 @@ const streams = [
     ],
     steps: [
       "Appear for CLAT (for NLUs) or MH-CET Law (for Maharashtra law colleges)",
-      "Apply to Symbiosis Law School (SLS) separately — SLAT exam required",
+      "Apply to Symbiosis Law School (SLS) separately. SLAT exam required",
       "Apply to ILS Pune, DY Patil Law based on MH-CET Law score",
       "Attend GD/PI at private law colleges (SLS, DSNLU)",
       "Accept seat allotment and pay fees",
@@ -178,7 +178,7 @@ const documents = [
 
 const faqs = [
   { question: "What is the CAP Round process for Pune engineering admissions?", answer: "CAP (Centralized Admission Process) is the official DTE Maharashtra process for engineering admissions. Students register online, fill preferences, get allotted a college based on MHT-CET/JEE percentile and category, verify documents, and pay fees to confirm the seat. There are typically 2 main rounds + 1 mop-up round. Cutoffs vary every year based on state merit." },
-  { question: "Can I get direct admission in Pune engineering colleges without MHT-CET?", answer: "Yes — management quota seats (typically 20% of total intake) allow direct admission without going through CAP rounds. These seats have higher fees but no CET requirement. Some colleges also offer admission through JEE Main score under the institute quota. Call +91 77538 31118 for direct admission assistance." },
+  { question: "Can I get direct admission in Pune engineering colleges without MHT-CET?", answer: "Yes: management quota seats (typically 20% of total intake) allow direct admission without going through CAP rounds. These seats have higher fees but no CET requirement. Some colleges also offer admission through JEE Main score under the institute quota. Call +91 77538 31118 for direct admission assistance." },
   { question: "What documents are required for college admission in Pune?", answer: "Standard documents: 10th & 12th marksheets, Leaving Certificate, Aadhaar Card, caste/category certificate if applicable, entrance exam scorecard (MHT-CET/NEET/CAT etc.), Domicile Certificate, and passport photographs. Some colleges also require a Medical Fitness Certificate and Migration Certificate for students from other states/boards." },
   { question: "What is the eligibility for MBA admission in Pune without CAT?", answer: "MBA in Pune without CAT: You can get MBA admission using MAH-MBA-CET (for PUMBA, DY Patil MBA, Indira College etc.) or SNAP (for all Symbiosis institutes). CMAT and MAT scores are also accepted by many private MBA colleges. PUMBA is the most sought-after non-CAT option with government fees (₹1.25L/year)." },
   { question: "How do I apply for admission to Symbiosis colleges in Pune?", answer: "Symbiosis admissions follow their own process: (1) Register on SET (Symbiosis Entrance Test) portal for UG courses or SNAP for MBA; (2) Appear for the respective entrance test; (3) Clear the Written Ability Test (WAT) + Personal Interview (PI) at your chosen Symbiosis institute; (4) Receive offer letter and pay fees. Each Symbiosis institute (SIBM, SCMHRD, SIC, SLS, SIT) has separate cutoffs." },
@@ -212,7 +212,7 @@ export default function AdmissionGuidePage() {
                 Pune College Admission Guide 2026
               </h1>
               <p className="text-base text-gray-500 mb-6">
-                Step-by-step admission process for Engineering, MBA, Medical and Law colleges in Pune — eligibility, exam dates, CAP rounds, documents and direct admission options.
+                Step-by-step admission process for Engineering, MBA, Medical and Law colleges in Pune, eligibility, exam dates, CAP rounds, documents and direct admission options.
               </p>
               <div className="flex flex-wrap gap-3">
                 {streams.map(s => (
@@ -253,7 +253,7 @@ export default function AdmissionGuidePage() {
 
                     {/* Steps */}
                     <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                      <h3 className="font-bold mb-4" style={{ color: "#011B40" }}>Admission Process — Step by Step</h3>
+                      <h3 className="font-bold mb-4" style={{ color: "#011B40" }}>Admission Process: Step by Step</h3>
                       <ol className="space-y-3">
                         {stream.steps.map((step, i) => (
                           <li key={i} className="flex gap-3 text-sm text-gray-600">
@@ -268,7 +268,7 @@ export default function AdmissionGuidePage() {
 
                     {/* Top colleges */}
                     <div className="bg-white rounded-2xl p-5 border border-gray-100">
-                      <h3 className="font-bold mb-3" style={{ color: "#011B40" }}>Top Pune Colleges — Cutoffs 2025</h3>
+                      <h3 className="font-bold mb-3" style={{ color: "#011B40" }}>Top Pune Colleges: Cutoffs 2025</h3>
                       <div className="space-y-2">
                         {stream.topColleges.map((c, i) => (
                           <Link key={i} href={c.href}
@@ -317,7 +317,7 @@ export default function AdmissionGuidePage() {
                 <FileText className="w-5 h-5" style={{ color: "#E0170F" }} />
               </div>
               <div>
-                <h2 className="text-xl font-bold" style={{ color: "#011B40" }}>Documents Checklist — Pune College Admissions</h2>
+                <h2 className="text-xl font-bold" style={{ color: "#011B40" }}>Documents Checklist: Pune College Admissions</h2>
                 <p className="text-sm text-gray-500">Required documents for all streams</p>
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function AdmissionGuidePage() {
             </div>
             <div className="mt-4 flex items-start gap-2.5 p-3 rounded-xl bg-orange-50 border border-orange-200">
               <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
-              <p className="text-sm text-orange-700">Always carry originals + 3 self-attested photocopies of each document. Some colleges require more — verify with the college before your admission date.</p>
+              <p className="text-sm text-orange-700">Always carry originals + 3 self-attested photocopies of each document. Some colleges require more, verify with the college before your admission date.</p>
             </div>
           </div>
         </section>
@@ -344,7 +344,7 @@ export default function AdmissionGuidePage() {
               { title: "College Predictor",      desc: "Find colleges by your MHT-CET / JEE / NEET score",  href: "/predictor",      icon: GraduationCap, bg: "bg-blue-50 text-blue-700" },
               { title: "Compare Colleges",       desc: "Compare fees, cutoffs and placements side-by-side",  href: "/compare",        icon: BarChart3,     bg: "bg-green-50 text-green-700" },
               { title: "Fees Calculator",        desc: "Estimate total course fees including hostel",         href: "/pune-college-fees-calculator", icon: IndianRupee, bg: "bg-orange-50 text-orange-700" },
-              { title: "Free Counselling",       desc: "Talk to an expert — free on WhatsApp",               href: "/counselling",    icon: Users,         bg: "bg-purple-50 text-purple-700" },
+              { title: "Free Counselling",       desc: "Talk to an expert, free on WhatsApp",               href: "/counselling",    icon: Users,         bg: "bg-purple-50 text-purple-700" },
             ].map(card => {
               const Icon = card.icon
               return (

@@ -23,7 +23,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["snap"],
     intake: "2027–29",
     notes: "Admission to Symbiosis International University programmes is through SIU's own process, including SNAP, followed by the institute's selection rounds.",
-    source: { label: "SIBM Pune — Admissions", url: "https://www.sibm.edu/admissions", type: "official", accessed: ACCESSED },
+    source: { label: "SIBM Pune: Admissions", url: "https://www.sibm.edu/admissions", type: "official", accessed: ACCESSED },
   },
   {
     id: "scmhrd-pune-mba",
@@ -36,11 +36,11 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["snap"],
     intake: "2027–29",
     notes: "SCMHRD's MBA applications are made through the SNAP portal; snaptest.org lists SIU's MBA programmes.",
-    source: { label: "SCMHRD — Admissions", url: "https://www.scmhrd.edu/admissions", type: "official", accessed: ACCESSED },
+    source: { label: "SCMHRD: Admissions", url: "https://www.scmhrd.edu/admissions", type: "official", accessed: ACCESSED },
   },
   {
     id: "mitwpu-business-mba",
-    institution: "MIT World Peace University — Department of Business, Pune",
+    institution: "MIT World Peace University. Department of Business, Pune",
     program: "MBA",
     programType: "MBA",
     city: "Pune",
@@ -61,7 +61,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat"],
     intake: "2026–28",
     notes: "The prospectus states that IIFT uses CAT 2025 scores and other defined parameters for shortlisting, followed by GD and PI. The 2027–29 prospectus was not yet published when this was checked.",
-    source: { label: "IIFT — MBA (IB) & MBA (BA) Prospectus 2026–28 (PDF)", url: "https://www.iift.ac.in/uploads/manage-files/2025/11/brochure-mbaib_mbaba_2026.pdf", type: "official", accessed: "2026-10-05" },
+    source: { label: "IIFT: MBA (IB) & MBA (BA) Prospectus 2026–28 (PDF)", url: "https://www.iift.ac.in/uploads/manage-files/2025/11/brochure-mbaib_mbaba_2026.pdf", type: "official", accessed: "2026-10-05" },
   },
   {
     id: "bimtech-greater-noida-pgdm",
@@ -73,7 +73,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "xat", "gmat", "cmat"],
     intake: "2027–29",
     notes: "MAT is accepted only for PGDM Insurance Business Management and PGDM Retail Management. Requires 50% in graduation; final-year students can apply conditionally.",
-    source: { label: "BIMTECH — Admissions", url: "https://www.bimtech.ac.in/admissions/", type: "official", accessed: ACCESSED },
+    source: { label: "BIMTECH: Admissions", url: "https://www.bimtech.ac.in/admissions/", type: "official", accessed: ACCESSED },
   },
   {
     id: "jaipuria-noida-pgdm",
@@ -84,8 +84,8 @@ export const programAdmissions: ProgramAdmission[] = [
     route: "Direct (institute process)",
     examsAccepted: ["cat", "xat", "cmat", "mat", "gmat"],
     intake: "2027–29",
-    notes: "Jaipuria lists PGDM variants across its campuses — confirm which specialisations run at the Noida campus. Requires a bachelor's degree with 50%; final-year students completing by 30 June 2027 can apply.",
-    source: { label: "Jaipuria Institute of Management — Admissions", url: "https://www.jaipuria.ac.in/admissions/", type: "official", accessed: ACCESSED },
+    notes: "Jaipuria lists PGDM variants across its campuses, confirm which specialisations run at the Noida campus. Requires a bachelor's degree with 50%; final-year students completing by 30 June 2027 can apply.",
+    source: { label: "Jaipuria Institute of Management. Admissions", url: "https://www.jaipuria.ac.in/admissions/", type: "official", accessed: ACCESSED },
   },
   {
     id: "jbs-noida-mba",
@@ -97,7 +97,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "mat", "cmat", "xat", "gmat", "atma", "cuet-pg"],
     intake: "2026–28",
     notes: "Applications are shortlisted on a valid score, then shortlisted candidates take a group discussion and personal interview. Needs a graduate degree in any discipline with 50% aggregate (or equivalent CGPA).",
-    source: { label: "Jaypee Business School — MBA admission procedure", url: "https://jbs.ac.in/mba-admission-procedure", type: "official", accessed: "2026-10-09" },
+    source: { label: "Jaypee Business School: MBA admission procedure", url: "https://jbs.ac.in/mba-admission-procedure", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "sharda-greater-noida-mba",
@@ -109,7 +109,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "xat", "mat"],
     intake: "2026 admissions",
     notes: "The university's own test, SUAT, is also accepted. The page states minimum percentiles for MAT (75) and for CAT/XAT (65, followed by a group discussion and personal interview). Needs graduation with 50% and English proficiency. Check the session on the page, as it does not name an intake.",
-    source: { label: "Sharda University — MBA admissions", url: "https://www.sharda.ac.in/mba-admission/", type: "official", accessed: "2026-10-09" },
+    source: { label: "Sharda University: MBA admissions", url: "https://www.sharda.ac.in/mba-admission/", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "galgotias-greater-noida-mba-ba",
@@ -121,7 +121,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: [],
     intake: "Current cycle (not stated on the page)",
     notes: "For this programme the page says no entrance exam is required; applicants with a MAT, XAT, CMAT, NMAT, GMAT or CUET score get preference in the merit list. It needs a bachelor's degree with 50% aggregate. Other Galgotias MBA programmes have their own rules, so check each programme page.",
-    source: { label: "Galgotias University — fee structure and eligibility", url: "https://www.galgotiasuniversity.edu.in/p/fee-structure-eligibility", type: "official", accessed: "2026-10-09" },
+    source: { label: "Galgotias University: fee structure and eligibility", url: "https://www.galgotiasuniversity.edu.in/p/fee-structure-eligibility", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "iim-lucknow-mba",
@@ -133,7 +133,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat"],
     intake: "2026–28",
     notes: "CAT only. Interview shortlisting uses CAT performance, scholastic record and work experience; a written ability test and personal interview follow, and final selection combines all of them. Needs a bachelor's degree with 50% (45% for SC/ST/PwD). IIM Lucknow's Noida campus runs separate programmes (MBA in Sustainable Management, a programme for working executives and a one-year MBA) with their own admission pages.",
-    source: { label: "IIM Lucknow — MBA (PGP) admission policy", url: "https://www.iiml.ac.in/master-business-administration", type: "official", accessed: "2026-10-09" },
+    source: { label: "IIM Lucknow: MBA (PGP) admission policy", url: "https://www.iiml.ac.in/master-business-administration", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "iim-kashipur-mba",
@@ -145,7 +145,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat"],
     intake: "2026–28",
     notes: "Admission is through CAT. Eligibility follows the CAT rules. IIM Kashipur publishes the minimum CAT percentiles it used to pick candidates for the personal interview (shown below), and says the 2026–28 figures will be updated.",
-    source: { label: "IIM Kashipur — MBA admission", url: "https://www.iimkashipur.ac.in/academics/mba/mba-admission", type: "official", accessed: "2026-10-09" },
+    source: { label: "IIM Kashipur: MBA admission", url: "https://www.iimkashipur.ac.in/academics/mba/mba-admission", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "graphic-era-dehradun-mba",
@@ -157,7 +157,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "mat", "xat", "cmat", "gmat"],
     intake: "Current cycle (not stated on the page)",
     notes: "The university's own GEU Entrance Test is also accepted. Admission is on entrance-test scores and a personal interview. Needs a bachelor's degree with 50% aggregate (45% for SC/ST).",
-    source: { label: "Graphic Era — MBA programme page", url: "https://geu.ac.in/course/master-of-business-administration-mba", type: "official", accessed: "2026-10-09" },
+    source: { label: "Graphic Era: MBA programme page", url: "https://geu.ac.in/course/master-of-business-administration-mba", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "upes-dehradun-mba",
@@ -169,7 +169,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: [],
     intake: "Current cycle (not stated on the page)",
     notes: "UPES lists its own entrance test (UPESMET) and national-level exams as the selection basis, followed by a personal interview. The page does not name the individual national exams, so confirm which are accepted. Needs at least 50% in Class X, XII and graduation.",
-    source: { label: "UPES School of Business — MBA", url: "https://www.upes.ac.in/school-of-business/mba", type: "official", accessed: "2026-10-09" },
+    source: { label: "UPES School of Business. MBA", url: "https://www.upes.ac.in/school-of-business/mba", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "fms-delhi-mba",
@@ -181,7 +181,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat"],
     intake: "2026–28",
     notes: "FMS's information bulletin states it shortlists on weighted CAT section scores (CAT 2025 for this intake) and then runs a discussion on the statement of purpose, an extempore and a personal interview. Applicants without a CAT score are not considered. The bulletin for the 2027 intake (CAT 2026) was not yet published when this was checked.",
-    source: { label: "FMS Delhi — MBA (Full Time) programme and 2026 bulletin", url: "https://www.fms.edu/programmes/mba-full-time", type: "official", accessed: "2026-10-09" },
+    source: { label: "FMS Delhi: MBA (Full Time) programme and 2026 bulletin", url: "https://www.fms.edu/programmes/mba-full-time", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "imi-delhi-pgdm",
@@ -193,7 +193,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "xat", "gmat"],
     intake: "2027–29",
     notes: "IMI's admission pages list valid CAT 2026, XAT 2027 or GMAT scores for the flagship PGDM, then an individual assessment and personal interview. Some IMI pages still show earlier cycles, so confirm the dates and GMAT validity window on the official page. The executive and online PGDM programmes use different rules.",
-    source: { label: "IMI New Delhi — Admission", url: "https://www.imi.edu/delhi/admission", type: "official", accessed: "2026-10-09" },
+    source: { label: "IMI New Delhi: Admission", url: "https://www.imi.edu/delhi/admission", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "mdi-gurugram-pgdm",
@@ -205,7 +205,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat"],
     intake: "2027–29",
     notes: "MDI's admission page requires CAT 2026 for its PGDM programmes. Only PGDM-IB also lets applicants use a GMAT score, and the page says Indian candidates cannot apply on the basis of GMAT (that route is for NRI and international applicants). Requires 50% in Class 10, Class 12 and graduation; final-year students completing by 30 June 2027 can apply.",
-    source: { label: "MDI Gurgaon — PGDM admissions", url: "https://www.mdi.ac.in/admissions/post-graduate-diploma-in-management-pgdm", type: "official", accessed: "2026-10-09" },
+    source: { label: "MDI Gurgaon: PGDM admissions", url: "https://www.mdi.ac.in/admissions/post-graduate-diploma-in-management-pgdm", type: "official", accessed: "2026-10-09" },
   },
   {
     id: "imt-ghaziabad-pgdm",
@@ -217,7 +217,7 @@ export const programAdmissions: ProgramAdmission[] = [
     examsAccepted: ["cat", "xat", "gmat"],
     intake: "2027–29",
     notes: "IMT's admissions page lists CAT 2026, XAT 2027 and GMAT scores for the two-year PGDM, followed by a common test personal interview round. Requires a bachelor's degree with 50% aggregate; final-year students can apply with a provisional certificate. The executive (ExP) programme has different rules.",
-    source: { label: "IMT Ghaziabad — PGDM admissions", url: "https://www.imt.edu/admissions/pgdm/", type: "official", accessed: "2026-10-09" },
+    source: { label: "IMT Ghaziabad: PGDM admissions", url: "https://www.imt.edu/admissions/pgdm/", type: "official", accessed: "2026-10-09" },
   },
 ]
 

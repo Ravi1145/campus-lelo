@@ -21,7 +21,7 @@ const categories = [
   {
     stream: "Engineering",
     colleges: [
-      { name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: null, naac: "A+", note: "Autonomous — SPPU affiliated" },
+      { name: "COEP Technological University", slug: "coep-college-of-engineering-pune", nirf: null, naac: "A+", note: "Autonomous: SPPU affiliated" },
       { name: "PICT Pune", slug: "pict-pune-institute-of-computer-technology", nirf: null, naac: "A", note: "Autonomous" },
       { name: "VIT Pune", slug: "vit-pune-vishwakarma-institute-of-technology", nirf: null, naac: "A+", note: "Autonomous" },
       { name: "JSPM RSCOE", slug: "jspm-rscoe-rajarshi-shahu-college-of-engineering", nirf: null, naac: "A", note: "SPPU Affiliated" },
@@ -82,7 +82,7 @@ export default function SPPUAffiliatedColleges() {
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">SPPU Affiliated Colleges in Pune 2026</h1>
             <p className="text-purple-100 text-lg max-w-3xl mb-5">
-              Complete guide to Savitribai Phule Pune University (SPPU) affiliated and autonomous colleges in Pune for 2026 admissions — Engineering, MBA, Medical, Arts, Science and Commerce streams.
+              Complete guide to Savitribai Phule Pune University (SPPU) affiliated and autonomous colleges in Pune for 2026 admissions. Engineering, MBA, Medical, Arts, Science and Commerce streams.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-purple-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
@@ -97,7 +97,7 @@ export default function SPPUAffiliatedColleges() {
           {categories.map((cat) => (
             <section key={cat.stream} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
               <div className="bg-gray-50 px-5 py-3 border-b border-gray-100">
-                <h2 className="font-bold text-gray-800">{cat.stream} — SPPU Colleges</h2>
+                <h2 className="font-bold text-gray-800">{cat.stream}: SPPU Colleges</h2>
               </div>
               <div className="divide-y divide-gray-100">
                 {cat.colleges.map((c) => (
@@ -118,7 +118,7 @@ export default function SPPUAffiliatedColleges() {
           ))}
 
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — SPPU Affiliated Colleges Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: SPPU Affiliated Colleges Pune</h2>
             <div className="space-y-3">
               {faqs.map(({ question, answer }) => (
                 <details key={question} className="border border-gray-100 rounded-xl p-4">

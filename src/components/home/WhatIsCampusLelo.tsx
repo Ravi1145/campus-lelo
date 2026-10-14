@@ -9,7 +9,7 @@ export default function WhatIsCampusLelo() {
       <div className="mx-auto max-w-4xl">
         <AnswerBlock id="what-is-q" question="What is CampusLelo?" updated="2026-10-05">
           <p>
-            CampusLelo is a college discovery portal for students in Pune and Delhi NCR. You can compare colleges by fees, entrance exams, NAAC grade and
+            CampusLelo helps students compare colleges in Pune, Noida, Greater Noida and Delhi NCR, with MBA pages for Uttar Pradesh and Dehradun too. You can compare colleges by fees, entrance exams, NAAC grade and
             NIRF rank, follow MBA and PGDM exam dates with links to the official sources, and read scholarship information. Phone counselling is free; a
             one-to-one video session costs ₹{VIDEO_PRICE_INR}. CampusLelo does not guarantee admission.
           </p>

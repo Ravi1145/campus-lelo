@@ -14,7 +14,7 @@ interface Props {
 function formatFees(min: number, max: number): string {
   const fmt = (n: number) =>
     n >= 100000 ? `₹${(n / 100000).toFixed(1)}L` : `₹${(n / 1000).toFixed(0)}K`
-  return `${fmt(min)} – ${fmt(max)}`
+  return `${fmt(min)}: ${fmt(max)}`
 }
 
 function formatPkg(n: number): string {
@@ -215,11 +215,6 @@ function CollegeCard({ college, rank }: { college: College; rank: number }) {
               )}
             </div>
           </div>
-          <div className="flex items-center gap-1 text-amber-500 text-sm font-medium">
-            <Star size={14} fill="currentColor" />
-            <span>{college.rating?.toFixed(1) ?? "—"}</span>
-            <span className="text-gray-400 font-normal">({college.reviewCount})</span>
-          </div>
         </div>
 
         <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
@@ -227,13 +222,6 @@ function CollegeCard({ college, rank }: { college: College; rank: number }) {
             <div className="text-xs text-gray-400 mb-0.5">Annual Fees</div>
             <div className="font-semibold text-gray-800">
               {formatFees(college.feesRange.min, college.feesRange.max)}
-            </div>
-          </div>
-          <div>
-            <div className="text-xs text-gray-400 mb-0.5">Avg Package</div>
-            <div className="font-semibold text-gray-800 flex items-center gap-1">
-              <TrendingUp size={12} className="text-green-500" />
-              {formatPkg(college.avgPlacement)}
             </div>
           </div>
           <div>

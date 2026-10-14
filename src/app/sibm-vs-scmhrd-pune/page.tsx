@@ -43,7 +43,7 @@ export default function SibmVsScmhrd() {
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">SIBM vs SCMHRD Pune 2026</h1>
           <p className="text-blue-100 text-lg max-w-3xl">
-            Both are top-tier Symbiosis MBA colleges on the same Lavale campus — but which should you choose? Compare SIBM Pune and SCMHRD on NIRF rank, SNAP cutoffs, fees, placements, and specialisations.
+            Both are top-tier Symbiosis MBA colleges on the same Lavale campus, but which should you choose? Compare SIBM Pune and SCMHRD on NIRF rank, SNAP cutoffs, fees, placements, and specialisations.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <span className="bg-white/10 px-3 py-1 rounded-full">Updated June 2026</span>
@@ -83,7 +83,7 @@ export default function SibmVsScmhrd() {
 
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900">SIBM vs SCMHRD — Full Comparison 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900">SIBM vs SCMHRD: Full Comparison 2026</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -110,7 +110,7 @@ export default function SibmVsScmhrd() {
         </section>
 
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — SIBM vs SCMHRD Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: SIBM vs SCMHRD Pune</h2>
           <div className="space-y-4">
             {[
               { q: "What is the SNAP cutoff for SIBM and SCMHRD in 2026?", a: "SIBM Pune SNAP 2025 cutoff was 98+ percentile (sectional cutoffs also apply). SCMHRD SNAP 2025 cutoff was 95+ percentile. Both require GD-PI rounds after clearing SNAP. Scores above 99 percentile significantly improve your chances at SIBM." },

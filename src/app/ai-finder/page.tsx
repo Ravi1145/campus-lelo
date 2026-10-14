@@ -6,8 +6,8 @@ import AIChatWidget from "@/components/ai/AIChatWidget"
 import { Sparkles, Brain, MessageCircle, Users } from "lucide-react"
 
 export const metadata: Metadata = genMeta({
-  title: "AI College Finder Pune — Find Your Perfect College in Minutes",
-  description: "Use our AI-powered college finder to discover the best matching college in Pune. Tell us your stream, budget, exam score and preferences — our AI analyzes 25+ colleges instantly.",
+  title: "AI College Finder Pune: Find Your Perfect College in Minutes",
+  description: "Use our AI-powered college finder to discover the best matching college in Pune. Tell us your stream, budget, exam score and preferences, our AI analyzes 25+ colleges instantly.",
   path: "/ai-finder",
   keywords: ["ai college finder pune", "college recommendation pune", "best college for me pune"],
 })
@@ -26,7 +26,7 @@ export default function AIFinderPage() {
             AI College Finder for Pune
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-            Stop second-guessing. Tell our AI your stream, budget, exam score, and career goals — get personalized college recommendations with match scores in seconds.
+            Stop second-guessing. Tell our AI your stream, budget, exam score, and career goals, get personalized college recommendations with match scores in seconds.
           </p>
 
           {/* Features */}
@@ -57,7 +57,7 @@ export default function AIFinderPage() {
           <MessageCircle className="w-10 h-10 text-orange-400 mx-auto mb-3" />
           <h2 className="text-2xl font-bold text-white mb-2">Need More Help?</h2>
           <p className="text-gray-400 mb-6">
-            Our AI counselor is available 24/7 to answer specific questions about any Pune college — fees, cutoffs, hostel, placements, and more.
+            Our AI counselor is available 24/7 to answer specific questions about any Pune college, fees, cutoffs, hostel, placements, and more.
           </p>
           <p className="text-orange-300 font-medium">
             💬 Click the chat bubble in the bottom-right corner to start chatting with our AI counselor

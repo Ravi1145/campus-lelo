@@ -8,7 +8,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "BTech Colleges in Pune with Fees 2026 | Course-wise Fee Structure",
-  description: "BTech college fees in Pune 2026. Course-wise fee structure for all top engineering colleges — COEP (₹80K/yr), PICT (₹1.4L), VIT Pune (₹1.6L), SIT (₹3.6L). Compare total 4-year costs.",
+  description: "BTech college fees in Pune 2026. Course-wise fee structure for all top engineering colleges. COEP (₹80K/yr), PICT (₹1.4L), VIT Pune (₹1.6L), SIT (₹3.6L). Compare total 4-year costs.",
   path: "/btech-colleges-in-pune-with-fees",
   keywords: [
     "btech colleges in pune with fees", "btech fees pune 2026", "engineering college fees pune",
@@ -20,7 +20,7 @@ export const revalidate = 300
 const faqs = [
   { question: "What is the BTech fee in Pune 2026?", answer: "BTech fees in Pune 2026: Government colleges (COEP): ₹80,000–1,80,000/year. Autonomous SPPU colleges (PICT, VIT Pune, PCCOE): ₹1,35,000–2,20,000/year. Deemed universities (MIT-WPU): ₹2L–3.8L/year. Premium deemed (SIT Pune): ₹3.6L–4.8L/year. Total 4-year BTech: ₹3.2L (COEP) to ₹19.2L (SIT Pune)." },
   { question: "Which is the cheapest BTech college in Pune?", answer: "COEP (College of Engineering Pune) is the cheapest quality BTech college at ₹80,000–1,80,000/year (total ₹3.2L–7.2L for 4 years). For mid-tier affordable colleges: DYPCOE (₹1.05L–1.55L/yr), AISSMS COE (₹1.1L–1.55L/yr), and PCCOE (₹1.35L–1.85L/yr) are the most affordable autonomous colleges." },
-  { question: "Is BTech fee at COEP Pune really that low?", answer: "Yes. COEP is a government engineering college established in 1854. The Maharashtra government subsidizes tuition. COEP charges ₹80,000–1,80,000/year depending on the programme (government seat, MHT-CET CAP). This is one of the lowest fees among top-50 NIRF engineering colleges in India — making COEP extraordinary value." },
+  { question: "Is BTech fee at COEP Pune really that low?", answer: "Yes. COEP is a government engineering college established in 1854. The Maharashtra government subsidizes tuition. COEP charges ₹80,000–1,80,000/year depending on the programme (government seat, MHT-CET CAP). This is one of the lowest fees among top-50 NIRF engineering colleges in India, making COEP extraordinary value." },
   { question: "What is the total 4-year BTech fee at Pune colleges?", answer: "Total 4-year BTech fees: COEP ₹3.2L–7.2L, PICT ₹5.6L–7.6L, VIT Pune ₹6.4L–8.8L, PCCOE ₹5.4L–7.4L, MIT-WPU ₹8L–15.2L, SIT Pune ₹14.4L–19.2L. These exclude hostel (₹60K–1.2L/yr), exam fees (₹2K–4K/semester), and other charges." },
 ]
 
@@ -46,11 +46,11 @@ export default function BTechFeesPage() {
               <span className="text-white">Fees</span>
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">BTech Colleges in Pune with Fees 2026</h1>
-            <p className="text-blue-100 mb-5">Complete fee structure for all top BTech colleges in Pune — annual fees, total 4-year cost, hostel and scholarship options.</p>
+            <p className="text-blue-100 mb-5">Complete fee structure for all top BTech colleges in Pune, annual fees, total 4-year cost, hostel and scholarship options.</p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm">
-                BTech fees in Pune range from <strong>₹80,000/year (COEP — government)</strong> to <strong>₹4.8L/year (SIT Pune — deemed)</strong>.
+                BTech fees in Pune range from <strong>₹80,000/year (COEP, government)</strong> to <strong>₹4.8L/year (SIT Pune, deemed)</strong>.
                 PICT and VIT Pune charge ₹1.4L–2.2L/year. Total 4-year cost: ₹3.2L (COEP) to ₹19.2L (SIT Pune).
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function BTechFeesPage() {
           {/* Fee Comparison Table */}
           <section className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
             <div className="px-6 py-4 border-b border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900">BTech Fee Structure — Pune 2026 (All Colleges)</h2>
+              <h2 className="text-xl font-bold text-gray-900">BTech Fee Structure: Pune 2026 (All Colleges)</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -120,10 +120,10 @@ export default function BTechFeesPage() {
           <section className="bg-green-50 rounded-2xl border border-green-100 p-5">
             <h2 className="font-bold text-green-900 mb-2">💡 Scholarships to Reduce BTech Fees</h2>
             <ul className="text-sm text-green-800 space-y-1">
-              <li>• <strong>MahaDBT Scholarship</strong> — Full fee waiver for SC/ST/OBC/EBC students (family income &lt; ₹8L)</li>
-              <li>• <strong>EBC Freeship</strong> — Open category students with family income &lt; ₹8L: full tuition waiver</li>
-              <li>• <strong>AICTE Pragati Scholarship (Girls)</strong> — ₹50,000/yr for girl students, income &lt; ₹8L</li>
-              <li>• <strong>SBI/Bank of Maharashtra Education Loan</strong> — up to ₹20L at 8–9% p.a.</li>
+              <li>• <strong>MahaDBT Scholarship</strong>: Full fee waiver for SC/ST/OBC/EBC students (family income &lt; ₹8L)</li>
+              <li>• <strong>EBC Freeship</strong>: Open category students with family income &lt; ₹8L: full tuition waiver</li>
+              <li>• <strong>AICTE Pragati Scholarship (Girls)</strong>: ₹50,000/yr for girl students, income &lt; ₹8L</li>
+              <li>• <strong>SBI/Bank of Maharashtra Education Loan</strong>: up to ₹20L at 8–9% p.a.</li>
             </ul>
             <Link href="/engineering-colleges-pune-scholarship" className="mt-3 inline-block text-sm font-semibold text-green-800 underline underline-offset-2">
               View All Engineering Scholarships in Pune →
@@ -132,7 +132,7 @@ export default function BTechFeesPage() {
 
           {/* FAQ */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — BTech Fees in Pune 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: BTech Fees in Pune 2026</h2>
             <div className="space-y-0 divide-y divide-gray-100">
               {faqs.map((faq, i) => (
                 <details key={faq.question} className="group py-4" open={i === 0}>

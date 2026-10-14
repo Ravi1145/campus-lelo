@@ -95,7 +95,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
     speakable: { "@type": "SpeakableSpecification", cssSelector: [".quick-answer"] },
     citation: programmes.map((p) => ({ "@type": "CreativeWork", name: p.source.label, url: p.source.url })),
   }
-  const itemList = { "@context": "https://schema.org", "@type": "ItemList", name: def.h1, itemListElement: programmes.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: `${p.institution} — ${p.program}`, url: p.source.url })) }
+  const itemList = { "@context": "https://schema.org", "@type": "ItemList", name: def.h1, itemListElement: programmes.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: `${p.institution}: ${p.program}`, url: p.source.url })) }
 
   // Related pages plus every exam-specific page that covers an overlapping city (so none is left unlinked)
   const examSiblings = regionPages.filter((r) => r.exam && r.path !== def.path && r.cities.some((c) => def.cities.includes(c))).map((r) => r.path)
@@ -185,7 +185,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
                   <div key={c.institution} className="rounded-2xl bg-white p-5 ring-1 ring-gray-200">
                     <p className="font-extrabold text-[#012858]">{c.institution}</p>
                     <p className="text-xs text-gray-600">{c.program} · {c.admissionYear} · {c.examCycle}</p>
-                    <p className="mt-2 text-sm text-gray-800"><strong>{c.measure}:</strong> {c.values.map((v) => `${v.category} — ${v.value}`).join("; ")}</p>
+                    <p className="mt-2 text-sm text-gray-800"><strong>{c.measure}:</strong> {c.values.map((v) => `${v.category}: ${v.value}`).join("; ")}</p>
                     <p className="mt-1 text-sm text-gray-600">{c.howItWorks}</p>
                   </div>
                 ))}

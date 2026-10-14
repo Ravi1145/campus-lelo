@@ -4,7 +4,7 @@ import AICounselorClient from "@/components/ai/AICounselorClient"
 import Link from "next/link"
 
 export const metadata: Metadata = genMeta({
-  title: "AI Career Counselor for Pune Colleges 2026 — Free Instant Advice",
+  title: "AI Career Counselor for Pune Colleges 2026: Free Instant Advice",
   description: "Chat with Aarav, our AI career counselor, for free instant advice on Pune colleges, courses, entrance exams, career paths, and scholarships. Powered by Claude AI.",
   path: "/ai-counselor",
   keywords: [
@@ -45,10 +45,10 @@ export default function AICounselorPage() {
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-                Meet Aarav — Your AI Career Counselor
+                Meet Aarav: Your AI Career Counselor
               </h1>
               <p className="text-gray-300 text-sm max-w-2xl">
-                Ask anything about Pune colleges, entrance exams, career paths, fees, and placements. Aarav gives you instant, honest answers — free, anytime.
+                Ask anything about Pune colleges, entrance exams, career paths, fees, and placements. Aarav gives you instant, honest answers, free, anytime.
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {["100% Free", "Instant Replies", "Pune Specialist", "Powered by Claude AI"].map(tag => (

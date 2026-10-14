@@ -53,7 +53,7 @@ export default function CityExamCollegesPage({ examSlug, city, path }: { examSlu
     },
     {
       question: `Is ${exam.name} accepted for PGDM in ${city}?`,
-      answer: `PGDM institutes set their own accepted exams. ${programs.some((p) => p.programType === "PGDM") ? "The PGDM programmes listed on this page accept it for the stated intake." : `Check each PGDM institute's admission page — we list a PGDM here only after verifying it.`}`,
+      answer: `PGDM institutes set their own accepted exams. ${programs.some((p) => p.programType === "PGDM") ? "The PGDM programmes listed on this page accept it for the stated intake." : `Check each PGDM institute's admission page: we list a PGDM here only after verifying it.`}`,
     },
     ...(exam.keyDates.length ? [{ question: `When is ${examTitleName(exam)}?`, answer: exam.keyDates.map((d) => `${d.label}: ${d.value}`).join(". ") + "." }] : []),
   ]
@@ -74,7 +74,7 @@ export default function CityExamCollegesPage({ examSlug, city, path }: { examSlu
     publisher: { "@type": "Organization", name: "CampusLelo", url: BASE_URL },
     speakable: { "@type": "SpeakableSpecification", cssSelector: [".quick-answer"] },
     citation: sources.map((s) => ({ "@type": "CreativeWork", name: s.label, url: s.url })),
-    ...(programs.length ? { mainEntity: { "@type": "ItemList", numberOfItems: programs.length, itemListElement: programs.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: `${p.institution} — ${p.program}`, ...(p.collegeSlug ? { url: `${BASE_URL}/colleges/${p.collegeSlug}` } : {}) })) } } : {}),
+    ...(programs.length ? { mainEntity: { "@type": "ItemList", numberOfItems: programs.length, itemListElement: programs.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: `${p.institution}: ${p.program}`, ...(p.collegeSlug ? { url: `${BASE_URL}/colleges/${p.collegeSlug}` } : {}) })) } } : {}),
   }
 
   return (
@@ -136,9 +136,9 @@ export default function CityExamCollegesPage({ examSlug, city, path }: { examSlu
             <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2"><ListChecks className="w-4 h-4 text-orange-500" /> How to build your shortlist</h2>
             <ul className="space-y-2">
               {[
-                `Check each programme's admission page for the current intake — exam acceptance can change from year to year.`,
+                `Check each programme's admission page for the current intake, exam acceptance can change from year to year.`,
                 `Note whether the programme is an MBA (university degree) or a PGDM (AICTE-approved diploma).`,
-                cap ? `For CAP MBA seats, register with the State CET Cell in time — CAP has its own registration and rounds.` : `Track each institute's application deadline separately — there is no common counselling.`,
+                cap ? `For CAP MBA seats, register with the State CET Cell in time, CAP has its own registration and rounds.` : `Track each institute's application deadline separately, there is no common counselling.`,
                 `Treat previous-year cut-offs as a rough guide only, and apply to a mix of reach, target and safe options.`,
               ].map((t) => <li key={t} className="flex gap-2 text-sm text-gray-700"><CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />{t}</li>)}
             </ul>

@@ -162,7 +162,7 @@ export default function PrivateMBACollegesPunePage() {
               Private MBA Colleges in Pune 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Complete guide to top private MBA colleges in Pune — deemed universities and autonomous colleges. Compare fees (₹2.8L–₹22L total), SNAP/CAT/CMAT cutoffs, average placements, and admission process for 2026.
+              Complete guide to top private MBA colleges in Pune, deemed universities and autonomous colleges. Compare fees (₹2.8L–₹22L total), SNAP/CAT/CMAT cutoffs, average placements, and admission process for 2026.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
@@ -272,17 +272,17 @@ export default function PrivateMBACollegesPunePage() {
           {/* Admission Process */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-orange-500" /> MBA Admission Process — Private Colleges in Pune
+              <BookOpen className="w-5 h-5 text-orange-500" /> MBA Admission Process: Private Colleges in Pune
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2 text-sm">For Symbiosis Colleges (SIBM, SCMHRD, SCIT)</h3>
                 <ol className="space-y-2">
                   {[
-                    "Register for SNAP (Symbiosis National Aptitude Test) — December",
+                    "Register for SNAP (Symbiosis National Aptitude Test). December",
                     "Separately register for each Symbiosis institute of choice",
                     "Clear SNAP cutoff (95+ percentile for SIBM)",
-                    "Attend GE-PIWAT (Group Exercise, PI, WAT) — Jan–Feb",
+                    "Attend GE-PIWAT (Group Exercise, PI, WAT). Jan–Feb",
                     "Accept admission offer, pay acceptance fee",
                     "Complete document verification and fee payment",
                   ].map((step, i) => (
@@ -322,7 +322,7 @@ export default function PrivateMBACollegesPunePage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Private MBA Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Private MBA Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -339,8 +339,8 @@ export default function PrivateMBACollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+              { label: "Top 10 MBA Colleges. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+              { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },

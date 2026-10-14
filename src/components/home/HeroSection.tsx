@@ -145,10 +145,10 @@ export default function HeroSection() {
           <h1 id="hero-heading" className="hero-in mt-5 text-[2.1rem] font-extrabold leading-[1.1] tracking-tight text-[#012858] sm:text-5xl lg:text-[3.4rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune"; the stream word is decorative */}
             Find the right <RotatingWord />
-            college in Pune
+            college in Pune, Noida or Delhi NCR
           </h1>
           <p className="hero-in mt-4 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
-            Compare 100+ colleges on fees, cut-offs, placements and accepted exams — then get free expert counselling.
+            Compare colleges by fees, entrance exams and cut-offs, then talk it through with a counsellor. The first call is free.
           </p>
 
           {/* Search card — the one primary action */}

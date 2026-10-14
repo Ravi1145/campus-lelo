@@ -32,10 +32,10 @@ const hostelColleges = [
     rooms: "Double / Triple sharing",
     food: "Mess + Canteen",
     capacity: "400+ seats",
-    availability: "Limited — Apply fast",
+    availability: "Limited: Apply fast",
     highlight: "Government College | Cheapest Hostel | Central Pune Location",
     slug: "coep-college-of-engineering-pune",
-    note: "Apply within 1 week of admission — seats fill in days",
+    note: "Apply within 1 week of admission, seats fill in days",
   },
   {
     rank: 2,
@@ -74,7 +74,7 @@ const hostelColleges = [
     availability: "Mandatory for SIBM MBA",
     highlight: "See the college's official website for current details.",
     slug: "sibm-symbiosis-institute-business-management-pune",
-    note: "Single rooms with attached bath — fully air-conditioned",
+    note: "Single rooms with attached bath, fully air-conditioned",
   },
   {
     rank: 5,
@@ -87,7 +87,7 @@ const hostelColleges = [
     availability: "Mandatory for AFMC",
     highlight: " | Free Hostel | Full Scholarship | Best Medical College",
     slug: "afmc-armed-forces-medical-college-pune",
-    note: "Residential — all students live on campus. Stipend ₹21,000/month",
+    note: "Residential: all students live on campus. Stipend ₹21,000/month",
   },
   {
     rank: 6,
@@ -97,10 +97,10 @@ const hostelColleges = [
     rooms: "Double sharing",
     food: "Hostel Mess",
     capacity: "300+ seats",
-    availability: "Limited — apply on admission day",
+    availability: "Limited: apply on admission day",
     highlight: " | Government Medical | Affordable | Sasoon Hospital",
     slug: "bj-medical-college-pune",
-    note: "Apply on the same day as admission — fills within hours",
+    note: "Apply on the same day as admission, fills within hours",
   },
   {
     rank: 7,
@@ -113,7 +113,7 @@ const hostelColleges = [
     availability: "Good Availability",
     highlight: "Symbiosis Campus | Lavale | NAAC A+",
     slug: "symbiosis-institute-of-technology-pune",
-    note: "On Symbiosis Lavale campus — safe and well-maintained",
+    note: "On Symbiosis Lavale campus, safe and well-maintained",
   },
   {
     rank: 8,
@@ -133,11 +133,11 @@ const hostelColleges = [
 const faqs = [
   {
     question: "Which Pune college has the cheapest hostel?",
-    answer: "Cheapest hostels in Pune colleges 2026: AFMC (FREE — with ₹21K/month stipend), Fergusson College (₹40K–55K/yr), COEP (₹55K–70K/yr), BJ Medical College (₹60K–75K/yr). Government colleges offer the most affordable hostels. Apply immediately on admission day — government college hostels fill within days due to high demand.",
+    answer: "Cheapest hostels in Pune colleges 2026: AFMC (FREE, with ₹21K/month stipend), Fergusson College (₹40K–55K/yr), COEP (₹55K–70K/yr), BJ Medical College (₹60K–75K/yr). Government colleges offer the most affordable hostels. Apply immediately on admission day, government college hostels fill within days due to high demand.",
   },
   {
     question: "Do I need to apply separately for hostel in Pune colleges?",
-    answer: "Yes, hostel application is separate from college admission in most Pune colleges. COEP and BJ Medical fill hostels within 1–2 days of admission. MIT-WPU, VIT Pune: Apply online after admission confirmation. SIBM Pune: Hostel is mandatory for MBA students — automatically allotted. Submit hostel application on the day of admission for government colleges.",
+    answer: "Yes, hostel application is separate from college admission in most Pune colleges. COEP and BJ Medical fill hostels within 1–2 days of admission. MIT-WPU, VIT Pune: Apply online after admission confirmation. SIBM Pune: Hostel is mandatory for MBA students, automatically allotted. Submit hostel application on the day of admission for government colleges.",
   },
   {
     question: "Is hostel life good in Pune colleges?",
@@ -178,7 +178,7 @@ export default function CollegesWithHostelPunePage() {
               Colleges in Pune with Hostel Facility 2026
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mb-6">
-              Complete guide to Pune colleges with hostel facilities — fees, availability, food, boys/girls hostel capacity, and how to apply.
+              Complete guide to Pune colleges with hostel facilities, fees, availability, food, boys/girls hostel capacity, and how to apply.
             </p>
             <div className="flex flex-wrap gap-3">
               {[
@@ -197,7 +197,7 @@ export default function CollegesWithHostelPunePage() {
 
         {/* College Cards */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Pune Colleges with Hostel — 2026 Guide</h2>
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Pune Colleges with Hostel, 2026 Guide</h2>
           <div className="space-y-4">
             {hostelColleges.map((c) => (
               <div key={c.rank} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition-shadow">
@@ -253,7 +253,7 @@ export default function CollegesWithHostelPunePage() {
 
           {/* FAQ */}
           <div className="mt-10">
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions — Hostels in Pune Colleges</h2>
+            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions: Hostels in Pune Colleges</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 px-5 py-4 group">

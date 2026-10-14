@@ -13,7 +13,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 export const metadata: Metadata = genMeta({
   title: "MBA Entrance Exam Calendar 2026–27: CAT, XAT, SNAP, NMAT",
-  description: "All MBA and PGDM entrance exam dates in one table — CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA and GMAT. Verified against official sources; free CSV download and embeddable widget.",
+  description: "All MBA and PGDM entrance exam dates in one table. CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA and GMAT. Verified against official sources; free CSV download and embeddable widget.",
   path: CALENDAR_PATH,
   keywords: ["mba entrance exam calendar", "mba entrance exam dates 2027", "cat 2026 exam date", "snap 2026 exam date", "xat 2027 exam date", "mba exam dates"],
 })
@@ -54,7 +54,7 @@ export default function MbaExamCalendarPage() {
           </nav>
           <h1 className="max-w-3xl text-3xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl">MBA entrance exam calendar 2026–27</h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-blue-100 sm:text-lg">
-            Registration and exam dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA and GMAT — in one table, each linked to its official site.
+            Registration and exam dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA and GMAT, in one table, each linked to its official site.
           </p>
           <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white ring-1 ring-white/20">
             <ShieldCheck className="h-4 w-4 text-emerald-300" aria-hidden="true" /> Last verified {verifiedText || "recently"} · dates not yet confirmed are marked
@@ -111,7 +111,7 @@ export default function MbaExamCalendarPage() {
 
         <section aria-labelledby="share-h" className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-200 sm:p-8">
           <h2 id="share-h" className="text-2xl font-extrabold text-[#012858]">Use this calendar on your site</h2>
-          <p className="mt-1 text-sm text-gray-600">Teachers, coaching centres, college blogs and student communities are welcome to embed or cite it — free. The embed updates automatically when dates change.</p>
+          <p className="mt-1 text-sm text-gray-600">Teachers, coaching centres, college blogs and student communities are welcome to embed or cite it, free. The embed updates automatically when dates change.</p>
           <div className="mt-6 grid gap-6 lg:grid-cols-2">
             <CopyBox label="Embed code" text={embedCode} rows={6} />
             <CopyBox label="Cite this page" text={citation} rows={6} />

@@ -28,7 +28,7 @@ export default function MBAHR() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="MBA in HR — Colleges in Pune 2026"
+        h1="MBA in HR: Colleges in Pune 2026"
         subtitle="Best MBA Human Resources colleges in Pune. SCMHRD leads with dedicated HRD specialization and top IT/manufacturing HR placements."
         quickAnswer="SCMHRD Pune is the best MBA HR college in Pune. SIBM and PUMBA follow. IT companies (TCS, Infosys, Wipro) in Pune are the biggest MBA HR recruiters. Admission via SNAP (Symbiosis) or MAH-CET MBA."
         stats={[
@@ -37,7 +37,7 @@ export default function MBAHR() {
           { value: "SNAP/MAH-CET", label: "Exams" },
         ]}
                 colleges={mbaColleges.filter(c => c.specializations.includes("HR"))}
-        introHeading="MBA HR in Pune — Scope & Career Opportunities"
+        introHeading="MBA HR in Pune. Scope & Career Opportunities"
         introParagraphs={[
           "MBA Human Resources (HR) from Pune is highly valuable given the city's large IT and manufacturing workforce. Pune's IT sector employs 500,000+ professionals, requiring thousands of HR managers, HRBPs, L&D specialists, and talent acquisition leaders every year.",
           "SCMHRD stands out for MBA HR because it pioneered the HRD (Human Resource Development) specialization in India and has a dedicated HR curriculum covering organizational behaviour, labour law, talent management, compensation, and HR analytics. Its Hinjewadi campus is literally inside Pune's IT hub.",
@@ -50,7 +50,7 @@ export default function MBAHR() {
           { label: "SIBM vs SCMHRD", href: "/sibm-vs-scmhrd-pune" },
           { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
-        ctaHeading="MBA HR in Pune — Get Your College Shortlist"
+        ctaHeading="MBA HR in Pune. Get Your College Shortlist"
         ctaSubtext="Free counselling to choose between SCMHRD, SIBM, PUMBA for MBA HR based on your profile."
       />
       <RelatedMbaSearches path="/mba-colleges-in-pune-for-hr" />

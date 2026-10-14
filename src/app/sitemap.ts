@@ -39,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // All college detail pages (auto-generated from static data)
   const collegePages: MetadataRoute.Sitemap = colleges.map((c) => ({
     url: `${BASE_URL}/colleges/${c.slug}`,
-    lastModified: "2026-06-01", // static — prevents every ISR build from signalling "changed today"
+    lastModified: "2026-06-01", // static: prevents every ISR build from signalling "changed today"
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }))
@@ -294,7 +294,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
   const cutoffPages: MetadataRoute.Sitemap = getAllCutoffParams().map(({ exam, college }) => ({
     url: `${BASE_URL}/cutoffs/${exam}/${college}`,
-    lastModified: "2026-06-01", // static — cutoff data doesn't change daily
+    lastModified: "2026-06-01", // static: cutoff data doesn't change daily
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }))

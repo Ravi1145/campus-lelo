@@ -34,7 +34,7 @@ const mhtCetOnlyColleges = [
 ]
 
 const bothExamColleges = [
-  { name: "PICT Pune", type: "Autonomous", naac: "A", jeeNote: "Optional — MHT-CET preferred", cutoff: "92–95 %ile MHT-CET" },
+  { name: "PICT Pune", type: "Autonomous", naac: "A", jeeNote: "Optional: MHT-CET preferred", cutoff: "92–95 %ile MHT-CET" },
   { name: "VIT Pune", type: "Autonomous", naac: "A+", jeeNote: "JEE accepted but MHT-CET primary", cutoff: "88–92 %ile MHT-CET" },
   { name: "SIT Pune (Symbiosis)", type: "Deemed", naac: "A+", jeeNote: "SET / JEE / MHT-CET all accepted", cutoff: "SET or JEE 85+ %ile" },
   { name: "MIT-WPU Pune", type: "Deemed", naac: "A+", jeeNote: "MHT-CET or JEE both accepted", cutoff: "75–85 %ile MHT-CET" },
@@ -44,11 +44,11 @@ const bothExamColleges = [
 const faqs = [
   {
     question: "Is JEE compulsory for engineering colleges in Pune?",
-    answer: "No — JEE Main is NOT compulsory for most Pune engineering colleges. Over 80% of Pune colleges — including COEP, JSPM, AISSMS, Sinhgad, Indira, and D.Y. Patil — admit students through MHT-CET only. JEE is optional at VIT Pune, MIT-WPU, and SIT Pune, and mandatory for IITs/NITs only.",
+    answer: "No: JEE Main is NOT compulsory for most Pune engineering colleges. Over 80% of Pune colleges, including COEP, JSPM, AISSMS, Sinhgad, Indira, and D.Y. Patil: admit students through MHT-CET only. JEE is optional at VIT Pune, MIT-WPU, and SIT Pune, and mandatory for IITs/NITs only.",
   },
   {
     question: "What MHT-CET percentile is needed to get into COEP without JEE?",
-    answer: "For Computer Engineering at COEP (the most competitive branch), you need 99.5+ percentile in MHT-CET. For Mechanical Engineering at COEP, you need 95+ percentile. For Civil and other branches, 90+ percentile is typically sufficient. These are General category cutoffs — SC/ST students get 10–15 percentile relaxation.",
+    answer: "For Computer Engineering at COEP (the most competitive branch), you need 99.5+ percentile in MHT-CET. For Mechanical Engineering at COEP, you need 95+ percentile. For Civil and other branches, 90+ percentile is typically sufficient. These are General category cutoffs. SC/ST students get 10–15 percentile relaxation.",
   },
   {
     question: "Can I get admission in a top Pune engineering college with only MHT-CET?",
@@ -56,11 +56,11 @@ const faqs = [
   },
   {
     question: "What is lateral entry admission in Pune engineering colleges without JEE?",
-    answer: "Diploma holders can get direct admission to the 2nd year of B.Tech programs at Pune engineering colleges through lateral entry — without JEE Main. DTE Maharashtra conducts the Direct Second Year (DSE) CAP rounds. Eligible candidates: 3-year diploma in relevant branch with 45%+ marks. Top colleges accepting lateral entry: COEP, VIT Pune, PICT, JSPM RSCOE.",
+    answer: "Diploma holders can get direct admission to the 2nd year of B.Tech programs at Pune engineering colleges through lateral entry, without JEE Main. DTE Maharashtra conducts the Direct Second Year (DSE) CAP rounds. Eligible candidates: 3-year diploma in relevant branch with 45%+ marks. Top colleges accepting lateral entry: COEP, VIT Pune, PICT, JSPM RSCOE.",
   },
   {
     question: "How to apply for MHT-CET 2026?",
-    answer: "Register on cetcell.mahacet.org. MHT-CET 2026 registration: January–February 2026. Exam: April 15 – May 15, 2026 (PCM group for engineering). Results: June 2026. CAP Round 1 counselling: July 2026. Eligibility: 12th pass with Physics, Chemistry, Mathematics (PCM), minimum 45% marks (40% for reserved categories).",
+    answer: "Register on cetcell.mahacet.org. MHT-CET 2026 registration: January–February 2026. Exam: April 15: May 15, 2026 (PCM group for engineering). Results: June 2026. CAP Round 1 counselling: July 2026. Eligibility: 12th pass with Physics, Chemistry, Mathematics (PCM), minimum 45% marks (40% for reserved categories).",
   },
   {
     question: "Can I get management quota BTech in Pune without JEE or MHT-CET?",
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Which Pune engineering college can I get with 70 percentile in MHT-CET without JEE?",
-    answer: "With 70 percentile in MHT-CET (without JEE), you can target: JSPM RSCOE (60–75 %ile), AISSMS College of Engineering (60–70 %ile), Sinhgad College of Engineering (65–75 %ile), Indira College of Engineering (55–65 %ile), D.Y. Patil College Akurdi (60–70 %ile). All these colleges accept MHT-CET only — no JEE required.",
+    answer: "With 70 percentile in MHT-CET (without JEE), you can target: JSPM RSCOE (60–75 %ile), AISSMS College of Engineering (60–70 %ile), Sinhgad College of Engineering (65–75 %ile), Indira College of Engineering (55–65 %ile), D.Y. Patil College Akurdi (60–70 %ile). All these colleges accept MHT-CET only, no JEE required.",
   },
 ]
 
@@ -104,12 +104,12 @@ export default function EngineeringAdmissionWithoutJEEPage() {
               Engineering Admission in Pune Without JEE 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Get B.Tech / BE admission at top Pune engineering colleges using only MHT-CET score. Complete guide to MHT-CET colleges, lateral entry, and management quota routes — no JEE needed.
+              Get B.Tech / BE admission at top Pune engineering colleges using only MHT-CET score. Complete guide to MHT-CET colleges, lateral entry, and management quota routes, no JEE needed.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Yes, you can get B.Tech admission in Pune without JEE Main.</strong> Over 80% of Pune engineering colleges — including <strong>COEP</strong> (), <strong>PICT</strong>, <strong>JSPM</strong>, and <strong>AISSMS</strong> — admit students through <strong>MHT-CET only</strong>. Alternatives: lateral entry (diploma holders, no entrance exam), management quota (12th pass sufficient, no JEE/MHT-CET needed).
+                <strong>Yes, you can get B.Tech admission in Pune without JEE Main.</strong> Over 80% of Pune engineering colleges, including <strong>COEP</strong> (), <strong>PICT</strong>, <strong>JSPM</strong>, and <strong>AISSMS</strong>, admit students through <strong>MHT-CET only</strong>. Alternatives: lateral entry (diploma holders, no entrance exam), management quota (12th pass sufficient, no JEE/MHT-CET needed).
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function EngineeringAdmissionWithoutJEEPage() {
           {/* MHT-CET Process */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-orange-500" /> MHT-CET 2026 — Key Dates & How to Apply
+              <BookOpen className="w-5 h-5 text-orange-500" /> MHT-CET 2026: Key Dates & How to Apply
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -287,7 +287,7 @@ export default function EngineeringAdmissionWithoutJEEPage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — Engineering Admission in Pune Without JEE</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: Engineering Admission in Pune Without JEE</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -304,8 +304,8 @@ export default function EngineeringAdmissionWithoutJEEPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
               { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },

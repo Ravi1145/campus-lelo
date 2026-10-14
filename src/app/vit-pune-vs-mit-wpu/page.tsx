@@ -19,15 +19,15 @@ const rows = [
   { param: "NAAC Grade", vit: "A+", mit: "A+" },
   { param: "Type", vit: "Private Autonomous", mit: "Deemed University" },
   { param: "Established", vit: "1983", mit: "1983 (University 2017)" },
-  { param: "Annual Fees (BTech)", vit: "₹1.6L – ₹2.2L", mit: "₹2.2L – ₹3.5L" },
-  { param: "4-Year Total Cost", vit: "₹6.4L – ₹8.8L", mit: "₹8.8L – ₹14L" },
+  { param: "Annual Fees (BTech)", vit: "₹1.6L, ₹2.2L", mit: "₹2.2L, ₹3.5L" },
+  { param: "4-Year Total Cost", vit: "₹6.4L, ₹8.8L", mit: "₹8.8L, ₹14L" },
   { param: "MHT-CET Cutoff (CSE)", vit: "88–92 percentile", mit: "82–88 percentile" },
   { param: "Top Recruiters", vit: "TCS, Cognizant, Persistent", mit: "TCS, Wipro, Capgemini, L&T" },
   { param: "BTech Seats (CSE)", vit: "120", mit: "180" },
   { param: "Campus Area", vit: "7 acres (Bibwewadi)", mit: "130 acres (Kothrud + Loni)" },
   { param: "Hostel", vit: "Yes (₹80K–₹1L/yr)", mit: "Yes (₹90K–₹1.2L/yr)" },
   { param: "Specialisations", vit: "Mech, Electronics, CS, IT", mit: "CS, Mech, Civil, AI/ML, Data Science" },
-  { param: "MBA Program", vit: "No MBA", mit: "Yes — MIT School of Management" },
+  { param: "MBA Program", vit: "No MBA", mit: "Yes: MIT School of Management" },
   { param: "Affiliation", vit: "SPPU (Autonomous)", mit: "MIT-WPU (Deemed University)" },
 ]
 
@@ -45,7 +45,7 @@ export default function VitVsMitWpu() {
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">VIT Pune vs MIT-WPU 2026</h1>
           <p className="text-blue-100 text-lg max-w-3xl">
-            Comparing two of Pune&apos;s most popular private engineering colleges — Vishwakarma Institute of Technology (VIT Pune) and MIT World Peace University (MIT-WPU). Which should you choose for BTech in 2026?
+            Comparing two of Pune&apos;s most popular private engineering colleges. Vishwakarma Institute of Technology (VIT Pune) and MIT World Peace University (MIT-WPU). Which should you choose for BTech in 2026?
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <span className="bg-white/10 px-3 py-1 rounded-full">Updated June 2026</span>
@@ -64,7 +64,7 @@ export default function VitVsMitWpu() {
               <div className="font-bold text-teal-800 text-lg mb-1">🏆 Choose VIT Pune if…</div>
               <ul className="text-sm text-gray-700 space-y-1.5 list-disc list-inside">
                 <li>You score <strong>88–95 percentile</strong> in MHT-CET</li>
-                <li>Budget is important — <strong>₹1.6L/yr vs ₹2.5L/yr</strong></li>
+                <li>Budget is important: <strong>₹1.6L/yr vs ₹2.5L/yr</strong></li>
                 <li>You want NIRF-ranked college (#101)</li>
                 <li>Mechanical or Electronics engineering is your stream</li>
                 <li>SPPU affiliation preferred over deemed university</li>
@@ -76,7 +76,7 @@ export default function VitVsMitWpu() {
                 <li>You score <strong>80–88 percentile</strong> in MHT-CET</li>
                 <li>You want newer specialisations (AI/ML, Data Science)</li>
                 <li>Larger campus (130 acres) matters to you</li>
-                <li>You may want MBA later — MIT School of Management on campus</li>
+                <li>You may want MBA later. MIT School of Management on campus</li>
               </ul>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function VitVsMitWpu() {
 
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900">VIT Pune vs MIT-WPU — Full Comparison 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900">VIT Pune vs MIT-WPU. Full Comparison 2026</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -113,11 +113,11 @@ export default function VitVsMitWpu() {
         </section>
 
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — VIT Pune vs MIT-WPU 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: VIT Pune vs MIT-WPU 2026</h2>
           <div className="space-y-4">
             {[
               { q: "What is the MHT-CET cutoff for VIT Pune CSE 2026?", a: "VIT Pune BTech CSE MHT-CET cutoff (2025, Open category Round 1) was approximately 88–92 percentile. MIT-WPU CSE cutoff was 82–88 percentile. Expect similar cutoffs in 2026." },
-              { q: "Does VIT Pune or MIT-WPU have better campus facilities?", a: "MIT-WPU wins on campus size — 130 acres across Kothrud and Loni Kalbhor vs VIT Pune's 7 acres in Bibwewadi. MIT-WPU has a full university campus with sports complex, cultural centre, and multiple schools. VIT Pune is more compact but very well-equipped for engineering labs." },
+              { q: "Does VIT Pune or MIT-WPU have better campus facilities?", a: "MIT-WPU wins on campus size, 130 acres across Kothrud and Loni Kalbhor vs VIT Pune's 7 acres in Bibwewadi. MIT-WPU has a full university campus with sports complex, cultural centre, and multiple schools. VIT Pune is more compact but very well-equipped for engineering labs." },
             ].map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">
                 <summary className="font-semibold text-gray-800 cursor-pointer">{q}</summary>

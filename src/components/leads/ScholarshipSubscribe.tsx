@@ -80,7 +80,7 @@ export default function ScholarshipSubscribe({ context = "scholarship_subscribe"
           <div>
             <p className="font-bold text-white text-base leading-tight">Get Scholarship Alerts on WhatsApp</p>
             <p className="text-sm mt-0.5" style={{ color: "rgba(178,200,228,0.85)" }}>
-              New scholarships, deadlines &amp; merit lists — free alerts, no spam.
+              New scholarships, deadlines &amp; merit lists, free alerts, no spam.
             </p>
           </div>
         </div>

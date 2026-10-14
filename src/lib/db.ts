@@ -267,7 +267,7 @@ export async function getAllEnquiries(): Promise<Enquiry[]> {
   return []
 }
 
-export async function updateEnquiryStatus(): Promise<void> { /* no-op — use updateLeadStatus */ }
+export async function updateEnquiryStatus(): Promise<void> { /* no-op: use updateLeadStatus */ }
 
 // ── COUNSELLING FUNCTIONS ─────────────────────────────────────────────────────
 

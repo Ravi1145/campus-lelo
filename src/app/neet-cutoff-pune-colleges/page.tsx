@@ -7,7 +7,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "NEET Cutoff for Pune Colleges 2026 | MBBS Cutoff Marks AFMC, BJ Medical",
-  description: "NEET 2026 cutoff for Pune medical colleges — AFMC (650+ marks), BJ Medical (620+), DY Patil Medical (550+). Category-wise cutoffs (Open, OBC, SC, ST) for MBBS admission in Pune.",
+  description: "NEET 2026 cutoff for Pune medical colleges. AFMC (650+ marks), BJ Medical (620+), DY Patil Medical (550+). Category-wise cutoffs (Open, OBC, SC, ST) for MBBS admission in Pune.",
   path: "/neet-cutoff-pune-colleges",
   keywords: [
     "neet cutoff pune colleges 2026", "neet cutoff pune medical colleges", "afmc neet cutoff 2026",
@@ -18,7 +18,7 @@ export const metadata: Metadata = genMeta({
 })
 
 const cutoffs = [
-  { rank: 1, name: "AFMC Pune (Armed Forces Medical College)", slug: "afmc-armed-forces-medical-college-pune", type: "Government (Defence)", nirf: null, fees: "₹50K total (4.5 yrs)", open: "650+ (NEET + AFMC test)", obc: "640+", sc: "620+", st: "610+", note: " — Best in Pune" },
+  { rank: 1, name: "AFMC Pune (Armed Forces Medical College)", slug: "afmc-armed-forces-medical-college-pune", type: "Government (Defence)", nirf: null, fees: "₹50K total (4.5 yrs)", open: "650+ (NEET + AFMC test)", obc: "640+", sc: "620+", st: "610+", note: ": Best in Pune" },
   { rank: 2, name: "BJ Medical College Pune", slug: "bj-medical-college-pune", type: "Government State", nirf: null, fees: "₹60K/yr", open: "632 (State) / 641 (AIQ)", obc: "596+ (State)", sc: "548+", st: "528+", note: "Best Govt. Option" },
   { rank: 3, name: "D.Y. Patil Medical College (Deemed)", slug: "dy-patil-medical-college-pimpri-pune", type: "Deemed Private", nirf: null, fees: "₹14L–₹18L/yr", open: "550+", obc: "530+", sc: "500+", st: "480+", note: "Largest Private MBBS" },
   { rank: 4, name: "Bharati Vidyapeeth Medical College", slug: "bharati-vidyapeeth-medical-college-pune", type: "Deemed", nirf: null, fees: "₹12L–₹15L/yr", open: "560+", obc: "540+", sc: "510+", st: "490+", note: "Established 1989" },
@@ -28,7 +28,7 @@ const cutoffs = [
 const faqs = [
   { question: "What is the NEET cutoff for Pune medical colleges in 2026?", answer: "NEET 2026 expected cutoffs for Pune medical colleges: AFMC (650+ marks + AFMC test), BJ Medical College state quota 620+ (open), AIQ 641+, D.Y. Patil Medical 550+, Bharati Vidyapeeth 560+, SMCW 565+ (women). OBC/SC/ST categories get 10–20 mark relaxation at government colleges." },
   { question: "What NEET score is needed for AFMC Pune?", answer: "AFMC Pune requires approximately 650+ marks in NEET UG 2026 (General category) plus qualifying the AFMC Written Entrance Test (100 marks). The selection is based on NEET score + AFMC test + Personal Interview. Post-selection, students get a 7-year bond for Armed Forces service. Fees are approximately ₹50,000 total for 4.5-year MBBS." },
-  { question: "Which is the cheapest MBBS college in Pune via NEET?", answer: "AFMC Pune is the cheapest — total fees ₹50,000 for the entire 4.5-year MBBS (requires 650+ NEET). BJ Medical College charges ₹60,000/year (requires 620+ NEET state quota). These are government colleges. Private deemed colleges charge ₹12–18L/year and have lower NEET cutoffs (550–565+)." },
+  { question: "Which is the cheapest MBBS college in Pune via NEET?", answer: "AFMC Pune is the cheapest, total fees ₹50,000 for the entire 4.5-year MBBS (requires 650+ NEET). BJ Medical College charges ₹60,000/year (requires 620+ NEET state quota). These are government colleges. Private deemed colleges charge ₹12–18L/year and have lower NEET cutoffs (550–565+)." },
 ]
 
 const breadcrumbs = [
@@ -61,7 +61,7 @@ export default function NeetCutoffPuneColleges() {
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">NEET Cutoff for Pune Colleges 2026</h1>
             <p className="text-green-100 text-lg max-w-3xl mb-5">
-              Category-wise NEET 2026 cutoff marks for MBBS admission in Pune — AFMC, BJ Medical, DY Patil Medical, Bharati Vidyapeeth, SMCW. State quota vs AIQ cutoffs compared.
+              Category-wise NEET 2026 cutoff marks for MBBS admission in Pune. AFMC, BJ Medical, DY Patil Medical, Bharati Vidyapeeth, SMCW. State quota vs AIQ cutoffs compared.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
@@ -73,9 +73,9 @@ export default function NeetCutoffPuneColleges() {
         </section>
 
         <div className="max-w-5xl mx-auto px-4 py-10 space-y-6">
-          <h2 className="text-xl font-bold text-gray-900">NEET 2025 Cutoff — Pune Medical Colleges (Reference for 2026)</h2>
+          <h2 className="text-xl font-bold text-gray-900">NEET 2025 Cutoff: Pune Medical Colleges (Reference for 2026)</h2>
           <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
-            ⚠️ 2026 cutoffs will be published after NEET UG 2026 results. Below are 2025 cutoffs for reference — expect ±10 marks variation.
+            ⚠️ 2026 cutoffs will be published after NEET UG 2026 results. Below are 2025 cutoffs for reference, expect ±10 marks variation.
           </p>
 
           <div className="overflow-x-auto bg-white rounded-2xl border border-gray-200 shadow-sm">
@@ -111,7 +111,7 @@ export default function NeetCutoffPuneColleges() {
           </div>
 
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — NEET Cutoff Pune 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: NEET Cutoff Pune 2026</h2>
             <div className="space-y-3">
               {faqs.map(({ question, answer }) => (
                 <details key={question} className="border border-gray-100 rounded-xl p-4">

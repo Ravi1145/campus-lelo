@@ -67,7 +67,7 @@ export default function FeesCalculator() {
 
       {/* Step 1 — Course */}
       <div className="mb-5">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 1 — Select Course</p>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 1: Select Course</p>
         <div className="flex gap-3">
           {(["engineering", "mba"] as const).map((c) => (
             <button
@@ -87,7 +87,7 @@ export default function FeesCalculator() {
 
       {/* Step 2 — College */}
       <div className="mb-5">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 2 — Select College</p>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 2: Select College</p>
         <select
           value={collegeIdx}
           onChange={(e) => setCollegeIdx(Number(e.target.value))}
@@ -101,7 +101,7 @@ export default function FeesCalculator() {
 
       {/* Step 3 — Category */}
       <div className="mb-6">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 3 — Select Category</p>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Step 3: Select Category</p>
         <div className="grid grid-cols-2 gap-2">
           {Object.entries(categoryLabels).map(([key, label]) => (
             <button
@@ -125,21 +125,21 @@ export default function FeesCalculator() {
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="bg-white/10 rounded-xl p-3">
             <p className="text-xs text-blue-300 mb-1">Annual Fee Range</p>
-            <p className="text-lg font-extrabold">{fmt(college.minFee)} – {fmt(college.maxFee)}</p>
+            <p className="text-lg font-extrabold">{fmt(college.minFee)} to {fmt(college.maxFee)}</p>
           </div>
           <div className="bg-white/10 rounded-xl p-3">
             <p className="text-xs text-blue-300 mb-1">Total ({years} Years)</p>
-            <p className="text-lg font-extrabold">{fmt(minTotal)} – {fmt(maxTotal)}</p>
+            <p className="text-lg font-extrabold">{fmt(minTotal)} to {fmt(maxTotal)}</p>
           </div>
           {discount > 0 && (
             <>
               <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-3">
                 <p className="text-xs text-green-300 mb-1">After Scholarship</p>
-                <p className="text-lg font-extrabold text-green-300">{fmt(minAfter)} – {fmt(maxAfter)}</p>
+                <p className="text-lg font-extrabold text-green-300">{fmt(minAfter)} to {fmt(maxAfter)}</p>
               </div>
               <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-3">
                 <p className="text-xs text-green-300 mb-1">You Save</p>
-                <p className="text-lg font-extrabold text-green-300">{fmt(minSaving)} – {fmt(maxSaving)}</p>
+                <p className="text-lg font-extrabold text-green-300">{fmt(minSaving)} to {fmt(maxSaving)}</p>
               </div>
             </>
           )}

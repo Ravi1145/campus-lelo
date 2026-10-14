@@ -5,7 +5,7 @@ import GoBackButton from "@/components/ui/GoBackButton"
 
 export const metadata: Metadata = {
   title: { absolute: "Page Not Found | CampusLelo" },
-  description: "Sorry, the page you are looking for doesn't exist. Find the best colleges in Pune — engineering, MBA, medical, and more.",
+  description: "Sorry, the page you are looking for doesn't exist. Find the best colleges in Pune, engineering, MBA, medical, and more.",
   robots: { index: false, follow: true },
 }
 

@@ -29,7 +29,7 @@ const documents = [
   "HSC (12th) marksheet & certificate",
   "Domicile certificate (Maharashtra)",
   "Nationality certificate / Aadhaar card",
-  "Caste certificate (if applicable — OBC/SC/ST/VJ-NT/SBC)",
+  "Caste certificate (if applicable. OBC/SC/ST/VJ-NT/SBC)",
   "Non-creamy layer certificate (for OBC, VJ-NT, SBC)",
   "Income certificate (for EBC scholarship)",
   "EWS certificate (if applicable)",
@@ -39,8 +39,8 @@ const documents = [
 ]
 
 const faqs = [
-  { q: "What is MHT-CET CAP Round and how does it work?", a: "CAP (Centralised Admission Process) is Maharashtra's online seat allotment system for engineering admissions. After MHT-CET results, students register on the CAP portal, fill document verification, then choose colleges in order of preference. Allotment is merit-based — higher MHT-CET percentile = better chances at top colleges like COEP and PICT. There are 3 main CAP rounds; after each round, you can accept, upgrade, or cancel." },
-  { q: "How to fill choice form for MHT-CET CAP Round 1?", a: "Log in to cap.mahacet.org after document verification. Go to 'Option Form'. Add colleges in order of preference (you can add up to 300+ preferences). Put COEP first if your score is 97+ percentile, PICT for 92+, VIT Pune for 88+. Always fill 15–20 options to ensure you get a seat. Confirm and lock the form before the deadline — you cannot edit after locking." },
+  { q: "What is MHT-CET CAP Round and how does it work?", a: "CAP (Centralised Admission Process) is Maharashtra's online seat allotment system for engineering admissions. After MHT-CET results, students register on the CAP portal, fill document verification, then choose colleges in order of preference. Allotment is merit-based: higher MHT-CET percentile = better chances at top colleges like COEP and PICT. There are 3 main CAP rounds; after each round, you can accept, upgrade, or cancel." },
+  { q: "How to fill choice form for MHT-CET CAP Round 1?", a: "Log in to cap.mahacet.org after document verification. Go to 'Option Form'. Add colleges in order of preference (you can add up to 300+ preferences). Put COEP first if your score is 97+ percentile, PICT for 92+, VIT Pune for 88+. Always fill 15–20 options to ensure you get a seat. Confirm and lock the form before the deadline, you cannot edit after locking." },
   { q: "What documents are needed for MHT-CET counselling 2026?", a: "Required documents: MHT-CET 2026 scorecard, 10th and 12th marksheets, domicile certificate, Aadhaar card, caste certificate (if applicable), non-creamy layer certificate (OBC/VJ-NT/SBC), income certificate, and recent photos. Carry originals + 3 self-attested copies of each. Missing documents can lead to rejection of seat." },
   { q: "Can I change my college after CAP Round 1 allotment?", a: "Yes. After Round 1 allotment, you can: (1) Accept the seat and freeze (confirm final choice), (2) Accept and float (keep the seat and participate in Round 2 for a better college), or (3) Cancel and participate in Round 2 from scratch. If you choose 'float', you automatically participate in Round 2 and may get a better allotment." },
   { q: "What is the MHT-CET cutoff for COEP Pune 2026?", a: "COEP MHT-CET 2025 cutoffs: Computer Engineering (Open) 99.8 percentile, Mechanical (Open) 98.5 percentile, Electronics (Open) 99.2 percentile. 2026 expected cutoffs will be similar. For SC/ST categories, cutoffs drop by 10–15 percentile points." },
@@ -59,9 +59,9 @@ export default function MhtCetCounsellingPage() {
             <span>/</span>
             <span className="text-white">MHT-CET Counselling Pune 2026</span>
           </nav>
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">MHT-CET Counselling 2026 — Pune Engineering Colleges</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">MHT-CET Counselling 2026: Pune Engineering Colleges</h1>
           <p className="text-blue-100 text-lg max-w-3xl">
-            Step-by-step guide to MHT-CET 2026 CAP counselling for Pune engineering colleges — COEP, PICT, VIT Pune, MIT-WPU, SIT Pune. Covers CAP round dates, document list, choice filling strategy, and cutoffs.
+            Step-by-step guide to MHT-CET 2026 CAP counselling for Pune engineering colleges. COEP, PICT, VIT Pune, MIT-WPU, SIT Pune. Covers CAP round dates, document list, choice filling strategy, and cutoffs.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <span className="bg-white/10 px-3 py-1 rounded-full">Updated June 2026</span>
@@ -75,13 +75,13 @@ export default function MhtCetCounsellingPage() {
 
         {/* Quick steps */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-5">MHT-CET 2026 Counselling — Step-by-Step Process</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">MHT-CET 2026 Counselling: Step-by-Step Process</h2>
           <ol className="space-y-4">
             {[
               { step: 1, title: "Check MHT-CET 2026 Result", desc: "Results declared on mahacet.org / cetcell.mahacet.org. Download your scorecard. Your percentile determines which colleges you can target." },
               { step: 2, title: "Register on CAP Portal", desc: "Go to cap.mahacet.org. Create an account with your MHT-CET application number, Aadhaar, and mobile number. Pay the registration fee (₹500 for Open, ₹250 for reserved categories)." },
               { step: 3, title: "Document Verification (DV)", desc: "Visit the nearest DTE facilitation centre with all original documents + 3 copies. This is mandatory before you can fill choices. Book your DV slot online." },
-              { step: 4, title: "Fill Option Form (Choice Filling)", desc: "Log in and fill your college preferences. Add 15–25 options. Put dream colleges first, then backups. Lock the form before the deadline — changes are not allowed after locking." },
+              { step: 4, title: "Fill Option Form (Choice Filling)", desc: "Log in and fill your college preferences. Add 15–25 options. Put dream colleges first, then backups. Lock the form before the deadline, changes are not allowed after locking." },
               { step: 5, title: "CAP Round 1 Seat Allotment", desc: "Check your allotment on the CAP portal. Decide to Accept & Freeze, Accept & Float, or Cancel. Pay seat acceptance fee if accepting." },
               { step: 6, title: "Report to College", desc: "Carry all original documents to your allotted college for final admission. Pay remaining fees. Take admission within the deadline or your seat is cancelled." },
             ].map(({ step, title, desc }) => (
@@ -98,7 +98,7 @@ export default function MhtCetCounsellingPage() {
 
         {/* CAP Round dates */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">MHT-CET CAP Round 2026 — Expected Dates</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">MHT-CET CAP Round 2026. Expected Dates</h2>
           <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2 mb-4">
             ⚠️ Dates below are estimates based on 2025 schedule. Official dates will be announced on <strong>cetcell.mahacet.org</strong>.
           </p>
@@ -134,7 +134,7 @@ export default function MhtCetCounsellingPage() {
         {/* Cutoff table */}
         <section className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
           <div className="p-6 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900">MHT-CET Cutoffs — Pune Engineering Colleges 2025</h2>
+            <h2 className="text-xl font-bold text-gray-900">MHT-CET Cutoffs: Pune Engineering Colleges 2025</h2>
             <p className="text-sm text-gray-500 mt-1">Use these as a reference for 2026 targets. Expect ±0.5 percentile variation.</p>
           </div>
           <div className="overflow-x-auto">
@@ -172,7 +172,7 @@ export default function MhtCetCounsellingPage() {
 
         {/* FAQ */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">MHT-CET Counselling 2026 — FAQs</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">MHT-CET Counselling 2026: FAQs</h2>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <details key={q} className="border border-gray-100 rounded-xl p-4">

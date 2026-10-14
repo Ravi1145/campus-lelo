@@ -47,11 +47,11 @@ const SOURCES = `
 <h2>Sources and how we verify</h2>
 <p>Exam facts above come from the exam bodies' own pages and are checked against secondary reports; every fact has its source and review date on the linked exam guide. Read our ${a("/editorial-policy", "editorial policy")}. Always confirm on the official site before you pay or register:</p>
 ${ul([
-  ...mbaExams.map((e) => `<a href="${e.officialSite}" rel="noopener nofollow">${esc(e.name)} — official site</a>`),
-  `<a href="https://www.aicte-india.org" rel="noopener nofollow">AICTE</a> — approval status of PGDM programmes`,
-  `<a href="https://www.ugc.gov.in" rel="noopener nofollow">UGC</a> — recognition of universities and online/distance programmes`,
-  `<a href="https://www.nirfindia.org" rel="noopener nofollow">NIRF</a> — Ministry of Education rankings (Management category)`,
-  `<a href="https://aiu.ac.in" rel="noopener nofollow">Association of Indian Universities</a> — degree equivalence`,
+  ...mbaExams.map((e) => `<a href="${e.officialSite}" rel="noopener nofollow">${esc(e.name)}: official site</a>`),
+  `<a href="https://www.aicte-india.org" rel="noopener nofollow">AICTE</a>: approval status of PGDM programmes`,
+  `<a href="https://www.ugc.gov.in" rel="noopener nofollow">UGC</a>: recognition of universities and online/distance programmes`,
+  `<a href="https://www.nirfindia.org" rel="noopener nofollow">NIRF</a>: Ministry of Education rankings (Management category)`,
+  `<a href="https://aiu.ac.in" rel="noopener nofollow">Association of Indian Universities</a>: degree equivalence`,
 ])}
 <p><small>Last reviewed ${DATE}. We do not publish estimated cut-offs, fees or placement numbers we cannot source.</small></p>`
 
@@ -79,7 +79,7 @@ const feesBody = `
 ${table(
   ["Cost item", "Where to find it", "Common trap"],
   [
-    ["Tuition (all years)", "Fee structure in the admission brochure or on the admissions page", "Some pages show one year, others the full programme — check which"],
+    ["Tuition (all years)", "Fee structure in the admission brochure or on the admissions page", "Some pages show one year, others the full programme, check which"],
     ["Hostel and mess", "Hostel page or brochure", "Often listed separately and not included in the headline fee"],
     ["One-time charges", "Brochure: admission, caution deposit, registration, library, alumni", "Caution deposits are refundable; fees are not"],
     ["Books, laptop, insurance", "Ask admissions or current students", "Rarely listed in the fee table"],
@@ -94,7 +94,7 @@ ${ul([
   "<strong>Type of institute:</strong> a university department, a government institute, a private university and a standalone PGDM institute are funded and priced differently.",
   "<strong>Location:</strong> metro campuses cost more to run, and living costs add to the bill.",
   "<strong>Brand and network:</strong> institutes with strong recruiter relationships charge for them.",
-  "<strong>Programme type:</strong> an MBA, a PGDM, an executive or part-time programme and a specialised programme all have different structures — see " + a("/mba-vs-pgdm", "MBA vs PGDM") + ".",
+  "<strong>Programme type:</strong> an MBA, a PGDM, an executive or part-time programme and a specialised programme all have different structures, see " + a("/mba-vs-pgdm", "MBA vs PGDM") + ".",
 ])}
 
 <h2>How to find an institute's official fee</h2>
@@ -165,7 +165,7 @@ ${SOURCES}`
 // 3. How to choose
 // ──────────────────────────────────────────────────────────────────────────
 const chooseBody = `
-<p><strong>Quick answer:</strong> there is no single "best MBA college in India" — there is the best fit for your exam score, budget, goal and city. A published ranking is a starting point, not the answer. Use the steps below to build a shortlist of five to eight colleges and then compare them on the same criteria.</p>
+<p><strong>Quick answer:</strong> there is no single "best MBA college in India": there is the best fit for your exam score, budget, goal and city. A published ranking is a starting point, not the answer. Use the steps below to build a shortlist of five to eight colleges and then compare them on the same criteria.</p>
 
 <h2>Which is the best college for MBA in India?</h2>
 <p>People search "best MBA colleges in India" and "top MBA colleges in India ranking" hoping for one list. Rankings such as NIRF's Management category (published by the Ministry of Education at nirfindia.org) are useful, but they weigh factors that may not match your priorities. Read the methodology, then check the criteria below for your own case.</p>
@@ -225,7 +225,7 @@ ${table(
   mbaExams.map((e) => [examLink(e.slug, e.name), esc(e.scoring.headline)]),
 )}
 
-<h2>Which institutes publish a cut-off — and which do not?</h2>
+<h2>Which institutes publish a cut-off, and which do not?</h2>
 <p>We list a cut-off only when it is published or reported consistently by several sources, and we say exactly what the number measures. These Delhi NCR examples show how different two "cut-offs" can be:</p>
 ${table(
   ["Institute", "What was published", "How to read it"],
@@ -268,7 +268,7 @@ ${ol([
   "<strong>Take the exam and get your score.</strong> Understand it with our " + a("/blog/mba-cutoff-vs-percentile-explained", "cut-off vs percentile guide") + ".",
   "<strong>Apply to institutes.</strong> Each has its own application form and fee, separate from the exam registration.",
   "<strong>Shortlisting.</strong> Institutes shortlist using your score, academics, work experience and profile.",
-  "<strong>Selection round.</strong> Group discussion, written ability test and/or personal interview — the mix differs by institute.",
+  "<strong>Selection round.</strong> Group discussion, written ability test and/or personal interview, the mix differs by institute.",
   "<strong>Offer and confirmation.</strong> Pay the seat-confirmation amount only after reading the refund policy.",
 ])}
 
@@ -295,7 +295,7 @@ const eligibilityBody = `
 ${eligibilityTable()}
 
 <h2>Can I do an MBA without work experience?</h2>
-<p>Yes. Most full-time MBA and PGDM programmes in India accept fresh graduates, and work experience is usually a plus rather than a requirement. Executive and part-time programmes are different: they typically require work experience — see ${a("/blog/executive-online-part-time-mba-india", "executive, online and part-time MBA")}.</p>
+<p>Yes. Most full-time MBA and PGDM programmes in India accept fresh graduates, and work experience is usually a plus rather than a requirement. Executive and part-time programmes are different: they typically require work experience, see ${a("/blog/executive-online-part-time-mba-india", "executive, online and part-time MBA")}.</p>
 
 <h2>Can I do an MBA after BCom, BSc, BA or engineering?</h2>
 <p>Generally yes: MBA programmes accept graduates from any discipline, provided they meet the minimum marks. Your background affects how you present your profile and which specialisation suits you, not whether you are allowed to apply. See ${a("/blog/mba-specialisations-explained", "MBA specialisations")}.</p>
@@ -329,7 +329,7 @@ ${ul([
   "<strong>State common entrance tests:</strong> in Maharashtra, " + examLink("mah-mba-cet", "MAH-MBA-CET") + " leads to the centralised admission process for many seats.",
   "<strong>Institute-level tests:</strong> some institutes run their own test and interview.",
   "<strong>Management quota and direct admission:</strong> some programmes admit a share of students without a national score. These seats can carry higher fees, so ask for the fee in writing and check the approval status.",
-  "<strong>Executive MBA:</strong> programmes for working professionals often use experience and an interview rather than CAT — see " + a("/blog/executive-online-part-time-mba-india", "executive MBA") + ".",
+  "<strong>Executive MBA:</strong> programmes for working professionals often use experience and an interview rather than CAT, see " + a("/blog/executive-online-part-time-mba-india", "executive MBA") + ".",
 ])}
 
 <h2>How do I check that a no-CAT MBA is genuine?</h2>
@@ -409,8 +409,8 @@ ${table(
 ${ol([
   "<strong>Start from the role, not the label.</strong> Read ten job descriptions for the role you want and note the skills they ask for.",
   "<strong>Check the curriculum.</strong> Electives and faculty vary more than the specialisation name suggests.",
-  "<strong>Look at who recruits.</strong> The institute's placement report lists the sectors; match them to your target — see " + a("/blog/mba-placements-and-salary-how-to-read-reports", "how to read placement reports") + ".",
-  "<strong>Keep some flexibility.</strong> Some institutes let you choose or change a specialisation after the first year — ask before you enrol.",
+  "<strong>Look at who recruits.</strong> The institute's placement report lists the sectors; match them to your target, see " + a("/blog/mba-placements-and-salary-how-to-read-reports", "how to read placement reports") + ".",
+  "<strong>Keep some flexibility.</strong> Some institutes let you choose or change a specialisation after the first year, ask before you enrol.",
 ])}
 
 <h2>Best colleges for each specialisation</h2>
@@ -448,7 +448,7 @@ ${ul([
 <p>If you want to avoid CAT, read ${a("/blog/mba-without-cat-india", "MBA without CAT")}. For eligibility, see ${a("/blog/mba-eligibility-criteria-in-india", "MBA eligibility criteria")}.</p>
 
 <h2>What is an MBA, and how long is it?</h2>
-<p>An MBA (Master of Business Administration) is a postgraduate management degree, usually two years full-time. A PGDM (Post Graduate Diploma in Management) is a similar programme offered by autonomous institutes; see ${a("/mba-vs-pgdm", "MBA vs PGDM")} for the difference. One-year and part-time formats exist — see ${a("/blog/executive-online-part-time-mba-india", "executive and part-time MBA")}.</p>
+<p>An MBA (Master of Business Administration) is a postgraduate management degree, usually two years full-time. A PGDM (Post Graduate Diploma in Management) is a similar programme offered by autonomous institutes; see ${a("/mba-vs-pgdm", "MBA vs PGDM")} for the difference. One-year and part-time formats exist, see ${a("/blog/executive-online-part-time-mba-india", "executive and part-time MBA")}.</p>
 ${RELATED(COMMON_LINKS)}
 ${SOURCES}`
 
@@ -478,7 +478,7 @@ export const mbaIndiaGuides: BlogPost[] = [
   {
     id: 32, slug: "mba-cutoff-vs-percentile-explained",
     title: "MBA Cut-off vs Percentile Explained: What Percentile Do You Need?",
-    excerpt: "Score, percentile and cut-off are different things. See how each exam produces its score, which institutes publish cut-offs, and which do not — with verified examples.",
+    excerpt: "Score, percentile and cut-off are different things. See how each exam produces its score, which institutes publish cut-offs, and which do not, with verified examples.",
     body: cutoffBody, author: AUTHOR, date: DATE, publishedAt: DATE, readTime: "9 min", category: "Exams",
     tags: ["MBA cutoff", "MBA entrance exam cut off", "IIFT cutoff", "FMS cutoff", "percentile for MBA"],
   },
@@ -513,7 +513,7 @@ export const mbaIndiaGuides: BlogPost[] = [
   {
     id: 37, slug: "mba-specialisations-explained",
     title: "MBA Specialisations Explained: Marketing, Finance, HR, Analytics & More",
-    excerpt: "What each MBA specialisation covers, the roles it leads to, who it suits and how to choose — marketing, finance, HR, business analytics, operations, international business and more.",
+    excerpt: "What each MBA specialisation covers, the roles it leads to, who it suits and how to choose, marketing, finance, HR, business analytics, operations, international business and more.",
     body: specBody, author: AUTHOR, date: DATE, publishedAt: DATE, readTime: "8 min", category: "MBA",
     tags: ["MBA specialisations", "MBA in marketing", "MBA in finance", "MBA in HR", "MBA business analytics"],
   },

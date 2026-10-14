@@ -20,15 +20,15 @@ const LAST_REVIEWED_ISO = "2026-10-04"
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
 const QUICK_ANSWER =
-  "An MBA is a master's degree awarded by a university; a PGDM is a post-graduate diploma awarded by an AICTE-approved autonomous institute. A PGDM is not automatically equivalent to an MBA — the Association of Indian Universities grants equivalence to specific PGDM programmes for a fixed period. Compare individual programmes, not the label."
+  "An MBA is a master's degree awarded by a university; a PGDM is a post-graduate diploma awarded by an AICTE-approved autonomous institute. A PGDM is not automatically equivalent to an MBA, the Association of Indian Universities grants equivalence to specific PGDM programmes for a fixed period. Compare individual programmes, not the label."
 
 const rows: { aspect: string; mba: string; pgdm: string }[] = [
   { aspect: "What you receive", mba: "A master's degree awarded by a university", pgdm: "A post-graduate diploma awarded by an autonomous institute" },
-  { aspect: "Who awards it", mba: "Universities — state, central, private or deemed — and their affiliated colleges or departments", pgdm: "Stand-alone institutes approved by AICTE to run the PGDM programme" },
+  { aspect: "Who awards it", mba: "Universities, state, central, private or deemed, and their affiliated colleges or departments", pgdm: "Stand-alone institutes approved by AICTE to run the PGDM programme" },
   { aspect: "Curriculum", mba: "Set by the university; changes go through university bodies", pgdm: "Designed by the institute within AICTE's framework, so it can be updated more often" },
   { aspect: "Equivalence to a degree", mba: "It is a degree", pgdm: "Not automatically a degree. AIU can grant a specific PGDM programme equivalence to an MBA for higher studies, for a fixed period" },
   { aspect: "Admission in Maharashtra", mba: "Many programmes admit through the State CET Cell's CAP (MAH MBA CET for state candidates; national exams for All-India seats)", pgdm: "Institute's own process using the national exams it lists (e.g. CAT, XAT, CMAT, MAT, GMAT)" },
-  { aspect: "Fees", mba: "Varies widely — university departments are often cheaper; private and deemed universities can cost more", pgdm: "Varies widely by institute — compare total programme cost, not just the first-year fee" },
+  { aspect: "Fees", mba: "Varies widely, university departments are often cheaper; private and deemed universities can cost more", pgdm: "Varies widely by institute, compare total programme cost, not just the first-year fee" },
 ]
 
 const faqs = [
@@ -39,9 +39,9 @@ const faqs = [
 ]
 
 const sources = [
-  { label: "AICTE — approval of technical and management institutions", url: "https://www.aicte-india.org" },
-  { label: "Association of Indian Universities (AIU) — equivalence", url: "https://www.aiu.ac.in" },
-  { label: "Example: AIU equivalence letter for a PGDM programme, valid Jul 2025 – Jun 2028 (FORE School of Management)", url: "https://www.fsm.ac.in/images/cms/AIU-Approval-for-PGDM-from-July-2025-to-June-2028.pdf" },
+  { label: "AICTE: approval of technical and management institutions", url: "https://www.aicte-india.org" },
+  { label: "Association of Indian Universities (AIU), equivalence", url: "https://www.aiu.ac.in" },
+  { label: "Example: AIU equivalence letter for a PGDM programme, valid Jul 2025. Jun 2028 (FORE School of Management)", url: "https://www.fsm.ac.in/images/cms/AIU-Approval-for-PGDM-from-July-2025-to-June-2028.pdf" },
 ]
 
 export default function MbaVsPgdmPage() {
@@ -70,7 +70,7 @@ export default function MbaVsPgdmPage() {
               <Link href="/" className="hover:text-white">Home</Link><span>›</span><span className="text-white">MBA vs PGDM</span>
             </nav>
             <h1 className="text-2xl md:text-4xl font-extrabold mb-3">MBA vs PGDM: what actually differs</h1>
-            <p className="text-blue-100 max-w-3xl">An MBA is a university degree. A PGDM is a diploma from an AICTE-approved autonomous institute. Here is how that affects recognition, admissions and your choice — without the marketing claims.</p>
+            <p className="text-blue-100 max-w-3xl">An MBA is a university degree. A PGDM is a diploma from an AICTE-approved autonomous institute. Here is how that affects recognition, admissions and your choice, without the marketing claims.</p>
             <p className="text-xs text-blue-200 mt-2">Last reviewed {LAST_REVIEWED}</p>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function MbaVsPgdmPage() {
             <ul className="space-y-2">
               {[
                 "Current AICTE approval for the exact programme and intake (PGDM), or the university's recognition (MBA)",
-                "NBA accreditation of the programme, if claimed — check the accreditation period",
+                "NBA accreditation of the programme, if claimed, check the accreditation period",
                 "AIU equivalence and its validity dates, if you may study further",
                 "Placement report for the latest batch, ideally audited, with median as well as highest salary",
                 "Total programme cost including hostel, and the refund policy",

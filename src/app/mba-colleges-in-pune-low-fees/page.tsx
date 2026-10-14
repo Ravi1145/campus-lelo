@@ -29,7 +29,7 @@ export default function Page() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="Mba Colleges In Pune Low Fees — Pune 2026"
+        h1="Mba Colleges In Pune Low Fees. Pune 2026"
         subtitle="Complete guide to Mba Colleges In Pune Low Fees in Pune. Compare top MBA colleges, fees, cutoffs and placements."
         quickAnswer="Top Pune MBA colleges: SIBM, SCMHRD, MIT-SOM. Admission via MAH-CET MBA or SNAP. Classes begin August 2026."
         stats={[
@@ -38,7 +38,7 @@ export default function Page() {
           { value: "MAH-CET", label: "Primary Exam" },
         ]}
         colleges={mbaColleges}
-        introHeading="Mba Colleges In Pune Low Fees in Pune — Key Facts"
+        introHeading="Mba Colleges In Pune Low Fees in Pune. Key Facts"
         introParagraphs={[
           "Pune has 120+ AICTE-approved MBA colleges covering every specialization, fee range, and entrance exam requirement. This page covers the best options for your specific search.",
           "For detailed fee comparison, cutoff predictions, and placement data, explore the related pages below or book a free counselling session.",
@@ -51,7 +51,7 @@ export default function Page() {
           { label: "MBA Placements Pune", href: "/mba-colleges-in-pune" },
         ]}
         ctaHeading="Get Personalised MBA Guidance for Pune"
-        ctaSubtext="Free counselling from our Pune-based MBA experts — 15 minutes, zero cost."
+        ctaSubtext="Free counselling from our Pune-based MBA experts, 15 minutes, zero cost."
       />
       <RelatedMbaSearches path="/mba-colleges-in-pune-low-fees" />
     </>

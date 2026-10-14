@@ -255,7 +255,7 @@ function SubmitForm({ collegeSlug, collegeName, onSuccess }: { collegeSlug: stri
           value={form.review_body}
           onChange={e => set("review_body", e.target.value)}
           rows={4}
-          placeholder="Share your experience — campus, faculty, placements, hostel, canteen, culture..."
+          placeholder="Share your experience: campus, faculty, placements, hostel, canteen, culture..."
           className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
         />
         {errors.review_body && <p className="text-xs text-red-500 mt-1">{errors.review_body}</p>}
@@ -314,7 +314,7 @@ export default function ReviewSection({ collegeSlug, collegeName, staticReviews 
       setDbReviews(data.reviews ?? [])
       setDbAvg(data.avg ?? 0)
       setDbTotal(data.total ?? 0)
-    } catch { /* silently fail — static reviews still shown */ }
+    } catch { /* silently fail: static reviews still shown */ }
     finally { setLoading(false) }
   }, [collegeSlug])
 
@@ -431,7 +431,7 @@ export default function ReviewSection({ collegeSlug, collegeName, staticReviews 
           <div className="bg-white rounded-2xl border border-orange-100 shadow-sm p-6">
             <h3 className="font-bold text-gray-900 text-base mb-4 flex items-center gap-2">
               <PenLine className="w-4 h-4 text-orange-500" />
-              Share Your Experience — {collegeName}
+              Share Your Experience: {collegeName}
             </h3>
             <SubmitForm
               collegeSlug={collegeSlug}

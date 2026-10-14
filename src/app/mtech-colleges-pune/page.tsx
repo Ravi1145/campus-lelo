@@ -17,8 +17,8 @@ const colleges = [
   { name: "Vishwakarma Institute of Technology (VIT Pune)", location: "Bibwewadi", naac: "A+", fees: "₹90K–1.4L/yr", placement: "Not published", slug: "vit-pune-vishwakarma-institute-of-technology" },
   { name: "Symbiosis Institute of Technology (SIT)", location: "Lavale", naac: "A+", fees: "₹1.8L–2.5L/yr", placement: "Not published", slug: "symbiosis-institute-of-technology-pune" },
   { name: "MIT World Peace University (MIT-WPU)", location: "Kothrud", naac: "A+", fees: "₹1.5L–2.2L/yr", placement: "Not published", slug: "mit-wpu-mit-world-peace-university" },
-  { name: "PICT — Pune Institute of Computer Technology", location: "Dhankawadi", naac: "A", fees: "₹95K–1.3L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
-  { name: "PCCOE — Pimpri Chinchwad College of Engineering", location: "Akurdi", naac: "A+", fees: "₹1.0L–1.5L/yr", placement: "Not published", slug: "pccoe-pimpri-chinchwad-college-of-engineering" },
+  { name: "PICT: Pune Institute of Computer Technology", location: "Dhankawadi", naac: "A", fees: "₹95K–1.3L/yr", placement: "Not published", slug: "pict-pune-institute-of-computer-technology" },
+  { name: "PCCOE: Pimpri Chinchwad College of Engineering", location: "Akurdi", naac: "A+", fees: "₹1.0L–1.5L/yr", placement: "Not published", slug: "pccoe-pimpri-chinchwad-college-of-engineering" },
 ]
 
 const faqs = [
@@ -42,16 +42,16 @@ export default function MtechCollegesPune() {
       <SEOLandingPage
         breadcrumb={[{ label: "M.Tech Colleges in Pune", href: "/mtech-colleges-pune" }]}
         h1="M.Tech Colleges in Pune 2025-26"
-        subtitle="Complete guide to M.Tech colleges in Pune — GATE & non-GATE admission, fees, specializations, placements, and GATE stipend details for 2025-26."
+        subtitle="Complete guide to M.Tech colleges in Pune. GATE & non-GATE admission, fees, specializations, placements, and GATE stipend details for 2025-26."
         heroStats={[
           { value: "40+", label: "M.Tech Colleges" },
           { value: "₹80K–3.8L", label: "Annual Fees" },
           { value: "2 Years", label: "Duration" },
           { value: "GATE/MAH-CET", label: "Admission" },
         ]}
-        introHeading="M.Tech Colleges in Pune — Complete 2025 Guide"
+        introHeading="M.Tech Colleges in Pune. Complete 2025 Guide"
         introParagraphs={[
-          "Pune is one of India's top cities for M.Tech education with 40+ AICTE-approved colleges offering master's programs in engineering. The city's strong research ecosystem — IISER Pune, NCL, CSIR labs — combined with 500+ IT companies and manufacturing giants creates exceptional post-M.Tech career opportunities.",
+          "Pune is one of India's top cities for M.Tech education with 40+ AICTE-approved colleges offering master's programs in engineering. The city's strong research ecosystem, IISER Pune, NCL, CSIR labs, combined with 500+ IT companies and manufacturing giants creates exceptional post-M.Tech career opportunities.",
           "M.Tech admission in Pune is primarily through GATE score for government-sponsored seats. GATE-qualified students at AICTE-approved institutions receive a monthly stipend of ₹12,400. For non-GATE candidates, MAH-M.Tech-CET and direct admission routes are available at private colleges.",
           "Top M.Tech specializations in demand in Pune include CSE, AI & ML, VLSI & Embedded Systems, Structural Engineering, and Mechanical Design. M.Tech graduates from COEP, VIT Pune, and Symbiosis are hired by top tech companies, ISRO, DRDO, and leading engineering firms.",
         ]}
@@ -60,7 +60,7 @@ export default function MtechCollegesPune() {
         whyPoints={[
           { title: "GATE Stipend Benefits", description: "M.Tech students with valid GATE score at AICTE-approved Pune colleges receive ₹12,400/month stipend from MHRD, covering most living expenses during the 2-year program." },
           { title: "Research Ecosystem", description: "Proximity to IISER Pune, NCL (National Chemical Laboratory), IUCAA, and CSIR labs provides M.Tech students unique research collaboration opportunities." },
-          { title: "Industry-Ready Specializations", description: "Pune's IT and manufacturing industries drive demand for M.Tech graduates in AI/ML, VLSI, Structural Engineering, and Mechanical Design — fields where Pune colleges have strong industry MOUs." },
+          { title: "Industry-Ready Specializations", description: "Pune's IT and manufacturing industries drive demand for M.Tech graduates in AI/ML, VLSI, Structural Engineering, and Mechanical Design, fields where Pune colleges have strong industry MOUs." },
           { title: "Higher Salary Premium", description: "M.Tech graduates from top Pune colleges command 30–40% salary premium over B.Tech graduates in core engineering roles. Average M.Tech placement: ₹12." },
         ]}
         admissionHeading="M.Tech Admission Process in Pune 2025"

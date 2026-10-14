@@ -59,7 +59,7 @@ const streams = [
       { name: "All MBA Colleges →",         href: "/colleges?stream=MBA" },
     ],
     courses: [
-      { name: "MBA — Master of Business Administration", href: "/courses/mba-pune-master-business-administration" },
+      { name: "MBA: Master of Business Administration", href: "/courses/mba-pune-master-business-administration" },
       { name: "All Management Courses →",               href: "/courses" },
     ],
     exams: [
@@ -106,7 +106,7 @@ const streams = [
       { name: "All Law Colleges →",   href: "/colleges?stream=Law" },
     ],
     courses: [
-      { name: "LLB — Bachelor of Laws", href: "/courses" },
+      { name: "LLB: Bachelor of Laws", href: "/courses" },
       { name: "BA LLB (5-year)",        href: "/courses" },
     ],
     exams: [
@@ -121,7 +121,7 @@ const streams = [
       { name: "All Design Colleges →",   href: "/design-colleges-pune" },
     ],
     courses: [
-      { name: "B.Des — Bachelor of Design", href: "/courses" },
+      { name: "B.Des: Bachelor of Design", href: "/courses" },
       { name: "B.Arch",                     href: "/courses" },
     ],
     exams: [
@@ -231,7 +231,7 @@ export default function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 mr-3">
-              <Image src="/logo.webp" alt="CampusLelo — Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-12 w-auto" priority unoptimized />
+              <Image src="/logo.webp" alt="CampusLelo: Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-12 w-auto" priority unoptimized />
             </Link>
 
             {/* Search bar — desktop */}

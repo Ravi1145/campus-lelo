@@ -205,8 +205,8 @@ const CLUSTER_NAMES = {
 const pretty = (k) => {
   if (k.startsWith("exam:")) { const [, e, t] = k.split(":"); return `${e.toUpperCase().replace("-", " ")} ${t === "score" ? "score, percentile & cut-off" : "dates, syllabus & prep"}` }
   const [t, a, b] = k.split(":")
-  if (t === "specialization") return `MBA in ${a.replace(/-/g, " ")}${b && b !== "india" ? ` — ${b}` : ""}`
-  return `${CLUSTER_NAMES[t] ?? t}${a && a !== "india" ? ` — ${a}` : ""}`
+  if (t === "specialization") return `MBA in ${a.replace(/-/g, " ")}${b && b !== "india" ? ` (${b})` : ""}`
+  return `${CLUSTER_NAMES[t] ?? t}${a && a !== "india" ? ` (${a})` : ""}`
 }
 
 // Gap clusters → the article written for them (src/data/blog-posts/mba-india-guides.ts)

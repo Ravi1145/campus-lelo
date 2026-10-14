@@ -37,7 +37,7 @@ const body = `
   <thead><tr><th>Exam</th><th>Date</th><th>Notes</th></tr></thead>
   <tbody>
     <tr><td><a href="/exams/cat">CAT 2026</a></td><td>29 Nov 2026</td><td>Registration closed on 22 Sep 2026 (extended)</td></tr>
-    <tr><td><a href="/exams/nmat">NMAT 2026</a></td><td>2 Nov – 20 Dec 2026 (window)</td><td>Up to three attempts</td></tr>
+    <tr><td><a href="/exams/nmat">NMAT 2026</a></td><td>2 Nov: 20 Dec 2026 (window)</td><td>Up to three attempts</td></tr>
     <tr><td><a href="/exams/snap">SNAP 2026</a></td><td>13, 19 and 26 Dec 2026</td><td>Symbiosis programmes only</td></tr>
     <tr><td><a href="/exams/mat">MAT December 2026</a></td><td>20 Dec (paper) / 27 Dec (computer)</td><td>Several sessions a year</td></tr>
     <tr><td><a href="/exams/xat">XAT 2027</a></td><td>3 Jan 2027</td><td>Registration until 6 Dec 2026</td></tr>
@@ -81,14 +81,14 @@ const body = `
 
 <h2>Sources</h2>
 <ul>
-  <li>IIFT — <a href="https://www.iift.ac.in/uploads/manage-files/2025/11/brochure-mbaib_mbaba_2026.pdf" rel="noopener">MBA (IB) &amp; MBA (BA) Prospectus 2026–28</a> (official)</li>
-  <li>BIMTECH — <a href="https://www.bimtech.ac.in/admissions/" rel="noopener">Admissions</a> (official, checked 4 Oct 2026)</li>
-  <li>Jaipuria Institute of Management — <a href="https://www.jaipuria.ac.in/admissions/" rel="noopener">Admissions</a> (official, checked 4 Oct 2026)</li>
-  <li>MDI Gurgaon — <a href="https://mdi.ac.in/admissions/post-graduate-diploma-in-management-pgdm" rel="noopener">PGDM admissions</a> (official)</li>
-  <li>FMS Delhi shortlist cut-off 2026 — reported by <a href="https://cracku.in/fms-shortlist-2026/" rel="noopener">Cracku</a> and <a href="https://bschool.careers360.com/articles/fms-delhi-cutoff-2026-category-wise-cat-percentile-composite-score-mba-admission" rel="noopener">Careers360</a> (secondary)</li>
-  <li>IIFT sectional cut-offs 2026 — reported by <a href="https://careerchoice360.in/news/iift-cutoff-2026-official-out/" rel="noopener">CareerChoice360</a> and <a href="https://collegedunia.com/exams/iift" rel="noopener">Collegedunia</a> (secondary)</li>
-  <li>Exam dates — official sites linked from each <a href="/exams">CampusLelo exam guide</a></li>
-  <li>AIU equivalence example — <a href="https://www.fsm.ac.in/images/cms/AIU-Approval-for-PGDM-from-July-2025-to-June-2028.pdf" rel="noopener">FORE School of Management AIU letter (Jul 2025 – Jun 2028)</a></li>
+  <li>IIFT: <a href="https://www.iift.ac.in/uploads/manage-files/2025/11/brochure-mbaib_mbaba_2026.pdf" rel="noopener">MBA (IB) &amp; MBA (BA) Prospectus 2026–28</a> (official)</li>
+  <li>BIMTECH: <a href="https://www.bimtech.ac.in/admissions/" rel="noopener">Admissions</a> (official, checked 4 Oct 2026)</li>
+  <li>Jaipuria Institute of Management. <a href="https://www.jaipuria.ac.in/admissions/" rel="noopener">Admissions</a> (official, checked 4 Oct 2026)</li>
+  <li>MDI Gurgaon: <a href="https://mdi.ac.in/admissions/post-graduate-diploma-in-management-pgdm" rel="noopener">PGDM admissions</a> (official)</li>
+  <li>FMS Delhi shortlist cut-off 2026, reported by <a href="https://cracku.in/fms-shortlist-2026/" rel="noopener">Cracku</a> and <a href="https://bschool.careers360.com/articles/fms-delhi-cutoff-2026-category-wise-cat-percentile-composite-score-mba-admission" rel="noopener">Careers360</a> (secondary)</li>
+  <li>IIFT sectional cut-offs 2026, reported by <a href="https://careerchoice360.in/news/iift-cutoff-2026-official-out/" rel="noopener">CareerChoice360</a> and <a href="https://collegedunia.com/exams/iift" rel="noopener">Collegedunia</a> (secondary)</li>
+  <li>Exam dates: official sites linked from each <a href="/exams">CampusLelo exam guide</a></li>
+  <li>AIU equivalence example, <a href="https://www.fsm.ac.in/images/cms/AIU-Approval-for-PGDM-from-July-2025-to-June-2028.pdf" rel="noopener">FORE School of Management AIU letter (Jul 2025, Jun 2028)</a></li>
 </ul>
 <p><em>How we verify facts: <a href="/editorial-policy">CampusLelo editorial policy</a>. Last reviewed 5 Oct 2026; next update after CAT 2026 results.</em></p>
 `.trim()

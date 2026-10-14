@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Law Colleges in Pune 2026 | LLB, LLM Fees, CLAT Cutoff & Placements",
-  description: "Top law colleges in Pune 2026 — ILS Law College, Symbiosis Law School, MNLU Pune, BVDU Law College. Compare LLB fees (₹20K–₹2.5L/yr), CLAT cutoffs, placement packages & admission process.",
+  description: "Top law colleges in Pune 2026. ILS Law College, Symbiosis Law School, MNLU Pune, BVDU Law College. Compare LLB fees (₹20K–₹2.5L/yr), CLAT cutoffs, placement packages & admission process.",
   path: "/law-colleges-pune",
   keywords: [
     "law colleges in pune 2026",
@@ -63,7 +63,7 @@ export default function LawCollegesPune() {
           </nav>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Best Law Colleges in Pune 2026</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Compare top LLB & BA LLB colleges in Pune — fees from ₹15K to ₹2.5L/year, CLAT & MH-CET Law cutoffs, and career placement data.
+            Compare top LLB & BA LLB colleges in Pune, fees from ₹15K to ₹2.5L/year, CLAT & MH-CET Law cutoffs, and career placement data.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
@@ -82,7 +82,7 @@ export default function LawCollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Top Law Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: Top Law Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Most prestigious:</strong> ILS Law College · <strong>Best private:</strong> Symbiosis Law School (SLS) · <strong>NLU option:</strong> MNLU Pune ·{" "}
               <strong>Cheapest:</strong> New Law College (₹15K/yr) · <strong>Best placement:</strong> SLS
@@ -90,7 +90,7 @@ export default function LawCollegesPune() {
           </div>
 
           {/* College table */}
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Law Colleges in Pune — Ranked 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Law Colleges in Pune. Ranked 2026</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -138,7 +138,7 @@ export default function LawCollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Law Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Law Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

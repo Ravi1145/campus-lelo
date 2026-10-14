@@ -31,7 +31,7 @@ export const PLANS: CounsellingPlan[] = [
       "Phone or WhatsApp call from a counsellor",
       "College information: fees, exams accepted, cut-off sources",
       "Scholarship information for your category and course",
-      "Alumni connection — talk to students who studied there",
+      "Alumni connection: talk to students who studied there",
       "A first list of colleges to look at",
     ],
   },
@@ -41,7 +41,7 @@ export const PLANS: CounsellingPlan[] = [
     tagline: "A one-to-one video session with an experienced counsellor.",
     priceLabel: `₹${VIDEO_PRICE_INR}`,
     priceNote: "One session · pay after your slot is confirmed",
-    cta: `Book a video session — ₹${VIDEO_PRICE_INR}`,
+    cta: `Book a video session, ₹${VIDEO_PRICE_INR}`,
     recordLabel: `Expert video counselling (₹${VIDEO_PRICE_INR})`,
     includes: [
       "Everything in the free plan",
@@ -55,7 +55,7 @@ export const PLANS: CounsellingPlan[] = [
 
 export const FREE_FOR_EVERYONE = [
   { title: "Scholarship information", desc: "Government, institute and private scholarships, with eligibility and where to apply.", href: "/scholarships", cta: "See scholarships" },
-  { title: "Alumni connection", desc: "Ask students and alumni of a college what it is really like — free.", href: "/alumni", cta: "Meet alumni" },
+  { title: "Alumni connection", desc: "Ask students and alumni of a college what it is really like, free.", href: "/alumni", cta: "Meet alumni" },
   { title: "College and exam information", desc: "Fees, exams, rankings and sourced cut-offs for every college we list.", href: "/colleges", cta: "Browse colleges" },
 ]
 
@@ -120,7 +120,7 @@ export const COMPARISON: { feature: string; free: string; video: string }[] = [
   { feature: "College information (fees, exams, sourced cut-offs)", free: "Yes", video: "Yes" },
   { feature: "Scholarship information", free: "Yes", video: "Yes" },
   { feature: "Alumni connection", free: "Yes", video: "Yes" },
-  { feature: "CAP round guidance", free: "Basics only", video: "Yes — option form, choice order, what to do after each allotment" },
+  { feature: "CAP round guidance", free: "Basics only", video: "Yes: option form, choice order, what to do after each allotment" },
   { feature: "Career choice and growth path", free: "No", video: "Yes" },
   { feature: "Personal shortlist built on score, budget and city", free: "A first list of colleges", video: "Yes, with reasons for each college" },
   { feature: "Help with applications, documents and deadlines", free: "No", video: "Yes" },

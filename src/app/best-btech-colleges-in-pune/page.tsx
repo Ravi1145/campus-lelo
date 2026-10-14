@@ -49,7 +49,7 @@ export default function BestBTechCollegesInPune() {
         ]}
         colleges={btechColleges}
         breadcrumbLabel="Best BTech Colleges"
-        introHeading="Best BTech Colleges in Pune — How We Rank Them"
+        introHeading="Best BTech Colleges in Pune. How We Rank Them"
         introParagraphs={[
           "The best BTech college in Pune depends on your priorities: COEP is the most prestigious (cheapest government fees), PICT is the best for CS/IT placement outcomes, SIT Pune offers the highest overall placement packages, and MIT-WPU/VIT Pune offer the best infrastructure in the autonomous category.",
           "Our ranking is based on: (1) NIRF and NAAC accreditation, (2) average and highest placement packages from official NIRF data, (3) MHT-CET cutoff (higher cutoff = more demand = better college), (4) infrastructure and research facilities, and (5) alumni network quality.",
@@ -66,7 +66,7 @@ export default function BestBTechCollegesInPune() {
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },
         ]}
         ctaHeading="Which BTech College is Best for You?"
-        ctaSubtext="Free counselling — our engineers help you pick based on your MHT-CET score, branch preference and budget."
+        ctaSubtext="Free counselling: our engineers help you pick based on your MHT-CET score, branch preference and budget."
       />
       <MoreInCluster pool="btech" path="/best-btech-colleges-in-pune" />
     </>

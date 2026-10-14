@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Government Colleges in Pune 2026 | Low Fees & NIRF | CampusLelo",
-  description: "Top government colleges in Pune 2026 — COEP, AFMC, BJ Medical. Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
+  description: "Top government colleges in Pune 2026. COEP, AFMC, BJ Medical. Fees ₹8K–₹1.8L/yr. CAP/NEET/MHT-CET cutoffs. Compare free.",
   path: "/government-colleges-pune",
   keywords: [
     "government colleges in pune 2026",
@@ -41,7 +41,7 @@ const categories = [
     colleges: [
       { name: "Fergusson College", fees: "₹10K–₹30K/yr", naac: "A+", nirf: null, program: "BA, BSc, BCom, BCA", slug: "fergusson-college-pune", note: "Est. 1885 | Most Prestigious Arts College Pune" },
       { name: "SP College (Sir Parashurambhau)", fees: "₹12K–₹28K/yr", naac: "A+", nirf: null, program: "BA, BSc, BCom", slug: "sp-college-pune-sir-parashurambhau-college", note: "Top Science Stream | NAAC A+" },
-      { name: "BMCC — Brihan Maharashtra College of Commerce", fees: "₹8K–₹20K/yr", naac: "A", nirf: null, program: "BCom, MCom, BBA", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune", note: "Cheapest BCom in Pune | Govt-aided" },
+      { name: "BMCC: Brihan Maharashtra College of Commerce", fees: "₹8K–₹20K/yr", naac: "A", nirf: null, program: "BCom, MCom, BBA", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune", note: "Cheapest BCom in Pune | Govt-aided" },
       { name: "Modern College of Arts, Science & Commerce", fees: "₹10K–₹25K/yr", naac: "A", nirf: null, program: "BA, BSc, BCom", slug: "modern-college-of-arts-science-commerce-pune", note: "Shivajinagar | Large intake" },
       { name: "Nowrosjee Wadia College", fees: "₹10K–₹22K/yr", naac: "A", nirf: null, program: "BA, BSc, BCom", slug: "nowrosjee-wadia-college-pune", note: "Est. 1832 | Heritage campus" },
     ],
@@ -50,7 +50,7 @@ const categories = [
     type: "Government Medical",
     emoji: "🏥",
     colleges: [
-      { name: "AFMC — Armed Forces Medical College", fees: "₹50,000 (total 4.5 yrs)", naac: "A++", nirf: null, program: "MBBS (Defence)", slug: "afmc-armed-forces-medical-college-pune", note: " | Free for Defence | 650+ NEET" },
+      { name: "AFMC: Armed Forces Medical College", fees: "₹50,000 (total 4.5 yrs)", naac: "A++", nirf: null, program: "MBBS (Defence)", slug: "afmc-armed-forces-medical-college-pune", note: " | Free for Defence | 650+ NEET" },
       { name: "BJ Medical College, Pune (BJMC)", fees: "₹60K–₹1.2L/yr", naac: "A+", nirf: null, program: "MBBS, MD, MS", slug: "bj-medical-college-pune", note: " | Best Govt for Open Category | 625+ NEET" },
       { name: "Byramjee Jeejeebhoy Government Medical College (BJGMC)", fees: "₹50K–₹80K/yr", naac: "A", nirf: null, program: "MBBS", slug: "byramjee-jeejeebhoy-government-medical-college", note: "Govt Medical | Pune City Centre" },
       { name: "Pune Dental College & Hospital", fees: "₹1.5L–₹2.5L/yr", naac: "A", nirf: null, program: "BDS, MDS", slug: "pune-dental-college-pune", note: "Best Govt Dental College Pune | 500+ NEET BDS" },
@@ -71,7 +71,7 @@ const categories = [
       { name: "IISER Pune (Indian Institute of Science Education & Research)", fees: "₹15K–₹30K/yr", naac: "–", nirf: null, program: "BS-MS (5yr), PhD", slug: "iiser-pune-indian-institute-science-education-research", note: "National Institute | IAT + JEE Advanced | Research excellence" },
       { name: "DIAT (Defence Institute of Advanced Technology)", fees: "₹50K–₹80K/yr", naac: "–", nirf: null, program: "MTech, PhD (Defence)", slug: "diat-defence-institute-advanced-technology-pune", note: "Defence University | GATE required | PG only" },
       { name: "Gokhale Institute of Politics & Economics", fees: "₹25K–₹50K/yr", naac: "A", nirf: null, program: "MA Economics, MBA", slug: "gokhale-institute-politics-economics-pune", note: "Deemed | Economics research | MPSC alumni" },
-      { name: "PUMBA — Pune University MBA", fees: "₹60K–₹90K/yr", naac: "A+", nirf: null, program: "MBA (2yr)", slug: "pumba-pune-university-mba", note: "Best Govt MBA Pune | MAH-MBA CET" },
+      { name: "PUMBA: Pune University MBA", fees: "₹60K–₹90K/yr", naac: "A+", nirf: null, program: "MBA (2yr)", slug: "pumba-pune-university-mba", note: "Best Govt MBA Pune | MAH-MBA CET" },
     ],
   },
 ]
@@ -79,7 +79,7 @@ const categories = [
 const faqs = [
   {
     question: "Which are the best government colleges in Pune?",
-    answer: "The best government colleges in Pune are: (1) COEP Technological University — best government engineering college, (2) AFMC — best government medical college (nearly free), (3) BJ Medical College, (4) ILS Law College — most prestigious government law college (est. 1924), (5) Fergusson College — best government arts college (est. 1885, NAAC A+), (6) PUMBA — best government MBA.",
+    answer: "The best government colleges in Pune are: (1) COEP Technological University, best government engineering college, (2) AFMC, best government medical college (nearly free), (3) BJ Medical College, (4) ILS Law College, most prestigious government law college (est. 1924), (5) Fergusson College, best government arts college (est. 1885, NAAC A+), (6) PUMBA, best government MBA.",
   },
   {
     question: "What is the fee for government colleges in Pune?",
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     question: "How to get admission in government colleges in Pune?",
-    answer: "Government college admissions in Pune go through centralized processes: Engineering — MHT-CET + CAP rounds by Maharashtra State CET Cell; Medical — NEET + State CET counselling; Arts/Commerce/Science — SPPU CAP (Class 12 merit); Law — MH-CET Law + CAP; MBA — MAH-MBA CET + CAP. COEP and IISER have separate entrance tests. All processes are online through respective state portals.",
+    answer: "Government college admissions in Pune go through centralized processes: Engineering: MHT-CET + CAP rounds by Maharashtra State CET Cell; Medical. NEET + State CET counselling; Arts/Commerce/Science. SPPU CAP (Class 12 merit); Law. MH-CET Law + CAP; MBA. MAH-MBA CET + CAP. COEP and IISER have separate entrance tests. All processes are online through respective state portals.",
   },
   {
     question: "Are government college degrees respected for jobs and higher studies?",
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     question: "Can I get scholarship in government colleges in Pune?",
-    answer: "Yes, government colleges in Pune offer multiple scholarships: (1) GOI Post-Matric Scholarship for SC/ST students (full fee waiver + stipend), (2) EBC (Economically Backward Class) scholarship — family income < ₹8L, (3) OBC scholarship — government-funded, (4) Rajarshri Shahu Maharaj Scholarship for OBC girls, (5) SPPU merit scholarships for top 3 rank holders. Students at AFMC, IISER, and DIAT get full stipend from the Government of India.",
+    answer: "Yes, government colleges in Pune offer multiple scholarships: (1) GOI Post-Matric Scholarship for SC/ST students (full fee waiver + stipend), (2) EBC (Economically Backward Class) scholarship, family income < ₹8L, (3) OBC scholarship, government-funded, (4) Rajarshri Shahu Maharaj Scholarship for OBC girls, (5) SPPU merit scholarships for top 3 rank holders. Students at AFMC, IISER, and DIAT get full stipend from the Government of India.",
   },
 ]
 
@@ -140,7 +140,7 @@ export default function GovernmentCollegesPune() {
           </nav>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Best Government Colleges in Pune 2026</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Complete list of top government &amp; government-aided colleges in Pune — engineering, medical, arts, law &amp; research. Fees from ₹8K/year with full scholarship options.
+            Complete list of top government &amp; government-aided colleges in Pune, engineering, medical, arts, law &amp; research. Fees from ₹8K/year with full scholarship options.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
@@ -161,7 +161,7 @@ export default function GovernmentCollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-10">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Best Government Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: Best Government Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Engineering:</strong> COEP · <strong>Medical:</strong> AFMC (free!) / BJ Medical ·{" "}
               <strong>Arts:</strong> Fergusson College · <strong>Commerce:</strong> BMCC · <strong>MBA:</strong> PUMBA ·{" "}
@@ -214,12 +214,12 @@ export default function GovernmentCollegesPune() {
             </h3>
             <div className="grid sm:grid-cols-2 gap-3 text-sm text-green-800">
               {[
-                "GOI Post-Matric Scholarship (SC/ST) — Full fee + monthly stipend",
-                "EBC Scholarship (income < ₹8L) — Partial fee waiver",
-                "OBC Scholarship — Government funded, applicable all streams",
-                "Rajarshri Shahu Maharaj Scholarship — OBC girls",
-                "SPPU Merit Scholarship — Top 3 rank holders in each faculty",
-                "IISER / AFMC / DIAT — Full stipend from Govt of India",
+                "GOI Post-Matric Scholarship (SC/ST). Full fee + monthly stipend",
+                "EBC Scholarship (income < ₹8L). Partial fee waiver",
+                "OBC Scholarship: Government funded, applicable all streams",
+                "Rajarshri Shahu Maharaj Scholarship. OBC girls",
+                "SPPU Merit Scholarship: Top 3 rank holders in each faculty",
+                "IISER / AFMC / DIAT. Full stipend from Govt of India",
               ].map(s => (
                 <div key={s} className="flex items-start gap-2">
                   <span className="text-green-600 mt-0.5">✓</span>
@@ -244,7 +244,7 @@ export default function GovernmentCollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Government Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Government Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

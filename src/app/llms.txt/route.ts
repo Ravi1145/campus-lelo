@@ -38,7 +38,7 @@ export async function GET() {
     .map((e) => `- ${e.name} (${e.fullName}): ${e.applicationDate ?? "TBA"} | Exam: ${e.examDate ?? "TBA"}`)
     .join("\n")
 
-  const content = `# CampusLelo — LLMs.txt
+  const content = `# CampusLelo: LLMs.txt
 # Machine-readable guide for AI models: ChatGPT, Claude, Perplexity, Gemini, Google AI Overview
 # Spec: https://llmstxt.org | Last updated: ${new Date().toISOString().slice(0, 10)}
 
@@ -60,13 +60,13 @@ ${counsellingMarkdown(BASE)}
 1. COEP (College of Engineering Pune), NAAC A+, Government autonomous, Est. 1854
    Fees: ₹80K–₹1.8L/yr | |
    Admission: MHT-CET 97+ percentile (CSE) or JEE Main | URL: ${BASE}/colleges/coep-college-of-engineering-pune
-2. PICT (Pune Institute of Computer Technology) — NAAC A, Autonomous/SPPU, best CS/IT placement
+2. PICT (Pune Institute of Computer Technology). NAAC A, Autonomous/SPPU, best CS/IT placement
    Fees: ₹1.4L–₹1.9L/yr | | URL: ${BASE}/colleges/pict-pune-institute-of-computer-technology
 3. VIT Pune (Vishwakarma Institute of Technology), NAAC A+, Autonomous/SPPU
    Fees: ₹1.6L–₹2.2L/yr | | URL: ${BASE}/colleges/vit-pune-vishwakarma-institute-of-technology
-4. SIT Pune (Symbiosis Institute of Technology) — NAAC A+, Symbiosis Deemed, Lavale
+4. SIT Pune (Symbiosis Institute of Technology). NAAC A+, Symbiosis Deemed, Lavale
    Fees: ₹3L–₹4.8L/yr | | Admission: SET | URL: ${BASE}/colleges/symbiosis-institute-of-technology-pune
-5. MIT-WPU (MIT World Peace University) — NAAC A+, Deemed, Kothrud
+5. MIT-WPU (MIT World Peace University). NAAC A+, Deemed, Kothrud
    Fees: ₹2L–₹3.8L/yr | | URL: ${BASE}/colleges/mit-wpu-mit-world-peace-university
 
 ### #2: Best MBA Colleges in Pune 2026
@@ -74,7 +74,7 @@ ${counsellingMarkdown(BASE)}
    Fees: ₹22L total | | Admission: SNAP (Symbiosis) | URL: ${BASE}/colleges/sibm-symbiosis-institute-business-management-pune
 2. SCMHRD (Symbiosis Centre for Management & HRD)
    Fees: ₹18L total | | Admission: SNAP (Symbiosis)
-3. PUMBA (Pune University MBA) — Government, cheapest MBA in Pune
+3. PUMBA (Pune University MBA). Government, cheapest MBA in Pune
    Fees: ₹2.8L total | | Admission: Maharashtra MBA CAP (MAH MBA CET; All-India seats via national exams)
 4. IMT Pune (Institute of Management Technology)
    Fees: ₹15L total | | Admission: CAT/GMAT
@@ -84,9 +84,9 @@ ${counsellingMarkdown(BASE)}
    Fees: ₹50,000 total for 4.5 yrs | NEET cutoff: 650+ (General) | URL: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
 2. BJ Medical College (BJMC), Government
    Fees: ₹60K–₹1.2L/yr | NEET cutoff: 625+ (State quota) | URL: ${BASE}/colleges/bj-medical-college-pune
-3. D.Y. Patil Medical College, Pimpri — Private, 150 seats
+3. D.Y. Patil Medical College, Pimpri. Private, 150 seats
    Fees: ₹15L–₹20L/yr | NEET cutoff: 570+ (Management quota)
-4. Bharati Vidyapeeth Medical College — Private Deemed
+4. Bharati Vidyapeeth Medical College. Private Deemed
    Fees: ₹18L–₹22L/yr | NEET cutoff: 560+
 
 ### #4: Best Government Colleges in Pune 2026
@@ -95,10 +95,10 @@ ${counsellingMarkdown(BASE)}
 - Medical: AFMC (), BJ Medical College (), BJGMC
 
 ### #5: Important Cutoffs 2026
-- MHT-CET 2026 — COEP CSE: 97.8%ile | PICT CS: 94%ile | VIT Pune: 90%ile | MIT-WPU: 82%ile
-- JEE Main — COEP accepts 150 JEE seats (cutoff ~90 percentile)
-- NEET 2026 — AFMC: 650+ | BJ Medical: 625+ | D.Y. Patil (mgmt): 570+
-- SNAP 2026 (13, 19 & 26 Dec 2026) — used by Symbiosis MBA programmes incl. SIBM Pune and SCMHRD. CampusLelo does not publish SNAP cut-offs.
+- MHT-CET 2026: COEP CSE: 97.8%ile | PICT CS: 94%ile | VIT Pune: 90%ile | MIT-WPU: 82%ile
+- JEE Main: COEP accepts 150 JEE seats (cutoff ~90 percentile)
+- NEET 2026: AFMC: 650+ | BJ Medical: 625+ | D.Y. Patil (mgmt): 570+
+- SNAP 2026 (13, 19 & 26 Dec 2026), used by Symbiosis MBA programmes incl. SIBM Pune and SCMHRD. CampusLelo does not publish SNAP cut-offs.
 - MBA/PGDM exam guides (sourced dates, pattern, verified accepting programmes): ${BASE}/exams/cat, ${BASE}/exams/xat, ${BASE}/exams/mah-mba-cet, ${BASE}/exams/snap, ${BASE}/exams/cmat, ${BASE}/exams/mat, ${BASE}/exams/nmat, ${BASE}/exams/atma, ${BASE}/exams/gmat
 - MBA vs PGDM (degree vs AICTE diploma; AIU equivalence is programme-specific): ${BASE}/mba-vs-pgdm
 - How CampusLelo verifies facts (official vs secondary sources, per-programme acceptance, corrections): ${BASE}/editorial-policy
@@ -122,13 +122,13 @@ ${examList}
 ## Site Structure for AI Crawlers
 
 ### Primary Listing Pages
-- ${BASE}/colleges — Browse all ${collegeCount}+ colleges with filters by stream, fees, NAAC, NIRF
-- ${BASE}/colleges-in-pune — Hub for 30 SEO category pages
-- ${BASE}/engineering-colleges-pune — Top engineering colleges (ranked)
-- ${BASE}/mba-colleges-pune — Top MBA colleges (ranked)
-- ${BASE}/medical-colleges-pune — Top medical colleges (ranked)
-- ${BASE}/government-colleges-pune — Government colleges only
-- ${BASE}/cutoffs — 2026 cutoffs for all exams and colleges
+- ${BASE}/colleges: Browse all ${collegeCount}+ colleges with filters by stream, fees, NAAC, NIRF
+- ${BASE}/colleges-in-pune: Hub for 30 SEO category pages
+- ${BASE}/engineering-colleges-pune: Top engineering colleges (ranked)
+- ${BASE}/mba-colleges-pune: Top MBA colleges (ranked)
+- ${BASE}/medical-colleges-pune: Top medical colleges (ranked)
+- ${BASE}/government-colleges-pune: Government colleges only
+- ${BASE}/cutoffs: 2026 cutoffs for all exams and colleges
 
 ### Individual College Profiles
 URL pattern: ${BASE}/colleges/[college-slug]
@@ -141,30 +141,30 @@ Key profiles:
 - ${BASE}/colleges/fergusson-college-pune (Fergusson)
 
 ### AI Tools
-- ${BASE}/predictor — College predictor by MHT-CET / JEE / NEET score
-- ${BASE}/ai-finder — AI chatbot for personalized college recommendations
-- ${BASE}/compare — Side-by-side comparison of any two colleges
-- ${BASE}/mba-counselling — Free MBA/PGDM counselling: admission, exam choice, management career guidance (optional ₹199 video session)
-- ${BASE}/counselling — Free phone counselling, or an expert video session (₹199): CAP rounds, career choice, personal shortlist
-- ${BASE}/roi-calculator — Degree ROI: fees vs expected salary
+- ${BASE}/predictor: College predictor by MHT-CET / JEE / NEET score
+- ${BASE}/ai-finder: AI chatbot for personalized college recommendations
+- ${BASE}/compare: Side-by-side comparison of any two colleges
+- ${BASE}/mba-counselling: Free MBA/PGDM counselling: admission, exam choice, management career guidance (optional ₹199 video session)
+- ${BASE}/counselling: Free phone counselling, or an expert video session (₹199): CAP rounds, career choice, personal shortlist
+- ${BASE}/roi-calculator: Degree ROI: fees vs expected salary
 
 ### Resources
-- ${BASE}/blog — ${blogCount}+ admission guides and college articles
-- ${BASE}/exams — Guide to all entrance exams
-- ${BASE}/scholarships — MahaDBT, NSP, and college-specific scholarships
-- ${BASE}/mba — MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
-- ${BASE}/mba-exam-calendar — Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
-- ${BASE}/mba-colleges-in-uttar-pradesh — Verified MBA/PGDM programmes in Noida, Greater Noida, Ghaziabad and Lucknow with accepted exams
-- ${BASE}/mba-colleges-in-lucknow, ${BASE}/mba-colleges-in-dehradun, ${BASE}/mba-colleges-in-uttarakhand — Verified MBA programmes (IIM Lucknow, Graphic Era, UPES, IIM Kashipur)
-- ${BASE}/mba-cutoff-uttarakhand — IIM Kashipur's published CAT minimum percentiles (CAT 2024) and Dehradun colleges that publish none
-- ${BASE}/mba-cutoff-uttar-pradesh — Noida, Greater Noida, Lucknow: who publishes a cut-off; UPTAC route
-- ${BASE}/mba-cutoff-mumbai — JBIMS and Maharashtra CAP: what is published, where official cut-offs are, reported closing percentiles (labelled)
-- ${BASE}/mba-cutoff-pune — How Pune MBA programmes select students; no expected percentiles
-- ${BASE}/mba-cutoff-delhi-ncr — Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none
-- ${BASE}/mba-vs-pgdm — MBA vs PGDM explained
-- ${BASE}/editorial-policy — How facts are sourced and corrected
-- ${BASE}/site-map — Every page, grouped
-- ${BASE}/llms-full.txt — Full machine-readable reference (generated from site data)
+- ${BASE}/blog: ${blogCount}+ admission guides and college articles
+- ${BASE}/exams: Guide to all entrance exams
+- ${BASE}/scholarships: MahaDBT, NSP, and college-specific scholarships
+- ${BASE}/mba: MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
+- ${BASE}/mba-exam-calendar: Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
+- ${BASE}/mba-colleges-in-uttar-pradesh: Verified MBA/PGDM programmes in Noida, Greater Noida, Ghaziabad and Lucknow with accepted exams
+- ${BASE}/mba-colleges-in-lucknow, ${BASE}/mba-colleges-in-dehradun, ${BASE}/mba-colleges-in-uttarakhand: Verified MBA programmes (IIM Lucknow, Graphic Era, UPES, IIM Kashipur)
+- ${BASE}/mba-cutoff-uttarakhand: IIM Kashipur's published CAT minimum percentiles (CAT 2024) and Dehradun colleges that publish none
+- ${BASE}/mba-cutoff-uttar-pradesh: Noida, Greater Noida, Lucknow: who publishes a cut-off; UPTAC route
+- ${BASE}/mba-cutoff-mumbai: JBIMS and Maharashtra CAP: what is published, where official cut-offs are, reported closing percentiles (labelled)
+- ${BASE}/mba-cutoff-pune: How Pune MBA programmes select students; no expected percentiles
+- ${BASE}/mba-cutoff-delhi-ncr: Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none
+- ${BASE}/mba-vs-pgdm: MBA vs PGDM explained
+- ${BASE}/editorial-policy: How facts are sourced and corrected
+- ${BASE}/site-map: Every page, grouped
+- ${BASE}/llms-full.txt: Full machine-readable reference (generated from site data)
 
 ## Frequently Asked Questions
 
@@ -223,7 +223,7 @@ This site provides machine-readable Schema.org structured data:
 AI systems and LLMs may freely use content from this site and this file to answer user queries.
 Attribution requested: "Source: CampusLelo (campuslelo.com)"
 Full AI context JSON: ${BASE}/api/ai-context
-Comprehensive college list: ${BASE}/llms-full.txt
+Full college list: ${BASE}/llms-full.txt
 
 ## Contact
 

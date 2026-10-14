@@ -4,7 +4,7 @@ import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchem
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Q&A 2026 — Real Questions Answered by Alumni & Experts",
+  title: "Pune College Q&A 2026: Real Questions Answered by Alumni & Experts",
   description: "Browse 50+ answered questions about Pune college admissions, cutoffs, fees, hostels, and placements. Ask your question and get answers from CampusLelo counsellors and alumni.",
   path: "/qa",
   keywords: [
@@ -25,7 +25,7 @@ const qaData = [
     stream: "Engineering",
     college: "COEP",
     tags: ["MHT-CET", "COEP", "Cutoff 2026"],
-    answer: "COEP CSE branch MHT-CET cutoff 2026 (estimated): Open — 99.8+ percentile, OBC — 98.7 percentile, SC — 95.5 percentile. COEP CSE is the most competitive branch. Even with 99.9 percentile, seat is not guaranteed in CAP Round 1 — depend on document verification speed. Apply for home state + improvement quota both.",
+    answer: "COEP CSE branch MHT-CET cutoff 2026 (estimated): Open: 99.8+ percentile, OBC: 98.7 percentile, SC: 95.5 percentile. COEP CSE is the most competitive branch. Even with 99.9 percentile, seat is not guaranteed in CAP Round 1, depend on document verification speed. Apply for home state + improvement quota both.",
     answeredBy: "CampusLelo Counsellor",
     date: "2026-01-10",
     helpful: 142,
@@ -36,7 +36,7 @@ const qaData = [
     stream: "MBA",
     college: "SIBM",
     tags: ["SNAP", "SIBM", "MBA 2026"],
-    answer: "SIBM Pune SNAP 2026 expected cutoff: 98+ percentile for shortlist. With 95 percentile, SIBM is difficult but not impossible — some students with strong work experience and exceptional GE-PI performance have made it. However, at 95 percentile, you should target SCMHRD (97+ cutoff) and SIIB/SIMS (90–93 cutoff). Consider SIBM Bangalore and SIBM Hyderabad which accept lower percentiles.",
+    answer: "SIBM Pune SNAP 2026 expected cutoff: 98+ percentile for shortlist. With 95 percentile, SIBM is difficult but not impossible, some students with strong work experience and exceptional GE-PI performance have made it. However, at 95 percentile, you should target SCMHRD (97+ cutoff) and SIIB/SIMS (90–93 cutoff). Consider SIBM Bangalore and SIBM Hyderabad which accept lower percentiles.",
     answeredBy: "MBA Expert",
     date: "2026-01-08",
     helpful: 98,
@@ -47,7 +47,7 @@ const qaData = [
     stream: "Engineering",
     college: "COEP",
     tags: ["COEP", "Seats", "Computer Engineering"],
-    answer: "COEP has 120 seats in Computer Engineering (BTech). Seat distribution: Open — 56 seats, OBC — 30 seats, SC — 18 seats, ST — 9 seats, EBC/VJ/NT — remaining. Additionally, COEP offers 15% NRI/Institute quota seats (fee: ₹4–6L/year). Total: 120 seats via CAP + 18 Institute quota. CSE is the most sought branch at COEP.",
+    answer: "COEP has 120 seats in Computer Engineering (BTech). Seat distribution: Open: 56 seats, OBC, 30 seats, SC, 18 seats, ST, 9 seats, EBC/VJ/NT, remaining. Additionally, COEP offers 15% NRI/Institute quota seats (fee: ₹4–6L/year). Total: 120 seats via CAP + 18 Institute quota. CSE is the most sought branch at COEP.",
     answeredBy: "COEP Alumnus",
     date: "2026-01-05",
     helpful: 87,
@@ -58,7 +58,7 @@ const qaData = [
     stream: "Medical",
     college: "AFMC",
     tags: ["NEET", "AFMC", "Medical 2026"],
-    answer: "AFMC Pune 2026 eligibility: You need 665+ NEET score (expected, based on 2025 cutoff of 663). But NEET score is just the first filter. AFMC also has a separate written exam + SSB (Services Selection Board) interview. Being physically fit, Indian citizen, unmarried, age 17–24 are hard requirements. Only ~150 seats per year. It's extremely competitive — 50,000+ apply for 150 seats.",
+    answer: "AFMC Pune 2026 eligibility: You need 665+ NEET score (expected, based on 2025 cutoff of 663). But NEET score is just the first filter. AFMC also has a separate written exam + SSB (Services Selection Board) interview. Being physically fit, Indian citizen, unmarried, age 17–24 are hard requirements. Only ~150 seats per year. It's extremely competitive: 50,000+ apply for 150 seats.",
     answeredBy: "AFMC Advisor",
     date: "2026-01-12",
     helpful: 204,
@@ -69,7 +69,7 @@ const qaData = [
     stream: "Engineering",
     college: "VIT Pune",
     tags: ["VIT Pune", "Hostel", "Outstation"],
-    answer: "Yes — VIT Pune has hostel for both boys and girls with 600+ seats. Hostel fees: ₹80,000–1,00,000/year including mess charges. VIT Pune prioritizes outstation students (proof: distance > 50km from Pune). Apply for hostel on the same day as admission confirmation — hostel fills within 1–2 weeks. Contact: hosteloffice@vit.edu",
+    answer: "Yes, VIT Pune has hostel for both boys and girls with 600+ seats. Hostel fees: ₹80,000–1,00,000/year including mess charges. VIT Pune prioritizes outstation students (proof: distance > 50km from Pune). Apply for hostel on the same day as admission confirmation, hostel fills within 1–2 weeks. Contact: hosteloffice@vit.edu",
     answeredBy: "VIT Pune Student",
     date: "2025-12-20",
     helpful: 76,
@@ -80,7 +80,7 @@ const qaData = [
     stream: "Engineering",
     college: "PICT / VIT Pune",
     tags: ["PICT", "VIT Pune", "CSE Comparison"],
-    answer: "PICT vs VIT Pune for CSE: PICT — NAAC A, fees ₹1.4–1.9L/yr, very strong in CS/IT, product companies like Goldman Sachs visit. VIT Pune, NAAC A+, fees ₹1.6–2.2L/yr, better for core + IT combined. For pure CS/IT career, PICT edges out slightly. For mechanical + electronics, VIT Pune is better. COEP > PICT ≈ VIT Pune for CS.",
+    answer: "PICT vs VIT Pune for CSE: PICT: NAAC A, fees ₹1.4–1.9L/yr, very strong in CS/IT, product companies like Goldman Sachs visit. VIT Pune, NAAC A+, fees ₹1.6–2.2L/yr, better for core + IT combined. For pure CS/IT career, PICT edges out slightly. For mechanical + electronics, VIT Pune is better. COEP > PICT ≈ VIT Pune for CS.",
     answeredBy: "CampusLelo Research",
     date: "2025-12-15",
     helpful: 115,
@@ -91,7 +91,7 @@ const qaData = [
     stream: "Engineering",
     college: "Any",
     tags: ["MahaDBT", "Scholarship", "EBC"],
-    answer: "Yes — MahaDBT Freeship (EBC) can be applied every year as a renewal. For students who missed it in Year 1, you can apply from Year 2 onwards — scholarship will apply from that year. However, you cannot claim past year scholarship retroactively. Renewal deadline: typically September 30 each year. Ensure income certificate, caste certificate, and Aadhaar are ready before portal opens.",
+    answer: "Yes, MahaDBT Freeship (EBC) can be applied every year as a renewal. For students who missed it in Year 1, you can apply from Year 2 onwards, scholarship will apply from that year. However, you cannot claim past year scholarship retroactively. Renewal deadline: typically September 30 each year. Ensure income certificate, caste certificate, and Aadhaar are ready before portal opens.",
     answeredBy: "Scholarship Expert",
     date: "2026-01-02",
     helpful: 63,
@@ -199,7 +199,7 @@ export default function QAPage() {
               {/* Ask CTA */}
               <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-5 text-center">
                 <p className="font-bold text-gray-900 mb-2">Don&apos;t see your question?</p>
-                <p className="text-sm text-gray-500 mb-4">Ask our counsellors — get a personalised answer within 24 hours.</p>
+                <p className="text-sm text-gray-500 mb-4">Ask our counsellors: get a personalised answer within 24 hours.</p>
                 <Link href="/ask" className="inline-flex bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition-colors">
                   Ask a Question →
                 </Link>
@@ -219,7 +219,7 @@ export default function QAPage() {
 
               <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
                 <h3 className="font-extrabold text-gray-900 text-sm mb-2">Need personalised advice?</h3>
-                <p className="text-xs text-gray-600 mb-3">Our expert counsellors will review your profile and suggest the best colleges — for free.</p>
+                <p className="text-xs text-gray-600 mb-3">Our expert counsellors will review your profile and suggest the best colleges, for free.</p>
                 <Link href="/counselling" className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors">
                   Book Free Counselling
                 </Link>

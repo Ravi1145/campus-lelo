@@ -23,21 +23,21 @@ export const metadata: Metadata = genMeta({
 })
 
 const exams = [
-  { key: "mht-cet", label: "MHT-CET", desc: "State-level CET for Engineering — most Pune colleges", icon: "⚙️", stream: "Engineering" },
+  { key: "mht-cet", label: "MHT-CET", desc: "State-level CET for Engineering, most Pune colleges", icon: "⚙️", stream: "Engineering" },
   { key: "jee",     label: "JEE Main", desc: "National entrance for COEP, SIT, MIT-WPU (state quota)", icon: "🔬", stream: "Engineering" },
-  { key: "neet",    label: "NEET UG",  desc: "For MBBS/BDS — AFMC, BJ Medical, DY Patil Medical", icon: "🏥", stream: "Medical" },
-  { key: "snap",    label: "SNAP",     desc: "Symbiosis entrance — SIBM, SCMHRD, SIIB, SIMS", icon: "💼", stream: "MBA" },
-  { key: "cat",     label: "CAT",      desc: "Top MBA colleges — IIM Pune, SIBM, SCMHRD (CAT route)", icon: "📊", stream: "MBA" },
+  { key: "neet",    label: "NEET UG",  desc: "For MBBS/BDS: AFMC, BJ Medical, DY Patil Medical", icon: "🏥", stream: "Medical" },
+  { key: "snap",    label: "SNAP",     desc: "Symbiosis entrance: SIBM, SCMHRD, SIIB, SIMS", icon: "💼", stream: "MBA" },
+  { key: "cat",     label: "CAT",      desc: "Top MBA colleges: IIM Pune, SIBM, SCMHRD (CAT route)", icon: "📊", stream: "MBA" },
 ]
 
 const faqs = [
   {
     question: "What is the MHT-CET cutoff for COEP Pune in 2026?",
-    answer: "COEP MHT-CET cutoff 2026 (estimated): Open — 99.8 percentile, OBC — 98.7 percentile, SC — 95.5 percentile, ST — 93.0 percentile. COEP consistently has the highest MHT-CET cutoff among Pune engineering colleges. Apply early for CAP registration.",
+    answer: "COEP MHT-CET cutoff 2026 (estimated): Open: 99.8 percentile, OBC: 98.7 percentile, SC: 95.5 percentile, ST: 93.0 percentile. COEP consistently has the highest MHT-CET cutoff among Pune engineering colleges. Apply early for CAP registration.",
   },
   {
     question: "Can I get admission in Pune engineering college with 90 percentile MHT-CET?",
-    answer: "With 90 percentile MHT-CET, you can get: VIT Pune (CSE/IT — 2nd round), MIT-WPU (most branches), SIT Pune (Civil, Mechanical), JSPM Narhe (CSE/IT), Sinhgad Institute of Technology. COEP (97+) and PICT (97+) are out of range. Use CampusLelo's College Predictor for a personalized list.",
+    answer: "With 90 percentile MHT-CET, you can get: VIT Pune (CSE/IT: 2nd round), MIT-WPU (most branches), SIT Pune (Civil, Mechanical), JSPM Narhe (CSE/IT), Sinhgad Institute of Technology. COEP (97+) and PICT (97+) are out of range. Use CampusLelo's College Predictor for a personalized list.",
   },
   {
     question: "What NEET score is needed for AFMC Pune?",
@@ -169,7 +169,7 @@ export default function CutoffsPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions — Pune College Cutoffs 2026</h2>
+            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions: Pune College Cutoffs 2026</h2>
             <div className="space-y-3">
               {faqs.map((faq) => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 px-5 py-4 group">

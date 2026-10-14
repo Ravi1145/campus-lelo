@@ -9,7 +9,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "Top MBA Colleges in Pune 2026 | Fees & SNAP Cutoff | CampusLelo",
-  description: "Best 10 MBA colleges in Pune 2026 — SIBM (₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7. Compare & check eligibility free.",
+  description: "Best 10 MBA colleges in Pune 2026. SIBM (₹22L), MIT-SOM, BIMM. SNAP/CAT cutoffs, fees ₹4.2L–₹22L, placements ₹7. Compare & check eligibility free.",
   path: "/mba-colleges-pune",
   keywords: [
     "best mba college in pune",
@@ -29,23 +29,23 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const colleges = [
-  { rank: 1, name: "SIBM Pune – Symbiosis Institute of Business Management", type: "Deemed", nirf: null, naac: "A+", fees: "₹16L–₹22L total", placement: "Not published", exam: "SNAP 2026 (60+ %ile)", slug: "sibm-symbiosis-institute-business-management-pune", highlight: " | McKinsey, BCG Recruiters" },
+  { rank: 1, name: "SIBM Pune: Symbiosis Institute of Business Management", type: "Deemed", nirf: null, naac: "A+", fees: "₹16L–₹22L total", placement: "Not published", exam: "SNAP 2026 (60+ %ile)", slug: "sibm-symbiosis-institute-business-management-pune", highlight: " | McKinsey, BCG Recruiters" },
   { rank: 2, name: "MIT School of Management (MIT-SOM)", type: "Autonomous", nirf: null, naac: "A+", fees: "₹7L–₹11L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "Best Value | Strong Alumni" },
   { rank: 3, name: "Balaji Institute of Modern Management (BIMM)", type: "Autonomous", nirf: null, naac: "A", fees: "₹5L–₹7.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "balaji-institute-of-modern-management-pune", highlight: "Best Budget MBA" },
   { rank: 4, name: "Indira Institute of Management Pune (IIMP)", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.2L–₹6.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "indira-institute-of-management-pune", highlight: "Best ROI in Pune" },
-  { rank: 5, name: "SCIT – Symbiosis Centre for Information Technology", type: "Deemed", nirf: null, naac: "A+", fees: "₹14L–₹18L total", placement: "Not published", exam: "SNAP 2026 (50+ %ile)", slug: "symbiosis-centre-information-technology-pune", highlight: "Best for IT+MBA" },
-  { rank: 6, name: "SCMHRD – Symbiosis Centre for Management & HRD", type: "Deemed", nirf: null, naac: "A+", fees: "₹12L–₹16L total", placement: "Not published", exam: "SNAP 2026 (55+ %ile)", slug: "scmhrd-symbiosis-centre-management-hrd", highlight: "Best for Operations/HR" },
-  { rank: 7, name: "IIMM – Indian Institute of Materials Management", type: "Autonomous", nirf: null, naac: "B++", fees: "₹3.8L–₹5.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "pumba-pune-university-mba", highlight: "Specialization in Supply Chain" },
+  { rank: 5, name: "SCIT: Symbiosis Centre for Information Technology", type: "Deemed", nirf: null, naac: "A+", fees: "₹14L–₹18L total", placement: "Not published", exam: "SNAP 2026 (50+ %ile)", slug: "symbiosis-centre-information-technology-pune", highlight: "Best for IT+MBA" },
+  { rank: 6, name: "SCMHRD: Symbiosis Centre for Management & HRD", type: "Deemed", nirf: null, naac: "A+", fees: "₹12L–₹16L total", placement: "Not published", exam: "SNAP 2026 (55+ %ile)", slug: "scmhrd-symbiosis-centre-management-hrd", highlight: "Best for Operations/HR" },
+  { rank: 7, name: "IIMM: Indian Institute of Materials Management", type: "Autonomous", nirf: null, naac: "B++", fees: "₹3.8L–₹5.5L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "pumba-pune-university-mba", highlight: "Specialization in Supply Chain" },
   { rank: 8, name: "Suryadatta Institute of Management", type: "Private", nirf: null, naac: "B+", fees: "₹2.8L–₹4.5L total", placement: "Not published", exam: "MAT / CMAT / XAT", slug: "suryadatta-institute-management-pune", highlight: "Most Affordable Pune MBA" },
-  { rank: 9, name: "BATU – Bharati Vidyapeeth Institute of Management", type: "Deemed", nirf: null, naac: "A", fees: "₹4L–₹6.8L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "bharati-vidyapeeth-institute-management-pune", highlight: "Part of Deemed University" },
-  { rank: 10, name: "MAEER MIT College of Management", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.5L–₹7L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "MIT Group – Strong Placements" },
+  { rank: 9, name: "BATU: Bharati Vidyapeeth Institute of Management", type: "Deemed", nirf: null, naac: "A", fees: "₹4L–₹6.8L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "bharati-vidyapeeth-institute-management-pune", highlight: "Part of Deemed University" },
+  { rank: 10, name: "MAEER MIT College of Management", type: "Autonomous", nirf: null, naac: "A", fees: "₹4.5L–₹7L total", placement: "Not published", exam: "CAT / MAT / CMAT", slug: "mit-school-of-management-pune", highlight: "MIT Group: Strong Placements" },
 ]
 
 const faqs = [
-  { question: "What is the SNAP 2026 cutoff for SIBM Pune?", answer: "The expected SNAP 2026 cutoff for SIBM Pune is 60+ percentile. SNAP is conducted 3 times (December 6, 13, 20, 2026) — best score is considered. Application open August–November 2026. SIBM also accepts CAT scores for direct admission to some programs." },
+  { question: "What is the SNAP 2026 cutoff for SIBM Pune?", answer: "The expected SNAP 2026 cutoff for SIBM Pune is 60+ percentile. SNAP is conducted 3 times (December 6, 13, 20, 2026), best score is considered. Application open August–November 2026. SIBM also accepts CAT scores for direct admission to some programs." },
   { question: "What are the fees for MBA colleges in Pune 2026?", answer: "MBA fees in Pune 2026 range from ₹2.8L (Suryadatta) to ₹22L (SIBM Pune) for the full program. SIBM Pune: ₹16–22L. SCMHRD: ₹12–16L. SCIT: ₹14–18L. MIT-SOM: ₹7–11L. BIMM: ₹5–7.5L. Indira Institute: ₹4.2–6.5L (best ROI). All Symbiosis institutes require SNAP score." },
-  { question: "What is the difference between CAT and SNAP for Pune MBA colleges?", answer: "CAT 2026 (November 23) is accepted by SIBM Pune, MIT-SOM, BIMM, Indira Institute, and most Pune MBA colleges. SNAP 2026 (December 6, 13, 20) is mandatory ONLY for Symbiosis group colleges (SIBM, SCMHRD, SCIT). For non-Symbiosis colleges like MIT-SOM, BIMM, Indira — CAT/MAT/CMAT is enough." },
-  { question: "How to get admission in SIBM Pune 2026?", answer: "Step 1: Register for SNAP 2026 at snaptest.org (August 2026). Step 2: Appear for SNAP (Dec 6/13/20, 2026) — target 60+ percentile. Step 3: Apply to SIBM Pune separately (collegium.siu.edu.in). Step 4: Attend Written Ability Test (WAT) and Personal Interview (PI) in Jan–Feb 2027. Step 5: Accept admission offer. Fees: ₹16–22L total." },
+  { question: "What is the difference between CAT and SNAP for Pune MBA colleges?", answer: "CAT 2026 (November 23) is accepted by SIBM Pune, MIT-SOM, BIMM, Indira Institute, and most Pune MBA colleges. SNAP 2026 (December 6, 13, 20) is mandatory ONLY for Symbiosis group colleges (SIBM, SCMHRD, SCIT). For non-Symbiosis colleges like MIT-SOM, BIMM, Indira. CAT/MAT/CMAT is enough." },
+  { question: "How to get admission in SIBM Pune 2026?", answer: "Step 1: Register for SNAP 2026 at snaptest.org (August 2026). Step 2: Appear for SNAP (Dec 6/13/20, 2026), target 60+ percentile. Step 3: Apply to SIBM Pune separately (collegium.siu.edu.in). Step 4: Attend Written Ability Test (WAT) and Personal Interview (PI) in Jan–Feb 2027. Step 5: Accept admission offer. Fees: ₹16–22L total." },
 ]
 
 const breadcrumbs = [
@@ -139,14 +139,14 @@ export default function MBACollegesPunePage() {
 
         {/* Top 3 Detailed Cards */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Top 3 MBA Colleges in Pune — Detailed Review</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Top 3 MBA Colleges in Pune. Detailed Review</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {/* SIBM */}
             <div className="border-2 border-orange-200 rounded-2xl p-5 bg-orange-50">
               <div className="flex items-center justify-between mb-3">
                 <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">#1 Best MBA</span>
               </div>
-              <h3 className="font-bold text-gray-900 text-base mb-3">SIBM Pune – Symbiosis Institute of Business Management</h3>
+              <h3 className="font-bold text-gray-900 text-base mb-3">SIBM Pune: Symbiosis Institute of Business Management</h3>
               <ul className="space-y-1.5 text-sm text-gray-700">
                 <li className="flex gap-2"><Award className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>NAAC Grade: <strong>A+</strong></span></li>
                 <li className="flex gap-2"><BookOpen className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" /><span>Total Fees: <strong>₹16L–₹22L</strong></span></li>
@@ -196,7 +196,7 @@ export default function MBACollegesPunePage() {
 
         {/* Comparison Table */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">All MBA Colleges in Pune 2026 — Comparison Table</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">All MBA Colleges in Pune 2026. Comparison Table</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm">
               <thead className="bg-gray-900 text-white">
@@ -241,7 +241,7 @@ export default function MBACollegesPunePage() {
         {/* Admission Process */}
         <section className="bg-gray-50 py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">MBA Admission Process 2026 — Pune Colleges</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">MBA Admission Process 2026. Pune Colleges</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { step: "1", title: "Entrance Exam", desc: "Appear for CAT 2026 (Nov 23) or SNAP 2026 (Dec 6/13/20) or MAT/CMAT 2026.", color: "bg-orange-50 border-orange-200" },
@@ -261,7 +261,7 @@ export default function MBACollegesPunePage() {
 
         {/* Exam Comparison */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">MBA Entrance Exams for Pune 2026 — Which Colleges Accept What?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">MBA Entrance Exams for Pune 2026. Which Colleges Accept What?</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-200">
             <table className="w-full text-sm">
               <thead className="bg-gray-100">
@@ -303,7 +303,7 @@ export default function MBACollegesPunePage() {
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                     <div>
                       <h2 className="text-xl font-bold text-gray-900">SIBM Pune SNAP Cutoff Trend 2020–2026</h2>
-                      <p className="text-sm text-gray-500 mt-1">Open & OBC category percentile trends. Unlock full data free.</p>
+                      <p className="text-sm text-gray-500 mt-1">Open & OBC category percentile trends. See the full data free.</p>
                     </div>
                     <Link href="/cutoffs" className="text-xs text-orange-600 hover:underline font-semibold shrink-0">
                       All college cutoffs →
@@ -319,7 +319,7 @@ export default function MBACollegesPunePage() {
         {/* FAQ Section */}
         <section className="bg-gray-50 py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">FAQs — MBA Colleges in Pune 2026</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">FAQs: MBA Colleges in Pune 2026</h2>
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5">
@@ -337,14 +337,14 @@ export default function MBACollegesPunePage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">Related MBA Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { label: "Top 10 MBA Colleges in Pune — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+                { label: "Top 10 MBA Colleges in Pune. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
                 { label: "MBA Placement Rankings 2026", href: "/mba-colleges-in-pune", icon: "💼" },
                 { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
                 { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
                 { label: "Private MBA Colleges Pune", href: "/private-mba-colleges-pune", icon: "🏛️" },
                 { label: "MBA Without CAT (MAT/CMAT/SNAP)", href: "/mba-admission-pune-without-cat", icon: "📝" },
                 { label: "Direct Admission MBA Pune", href: "/direct-admission-mba-colleges-pune", icon: "🚀" },
-                { label: "Engineering vs MBA — Which is Better?", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
+                { label: "Engineering vs MBA: Which is Better?", href: "/pune-colleges-comparison-engineering-mba", icon: "⚖️" },
                 { label: "Placement Comparator Tool", href: "/colleges", icon: "📊" },
               ].map(({ label, href, icon }) => (
                 <Link key={href} href={href} className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 hover:border-orange-200 hover:shadow transition-all group">

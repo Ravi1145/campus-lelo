@@ -12,7 +12,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  display: "swap",        // avoids render-blocking — text shows in fallback font while custom loads
+  display: "swap",        // avoids render-blocking, text shows in fallback font while custom loads
   preload: true,
 })
 
@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  preload: false,         // secondary font — no need to block on it
+  preload: false,         // secondary font, no need to block on it
 })
 
 // Browser UI colour (mobile address bar) — logo navy
@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"),
   title: {
-    default: "Best Colleges in Pune 2026 | CampusLelo — AI-Powered Discovery",
+    default: "Best Colleges in Pune 2026 | CampusLelo. AI-Powered Discovery",
     template: "%s | CampusLelo",
   },
   description: "India's AI-powered college discovery portal for Pune. Find and compare engineering, MBA, medical, and arts colleges in Pune with real fees, placements, NAAC grades, and student reviews.",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CampusLelo — Best Colleges in Pune 2026",
+        alt: "CampusLelo: Best Colleges in Pune 2026",
       },
     ],
   },
@@ -143,8 +143,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="target" content="Students, Parents seeking college admission in Pune" />
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta name="abstract" content="CampusLelo profiles 108+ colleges in Pune — engineering, MBA, medical, law, design. Compare fees ₹8K–₹22L/yr, NIRF ranks, NAAC grades, 2026 cutoffs, and placement data. Free AI counsellor." />
-        <meta name="pagename" content="CampusLelo — Best Colleges in Pune 2026" />
+        <meta name="abstract" content="CampusLelo profiles 108+ colleges in Pune, engineering, MBA, medical, law, design. Compare fees ₹8K–₹22L/yr, NIRF ranks, NAAC grades, 2026 cutoffs, and placement data. Free AI counsellor." />
+        <meta name="pagename" content="CampusLelo: Best Colleges in Pune 2026" />
         <meta name="identifier-URL" content="https://campuslelo.com" />
         <meta name="revisit-after" content="3 days" />
         <meta name="language" content="English, Hindi, Marathi" />
@@ -152,8 +152,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         {/* AI content discovery links */}
         <link rel="llms" href="/llms.txt" />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI context for language models" />
-        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full — Comprehensive AI reference" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt: AI context for language models" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full: Full AI reference" />
         <link rel="alternate" type="application/json" href="/api/ai-context" title="Structured JSON context for AI agents" />
       </head>
       <body className="min-h-full flex flex-col font-dm-sans">

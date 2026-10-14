@@ -25,7 +25,7 @@ const colleges = [
 ]
 
 const faqs = [
-  { q: "What is the difference between PGDM and MBA in Pune?", a: "An MBA is a degree awarded by a university (for example, Savitribai Phule Pune University or a deemed university such as Symbiosis), while a PGDM is a diploma from an AICTE-approved autonomous institute. A PGDM is not automatically equivalent to an MBA — the Association of Indian Universities (AIU) grants equivalence to specific PGDM programmes for higher studies, for a fixed period. Compare individual programmes rather than the label." },
+  { q: "What is the difference between PGDM and MBA in Pune?", a: "An MBA is a degree awarded by a university (for example, Savitribai Phule Pune University or a deemed university such as Symbiosis), while a PGDM is a diploma from an AICTE-approved autonomous institute. A PGDM is not automatically equivalent to an MBA, the Association of Indian Universities (AIU) grants equivalence to specific PGDM programmes for higher studies, for a fixed period. Compare individual programmes rather than the label." },
   { q: "Is PGDM from Pune colleges recognized?", a: "A PGDM is recognised when the institute holds current AICTE approval for that programme and intake. For higher studies or jobs that ask for an \"MBA or equivalent\", check whether the programme currently holds AIU equivalence. Note that SCMHRD and other Symbiosis institutes award an MBA degree through Symbiosis International University, not a PGDM." },
   { q: "What is the eligibility for PGDM admission in Pune?", a: "Minimum 50% in graduation (45% for SC/ST) from any recognized university. Must appear in CAT, MAH-CET, XAT, SNAP, or other accepted exams. Work experience is not mandatory but is preferred by top institutes like SCMHRD." },
   { q: "What is the average fee for PGDM in Pune?", a: "PGDM fees in Pune range from ₹3.8L (Suryadatta) to ₹12L (FLAME University) for 2 years. Mid-tier institutes charge ₹4-6L. Premium institutes like SCMHRD and MIT-SOB charge ₹6-8L. These fees include tuition but may exclude hostel and study materials." },
@@ -94,8 +94,8 @@ export default function PgdmCollegesPunePage() {
         ctaSubtext="Get expert guidance on choosing between MBA and PGDM in Pune. Our counsellors will match your CAT/MAH-CET scores with the best management programs available."
       relatedGuides={[
         { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-        { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-        { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+        { label: "Top 10 MBA Colleges. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+        { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
         { label: "Low Fees MBA Colleges in Pune", href: "/low-fees-mba-colleges-pune", icon: "💰" },
         { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
         { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },

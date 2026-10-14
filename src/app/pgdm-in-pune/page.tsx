@@ -6,7 +6,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "PGDM in Pune 2026 | Best PGDM Colleges, Fees & Admission",
-  description: "Complete guide to PGDM in Pune 2026 — AICTE-approved colleges, fees ₹3.8L–₹12L, placements ₹6.5. SCMHRD, MIT-SOB, BIMM, FLAME compared. PGDM vs MBA explained.",
+  description: "Complete guide to PGDM in Pune 2026. AICTE-approved colleges, fees ₹3.8L–₹12L, placements ₹6.5. SCMHRD, MIT-SOB, BIMM, FLAME compared. PGDM vs MBA explained.",
   path: "/pgdm-in-pune",
   keywords: [
     "pgdm in pune",
@@ -31,10 +31,10 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const COLLEGES = [
-  { rank: 1, name: "SCMHRD – Symbiosis Centre for Management & HRD", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", avgPkg: "Not published", exam: "SNAP 55+ %ile",    slug: "scmhrd-symbiosis-centre-management-hrd",          highlight: "Best PGDM for HR & Operations" },
-  { rank: 2, name: "FLAME University – School of Business",           location: "Lavale",     naac: "A+", fees: "₹12L (2yr)",  avgPkg: "Not published", exam: "CAT 75+ / GMAT",  slug: "flame-university-pune",                          highlight: "Liberal arts PGDM"             },
+  { rank: 1, name: "SCMHRD: Symbiosis Centre for Management & HRD", location: "Hinjewadi", naac: "A+", fees: "₹8.2L (2yr)", avgPkg: "Not published", exam: "SNAP 55+ %ile",    slug: "scmhrd-symbiosis-centre-management-hrd",          highlight: "Best PGDM for HR & Operations" },
+  { rank: 2, name: "FLAME University: School of Business",           location: "Lavale",     naac: "A+", fees: "₹12L (2yr)",  avgPkg: "Not published", exam: "CAT 75+ / GMAT",  slug: "flame-university-pune",                          highlight: "Liberal arts PGDM"             },
   { rank: 3, name: "MIT School of Business (MIT-SOB)",                location: "Kothrud",    naac: "A+", fees: "₹6.5L (2yr)", avgPkg: "Not published",exam: "CAT / MAT / CMAT",slug: "mit-school-of-business-pune",                    highlight: "Best ROI private PGDM"         },
-  { rank: 4, name: "BIMM – Balaji Institute of Modern Management",    location: "Tathawade",  naac: "A",  fees: "₹5.5L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "balaji-institute-of-modern-management-pune",     highlight: "Budget PGDM with good placements" },
+  { rank: 4, name: "BIMM: Balaji Institute of Modern Management",    location: "Tathawade",  naac: "A",  fees: "₹5.5L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "balaji-institute-of-modern-management-pune",     highlight: "Budget PGDM with good placements" },
   { rank: 5, name: "AIMS Institute of Management",                    location: "Viman Nagar",naac: "A",  fees: "₹4.8L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "aims-institute-management-pune",                 highlight: "Affordable with industry focus" },
   { rank: 6, name: "IndSearch Institute of Management",               location: "Baner",      naac: "A",  fees: "₹4.5L (2yr)", avgPkg: "Not published",   exam: "CAT / MAT / CMAT",slug: "indsearch-institute-of-management-pune",            highlight: "70+ years of management education" },
   { rank: 7, name: "MAEER MIT Institute of Management",               location: "Kothrud",    naac: "A+", fees: "₹5.5L (2yr)", avgPkg: "Not published", exam: "CAT / MAT / CMAT",slug: "maeer-mit-institute-management-pune",            highlight: "MIT group, strong alumni" },
@@ -64,7 +64,7 @@ const FAQS = [
   },
   {
     question: "What is the fee for PGDM in Pune 2026?",
-    answer: "PGDM fees in Pune 2026: Suryadatta ₹3.8L (2yr) — cheapest. AIMS/IndSearch ₹4.5–4.8L (2yr). BIMM ₹5.5L (2yr). MIT-SOB ₹6.5L (2yr). SCMHRD ₹8.2L (2yr). FLAME ₹12L (2yr) — most expensive. All fees are for 2-year full program.",
+    answer: "PGDM fees in Pune 2026: Suryadatta ₹3.8L (2yr), cheapest. AIMS/IndSearch ₹4.5–4.8L (2yr). BIMM ₹5.5L (2yr). MIT-SOB ₹6.5L (2yr). SCMHRD ₹8.2L (2yr). FLAME ₹12L (2yr), most expensive. All fees are for 2-year full program.",
   },
   {
     question: "Is PGDM recognized by the government for jobs?",
@@ -76,7 +76,7 @@ const FAQS = [
   },
   {
     question: "Can I do PGDM in Pune without CAT?",
-    answer: "Yes. You can get PGDM admission in Pune without CAT using: MAT (accepted by BIMM, Indira, Suryadatta), CMAT (accepted by most Pune PGDM institutes), XAT (some colleges), SNAP (for Symbiosis SCMHRD). Management quota direct admission is available at private institutes without entrance exam — fees are higher.",
+    answer: "Yes. You can get PGDM admission in Pune without CAT using: MAT (accepted by BIMM, Indira, Suryadatta), CMAT (accepted by most Pune PGDM institutes), XAT (some colleges), SNAP (for Symbiosis SCMHRD). Management quota direct admission is available at private institutes without entrance exam, fees are higher.",
   },
 ]
 
@@ -109,7 +109,7 @@ export default function PGDMInPune() {
               PGDM in Pune 2026
             </h1>
             <p className="text-base mb-6" style={{ color: "rgba(255,255,255,0.68)", lineHeight: "1.65", maxWidth: "640px" }}>
-              AICTE-approved PGDM programmes in Pune — fees ₹3.8L–₹12L, placements ₹6.5.
+              AICTE-approved PGDM programmes in Pune, fees ₹3.8L–₹12L, placements ₹6.5.
               Compare SCMHRD, FLAME, MIT-SOB, BIMM and find the right PGDM for your career.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -163,7 +163,7 @@ export default function PGDMInPune() {
 
           {/* MBA vs PGDM */}
           <section>
-            <h2 className="font-bold text-2xl mb-2" style={{ color: "#0F172A" }}>PGDM vs MBA in Pune — Key Differences</h2>
+            <h2 className="font-bold text-2xl mb-2" style={{ color: "#0F172A" }}>PGDM vs MBA in Pune. Key Differences</h2>
             <p className="text-sm mb-6" style={{ color: "#475569" }}>Both are equivalent for employment. Here's what differs.</p>
             <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: "#E5E9F0" }}>
               <table className="w-full text-sm bg-white">
@@ -189,7 +189,7 @@ export default function PGDMInPune() {
 
           {/* FAQs */}
           <section>
-            <h2 className="font-bold text-2xl mb-6" style={{ color: "#0F172A" }}>Frequently Asked Questions — PGDM in Pune</h2>
+            <h2 className="font-bold text-2xl mb-6" style={{ color: "#0F172A" }}>Frequently Asked Questions: PGDM in Pune</h2>
             <div className="space-y-4">
               {FAQS.map(({ question, answer }) => (
                 <div key={question} className="bg-white rounded-xl p-5 border" style={{ borderColor: "#E5E9F0" }}>
@@ -227,7 +227,7 @@ export default function PGDMInPune() {
           {/* CTA */}
           <section className="rounded-2xl px-8 py-10 text-center" style={{ background: "#011B40" }}>
             <h2 className="font-bold text-xl text-white mb-2">Not sure between MBA and PGDM?</h2>
-            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.60)" }}>Our counsellors help you choose the right programme — free, no spam.</p>
+            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.60)" }}>Our counsellors help you choose the right programme, free, no spam.</p>
             <Link href="/counselling"
               className="inline-block px-6 py-3 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ background: "#E0170F" }}>

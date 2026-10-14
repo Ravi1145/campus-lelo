@@ -59,18 +59,22 @@ export default function PuneCollegeGuide() {
         {/* Main heading — targets "colleges in pune 2026" and variants */}
         <div className="max-w-3xl mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#012858" }}>
-            Complete Guide to Colleges in Pune 2026
+            Colleges in Pune, Noida and Delhi NCR: where to start
           </h2>
           <p className="text-base text-gray-600 leading-relaxed mb-4">
-            Pune is India&apos;s education hub with 500+ colleges across engineering, MBA, medical, law, design and arts streams.
-            Whether you are targeting COEP with a 97+ MHT-CET percentile, SIBM Pune with CAT 98 percentile, or AFMC with a
-            650+ NEET score — CampusLelo gives you verified fees, real placement data, NIRF rankings and 2026 cutoffs for
-            every Pune college under one roof.
+            Picking a college mostly comes down to three things: the exam you have written, what you can pay, and the stream you want.
+            For each college we cover, you get a fee range, the entrance exams it accepts and its NAAC grade. For MBA and PGDM we also link
+            the official pages for exam dates and cut-offs, so you can check us.
           </p>
           <p className="text-base text-gray-600 leading-relaxed">
-            Pune colleges are affiliated to Savitribai Phule Pune University (SPPU), Symbiosis International University (SIU),
-            MIT-ADT University, and DY Patil University — making Pune one of the most diverse higher education ecosystems in India.
-            Use our free tools to compare colleges, predict your admission chances and get expert counselling on WhatsApp.
+            Pune colleges mostly sit under Savitribai Phule Pune University, Symbiosis, MIT-ADT or DY Patil University. If you are looking
+            elsewhere, we also have MBA pages for{" "}
+            <Link href="/mba-colleges-noida" className="font-bold text-[#C90D11] hover:underline">Noida</Link>,{" "}
+            <Link href="/mba-colleges-in-greater-noida" className="font-bold text-[#C90D11] hover:underline">Greater Noida</Link>,{" "}
+            <Link href="/mba-colleges-in-delhi-ncr" className="font-bold text-[#C90D11] hover:underline">Delhi NCR</Link>,{" "}
+            <Link href="/mba-colleges-in-uttar-pradesh" className="font-bold text-[#C90D11] hover:underline">Uttar Pradesh</Link> and{" "}
+            <Link href="/mba-colleges-in-dehradun" className="font-bold text-[#C90D11] hover:underline">Dehradun</Link>.
+            The tools are free, and so is a first call with a counsellor.
           </p>
         </div>
 
@@ -175,7 +179,7 @@ export default function PuneCollegeGuide() {
         <div className="mt-8 pt-6 border-t border-gray-100">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#E0170F" }}>
-              Also Explore — Noida &amp; Greater Noida
+              Also Explore: Noida &amp; Greater Noida
             </h3>
             <Link href="/colleges-in-noida" className="text-xs font-medium hover:underline" style={{ color: "#E0170F" }}>
               View all →

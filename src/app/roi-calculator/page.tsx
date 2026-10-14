@@ -73,7 +73,7 @@ export default function ROICalculatorPage() {
             Is Your Degree Worth It?
           </h1>
           <p className="text-blue-200 max-w-xl mx-auto">
-            Calculate the real return on investment for any Pune college course — break-even point, 10-year earnings, and net ROI.
+            Calculate the real return on investment for any Pune college course, break-even point, 10-year earnings, and net ROI.
           </p>
         </div>
       </div>
@@ -220,10 +220,10 @@ export default function ROICalculatorPage() {
                   }
                   <div>
                     <p className="font-bold text-gray-900 text-sm">
-                      {result.roi > 300 ? "Excellent ROI — Highly recommended" :
-                       result.roi > 200 ? "Very good ROI — Worth the investment" :
-                       result.roi > 100 ? "Good ROI — Solid investment" :
-                       "Moderate ROI — Consider scholarship options"}
+                      {result.roi > 300 ? "Excellent ROI: Highly recommended" :
+                       result.roi > 200 ? "Very good ROI: Worth the investment" :
+                       result.roi > 100 ? "Good ROI: Solid investment" :
+                       "Moderate ROI: Consider scholarship options"}
                     </p>
                     <p className="text-xs text-gray-600 mt-1">
                       For every ₹1 invested, you earn back ₹{(result.roi / 100 + 1).toFixed(1)} over 10 years.
@@ -253,7 +253,7 @@ export default function ROICalculatorPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Is Your Pune College Worth the Investment?</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-6">
-            The CampusLelo ROI Calculator helps you decide whether a college is a good financial investment. Compare total fees against expected salary, estimate your payback period, and project 10-year earnings for any Pune college — covering B.Tech, MBA, MBBS, BCA, BBA, LLB, and more.
+            The CampusLelo ROI Calculator helps you decide whether a college is a good financial investment. Compare total fees against expected salary, estimate your payback period, and project 10-year earnings for any Pune college, covering B.Tech, MBA, MBBS, BCA, BBA, LLB, and more.
           </p>
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
             {[
@@ -273,7 +273,7 @@ export default function ROICalculatorPage() {
           </div>
           <h2 className="text-lg font-bold text-gray-900 mb-3">Best ROI Colleges in Pune 2026</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            PICT Pune offers strong ROI for CS/IT. <strong>For MBA:</strong> Indira Institute of Management and MIT-SOM offer better ROI than SIBM if cost is a priority. <strong>For Medical:</strong> AFMC Pune is unbeatable — near-zero fees, a prestigious armed forces medical career with service obligation, and unmatched national recognition.
+            PICT Pune offers strong ROI for CS/IT. <strong>For MBA:</strong> Indira Institute of Management and MIT-SOM offer better ROI than SIBM if cost is a priority. <strong>For Medical:</strong> AFMC Pune is unbeatable, near-zero fees, a prestigious armed forces medical career with service obligation, and unmatched national recognition.
           </p>
         </div>
       </div>

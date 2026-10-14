@@ -125,7 +125,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { name, course, college } = alumni
   // noindex until profiles are verified real alumni (with consent) — E-E-A-T risk
   return { ...genMeta({
-    title: `${name} — ${course} at ${college} | CampusLelo Alumni`,
+    title: `${name}: ${course} at ${college} | CampusLelo Alumni`,
     description: `${name} graduated from ${college} with ${course} (${alumni.year}). Now at ${alumni.company}. Read highlights and connect with verified Pune alumni.`,
     path: `/alumni/${slug}`,
     keywords: [
@@ -274,7 +274,7 @@ export default async function AlumniProfilePage({ params }: Props) {
               Ask {firstName} a Question
             </h2>
             <p className="text-blue-300 text-sm mb-6">
-              Get honest answers about admissions, placements, and campus life at {college} — free, within 48 hours.
+              Get honest answers about admissions, placements, and campus life at {college}: free, within 48 hours.
             </p>
             <Link
               href={`/qa?college=${encodeURIComponent(college)}`}

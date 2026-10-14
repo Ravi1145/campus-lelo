@@ -42,7 +42,7 @@ export default function CutoffChart({ data, height = 260 }: Props) {
   return (
     <div>
       <p className="text-xs text-gray-500 mb-3 font-medium">
-        {data.college_short} — {data.exam.toUpperCase()} Cutoff Trend (2020–2026) · {unit}
+        {data.college_short} to {data.exam.toUpperCase()} Cutoff Trend (2020–2026) · {unit}
         {isRank && " · ⬇ lower is better"}
       </p>
       <ResponsiveContainer width="100%" height={height}>

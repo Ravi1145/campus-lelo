@@ -69,7 +69,7 @@ export default function NaacAPlusCollegesPunePage() {
         introParagraphs={[
           "NAAC (National Assessment and Accreditation Council) accreditation is India's premier higher education quality certification. The A+ grade indicates that a college scores between 3.26 and 3.75 on a 4.0 scale across 7 criteria: Curricular Aspects, Teaching-Learning, Research, Infrastructure, Student Support, Governance, and Institutional Values. A+ is the second-highest grade after A++.",
           "Pune has a higher concentration of NAAC A+ colleges than most Indian cities, reflecting the city's commitment to educational excellence. These institutions span all major disciplines: COEP and VIT Pune for engineering, Symbiosis University for management, Fergusson College for arts and science, SNDT Women's University for women's education, and DY Patil University for medical sciences.",
-          "For students choosing a college in Pune, NAAC A+ accreditation serves as a quality guarantee. These colleges have better-qualified faculty, more research publications, superior infrastructure, and stronger placement records compared to non-accredited or lower-graded institutions. Government scholarship programs also often prioritize NAAC-accredited institutions.",
+          "For students choosing a college in Pune, NAAC A+ accreditation is a quality guarantee. These colleges have better-qualified faculty, more research publications, superior infrastructure, and stronger placement records compared to non-accredited or lower-graded institutions. Government scholarship programs also often prioritize NAAC-accredited institutions.",
         ]}
         colleges={colleges}
         whyHeading="Benefits of Studying at NAAC A+ Colleges in Pune"
@@ -77,7 +77,7 @@ export default function NaacAPlusCollegesPunePage() {
           { title: "Higher Educational Standards", description: "NAAC A+ colleges undergo rigorous peer review every 5 years, ensuring faculty qualifications, infrastructure, examinations, and student outcomes consistently meet national quality benchmarks." },
           { title: "Better Placement Outcomes", description: "Companies specifically target NAAC-accredited colleges for campus placements. Employers use NAAC grade as a quick quality filter when visiting campuses for hiring." },
           { title: "Government Scholarship Eligibility", description: "Many central and state government scholarships (EBC, merit-cum-means, SC/ST scholarships) require students to be enrolled in NAAC-accredited institutions. A+ grade ensures maximum scholarship eligibility." },
-          { title: "Research & Publication Culture", description: "NAAC assessment includes research output in its scoring. A+ colleges have active research programs, funded projects, and publication expectations that expose students to cutting-edge academic work." },
+          { title: "Research & Publication Culture", description: "NAAC assessment includes research output in its scoring. A+ colleges have active research programs, funded projects, and publication expectations that expose students to modern academic work." },
           { title: "International Partnerships", description: "NAAC A+ grade makes Pune colleges eligible for international academic partnerships, student exchange programs, and joint degree offerings with foreign universities." },
           { title: "Higher Education Credibility", description: "For PG admissions (MTech, MBA, MS), NAAC-accredited undergraduate degrees carry more weight. Foreign universities and GATE boards also recognize accredited degrees more readily." },
         ]}
@@ -91,7 +91,7 @@ export default function NaacAPlusCollegesPunePage() {
         ]}
         faqs={faqs}
         ctaHeading="Get Admitted to a NAAC A+ College in Pune"
-        ctaSubtext="Our counsellors help you navigate admissions to Pune's best NAAC-accredited colleges. Free guidance based on your scores, budget, and stream preferences."
+        ctaSubtext="Our counsellors help you work through admissions to Pune's best NAAC-accredited colleges. Free guidance based on your scores, budget, and stream preferences."
       relatedGuides={[
         { label: "Low Fee Colleges in Pune", href: "/low-fee-colleges-pune", icon: "💰" },
         { label: "Pune Colleges Fees Guide 2026", href: "/colleges-pune-fees", icon: "📊" },

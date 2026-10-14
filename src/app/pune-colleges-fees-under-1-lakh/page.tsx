@@ -6,7 +6,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "Pune Colleges with Fees Under 1 Lakh 2026 | Low Fee Engineering & MBA",
-  description: "Best Pune colleges with annual fees under ₹1 lakh in 2026 — COEP (₹80K), AISSMS (₹1.1L), JSPM (₹95K). Low fee engineering, MBA, medical colleges in Pune with scholarships & hostel.",
+  description: "Best Pune colleges with annual fees under ₹1 lakh in 2026. COEP (₹80K), AISSMS (₹1.1L), JSPM (₹95K). Low fee engineering, MBA, medical colleges in Pune with scholarships & hostel.",
   path: "/pune-colleges-fees-under-1-lakh",
   keywords: [
     "pune colleges fees under 1 lakh", "low fee colleges pune 2026", "cheap engineering colleges pune",
@@ -19,8 +19,8 @@ export const metadata: Metadata = genMeta({
 const engineeringColleges = [
   { name: "COEP Technological University", fees: "₹80,000/yr", type: "Government", naac: "A+", nirf: "#49", note: "Cheapest top-ranked engineering college in Pune" },
   { name: "AIT Pune (Army Institute of Technology)", fees: "₹85,000/yr", type: "Government", naac: "A", nirf: "—", note: "Best value average placement" },
-  { name: "AISSMS College of Engineering", fees: "₹1.1L/yr", type: "Private (Aided)", naac: "A", nirf: "—", note: "Just above ₹1L — excellent placement in IT sector" },
-  { name: "JSPM Rajarshi Shahu COE", fees: "₹95,000/yr", type: "Private (Unaided)", naac: "B++", nirf: "—", note: "Strong MHT-CET acceptance — good for Mech/CS" },
+  { name: "AISSMS College of Engineering", fees: "₹1.1L/yr", type: "Private (Aided)", naac: "A", nirf: "—", note: "Just above ₹1L: excellent placement in IT sector" },
+  { name: "JSPM Rajarshi Shahu COE", fees: "₹95,000/yr", type: "Private (Unaided)", naac: "B++", nirf: "—", note: "Strong MHT-CET acceptance: good for Mech/CS" },
   { name: "Indira College of Engineering", fees: "₹97,000/yr", type: "Private (Unaided)", naac: "B+", nirf: "—", note: "Affordable option near Pune; good placement cell" },
   { name: "Sinhgad College of Engineering", fees: "₹98,000/yr", type: "Private (Unaided)", naac: "B++", nirf: "—", note: "Large college, strong alumni, multiple branches" },
 ]
@@ -53,7 +53,7 @@ export default function FeesUnder1LakhPage() {
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Pune Colleges with Fees Under ₹1 Lakh 2026</h1>
           <p className="text-green-100 text-lg max-w-3xl">
-            Complete list of best colleges in Pune with annual fees under or near ₹1 lakh — engineering, arts, science, and commerce. Includes government scholarships that can bring fees to near-zero.
+            Complete list of best colleges in Pune with annual fees under or near ₹1 lakh, engineering, arts, science, and commerce. Includes government scholarships that can bring fees to near-zero.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <span className="bg-white/10 px-3 py-1 rounded-full">Updated June 2026</span>
@@ -107,7 +107,7 @@ export default function FeesUnder1LakhPage() {
 
         {/* Arts/Science */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Arts, Science & Commerce Colleges — Fees Under ₹50,000/yr</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Arts, Science & Commerce Colleges. Fees Under ₹50,000/yr</h2>
           <div className="space-y-3">
             {artsColleges.map((c) => (
               <div key={c.name} className="flex flex-wrap items-center justify-between gap-2 border border-gray-100 rounded-xl p-4">

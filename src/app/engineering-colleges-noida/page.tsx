@@ -11,7 +11,7 @@ const engineeringColleges = noidaColleges.filter(c => c.stream === "Engineering"
 
 export const metadata: Metadata = genMeta({
   title: "Best Engineering Colleges in Noida 2026 | JEE, AKTU | Fees & Placements",
-  description: "Top engineering colleges in Noida 2026 — JIIT Noida (₹8.5L avg pkg), Amity University, Bennett University, Galgotias, GL Bajaj, KIET. JEE Main & AKTU UPSEE admission. Fees ₹1.2L–6L/yr.",
+  description: "Top engineering colleges in Noida 2026. JIIT Noida (₹8.5L avg pkg), Amity University, Bennett University, Galgotias, GL Bajaj, KIET. JEE Main & AKTU UPSEE admission. Fees ₹1.2L–6L/yr.",
   path: "/engineering-colleges-noida",
   keywords: [
     "engineering colleges in noida 2026",
@@ -88,7 +88,7 @@ export default function EngineeringCollegesNoidaPage() {
               Best Engineering Colleges in Noida 2026
             </h1>
             <p className="text-blue-100 text-base max-w-3xl mb-6">
-              Compare top B.Tech colleges in Noida &amp; Greater Noida — JIIT, Amity University, Bennett, Galgotias, GL Bajaj &amp; KIET.
+              Compare top B.Tech colleges in Noida &amp; Greater Noida. JIIT, Amity University, Bennett, Galgotias, GL Bajaj &amp; KIET.
               JEE Main &amp; AKTU UPSEE 2026 admission guide, fees and placement data.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
@@ -123,10 +123,6 @@ export default function EngineeringCollegesNoidaPage() {
                           </Link>
                           <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><MapPin size={11} />{college.location}</p>
                         </div>
-                        <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#E0170F" }}>
-                          <Star size={13} fill="#E0170F" />{college.reviewCount > 0 ? college.rating : "—"}
-                          <span className="text-xs text-gray-400 font-normal">({college.reviewCount})</span>
-                        </div>
                       </div>
                       <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
                         <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>{college.type}</span>
@@ -137,8 +133,6 @@ export default function EngineeringCollegesNoidaPage() {
                       <div className="grid grid-cols-3 gap-3 text-center mb-3">
                         {[
                           { icon: IndianRupee, label: "Fees/yr", val: formatFees(college.feesRange.min, college.feesRange.max) },
-                          { icon: Trophy, label: "Avg Pkg", val: `₹${(college.avgPlacement / 100000).toFixed(1)}L` },
-                          { icon: Trophy, label: "Highest", val: `₹${(college.highestPlacement / 100000).toFixed(0)}L` },
                         ].map(({ label, val }) => (
                           <div key={label} className="rounded-xl p-2" style={{ background: "#F7F9FC" }}>
                             <p className="text-xs text-gray-500">{label}</p>
@@ -161,7 +155,7 @@ export default function EngineeringCollegesNoidaPage() {
             {/* Sidebar */}
             <div className="space-y-5">
               <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-sm mb-3" style={{ color: "#012858" }}>Quick Links — Noida</h3>
+                <h3 className="font-bold text-sm mb-3" style={{ color: "#012858" }}>Quick Links: Noida</h3>
                 <ul className="space-y-1 text-sm">
                   {[
                     { label: "All Colleges in Noida", href: "/colleges-in-noida" },
@@ -206,22 +200,22 @@ export default function EngineeringCollegesNoidaPage() {
 
           {/* SEO text */}
           <section className="mt-10 bg-white rounded-2xl border border-gray-100 p-8">
-            <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>Engineering Colleges in Noida 2026 — Complete Guide</h2>
+            <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>Engineering Colleges in Noida 2026. Complete Guide</h2>
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600 leading-relaxed">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">AKTU vs Private University — Which is Better?</h3>
-                <p>AKTU-affiliated colleges (GL Bajaj, KIET, IMSEC) offer B.Tech at ₹1.2L–3L/yr — comparable to government college fees. They are NAAC A or A+ rated with decent IT placements (TCS, Infosys, Wipro). Private universities (Amity, JIIT, Bennett, Galgotias) charge ₹2L–6L/yr but offer better infrastructure, higher placements, and product company recruiters. For budget-conscious students, GL Bajaj and KIET offer the best ROI.</p>
+                <h3 className="font-semibold text-gray-800 mb-2">AKTU vs Private University. Which is Better?</h3>
+                <p>AKTU-affiliated colleges (GL Bajaj, KIET, IMSEC) offer B.Tech at ₹1.2L–3L/yr: comparable to government college fees. They are NAAC A or A+ rated with decent IT placements (TCS, Infosys, Wipro). Private universities (Amity, JIIT, Bennett, Galgotias) charge ₹2L–6L/yr but offer better infrastructure, higher placements, and product company recruiters. For budget-conscious students, GL Bajaj and KIET offer the best ROI.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Which Branch to Choose in Noida 2026?</h3>
-                <p>CSE and IT remain the strongest branches at Noida colleges — nearly all top recruiters hire CSE/IT students. AI & ML, Data Science specializations are available at Amity, Sharda, Galgotias and Bennett. ECE is strong at JIIT Noida (Qualcomm, Samsung recruit). Mechanical and Civil have weaker placements at Noida private colleges — better to choose COEP Pune or SPPU colleges for Mechanical. For CSE: JIIT &gt; Bennett &gt; Amity &gt; Galgotias &gt; GL Bajaj.</p>
+                <p>CSE and IT remain the strongest branches at Noida colleges, nearly all top recruiters hire CSE/IT students. AI & ML, Data Science specializations are available at Amity, Sharda, Galgotias and Bennett. ECE is strong at JIIT Noida (Qualcomm, Samsung recruit). Mechanical and Civil have weaker placements at Noida private colleges, better to choose COEP Pune or SPPU colleges for Mechanical. For CSE: JIIT &gt; Bennett &gt; Amity &gt; Galgotias &gt; GL Bajaj.</p>
               </div>
             </div>
           </section>
 
           {/* FAQ */}
           <section className="mt-10">
-            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs — Engineering Colleges in Noida</h2>
+            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs: Engineering Colleges in Noida</h2>
             <div className="space-y-4">
               {faqData.map(faq => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 p-5 group">

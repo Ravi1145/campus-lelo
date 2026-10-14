@@ -44,8 +44,8 @@ export default function FeaturedCourses() {
         {/* Header */}
         <div className="flex items-end justify-between mb-4">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Featured Courses in Pune</h2>
-            <p className="text-gray-500 mt-2">Top UG & PG programs with fees, salary & entrance exam details</p>
+            <h2 className="text-3xl font-bold text-gray-900">Popular courses</h2>
+            <p className="text-gray-500 mt-2">Fee ranges, eligibility and entrance exams for common UG and PG courses</p>
           </div>
           <Link
             href="/courses"

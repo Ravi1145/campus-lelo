@@ -8,7 +8,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Scholarships for Pune Students 2026 | MahaDBT & NSP Guide | CampusLelo",
-  description: "Scholarships for Pune college students 2026 — MahaDBT, NSP, EBC, OBC & merit. Eligibility, amounts, deadlines & direct application links. Get WhatsApp alerts free.",
+  description: "Scholarships for Pune college students 2026. MahaDBT, NSP, EBC, OBC & merit. Eligibility, amounts, deadlines & direct application links. Get WhatsApp alerts free.",
   path: "/scholarships",
   keywords: [
     "scholarships for pune college students 2026",
@@ -28,7 +28,7 @@ export const metadata: Metadata = genMeta({
 const scholarships = [
   // Government — State
   {
-    name: "MahaDBT — Freeship / Tuition Fee Waiver",
+    name: "MahaDBT: Freeship / Tuition Fee Waiver",
     category: "EBC (Economically Backward Class)",
     amount: "Full tuition fee waiver",
     income: "< ₹8 LPA family income",
@@ -41,7 +41,7 @@ const scholarships = [
     priority: "High",
   },
   {
-    name: "MahaDBT — OBC Scholarship",
+    name: "MahaDBT: OBC Scholarship",
     category: "OBC / VJNT / NT / SBC",
     amount: "₹2,000–₹5,000/year + maintenance allowance",
     income: "< ₹8 LPA",
@@ -54,7 +54,7 @@ const scholarships = [
     priority: "High",
   },
   {
-    name: "MahaDBT — SC/ST Post-Matric Scholarship",
+    name: "MahaDBT: SC/ST Post-Matric Scholarship",
     category: "SC / ST Students",
     amount: "Full fees + maintenance ₹550–₹1,200/month",
     income: "SC: < ₹2.5 LPA · ST: < ₹2.5 LPA",
@@ -68,7 +68,7 @@ const scholarships = [
   },
   // Government — Central
   {
-    name: "NSP — Central Sector Scheme (CSS)",
+    name: "NSP: Central Sector Scheme (CSS)",
     category: "Merit-based (All categories)",
     amount: "₹10,000/year (1st–3rd yr) · ₹20,000/year (professional courses)",
     income: "Family income < ₹4.5 LPA",
@@ -81,7 +81,7 @@ const scholarships = [
     priority: "High",
   },
   {
-    name: "NSP — Minority Scholarship (Post-Matric)",
+    name: "NSP: Minority Scholarship (Post-Matric)",
     category: "Muslim, Sikh, Christian, Buddhist, Jain, Parsi",
     amount: "₹3,000–₹20,000/year",
     income: "Family income < ₹2 LPA",
@@ -96,7 +96,7 @@ const scholarships = [
   // College / Private
   {
     name: "COEP Merit Scholarship",
-    category: "Merit — Open/All",
+    category: "Merit: Open/All",
     amount: "₹25,000–₹50,000/year",
     income: "No income limit",
     deadline: "August 31, 2026",
@@ -122,7 +122,7 @@ const scholarships = [
   },
   {
     name: "Aditya Birla Scholarship",
-    category: "Merit — All",
+    category: "Merit: All",
     amount: "₹65,000/year (Engineering) · ₹1 LPA (MBA)",
     income: "No income limit",
     deadline: "September 30, 2026",
@@ -168,15 +168,15 @@ const faqs = [
   },
   {
     question: "Can engineering students get scholarship in Pune?",
-    answer: "Yes — multiple scholarships available for Pune engineering students 2026: (1) MahaDBT Freeship — full fee waiver for EBC students. (2) OBC Scholarship — ₹2,000–5,000/year for OBC/VJNT/NT students. (3) SC/ST Post-Matric — full fees + monthly maintenance. (4) NSP Central Sector Scheme — ₹10,000–20,000/year for merit students. (5) COEP Merit Scholarship — ₹25,000–50,000/year for top performers.",
+    answer: "Yes: multiple scholarships available for Pune engineering students 2026: (1) MahaDBT Freeship: full fee waiver for EBC students. (2) OBC Scholarship: ₹2,000–5,000/year for OBC/VJNT/NT students. (3) SC/ST Post-Matric: full fees + monthly maintenance. (4) NSP Central Sector Scheme, ₹10,000–20,000/year for merit students. (5) COEP Merit Scholarship, ₹25,000–50,000/year for top performers.",
   },
   {
     question: "What scholarships are available for MBA students in Pune?",
-    answer: "Scholarships for MBA students in Pune 2026: (1) Symbiosis Scholarship — 25%–100% fee waiver for top SNAP ranks. (2) Aditya Birla Scholarship for CAT top 20 rankers. (3) MahaDBT OBC/SC/ST — available for MBA courses too. (4) Many Pune MBA colleges like BIMM and MAEER's offer need-based freeships internally. Contact your college's scholarship cell after admission.",
+    answer: "Scholarships for MBA students in Pune 2026: (1) Symbiosis Scholarship, 25%–100% fee waiver for top SNAP ranks. (2) Aditya Birla Scholarship for CAT top 20 rankers. (3) MahaDBT OBC/SC/ST, available for MBA courses too. (4) Many Pune MBA colleges like BIMM and MAEER's offer need-based freeships internally. Contact your college's scholarship cell after admission.",
   },
   {
     question: "What documents are needed for MahaDBT scholarship?",
-    answer: "Documents required for MahaDBT 2026: (1) Aadhaar card (mandatory). (2) Caste certificate (for OBC/SC/ST) or income certificate (for EBC/Freeship). (3) Domicile certificate (Maharashtra). (4) Last qualifying exam marksheet. (5) Current year college admission letter + fee receipt. (6) Bank account details (student's own account — must be linked to Aadhaar). (7) Passport-size photo. Note: Bank account must be in student's name, not parent's.",
+    answer: "Documents required for MahaDBT 2026: (1) Aadhaar card (mandatory). (2) Caste certificate (for OBC/SC/ST) or income certificate (for EBC/Freeship). (3) Domicile certificate (Maharashtra). (4) Last qualifying exam marksheet. (5) Current year college admission letter + fee receipt. (6) Bank account details (student's own account: must be linked to Aadhaar). (7) Passport-size photo. Note: Bank account must be in student's name, not parent's.",
   },
   {
     question: "What is the income limit for MahaDBT Freeship 2026?",
@@ -211,7 +211,7 @@ export default function ScholarshipsPage() {
               Scholarships for Pune College Students 2026
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mb-5">
-              10 verified scholarships — government & private — for engineering, MBA, medical, and arts students in Pune. Updated deadlines and direct application links.
+              10 verified scholarships, government & private, for engineering, MBA, medical, and arts students in Pune. Updated deadlines and direct application links.
             </p>
             <div className="flex flex-wrap gap-3">
               {["MahaDBT Freeship", "NSP Central", "SC/ST Post-Matric", "OBC Scholarship", "Merit-based"].map((tag) => (
@@ -230,7 +230,7 @@ export default function ScholarshipsPage() {
                 <span className="text-2xl">🤖</span>
                 <div>
                   <h2 className="font-extrabold text-white text-lg leading-tight">AI Scholarship Finder</h2>
-                  <p className="text-orange-100 text-xs">Tell us about yourself — get your personalized scholarship matches in seconds</p>
+                  <p className="text-orange-100 text-xs">Tell us about yourself, get your personalized scholarship matches in seconds</p>
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function ScholarshipsPage() {
               <h2 className="font-extrabold text-gray-900 text-sm mb-1">
                 🔔 Get Scholarship Alerts Instantly on WhatsApp
               </h2>
-              <p className="text-xs text-gray-500">New scholarship deadlines, NSP updates, MahaDBT notifications — delivered to your phone.</p>
+              <p className="text-xs text-gray-500">New scholarship deadlines, NSP updates, MahaDBT notifications, delivered to your phone.</p>
             </div>
             <div className="shrink-0 w-full sm:w-auto">
               <InlineLeadForm context="scholarship_alert" />
@@ -311,14 +311,14 @@ export default function ScholarshipsPage() {
             <h2 className="font-extrabold text-gray-900 text-lg mb-4">📋 Scholarship Application Tips for 2026</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
               {[
-                "Apply for MahaDBT on day 1 of college — seats and processing time matter.",
-                "Get income certificate from Tehsildar office — college officer cannot issue it.",
+                "Apply for MahaDBT on day 1 of college, seats and processing time matter.",
+                "Get income certificate from Tehsildar office, college officer cannot issue it.",
                 "Bank account must be in YOUR name and linked to Aadhaar.",
                 "You can apply for multiple scholarships simultaneously.",
-                "NSP and MahaDBT are separate portals — apply to both independently.",
+                "NSP and MahaDBT are separate portals, apply to both independently.",
                 "Keep all original documents; colleges verify before forwarding applications.",
-                "SC/ST students get fee waiver automatically at government colleges — still register.",
-                "Renewal is required every year — don't miss annual renewal deadlines.",
+                "SC/ST students get fee waiver automatically at government colleges, still register.",
+                "Renewal is required every year, don't miss annual renewal deadlines.",
               ].map((tip, i) => (
                 <div key={i} className="flex gap-2 items-start">
                   <span className="text-orange-500 font-bold shrink-0">{i + 1}.</span>
@@ -333,7 +333,7 @@ export default function ScholarshipsPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">FAQ — Scholarships for Pune College Students</h2>
+            <h2 className="text-xl font-extrabold text-gray-900 mb-5">FAQ: Scholarships for Pune College Students</h2>
             <div className="space-y-3">
               {faqs.map((faq) => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 px-5 py-4 group">
@@ -350,7 +350,7 @@ export default function ScholarshipsPage() {
           {/* CTA */}
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-6 text-center">
             <h2 className="text-xl font-extrabold text-white mb-2">Need Help with Scholarship Application?</h2>
-            <p className="text-gray-300 text-sm mb-4">Our counsellors help Pune college students complete MahaDBT, NSP, and college scholarship applications — completely free.</p>
+            <p className="text-gray-300 text-sm mb-4">Our counsellors help Pune college students complete MahaDBT, NSP, and college scholarship applications, completely free.</p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
                 Book Free Counselling

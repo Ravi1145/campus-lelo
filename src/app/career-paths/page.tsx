@@ -4,7 +4,7 @@ import { generateMetadata as genMeta } from "@/lib/seo"
 import { careerPaths } from "@/data/careerPaths"
 
 export const metadata: Metadata = genMeta({
-  title: "Career Path Mapper — Explore Careers After Pune College 2026",
+  title: "Career Path Mapper: Explore Careers After Pune College 2026",
   description: "Explore 8+ career paths available after Pune college. See salary growth, required courses, top recruiters, roadmaps, and Pune colleges that get you there. Free career guidance.",
   path: "/career-paths",
   keywords: [

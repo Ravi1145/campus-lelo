@@ -8,8 +8,8 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/api/og`
 /** Search results cut titles at ~60 characters: drop trailing "| segments" (brand first) until it fits. */
 export function fitTitle(title: string, max = 58): string {
   if (title.length <= max) return title
-  // 1) drop trailing "| segments", 2) then trailing "— segments", always keeping the first part
-  for (const sep of [" | ", " — "]) {
+  // 1) drop trailing "| segments", 2) then trailing ": segments", always keeping the first part
+  for (const sep of [" | ", ": "]) {
     const parts = title.split(sep)
     while (parts.length > 1 && parts.join(sep).length > max) parts.pop()
     title = parts.join(sep)
@@ -202,7 +202,7 @@ export function generateWebSiteSchema() {
     about: {
       "@type": "Thing",
       name: "Higher Education in Pune, Maharashtra, India",
-      description: "Comprehensive guide to colleges, universities, entrance exams, cutoffs, fees, and placement data for students seeking admission in Pune.",
+      description: "Full guide to colleges, universities, entrance exams, cutoffs, fees, and placement data for students seeking admission in Pune.",
     },
     audience: {
       "@type": "Audience",
@@ -411,7 +411,7 @@ export function generateCollegeWebPageSchema(college: {
     "@type": "WebPage",
     "@id": pageUrl,
     url: pageUrl,
-    name: `${college.name} 2026 — Admission, Fees, Cutoff & Placement`,
+    name: `${college.name} 2026: Admission, Fees, Cutoff & Placement`,
     description: `${college.name} (${college.shortName}) is a ${college.type ?? ''} college in Pune. ${naacText}${nirfText}. Fees ${feesText}${placText}. Admission via ${college.entranceExams?.slice(0, 2).join(' / ') ?? 'entrance exam'}.`,
     inLanguage: "en-IN",
     isPartOf: { "@id": `${BASE_URL}/#website` },

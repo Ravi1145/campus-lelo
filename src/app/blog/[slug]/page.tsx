@@ -458,7 +458,7 @@ export default async function BlogPostPage({ params }: Props) {
                   source="mba_cluster"
                   placement={`blog:${slug}`}
                   heading="Get a free MBA/PGDM shortlist"
-                  subheading="Share your exam and score — a counsellor will suggest realistic options and deadlines."
+                  subheading="Share your exam and score, a counsellor will suggest realistic options and deadlines."
                 />
               </div>
             )}
@@ -468,7 +468,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="p-5 text-center border-b border-white/10">
                 <GraduationCap className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                 <p className="text-white font-bold text-base">Get Started!</p>
-                <p className="text-gray-400 text-xs mt-1">What are you waiting for?<br />Discover Your Education Journey</p>
+                <p className="text-gray-400 text-xs mt-1">What are you waiting for?<br />Start your college search</p>
               </div>
               <div className="p-4 space-y-3">
                 <Link href="/counselling"

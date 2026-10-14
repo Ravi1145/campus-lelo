@@ -5,7 +5,7 @@ import CoursesClient from "@/components/courses/CoursesClient"
 import CourseRecommender from "@/components/courses/CourseRecommender"
 
 export const metadata: Metadata = genMeta({
-  title: "Courses in Pune 2026 — Engineering, MBA, MBBS, BCA & More",
+  title: "Courses in Pune 2026: Engineering, MBA, MBBS, BCA & More",
   description:
     "Browse 500+ undergraduate and postgraduate courses offered by top Pune colleges. Compare fees, duration, average salary, and eligible colleges for B.Tech, MBA, MBBS, BCA, BBA and more.",
   path: "/courses",
@@ -42,7 +42,7 @@ export default function CoursesPage() {
               <span className="text-2xl">🎓</span>
               <div>
                 <h2 className="font-extrabold text-white text-lg leading-tight">AI Course Recommender</h2>
-                <p className="text-blue-200 text-xs">Tell us your interests and goals — get personalized course matches in seconds</p>
+                <p className="text-blue-200 text-xs">Tell us your interests and goals, get personalized course matches in seconds</p>
               </div>
             </div>
           </div>

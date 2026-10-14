@@ -77,7 +77,7 @@ export default function MechanicalEngineeringCollegesPunePage() {
           { title: "Advanced Lab Infrastructure", description: "Top Pune mech colleges have CNC machining centers, FEM analysis labs, rapid prototyping facilities, and CAD/CAM suites sponsored by industry partners like Siemens, ANSYS, and Autodesk." },
           { title: "EV & Future Tech Readiness", description: "Pune's leadership in EV adoption means mech engineers learn EV powertrain design, battery systems, and motor engineering - skills valued at ₹8 by EV companies like Ather, Ola Electric, and Bajaj." },
           { title: "Diverse Industry Base", description: "Beyond autos, Pune has aerospace (HAL, Bharat Forge), defense (DRDO), FMCG machinery, and IT hardware companies creating diverse mechanical engineering career paths." },
-          { title: "Research Opportunities", description: "COEP and VIT Pune have active mechanical engineering research labs funded by DST and industry, offering students publication opportunities and exposure to cutting-edge R&D." },
+          { title: "Research Opportunities", description: "COEP and VIT Pune have active mechanical engineering research labs funded by DST and industry, offering students publication opportunities and exposure to modern R&D." },
           { title: "Core + IT Hybrid Roles", description: "Pune mechanical engineers are increasingly recruited into product design, simulation engineering, and digital manufacturing roles at IT companies and global MNCs at ₹6." },
         ]}
         admissionHeading="Mechanical Engineering Admission Process in Pune 2026"
@@ -93,8 +93,8 @@ export default function MechanicalEngineeringCollegesPunePage() {
         ctaSubtext="Our counsellors specialize in mechanical engineering admissions in Pune. Get personalized college recommendations, scholarship guidance, and admission support - all free."
       relatedGuides={[
         { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-        { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-        { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+        { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+        { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
         { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
         { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
         { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },

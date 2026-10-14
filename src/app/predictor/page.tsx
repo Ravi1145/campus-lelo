@@ -150,7 +150,7 @@ export default function PredictorPage() {
 
           {/* Score range hint */}
           <p className="text-xs text-gray-400 mt-3">
-            Valid range: {examConfig.min} – {examConfig.max} {examConfig.unit} | Covers: {examConfig.streams.join(", ")} stream colleges in Pune
+            Valid range: {examConfig.min} to {examConfig.max} {examConfig.unit} | Covers: {examConfig.streams.join(", ")} stream colleges in Pune
           </p>
         </div>
 
@@ -196,7 +196,6 @@ export default function PredictorPage() {
                         </div>
                         <div className="flex flex-wrap gap-3 text-xs text-gray-500">
                           <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{college.location}</span>
-                          <span className="flex items-center gap-1"><TrendingUp className="w-3 h-3" />Avg ₹{(college.avgPlacement / 100000).toFixed(1)}L</span>
                           <span className="flex items-center gap-1"><Award className="w-3 h-3" />{college.type}</span>
                         </div>
                       </div>
@@ -222,7 +221,7 @@ export default function PredictorPage() {
             <div className="mt-6 bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-white">
                 <p className="font-bold">Want personalised guidance?</p>
-                <p className="text-blue-200 text-sm">Talk to our expert counsellors — free, 15-min session.</p>
+                <p className="text-blue-200 text-sm">Talk to our expert counsellors, free, 15-min session.</p>
               </div>
               <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm whitespace-nowrap transition-colors">
                 Book Free Session →
@@ -254,8 +253,8 @@ export default function PredictorPage() {
             {[
               "Select your entrance exam (MHT-CET, JEE Main, NEET, CAT, or SNAP) from the dropdown.",
               "Enter your score or percentile in the input box.",
-              "Select your category (General, OBC, SC, or ST) — reserved categories get cutoff relaxation.",
-              "Click Predict — the tool ranks all eligible Pune colleges by your admission probability.",
+              "Select your category (General, OBC, SC, or ST), reserved categories get cutoff relaxation.",
+              "Click Predict: the tool ranks all eligible Pune colleges by your admission probability.",
               "Click View Details on any college to see fees, placements, and admission process.",
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-2">

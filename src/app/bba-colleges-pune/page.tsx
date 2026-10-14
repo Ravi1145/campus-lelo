@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best BBA Colleges Pune 2026 | Fees, Cutoff & Placement",
-  description: "Top BBA colleges in Pune 2026 — Symbiosis, MIT-WPU, Indira, Fergusson. Fees ₹40K–₹2.5L/yr, SET/HSC cutoffs, average placement ₹3.5 and complete admission guide.",
+  description: "Top BBA colleges in Pune 2026. Symbiosis, MIT-WPU, Indira, Fergusson. Fees ₹40K–₹2.5L/yr, SET/HSC cutoffs, average placement ₹3.5 and complete admission guide.",
   path: "/bba-colleges-pune",
   keywords: [
     "bba colleges in pune 2026",
@@ -102,7 +102,7 @@ const colleges = [
 const faqs = [
   {
     question: "What is the eligibility for BBA in Pune 2026?",
-    answer: "BBA eligibility in Pune 2026: 10+2 (any stream) with minimum 45–60% marks depending on college. Symbiosis requires SET 2026 entrance test. MIT-WPU requires entrance + PI. Government-affiliated colleges: Merit based on HSC 12th marks. No specific stream restriction — Science, Commerce, or Arts students can apply for BBA.",
+    answer: "BBA eligibility in Pune 2026: 10+2 (any stream) with minimum 45–60% marks depending on college. Symbiosis requires SET 2026 entrance test. MIT-WPU requires entrance + PI. Government-affiliated colleges: Merit based on HSC 12th marks. No specific stream restriction. Science, Commerce, or Arts students can apply for BBA.",
   },
   {
     question: "What is the average salary after BBA from Pune?",
@@ -110,15 +110,15 @@ const faqs = [
   },
   {
     question: "Is BBA better than BCom in Pune?",
-    answer: "BBA vs BCom in Pune: BBA focuses on management, entrepreneurship, and business skills — better for MBA pathway and corporate roles. BCom focuses on accounting, finance, and taxation — better for CA, banking, and finance careers. BBA fees are higher (₹40K–2.5L/yr vs BCom ₹15K–50K/yr). For MBA aspirants: BBA is the better foundation. For CA/CPA: BCom is preferred.",
+    answer: "BBA vs BCom in Pune: BBA focuses on management, entrepreneurship, and business skills, better for MBA pathway and corporate roles. BCom focuses on accounting, finance, and taxation, better for CA, banking, and finance careers. BBA fees are higher (₹40K–2.5L/yr vs BCom ₹15K–50K/yr). For MBA aspirants: BBA is the better foundation. For CA/CPA: BCom is preferred.",
   },
   {
     question: "What entrance exam is required for BBA in Pune?",
-    answer: "BBA entrance exams for Pune 2026: Symbiosis (SET 2026 — May), MIT-WPU (own entrance), MAEER MIT (HSC merit), Indira College (HSC merit). SET (Symbiosis Entrance Test) is the most important — register at set-test.com before March 2026. Government-affiliated colleges use FYJC-linked merit lists.",
+    answer: "BBA entrance exams for Pune 2026: Symbiosis (SET 2026, May), MIT-WPU (own entrance), MAEER MIT (HSC merit), Indira College (HSC merit). SET (Symbiosis Entrance Test) is the most important, register at set-test.com before March 2026. Government-affiliated colleges use FYJC-linked merit lists.",
   },
   {
     question: "What are the scope and career options after BBA Pune?",
-    answer: "Career options after BBA from Pune: MBA/PGDM (most popular — SIBM, IMT), Banking & Finance, Marketing Executive, HR Executive, Entrepreneurship, Sales Management. BBA from Symbiosis gives SNAP pathway to SIBM, SCMHRD for ₹18 MBA placements.",
+    answer: "Career options after BBA from Pune: MBA/PGDM (most popular: SIBM, IMT), Banking & Finance, Marketing Executive, HR Executive, Entrepreneurship, Sales Management. BBA from Symbiosis gives SNAP pathway to SIBM, SCMHRD for ₹18 MBA placements.",
   },
 ]
 
@@ -218,7 +218,7 @@ export default function BBACollegesPunePage() {
 
           {/* FAQ */}
           <div className="mt-10">
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions — BBA in Pune</h2>
+            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions: BBA in Pune</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 px-5 py-4 group">

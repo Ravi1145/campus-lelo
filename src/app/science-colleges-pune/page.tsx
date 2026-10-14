@@ -69,7 +69,7 @@ export default function ScienceCollegesPunePage() {
         introParagraphs={[
           "Pune has one of India's most distinguished science education traditions, anchored by Fergusson College (established 1885) and SP College (established 1916) -- both NAAC A+ institutions that have produced distinguished scientists, Nobel laureate researchers, and senior government officials. These institutions continue to offer world-class science education at government-aided fees.",
           "BSc programs in Pune cover the full spectrum of natural and applied sciences: Physics, Chemistry, Mathematics, Biology, Computer Science, Statistics, Microbiology, Biotechnology, and Environmental Science. Pune's proximity to pharmaceutical companies (Sun Pharma, Serum Institute, Emcure), research institutes (NCL, IISER Pune, NCCS), and IT companies creates excellent pathways for science graduates.",
-          "The science education landscape in Pune has been enhanced by modern institutions like MIT-WPU's science programs and Symbiosis's interdisciplinary science courses. Students who want infrastructure and placement support beyond traditional government college offerings can choose these institutions at slightly higher fees.",
+          "The science education in Pune has been enhanced by modern institutions like MIT-WPU's science programs and Symbiosis's interdisciplinary science courses. Students who want infrastructure and placement support beyond traditional government college offerings can choose these institutions at slightly higher fees.",
         ]}
         colleges={colleges}
         whyHeading="Why Study Science in Pune?"

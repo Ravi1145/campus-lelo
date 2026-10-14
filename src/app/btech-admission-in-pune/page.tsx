@@ -31,9 +31,9 @@ const admissionSteps = [
 const faqs = [
   { question: "What is the BTech admission process in Pune 2026?", answer: "BTech admission in Pune 2026: Appear in MHT-CET PCM (April–May 2026) → Check results (June) → Register on DTE Maharashtra CAP portal → Document verification → Fill college preferences → CAP Round 1 allotment (July) → Round 2/3 for improvement → Report to college (August 2026). For deemed universities (MIT-WPU, SIT), apply directly via their own process." },
   { question: "What is the last date for BTech admission in Pune 2026?", answer: "BTech admission 2026 timeline: MHT-CET registration: February–March 2026. Exam: April–May 2026. Results: June 2026. CAP registration: June–July 2026. Round 1: July 2026. Round 2: Late July 2026. Round 3 / Spot: August 2026. Classes begin: August 2026. Direct/Management quota deadline: August–September 2026." },
-  { question: "What documents are needed for BTech admission in Pune?", answer: "Documents for BTech CAP admission in Pune: MHT-CET 2026 scorecard, 10th marksheet + passing certificate, 12th marksheet + passing certificate, Maharashtra domicile certificate, Caste/Category certificate (OBC/SC/ST/NT/EBC — must be recent), Non-creamy layer certificate (OBC/NT), Aadhar card, passport photos, gap certificate (if applicable)." },
+  { question: "What documents are needed for BTech admission in Pune?", answer: "Documents for BTech CAP admission in Pune: MHT-CET 2026 scorecard, 10th marksheet + passing certificate, 12th marksheet + passing certificate, Maharashtra domicile certificate, Caste/Category certificate (OBC/SC/ST/NT/EBC, must be recent), Non-creamy layer certificate (OBC/NT), Aadhar card, passport photos, gap certificate (if applicable)." },
   { question: "Can I get BTech admission in Pune without MHT-CET?", answer: "Yes. Management quota seats (15% of intake) at private Pune BTech colleges don't require MHT-CET. Apply directly to the college with 12th PCM marks and pay higher management quota fees. JEE Main score alone can secure seats at deemed universities (MIT-WPU, SIT Pune). Direct admission is also available through the college's own entrance test." },
-  { question: "What is the minimum percentage for BTech admission in Pune?", answer: "Minimum eligibility for BTech in Pune: 10+2 with Physics, Chemistry, Mathematics (PCM) and 50% aggregate (45% for OBC/SC/ST/NT/SBC). MHT-CET score is the primary admission criterion — percentage alone doesn't guarantee admission at competitive colleges. Government colleges have 50% minimum + high MHT-CET percentile requirement." },
+  { question: "What is the minimum percentage for BTech admission in Pune?", answer: "Minimum eligibility for BTech in Pune: 10+2 with Physics, Chemistry, Mathematics (PCM) and 50% aggregate (45% for OBC/SC/ST/NT/SBC). MHT-CET score is the primary admission criterion, percentage alone doesn't guarantee admission at competitive colleges. Government colleges have 50% minimum + high MHT-CET percentile requirement." },
 ]
 
 export default function BTechAdmissionInPune() {
@@ -60,11 +60,11 @@ export default function BTechAdmissionInPune() {
               <span className="text-white">Admission</span>
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">BTech Admission in Pune 2026</h1>
-            <p className="text-blue-100 mb-5">Complete step-by-step guide — MHT-CET to CAP allotment to enrollment. All dates, documents and deadlines.</p>
+            <p className="text-blue-100 mb-5">Complete step-by-step guide: MHT-CET to CAP allotment to enrollment. All dates, documents and deadlines.</p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                BTech admission in Pune is through <strong>MHT-CET PCM</strong> (April–May 2026) → DTE Maharashtra <strong>CAP rounds</strong> (July–August 2026). JEE Main is not mandatory — MHT-CET alone is sufficient. Management quota is available without any entrance exam. Classes begin August 2026.
+                BTech admission in Pune is through <strong>MHT-CET PCM</strong> (April–May 2026) → DTE Maharashtra <strong>CAP rounds</strong> (July–August 2026). JEE Main is not mandatory. MHT-CET alone is sufficient. Management quota is available without any entrance exam. Classes begin August 2026.
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
@@ -87,7 +87,7 @@ export default function BTechAdmissionInPune() {
 
           {/* Important Dates */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">BTech Admission 2026 — Important Dates</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">BTech Admission 2026: Important Dates</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead><tr className="bg-gray-50 text-left text-gray-600"><th className="px-4 py-2 font-semibold">Event</th><th className="px-4 py-2 font-semibold">Date</th><th className="px-4 py-2 font-semibold">Action</th></tr></thead>
@@ -140,8 +140,8 @@ export default function BTechAdmissionInPune() {
                 "10th (SSC) Marksheet + Passing Certificate",
                 "12th (HSC) Marksheet + Passing Certificate",
                 "Maharashtra Domicile Certificate",
-                "Caste Certificate — OBC/SC/ST/NT (if applicable)",
-                "Non-Creamy Layer Certificate (OBC/NT — recent)",
+                "Caste Certificate: OBC/SC/ST/NT (if applicable)",
+                "Non-Creamy Layer Certificate (OBC/NT, recent)",
                 "EBC/EWS Certificate (if applicable)",
                 "Aadhar Card / Photo ID",
                 "3 Passport-size Photographs",
@@ -159,7 +159,7 @@ export default function BTechAdmissionInPune() {
 
           {/* FAQ */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — BTech Admission Pune 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: BTech Admission Pune 2026</h2>
             <div className="space-y-0 divide-y divide-gray-100">
               {faqs.map((faq, i) => (
                 <details key={faq.question} className="group py-4" open={i === 0}>
@@ -192,7 +192,7 @@ export default function BTechAdmissionInPune() {
 
           <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help With BTech Admission in Pune?</h2>
-            <p className="text-gray-300 mb-5 text-sm">Free counselling — our advisors guide you through the entire CAP process and option form strategy.</p>
+            <p className="text-gray-300 mb-5 text-sm">Free counselling: our advisors guide you through the entire CAP process and option form strategy.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg">Book Free Session →</Link>
               <Link href="/predictor" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg">College Predictor</Link>

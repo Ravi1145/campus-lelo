@@ -4,7 +4,7 @@
   /* ── Brand palette — sampled from the CampusLelo logo (Oct 2026) ───────────
      navy #012858 ("Campus"), deep navy #011B40, royal blue #024692 (cap / C),
      red #EB1B11 ("Lelo") → accessible CTA red #E0170F (4.88:1 with white),
-     orange-red #FB4312 (gradient start — decorative / large text only),
+     orange-red #FB4312 (gradient start, decorative / large text only),
      deep red #C90D11 (gradient end, hover). */
   --color-background: #F6F8FB;
   --color-foreground: #0F172A;

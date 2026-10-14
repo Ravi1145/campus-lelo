@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Best Architecture Colleges Pune 2026 | B.Arch Fees & NATA Cutoff",
-  description: "Top B.Arch colleges in Pune 2026 — SPA, MIT-ADT, DY Patil, MAEER. Fees ₹1.5L–4.5L/yr, NATA cutoff 120+, placement guide and admission process for architecture in Pune.",
+  description: "Top B.Arch colleges in Pune 2026. SPA, MIT-ADT, DY Patil, MAEER. Fees ₹1.5L–4.5L/yr, NATA cutoff 120+, placement guide and admission process for architecture in Pune.",
   path: "/architecture-colleges-pune",
   keywords: [
     "architecture colleges in pune 2026",
@@ -27,7 +27,7 @@ export const revalidate = 300
 const colleges = [
   {
     rank: 1,
-    name: "MIT-ADT University — Faculty of Architecture",
+    name: "MIT-ADT University: Faculty of Architecture",
     type: "Deemed University",
     naac: "A+",
     fees: "₹2.2L–₹2.8L/yr",
@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     question: "Is B.Arch a good career in 2026?",
-    answer: "B.Arch is excellent in 2026 with India's real estate sector booming. The construction market is ₹80,000 crore+ with massive demand for architects. Average starting salary ₹4; 5 years experience: ₹10; own practice: unlimited. B.Arch from Pune gives exposure to Maharashtra's infrastructure boom — smart cities, Metro projects, and IT park construction.",
+    answer: "B.Arch is excellent in 2026 with India's real estate sector booming. The construction market is ₹80,000 crore+ with massive demand for architects. Average starting salary ₹4; 5 years experience: ₹10; own practice: unlimited. B.Arch from Pune gives exposure to Maharashtra's infrastructure boom: smart cities, Metro projects, and IT park construction.",
   },
 ]
 
@@ -204,10 +204,10 @@ export default function ArchitectureCollegesPunePage() {
           {/* Why Architecture */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { icon: BookOpen, title: "5-Year Programme", desc: "B.Arch is a 5-year degree — plan accordingly for total fees and career timeline." },
+              { icon: BookOpen, title: "5-Year Programme", desc: "B.Arch is a 5-year degree, plan accordingly for total fees and career timeline." },
               { icon: Award, title: "NATA Required", desc: "All architecture admissions require NATA score. Register at nata.in before March 2026." },
               { icon: TrendingUp, title: "Booming Market", desc: "India's construction market is ₹80,000 cr+. Demand for architects is at an all-time high." },
-              { icon: Users, title: "Creative Career", desc: "Architecture combines art and science — best for students passionate about design and spaces." },
+              { icon: Users, title: "Creative Career", desc: "Architecture combines art and science, best for students passionate about design and spaces." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-5">
                 <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center mb-3">

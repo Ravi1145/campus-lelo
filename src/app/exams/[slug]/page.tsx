@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exam = exams.find(e => e.name.toLowerCase().replace(/\s+/g, "-") === slug)
   if (!exam) return {}
   return genMeta({
-    title: `${exam.name} 2026 — Dates, Eligibility & Colleges | CampusLelo`,
+    title: `${exam.name} 2026: Dates, Eligibility & Colleges | CampusLelo`,
     description: `${exam.fullName} (${exam.name}) 2026: Application date ${exam.applicationDate}, Exam date ${exam.examDate}. Eligibility, syllabus overview, and top Maharashtra colleges accepting ${exam.name}.`,
     path: `/exams/${slug}`,
   })
@@ -159,7 +159,7 @@ export default async function ExamDetailPage({ params }: Props) {
                         </div>
                         <div className="text-right">
                           <p className="text-xs font-semibold text-gray-700">
-                            ₹{(c.feesRange.min / 100000).toFixed(1)}L – {(c.feesRange.max / 100000).toFixed(1)}L/yr
+                            ₹{(c.feesRange.min / 100000).toFixed(1)}L: {(c.feesRange.max / 100000).toFixed(1)}L/yr
                           </p>
                           <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-orange-500 transition-colors ml-auto mt-1" />
                         </div>

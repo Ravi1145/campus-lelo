@@ -31,7 +31,7 @@ const comparison = [
   { param: "Highest Package (Pune)", engineering: "₹40", mba: "₹55" },
   { param: "Top Entrance Exam Difficulty", engineering: "JEE Advanced (hardest), MHT-CET (moderate)", mba: "CAT (hard), SNAP (moderate), MAT (easy)" },
   { param: "Return on Investment", engineering: "Best at govt. colleges", mba: "Best at Indira Institute" },
-  { param: "Job Market in Pune", engineering: "Excellent — IT, auto, manufacturing", mba: "Excellent — BFSI, consulting, FMCG" },
+  { param: "Job Market in Pune", engineering: "Excellent, IT, auto, manufacturing", mba: "Excellent, BFSI, consulting, FMCG" },
   { param: "Further Study Options", engineering: "M.Tech, MBA, MS abroad", mba: "CFA, CA, PhD, Executive MBA" },
 ]
 
@@ -54,31 +54,31 @@ const topMBAColleges = [
 const faqs = [
   {
     question: "Is B.Tech or MBA better in Pune in 2026?",
-    answer: "It depends on your background and goals. If you're in 12th grade, B.Tech at COEP or PICT is an excellent choice — low fees (₹4–8L total), great Pune IT/manufacturing placements. If you already have a degree and want to fast-track to management roles, MBA at SIBM Pune or MIT-SOM is the better path. Engineering gives more career flexibility; MBA gives faster salary jumps.",
+    answer: "It depends on your background and goals. If you're in 12th grade, B.Tech at COEP or PICT is an excellent choice, low fees (₹4–8L total), great Pune IT/manufacturing placements. If you already have a degree and want to fast-track to management roles, MBA at SIBM Pune or MIT-SOM is the better path. Engineering gives more career flexibility; MBA gives faster salary jumps.",
   },
   {
     question: "Can I do MBA after B.Tech in Pune?",
-    answer: "Absolutely — this is one of the most common career paths in Pune. B.Tech + MBA is highly valued by Pune companies (TCS, Infosys, Wipro, Bajaj, L&T, consulting firms). After 0–2 years of work experience, top choices are SIBM Pune (SNAP), MIT-SOM Pune (MAT/CMAT), and SCMHRD Pune (SNAP). Many tech engineers from Pune use MBA to transition into product management, consulting, or finance.",
+    answer: "Absolutely: this is one of the most common career paths in Pune. B.Tech + MBA is highly valued by Pune companies (TCS, Infosys, Wipro, Bajaj, L&T, consulting firms). After 0–2 years of work experience, top choices are SIBM Pune (SNAP), MIT-SOM Pune (MAT/CMAT), and SCMHRD Pune (SNAP). Many tech engineers from Pune use MBA to transition into product management, consulting, or finance.",
   },
   {
-    question: "Which has a better return on investment — Engineering or MBA in Pune?",
+    question: "Which has a better return on investment. Engineering or MBA in Pune?",
     answer: "For MBA, Indira Institute of Management offers the best ROI. SIBM Pune has good ROI but takes longer to break even. Avoid deemed private engineering colleges with ₹16–20L total fees and only ₹5 placements.",
   },
   {
     question: "What are the fees for engineering vs MBA in Pune?",
-    answer: "Engineering (4 years): Government (COEP) — ₹4–7L total. Autonomous (PICT, VIT Pune) — ₹6–9L total. Deemed (SIT Pune) — ₹14–19L total. MBA (2 years): Budget (Suryadatta, Indira) — ₹3–6.5L total. Mid-range (MIT-SOM, BIMM) — ₹5–11L total. Premium (SIBM, SCMHRD) — ₹12–22L total. Engineering has lower cost for equivalent quality institutions.",
+    answer: "Engineering (4 years): Government (COEP) to ₹4–7L total. Autonomous (PICT, VIT Pune) to ₹6–9L total. Deemed (SIT Pune) to ₹14–19L total. MBA (2 years): Budget (Suryadatta, Indira) to ₹3–6.5L total. Mid-range (MIT-SOM, BIMM) to ₹5–11L total. Premium (SIBM, SCMHRD) to ₹12–22L total. Engineering has lower cost for equivalent quality institutions.",
   },
   {
-    question: "Which entrance exam is harder — MHT-CET or CAT?",
-    answer: "CAT is significantly harder than MHT-CET. CAT tests advanced quantitative aptitude, verbal reasoning, and data interpretation at a high level — 99+ percentile needed for IIMs. MHT-CET tests 11th–12th PCM syllabus and is considered moderate difficulty. For Pune college admissions, MHT-CET (for engineering) is more commonly cleared than CAT. However, MAT and CMAT (for MBA) are easier than both.",
+    question: "Which entrance exam is harder. MHT-CET or CAT?",
+    answer: "CAT is significantly harder than MHT-CET. CAT tests advanced quantitative aptitude, verbal reasoning, and data interpretation at a high level, 99+ percentile needed for IIMs. MHT-CET tests 11th–12th PCM syllabus and is considered moderate difficulty. For Pune college admissions, MHT-CET (for engineering) is more commonly cleared than CAT. However, MAT and CMAT (for MBA) are easier than both.",
   },
   {
-    question: "Which Pune stream has better placement — Engineering or MBA?",
+    question: "Which Pune stream has better placement. Engineering or MBA?",
     answer: "MBA colleges in Pune have higher absolute placement packages, but engineering colleges have broader employment (more graduates placed overall). For the best engineering placement in Pune: COEP, VIT Pune. For MBA: SIBM Pune, SCMHRD. Top MBA salaries are higher, but you need a prior degree + MBA exam to qualify.",
   },
   {
     question: "Is Pune good for both engineering and MBA students?",
-    answer: "Yes — Pune is Maharashtra's education and industrial capital, making it ideal for both streams. For engineering students: Pune has 300+ manufacturing companies (Bajaj, Tata Motors, Mercedes-Benz), 150+ IT firms, and strong campus recruitment. For MBA students: Pune has BFSI companies (HDFC, ICICI, Citi), consulting offices (McKinsey, BCG, Deloitte), FMCG firms (P&G, HUL, Marico), and a thriving startup ecosystem.",
+    answer: "Yes: Pune is Maharashtra's education and industrial capital, making it ideal for both streams. For engineering students: Pune has 300+ manufacturing companies (Bajaj, Tata Motors, Mercedes-Benz), 150+ IT firms, and strong campus recruitment. For MBA students: Pune has BFSI companies (HDFC, ICICI, Citi), consulting offices (McKinsey, BCG, Deloitte), FMCG firms (P&G, HUL, Marico), and a thriving startup ecosystem.",
   },
 ]
 
@@ -109,15 +109,15 @@ export default function PuneCollegesComparisonPage() {
               <span className="text-white">Engineering vs MBA Pune</span>
             </nav>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
-              Engineering vs MBA in Pune 2026 — Fees, Rankings & Career Comparison
+              Engineering vs MBA in Pune 2026. Fees, Rankings & Career Comparison
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Side-by-side comparison of engineering (B.Tech) and MBA colleges in Pune — fees, entrance exams, average salaries, top recruiters, and career paths. Make the right choice for 2026.
+              Side-by-side comparison of engineering (B.Tech) and MBA colleges in Pune, fees, entrance exams, average salaries, top recruiters, and career paths. Make the right choice for 2026.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
-                <strong>Choose Engineering</strong> if you&apos;re in 12th grade with PCM — COEP gives best value. <strong>Choose MBA</strong> if you have a degree and want fast management growth — SIBM Pune or MIT-SOM. <strong>Best path</strong>: B.Tech at COEP/PICT → 2 years work → MBA at SIBM/MIT-SOM = maximum long-term salary.
+                <strong>Choose Engineering</strong> if you&apos;re in 12th grade with PCM, COEP gives best value. <strong>Choose MBA</strong> if you have a degree and want fast management growth, SIBM Pune or MIT-SOM. <strong>Best path</strong>: B.Tech at COEP/PICT → 2 years work → MBA at SIBM/MIT-SOM = maximum long-term salary.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function PuneCollegesComparisonPage() {
           {/* Main Comparison Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Engineering vs MBA — Complete Comparison 2026</h2>
+              <h2 className="text-lg font-bold text-gray-900">Engineering vs MBA: Complete Comparison 2026</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -213,7 +213,7 @@ export default function PuneCollegesComparisonPage() {
                   "You're in 12th grade with PCM",
                   "You want to work in IT, software, automotive, or manufacturing",
                   "You prefer a longer but more stable career path",
-                  "You want low fees — government colleges like COEP cost only ₹4–7L total",
+                  "You want low fees, government colleges like COEP cost only ₹4–7L total",
                   "You're interested in core technical fields (CS, Mechanical, Electronics)",
                   "You want the option to do MBA later after work experience",
                 ],
@@ -247,7 +247,7 @@ export default function PuneCollegesComparisonPage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — Engineering vs MBA in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: Engineering vs MBA in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -283,7 +283,7 @@ export default function PuneCollegesComparisonPage() {
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Still deciding between Engineering and MBA?</p>
-              <p className="text-blue-200 text-sm">Talk to our counsellors — free, personalised advice in 15 minutes.</p>
+              <p className="text-blue-200 text-sm">Talk to our counsellors, free, personalised advice in 15 minutes.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/counselling" className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">

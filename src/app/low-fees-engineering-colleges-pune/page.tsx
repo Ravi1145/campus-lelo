@@ -41,7 +41,7 @@ const under5LColleges = [
     naac: "A+",
     exam: "MHT-CET / JEE",
     slug: "coep-college-of-engineering-pune",
-    note: "Best govt. — lowest fees overall",
+    note: "Best govt.: lowest fees overall",
   },
   {
     name: "AISSMS College of Engineering",
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: "How to reduce engineering college fees in Pune?",
     answer:
-      "You can reduce engineering college fees through: (1) EBC quota — Economically Backward Class students with family income below ₹8L/year get 50% fee concession. (2) SC/ST fee waiver — full tuition fee waiver for students from Scheduled Caste/Tribe. (3) OBC fee reduction — students from Other Backward Classes get 25–50% fee reduction. (4) Merit scholarships — top-ranking students get merit-based scholarships. (5) AICTE scholarship — ₹30,000/year for eligible students. (6) NSP (National Scholarship Portal) scholarships.",
+      "You can reduce engineering college fees through: (1) EBC quota: Economically Backward Class students with family income below ₹8L/year get 50% fee concession. (2) SC/ST fee waiver, full tuition fee waiver for students from Scheduled Caste/Tribe. (3) OBC fee reduction, students from Other Backward Classes get 25–50% fee reduction. (4) Merit scholarships: top-ranking students get merit-based scholarships. (5) AICTE scholarship: ₹30,000/year for eligible students. (6) NSP (National Scholarship Portal) scholarships.",
   },
   {
     question: "Is COEP really cheaper than private colleges in Pune?",
@@ -169,7 +169,7 @@ export default function LowFeesEngineeringCollegesPunePage() {
               Complete list of affordable B.Tech colleges in Pune with fees under ₹5 lakh and ₹10 lakh total. Compare government vs private fee structures, scholarships, and best value options.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
-              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer — Cheapest Engineering Colleges in Pune</p>
+              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer: Cheapest Engineering Colleges in Pune</p>
               <p className="text-white text-sm leading-relaxed">
                 <strong>COEP</strong> is cheapest at ₹80K/yr (govt). Among private colleges: <strong>AISSMS</strong> ₹1.1L/yr, <strong>JSPM RSCOE</strong> ₹1.2L/yr, <strong>Indira College</strong> ₹95K/yr. Total 4-year B.Tech under ₹5L is possible at COEP (with scholarships), Indira College (₹3.8L), and AISSMS (₹4.4L). SC/ST students get full fee waiver at govt colleges.
               </p>
@@ -197,7 +197,7 @@ export default function LowFeesEngineeringCollegesPunePage() {
           {/* Table 1: Under ₹5L */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100 bg-green-50">
-              <h2 className="text-lg font-bold text-gray-900">Engineering Colleges in Pune — Under ₹5 Lakh Total Fees</h2>
+              <h2 className="text-lg font-bold text-gray-900">Engineering Colleges in Pune. Under ₹5 Lakh Total Fees</h2>
               <p className="text-xs text-gray-500 mt-0.5">4-year B.Tech total cost including tuition, development & exam fees. Data verified 2026.</p>
             </div>
             <div className="overflow-x-auto">
@@ -243,7 +243,7 @@ export default function LowFeesEngineeringCollegesPunePage() {
           {/* Table 2: Under ₹10L */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100 bg-blue-50">
-              <h2 className="text-lg font-bold text-gray-900">Engineering Colleges in Pune — Under ₹10 Lakh Total Fees</h2>
+              <h2 className="text-lg font-bold text-gray-900">Engineering Colleges in Pune. Under ₹10 Lakh Total Fees</h2>
               <p className="text-xs text-gray-500 mt-0.5">Autonomous and NIRF-ranked colleges with strong placements and fees under ₹10L for 4 years.</p>
             </div>
             <div className="overflow-x-auto">
@@ -381,7 +381,7 @@ export default function LowFeesEngineeringCollegesPunePage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Low Fees Engineering Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Low Fees Engineering Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -398,8 +398,8 @@ export default function LowFeesEngineeringCollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },
               { label: "JEE Main Colleges in Pune", href: "/jee-colleges-pune", icon: "📚" },

@@ -92,14 +92,14 @@ const govtScholarships = [
     scheme: "SC/ST Full Fee Waiver",
     eligibility: "Students from Scheduled Caste or Scheduled Tribe category",
     benefit: "100% tuition fee waiver + ₹1,200/year for books & stationery",
-    portal: "MahaDBT portal — post-matric scholarship",
+    portal: "MahaDBT portal: post-matric scholarship",
     deadline: "Before October/November every year",
   },
   {
     scheme: "OBC (Non-Creamy Layer) Fee Reduction",
     eligibility: "OBC students with family income below ₹8L/year",
     benefit: "25–50% fee reduction at government-aided colleges",
-    portal: "MahaDBT portal — OBC scholarship",
+    portal: "MahaDBT portal: OBC scholarship",
     deadline: "Before November every academic year",
   },
   {
@@ -147,7 +147,7 @@ const faqs = [
   {
     question: "How to get scholarship in engineering college in Pune?",
     answer:
-      "To get a scholarship for engineering college in Pune: (1) Apply for EBC scholarship via MahaDBT portal if family income is below ₹8L/year. (2) SC/ST students should apply for post-matric scholarship on MahaDBT before October. (3) For merit scholarships, maintain 95+ percentile in MHT-CET. (4) For AICTE scholarships, apply via NSP portal (scholarships.gov.in) after college admission. (5) Check with your college's scholarship cell for institutional scholarships. Apply early — most deadlines are in October–November.",
+      "To get a scholarship for engineering college in Pune: (1) Apply for EBC scholarship via MahaDBT portal if family income is below ₹8L/year. (2) SC/ST students should apply for post-matric scholarship on MahaDBT before October. (3) For merit scholarships, maintain 95+ percentile in MHT-CET. (4) For AICTE scholarships, apply via NSP portal (scholarships.gov.in) after college admission. (5) Check with your college's scholarship cell for institutional scholarships. Apply early: most deadlines are in October–November.",
   },
   {
     question: "What is EBC scholarship for engineering in Maharashtra?",
@@ -172,7 +172,7 @@ const faqs = [
   {
     question: "Which is the best scholarship for engineering students in Maharashtra?",
     answer:
-      "The best scholarships for engineering students in Maharashtra are: (1) SC/ST Post-Matric Scholarship — full fee waiver, no income limit. (2) EBC Scholarship — 50% fee waiver for family income below ₹8L. (3) AICTE Pragati Scholarship — ₹50,000/year for girl students. (4) Central Sector Scholarship (CSSS) — ₹12,000–₹20,000/year for 80%+ in 12th. (5) OBC Scholarship — 25–50% fee reduction. Apply for all applicable scholarships as they can be combined in some cases.",
+      "The best scholarships for engineering students in Maharashtra are: (1) SC/ST Post-Matric Scholarship, full fee waiver, no income limit. (2) EBC Scholarship: 50% fee waiver for family income below ₹8L. (3) AICTE Pragati Scholarship, ₹50,000/year for girl students. (4) Central Sector Scholarship (CSSS) to ₹12,000–₹20,000/year for 80%+ in 12th. (5) OBC Scholarship: 25–50% fee reduction. Apply for all applicable scholarships as they can be combined in some cases.",
   },
 ]
 
@@ -216,10 +216,10 @@ export default function EngineeringCollegesPuneScholarshipPage() {
               Engineering Colleges in Pune with Scholarship 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Complete guide to scholarships at Pune engineering colleges — government merit scholarships, EBC/SC/ST fee waivers, institutional fellowships at COEP, VIT Pune, PICT, SIT Pune, and more.
+              Complete guide to scholarships at Pune engineering colleges, government merit scholarships, EBC/SC/ST fee waivers, institutional fellowships at COEP, VIT Pune, PICT, SIT Pune, and more.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
-              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer — Engineering Scholarships in Pune</p>
+              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer: Engineering Scholarships in Pune</p>
               <p className="text-white text-sm leading-relaxed">
                 <strong>SC/ST students</strong> get 100% fee waiver at government colleges (COEP). <strong>EBC students</strong> (income &lt; ₹8L) get 50% fee waiver. <strong>VIT Pune</strong> offers ₹25–50K/yr merit scholarships. <strong>AICTE Pragati</strong> gives ₹50K/yr for girl students. Apply via <strong>MahaDBT</strong> before October deadline. Multiple scholarships can be combined.
               </p>
@@ -275,7 +275,7 @@ export default function EngineeringCollegesPuneScholarshipPage() {
           {/* Section 2: College-wise Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Scholarships at Top Pune Engineering Colleges — 2026</h2>
+              <h2 className="text-lg font-bold text-gray-900">Scholarships at Top Pune Engineering Colleges, 2026</h2>
               <p className="text-xs text-gray-400 mt-0.5">Institutional and government scholarships available at each college. Verify with the college scholarship cell.</p>
             </div>
             <div className="overflow-x-auto">
@@ -356,7 +356,7 @@ export default function EngineeringCollegesPuneScholarshipPage() {
           {/* Section 4: How to Apply */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-orange-500" /> How to Apply for Scholarships — Step by Step
+              <CheckCircle className="w-5 h-5 text-orange-500" /> How to Apply for Scholarships. Step by Step
             </h2>
             <ol className="space-y-3">
               {applySteps.map((step, i) => (
@@ -368,7 +368,7 @@ export default function EngineeringCollegesPuneScholarshipPage() {
             </ol>
             <div className="mt-4 bg-blue-50 border border-blue-100 rounded-xl p-4">
               <p className="text-sm text-blue-800">
-                <strong>Important:</strong> Apply for scholarships every year — they are renewed annually, not automatically continued. Missing the October–November deadline means losing the scholarship for that academic year.
+                <strong>Important:</strong> Apply for scholarships every year, they are renewed annually, not automatically continued. Missing the October–November deadline means losing the scholarship for that academic year.
               </p>
             </div>
           </div>
@@ -406,7 +406,7 @@ export default function EngineeringCollegesPuneScholarshipPage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Engineering Scholarships in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Engineering Scholarships in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -423,8 +423,8 @@ export default function EngineeringCollegesPuneScholarshipPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },
               { label: "JEE Main Colleges in Pune", href: "/jee-colleges-pune", icon: "📚" },

@@ -169,7 +169,7 @@ export default function ExamCalendar({ generatedAt = Date.now() }: { generatedAt
         </Reveal>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-xs text-gray-600">Dates from official exam websites — always confirm before applying.</p>
+          <p className="text-xs text-gray-600">Dates from official exam websites, always confirm before applying.</p>
           <Link href="/exams" className="group inline-flex items-center gap-1.5 rounded-xl bg-[#012858] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#024692]">
             All exam guides <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>

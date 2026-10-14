@@ -97,7 +97,7 @@ export default function HomepageNewsSection() {
             </span>
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-orange-600">From the CampusLelo desk</p>
-              <h2 id="insights-heading" className="text-2xl sm:text-3xl font-extrabold text-[#012858]">Trending education insights</h2>
+              <h2 id="insights-heading" className="text-2xl sm:text-3xl font-extrabold text-[#012858]">Latest from the blog</h2>
             </div>
           </div>
           <Link href="/blog" className="reveal-item group inline-flex items-center gap-1.5 text-sm font-semibold text-orange-600" style={{ "--i": 1 } as React.CSSProperties}>
@@ -206,7 +206,7 @@ export default function HomepageNewsSection() {
                 })}
               </ol>
             ) : (
-              <p className="px-5 py-6 text-sm text-gray-600">No dates confirmed right now — see the <Link href="/exams" className="underline">exam guides</Link> for the latest.</p>
+              <p className="px-5 py-6 text-sm text-gray-600">No dates confirmed right now, see the <Link href="/exams" className="underline">exam guides</Link> for the latest.</p>
             )}
             <p className="border-t border-gray-100 px-5 py-3 text-xs text-gray-600">
               Dates from official exam websites. <Link href="/editorial-policy" className="underline hover:text-orange-600">How we verify</Link>

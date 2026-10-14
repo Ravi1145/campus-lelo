@@ -62,7 +62,7 @@ export default function CollegesHinjewadiPune() {
               <span className="text-white">Hinjewadi Pune</span>
             </nav>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Colleges in Hinjewadi Pune 2025-26</h1>
-            <p className="text-gray-300 max-w-2xl">Engineering, MBA, and IT colleges near Hinjewadi IT Park — placement advantage from India&apos;s largest IT hub.</p>
+            <p className="text-gray-300 max-w-2xl">Engineering, MBA, and IT colleges near Hinjewadi IT Park, placement advantage from India&apos;s largest IT hub.</p>
             <div className="grid grid-cols-3 gap-4 mt-6 max-w-lg">
               {[{ v: "5+", l: "Nearby Colleges" }, { v: "500+", l: "IT Companies Nearby" }, { v: "₹80K–3.8L", l: "Annual Fees" }].map(s => (
                 <div key={s.l} className="text-center">
@@ -128,7 +128,7 @@ export default function CollegesHinjewadiPune() {
 
           {/* FAQ */}
           <div className="bg-white rounded-xl shadow p-6 border border-gray-100">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">FAQs — Colleges Near Hinjewadi Pune</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-4">FAQs: Colleges Near Hinjewadi Pune</h2>
             <div className="space-y-3">
               {faqs.map(faq => (
                 <details key={faq.question} className="group border-b border-gray-100 pb-3 last:border-0">
@@ -163,7 +163,7 @@ export default function CollegesHinjewadiPune() {
           {/* CTA */}
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-6 text-center">
             <h2 className="text-xl font-bold text-white mb-2">Need Help Choosing a College Near Hinjewadi?</h2>
-            <p className="text-gray-300 text-sm mb-4">Get free Pune college counselling — find the best fit for your career goals.</p>
+            <p className="text-gray-300 text-sm mb-4">Get free Pune college counselling, find the best fit for your career goals.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors inline-block">
               Free Counselling →
             </Link>

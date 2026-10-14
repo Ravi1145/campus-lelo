@@ -96,7 +96,7 @@ export default function PuneCollegeFeesCalculatorPage() {
               Pune College Fees Calculator 2026
             </h1>
             <p className="text-blue-200 text-sm max-w-2xl">
-              Estimate your total engineering or MBA college fees in Pune — with scholarship deductions for SC/ST, OBC, and EBC categories. Free, instant, no login required.
+              Estimate your total engineering or MBA college fees in Pune, with scholarship deductions for SC/ST, OBC, and EBC categories. Free, instant, no login required.
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function PuneCollegeFeesCalculatorPage() {
           {/* Engineering Fees Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mt-8 mb-6">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Engineering College Fees in Pune 2026 — Complete List</h2>
+              <h2 className="text-lg font-bold text-gray-900">Engineering College Fees in Pune 2026. Complete List</h2>
               <p className="text-xs text-gray-400 mt-0.5">Annual fee + total 4-year fee for B.Tech programs. General category rates.</p>
             </div>
             <div className="overflow-x-auto">
@@ -145,7 +145,7 @@ export default function PuneCollegeFeesCalculatorPage() {
           {/* MBA Fees Table */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">MBA College Fees in Pune 2026 — Complete List</h2>
+              <h2 className="text-lg font-bold text-gray-900">MBA College Fees in Pune 2026. Complete List</h2>
               <p className="text-xs text-gray-400 mt-0.5">Annual fee + total 2-year MBA program fee. General category rates.</p>
             </div>
             <div className="overflow-x-auto">
@@ -181,7 +181,7 @@ export default function PuneCollegeFeesCalculatorPage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs — Pune College Fees 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQs: Pune College Fees 2026</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -217,7 +217,7 @@ export default function PuneCollegeFeesCalculatorPage() {
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-white">
               <p className="font-bold text-lg">Need help with scholarship applications?</p>
-              <p className="text-blue-200 text-sm">Our counsellors help you apply for every scholarship you qualify for — free.</p>
+              <p className="text-blue-200 text-sm">Our counsellors help you apply for every scholarship you qualify for, free.</p>
             </div>
             <Link href="/counselling" className="flex-shrink-0 flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
               Free Scholarship Guidance →

@@ -78,14 +78,14 @@ export default function FeaturedColleges() {
         <div className="flex items-end justify-between mb-6">
           <div>
             <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#E0170F" }}>
-              <span>—</span> Top Colleges
+              Popular colleges
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0F172A" }}>
               Featured Colleges in{" "}
               <span style={{ color: "#E0170F" }}>Pune</span>
             </h2>
             <p className="mt-1.5 text-sm" style={{ color: "#475569" }}>
-              NIRF ranked and top-rated colleges across all streams
+              A mix of colleges across streams. Open a profile for courses, fees and accepted exams.
             </p>
           </div>
           <Link

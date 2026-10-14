@@ -14,7 +14,7 @@ export const revalidate = 300
 
 const steps = [
   { step: 1, title: "Appear in MAH-CET MBA 2026", description: "Register on cetcell.mahacet.org and appear for MAH-CET MBA (held in March 2026). The exam is 2.5 hours with 200 MCQs covering Logical Reasoning (75), Abstract Reasoning (25), Quantitative Aptitude (50), and Verbal/Reading Comprehension (50). Score is valid for 1 year." },
-  { step: 2, title: "For Symbiosis Colleges — Appear in SNAP 2025", description: "SIBM Pune, SCMHRD, SIIB require SNAP (Symbiosis National Aptitude Test), held in December. Register at snaptest.org. SNAP is separate from MAH-CET — you need both if targeting Symbiosis + other Pune colleges." },
+  { step: 2, title: "For Symbiosis Colleges: Appear in SNAP 2025", description: "SIBM Pune, SCMHRD, SIIB require SNAP (Symbiosis National Aptitude Test), held in December. Register at snaptest.org. SNAP is separate from MAH-CET, you need both if targeting Symbiosis + other Pune colleges." },
   { step: 3, title: "Check Results and Calculate Percentile", description: "MAH-CET MBA results are declared in April–May 2026. Your percentile determines which colleges you can target. Use the CampusLelo predictor to identify your college options based on your percentile and category." },
   { step: 4, title: "Register on DTE Maharashtra CAP Portal", description: "After results, register on the DTE Maharashtra CAP portal (dtemaharashtra.gov.in). Fill in personal details, upload documents: MAH-CET scorecard, 10th-12th marksheets, graduation marksheet/certificate, category certificate (if applicable), domicile certificate." },
   { step: 5, title: "Document Verification", description: "Attend document verification at a Facilitation Centre (FC) near you. This is mandatory for CAP participation. Bring original + attested photocopies of all documents. Verification is usually done in May–June 2026." },
@@ -26,7 +26,7 @@ const steps = [
 
 const faqs = [
   { question: "What is the complete MBA admission process in Pune for 2026?", answer: "MBA admission in Pune 2026: (1) Appear in MAH-CET MBA (March 2026). (2) Register on DTE Maharashtra portal after results. (3) Document verification at Facilitation Centre. (4) Fill online option form with college preferences. (5) CAP Rounds 1-3 for seat allotment (July-August 2026). (6) Pay acceptance fee. (7) Report to college." },
-  { question: "What documents are needed for MBA admission in Pune?", answer: "Documents for MBA CAP admission in Pune: MAH-CET MBA scorecard, 10th marksheet + certificate, 12th marksheet + certificate, Graduation marksheet (all semesters) + degree certificate, Category/Caste certificate (OBC/SC/ST/NT/EBC — recent non-creamy layer certificate), Maharashtra domicile certificate, Aadhar card, 2 passport photos, Admission fee DD/payment." },
+  { question: "What documents are needed for MBA admission in Pune?", answer: "Documents for MBA CAP admission in Pune: MAH-CET MBA scorecard, 10th marksheet + certificate, 12th marksheet + certificate, Graduation marksheet (all semesters) + degree certificate, Category/Caste certificate (OBC/SC/ST/NT/EBC, recent non-creamy layer certificate), Maharashtra domicile certificate, Aadhar card, 2 passport photos, Admission fee DD/payment." },
   { question: "Can I get direct admission in MBA in Pune without MAH-CET?", answer: "Yes. Management quota seats (typically 15-20% of intake) at private Pune MBA colleges are available without going through CAP. You apply directly to the college. Management quota fees are usually 1.5–2× the regular CAP fees. Deemed universities like SIBM, MIT-WPU have institutional quota seats for direct admission." },
   { question: "What is the MBA admission last date in Pune 2026?", answer: "MBA 2026 admission timeline: MAH-CET registration: January-February 2026. Exam: March 2026. Results: April-May 2026. CAP Round 1: July 2026. CAP Round 2: Late July 2026. CAP Round 3: August 2026. Direct/Spot admission: August-September 2026. Classes begin: August 2026." },
 ]
@@ -55,7 +55,7 @@ export default function MBAAdmissionProcess() {
               <span className="text-white">Admission Process</span>
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">MBA Admission Process in Pune 2026</h1>
-            <p className="text-blue-100 mb-4">Complete step-by-step guide from MAH-CET registration to enrollment — all important dates and documents.</p>
+            <p className="text-blue-100 mb-4">Complete step-by-step guide from MAH-CET registration to enrollment, all important dates and documents.</p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase mb-1">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">MBA admission in Pune is through <strong>MAH-CET MBA</strong> (March 2026) → DTE Maharashtra CAP rounds (July-August 2026). For Symbiosis colleges, <strong>SNAP</strong> (December 2025) is required separately. Classes begin August 2026.</p>
@@ -67,7 +67,7 @@ export default function MBAAdmissionProcess() {
 
           {/* Important Dates */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">MBA Admission 2026 — Important Dates</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">MBA Admission 2026: Important Dates</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead><tr className="bg-gray-50 text-left text-gray-600"><th className="px-4 py-2 font-semibold">Event</th><th className="px-4 py-2 font-semibold">Expected Date</th><th className="px-4 py-2 font-semibold">Action</th></tr></thead>
@@ -127,7 +127,7 @@ export default function MBAAdmissionProcess() {
 
           {/* FAQ */}
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQ — MBA Admission Pune 2026</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">FAQ: MBA Admission Pune 2026</h2>
             <div className="space-y-3">
               {faqs.map(faq => (
                 <details key={faq.question} className="border border-gray-100 rounded-xl p-4">
@@ -156,7 +156,7 @@ export default function MBAAdmissionProcess() {
           </section>
 
           <section className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-2">MBA Admission Guidance — Free</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">MBA Admission Guidance: Free</h2>
             <p className="text-gray-300 mb-5 text-sm">Our counsellors will walk you through the entire CAP process and help you fill the perfect option form.</p>
             <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg inline-block">Book Free Session →</Link>
           </section>

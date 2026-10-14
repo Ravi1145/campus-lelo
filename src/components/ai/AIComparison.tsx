@@ -24,7 +24,7 @@ function QuickFacts({ a, b }: { a: (typeof colleges)[number]; b: (typeof college
     ["Location", a.location, b.location],
     ["NAAC grade", a.naac || "—", b.naac || "—"],
     ["NIRF rank", a.nirfRank ? `#${a.nirfRank}` : "Not ranked", b.nirfRank ? `#${b.nirfRank}` : "Not ranked"],
-    ["Fees per year", `${fmtL(a.feesRange.min)} – ${fmtL(a.feesRange.max)}`, `${fmtL(b.feesRange.min)} – ${fmtL(b.feesRange.max)}`],
+    ["Fees per year", `${fmtL(a.feesRange.min)}, ${fmtL(a.feesRange.max)}`, `${fmtL(b.feesRange.min)}, ${fmtL(b.feesRange.max)}`],
     ["Average package", a.avgPlacement ? `${fmtL(a.avgPlacement)} per year` : "—", b.avgPlacement ? `${fmtL(b.avgPlacement)} per year` : "—"],
     ["Entrance exams", a.entranceExams.join(", ") || "—", b.entranceExams.join(", ") || "—"],
     ["Hostel", a.hostel ? "Available" : "Not listed", b.hostel ? "Available" : "Not listed"],

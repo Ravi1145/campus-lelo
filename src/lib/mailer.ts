@@ -35,7 +35,7 @@ export async function sendLeadEmail(data: Record<string, unknown>): Promise<bool
   await transporter.sendMail({
     from:    `"CampusLelo Leads" <${process.env.SMTP_USER}>`,
     to,
-    subject: `🎓 New Lead — ${subjectName} (${subjectSource})`,
+    subject: `🎓 New Lead: ${subjectName} (${subjectSource})`,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:600px">
         <h2 style="background:#011B40;color:#fff;padding:16px;margin:0;border-radius:8px 8px 0 0">

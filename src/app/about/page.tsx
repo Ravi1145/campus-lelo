@@ -48,7 +48,7 @@ export default function AboutPage() {
           </nav>
           <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl">About CampusLelo</h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-blue-100 sm:text-lg">
-            CampusLelo is a college discovery portal for students in Pune and Delhi NCR. We help you compare colleges, understand entrance exams and get guidance — and we show where every fact comes from.
+            CampusLelo is a college discovery portal for students in Pune and Delhi NCR. We help you compare colleges, understand entrance exams and get guidance, and we show where every fact comes from.
           </p>
         </div>
       </div>

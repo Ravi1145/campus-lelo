@@ -20,15 +20,15 @@ const STREAMS = [
 
 const BUDGETS = [
   { label: "Under ₹1L",  value: "under_1l",   display: "Under ₹1L/yr" },
-  { label: "₹1L – ₹3L", value: "1l_to_3l",   display: "₹1L – ₹3L/yr" },
-  { label: "₹3L – ₹5L", value: "3l_to_5l",   display: "₹3L – ₹5L/yr" },
+  { label: "₹1L, ₹3L", value: "1l_to_3l",   display: "₹1L, ₹3L/yr" },
+  { label: "₹3L, ₹5L", value: "3l_to_5l",   display: "₹3L, ₹5L/yr" },
   { label: "Above ₹5L",  value: "above_5l",   display: "Above ₹5L/yr" },
 ] as const
 
 const SCORES = [
   { label: "Below 60 percentile",   value: "below_60" },
-  { label: "60 – 80 percentile",    value: "60_to_80" },
-  { label: "80 – 95 percentile",    value: "80_to_95" },
+  { label: "60 to 80 percentile",    value: "60_to_80" },
+  { label: "80 to 95 percentile",    value: "80_to_95" },
   { label: "Above 95 percentile",   value: "above_95" },
   { label: "Not applicable",        value: "na" },
 ] as const
@@ -358,7 +358,7 @@ export default function CollegeFinder() {
             {STEP_TITLES[2]}
           </h2>
           <p className="text-sm text-gray-500 mb-4">
-            CET / JEE / CAT / NEET — choose the band that fits.
+            CET / JEE / CAT / NEET, choose the band that fits.
           </p>
           <div className="grid grid-cols-1 gap-2.5">
             {SCORES.map((s) => (
@@ -466,7 +466,7 @@ export default function CollegeFinder() {
               ) : (
                 <>
                   <CheckCircle className="w-4 h-4" />
-                  Show My College List — Free
+                  Show My College List. Free
                 </>
               )}
             </button>
@@ -533,7 +533,7 @@ export default function CollegeFinder() {
               Want expert guidance?
             </p>
             <p className="text-xs text-gray-500 mb-3">
-              A counsellor will call you — phone counselling is free.
+              A counsellor will call you, phone counselling is free.
             </p>
             <a
               href="tel:+918080804422"

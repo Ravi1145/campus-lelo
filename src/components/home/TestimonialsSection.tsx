@@ -8,10 +8,10 @@ import { VIDEO_PRICE_INR } from "@/data/counselling"
 // ratings or student counts (see docs/archive/replaced-components-2026-10-05).
 
 const FEATURES = [
-  { icon: GitCompare, title: "Compare side by side", desc: "Put two colleges next to each other — fees, placements, exams accepted, NAAC and NIRF.", href: "/compare", cta: "Compare colleges" },
+  { icon: GitCompare, title: "Compare side by side", desc: "Put two colleges next to each other and compare fees, accepted exams and NAAC grade.", href: "/compare", cta: "Compare colleges" },
   { icon: Sparkles, title: "AI college finder", desc: "Answer four quick questions about your stream, score and budget and get a matched shortlist.", href: "/ai-finder", cta: "Try the finder" },
-  { icon: CalendarClock, title: "Exam guides with dates", desc: "CAT, XAT, SNAP, NMAT, MAT and more — dates, pattern and eligibility, linked to the official source.", href: "/exams", cta: "See exam guides" },
-  { icon: TrendingUp, title: "Published cut-offs", desc: "Only cut-offs that colleges or exam bodies have published — with the source and review date.", href: "/mba-cutoff-delhi-ncr", cta: "MBA cut-offs" },
+  { icon: CalendarClock, title: "Exam guides with dates", desc: "CAT, XAT, SNAP, NMAT, MAT and more, dates, pattern and eligibility, linked to the official source.", href: "/exams", cta: "See exam guides" },
+  { icon: TrendingUp, title: "Published cut-offs", desc: "Only cut-offs that a college or exam body has published, each with its source and the date we checked.", href: "/mba-cutoff-delhi-ncr", cta: "MBA cut-offs" },
 ]
 
 export default function TestimonialsSection() {
@@ -20,8 +20,8 @@ export default function TestimonialsSection() {
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item max-w-2xl" style={{ "--i": 0 } as React.CSSProperties}>
           <p className="text-xs font-bold uppercase tracking-widest text-orange-600">Why CampusLelo</p>
-          <h2 id="why-heading" className="mt-2 text-3xl font-extrabold text-[#012858] sm:text-4xl">Everything you need to choose with confidence</h2>
-          <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">Tools to research, compare and shortlist — and a human counsellor when you want one. Free for students.</p>
+          <h2 id="why-heading" className="mt-2 text-3xl font-extrabold text-[#012858] sm:text-4xl">Tools for comparing colleges, and a person to ask</h2>
+          <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">Free for students. Use the tools on your own, or ask a counsellor when you get stuck.</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
               <h3 className="mt-6 text-2xl font-extrabold leading-tight sm:text-3xl">Guidance that fits: a free call, or a ₹{VIDEO_PRICE_INR} video session</h3>
               <p className="mt-3 text-sm leading-relaxed text-blue-100 sm:text-base">Not sure which college or exam is right? Start with free phone counselling, scholarship information and alumni to talk to. For one-to-one help with CAP rounds, career choice and a personal shortlist, book an expert video session.</p>
               <ul className="mt-6 space-y-3 text-sm text-blue-50">
-                {["Free phone counselling, scholarships and alumni connect", `Expert video session — ₹${VIDEO_PRICE_INR}: CAP rounds, career choice, shortlist`, "Help with forms and deadlines"].map((t) => (
+                {["Free phone counselling, scholarships and alumni connect", `Expert video session: ₹${VIDEO_PRICE_INR}: CAP rounds, career choice, shortlist`, "Help with forms and deadlines"].map((t) => (
                   <li key={t} className="flex items-center gap-2.5"><BadgeCheck className="h-5 w-5 shrink-0 text-emerald-300" aria-hidden="true" />{t}</li>
                 ))}
               </ul>

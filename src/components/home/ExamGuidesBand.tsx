@@ -10,9 +10,9 @@ const ORDER = ["cat", "nmat", "snap", "mat", "xat", "cmat", "mah-mba-cet", "atma
 // Exams whose listed dates are a previous cycle or past sessions — don't show those as "upcoming"
 const SUMMARY: Record<string, string> = {
   "mah-mba-cet": "2027 dates awaited (2026: Apr & May)",
-  atma: "Several sessions a year — see next dates",
+  atma: "Several sessions a year, see next dates",
   gmat: "Available year-round",
-  cmat: "CMAT 2027 — date awaiting NTA confirmation",
+  cmat: "CMAT 2027: date awaiting NTA confirmation",
 }
 const BADGE: Record<string, string> = { "mah-mba-cet": "CET" }
 
@@ -38,7 +38,7 @@ export default function ExamGuidesBand() {
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-orange-300">MBA & PGDM 2027 admissions</p>
             <h2 id="exam-guides-heading" className="font-bold text-2xl sm:text-3xl text-white mt-1">Upcoming entrance exams</h2>
-            <p className="mt-1 text-sm text-blue-100">Dates, pattern, eligibility and verified accepting colleges — every fact linked to its official source.</p>
+            <p className="mt-1 text-sm text-blue-100">Dates, pattern, eligibility and verified accepting colleges, every fact linked to its official source.</p>
           </div>
           <Link href="/exams" className="text-sm font-semibold text-orange-300 hover:underline">All exam guides →</Link>
         </div>

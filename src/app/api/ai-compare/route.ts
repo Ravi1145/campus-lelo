@@ -56,7 +56,7 @@ COLLEGE 1: ${col1Data}
 
 COLLEGE 2: ${col2Data}
 
-Provide a comprehensive comparison in this exact JSON format:
+Provide a full comparison in this exact JSON format:
 {
   "winner": "Name of the overall better college",
   "summary": "2-3 sentence overall verdict explaining which college wins and why",

@@ -34,7 +34,7 @@ interface Props {
 export default function MbaLeadForm({
   exam, city, placement,
   heading = "Get a free MBA/PGDM shortlist",
-  subheading = "Tell us your exam, budget and city — a counsellor will share realistic options and deadlines.",
+  subheading = "Tell us your exam, budget and city, a counsellor will share realistic options and deadlines.",
   source = "exam_page", variant = "card",
 }: Props) {
   const [form, setForm] = useState({ name: "", phone: "", exam: exam ?? "", score: "", program: "Not sure" as (typeof PROGRAMS)[number], city: city ?? "", budget: "", consent: false, website: "" })
@@ -103,7 +103,7 @@ export default function MbaLeadForm({
         <p className="mt-4 text-lg font-extrabold text-[#012858]">Thanks, {form.name.split(" ")[0]}!</p>
         <p className="mt-1 text-sm text-gray-600">A CampusLelo counsellor will call you shortly. Meanwhile:</p>
         <div className="mt-3 flex flex-col gap-1.5 text-sm font-bold text-[#C90D11]">
-          <Link href="/mba-vs-pgdm" className="hover:underline">MBA vs PGDM — what&apos;s right for you? →</Link>
+          <Link href="/mba-vs-pgdm" className="hover:underline">MBA vs PGDM: what&apos;s right for you? →</Link>
           <Link href="/exams" className="hover:underline">All entrance exam guides →</Link>
           <Link href="/mba-counselling" className="hover:underline">MBA counselling and career guidance →</Link>
         </div>

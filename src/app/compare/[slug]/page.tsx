@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const colB = colleges.find(c => c.slug === slugB)!
   return genMeta({
     title: `${colA.shortName} vs ${colB.shortName} Pune 2026 | Fees, Placement & Cutoff Comparison`,
-    description: `${colA.name} vs ${colB.name} — side-by-side comparison of fees (${colA.shortName}: ₹${(colA.feesRange.min/100000).toFixed(1)}L vs ${colB.shortName}: ₹${(colB.feesRange.min/100000).toFixed(1)}L), placements, NAAC, cutoff & admission 2026.`,
+    description: `${colA.name} vs ${colB.name}: side-by-side comparison of fees (${colA.shortName}: ₹${(colA.feesRange.min/100000).toFixed(1)}L vs ${colB.shortName}: ₹${(colB.feesRange.min/100000).toFixed(1)}L), placements, NAAC, cutoff & admission 2026.`,
     path: `/compare/${slug}`,
     keywords: [
       `${colA.shortName} vs ${colB.shortName}`,
@@ -139,7 +139,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
               {colA.name} vs {colB.name}
             </h1>
             <p className="text-gray-300 max-w-2xl">
-              Detailed comparison for 2026 admissions — fees, placements, NAAC grade, cutoffs, campus & courses.
+              Detailed comparison for 2026 admissions, fees, placements, NAAC grade, cutoffs, campus & courses.
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
           {/* Comparison Table */}
           <div className="bg-white rounded-xl shadow overflow-hidden border border-gray-100">
             <div className="px-6 py-4 border-b border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900">{colA.shortName} vs {colB.shortName} — Side-by-Side</h2>
+              <h2 className="text-xl font-bold text-gray-900">{colA.shortName} vs {colB.shortName}: Side-by-Side</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -269,7 +269,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
           {/* CTA */}
           <div className="bg-gradient-to-r from-[#011B40] to-[#024692] rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Need Help Choosing Between {colA.shortName} and {colB.shortName}?</h2>
-            <p className="text-gray-300 mb-6 text-sm">Talk to our free Pune college counsellor — get personalised guidance in 15 minutes.</p>
+            <p className="text-gray-300 mb-6 text-sm">Talk to our free Pune college counsellor, get personalised guidance in 15 minutes.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/counselling" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
                 Free Counselling

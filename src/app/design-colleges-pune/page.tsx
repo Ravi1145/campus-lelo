@@ -25,10 +25,10 @@ export const metadata: Metadata = genMeta({
 const colleges = [
   { rank: 1, name: "MIT Institute of Design (MIT-ID)", type: "Private", naac: "A+", fees: "₹3.5L–₹5L/yr", program: "B.Des, M.Des", seats: 120, nata: "Not required", slug: "mit-institute-of-design-pune", highlight: "No. 1 Design School Pune | Industry tie-ups" },
   { rank: 2, name: "Symbiosis School of Design (SSD)", type: "Deemed", naac: "A+", fees: "₹4L–₹5.5L/yr", program: "B.Des", seats: 60, nata: "Portfolio + interview", slug: "symbiosis-institute-of-design-pune", highlight: "Top Deemed | Excellent placement" },
-  { rank: 3, name: "MAEER's MIT College of Engineering — Architecture", type: "Private", naac: "A+", fees: "₹1.8L–₹2.5L/yr", program: "B.Arch", seats: 40, nata: "NATA 80+", slug: "mit-college-engineering-pune", highlight: "Best B.Arch | NATA approved" },
-  { rank: 4, name: "Indira College of Engineering — Architecture", type: "Private", naac: "A", fees: "₹1.2L–₹1.8L/yr", program: "B.Arch", seats: 40, nata: "NATA 70+", slug: "indira-college-architecture-pune", highlight: "Affordable B.Arch option" },
+  { rank: 3, name: "MAEER's MIT College of Engineering. Architecture", type: "Private", naac: "A+", fees: "₹1.8L–₹2.5L/yr", program: "B.Arch", seats: 40, nata: "NATA 80+", slug: "mit-college-engineering-pune", highlight: "Best B.Arch | NATA approved" },
+  { rank: 4, name: "Indira College of Engineering. Architecture", type: "Private", naac: "A", fees: "₹1.2L–₹1.8L/yr", program: "B.Arch", seats: 40, nata: "NATA 70+", slug: "indira-college-architecture-pune", highlight: "Affordable B.Arch option" },
   { rank: 5, name: "Sinhgad Institute of Design (SID)", type: "Private", naac: "A", fees: "₹2.5L–₹3.5L/yr", program: "B.Des", seats: 60, nata: "Portfolio based", slug: "sid-sinhgad-institute-design-pune", highlight: "Growing design school | Strong faculty" },
-  { rank: 6, name: "Fergusson College — Fine Arts & Design", type: "Government", naac: "A+", fees: "₹15K–₹30K/yr", program: "B.A. Fine Arts", seats: 60, nata: "Merit based", slug: "fergusson-college-pune", highlight: "Heritage college | Lowest fees" },
+  { rank: 6, name: "Fergusson College: Fine Arts & Design", type: "Government", naac: "A+", fees: "₹15K–₹30K/yr", program: "B.A. Fine Arts", seats: 60, nata: "Merit based", slug: "fergusson-college-pune", highlight: "Heritage college | Lowest fees" },
 ]
 
 const faqs = [
@@ -63,7 +63,7 @@ export default function DesignCollegesPune() {
           </nav>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">Best Design Colleges in Pune 2026</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-base mb-6">
-            Compare top design, architecture & fashion colleges in Pune — fees from ₹15K to ₹5.5L/year, NATA cutoffs, NID prep, and real placement data.
+            Compare top design, architecture & fashion colleges in Pune, fees from ₹15K to ₹5.5L/year, NATA cutoffs, NID prep, and real placement data.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {[
@@ -82,7 +82,7 @@ export default function DesignCollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* ⚡ Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — Top Design Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: Top Design Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Best overall:</strong> MIT Institute of Design (MIT-ID) · <strong>Best deemed:</strong> Symbiosis School of Design · <strong>Best B.Arch:</strong> MIT AOA ·{" "}
               <strong>Lowest fees:</strong> Fergusson College (₹15K/yr) · <strong>Highest placement:</strong> MIT-ID
@@ -90,7 +90,7 @@ export default function DesignCollegesPune() {
           </div>
 
           {/* College table */}
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Design & Architecture Colleges in Pune — Ranked 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Design & Architecture Colleges in Pune. Ranked 2026</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -138,7 +138,7 @@ export default function DesignCollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Design Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Design Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

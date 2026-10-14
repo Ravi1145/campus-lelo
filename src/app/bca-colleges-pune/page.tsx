@@ -100,7 +100,7 @@ const colleges = [
   },
   {
     rank: 7,
-    name: "BMCC — Brihan Maharashtra College of Commerce",
+    name: "BMCC: Brihan Maharashtra College of Commerce",
     type: "Govt-aided",
     naac: "A",
     fees: "₹20K–₹35K/yr",
@@ -131,7 +131,7 @@ const faqs = [
   },
   {
     question: "What percentage is required for BCA admission in Pune?",
-    answer: "BCA admission in Pune requires HSC (Class 12) in any stream with Mathematics as a subject. Minimum percentage: Government-aided colleges (60%+), Private colleges (50–55%+), Deemed colleges like Symbiosis (60%+ plus entrance/interview). MHT-CET is not mandatory for BCA — direct HSC merit is used. Some colleges also accept students with PCB (Biology) if they have HSC-level Mathematics.",
+    answer: "BCA admission in Pune requires HSC (Class 12) in any stream with Mathematics as a subject. Minimum percentage: Government-aided colleges (60%+), Private colleges (50–55%+), Deemed colleges like Symbiosis (60%+ plus entrance/interview). MHT-CET is not mandatory for BCA, direct HSC merit is used. Some colleges also accept students with PCB (Biology) if they have HSC-level Mathematics.",
   },
 ]
 
@@ -180,7 +180,7 @@ export default function BCACollegesPune() {
         <div className="max-w-5xl mx-auto px-4 py-10">
           {/* Quick Answer */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-8">
-            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer — BCA Colleges Pune 2026</p>
+            <p className="text-sm font-bold text-orange-700 mb-1">⚡ Quick Answer: BCA Colleges Pune 2026</p>
             <p className="text-sm text-gray-700">
               <strong>Best placement:</strong> Symbiosis · <strong>Best brand:</strong> MIT Arts ·{" "}
               <strong>Cheapest:</strong> BMCC (₹20K/yr) · <strong>Best NAAC:</strong> Fergusson &amp; MIT (A+) ·{" "}
@@ -189,7 +189,7 @@ export default function BCACollegesPune() {
           </div>
 
           {/* Table */}
-          <h2 className="text-xl font-bold text-gray-900 mb-4">BCA Colleges in Pune — Ranked 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">BCA Colleges in Pune. Ranked 2026</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -225,7 +225,7 @@ export default function BCACollegesPune() {
           {/* BCA vs BSc box */}
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             <div className="bg-blue-50 border border-blue-100 rounded-xl p-5">
-              <h3 className="font-bold text-blue-900 mb-3">💻 BCA — Best For:</h3>
+              <h3 className="font-bold text-blue-900 mb-3">💻 BCA: Best For:</h3>
               <ul className="text-sm text-blue-800 space-y-1">
                 <li>✓ Direct entry into software development</li>
                 <li>✓ Startup / freelancing path</li>
@@ -235,7 +235,7 @@ export default function BCACollegesPune() {
               </ul>
             </div>
             <div className="bg-purple-50 border border-purple-100 rounded-xl p-5">
-              <h3 className="font-bold text-purple-900 mb-3">🔬 BSc CS — Best For:</h3>
+              <h3 className="font-bold text-purple-900 mb-3">🔬 BSc CS: Best For:</h3>
               <ul className="text-sm text-purple-800 space-y-1">
                 <li>✓ Data Science / AI / ML roles</li>
                 <li>✓ Government / research jobs</li>
@@ -248,8 +248,8 @@ export default function BCACollegesPune() {
 
           {/* CTA */}
           <div className="rounded-2xl p-6 text-center mb-10" style={{ background: "linear-gradient(135deg,#011B40,#024692)" }}>
-            <p className="text-white font-bold text-lg mb-2">BCA, BSc CS or BTech — what&apos;s right for you?</p>
-            <p className="text-blue-200 text-sm mb-4">Our AI Finder compares all 3 paths based on your Class 12 marks, budget &amp; career goal — in 60 seconds.</p>
+            <p className="text-white font-bold text-lg mb-2">BCA, BSc CS or BTech, what&apos;s right for you?</p>
+            <p className="text-blue-200 text-sm mb-4">Our AI Finder compares all 3 paths based on your Class 12 marks, budget &amp; career goal, in 60 seconds.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/ai-finder" className="inline-flex items-center justify-center gap-2 font-bold text-white px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-all" style={{ background: "linear-gradient(90deg,var(--color-accent),color-mix(in srgb, var(--color-accent) 70%, #FFD000))" }}>
                 Try AI College Finder
@@ -261,7 +261,7 @@ export default function BCACollegesPune() {
           </div>
 
           {/* FAQs */}
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — BCA Colleges Pune</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: BCA Colleges Pune</h2>
           <div className="space-y-4 mb-10">
             {faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">

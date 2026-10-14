@@ -66,7 +66,7 @@ export default function CollegesKothrudPunePage() {
         ]}
         introHeading="Colleges in Kothrud, Pune: The MIT-WPU Ecosystem"
         introParagraphs={[
-          "Kothrud is one of Pune's most prominent education hubs, dominated by the MIT (Maharashtra Institute of Technology) group of colleges and MIT World Peace University (MIT-WPU) - a deemed university with over 20,000 students across engineering, management, science, law, and arts programs. The area has evolved from a residential suburb into a vibrant student district.",
+          "Kothrud is one of Pune's most prominent education hubs, dominated by the MIT (Maharashtra Institute of Technology) group of colleges and MIT World Peace University (MIT-WPU) - a deemed university with over 20,000 students across engineering, management, science, law, and arts programs. The area has evolved from a residential suburb into a lively student district.",
           "MIT-WPU's main campus on Paud Road, Kothrud, is a self-sufficient university campus with hostels, sports facilities, research centers, and startup incubators. Its diverse program offerings make Kothrud a one-stop destination for students seeking quality education in various disciplines under one NAAC A+ institution.",
           "Beyond MIT-WPU, Kothrud and adjacent Karvenagar host Cummins College of Engineering for Women (NAAC A+, one of India's best women-only engineering colleges) and several other MIT group institutions. The Kothrud education cluster benefits from proximity to Hinjewadi IT Park (15 km), Pune-Mumbai Expressway connectivity, and a dense infrastructure of student services.",
         ]}
@@ -95,7 +95,7 @@ export default function CollegesKothrudPunePage() {
         { label: "Colleges in Hadapsar Pune", href: "/colleges-hadapsar-pune", icon: "📍" },
         { label: "Colleges in Wakad Pune", href: "/colleges-wakad-pune", icon: "📍" },
         { label: "Colleges with Hostel in Pune", href: "/colleges-in-pune-with-hostel", icon: "🏠" },
-        { label: "All Colleges in Pune — Browse", href: "/colleges", icon: "🏛️" },
+        { label: "All Colleges in Pune. Browse", href: "/colleges", icon: "🏛️" },
         { label: "Government Colleges in Pune", href: "/government-colleges-pune", icon: "🏛️" },
         { label: "Best Engineering Colleges Pune", href: "/engineering-colleges-pune", icon: "⚙️" },
         { label: "Best MBA Colleges in Pune", href: "/mba-colleges-pune", icon: "📈" },

@@ -21,7 +21,7 @@ const BUDGETS = [
 
 const POINTS = [
   { icon: Clock3, text: "Takes under a minute" },
-  { icon: BadgeCheck, text: "Free — no sign-up to see results" },
+  { icon: BadgeCheck, text: "Free: no sign-up to see results" },
   { icon: Wand2, text: "Matches your score, budget and goals" },
 ]
 
@@ -62,7 +62,7 @@ export default function AIFinderBand() {
             <span className="block bg-gradient-to-r from-[#FB4312] to-[#FF9E8A] bg-clip-text text-transparent">Answer 4 questions.</span>
           </h2>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-blue-100">
-            Tell us your stream, exam, score and budget. Our AI recommender suggests Pune colleges that fit — and explains why.
+            Tell us your stream, exam, score and budget. Our AI recommender suggests Pune colleges that fit, and explains why.
           </p>
           <ul className="mt-6 space-y-3">
             {POINTS.map(({ icon: Icon, text }, i) => (

@@ -54,7 +54,7 @@ Return this exact JSON structure (no extra fields, all monetary values as intege
     {"q": "Are there any notable alumni?", "a": "Mention 2-3 notable alumni..."}
   ],
   "seo_keywords": ["10 focus keywords like 'best engineering college Pune'"],
-  "meta_title": "College Name — Fees, Placements, Courses 2026 | CampusLelo",
+  "meta_title": "College Name: Fees, Placements, Courses 2026 | CampusLelo",
   "meta_desc": "160-character SEO description with college name, fees, placement, and location",
   "details": {
     "courses_fees": [
@@ -194,7 +194,7 @@ Top colleges in this city for ${stream}: ${topColleges.join(', ')}
 
 Return this exact JSON:
 {
-  "title": "${stream} Colleges in ${city} — Fees, Rankings & Admissions 2025",
+  "title": "${stream} Colleges in ${city}: Fees, Rankings & Admissions 2025",
   "intro": "3-paragraph intro (300 words) covering: why ${city} for ${stream}, key stats (colleges count, avg fees, placements), admission season overview. Mention specific colleges by name.",
   "faqs": [
     {"q": "Which is the best ${stream} college in ${city}?", "a": "Detailed answer mentioning top 3 colleges with reasons..."},
@@ -204,7 +204,7 @@ Return this exact JSON:
     {"q": "What is the admission process for ${stream} colleges in ${city}?", "a": "Step-by-step process..."}
   ],
   "cta_text": "Get free personalized counseling for ${stream} admissions in ${city}",
-  "meta_title": "Best ${stream} Colleges in ${city} 2025 — Fees, Cutoff & Admissions | CampusLelo",
+  "meta_title": "Best ${stream} Colleges in ${city} 2025: Fees, Cutoff & Admissions | CampusLelo",
   "meta_desc": "Explore top ${stream} colleges in ${city} with fees, placements, NAAC grades and admission details. Compare and get free counseling. Updated 2025."
 }`
 }

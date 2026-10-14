@@ -113,7 +113,7 @@ const faqs = [
   {
     question: "Are MBA colleges in Pune under 5 lakh worth it?",
     answer:
-      "Yes, affordable MBA colleges in Pune under ₹5 lakh are worth it if you have clear career goals and leverage networking opportunities. Colleges like Indira Institute of Management, IIMM Pune, and Suryadatta are NAAC accredited and AICTE approved. They offer placements in reputed companies in the ₹4 range. For banking, finance, or marketing careers in Pune/Maharashtra, these colleges provide good value compared to taking ₹20L+ loans for tier-2 national MBA colleges.",
+      "Yes, affordable MBA colleges in Pune under ₹5 lakh are worth it if you have clear career goals and use networking opportunities. Colleges like Indira Institute of Management, IIMM Pune, and Suryadatta are NAAC accredited and AICTE approved. They offer placements in reputed companies in the ₹4 range. For banking, finance, or marketing careers in Pune/Maharashtra, these colleges provide good value compared to taking ₹20L+ loans for tier-2 national MBA colleges.",
   },
 ]
 
@@ -150,7 +150,7 @@ export default function LowFeesMBACollegesPunePage() {
               Complete list of affordable MBA colleges in Pune with fees under ₹5 lakh and ₹10 lakh total. Compare fee structures, average placements, and ROI to pick the best budget MBA program.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
-              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer — Cheapest MBA Colleges in Pune</p>
+              <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer: Cheapest MBA Colleges in Pune</p>
               <p className="text-white text-sm leading-relaxed">
                 <strong>Suryadatta Institute</strong> is cheapest at ₹2.8L total (2 years). <strong>IIMM Pune</strong> ₹3.8L, <strong>Indira Institute</strong> ₹4.2L, <strong>BIMM</strong> ₹5L. All under ₹5L and NAAC accredited. Admission via <strong>MAH-CET</strong> or <strong>CAT</strong>. Average placement ₹4. MIT-SOM (₹7–11L) offers higher placements of ₹7.
               </p>
@@ -177,7 +177,7 @@ export default function LowFeesMBACollegesPunePage() {
           {/* Table 1: Under ₹5L */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100 bg-green-50">
-              <h2 className="text-lg font-bold text-gray-900">MBA Colleges in Pune — Under ₹5 Lakh Total Fees</h2>
+              <h2 className="text-lg font-bold text-gray-900">MBA Colleges in Pune. Under ₹5 Lakh Total Fees</h2>
               <p className="text-xs text-gray-500 mt-0.5">2-year MBA/PGDM total cost. All colleges are AICTE approved and NAAC accredited. Data verified 2026.</p>
             </div>
             <div className="overflow-x-auto">
@@ -223,7 +223,7 @@ export default function LowFeesMBACollegesPunePage() {
           {/* Table 2: Under ₹10L */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100 bg-blue-50">
-              <h2 className="text-lg font-bold text-gray-900">MBA Colleges in Pune — Under ₹10 Lakh Total Fees</h2>
+              <h2 className="text-lg font-bold text-gray-900">MBA Colleges in Pune. Under ₹10 Lakh Total Fees</h2>
               <p className="text-xs text-gray-500 mt-0.5">Deemed universities and top-ranked MBA colleges with stronger placements, fees ₹5–10L for 2 years.</p>
             </div>
             <div className="overflow-x-auto">
@@ -293,7 +293,7 @@ export default function LowFeesMBACollegesPunePage() {
                 <p className="text-xs text-gray-500 mt-3">Moratorium period: course duration + 6 months. Repayment: 5–15 years.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-3 text-sm">ROI Comparison — MBA Fees vs Salary</h3>
+                <h3 className="font-semibold text-gray-900 mb-3 text-sm">ROI Comparison: MBA Fees vs Salary</h3>
                 <div className="space-y-3">
                   {[
                     { college: "Suryadatta / IIMM", fees: "₹2.8–3.8L", placement: "Not published", recovery: "< 1 year" },
@@ -357,7 +357,7 @@ export default function LowFeesMBACollegesPunePage() {
 
           {/* FAQ Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Low Fees MBA Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Low Fees MBA Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -374,8 +374,8 @@ export default function LowFeesMBACollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best MBA Colleges in Pune 2026", href: "/mba-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 MBA Colleges — Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
-              { label: "MBA Placement Guide — LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
+              { label: "Top 10 MBA Colleges. Ranked", href: "/top-10-mba-colleges-in-pune", icon: "🏆" },
+              { label: "MBA Placement Guide: LPA Stats", href: "/mba-colleges-in-pune", icon: "💼" },
               { label: "MBA Scholarships in Pune", href: "/mba-colleges-pune-scholarship", icon: "🎓" },
               { label: "CAT Score Colleges in Pune", href: "/mba-colleges-in-pune-accepting-cat", icon: "📝" },
               { label: "PGDM Colleges in Pune", href: "/pgdm-colleges-pune", icon: "📊" },

@@ -55,9 +55,9 @@ export default function TopBTechCollegesInPune() {
         ]}
         colleges={btechColleges}
         breadcrumbLabel="Top BTech Colleges"
-        introHeading="Top BTech Colleges in Pune — NIRF & NAAC Rankings 2026"
+        introHeading="Top BTech Colleges in Pune. NIRF & NAAC Rankings 2026"
         introParagraphs={[
-          "The National Institutional Ranking Framework (NIRF) by the Government of India is the most authoritative ranking for engineering colleges. Among Pune colleges, COEP is ranked #49 nationally (Engineering category,) — the only Pune engineering college in the top 50. VIT Pune holds.",
+          "The National Institutional Ranking Framework (NIRF) by the Government of India is the most authoritative ranking for engineering colleges. Among Pune colleges, COEP is ranked #49 nationally (Engineering category,), the only Pune engineering college in the top 50. VIT Pune holds.",
           "NAAC accreditation is a key quality signal. Six Pune BTech colleges hold the top NAAC A+ grade: COEP, VIT Pune, MIT-WPU, SIT Pune, PCCOE, and Bharati Vidyapeeth College of Engineering. NAAC A+ means the college has been independently assessed as excellent in academics, research, and governance.",
         ]}
         faqs={btechFAQs.general.slice(0, 5)}
@@ -69,7 +69,7 @@ export default function TopBTechCollegesInPune() {
           { label: "BTech via MHT-CET", href: "/btech-colleges-in-pune-through-mht-cet" },
         ]}
         ctaHeading="Get Into a Top BTech College in Pune"
-        ctaSubtext="Free counselling — identify your best-fit college based on your MHT-CET percentile and branch preference."
+        ctaSubtext="Free counselling: identify your best-fit college based on your MHT-CET percentile and branch preference."
       />
       <MoreInCluster pool="btech" path="/top-btech-colleges-in-pune" />
     </>

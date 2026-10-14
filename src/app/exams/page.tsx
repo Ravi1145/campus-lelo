@@ -8,7 +8,7 @@ import Link from "next/link"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Entrance Exam Calendar 2026 — MHT-CET, JEE, NEET, CAT for Pune Colleges",
+  title: "Entrance Exam Calendar 2026: MHT-CET, JEE, NEET, CAT for Pune Colleges",
   description: "Complete entrance exam schedule 2026 for Pune college admissions. Dates for MHT-CET, JEE Main, NEET, CAT, SNAP, MAT and more. Registration deadlines, eligibility, and official websites.",
   path: "/exams",
   keywords: ["mht-cet 2026", "jee main 2026 pune", "neet 2026", "cat 2026", "snap 2026", "entrance exams pune"],
@@ -46,7 +46,7 @@ export default function ExamsPage() {
   const eventListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Entrance Exam Calendar — Pune Colleges",
+    name: "Entrance Exam Calendar: Pune Colleges",
     description: "Entrance exams for Pune college admissions with confirmed dates",
     numberOfItems: datedExams.length,
     itemListElement: datedExams.map(({ exam, startDate }, idx) => ({
@@ -55,7 +55,7 @@ export default function ExamsPage() {
       item: {
         "@context": "https://schema.org",
         "@type": "Event",
-        name: `${exam.name} ${startDate.slice(0, 4)} — ${exam.fullName}`,
+        name: `${exam.name} ${startDate.slice(0, 4)}: ${exam.fullName}`,
         description: exam.description,
         url: exam.website,
         organizer: {
@@ -97,7 +97,7 @@ export default function ExamsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section className="mb-8 bg-white rounded-2xl border border-gray-100 p-5">
           <h2 className="text-lg font-bold text-gray-900 mb-1">MBA & PGDM entrance exam guides</h2>
-          <p className="text-sm text-gray-600 mb-4">Dates, eligibility, pattern, syllabus, score-vs-percentile and verified accepting colleges for each exam — with official sources.</p>
+          <p className="text-sm text-gray-600 mb-4">Dates, eligibility, pattern, syllabus, score-vs-percentile and verified accepting colleges for each exam, with official sources.</p>
           <div className="flex flex-wrap gap-2">
             {mbaExams.map((e) => (
               <Link key={e.slug} href={`/exams/${e.slug}`} className="px-3 py-1.5 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-600">

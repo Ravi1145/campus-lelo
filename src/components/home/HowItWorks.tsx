@@ -5,7 +5,7 @@ import Reveal from "./Reveal"
 const STEPS = [
   { icon: Target, title: "Tell us your goal", desc: "Share your stream, exam score and budget. It takes under a minute." },
   { icon: ListChecks, title: "Get a shortlist", desc: "See colleges that match your profile, with fees, cut-offs and exams side by side." },
-  { icon: Headphones, title: "Apply with free counselling", desc: "A counsellor helps with forms, deadlines and choices — at no cost to you." },
+  { icon: Headphones, title: "Apply with free counselling", desc: "A counsellor can help with forms and deadlines. The first call costs nothing." },
 ]
 
 export default function HowItWorks() {
@@ -14,7 +14,7 @@ export default function HowItWorks() {
       <Reveal className="mx-auto max-w-6xl">
         <div className="reveal-item text-center" style={{ "--i": 0 } as React.CSSProperties}>
           <p className="text-xs font-bold uppercase tracking-wider text-orange-600">How it works</p>
-          <h2 id="how-heading" className="mt-2 text-3xl font-extrabold text-[#012858] sm:text-4xl">From confusion to admission in 3 steps</h2>
+          <h2 id="how-heading" className="mt-2 text-3xl font-extrabold text-[#012858] sm:text-4xl">How CampusLelo works</h2>
         </div>
 
         <ol className="relative mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">

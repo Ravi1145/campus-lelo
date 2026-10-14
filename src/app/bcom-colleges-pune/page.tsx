@@ -7,7 +7,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
   title: "Best BCom Colleges in Pune 2026 | Fees, Admission & Placements",
-  description: "Top BCom colleges in Pune 2026 — Fergusson College, SP College, Garware College. Fees ₹10,000–₹1.5L/yr, NAAC grades, placements & SPPU affiliation. Admission via CUET/merit.",
+  description: "Top BCom colleges in Pune 2026. Fergusson College, SP College, Garware College. Fees ₹10,000–₹1.5L/yr, NAAC grades, placements & SPPU affiliation. Admission via CUET/merit.",
   path: "/bcom-colleges-pune",
   keywords: [
     "bcom colleges pune 2026", "best bcom college in pune", "bcom admission pune",
@@ -20,7 +20,7 @@ export const metadata: Metadata = genMeta({
 const colleges = [
   { rank: 1, name: "Fergusson College", slug: "fergusson-college-pune", naac: "A+", type: "Government Aided", fees: "₹15K–₹40K/yr", highlight: "Most Prestigious | Est. 1885" },
   { rank: 2, name: "SP College (Sir Parashurambhau)", slug: "sp-college-pune-sir-parashurambhau-college", naac: "A+", type: "Government Aided", fees: "₹12K–₹35K/yr", highlight: "Top SPPU Commerce College" },
-  { rank: 3, name: "Garware College of Commerce", slug: "garware-college-of-commerce-pune", naac: "A", type: "Government Aided", fees: "₹10K–₹28K/yr", highlight: "Best BCom — Lowest Fees" },
+  { rank: 3, name: "Garware College of Commerce", slug: "garware-college-of-commerce-pune", naac: "A", type: "Government Aided", fees: "₹10K–₹28K/yr", highlight: "Best BCom: Lowest Fees" },
   { rank: 4, name: "Symbiosis College of Arts & Commerce (SCAC)", slug: "colleges", naac: "A+", type: "Autonomous", fees: "₹60K–₹90K/yr", highlight: "Symbiosis Brand | SPPU" },
   { rank: 5, name: "Modern College of Arts, Science & Commerce", slug: "modern-college-of-arts-science-commerce-pune", naac: "A", type: "Government Aided", fees: "₹18K–₹42K/yr", highlight: "Large Intake | Strong Alumni" },
   { rank: 6, name: "Brihan Maharashtra College of Commerce (BMCC)", slug: "bmcc-brihan-maharashtra-college-of-commerce-pune", naac: "A", type: "Government Aided", fees: "₹15K–₹38K/yr", highlight: "Commerce Specialist College" },
@@ -63,7 +63,7 @@ export default function BComCollegesPune() {
             </nav>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">Best BCom Colleges in Pune 2026</h1>
             <p className="text-blue-100 text-lg max-w-3xl mb-5">
-              Complete guide to Bachelor of Commerce (BCom) colleges in Pune — Fergusson, SP College, Garware, SCAC. Fees ₹10K–₹1.5L/yr, NAAC grades, placements & SPPU admission details.
+              Complete guide to Bachelor of Commerce (BCom) colleges in Pune. Fergusson, SP College, Garware, SCAC. Fees ₹10K–₹1.5L/yr, NAAC grades, placements & SPPU admission details.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 max-w-3xl" data-speakable="true">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-1">⚡ Quick Answer</p>
@@ -97,7 +97,7 @@ export default function BComCollegesPune() {
           ))}
 
           <section className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs — BCom Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs: BCom Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map(({ question, answer }) => (
                 <details key={question} className="border border-gray-100 rounded-xl p-4">

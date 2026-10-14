@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Events 2026 | Admission Open Days, Fests & Education Expos",
-  description: "Upcoming college events in Pune 2026 — open days, admission counselling, tech fests, MBA events, entrance exam dates & education fairs. Stay updated with CampusLelo.",
+  description: "Upcoming college events in Pune 2026, open days, admission counselling, tech fests, MBA events, entrance exam dates & education fairs. Stay updated with CampusLelo.",
   path: "/events",
   keywords: [
     "pune college events 2026",
@@ -27,14 +27,14 @@ export const revalidate = 3600
 const upcomingEvents = [
   {
     id: 1,
-    title: "Symbiosis International University — Open Day 2026",
+    title: "Symbiosis International University: Open Day 2026",
     college: "Symbiosis International University",
     type: "Open Day",
     date: "2026-03-15",
     displayDate: "15 March 2026",
-    time: "10:00 AM – 4:00 PM",
+    time: "10:00 AM: 4:00 PM",
     venue: "SIU Campus, Lavale, Pune",
-    description: "Explore all Symbiosis institutes — SIBM, SCMHRD, SITM, SIOM and more. Campus tours, faculty interaction, scholarship info & direct admission counselling.",
+    description: "Explore all Symbiosis institutes. SIBM, SCMHRD, SITM, SIOM and more. Campus tours, faculty interaction, scholarship info & direct admission counselling.",
     streams: ["MBA", "Engineering", "Law", "Design", "Media"],
     registrationLink: "https://siu.edu.in",
     isFeatured: true,
@@ -47,7 +47,7 @@ const upcomingEvents = [
     type: "Admission Counselling",
     date: "2026-03-20",
     displayDate: "20 March 2026",
-    time: "9:00 AM – 5:00 PM",
+    time: "9:00 AM: 5:00 PM",
     venue: "Kothrud Campus, Pune",
     description: "Meet MIT-WPU admission counsellors, understand cutoffs, fee structure, scholarship options and hostel facilities across all B.Tech, MBA and BBA programmes.",
     streams: ["Engineering", "MBA", "BBA", "Design"],
@@ -57,14 +57,14 @@ const upcomingEvents = [
   },
   {
     id: 3,
-    title: "MHT-CET 2026 Exam — Paper 1 (PCM)",
+    title: "MHT-CET 2026 Exam: Paper 1 (PCM)",
     college: "State CET Cell Maharashtra",
     type: "Entrance Exam",
     date: "2026-04-15",
     displayDate: "April 2026",
     time: "All Day",
     venue: "Exam Centres Across Maharashtra",
-    description: "Maharashtra CET 2026 for B.Tech/B.E. admission. MHT-CET PCM paper — qualifying exam for all Maharashtra engineering colleges including COEP, VIT Pune, MIT-WPU.",
+    description: "Maharashtra CET 2026 for B.Tech/B.E. admission. MHT-CET PCM paper: qualifying exam for all Maharashtra engineering colleges including COEP, VIT Pune, MIT-WPU.",
     streams: ["Engineering", "Pharmacy"],
     registrationLink: "/exams/mht-cet",
     isFeatured: false,
@@ -77,7 +77,7 @@ const upcomingEvents = [
     type: "Education Fair",
     date: "2026-04-05",
     displayDate: "5–6 April 2026",
-    time: "10:00 AM – 6:00 PM",
+    time: "10:00 AM: 6:00 PM",
     venue: "Pune International Exhibition Centre (PIEC), Nagar Road",
     description: "Meet 80+ Pune colleges under one roof. Compare B.Tech, MBA, BBA, BCA, Law, Design programmes. Spot admissions, scholarship announcements & expert counselling.",
     streams: ["All Streams"],
@@ -87,12 +87,12 @@ const upcomingEvents = [
   },
   {
     id: 5,
-    title: "COEP Techfiesta 2026 — Annual Tech Fest",
+    title: "COEP Techfiesta 2026: Annual Tech Fest",
     college: "College of Engineering Pune (COEP)",
     type: "Tech Fest",
     date: "2026-02-28",
-    displayDate: "28 Feb – 2 Mar 2026",
-    time: "9:00 AM – 9:00 PM",
+    displayDate: "28 Feb: 2 Mar 2026",
+    time: "9:00 AM: 9:00 PM",
     venue: "COEP Campus, Shivajinagar, Pune",
     description: "Maharashtra's premier engineering college annual tech festival. Robotics, hackathons, paper presentations, cultural events and 10,000+ student participation.",
     streams: ["Engineering"],
@@ -117,12 +117,12 @@ const upcomingEvents = [
   },
   {
     id: 7,
-    title: "VIT Pune — Admission Open House 2026",
+    title: "VIT Pune: Admission Open House 2026",
     college: "Vishwakarma Institute of Technology",
     type: "Open Day",
     date: "2026-03-28",
     displayDate: "28 March 2026",
-    time: "10:00 AM – 3:00 PM",
+    time: "10:00 AM: 3:00 PM",
     venue: "VIT Campus, Bibwewadi, Pune",
     description: "VIT Pune open day for B.Tech admissions. Lab tours, placement data presentation, faculty Q&A and direct interaction with current students.",
     streams: ["Engineering"],
@@ -132,7 +132,7 @@ const upcomingEvents = [
   },
   {
     id: 8,
-    title: "SNAP 2026 — Symbiosis National Aptitude Test",
+    title: "SNAP 2026: Symbiosis National Aptitude Test",
     college: "Symbiosis International University",
     type: "Entrance Exam",
     date: "2026-12-15",
@@ -160,7 +160,7 @@ const faqs = [
   { question: "Which are the biggest college events in Pune in 2026?", answer: "Major Pune college events in 2026 include: Symbiosis Open Day (March), Pune Education Fair (April), COEP Techfiesta (Feb–March), MIT-WPU Counselling Day (March), and TechIgnite at VIT Pune. These events are ideal for meeting college representatives directly." },
   { question: "How can I register for Pune college open days?", answer: "Most Pune college open days require prior registration on the college website. You can also WhatsApp CampusLelo at +91 77538 31118 for direct registration assistance and reminders before each event." },
   { question: "What is the Pune Education Fair and when does it happen?", answer: "The Pune Education Fair is an annual event where 80+ colleges from Pune set up stalls for student interaction. It typically happens in March–April at Pune International Exhibition Centre (Nagar Road). Students can compare colleges, get spot admission info and collect brochures." },
-  { question: "Are there MBA-specific events in Pune in 2026?", answer: "Yes — SNAP 2026 (December), CAT 2026 (November), MAH-MBA-CET 2026 (March), Symbiosis Open Day (March) and MIT-SOM counselling events are key MBA events. SIBM and SCMHRD also conduct campus visits for shortlisted candidates after SNAP scores." },
+  { question: "Are there MBA-specific events in Pune in 2026?", answer: "Yes: SNAP 2026 (December), CAT 2026 (November), MAH-MBA-CET 2026 (March), Symbiosis Open Day (March) and MIT-SOM counselling events are key MBA events. SIBM and SCMHRD also conduct campus visits for shortlisted candidates after SNAP scores." },
 ]
 
 export default function EventsPage() {
@@ -191,7 +191,7 @@ export default function EventsPage() {
                 Pune College Events 2026
               </h1>
               <p className="text-base text-gray-500 mb-6">
-                Open days, admission fairs, entrance exam dates, tech fests and counselling events — everything happening at top Pune colleges in 2026.
+                Open days, admission fairs, entrance exam dates, tech fests and counselling events, everything happening at top Pune colleges in 2026.
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Open Day", "Admission Counselling", "Education Fair", "Entrance Exam", "Tech Fest"].map(tag => (
@@ -207,7 +207,7 @@ export default function EventsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3 text-white">
               <Bell className="w-5 h-5 text-orange-400 flex-shrink-0" />
-              <p className="text-sm font-medium">Get WhatsApp reminders before every Pune college event — free</p>
+              <p className="text-sm font-medium">Get WhatsApp reminders before every Pune college event, free</p>
             </div>
             <a href="https://wa.me/917753831118?text=Hi!%20Please%20send%20me%20Pune%20college%20event%20reminders%20for%202026."
               target="_blank" rel="noopener noreferrer"
@@ -293,7 +293,7 @@ export default function EventsPage() {
               <div className="rounded-2xl p-5" style={{ background: "#011B40" }}>
                 <GraduationCap className="w-8 h-8 mb-3" style={{ color: "#E0170F" }} />
                 <h3 className="font-bold text-white mb-2">Need Admission Guidance?</h3>
-                <p className="text-sm text-gray-300 mb-4">Our counsellors help you shortlist colleges, prepare for open days and meet admission deadlines — free.</p>
+                <p className="text-sm text-gray-300 mb-4">Our counsellors help you shortlist colleges, prepare for open days and meet admission deadlines, free.</p>
                 <Link href="/counselling"
                   className="block text-center py-2.5 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90"
                   style={{ background: "#E0170F" }}>

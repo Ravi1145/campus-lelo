@@ -71,7 +71,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
       <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-emerald-200" role="status">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600"><Check className="h-6 w-6" strokeWidth={3} aria-hidden="true" /></span>
         <div>
-          <p className="font-extrabold text-[#012858]">Thanks, {form.name.trim().split(" ")[0]} — we have your details.</p>
+          <p className="font-extrabold text-[#012858]">Thanks, {form.name.trim().split(" ")[0]}: we have your details.</p>
           <p className="text-sm text-gray-600">A counsellor will contact you on WhatsApp or call with options that fit your budget{form.location && form.location !== "Open to any" ? ` in ${form.location}` : ""}.</p>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
       <div className="grid gap-5 p-5 pl-7 lg:grid-cols-[0.75fr_1.6fr] lg:items-center lg:gap-8 lg:p-6 lg:pl-8">
         <div>
           <p className="text-lg font-extrabold leading-snug text-[#012858]">Get a shortlist that fits your budget</p>
-          <p className="mt-1 text-sm text-gray-600">Tell us what you can spend and where you want to study. A counsellor sends matching colleges — free.</p>
+          <p className="mt-1 text-sm text-gray-600">Tell us what you can spend and where you want to study. A counsellor sends matching colleges, free.</p>
         </div>
 
         <form onSubmit={handleSubmit} noValidate className="relative">

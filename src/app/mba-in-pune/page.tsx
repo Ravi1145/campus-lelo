@@ -7,7 +7,7 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
   title: "MBA in Pune 2026 | Best Colleges, Fees, Admission & Scope",
-  description: "Complete guide to MBA in Pune 2026 — 120+ colleges, fees ₹1.25L–₹8.5L/yr, CAT/SNAP/MAH-CET cutoffs, placements ₹7. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
+  description: "Complete guide to MBA in Pune 2026 to 120+ colleges, fees ₹1.25L–₹8.5L/yr, CAT/SNAP/MAH-CET cutoffs, placements ₹7. SIBM, SCMHRD, PUMBA, MIT-SOM compared.",
   path: "/mba-in-pune",
   keywords: [
     "mba in pune",
@@ -36,15 +36,15 @@ export const metadata: Metadata = genMeta({
 export const revalidate = 300
 
 const TOP_COLLEGES = [
-  { rank: 1,  name: "SIBM Pune – Symbiosis Institute of Business Management", nirf: null,  naac: "A+", fees: "₹8.5L/2yr", avgPkg: "Not published", exam: "SNAP 60+ %ile",          slug: "sibm-symbiosis-institute-business-management-pune",  highlight: "India's #1 private MBA for Pune"        },
-  { rank: 2,  name: "SCMHRD – Symbiosis Centre for Management & HRD",         nirf: null,  naac: "A+", fees: "₹8.2L/2yr", avgPkg: "Not published", exam: "SNAP 55+ %ile",          slug: "scmhrd-symbiosis-centre-management-hrd",           highlight: "Best for HR & Operations"                },
-  { rank: 3,  name: "PUMBA – Pune University MBA (Government)",                nirf: null,naac: "A+", fees: "₹1.25L/yr", avgPkg: "Not published", exam: "MAH-CET 80+ %ile",       slug: "pumba-pune-university-mba",                        highlight: "Best value MBA in Pune"                  },
-  { rank: 4,  name: "SCIT – Symbiosis Centre for Information Technology",      nirf: null,naac: "A+", fees: "₹7L/2yr",  avgPkg: "Not published", exam: "SNAP 50+ %ile",          slug: "symbiosis-centre-information-technology-pune",     highlight: "Best MBA+IT combo"                       },
+  { rank: 1,  name: "SIBM Pune: Symbiosis Institute of Business Management", nirf: null,  naac: "A+", fees: "₹8.5L/2yr", avgPkg: "Not published", exam: "SNAP 60+ %ile",          slug: "sibm-symbiosis-institute-business-management-pune",  highlight: "India's #1 private MBA for Pune"        },
+  { rank: 2,  name: "SCMHRD: Symbiosis Centre for Management & HRD",         nirf: null,  naac: "A+", fees: "₹8.2L/2yr", avgPkg: "Not published", exam: "SNAP 55+ %ile",          slug: "scmhrd-symbiosis-centre-management-hrd",           highlight: "Best for HR & Operations"                },
+  { rank: 3,  name: "PUMBA: Pune University MBA (Government)",                nirf: null,naac: "A+", fees: "₹1.25L/yr", avgPkg: "Not published", exam: "MAH-CET 80+ %ile",       slug: "pumba-pune-university-mba",                        highlight: "Best value MBA in Pune"                  },
+  { rank: 4,  name: "SCIT: Symbiosis Centre for Information Technology",      nirf: null,naac: "A+", fees: "₹7L/2yr",  avgPkg: "Not published", exam: "SNAP 50+ %ile",          slug: "symbiosis-centre-information-technology-pune",     highlight: "Best MBA+IT combo"                       },
   { rank: 5,  name: "MIT School of Management (MIT-SOM)",                      nirf: null,naac: "A+", fees: "₹5.5L/2yr", avgPkg: "Not published", exam: "CAT / MAT / CMAT",       slug: "mit-school-of-management-pune",                    highlight: "Best ROI after PUMBA"                    },
-  { rank: 6,  name: "FLAME University – School of Business",                   nirf: null,naac: "A+", fees: "₹12L/2yr", avgPkg: "Not published", exam: "CAT 75+ %ile / GMAT",    slug: "flame-university-pune",                            highlight: "Liberal arts + MBA"                      },
-  { rank: 7,  name: "BIMM – Balaji Institute of Modern Management",            nirf: null,naac: "A",  fees: "₹5L/2yr",  avgPkg: "Not published", exam: "CAT / MAT / CMAT",      slug: "balaji-institute-of-modern-management-pune",       highlight: "Best budget private MBA"                 },
+  { rank: 6,  name: "FLAME University: School of Business",                   nirf: null,naac: "A+", fees: "₹12L/2yr", avgPkg: "Not published", exam: "CAT 75+ %ile / GMAT",    slug: "flame-university-pune",                            highlight: "Liberal arts + MBA"                      },
+  { rank: 7,  name: "BIMM: Balaji Institute of Modern Management",            nirf: null,naac: "A",  fees: "₹5L/2yr",  avgPkg: "Not published", exam: "CAT / MAT / CMAT",      slug: "balaji-institute-of-modern-management-pune",       highlight: "Best budget private MBA"                 },
   { rank: 8,  name: "Indira Institute of Management Pune (IIMP)",              nirf: null,naac: "A",  fees: "₹4.2L/2yr", avgPkg: "Not published", exam: "CAT / MAT / CMAT",     slug: "indira-institute-of-management-pune",              highlight: "Highest ROI in Pune"                     },
-  { rank: 9,  name: "COEP – College of Engineering Pune (MBA program)",        nirf: null,  naac: "A+", fees: "₹1.8L/yr", avgPkg: "Not published", exam: "MAH-CET / CAT",          slug: "coep-college-of-engineering-pune",                  highlight: "Government"                    },
+  { rank: 9,  name: "COEP: College of Engineering Pune (MBA program)",        nirf: null,  naac: "A+", fees: "₹1.8L/yr", avgPkg: "Not published", exam: "MAH-CET / CAT",          slug: "coep-college-of-engineering-pune",                  highlight: "Government"                    },
   { rank: 10, name: "Suryadatta Institute of Management",                      nirf: null,naac: "B+", fees: "₹2.8L/2yr", avgPkg: "Not published", exam: "MAT / CMAT",           slug: "suryadatta-institute-management-pune",              highlight: "Most affordable option"                  },
 ]
 
@@ -56,7 +56,7 @@ const SPECIALIZATIONS = [
   { name: "MBA in Operations",    href: "/mba-colleges-in-pune-for-operations",    desc: "Supply chain, manufacturing, logistics" },
   { name: "MBA in Analytics",     href: "/mba-colleges-in-pune-for-business-analytics", desc: "Data science, business intelligence, fintech" },
   { name: "Executive MBA",        href: "/mba-colleges-in-pune-executive",         desc: "For working professionals with 5+ years experience" },
-  { name: "PGDM in Pune",        href: "/pgdm-in-pune",                           desc: "AICTE-approved diploma — how it differs from an MBA" },
+  { name: "PGDM in Pune",        href: "/pgdm-in-pune",                           desc: "AICTE-approved diploma: how it differs from an MBA" },
 ]
 
 const EXAMS = [
@@ -71,15 +71,15 @@ const EXAMS = [
 const FAQS = [
   {
     question: "How to get MBA admission in Pune 2026?",
-    answer: "To get MBA admission in Pune 2026: (1) Appear in CAT (Nov 2026), SNAP (Dec 2026), or MAH-CET (Mar 2026) — most Pune colleges accept any of these. (2) Apply to colleges — SIBM/SCMHRD via Symbiosis portal; PUMBA via DTE Maharashtra; private colleges directly. (3) Attend GD-PI rounds (Feb–Apr 2026). (4) Accept offer letter and pay fees. Government college PUMBA has the best value (₹1.25L/yr).",
+    answer: "To get MBA admission in Pune 2026: (1) Appear in CAT (Nov 2026), SNAP (Dec 2026), or MAH-CET (Mar 2026), most Pune colleges accept any of these. (2) Apply to colleges, SIBM/SCMHRD via Symbiosis portal; PUMBA via DTE Maharashtra; private colleges directly. (3) Attend GD-PI rounds (Feb–Apr 2026). (4) Accept offer letter and pay fees. Government college PUMBA has the best value (₹1.25L/yr).",
   },
   {
     question: "What is the eligibility for MBA in Pune?",
-    answer: "Eligibility for MBA in Pune: Minimum 50% aggregate in any graduation (45% for SC/ST/OBC-NC). No specific stream requirement — engineers, commerce, arts graduates all eligible. Valid score in CAT/SNAP/MAH-CET/CMAT/MAT/XAT. Work experience not mandatory (except Executive MBA which requires 5+ years). Final-year students can apply provisionally.",
+    answer: "Eligibility for MBA in Pune: Minimum 50% aggregate in any graduation (45% for SC/ST/OBC-NC). No specific stream requirement, engineers, commerce, arts graduates all eligible. Valid score in CAT/SNAP/MAH-CET/CMAT/MAT/XAT. Work experience not mandatory (except Executive MBA which requires 5+ years). Final-year students can apply provisionally.",
   },
   {
     question: "What is the fee for MBA in Pune 2026?",
-    answer: "MBA fees in Pune 2026: Government — PUMBA ₹1.25L/yr (best value). Autonomous private — MIT-SOM ₹5.5L total, BIMM ₹5L total, Indira ₹4.2L total. Deemed universities — SIBM Pune ₹8.5L/2yr, SCMHRD ₹8.2L/2yr, FLAME ₹12L/2yr. Fees include tuition but may exclude hostel (₹80K–1.4L/yr extra). Scholarships available at most institutes for merit students.",
+    answer: "MBA fees in Pune 2026: Government: PUMBA ₹1.25L/yr (best value). Autonomous private: MIT-SOM ₹5.5L total, BIMM ₹5L total, Indira ₹4.2L total. Deemed universities: SIBM Pune ₹8.5L/2yr, SCMHRD ₹8.2L/2yr, FLAME ₹12L/2yr. Fees include tuition but may exclude hostel (₹80K–1.4L/yr extra). Scholarships available at most institutes for merit students.",
   },
   {
     question: "What is the salary after MBA from Pune?",
@@ -87,10 +87,10 @@ const FAQS = [
   },
   {
     question: "Is MBA in Pune worth it in 2026?",
-    answer: "Yes — MBA in Pune is excellent value in 2026. Pune's 500+ IT companies, manufacturing giants (Tata, Bajaj, KPIT), and growing startup ecosystem create strong MBA demand. SIBM Pune ROI: fees ₹8.5L → (3.3x ROI in Year 1). PUMBA ROI: fees ₹2.5L total → (4x ROI). Even mid-tier colleges like MIT-SOM offer strong 2x ROI.",
+    answer: "Yes: MBA in Pune is excellent value in 2026. Pune's 500+ IT companies, manufacturing giants (Tata, Bajaj, KPIT), and growing startup ecosystem create strong MBA demand. SIBM Pune ROI: fees ₹8.5L → (3.3x ROI in Year 1). PUMBA ROI: fees ₹2.5L total → (4x ROI). Even mid-tier colleges like MIT-SOM offer strong 2x ROI.",
   },
   {
-    question: "Which is better — MBA from SIBM Pune or IIM Indore?",
+    question: "Which is better: MBA from SIBM Pune or IIM Indore?",
     answer: "IIM Indore has stronger national brand and higher average placement (₹35+ LPA). SIBM Pune offers comparable fees (₹8.5L vs ₹22L at IIM Indore) with near-equal placement in Pune-Mumbai corridor. For Pune/Mumbai jobs: SIBM Pune is often preferred by local recruiters. For national/international placements: IIM Indore is better. Budget and target geography should decide.",
   },
   {
@@ -99,7 +99,7 @@ const FAQS = [
   },
   {
     question: "Can I do MBA in Pune without CAT?",
-    answer: "Yes. You can do MBA in Pune without CAT by using: (1) MAH-CET — accepted by PUMBA and 80+ Pune colleges, (2) SNAP — for all Symbiosis colleges, (3) CMAT — accepted by MIT-SOM, BIMM, Indira Institute, (4) MAT — accepted by most private colleges, (5) XAT — some colleges accept. Management quota direct admission is also available at private colleges without entrance exam.",
+    answer: "Yes. You can do MBA in Pune without CAT by using: (1) MAH-CET: accepted by PUMBA and 80+ Pune colleges, (2) SNAP, for all Symbiosis colleges, (3) CMAT, accepted by MIT-SOM, BIMM, Indira Institute, (4) MAT, accepted by most private colleges, (5) XAT, some colleges accept. Management quota direct admission is also available at private colleges without entrance exam.",
   },
 ]
 
@@ -134,7 +134,7 @@ export default function MBAInPune() {
               MBA in Pune 2026
             </h1>
             <p className="mb-6 text-base" style={{ color: "rgba(255,255,255,0.68)", lineHeight: "1.65", maxWidth: "640px" }}>
-              120+ MBA colleges in Pune — fees ₹1.25L–₹8.5L/yr, placements ₹7, NAAC A+ institutes.
+              120+ MBA colleges in Pune, fees ₹1.25L–₹8.5L/yr, placements ₹7, NAAC A+ institutes.
               Compare SIBM, SCMHRD, PUMBA, MIT-SOM and find your best-fit MBA program.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -238,7 +238,7 @@ export default function MBAInPune() {
           {/* ── Entrance exams ── */}
           <section>
             <h2 className="font-bold text-2xl mb-2" style={{ color: "#0F172A" }}>Entrance Exams for MBA in Pune 2026</h2>
-            <p className="text-sm mb-6" style={{ color: "#475569" }}>Most Pune colleges accept multiple exams — apply to the one that fits your score.</p>
+            <p className="text-sm mb-6" style={{ color: "#475569" }}>Most Pune colleges accept multiple exams, apply to the one that fits your score.</p>
             <div className="rounded-2xl border overflow-hidden" style={{ borderColor: "#E5E9F0" }}>
               <table className="w-full text-sm bg-white">
                 <thead>
@@ -320,7 +320,7 @@ export default function MBAInPune() {
 
           {/* ── FAQ ── */}
           <section>
-            <h2 className="font-bold text-2xl mb-6" style={{ color: "#0F172A" }}>Frequently Asked Questions — MBA in Pune</h2>
+            <h2 className="font-bold text-2xl mb-6" style={{ color: "#0F172A" }}>Frequently Asked Questions: MBA in Pune</h2>
             <div className="space-y-4">
               {FAQS.map(({ question, answer }) => (
                 <div key={question} className="bg-white rounded-xl p-5 border" style={{ borderColor: "#E5E9F0" }}>

@@ -95,7 +95,7 @@ export default function MbbsCollegesPunePage() {
       relatedGuides={[
         { label: "All Medical Colleges in Pune 2026", href: "/medical-colleges-pune", icon: "🏥" },
         { label: "NEET Colleges & Category Cutoffs", href: "/neet-colleges-pune", icon: "📝" },
-        { label: "Top 10 Medical Colleges — Ranked", href: "/top-10-medical-colleges-in-pune", icon: "🏆" },
+        { label: "Top 10 Medical Colleges. Ranked", href: "/top-10-medical-colleges-in-pune", icon: "🏆" },
         { label: "NAAC A+ Colleges in Pune", href: "/naac-a-plus-colleges-pune", icon: "⭐" },
         { label: "Pharmacy Colleges in Pune", href: "/pharmacy-colleges-pune", icon: "💊" },
         { label: "Free Medical Counselling", href: "/counselling", icon: "📞" },

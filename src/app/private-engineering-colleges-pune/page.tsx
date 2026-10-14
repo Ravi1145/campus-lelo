@@ -103,7 +103,7 @@ const faqs = [
   {
     question: "What is the difference between private autonomous, deemed, and government engineering colleges in Pune?",
     answer:
-      "Government colleges (like COEP) are funded and run by the state government with lowest fees (₹80K–₹1.8L/yr). Autonomous private colleges (PICT, VIT Pune, Cummins) are affiliated to SPPU but set their own curriculum — fees ₹1.2L–₹2.2L/yr. Deemed universities (SIT Pune, MIT-WPU) are self-governing with UGC approval — fees ₹2L–₹4.8L/yr and own entrance exams.",
+      "Government colleges (like COEP) are funded and run by the state government with lowest fees (₹80K–₹1.8L/yr). Autonomous private colleges (PICT, VIT Pune, Cummins) are affiliated to SPPU but set their own curriculum, fees ₹1.2L–₹2.2L/yr. Deemed universities (SIT Pune, MIT-WPU) are self-governing with UGC approval, fees ₹2L–₹4.8L/yr and own entrance exams.",
   },
   {
     question: "What is the admission process for private engineering colleges in Pune?",
@@ -123,7 +123,7 @@ const faqs = [
   {
     question: "What is the fee range for private engineering colleges in Pune?",
     answer:
-      "Private engineering college fees in Pune range from ₹1.1L/year (AISSMS — most affordable) to ₹4.8L/year (SIT Pune — deemed university). Autonomous private colleges charge ₹1.2L–₹2.2L/year. Deemed universities charge ₹2L–₹4.8L/year. SC/ST students are eligible for Maharashtra government scholarships and fee concessions.",
+      "Private engineering college fees in Pune range from ₹1.1L/year (AISSMS, most affordable) to ₹4.8L/year (SIT Pune, deemed university). Autonomous private colleges charge ₹1.2L–₹2.2L/year. Deemed universities charge ₹2L–₹4.8L/year. SC/ST students are eligible for Maharashtra government scholarships and fee concessions.",
   },
 ]
 
@@ -157,7 +157,7 @@ export default function PrivateEngineeringCollegesPunePage() {
               Private Engineering Colleges in Pune 2026
             </h1>
             <p className="text-blue-200 text-base max-w-3xl mb-6">
-              Complete guide to top private engineering colleges in Pune — autonomous, private aided, and deemed universities. Compare fees (₹1.1L–₹4.8L/yr), NAAC grades, placements, and admission process for 2026.
+              Complete guide to top private engineering colleges in Pune, autonomous, private aided, and deemed universities. Compare fees (₹1.1L–₹4.8L/yr), NAAC grades, placements, and admission process for 2026.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-5 max-w-3xl">
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
@@ -240,7 +240,7 @@ export default function PrivateEngineeringCollegesPunePage() {
           {/* Types of Colleges */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
-              Government vs Autonomous vs Deemed vs Private — What&apos;s the Difference?
+              Government vs Autonomous vs Deemed vs Private. What&apos;s the Difference?
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
@@ -349,7 +349,7 @@ export default function PrivateEngineeringCollegesPunePage() {
 
           {/* FAQ */}
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions — Private Engineering Colleges in Pune</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Frequently Asked Questions: Private Engineering Colleges in Pune</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5">
@@ -366,8 +366,8 @@ export default function PrivateEngineeringCollegesPunePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
               { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },

@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = genMeta({
   title: "Best Colleges in Greater Noida 2026 | Engineering, MBA, BBA | Fees",
-  description: "Top colleges in Greater Noida 2026 — Galgotias University, Sharda University, GL Bajaj, Bennett University, Amity Noida. Engineering, MBA, BBA, Law. JEE, CAT, CMAT 2026. Fees ₹1.2L–6L/yr.",
+  description: "Top colleges in Greater Noida 2026. Galgotias University, Sharda University, GL Bajaj, Bennett University, Amity Noida. Engineering, MBA, BBA, Law. JEE, CAT, CMAT 2026. Fees ₹1.2L–6L/yr.",
   path: "/colleges-in-greater-noida",
   keywords: [
     "colleges in greater noida 2026",
@@ -42,7 +42,7 @@ const greaterNoidaColleges = [
     strength: 25000,
     rating: 3.8,
     reviews: 1840,
-    highlight: "Largest university in Greater Noida — 25,000+ students, campus spanning 52 acres",
+    highlight: "Largest university in Greater Noida, 25,000+ students, campus spanning 52 acres",
   },
   {
     name: "Sharda University",
@@ -58,7 +58,7 @@ const greaterNoidaColleges = [
     strength: 18000,
     rating: 3.9,
     reviews: 1420,
-    highlight: "Most diverse campus — MBBS, Law, Architecture + Engineering. 6,000+ international students",
+    highlight: "Most diverse campus: MBBS, Law, Architecture + Engineering. 6,000+ international students",
   },
   {
     name: "GL Bajaj Institute of Management & Research",
@@ -74,7 +74,7 @@ const greaterNoidaColleges = [
     strength: 6000,
     rating: 3.9,
     reviews: 820,
-    highlight: "Best ROI college in Greater Noida — lowest fees, NAAC A, solid TCS/Infosys placements",
+    highlight: "Best ROI college in Greater Noida, lowest fees, NAAC A, solid TCS/Infosys placements",
   },
   {
     name: "Bennett University",
@@ -90,7 +90,7 @@ const greaterNoidaColleges = [
     strength: 5000,
     rating: 4.3,
     reviews: 520,
-    highlight: "Times Group college — highest placement pkg in Greater Noida, Google/Microsoft recruit",
+    highlight: "Times Group college: highest placement pkg in Greater Noida, Google/Microsoft recruit",
   },
   {
     name: "KIET Group of Institutions, Ghaziabad",
@@ -106,7 +106,7 @@ const greaterNoidaColleges = [
     strength: 7000,
     rating: 4.0,
     reviews: 960,
-    highlight: "AKTU's best-ranked NAAC A+ college near Greater Noida — strong CSE/IT placement",
+    highlight: "AKTU's best-ranked NAAC A+ college near Greater Noida, strong CSE/IT placement",
   },
   {
     name: "Amity University Noida",
@@ -129,7 +129,7 @@ const greaterNoidaColleges = [
 const faqData = [
   {
     question: "Which is the best college in Greater Noida 2026?",
-    answer: "Bennett University is the best for placements. Sharda University (NAAC A) is best for variety — it offers MBBS, Law, Architecture plus Engineering. Galgotias University is the largest (25,000+ students) and most affordable. For engineering specifically: Bennett University (#1 CSE placements), KIET Ghaziabad (#2 for AKTU-affiliated), Galgotias (#3 for budget B.Tech). For MBA/PGDM in Greater Noida: GL Bajaj is the best value, Sharda offers international exposure.",
+    answer: "Bennett University is the best for placements. Sharda University (NAAC A) is best for variety, it offers MBBS, Law, Architecture plus Engineering. Galgotias University is the largest (25,000+ students) and most affordable. For engineering specifically: Bennett University (#1 CSE placements), KIET Ghaziabad (#2 for AKTU-affiliated), Galgotias (#3 for budget B.Tech). For MBA/PGDM in Greater Noida: GL Bajaj is the best value, Sharda offers international exposure.",
   },
   {
     question: "What courses are available in Greater Noida colleges 2026?",
@@ -141,7 +141,7 @@ const faqData = [
   },
   {
     question: "How is Greater Noida different from Noida for colleges?",
-    answer: "Greater Noida (Knowledge Park, Yamuna Expressway, TechZone) has Galgotias, Sharda, GL Bajaj, Bennett University — all private universities with large campuses. Noida (Sector 62, Sector 125) has JIIT, Amity University — generally higher-ranked with stronger placements. Greater Noida colleges are slightly more affordable with bigger campuses. Noida colleges have better metro connectivity. For top placements: Noida (JIIT, Amity) > Greater Noida. For budget + campus life: Greater Noida (Galgotias, GL Bajaj) wins.",
+    answer: "Greater Noida (Knowledge Park, Yamuna Expressway, TechZone) has Galgotias, Sharda, GL Bajaj, Bennett University, all private universities with large campuses. Noida (Sector 62, Sector 125) has JIIT, Amity University, generally higher-ranked with stronger placements. Greater Noida colleges are slightly more affordable with bigger campuses. Noida colleges have better metro connectivity. For top placements: Noida (JIIT, Amity) > Greater Noida. For budget + campus life: Greater Noida (Galgotias, GL Bajaj) wins.",
   },
 ]
 
@@ -176,7 +176,7 @@ export default function CollegesInGreaterNoidaPage() {
               Best Colleges in Greater Noida 2026
             </h1>
             <p className="text-blue-100 text-base max-w-3xl mb-6">
-              Compare top engineering, MBA &amp; management colleges in Greater Noida — Galgotias University, Sharda University,
+              Compare top engineering, MBA &amp; management colleges in Greater Noida. Galgotias University, Sharda University,
               GL Bajaj, Bennett University, KIET &amp; Amity. JEE/CAT/CMAT 2026 admission, fees &amp; placements.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
@@ -282,27 +282,27 @@ export default function CollegesInGreaterNoidaPage() {
 
               <div className="rounded-2xl p-5 text-center" style={{ background: "#FFF4F2", border: "1px solid #FFC9BE" }}>
                 <p className="font-bold text-sm mb-1" style={{ color: "#012858" }}>Not sure which Greater Noida college?</p>
-                <p className="text-xs text-gray-500 mb-3">Free counselling on WhatsApp — 2 min</p>
+                <p className="text-xs text-gray-500 mb-3">Free counselling on WhatsApp, 2 min</p>
                 <Link href="/counselling" className="block w-full py-2 rounded-xl text-sm font-bold text-white" style={{ background: "#E0170F" }}>Free Counselling</Link>
               </div>
             </div>
           </div>
 
           <section className="mt-10 bg-white rounded-2xl border border-gray-100 p-8">
-            <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>Colleges in Greater Noida 2026 — Complete Guide</h2>
+            <h2 className="text-xl font-bold mb-4" style={{ color: "#012858" }}>Colleges in Greater Noida 2026. Complete Guide</h2>
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600 leading-relaxed">
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">How to Choose a College in Greater Noida?</h3>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Greater Noida Knowledge Park — College Hub</h3>
+                <h3 className="font-semibold text-gray-800 mb-2">Greater Noida Knowledge Park. College Hub</h3>
                 <p>Greater Noida&apos;s Knowledge Park I, II, III and TechZone areas host most of its colleges. Sharda University is in Knowledge Park III, Galgotias on Yamuna Expressway, Bennett in TechZone II. KIET and GL Bajaj are slightly farther near Ghaziabad border. All are well-connected by NH-24 and the Yamuna Expressway. The Aqua Line metro (Sector 51 to Noida Knowledge Park) connects the area to Delhi metro. Hostels are available at all major universities.</p>
               </div>
             </div>
           </section>
 
           <section className="mt-10">
-            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs — Colleges in Greater Noida 2026</h2>
+            <h2 className="text-xl font-bold mb-6" style={{ color: "#012858" }}>FAQs: Colleges in Greater Noida 2026</h2>
             <div className="space-y-4">
               {faqData.map(faq => (
                 <details key={faq.question} className="bg-white rounded-2xl border border-gray-100 p-5 group">

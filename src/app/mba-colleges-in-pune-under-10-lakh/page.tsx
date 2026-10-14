@@ -30,7 +30,7 @@ export default function MBAUnder10Lakh() {
       <MBAClusterPage
         h1="MBA Colleges in Pune Under 10 Lakh Total Fees 2026"
         subtitle="Best value MBA colleges in Pune with total 2-year fees under ₹10 lakh. Good placements, NAAC accreditation, MAH-CET admission."
-        quickAnswer="MBA colleges in Pune under ₹10 lakh include PUMBA (₹2.5L), BVIMR (₹7L), and Indira MBA (₹9L). Admission via MAH-CET MBA — cutoffs range 65–95 percentile."
+        quickAnswer="MBA colleges in Pune under ₹10 lakh include PUMBA (₹2.5L), BVIMR (₹7L), and Indira MBA (₹9L). Admission via MAH-CET MBA, cutoffs range 65–95 percentile."
         stats={[
           { value: "5+", label: "Colleges Under ₹10L" },
           { value: "₹2.5L–9L", label: "Total Fees Range" },
@@ -39,7 +39,7 @@ export default function MBAUnder10Lakh() {
                 colleges={mbaColleges.filter(c => c.feesTotal <= 1000000)}
         introHeading="Why Choose MBA Under 10 Lakh in Pune?"
         introParagraphs={[
-          "Pune offers excellent MBA programs under ₹10 lakh total that provide strong returns on investment. These colleges — primarily government and SPPU-affiliated — have built decades of industry relationships and deliver consistent placements despite their affordable fee structures.",
+          "Pune offers excellent MBA programs under ₹10 lakh total that provide strong returns on investment. These colleges, primarily government and SPPU-affiliated, have built decades of industry relationships and deliver consistent placements despite their affordable fee structures.",
         ]}
         faqs={faqs}
         internalLinks={[

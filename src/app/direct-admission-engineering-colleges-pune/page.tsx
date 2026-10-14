@@ -28,7 +28,7 @@ const managementQuotaColleges = [
     regularFees: "₹1.6L–₹2.2L/yr",
     mgmtFees: "₹2.5L–₹3.5L/yr",
     eligibility: "12th PCM 50%+, no rank required",
-    note: "Autonomous — limited MQ seats",
+    note: "Autonomous: limited MQ seats",
   },
   {
     name: "MIT-WPU (MIT World Peace University)",
@@ -36,7 +36,7 @@ const managementQuotaColleges = [
     regularFees: "₹2.0L–₹3.8L/yr",
     mgmtFees: "₹3L–₹4.5L/yr",
     eligibility: "12th PCM 45%+, direct application",
-    note: "Deemed University — higher MQ %",
+    note: "Deemed University: higher MQ %",
   },
   {
     name: "SIT Pune (Symbiosis Institute of Technology)",
@@ -44,7 +44,7 @@ const managementQuotaColleges = [
     regularFees: "₹3.6L–₹4.8L/yr",
     mgmtFees: "₹5L–₹6L/yr",
     eligibility: "12th PCM 50%+, SET score optional",
-    note: "Premium deemed — fewer MQ seats",
+    note: "Premium deemed: fewer MQ seats",
   },
   {
     name: "MIT College of Engineering (MITCOE)",
@@ -52,7 +52,7 @@ const managementQuotaColleges = [
     regularFees: "₹1.4L–₹1.8L/yr",
     mgmtFees: "₹2.5L–₹3.8L/yr",
     eligibility: "12th PCM 45%+",
-    note: "Affiliated — higher MQ availability",
+    note: "Affiliated: higher MQ availability",
   },
   {
     name: "Cummins College of Engineering for Women",
@@ -60,7 +60,7 @@ const managementQuotaColleges = [
     regularFees: "₹1.3L–₹1.75L/yr",
     mgmtFees: "₹2.2L–₹3L/yr",
     eligibility: "Female candidates, 12th PCM 45%+",
-    note: "Women-only — very limited MQ seats",
+    note: "Women-only: very limited MQ seats",
   },
   {
     name: "JSPM Rajarshi Shahu College of Engineering",
@@ -194,7 +194,7 @@ export default function DirectAdmissionEngineeringPage() {
               <p className="text-green-300 text-xs font-bold uppercase tracking-wider mb-2">⚡ Quick Answer</p>
               <p className="text-white text-sm leading-relaxed">
                 <strong>Yes, direct/management quota admission is available</strong> in private and deemed engineering
-                colleges in Pune. <strong>COEP and government colleges don&apos;t offer management quota</strong> — only
+                colleges in Pune. <strong>COEP and government colleges don&apos;t offer management quota</strong>: only
                 CAP rounds. Colleges like VIT Pune, MIT-WPU, SIT Pune, JSPM, and AISSMS have 10–30% management quota
                 seats. Fees are 1.5–2.5x higher than regular seats.
               </p>
@@ -239,7 +239,7 @@ export default function DirectAdmissionEngineeringPage() {
                     "Conducted by DTE Maharashtra centrally",
                     "Based on MHT-CET or JEE Main merit rank",
                     "Covers 70–90% of available seats",
-                    "Lower fees — government regulated",
+                    "Lower fees: government regulated",
                     "Transparent, competitive process",
                     "COEP, PICT, VIT, JSPM, AISSMS all participate",
                   ].map((item, i) => (
@@ -257,7 +257,7 @@ export default function DirectAdmissionEngineeringPage() {
                     "Managed by individual college admission office",
                     "Based primarily on 12th PCM marks",
                     "Covers 10–30% of private college seats",
-                    "Higher fees — approved by FRA Maharashtra",
+                    "Higher fees: approved by FRA Maharashtra",
                     "No strict entrance rank required",
                     "Only private and deemed universities offer this",
                   ].map((item, i) => (
@@ -271,7 +271,7 @@ export default function DirectAdmissionEngineeringPage() {
             </div>
             <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4">
               <p className="text-sm text-amber-800">
-                <strong>Important:</strong> Government colleges (COEP, SCOE, PVPIT) have 0% management quota — 100% of
+                <strong>Important:</strong> Government colleges (COEP, SCOE, PVPIT) have 0% management quota, 100% of
                 their seats go through DTE CAP rounds. Management quota is only for private and deemed universities
                 approved by AICTE.
               </p>
@@ -282,7 +282,7 @@ export default function DirectAdmissionEngineeringPage() {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
               <h2 className="text-lg font-bold text-gray-900">
-                Engineering Colleges in Pune with Management Quota — 2026
+                Engineering Colleges in Pune with Management Quota, 2026
               </h2>
               <p className="text-xs text-gray-400 mt-0.5">
                 Seats, fees, and eligibility for direct admission. Data verified 2026.
@@ -357,7 +357,7 @@ export default function DirectAdmissionEngineeringPage() {
                   name: "Bharati Vidyapeeth CoE",
                   seats: "Up to 10%",
                   fees: "$3,500–$5,000/yr",
-                  note: "Deemed university — flexible",
+                  note: "Deemed university: flexible",
                 },
               ].map((c) => (
                 <div key={c.name} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -426,7 +426,7 @@ export default function DirectAdmissionEngineeringPage() {
           {/* Section 5: Fee Comparison */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-bold text-gray-900">Regular vs Management Quota Fees — Side by Side</h2>
+              <h2 className="text-lg font-bold text-gray-900">Regular vs Management Quota Fees. Side by Side</h2>
               <p className="text-xs text-gray-400 mt-0.5">Annual fee comparison at popular Pune engineering colleges</p>
             </div>
             <div className="overflow-x-auto">
@@ -470,7 +470,7 @@ export default function DirectAdmissionEngineeringPage() {
             </h2>
             <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
               <p className="text-sm text-green-800 font-semibold mb-1">
-                Yes — Management Quota is 100% Legal in India
+                Yes: Management Quota is 100% Legal in India
               </p>
               <p className="text-sm text-green-700 leading-relaxed">
                 AICTE (All India Council for Technical Education) and DTE Maharashtra regulate management quota
@@ -484,7 +484,7 @@ export default function DirectAdmissionEngineeringPage() {
                 "Fees approved and capped by FRA Maharashtra",
                 "DTE Maharashtra monitors MQ admissions via online portal",
                 "Students get same degree as CAP round students",
-                "No capitation fees allowed — any demand is illegal",
+                "No capitation fees allowed, any demand is illegal",
                 "Complaint mechanism available at DTE Maharashtra helpline",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
@@ -498,7 +498,7 @@ export default function DirectAdmissionEngineeringPage() {
           {/* FAQ Section */}
           <div className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-5">
-              Frequently Asked Questions — Direct Admission in Engineering Colleges Pune
+              Frequently Asked Questions: Direct Admission in Engineering Colleges Pune
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -516,8 +516,8 @@ export default function DirectAdmissionEngineeringPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
               { label: "Best Engineering Colleges in Pune 2026", href: "/engineering-colleges-pune", icon: "🏛️" },
-              { label: "Top 10 Engineering Colleges — Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
-              { label: "Placement Stats — Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
+              { label: "Top 10 Engineering Colleges. Ranked", href: "/top-10-engineering-colleges-in-pune", icon: "🏆" },
+              { label: "Placement Stats: Avg & Highest LPA", href: "/engineering-colleges-pune", icon: "💼" },
               { label: "Low Fees Engineering Colleges", href: "/low-fees-engineering-colleges-pune", icon: "💰" },
               { label: "Engineering Scholarships in Pune", href: "/engineering-colleges-pune-scholarship", icon: "🎓" },
               { label: "MHT-CET Colleges & Cutoffs 2026", href: "/mht-cet-colleges-pune", icon: "📝" },

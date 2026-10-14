@@ -39,7 +39,7 @@ export default function CampusExperienceSection() {
 
             <p className="text-gray-600 leading-relaxed mb-6 max-w-lg">
               Campus walkthroughs, honest placement talk and admission guidance from
-              counsellors who do this every day — see what Pune actually looks like
+              counsellors who do this every day, see what Pune actually looks like
               before you pick a college.
             </p>
 

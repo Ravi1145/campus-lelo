@@ -48,17 +48,17 @@ export default function BscCollegesPune() {
           { value: "3 Years", label: "Duration" },
           { value: "Merit-Based", label: "Admission" },
         ]}
-        introHeading="BSc Colleges in Pune — Complete 2025 Guide"
+        introHeading="BSc Colleges in Pune. Complete 2025 Guide"
         introParagraphs={[
           "Pune has over 80 BSc colleges spanning government-aided, autonomous, and private institutions. Bachelor of Science (BSc) programs in Pune cover traditional science streams (Physics, Chemistry, Mathematics, Biology) and new-age specializations like Data Science, Computer Science, Biotechnology, Forensic Science, and Animation.",
-          "Government-aided BSc colleges like Fergusson College, SP College, and Garware College offer exceptional education at ₹10,000–₹30,000/year — making Pune the most affordable city for science education in Maharashtra. These colleges have 100+ year legacies and alumni networks spanning IIT, IISc, TIFR, and Fortune 500 companies.",
+          "Government-aided BSc colleges like Fergusson College, SP College, and Garware College offer exceptional education at ₹10,000–₹30,000/year, making Pune the most affordable city for science education in Maharashtra. These colleges have 100+ year legacies and alumni networks spanning IIT, IISc, TIFR, and Fortune 500 companies.",
           "Pune's pharma industry (20,000+ pharma companies in Maharashtra), biotech sector, and IT companies create diverse career paths for BSc graduates. BSc Computer Science and BSc Data Science graduates from Pune's autonomous colleges are increasingly competing with BCA/B.Tech graduates for IT jobs at ₹4.",
         ]}
         colleges={colleges}
         whyHeading="Why BSc from Pune?"
         whyPoints={[
           { title: "Pharma Capital of India", description: "Pune-Mumbai corridor has 200+ pharma and biotech companies. BSc Biotechnology, Microbiology, and Chemistry graduates are in high demand for research and quality control roles." },
-          { title: "Affordable Excellence", description: "Fergusson College BSc costs ₹12,000/year — one of India's best science colleges. This makes Pune ideal for BSc students who want quality education without debt." },
+          { title: "Affordable Excellence", description: "Fergusson College BSc costs ₹12,000/year, one of India's best science colleges. This makes Pune ideal for BSc students who want quality education without debt." },
           { title: "Research Opportunities", description: "IISER Pune, CSIR-NCL, IUCAA, BARC, and SPPU research centres provide unique research exposure for BSc students through summer projects and collaborations." },
           { title: "Gateway to MSc / MCA / MBA", description: "BSc from Pune opens pathways to MSc (science research), MCA (IT career), MBA (management), B.Ed (teaching), and government competitive exams like MPSC, UPSC, GATE." },
         ]}
@@ -71,7 +71,7 @@ export default function BscCollegesPune() {
         ]}
         faqs={faqs}
         ctaHeading="Find the Right BSc College in Pune"
-        ctaSubtext="Free personalised guidance — compare BSc colleges by fees, stream, and placement in 15 minutes."
+        ctaSubtext="Free personalised guidance: compare BSc colleges by fees, stream, and placement in 15 minutes."
         relatedGuides={[
           { label: "BSc CS vs BCA vs B.Tech Pune", href: "/bca-colleges-pune", icon: "📊" },
           { label: "Science Colleges in Pune", href: "/science-colleges-pune", icon: "🔬" },
