@@ -101,9 +101,10 @@ export const publishedCutoffs: PublishedCutoff[] = [
       { category: "DAP", value: "30 / 25 / 25 / 42" },
     ],
     howItWorks: "IIM Kashipur says these were the minimum percentiles used to select eligible candidates for the personal interview. Meeting them is the first filter; final selection adds the interview and the institute's other criteria.",
-    caveats: "These are the figures IIM Kashipur publishes for CAT 2024, not for the 2026–28 batch. The institute says the 2026–28 cut-offs will be updated in line with its admission guidelines, so check the page before relying on them.",
+    caveats: "These are the figures IIM Kashipur publishes for CAT 2024, not for the 2026–28 batch. The institute says the 2026–28 cut-offs will be updated in line with its admission guidelines, so check the page before relying on them. For 2026–28, IIM Kashipur ran its interview shortlisting through the Joint Admission Process (JAP 2026) with IIM Raipur, IIM Ranchi and IIM Tiruchirappalli, and the JAP policy says the category cut-off percentiles would be published on the JAP portal.",
     sources: [
       { label: "IIM Kashipur: MBA admission (minimum CAT-2024 percentiles)", url: "https://www.iimkashipur.ac.in/academics/mba/mba-admission", type: "official", accessed: "2026-10-09" },
+      { label: "IIM Kashipur: Joint Admission Process 2026 policy (PDF)", url: "https://www.iimkashipur.ac.in/admin/pdf/176666233762.pdf", type: "official", accessed: "2026-10-15" },
     ],
   },
 ]

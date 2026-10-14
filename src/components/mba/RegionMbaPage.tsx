@@ -63,6 +63,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
   // ── FAQs (all generated from the same records) ─────────────────────────────
   const faqs = [
     { question: def.question, answer },
+    ...(def.extraFaqs ?? []),
     {
       question: `Which exams are accepted for MBA and PGDM in ${placeIn}?`,
       answer: programmes.length ? `Among the programmes we verified: ${programmes.map((p) => `${short(p)} ${p.examsAccepted.length ? `accepts ${list(p.examsAccepted.map(examName))}` : "uses the exams listed on its admission page"}`).join("; ")}.` : "We have not verified programmes for this selection yet.",

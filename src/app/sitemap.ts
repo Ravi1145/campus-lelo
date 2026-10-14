@@ -224,6 +224,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/press`,                                              lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-cutoff-uttarakhand`,                         lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/uptac-mba-counselling`,                       lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mba-cutoff-uttar-pradesh`,                       lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mba-cutoff-mumbai`,                              lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mba-cutoff-delhi-ncr`,                                 lastModified: "2026-10-05", changeFrequency: "weekly",  priority: 0.9 },

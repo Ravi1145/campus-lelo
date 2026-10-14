@@ -28,6 +28,8 @@ export interface RegionPageDef {
   cutoffPage?: string
   /** sibling pages shown in "More MBA pages" */
   related: string[]
+  /** extra questions for this page, appended to the generated FAQs (answers must be sourced) */
+  extraFaqs?: { question: string; answer: string }[]
 }
 
 const NCR: City[] = ["Delhi", "Gurugram", "Ghaziabad", "Noida", "Greater Noida"]
@@ -57,7 +59,7 @@ export const regionPages: RegionPageDef[] = [
     question: "Which MBA and PGDM colleges in Delhi NCR have we verified, and which exams do they accept?",
     keywords: ["mba colleges in delhi ncr", "best mba colleges in delhi ncr", "pgdm colleges in delhi ncr", "mba colleges in gurgaon", "mba colleges in ghaziabad", "mba in ncr", "bml munjal university mba", "mdi gurgaon pgdm"],
     leadCity: "Delhi NCR",
-    related: ["/mba-colleges-in-delhi", "/pgdm-colleges-in-delhi-ncr", "/mba-colleges-in-greater-noida", "/mba-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-cutoff-delhi-ncr"],
+    related: ["/mba-colleges-in-delhi", "/mba-colleges-in-gurugram", "/mba-colleges-in-ghaziabad", "/pgdm-colleges-in-delhi-ncr", "/mba-colleges-in-greater-noida", "/mba-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-cutoff-delhi-ncr"],
   },
   {
     path: "/pgdm-colleges-in-delhi-ncr",
@@ -127,6 +129,12 @@ export const regionPages: RegionPageDef[] = [
     leadCity: "Dehradun",
     cutoffPage: "/mba-cutoff-uttarakhand",
     related: ["/mba-colleges-in-uttarakhand", "/mba-cutoff-uttarakhand", "/mba-colleges-in-delhi-ncr", "/mba-counselling", "/mba-vs-pgdm"],
+    extraFaqs: [
+      {
+        question: "Is CAT mandatory for an MBA in Dehradun?",
+        answer: "Not for the two programmes we verified. Graphic Era's MBA page lists CAT, MAT, XAT, CMAT and GMAT as well as its own GEU Entrance Test, and UPES lists its own UPESMET alongside national-level exams. Both then hold a personal interview. IIM Kashipur, which is in Kashipur and not Dehradun, does require CAT. Confirm the current cycle on each college's own page.",
+      },
+    ],
   },
   {
     path: "/mba-colleges-in-uttarakhand",
@@ -154,7 +162,7 @@ export const regionPages: RegionPageDef[] = [
     keywords: ["mba colleges in lucknow", "best mba colleges in lucknow", "iim lucknow mba", "mba admission lucknow", "pgdm colleges in lucknow", "mba in lucknow"],
     leadCity: "Lucknow",
     cutoffPage: "/mba-cutoff-uttar-pradesh",
-    related: ["/mba-colleges-in-uttar-pradesh", "/mba-cutoff-uttar-pradesh", "/blog/mba-admission-in-uttar-pradesh", "/mba-counselling", "/exams/cat"],
+    related: ["/mba-colleges-in-uttar-pradesh", "/uptac-mba-counselling", "/mba-cutoff-uttar-pradesh", "/blog/mba-admission-in-uttar-pradesh", "/mba-counselling", "/exams/cat"],
   },
   {
     path: "/mba-colleges-in-uttar-pradesh",
@@ -168,7 +176,34 @@ export const regionPages: RegionPageDef[] = [
     keywords: ["mba colleges in uttar pradesh", "best mba colleges in up", "mba colleges in up", "mba admission in up", "pgdm colleges in uttar pradesh", "aktu mba colleges"],
     leadCity: "Delhi NCR",
     cutoffPage: "/mba-cutoff-uttar-pradesh",
-    related: ["/mba-colleges-in-lucknow", "/mba-colleges-noida", "/mba-colleges-in-greater-noida", "/mba-cutoff-uttar-pradesh", "/blog/mba-admission-in-uttar-pradesh", "/mba-colleges-in-delhi-ncr"],
+    related: ["/mba-colleges-in-lucknow", "/uptac-mba-counselling", "/mba-colleges-noida", "/mba-colleges-in-greater-noida", "/mba-cutoff-uttar-pradesh", "/blog/mba-admission-in-uttar-pradesh", "/mba-colleges-in-delhi-ncr"],
+  },
+  {
+    path: "/mba-colleges-in-gurugram",
+    title: "MBA Colleges in Gurugram (Gurgaon): Exams Accepted",
+    description: "MBA and PGDM in Gurugram: MDI Gurgaon and BML Munjal University, the exams each accepts, how selection works and how to apply. Checked against official pages.",
+    h1: "MBA Colleges in Gurugram (Gurgaon) 2027",
+    place: "Gurugram",
+    cities: ["Gurugram"],
+    scope: "all",
+    question: "Which MBA and PGDM colleges in Gurugram have we verified, and which exams do they accept?",
+    keywords: ["mba colleges in gurgaon", "mba colleges in gurugram", "pgdm colleges in gurgaon", "mdi gurgaon pgdm", "bml munjal university mba", "mba in gurgaon"],
+    leadCity: "Delhi NCR",
+    related: ["/mba-colleges-in-delhi-ncr", "/mba-colleges-in-delhi", "/mba-colleges-in-ghaziabad", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-cutoff-delhi-ncr", "/mba-counselling"],
+  },
+  {
+    path: "/mba-colleges-in-ghaziabad",
+    title: "MBA Colleges in Ghaziabad: IMT and Exams Accepted",
+    description: "PGDM in Ghaziabad: IMT Ghaziabad's CAT, XAT and GMAT route, how selection works, and where to find other Delhi NCR and Uttar Pradesh options. Checked against official pages.",
+    h1: "MBA and PGDM Colleges in Ghaziabad 2027",
+    place: "Ghaziabad",
+    cities: ["Ghaziabad"],
+    scope: "all",
+    question: "Which MBA and PGDM colleges in Ghaziabad have we verified, and which exams do they accept?",
+    keywords: ["mba colleges in ghaziabad", "pgdm colleges in ghaziabad", "imt ghaziabad pgdm", "imt ghaziabad admission", "mba in ghaziabad"],
+    leadCity: "Delhi NCR",
+    cutoffPage: "/mba-cutoff-uttar-pradesh",
+    related: ["/mba-colleges-in-delhi-ncr", "/mba-colleges-in-uttar-pradesh", "/mba-colleges-in-gurugram", "/mba-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-counselling"],
   },
   {
     path: "/mba-colleges-in-delhi-accepting-cat",

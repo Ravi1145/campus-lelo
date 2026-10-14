@@ -144,7 +144,7 @@ export const programAdmissions: ProgramAdmission[] = [
     route: "Direct (institute process)",
     examsAccepted: ["cat"],
     intake: "2026–28",
-    notes: "Admission is through CAT. Eligibility follows the CAT rules. IIM Kashipur publishes the minimum CAT percentiles it used to pick candidates for the personal interview (shown below), and says the 2026–28 figures will be updated.",
+    notes: "Admission is through CAT. For the 2026–28 batch IIM Kashipur took part in the Joint Admission Process (JAP 2026) with IIM Raipur, IIM Ranchi and IIM Tiruchirappalli, so candidates who chose it in the CAT form also had to register on the JAP portal after the invitation email. Shortlisting for the personal interview was by category on CAT 2025 scores. IIM Kashipur publishes the minimum CAT percentiles it used to pick candidates for the interview (shown below), and says the 2026–28 figures will be updated.",
     source: { label: "IIM Kashipur: MBA admission", url: "https://www.iimkashipur.ac.in/academics/mba/mba-admission", type: "official", accessed: "2026-10-09" },
   },
   {
