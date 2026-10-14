@@ -9,9 +9,9 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Top 10 Engineering Colleges in Pune 2026 | Fees, MHT-CET Cutoff & Placements",
+  title: "Top 10 Engineering Colleges in Pune 2026: Admission",
   description:
-    "Top 10 engineering colleges in Pune 2026: COEP, VIT Pune, SIT Pune. MHT-CET cutoffs 60–95 %ile. Compare free.",
+    "Ten well-known engineering colleges in Pune, including COEP, VIT Pune and SIT, with the MHT-CET and JEE routes and how to apply. Shortlist free.",
   path: "/top-10-engineering-colleges-in-pune",
   keywords: [
     "top 10 engineering colleges in pune",

@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best BSc IT Colleges Pune 2026 | Fees, Cutoff & IT Placements",
-  description: "Top BSc IT / BSc Computer Science colleges in Pune 2026. Fergusson, SP College, MIT, Symbiosis. Fees ₹20K–₹1.5L/yr, HSC cutoffs, IT placement ₹4 and admission guide.",
+  title: "Best BSc IT Colleges in Pune 2026: Admission Guide",
+  description: "BSc IT and BSc Computer Science colleges in Pune, including Fergusson, SP College, MIT and Symbiosis, with eligibility and how to apply. Compare free.",
   path: "/bsc-it-colleges-pune",
   keywords: [
     "bsc it colleges in pune 2026",

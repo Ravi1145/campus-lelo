@@ -264,6 +264,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                      college.stream === "Medical" ? " Medical" :
                      college.stream === "Law" ? " Law" :
                      college.stream === "Architecture" ? " Architecture" : ""
+  const where      = `${college.location ?? ""} ${college.address ?? ""} ${slug}`
+  const cityName   = /greater[ -]noida/i.test(where) ? "Greater Noida" : /noida/i.test(where) ? "Noida" : "Pune"
   const exam1      = college.entranceExams[0] ?? "MHT-CET"
   const exam2      = college.entranceExams[1] ? ` / ${college.entranceExams[1]}` : ""
   // Title: College Name 2026 | NAAC + NIRF | Fees, Cutoff & Admission — max ~65 chars readable
@@ -272,11 +274,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return genMeta({
     title,
-    description: `${college.name} (${college.shortName}): ${college.type}${streamText} College, Pune. ${naacText}${nirfText}${feesText}${placText}. Admission 2026 via ${exam1}${exam2}. Cutoffs, placements, hostel, scholarships & student reviews.`,
+    description: `${college.name} (${college.shortName}) is a ${college.type}${streamText} college in ${cityName}. Admission 2026 via ${exam1}${exam2}. See courses, hostel, scholarships and how to apply.`,
     path: `/colleges/${slug}`,
     keywords: [
       college.name.toLowerCase(),
-      `${college.name.toLowerCase()} pune`,
+      `${college.name.toLowerCase()} ${cityName.toLowerCase()}`,
       `${college.name.toLowerCase()} admission 2026`,
       `${college.name.toLowerCase()} fees 2026`,
       `${college.name.toLowerCase()} cutoff 2026`,

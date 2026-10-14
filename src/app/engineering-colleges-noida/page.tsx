@@ -11,8 +11,8 @@ export const revalidate = 3600
 const engineeringColleges = noidaColleges.filter(c => c.stream === "Engineering")
 
 export const metadata: Metadata = genMeta({
-  title: "Best Engineering Colleges in Noida 2026 | JEE, AKTU | Fees & Placements",
-  description: "Top engineering colleges in Noida 2026. JIIT Noida (₹8.5L avg pkg), Amity University, Bennett University, Galgotias, GL Bajaj, KIET. JEE Main & AKTU UPSEE admission. Fees ₹1.2L–6L/yr.",
+  title: "Engineering Colleges in Noida 2026: JEE & AKTU",
+  description: "Engineering colleges in Noida with the JEE Main and AKTU admission routes, branches offered and how to apply. Compare options and shortlist free.",
   path: "/engineering-colleges-noida",
   keywords: [
     "engineering colleges in noida 2026",

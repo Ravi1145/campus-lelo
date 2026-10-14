@@ -8,9 +8,9 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Low Fees Engineering Colleges in Pune 2026 | Under ₹5L & ₹10L",
+  title: "Low Fees Engineering Colleges in Pune 2026",
   description:
-    "List of affordable engineering colleges in Pune 2026. COEP fees ₹80K/yr, AISSMS ₹1.1L/yr. Find budget B.Tech colleges under ₹5 lakh & ₹10 lakh total fees.",
+    "Budget-friendly engineering colleges in Pune, with the admission routes and what to check on each fee page before you apply. Compare and shortlist free.",
   path: "/low-fees-engineering-colleges-pune",
   keywords: [
     "low fees engineering colleges in pune",

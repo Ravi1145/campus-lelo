@@ -5,8 +5,8 @@ import SEOLandingPage from "@/components/seo/SEOLandingPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Computer Engineering Colleges in Pune 2026 | CS/IT BTech Admission",
-  description: "Best computer engineering colleges in Pune 2026. Free admission guidance.",
+  title: "Computer Engineering Colleges in Pune 2026: Admission",
+  description: "Computer engineering colleges in Pune with the MHT-CET and JEE routes, branches offered and how to apply. Compare options and get free guidance.",
   path: "/computer-engineering-colleges-pune",
   keywords: ["computer engineering colleges pune", "cs colleges pune", "it engineering colleges pune 2026", "best cs college pune"],
 })

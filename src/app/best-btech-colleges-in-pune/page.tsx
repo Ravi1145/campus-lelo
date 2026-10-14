@@ -6,8 +6,8 @@ import BTechClusterPage from "@/components/btech/BTechClusterPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best BTech Colleges in Pune 2026 | NIRF Ranked | Fees & Placements",
-  description: "Best BTech colleges in Pune 2026 ranked by NIRF, NAAC and placements. COEP, PICT, VIT Pune, MIT-WPU, SIT Pune. Fees ₹80K–4.8L/yr.",
+  title: "Best BTech Colleges in Pune 2026: Admission Guide",
+  description: "BTech colleges in Pune, including COEP, PICT, VIT Pune, MIT-WPU and SIT, with the MHT-CET and JEE routes and how to apply. Compare and shortlist free.",
   path: "/best-btech-colleges-in-pune",
   keywords: [
     "best btech colleges in pune", "best engineering colleges in pune",

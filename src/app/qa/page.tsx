@@ -4,8 +4,8 @@ import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchem
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Q&A 2026: Real Questions Answered by Alumni & Experts",
-  description: "Browse 50+ answered questions about Pune college admissions, cutoffs, fees, hostels, and placements. Ask your question and get answers from CampusLelo counsellors and alumni.",
+  title: "Pune College Q&A 2026: Ask a Counsellor",
+  description: "Ask your question about Pune college admissions and get answers from CampusLelo counsellors and alumni. Browse questions other students have asked.",
   path: "/qa",
   keywords: [
     "pune college questions and answers",

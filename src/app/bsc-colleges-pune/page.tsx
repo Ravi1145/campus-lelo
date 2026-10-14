@@ -4,8 +4,8 @@ import SEOLandingPage from "@/components/seo/SEOLandingPage"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "BSc Colleges in Pune 2026 | Fees, Courses & Admission | CampusLelo",
-  description: "Best BSc colleges in Pune 2025-26. BSc Physics, Chemistry, CS, IT, Biotech, Data Science. Compare fees (₹12K–2L/yr), NAAC grades, placements and admission process.",
+  title: "BSc Colleges in Pune 2026: Courses & Admission",
+  description: "BSc colleges in Pune for Physics, Chemistry, Computer Science, IT, Biotech and Data Science, with eligibility and how to apply. Compare and shortlist free.",
   path: "/bsc-colleges-pune",
   keywords: ["bsc colleges in pune", "bsc colleges pune 2025", "bsc admission pune", "bsc computer science pune", "bsc biotechnology pune", "best bsc college pune"],
 })

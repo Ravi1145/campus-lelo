@@ -6,8 +6,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "MBA Colleges in Pune Under 5 Lakh Total Fees 2026 | Government & Affordable",
-  description: "MBA colleges in Pune with total fees under 5 lakh (2-year). PUMBA (₹2.5L), government-aided and SPPU-affiliated MBA colleges in Pune with low fees and good placements.",
+  title: "MBA Colleges in Pune Under 5 Lakh: Budget Options",
+  description: "Lower-fee MBA colleges in Pune, the exams each accepts and what to confirm on the college's own fee page before applying. Ask a counsellor free.",
   path: "/mba-colleges-in-pune-under-5-lakh",
   keywords: ["mba colleges in pune under 5 lakh", "low fee mba pune", "affordable mba pune", "mba pune government college fees", "pumba fees", "mba pune under 5 lakh total fees"],
 })

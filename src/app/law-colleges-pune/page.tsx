@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best Law Colleges in Pune 2026 | LLB, LLM Fees, CLAT Cutoff & Placements",
-  description: "Top law colleges in Pune 2026. ILS Law College, Symbiosis Law School, MNLU Pune, BVDU Law College. Compare LLB fees (₹20K–₹2.5L/yr), CLAT cutoffs, placement packages & admission process.",
+  title: "Law Colleges in Pune 2026: ILS, Symbiosis, MNLU",
+  description: "Law colleges in Pune, including ILS Law College, Symbiosis Law School, MNLU Pune and BVDU Law College, with entrance routes and how to apply. Shortlist free.",
   path: "/law-colleges-pune",
   keywords: [
     "law colleges in pune 2026",
