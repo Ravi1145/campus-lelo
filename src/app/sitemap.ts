@@ -225,6 +225,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/mba-cutoff-uttarakhand`,                         lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/career-quiz`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/psychometric-test`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/career-types`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/my-admission-plan`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/mba-cutoff-checker`,                        lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },

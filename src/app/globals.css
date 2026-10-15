@@ -491,3 +491,18 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 @media (prefers-reduced-motion: reduce) {
   .hex-shape, .hex-dot, .quiz-page-in, .quiz-pick, .plan-line::before, .plan-dot, .plan-item { animation: none !important; transform: none !important; opacity: 1 !important; }
 }
+
+/* ── Psychometric test ──────────────────────────────────────────────────────── */
+.psy-card-in { animation: psy-card-in 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes psy-card-in { from { opacity: 0; transform: translateX(22px); } to { opacity: 1; transform: none; } }
+.psy-pick { animation: quiz-pick 0.28s cubic-bezier(0.3, 1.5, 0.5, 1) both; }
+.psy-ring { transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.psy-orbit { animation: psy-spin 24s linear infinite; }
+.psy-orbit--rev { animation-direction: reverse; animation-duration: 32s; }
+@keyframes psy-spin { to { transform: rotate(360deg); } }
+.psy-float { animation: psy-float 4.5s ease-in-out infinite; }
+@keyframes psy-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) {
+  .psy-card-in, .psy-pick, .psy-orbit, .psy-float { animation: none !important; transform: none !important; opacity: 1 !important; }
+  .psy-ring { transition: none; }
+}

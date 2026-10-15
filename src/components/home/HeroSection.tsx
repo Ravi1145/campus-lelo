@@ -20,6 +20,7 @@ const STREAMS = ["Engineering", "MBA", "Medical", "Law", "Design", "Pharmacy", "
 const EXAMS = ["MHT-CET", "JEE Main", "CAT", "NEET", "CLAT", "SNAP", "CMAT", "XAT", "MAT"]
 
 const POPULAR = [
+  { label: "Psychometric test", href: "/psychometric-test" },
   { label: "Career quiz", href: "/career-quiz" },
   { label: "MBA in Pune", href: "/mba-in-pune" },
   { label: "B.Tech", href: "/colleges?stream=Engineering" },

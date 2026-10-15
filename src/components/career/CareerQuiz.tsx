@@ -219,6 +219,7 @@ export default function CareerQuiz() {
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-gray-800">
               <li>Read the guide for your top path and note the entrance exams and dates.</li>
               <li>Turn it into a dated plan with the sources attached: <Link href="/my-admission-plan" className="font-bold text-[#C90D11] hover:underline">build my admission plan</Link>.</li>
+              <li>See how you work, not just what you enjoy: <Link href="/psychometric-test" className="font-bold text-[#C90D11] hover:underline">take the psychometric test</Link>.</li>
               <li>Talk it through with a counsellor. The first call is free: <Link href="/counselling" className="font-bold text-[#C90D11] hover:underline">book counselling</Link>.</li>
             </ol>
             <div className="mt-5 flex flex-wrap gap-3 print:hidden">

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight, BadgeCheck, BarChart3, ClipboardList, Compass, GitCompare, Grid3x3, Sparkles } from "lucide-react"
+import { ArrowUpRight, BadgeCheck, BarChart3, Brain, ClipboardList, Compass, GitCompare, Grid3x3, Sparkles } from "lucide-react"
 import Reveal from "./Reveal"
 import type { HeroProof } from "./HeroSection"
 
@@ -7,6 +7,7 @@ import type { HeroProof } from "./HeroSection"
 // portal research: competitors lead with predictors and comparisons but show no source on figures.
 
 const TOOLS = [
+  { icon: Brain, title: "Psychometric test", desc: "Ten minutes, one question at a time. See your work style and a short reasoning check, then what to explore.", href: "/psychometric-test", tag: "New" },
   { icon: Compass, title: "Career quiz", desc: "48 short statements, 8 minutes. See your interest code and which study paths fit, from engineering to MBA.", href: "/career-quiz", tag: "New" },
   { icon: ClipboardList, title: "My admission plan", desc: "Pick your exams and city. Get your dates and colleges on one page, every line with its source and check date.", href: "/my-admission-plan", tag: "New" },
   { icon: BarChart3, title: "MBA cut-off checker", desc: "Type your CAT percentiles and see which published minimums you meet, and by how much you miss the rest.", href: "/mba-cutoff-checker" },

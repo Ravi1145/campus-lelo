@@ -163,6 +163,7 @@ export default function HomePage() {
             { href: "/ai-counselor", label: "AI career counsellor" },
             { href: "/ai-finder", label: "AI college finder" },
             { href: "/predictor", label: "College predictor" },
+            { href: "/psychometric-test", label: "Psychometric test" },
             { href: "/career-quiz", label: "Career quiz" },
             { href: "/career-types", label: "Career interest types" },
             { href: "/my-admission-plan", label: "My admission plan" },
