@@ -19,9 +19,6 @@ const HowItWorks          = dynamic(() => import("@/components/home/HowItWorks")
 const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNewsSection"))
 const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
-const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
-import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
-import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import NextSteps from "@/components/seo/NextSteps"
 import { homeFaqs } from "@/data/homeFaqs"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
@@ -139,13 +136,6 @@ export default function HomePage() {
         {/* 11. FAQ + Final CTA */}
         <FAQSection />
 
-        {/* College guides and insights */}
-        <GuidesScrollSection />
-
-
-        {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
-        <WhatIsCampusLelo />
-        <PuneCollegeGuide />
 
         {/* 14. Explore: plain links to sections that otherwise have few inbound links */}
         <NextSteps
@@ -178,6 +168,43 @@ export default function HomePage() {
             { href: "/site-map", label: "Site map" },
           ]}
         />
+        <details className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
+          <summary className="inline-flex min-h-11 cursor-pointer items-center rounded-full bg-white px-5 text-sm font-bold text-[#012858] ring-1 ring-gray-200 hover:ring-[#012858]">Browse every city, exam and course guide</summary>
+          <NextSteps
+            title="City, exam and course guides"
+            steps={[
+              { href: "/mba", label: "MBA and PGDM guide" },
+              { href: "/admission-guide", label: "Pune admission guide" },
+              { href: "/engineering-colleges-pune", label: "Engineering colleges in Pune" },
+              { href: "/mba-colleges-in-pune", label: "MBA colleges in Pune" },
+              { href: "/medical-colleges-pune", label: "Medical colleges in Pune" },
+              { href: "/law-colleges-pune", label: "Law colleges in Pune" },
+              { href: "/design-colleges-pune", label: "Design colleges in Pune" },
+              { href: "/bba-colleges-pune", label: "BBA colleges in Pune" },
+              { href: "/bca-colleges-pune", label: "BCA colleges in Pune" },
+              { href: "/arts-colleges-pune", label: "Arts colleges in Pune" },
+              { href: "/government-colleges-pune", label: "Government colleges in Pune" },
+              { href: "/naac-a-plus-colleges-pune", label: "NAAC A+ colleges in Pune" },
+              { href: "/colleges-in-pune-with-hostel", label: "Colleges with hostel in Pune" },
+              { href: "/mht-cet-colleges-pune", label: "MHT-CET colleges" },
+              { href: "/jee-main-colleges-pune", label: "JEE Main colleges" },
+              { href: "/neet-colleges-pune", label: "NEET colleges" },
+              { href: "/mba-colleges-in-pune-accepting-cat", label: "MBA colleges accepting CAT" },
+              { href: "/mba-colleges-in-pune-accepting-snap", label: "MBA colleges accepting SNAP" },
+              { href: "/mba-colleges-in-pune-accepting-mh-cet", label: "MBA colleges accepting MAH-CET" },
+              { href: "/mba-colleges-in-delhi-ncr", label: "MBA colleges in Delhi NCR" },
+              { href: "/mba-colleges-noida", label: "MBA colleges in Noida" },
+              { href: "/mba-colleges-in-greater-noida", label: "MBA colleges in Greater Noida" },
+              { href: "/pgdm-colleges-noida", label: "PGDM colleges in Noida" },
+              { href: "/engineering-colleges-noida", label: "Engineering colleges in Noida" },
+              { href: "/mba-colleges-in-uttar-pradesh", label: "MBA colleges in Uttar Pradesh" },
+              { href: "/mba-colleges-in-dehradun", label: "MBA colleges in Dehradun" },
+              { href: "/scholarships", label: "Scholarships" },
+              { href: "/pune-college-fees-calculator", label: "Fees calculator" },
+              { href: "/pune-admission-deadline-tracker-2026", label: "Admission deadline tracker" },
+            ]}
+          />
+        </details>
       </div>
     </>
   )
