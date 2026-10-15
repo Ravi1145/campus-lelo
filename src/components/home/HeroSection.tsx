@@ -65,7 +65,7 @@ function RotatingWord() {
   return (
     // Own line with fixed height so words of different widths never reflow the heading
     <span aria-hidden="true" className="relative flex h-[1.15em] overflow-hidden">
-      <span key={ROTATING[i]} className="hero-word inline-block text-[#E0170F]">
+      <span key={ROTATING[i]} className="hero-word inline-block text-[#C90D11]">
         {ROTATING[i]}
       </span>
     </span>
@@ -214,7 +214,7 @@ export default function HeroSection() {
               Free shortlist on WhatsApp
             </a>
             <Link href="/ai-finder" className="inline-flex items-center gap-1.5 text-[#012858] hover:underline">
-              <Sparkles className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /> Try the AI finder
+              <Sparkles className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /> Try the AI finder
             </Link>
             {deadline && (
               <Link href={deadline.href} className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold text-orange-700 ring-1 ring-orange-200 hover:bg-orange-100">
@@ -267,7 +267,7 @@ export default function HeroSection() {
         <dl className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 sm:grid-cols-3 sm:px-6 lg:grid-cols-5 lg:px-8">
           {STATS.map(({ icon: Icon, value, suffix, text, label }) => (
             <div key={label} className="flex items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-[#E0170F]"><Icon className="h-5 w-5" aria-hidden="true" /></span>
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-[#C90D11]"><Icon className="h-5 w-5" aria-hidden="true" /></span>
               <div>
                 <dt className="sr-only">{label}</dt>
                 <dd className="text-lg font-extrabold leading-none text-[#012858]">{text ?? <CountUp to={value} suffix={suffix} start={statsOn} />}</dd>

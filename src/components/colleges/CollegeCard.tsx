@@ -150,7 +150,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
         aria-label={isShortlisted ? `Remove ${college.shortName} from shortlist` : `Add ${college.shortName} to shortlist`}
         className={cn(
           "absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full transition-all active:scale-90",
-          isShortlisted ? "bg-[#E0170F] text-white shadow-lg" : "bg-white/15 text-white ring-1 ring-white/25 backdrop-blur hover:bg-white hover:text-[#E0170F]"
+          isShortlisted ? "bg-[#E0170F] text-white shadow-lg" : "bg-white/15 text-white ring-1 ring-white/25 backdrop-blur hover:bg-white hover:text-[#C90D11]"
         )}
       >
         <Heart className={cn("h-4 w-4 transition-transform", isShortlisted && "scale-110 fill-current")} aria-hidden="true" />
@@ -196,7 +196,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
 
           <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1.5">
             <span className="inline-flex items-center gap-1 text-xs text-gray-600">
-              <MapPin className="h-3.5 w-3.5 text-[#E0170F]" aria-hidden="true" /> {college.location}
+              <MapPin className="h-3.5 w-3.5 text-[#C90D11]" aria-hidden="true" /> {college.location}
             </span>
             <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-bold", getNaacColor(college.naac))}>NAAC {college.naac}</span>
             <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-semibold", getTypeColor(college.type))}>{college.type}</span>

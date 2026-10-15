@@ -186,7 +186,7 @@ export default function EventsPage() {
               <span className="text-gray-600 font-medium">Events</span>
             </nav>
             <div className="max-w-2xl">
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#E0170F" }}>— UPCOMING EVENTS</p>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#C90D11" }}>— UPCOMING EVENTS</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#011B40" }}>
                 Pune College Events 2026
               </h1>
@@ -291,7 +291,7 @@ export default function EventsPage() {
 
               {/* CTA */}
               <div className="rounded-2xl p-5" style={{ background: "#011B40" }}>
-                <GraduationCap className="w-8 h-8 mb-3" style={{ color: "#E0170F" }} />
+                <GraduationCap className="w-8 h-8 mb-3" style={{ color: "#C90D11" }} />
                 <h3 className="font-bold text-white mb-2">Need Admission Guidance?</h3>
                 <p className="text-sm text-gray-300 mb-4">Our counsellors help you shortlist colleges, prepare for open days and meet admission deadlines, free.</p>
                 <Link href="/counselling"

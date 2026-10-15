@@ -101,7 +101,7 @@ export default function MbaHubPage() {
       <div className="mx-auto max-w-7xl space-y-16 px-4 py-14 sm:px-6 lg:px-8">
         {/* Topic guides */}
         <section aria-labelledby="guides-h">
-          <h2 id="guides-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><BookOpen className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> Guides to your biggest MBA questions</h2>
+          <h2 id="guides-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><BookOpen className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> Guides to your biggest MBA questions</h2>
           <p className="mt-1 text-sm text-gray-600">Fees, placements, cut-offs, eligibility, admission and more, explained step by step.</p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {guides.map((c) => (
@@ -122,7 +122,7 @@ export default function MbaHubPage() {
 
         {/* Cities */}
         <section aria-labelledby="cities-h">
-          <h2 id="cities-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><MapPin className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA &amp; PGDM by city</h2>
+          <h2 id="cities-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><MapPin className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> MBA &amp; PGDM by city</h2>
           <ul className="mt-5 flex flex-wrap gap-2">
             {[
               ["MBA colleges in Delhi", "/mba-colleges-in-delhi"], ["MBA colleges in Delhi NCR", "/mba-colleges-in-delhi-ncr"], ["PGDM colleges in Delhi NCR", "/pgdm-colleges-in-delhi-ncr"],
@@ -146,7 +146,7 @@ export default function MbaHubPage() {
 
         {/* Exams */}
         <section aria-labelledby="exams-h">
-          <h2 id="exams-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA entrance exams</h2>
+          <h2 id="exams-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> MBA entrance exams</h2>
           <p className="mt-1 text-sm text-gray-600">Dates, pattern, eligibility, score vs percentile, preparation and accepting colleges, each with its official source. <Link href="/mba-exam-calendar" className="font-bold text-[#C90D11] hover:underline">See all dates in one calendar →</Link> Unsure which exam or college? <Link href="/mba-counselling" className="font-bold text-[#C90D11] hover:underline">Get free MBA counselling →</Link></p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {mbaExams.map((e) => (
@@ -165,7 +165,7 @@ export default function MbaHubPage() {
 
         {/* Specialisations */}
         <section aria-labelledby="spec-h">
-          <h2 id="spec-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><Briefcase className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> MBA specialisations</h2>
+          <h2 id="spec-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><Briefcase className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> MBA specialisations</h2>
           <p className="mt-1 text-sm text-gray-600">New to specialisations? Start with <Link href="/blog/mba-specialisations-explained" className="font-bold text-[#C90D11] hover:underline">MBA specialisations explained</Link>, then see colleges in Pune.</p>
           <ul className="mt-5 flex flex-wrap gap-2">
             {SPEC_PAGES.map(([label, href]) => (

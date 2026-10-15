@@ -34,7 +34,7 @@ export default function BrowseByStream() {
             <h2 className="font-bold text-3xl" style={{ color: "#0F172A" }}>Browse by Stream</h2>
             <p className="mt-1 text-sm" style={{ color: "#475569" }}>Find colleges by your field of study</p>
           </div>
-          <Link href="/colleges" className="text-sm font-semibold" style={{ color: "#E0170F" }}>
+          <Link href="/colleges" className="text-sm font-semibold" style={{ color: "#C90D11" }}>
             View all →
           </Link>
         </div>
@@ -50,7 +50,7 @@ export default function BrowseByStream() {
               {popular && (
                 <span
                   className="absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full"
-                  style={{ background: "#FFF4F2", color: "#E0170F" }}
+                  style={{ background: "#FFF4F2", color: "#C90D11" }}
                 >
                   Most Popular
                 </span>
@@ -73,7 +73,7 @@ export default function BrowseByStream() {
                 <span className="text-xs font-medium" style={{ color: "#0F172A" }}>{collegeCount(name) > 0 ? `${collegeCount(name)} colleges` : "Explore"}</span>
                 <ChevronRight
                   className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ color: "#E0170F" }}
+                  style={{ color: "#C90D11" }}
                   strokeWidth={1.5}
                 />
               </div>

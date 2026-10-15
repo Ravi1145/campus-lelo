@@ -157,7 +157,7 @@ export default function CounsellingBooking({ defaultPlan = "free_phone", default
                           on ? "bg-[#012858] text-white shadow-lg ring-[#012858]" : "bg-white text-gray-800 ring-gray-200 hover:ring-[#012858]",
                         )}>
                           <span className="flex items-center justify-between">
-                            <Icon className={cn("h-5 w-5", on ? "text-orange-300" : "text-[#E0170F]")} aria-hidden="true" />
+                            <Icon className={cn("h-5 w-5", on ? "text-orange-300" : "text-[#C90D11]")} aria-hidden="true" />
                             <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-extrabold", on ? "bg-white text-[#012858]" : "bg-gray-100 text-[#012858]")}>{p.priceLabel}</span>
                           </span>
                           <span className="mt-2 text-sm font-extrabold leading-snug">{p.id === "video_199" ? "Expert video session" : "Phone counselling"}</span>

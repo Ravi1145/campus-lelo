@@ -28,7 +28,7 @@ export default function QuickAnswer({ question, answer, note }: QuickAnswerProps
       itemScope
       itemType="https://schema.org/Question"
     >
-      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#E0170F" }}>
+      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#C90D11" }}>
         Quick Answer
       </p>
       <p className="font-semibold text-sm mb-2" style={{ color: "#012858" }} itemProp="name">

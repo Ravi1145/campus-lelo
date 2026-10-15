@@ -207,7 +207,7 @@ export default function AdmissionGuidePage() {
               <span className="text-gray-600 font-medium">Admission Guide</span>
             </nav>
             <div className="max-w-2xl">
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#E0170F" }}>— COMPLETE 2026 GUIDE</p>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#C90D11" }}>— COMPLETE 2026 GUIDE</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: "#011B40" }}>
                 Pune College Admission Guide 2026
               </h1>
@@ -285,13 +285,13 @@ export default function AdmissionGuidePage() {
                   <div>
                     <div className="bg-white rounded-2xl p-5 border border-gray-100 sticky top-24">
                       <h3 className="font-bold mb-4 flex items-center gap-2" style={{ color: "#011B40" }}>
-                        <Calendar className="w-4 h-4" style={{ color: "#E0170F" }} />
+                        <Calendar className="w-4 h-4" style={{ color: "#C90D11" }} />
                         Key Dates 2026
                       </h3>
                       <div className="space-y-3">
                         {stream.keyDates.map((d, i) => (
                           <div key={i} className="flex flex-col gap-0.5 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
-                            <span className="text-xs font-semibold" style={{ color: "#E0170F" }}>{d.date}</span>
+                            <span className="text-xs font-semibold" style={{ color: "#C90D11" }}>{d.date}</span>
                             <span className="text-sm" style={{ color: "#012858" }}>{d.event}</span>
                           </div>
                         ))}
@@ -314,7 +314,7 @@ export default function AdmissionGuidePage() {
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-100">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(224, 23, 15,0.1)" }}>
-                <FileText className="w-5 h-5" style={{ color: "#E0170F" }} />
+                <FileText className="w-5 h-5" style={{ color: "#C90D11" }} />
               </div>
               <div>
                 <h2 className="text-xl font-bold" style={{ color: "#011B40" }}>Documents Checklist: Pune College Admissions</h2>

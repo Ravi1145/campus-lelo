@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
               { label: "Free AI Counselling", value: "✓" },
             ].map(({ label, value }) => (
               <div key={label} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "24px", fontWeight: 800, color: "#E0170F" }}>{value}</span>
+                <span style={{ fontSize: "24px", fontWeight: 800, color: "#C90D11" }}>{value}</span>
                 <span style={{ fontSize: "13px", color: "#64748b" }}>{label}</span>
               </div>
             ))}

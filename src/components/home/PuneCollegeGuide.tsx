@@ -82,7 +82,7 @@ export default function PuneCollegeGuide() {
 
           {/* By Stream */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: "#E0170F" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: "#C90D11" }}>
               Browse by Stream
             </h3>
             <ul className="grid sm:grid-cols-2 gap-1.5">
@@ -104,7 +104,7 @@ export default function PuneCollegeGuide() {
 
             {/* By Exam */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#C90D11" }}>
                 By Entrance Exam
               </h3>
               <ul className="space-y-1">
@@ -122,7 +122,7 @@ export default function PuneCollegeGuide() {
 
             {/* Tools */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#C90D11" }}>
                 Free Tools
               </h3>
               <ul className="space-y-1">
@@ -141,7 +141,7 @@ export default function PuneCollegeGuide() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#E0170F" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: "#C90D11" }}>
               Guides &amp; Resources
             </h3>
             <ul className="space-y-1 mb-6">
@@ -168,7 +168,7 @@ export default function PuneCollegeGuide() {
               ].map(([val, label]) => (
                 <div key={label} className="flex justify-between items-center py-1 border-b border-gray-100 last:border-0">
                   <span style={{ color: "#475569" }}>{label}</span>
-                  <span className="font-bold text-xs" style={{ color: "#E0170F" }}>{val}</span>
+                  <span className="font-bold text-xs" style={{ color: "#C90D11" }}>{val}</span>
                 </div>
               ))}
             </div>
@@ -178,10 +178,10 @@ export default function PuneCollegeGuide() {
         {/* Noida section */}
         <div className="mt-8 pt-6 border-t border-gray-100">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#E0170F" }}>
+            <h3 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#C90D11" }}>
               Also Explore: Noida &amp; Greater Noida
             </h3>
-            <Link href="/colleges-in-noida" className="text-xs font-medium hover:underline" style={{ color: "#E0170F" }}>
+            <Link href="/colleges-in-noida" className="text-xs font-medium hover:underline" style={{ color: "#C90D11" }}>
               View all →
             </Link>
           </div>

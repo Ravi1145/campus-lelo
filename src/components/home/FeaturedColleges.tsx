@@ -77,12 +77,12 @@ export default function FeaturedColleges() {
         {/* Header */}
         <div className="flex items-end justify-between mb-6">
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#E0170F" }}>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#C90D11" }}>
               Popular colleges
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0F172A" }}>
               Featured Colleges in{" "}
-              <span style={{ color: "#E0170F" }}>Pune</span>
+              <span style={{ color: "#C90D11" }}>Pune</span>
             </h2>
             <p className="mt-1.5 text-sm" style={{ color: "#475569" }}>
               A mix of colleges across streams. Open a profile for courses, fees and accepted exams.
@@ -91,7 +91,7 @@ export default function FeaturedColleges() {
           <Link
             href="/colleges"
             className="hidden sm:flex items-center gap-1.5 font-semibold text-sm transition-opacity hover:opacity-80"
-            style={{ color: "#E0170F" }}
+            style={{ color: "#C90D11" }}
           >
             View All Colleges <ArrowRight className="w-4 h-4" />
           </Link>

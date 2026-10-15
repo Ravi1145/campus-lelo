@@ -9,7 +9,7 @@ export const SHOW_UNVERIFIED_FIGURES = false
 
 /** Money-per-annum packages ("₹12 LPA", "₹8–12 LPA", "12 LPA") and NIRF rank claims ("NIRF #49", "NIRF rank 13"). */
 const FIGURE =
-  /(?:₹|Rs\.?\s?|INR\s?)?\s?\d[\d.,]*\s?(?:[–—-]\s?(?:₹|Rs\.?\s?)?\d[\d.,]*\s?)?(?:LPA|L\.?P\.?A\.?|lakhs? per (?:annum|year)|lakh\/yr)\b|\bNIRF\s*(?:\d{4}\s*)?(?:rank(?:ing|ed)?\s*)?(?:#|no\.?\s*|:)?\s*\d+|\b(?:ranked|rank)\s*#?\d+\s*(?:in|by)\s*NIRF/i
+  /(?:₹|Rs\.?\s?|INR\s?)?\s?\d[\d.,]*\s?(?:[–—-]\s?(?:₹|Rs\.?\s?)?\d[\d.,]*\s?)?(?:LPA|L\.?P\.?A\.?|lakhs? per (?:annum|year)|lakh\/yr)\b|\bNIRF\s*(?:\d{4}\s*)?(?:rank(?:ing|ed)?\s*)?(?:#|no\.?\s*|:)?\s*\d+|\b(?:ranked|rank)\s*#?\d+\s*(?:in|by)\s*NIRF|\b\d[\d,]*\+\s*(?:programs?|programmes|international students|campus placements|placements|recruiters|students from)\b/i
 
 /** Questions about placements and rankings are dropped whole: their answers are the claim. */
 const FIGURE_QUESTION = /placement|package|salary|recruit|\bnirf\b|ranking|\brank\b|\blpa\b/i

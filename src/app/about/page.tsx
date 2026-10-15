@@ -84,9 +84,9 @@ export default function AboutPage() {
         <section aria-labelledby="contact-h">
           <h2 id="contact-h" className="text-2xl font-extrabold text-[#012858]">Contact</h2>
           <ul className="mt-4 space-y-2 text-gray-800">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /><a href="mailto:support@campuslelo.com" className="font-semibold hover:underline">support@campuslelo.com</a></li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#E0170F]" aria-hidden="true" />Pune, Maharashtra, India</li>
-            <li className="flex items-center gap-2"><Headphones className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /><Link href="/counselling" className="font-semibold hover:underline">Book counselling</Link></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /><a href="mailto:support@campuslelo.com" className="font-semibold hover:underline">support@campuslelo.com</a></li>
+            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#C90D11]" aria-hidden="true" />Pune, Maharashtra, India</li>
+            <li className="flex items-center gap-2"><Headphones className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /><Link href="/counselling" className="font-semibold hover:underline">Book counselling</Link></li>
           </ul>
           <p className="mt-4 text-sm text-gray-600">Journalists: see the <Link href="/press" className="font-bold text-[#012858] underline-offset-2 hover:underline">press and media kit</Link>.</p>
         </section>

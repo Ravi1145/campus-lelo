@@ -78,7 +78,7 @@ export default function PressPage() {
             {DATA.map((d) => (
               <li key={d.href} className="group relative rounded-2xl bg-white p-5 ring-1 ring-gray-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-[#012858]/25">
                 <h3 className="flex items-center gap-2 font-extrabold text-[#012858]">
-                  {d.href === "/mba-exam-calendar" ? <CalendarClock className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /> : <FileText className="h-4 w-4 text-[#E0170F]" aria-hidden="true" />}
+                  {d.href === "/mba-exam-calendar" ? <CalendarClock className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /> : <FileText className="h-4 w-4 text-[#C90D11]" aria-hidden="true" />}
                   <Link href={d.href} className="before:absolute before:inset-0 group-hover:text-[#C90D11]">{d.title}</Link>
                 </h3>
                 <p className="mt-1.5 text-sm text-gray-600">{d.desc}</p>

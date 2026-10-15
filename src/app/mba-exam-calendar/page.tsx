@@ -65,7 +65,7 @@ export default function MbaExamCalendarPage() {
       <div className="mx-auto max-w-5xl space-y-12 px-4 py-12 sm:px-6">
         <section aria-labelledby="cal-h">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 id="cal-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> Dates at a glance</h2>
+            <h2 id="cal-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> Dates at a glance</h2>
             <a href={`${CALENDAR_PATH}/csv`} download className="inline-flex items-center gap-2 rounded-xl bg-[#012858] px-4 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#024692]">
               <Download className="h-4 w-4" aria-hidden="true" /> Download CSV
             </a>

@@ -84,7 +84,7 @@ export default function CollegeRowCard({ college }: { college: College }) {
                 </Link>
               </h3>
               <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs text-gray-600">
-                <span className="inline-flex items-center gap-1"><MapPin className="h-3.5 w-3.5 text-[#E0170F]" aria-hidden="true" />{college.location}</span>
+                <span className="inline-flex items-center gap-1"><MapPin className="h-3.5 w-3.5 text-[#C90D11]" aria-hidden="true" />{college.location}</span>
                 <span aria-hidden="true" className="text-gray-300">•</span>
                 <span className={cn("rounded-full px-2 py-0.5 font-semibold", getTypeColor(college.type))}>{college.type}</span>
                 <span className={cn("rounded-full px-2 py-0.5 font-bold", getNaacColor(college.naac))}>NAAC {college.naac}</span>
@@ -141,7 +141,7 @@ export default function CollegeRowCard({ college }: { college: College }) {
           </Link>
           <p className="hidden items-center justify-center gap-1.5 pt-1 text-xs font-semibold text-gray-700 lg:flex">
             {college.nirfRank ? (
-              <><Award className="h-3.5 w-3.5 text-[#E0170F]" aria-hidden="true" /> NIRF #{college.nirfRank}</>
+              <><Award className="h-3.5 w-3.5 text-[#C90D11]" aria-hidden="true" /> NIRF #{college.nirfRank}</>
             ) : college.reviewCount > 0 ? (
               <><Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" aria-hidden="true" /> {college.rating.toFixed(1)} ({college.reviewCount.toLocaleString()})</>
             ) : null}

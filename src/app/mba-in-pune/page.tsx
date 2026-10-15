@@ -163,7 +163,7 @@ export default function MBAInPune() {
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#FFF4F2" }}>
-                  <Icon className="w-4.5 h-4.5" style={{ color: "#E0170F" }} strokeWidth={1.5} />
+                  <Icon className="w-4.5 h-4.5" style={{ color: "#C90D11" }} strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="font-bold text-base leading-none" style={{ color: "#0F172A" }}>{value}</p>
@@ -198,7 +198,7 @@ export default function MBAInPune() {
                 <tbody>
                   {TOP_COLLEGES.map((c, i) => (
                     <tr key={c.rank} style={{ borderBottom: i < TOP_COLLEGES.length - 1 ? "1px solid #F1F5F9" : undefined }}>
-                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#E0170F" }}>{c.rank}</td>
+                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#C90D11" }}>{c.rank}</td>
                       <td className="px-4 py-3.5">
                         <Link href={collegeHref(c.slug)} className="font-semibold hover:underline" style={{ color: "#011B40" }}>
                           {c.name}
@@ -208,7 +208,7 @@ export default function MBAInPune() {
                       </td>
                       <td className="px-4 py-3.5 text-xs font-medium" style={{ color: "#16A34A" }}>{c.naac}</td>
                       <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#0F172A" }}>{c.fees}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{c.avgPkg}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#C90D11" }}>{c.avgPkg}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{c.exam}</td>
                     </tr>
                   ))}
@@ -255,15 +255,15 @@ export default function MBAInPune() {
                       <td className="px-4 py-3.5 font-bold text-sm" style={{ color: "#011B40" }}>{e.name}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{e.date}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{e.accepted}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{e.cutoff}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#C90D11" }}>{e.cutoff}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="/mba-cutoff-pune" className="text-sm font-medium" style={{ color: "#E0170F" }}>View all cutoffs →</Link>
-              <Link href="/mba-admission-process-pune" className="text-sm font-medium" style={{ color: "#E0170F" }}>Admission process →</Link>
+              <Link href="/mba-cutoff-pune" className="text-sm font-medium" style={{ color: "#C90D11" }}>View all cutoffs →</Link>
+              <Link href="/mba-admission-process-pune" className="text-sm font-medium" style={{ color: "#C90D11" }}>Admission process →</Link>
             </div>
           </section>
 
@@ -309,7 +309,7 @@ export default function MBAInPune() {
                     {links.map(l => (
                       <li key={l.href}>
                         <Link href={l.href} className="text-xs hover:underline" style={{ color: "#475569" }}>
-                          <span style={{ color: "#E0170F" }}>›</span> {l.label}
+                          <span style={{ color: "#C90D11" }}>›</span> {l.label}
                         </Link>
                       </li>
                     ))}

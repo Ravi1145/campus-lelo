@@ -147,7 +147,7 @@ export default function CollegeFilters({ filters, onChange, options, mobileOpen,
   const header = (
     <div className="flex items-center justify-between">
       <h2 className="flex items-center gap-2 text-base font-extrabold text-[#012858]">
-        <SlidersHorizontal className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /> Filter By
+        <SlidersHorizontal className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /> Filter By
         {active > 0 && <span className="rounded-full bg-[#E0170F] px-2 py-0.5 text-xs font-bold text-white">{active}</span>}
       </h2>
       {active > 0 && (

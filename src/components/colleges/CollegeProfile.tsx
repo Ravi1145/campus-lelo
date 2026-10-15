@@ -431,16 +431,18 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
           </div>
 
           {/* Tab Bar */}
-          <div className="flex gap-0 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 px-4 sm:mx-0 sm:px-0 border-t border-white/10 mt-2">
+          <div role="tablist" aria-label="College sections" className="flex gap-0 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 px-4 sm:mx-0 sm:px-0 border-t border-white/10 mt-2 max-sm:[mask-image:linear-gradient(to_right,black_88%,transparent)]">
             {visibleTabs.map(tab => (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={activeTab === tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "flex-shrink-0 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap",
+                  "flex-shrink-0 min-h-11 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap",
                   activeTab === tab.id
                     ? "border-orange-400 text-orange-400"
-                    : "border-transparent text-blue-300 hover:text-white"
+                    : "border-transparent text-blue-200 hover:text-white"
                 )}
               >
                 {tab.label}

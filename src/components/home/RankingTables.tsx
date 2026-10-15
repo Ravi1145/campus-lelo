@@ -103,7 +103,7 @@ export default function RankingTables() {
                 value={id}
                 className="group inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-bold text-gray-700 transition-all hover:bg-gray-50 data-[state=active]:bg-gradient-to-br data-[state=active]:from-[#012858] data-[state=active]:to-[#024692] data-[state=active]:text-white data-[state=active]:shadow-md sm:flex-none"
               >
-                <Icon className="h-4 w-4 text-[#E0170F] group-data-[state=active]:text-orange-300" aria-hidden="true" />
+                <Icon className="h-4 w-4 text-[#C90D11] group-data-[state=active]:text-orange-300" aria-hidden="true" />
                 {label}
               </Tabs.Trigger>
             ))}

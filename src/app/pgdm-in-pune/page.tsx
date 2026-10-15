@@ -146,14 +146,14 @@ export default function PGDMInPune() {
                 <tbody>
                   {COLLEGES.map((c, i) => (
                     <tr key={c.rank} style={{ borderBottom: i < COLLEGES.length - 1 ? "1px solid #F1F5F9" : undefined }}>
-                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#E0170F" }}>{c.rank}</td>
+                      <td className="px-4 py-3.5 font-bold text-xs" style={{ color: "#C90D11" }}>{c.rank}</td>
                       <td className="px-4 py-3.5">
                         <Link href={collegeHref(c.slug)} className="font-semibold hover:underline" style={{ color: "#011B40" }}>{c.name}</Link>
                         <p className="text-xs mt-0.5" style={{ color: "#64748B" }}>{c.location} · {c.highlight}</p>
                       </td>
                       <td className="px-4 py-3.5 text-xs font-medium" style={{ color: "#16A34A" }}>{c.naac}</td>
                       <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#0F172A" }}>{c.fees}</td>
-                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#E0170F" }}>{c.avgPkg}</td>
+                      <td className="px-4 py-3.5 text-xs font-semibold" style={{ color: "#C90D11" }}>{c.avgPkg}</td>
                       <td className="px-4 py-3.5 text-xs" style={{ color: "#475569" }}>{c.exam}</td>
                     </tr>
                   ))}
@@ -172,7 +172,7 @@ export default function PGDMInPune() {
                   <tr style={{ background: "#F6F8FB", borderBottom: "1px solid #E5E9F0" }}>
                     <th className="text-left px-4 py-3 font-semibold text-xs w-1/3" style={{ color: "#475569" }}>Aspect</th>
                     <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#011B40" }}>MBA</th>
-                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#E0170F" }}>PGDM</th>
+                    <th className="text-left px-4 py-3 font-semibold text-xs" style={{ color: "#C90D11" }}>PGDM</th>
                   </tr>
                 </thead>
                 <tbody>

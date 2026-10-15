@@ -95,7 +95,7 @@ export default function EngineeringCollegesNoidaPage() {
             <div className="flex flex-wrap gap-3 text-sm">
               {[["40+", "Engineering Colleges"], ["₹1.2L–6L", "Fees/yr"], ["JEE/AKTU", "Entrance"]].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
-                  <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
+                  <span className="font-bold" style={{ color: "#C90D11" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>
                 </div>
               ))}
@@ -127,7 +127,7 @@ export default function EngineeringCollegesNoidaPage() {
                       </div>
                       <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
                         <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F7F9FC", color: "#012858", border: "1px solid #E5E9F0" }}>{college.type}</span>
-                        {college.naac && <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#FFF4F2", color: "#E0170F", border: "1px solid #FFC9BE" }}>NAAC {college.naac}</span>}
+                        {college.naac && <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#FFF4F2", color: "#C90D11", border: "1px solid #FFC9BE" }}>NAAC {college.naac}</span>}
                         {college.nirfRank && <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F0F7FF", color: "#0062CC", border: "1px solid #CCE0FF" }}>NIRF #{college.nirfRank}</span>}
                         <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: "#F0FFF4", color: "#166534", border: "1px solid #BBF7D0" }}>{college.affiliation.includes("AKTU") ? "AKTU" : "Private University"}</span>
                       </div>
@@ -173,18 +173,18 @@ export default function EngineeringCollegesNoidaPage() {
                 <h3 className="font-bold mb-3">AKTU vs Private University</h3>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-semibold text-xs mb-1" style={{ color: "#E0170F" }}>AKTU Affiliated (GL Bajaj, KIET)</p>
+                    <p className="font-semibold text-xs mb-1" style={{ color: "#C90D11" }}>AKTU Affiliated (GL Bajaj, KIET)</p>
                     <ul className="space-y-1 text-xs text-blue-100">
                       {["₹1.2L–3L fees/yr", "JEE Main + UPSEE", "Solid IT placements", "Recognized across UP"].map(p => (
-                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />{p}</li>
+                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#C90D11" }} />{p}</li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <p className="font-semibold text-xs mb-1" style={{ color: "#E0170F" }}>Private University (Amity, JIIT, Bennett)</p>
+                    <p className="font-semibold text-xs mb-1" style={{ color: "#C90D11" }}>Private University (Amity, JIIT, Bennett)</p>
                     <ul className="space-y-1 text-xs text-blue-100">
                       {["₹2L–6L fees/yr", "Higher avg placement", "Product co. recruiters", "Better infrastructure"].map(p => (
-                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />{p}</li>
+                        <li key={p} className="flex gap-1.5"><CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color: "#C90D11" }} />{p}</li>
                       ))}
                     </ul>
                   </div>

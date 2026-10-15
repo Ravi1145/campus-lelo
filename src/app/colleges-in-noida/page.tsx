@@ -127,7 +127,7 @@ export default function CollegesInNoidaPage() {
                 ["JEE/CUET", "Entrance Exams"],
               ].map(([val, label]) => (
                 <div key={label} className="bg-white/10 rounded-xl px-4 py-2 text-white">
-                  <span className="font-bold" style={{ color: "#E0170F" }}>{val}</span>
+                  <span className="font-bold" style={{ color: "#C90D11" }}>{val}</span>
                   <span className="ml-1.5 text-blue-100">{label}</span>
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function CollegesInNoidaPage() {
                         </span>
                         {college.naac && (
                           <span className="text-xs px-2 py-0.5 rounded-full font-medium"
-                            style={{ background: "#FFF4F2", color: "#E0170F", border: "1px solid #FFC9BE" }}>
+                            style={{ background: "#FFF4F2", color: "#C90D11", border: "1px solid #FFC9BE" }}>
                             NAAC {college.naac}
                           </span>
                         )}
@@ -252,7 +252,7 @@ export default function CollegesInNoidaPage() {
                     "Bennett, JIIT, Amity: top product recruiters",
                   ].map(point => (
                     <li key={point} className="flex gap-2 text-blue-100">
-                      <CheckCircle2 size={14} className="flex-shrink-0 mt-0.5" style={{ color: "#E0170F" }} />
+                      <CheckCircle2 size={14} className="flex-shrink-0 mt-0.5" style={{ color: "#C90D11" }} />
                       {point}
                     </li>
                   ))}

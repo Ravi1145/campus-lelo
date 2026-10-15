@@ -15,7 +15,7 @@ function RelatedChips({ path, title = "Related MBA searches", inline = false, re
     return (
       <section aria-labelledby="related-mba-heading" className="mt-8 rounded-xl border border-gray-200 bg-white p-5">
         <h2 id="related-mba-heading" className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gray-800">
-          <Search className="h-4 w-4 text-[#E0170F]" aria-hidden="true" /> {title}
+          <Search className="h-4 w-4 text-[#C90D11]" aria-hidden="true" /> {title}
         </h2>
         <ul className="flex flex-wrap gap-2">
           {items.map((i) => (
@@ -32,7 +32,7 @@ function RelatedChips({ path, title = "Related MBA searches", inline = false, re
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 id="related-mba-heading" className="flex items-center gap-2 text-lg font-extrabold text-[#012858] sm:text-xl">
-            <Search className="h-5 w-5 text-[#E0170F]" aria-hidden="true" /> {title}
+            <Search className="h-5 w-5 text-[#C90D11]" aria-hidden="true" /> {title}
           </h2>
           <Link href="/mba" className="group inline-flex items-center gap-1.5 text-sm font-bold text-[#C90D11]">
             All MBA &amp; PGDM guides <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

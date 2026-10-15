@@ -340,7 +340,7 @@ export default function Header() {
                               <li key={e.name}><Link href={e.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{e.name}</Link></li>
                             ))}
                           </ul>
-                          <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#E0170F" }}>
+                          <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#C90D11" }}>
                             Predict your college →
                           </Link>
                         </div>

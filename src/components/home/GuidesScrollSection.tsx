@@ -129,7 +129,7 @@ function GuideCard({ guide }: { guide: GuideCard }) {
       <div className="relative">
         <GuideCover guide={guide} colors={colors} />
         <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-[#012858] shadow-md backdrop-blur">
-          <Icon className="h-3.5 w-3.5 text-[#E0170F]" aria-hidden="true" />
+          <Icon className="h-3.5 w-3.5 text-[#C90D11]" aria-hidden="true" />
           {guide.category}
         </span>
         <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/65 px-2.5 py-1 text-[11px] font-semibold text-white ring-1 ring-white/25 backdrop-blur">

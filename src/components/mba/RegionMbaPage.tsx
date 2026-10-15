@@ -201,7 +201,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
 
           {calendar.length > 0 && (
             <section aria-labelledby="dates-h">
-              <h2 id="dates-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#E0170F]" aria-hidden="true" /> Exam dates you need</h2>
+              <h2 id="dates-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><CalendarClock className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> Exam dates you need</h2>
               <div className="mt-4 overflow-x-auto rounded-2xl bg-white ring-1 ring-gray-200">
                 <table className="w-full min-w-[34rem] text-sm">
                   <caption className="sr-only">Registration and exam dates for the exams accepted here</caption>
@@ -259,9 +259,9 @@ export default function RegionMbaPage({ path }: { path: string }) {
             <h2 id="more-h" className="text-xl font-extrabold text-[#012858]">More MBA pages</h2>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {siblings.map(({ href, def: d }) => (
-                <li key={href}><Link href={href} className="group flex items-center justify-between gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">{siblingLabel(href, d)} <ArrowRight className="h-4 w-4 shrink-0 text-[#E0170F] transition-transform group-hover:translate-x-1" aria-hidden="true" /></Link></li>
+                <li key={href}><Link href={href} className="group flex items-center justify-between gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">{siblingLabel(href, d)} <ArrowRight className="h-4 w-4 shrink-0 text-[#C90D11] transition-transform group-hover:translate-x-1" aria-hidden="true" /></Link></li>
               ))}
-              <li><Link href="/mba-colleges-in-pune" className="group flex items-center justify-between gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">MBA colleges in Pune <ArrowRight className="h-4 w-4 shrink-0 text-[#E0170F] transition-transform group-hover:translate-x-1" aria-hidden="true" /></Link></li>
+              <li><Link href="/mba-colleges-in-pune" className="group flex items-center justify-between gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:text-[#012858] hover:ring-[#012858]">MBA colleges in Pune <ArrowRight className="h-4 w-4 shrink-0 text-[#C90D11] transition-transform group-hover:translate-x-1" aria-hidden="true" /></Link></li>
             </ul>
           </section>
         </div>
