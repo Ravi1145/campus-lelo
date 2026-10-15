@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils"
 interface CompareButtonProps {
   collegeSlug: string
   collegeName: string
+  className?: string
 }
 
 const COMPARE_KEY = "compare_colleges"
 
-export default function CompareButton({ collegeSlug, collegeName }: CompareButtonProps) {
+export default function CompareButton({ collegeSlug, collegeName, className }: CompareButtonProps) {
   const [isSelected, setIsSelected] = useState(false)
   const [compareList, setCompareList] = useState<{ slug: string; name: string }[]>([])
   const router = useRouter()
@@ -53,6 +54,7 @@ export default function CompareButton({ collegeSlug, collegeName }: CompareButto
       onClick={toggleCompare}
       className={cn(
         "flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border transition-all",
+        className,
         isSelected
           ? "bg-navy/10 border-navy/20 text-navy"
           : "border-gray-200 text-gray-600 hover:border-accent/40 hover:text-accent"
