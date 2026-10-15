@@ -170,7 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
-        <main id="main-content" tabIndex={-1} className="flex-1 pt-14 lg:pt-24 outline-none" style={{ marginTop: "var(--leadbar-h, 0px)" }}>
+        <main id="main-content" tabIndex={-1} className="flex-1 pt-14 outline-none" style={{ marginTop: "var(--leadbar-h, 0px)" }}>
           {children}
         </main>
         <Footer />

@@ -156,6 +156,8 @@ const explore = [
   { label: "Career Paths",   href: "/career-paths", icon: TrendingUp },
   { label: "Blog & Guides",  href: "/blog",         icon: BookOpen },
   { label: "Entrance Exams", href: "/exams",        icon: Compass },
+  { label: "Events",         href: "/events",       icon: Star },
+  { label: "Admission Guide", href: "/admission-guide", icon: GraduationCap },
   { label: "All Courses",    href: "/courses",      icon: Star },
   { label: "All Colleges",   href: "/colleges",     icon: Building2 },
 ]
@@ -168,6 +170,7 @@ export default function Header() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled,       setScrolled]       = useState(false)
+  const [progress,       setProgress]       = useState(0)
   const [searchQuery,    setSearchQuery]    = useState("")
   const [liveColleges,   setLiveColleges]   = useState<Record<string, CollegeLink[]>>({})
   const fetchedStreams = useRef<Set<string>>(new Set())
@@ -176,8 +179,13 @@ export default function Header() {
   const timerRef  = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    window.addEventListener("scroll", onScroll)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8)
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0)
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
@@ -217,7 +225,7 @@ export default function Header() {
   }
 
   const navTabCls = (id: string) => cn(
-    "h-full px-3.5 text-sm font-medium flex items-center gap-1 border-b-2 transition-colors whitespace-nowrap",
+    "h-full px-3 text-sm font-medium flex items-center gap-1 border-b-2 transition-colors whitespace-nowrap",
     activeDropdown === id
       ? "text-orange-500 border-orange-500"
       : "text-[#012858] hover:text-orange-500 border-transparent"
@@ -229,201 +237,156 @@ export default function Header() {
         "fixed left-0 right-0 z-50 header-glass transition-[box-shadow,top] duration-200",
         scrolled ? "shadow-md" : "border-b border-gray-100"
       )}>
+        {/* Scroll progress: a thin red line that grows as you read */}
+        <span aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#E0170F]" style={{ transform: `scaleX(${progress})`, transition: "transform 80ms linear" }} />
 
-        {/* ══ TOP BAR ══════════════════════════════════════════ */}
-        <div className="bg-transparent border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[70px] flex items-center gap-4">
+        <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+          {/* Logo */}
+          <Link href="/" className="mr-1 flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
+            <Image src="/logo.webp" alt="CampusLelo: Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-10 w-auto" priority unoptimized />
+          </Link>
 
-            {/* Logo */}
-            <Link href="/" className="flex-shrink-0 mr-3">
-              <Image src="/logo.webp" alt="CampusLelo: Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-12 w-auto" priority unoptimized />
-            </Link>
+          {/* Main navigation (desktop): one row, streams then tools */}
+          <nav aria-label="Main navigation" className="hidden h-full items-center lg:flex">
+            {streams.map(stream => (
+              <div key={stream.label} onMouseEnter={() => open(stream.label)} onMouseLeave={close} className="relative flex h-full items-center">
+                <button className={navTabCls(stream.label)} aria-expanded={activeDropdown === stream.label}>
+                  {stream.label}
+                  <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeDropdown === stream.label && "rotate-180")} />
+                </button>
 
-            {/* Search bar — desktop */}
-            <form onSubmit={handleSearch} className="hidden md:flex flex-1 items-center max-w-xl mx-2">
-              <div className="flex w-full rounded-xl overflow-hidden" style={{ border: "1.5px solid #E5E9F0" }}>
-                <div className="flex items-center pl-3 bg-white">
-                  <Search className="w-4 h-4 flex-shrink-0" style={{ color: "#94A3B8" }} />
+                {activeDropdown === stream.label && (
+                  <div onMouseEnter={keep} onMouseLeave={close}
+                    className="nav-drop absolute left-0 top-full z-50 mt-0 w-[min(580px,calc(100vw-2rem))] rounded-b-2xl bg-white p-5 shadow-2xl"
+                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
+                    <div className="grid grid-cols-3 gap-6">
+                      <div>
+                        <p className="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider" style={{ color: "#64748B" }}>
+                          <Building2 className="h-3 w-3" /> Top Colleges
+                        </p>
+                        <ul className="space-y-1">
+                          {(liveColleges[stream.label] ?? []).map((c, i) => (
+                            <li key={i}><Link href={c.href} className="block truncate py-1 text-sm font-medium transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
+                          ))}
+                          {!liveColleges[stream.label] && (
+                            <li>{[1,2,3].map(i => <div key={i} className="mb-2 h-4 w-4/5 animate-pulse rounded bg-gray-100" />)}</li>
+                          )}
+                          {(liveColleges[stream.label]?.length ?? 0) > 0 && <li className="my-2 border-t border-gray-100" />}
+                          {stream.staticLinks.slice(0, 8).map((c, i) => (
+                            <li key={i}><Link href={c.href} className="block py-0.5 text-xs transition-colors hover:text-orange-500" style={{ color: "#64748B" }}>{c.name}</Link></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider" style={{ color: "#64748B" }}>
+                          <BookOpen className="h-3 w-3" /> Courses
+                        </p>
+                        <ul className="space-y-1">
+                          {stream.courses.map((c, i) => (
+                            <li key={i}><Link href={c.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider" style={{ color: "#64748B" }}>
+                          <Compass className="h-3 w-3" /> Exams
+                        </p>
+                        <ul className="space-y-1">
+                          {stream.exams.map(e => (
+                            <li key={e.name}><Link href={e.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{e.name}</Link></li>
+                          ))}
+                        </ul>
+                        <Link href="/predictor" className="mt-3 block rounded-lg px-3 py-2 text-xs font-semibold transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#C90D11" }}>
+                          Predict your college →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Tools: the three signature tools get a badge */}
+            <div onMouseEnter={() => open("tools")} onMouseLeave={close} className="relative flex h-full items-center">
+              <button className={navTabCls("tools")} aria-expanded={activeDropdown === "tools"}>
+                Tools <span className="rounded-full bg-[#E0170F] px-1.5 py-0.5 text-[9px] font-extrabold uppercase leading-none text-white">New</span>
+                <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeDropdown === "tools" && "rotate-180")} />
+              </button>
+              {activeDropdown === "tools" && (
+                <div onMouseEnter={keep} onMouseLeave={close}
+                  className="nav-drop absolute left-0 top-full z-50 mt-0 w-[min(440px,calc(100vw-2rem))] rounded-b-2xl bg-white p-4 shadow-2xl"
+                  style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
+                  <div className="grid grid-cols-2 gap-2">
+                    {tools.map(t => (
+                      <Link key={t.href} href={t.href} className="group flex items-center gap-3 rounded-xl p-2.5 transition-colors hover:bg-gray-50">
+                        <div className={cn("flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg", t.color)}>
+                          <t.icon className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold transition-colors group-hover:text-orange-500" style={{ color: "#012858" }}>{t.label}</p>
+                          <p className="text-xs" style={{ color: "#64748B" }}>{t.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
+              )}
+            </div>
+
+            {/* Explore */}
+            <div onMouseEnter={() => open("explore")} onMouseLeave={close} className="relative flex h-full items-center">
+              <button className={navTabCls("explore")} aria-expanded={activeDropdown === "explore"}>
+                Explore <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeDropdown === "explore" && "rotate-180")} />
+              </button>
+              {activeDropdown === "explore" && (
+                <div onMouseEnter={keep} onMouseLeave={close}
+                  className="nav-drop absolute left-0 top-full z-50 mt-0 w-72 rounded-b-2xl bg-white p-2 shadow-2xl"
+                  style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
+                  <div className="grid grid-cols-2 gap-0.5">
+                    {explore.map(e => (
+                      <Link key={e.href} href={e.href}
+                        className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-orange-50 hover:text-orange-500"
+                        style={{ color: "#012858" }}>
+                        <e.icon className="h-4 w-4 flex-shrink-0" style={{ color: "#64748B" }} />
+                        {e.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Right side: compact search, counselling, mobile buttons */}
+          <div className="ml-auto flex items-center gap-2">
+            <form onSubmit={handleSearch} className="hidden md:block">
+              <div className="group flex w-44 items-center rounded-full bg-gray-100 pl-3 pr-1 ring-1 ring-transparent transition-all duration-300 focus-within:w-64 focus-within:bg-white focus-within:ring-[#024692]/40 lg:w-40 xl:w-52 xl:focus-within:w-72">
+                <Search className="h-4 w-4 flex-shrink-0" style={{ color: "#64748B" }} aria-hidden="true" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   aria-label="Search colleges, courses, exams and locations"
-                  placeholder="Search colleges, courses, exams, locations..."
-                  className="flex-1 px-3 py-2.5 text-sm bg-white outline-none"
+                  placeholder="Search colleges, exams"
+                  className="min-w-0 flex-1 bg-transparent px-2 py-2 text-sm outline-none"
                   style={{ color: "#0F172A" }}
                 />
-                <button type="submit"
-                  className="px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                  style={{ background: "#E0170F" }}>
-                  Search
-                </button>
               </div>
             </form>
 
-            {/* Right actions */}
-            <div className="flex items-center gap-2 ml-auto">
-              {/* Free Counselling */}
-              <Link href="/counselling" className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                style={{ background: "#E0170F" }}>
-                <Headphones className="w-4 h-4" />
-                <span className="hidden lg:inline">Free Counselling</span>
-              </Link>
+            <Link href="/counselling" className="hidden items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:opacity-95 md:flex" style={{ background: "#E0170F" }}>
+              <Headphones className="h-4 w-4" aria-hidden="true" />
+              <span className="whitespace-nowrap">Free Counselling</span>
+            </Link>
 
-              {/* Mobile: search icon + hamburger */}
-              <button type="button" aria-label="Search colleges" className="md:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
-                <Search className="w-5 h-5" />
-              </button>
-              <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="lg:hidden p-2 rounded-lg hover:bg-gray-100" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
-                <Menu className="w-5 h-5" />
-              </button>
-            </div>
+            <button type="button" aria-label="Search colleges" className="rounded-lg p-2 hover:bg-gray-100 md:hidden" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
+              <Search className="h-5 w-5" />
+            </button>
+            <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="rounded-lg p-2 hover:bg-gray-100 lg:hidden" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
+              <Menu className="h-5 w-5" />
+            </button>
           </div>
         </div>
-
-        {/* ══ BOTTOM NAV (desktop) ══════════════════════════════ */}
-        <nav aria-label="Main navigation" className="hidden lg:block bg-transparent border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center h-11 gap-0">
-
-              {/* Home */}
-              <Link href="/" className={cn(
-                "h-full px-3.5 text-sm font-semibold flex items-center border-b-2 transition-colors",
-                pathname === "/" ? "text-orange-500 border-orange-500" : "text-[#012858] hover:text-orange-500 border-transparent"
-              )}>Home</Link>
-
-              {/* Stream dropdowns */}
-              {streams.map(stream => (
-                <div key={stream.label} onMouseEnter={() => open(stream.label)} onMouseLeave={close} className="relative h-full flex items-center">
-                  <button className={navTabCls(stream.label)}>
-                    {stream.label}
-                    <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", activeDropdown === stream.label && "rotate-180")} />
-                  </button>
-
-                  {activeDropdown === stream.label && (
-                    <div onMouseEnter={keep} onMouseLeave={close}
-                      className="absolute top-full left-0 mt-0 w-[min(580px,calc(100vw-2rem))] bg-white rounded-b-2xl shadow-2xl z-50 p-5"
-                      style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
-                      <div className="grid grid-cols-3 gap-6">
-                        {/* Top Colleges */}
-                        <div>
-                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
-                            <Building2 className="w-3 h-3" /> Top Colleges
-                          </p>
-                          <ul className="space-y-1">
-                            {(liveColleges[stream.label] ?? []).map((c, i) => (
-                              <li key={i}><Link href={c.href} className="block py-1 text-sm font-medium truncate transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
-                            ))}
-                            {!liveColleges[stream.label] && (
-                              <li>{[1,2,3].map(i => <div key={i} className="h-4 bg-gray-100 rounded animate-pulse mb-2 w-4/5" />)}</li>
-                            )}
-                            {(liveColleges[stream.label]?.length ?? 0) > 0 && <li className="border-t border-gray-100 my-2" />}
-                            {stream.staticLinks.map((c, i) => (
-                              <li key={i}><Link href={c.href} className="block py-0.5 text-xs transition-colors hover:text-orange-500" style={{ color: "#64748B" }}>{c.name}</Link></li>
-                            ))}
-                          </ul>
-                        </div>
-                        {/* Courses */}
-                        <div>
-                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
-                            <BookOpen className="w-3 h-3" /> Courses
-                          </p>
-                          <ul className="space-y-1">
-                            {stream.courses.map((c, i) => (
-                              <li key={i}><Link href={c.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{c.name}</Link></li>
-                            ))}
-                          </ul>
-                        </div>
-                        {/* Exams */}
-                        <div>
-                          <p className="text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5" style={{ color: "#94A3B8" }}>
-                            <Compass className="w-3 h-3" /> Exams
-                          </p>
-                          <ul className="space-y-1">
-                            {stream.exams.map(e => (
-                              <li key={e.name}><Link href={e.href} className="block py-1 text-sm transition-colors hover:text-orange-500" style={{ color: "#012858" }}>{e.name}</Link></li>
-                            ))}
-                          </ul>
-                          <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#C90D11" }}>
-                            Predict your college →
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              {/* Tools */}
-              <div onMouseEnter={() => open("tools")} onMouseLeave={close} className="relative h-full flex items-center">
-                <button className={navTabCls("tools")}>
-                  Tools <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", activeDropdown === "tools" && "rotate-180")} />
-                </button>
-                {activeDropdown === "tools" && (
-                  <div onMouseEnter={keep} onMouseLeave={close}
-                    className="absolute top-full left-0 mt-0 w-[min(440px,calc(100vw-2rem))] bg-white rounded-b-2xl shadow-2xl z-50 p-4"
-                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
-                    <div className="grid grid-cols-2 gap-2">
-                      {tools.map(t => (
-                        <Link key={t.href} href={t.href} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
-                          <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0", t.color)}>
-                            <t.icon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold group-hover:text-orange-500 transition-colors" style={{ color: "#012858" }}>{t.label}</p>
-                            <p className="text-xs" style={{ color: "#94A3B8" }}>{t.desc}</p>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Explore */}
-              <div onMouseEnter={() => open("explore")} onMouseLeave={close} className="relative h-full flex items-center">
-                <button className={navTabCls("explore")}>
-                  Explore <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", activeDropdown === "explore" && "rotate-180")} />
-                </button>
-                {activeDropdown === "explore" && (
-                  <div onMouseEnter={keep} onMouseLeave={close}
-                    className="absolute top-full left-0 mt-0 w-72 bg-white rounded-b-2xl shadow-2xl z-50 p-2"
-                    style={{ border: "1px solid #E5E9F0", borderTop: "2px solid #E0170F" }}>
-                    <div className="grid grid-cols-2 gap-0.5">
-                      {explore.map(e => (
-                        <Link key={e.href} href={e.href}
-                          className="flex items-center gap-2.5 px-3 py-2.5 text-sm rounded-lg transition-colors hover:bg-orange-50 hover:text-orange-500"
-                          style={{ color: "#012858" }}>
-                          <e.icon className="w-4 h-4 flex-shrink-0" style={{ color: "#94A3B8" }} />
-                          {e.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Divider */}
-              <div className="w-px h-5 mx-2 flex-shrink-0" style={{ background: "#E5E9F0" }} />
-
-              {/* Right links */}
-              {[
-                { label: "Blogs",           href: "/blog" },
-                { label: "Events",          href: "/events" },
-                { label: "Admission Guide", href: "/admission-guide" },
-              ].map(item => (
-                <Link key={item.href} href={item.href} className={cn(
-                  "h-full px-3 text-sm font-medium flex items-center border-b-2 transition-colors whitespace-nowrap",
-                  pathname.startsWith(item.href)
-                    ? "text-orange-500 border-orange-500"
-                    : "text-[#012858] hover:text-orange-500 border-transparent"
-                )}>{item.label}</Link>
-              ))}
-
-            </div>
-          </div>
-        </nav>
       </header>
 
       {/* ══ MOBILE SLIDE-OVER ═════════════════════════════════ */}

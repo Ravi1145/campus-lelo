@@ -556,3 +556,14 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 .us-note { animation: us-note 4s ease-in-out infinite; }
 @keyframes us-note { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(-1deg) translateY(-4px); } }
 @media (prefers-reduced-motion: reduce) { .us-note { animation: none !important; } }
+
+/* Header dropdowns fade and slide in */
+.nav-drop { animation: nav-drop .18s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes nav-drop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .nav-drop { animation: none !important; } }
+
+/* Hero: soft drifting colour orbs */
+.hero-orb { animation: hero-orb 14s ease-in-out infinite alternate; }
+.hero-orb--b { animation-duration: 18s; animation-direction: alternate-reverse; }
+@keyframes hero-orb { from { transform: translate(0, 0) scale(1); } to { transform: translate(28px, 18px) scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .hero-orb { animation: none !important; } }
