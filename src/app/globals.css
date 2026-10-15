@@ -318,7 +318,7 @@ html, body {
 
 /* Horizontal card rails: edge fades + hover lift for cards inside */
 .rail-fade {
-  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(to right, black calc(100% - 32px), transparent 100%);
 }
 .rail-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .rail-card:hover { transform: translateY(-2px); }

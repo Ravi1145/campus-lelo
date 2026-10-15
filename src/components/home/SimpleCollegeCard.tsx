@@ -31,7 +31,7 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
     <Link href={collegeHref(college.slug)} className="group block h-full rounded-2xl">
       <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300 hover:ring-[#012858]/40">
         {/* Header: logo, name, location, badges */}
-        <div className="relative p-4" style={{ backgroundImage: `url(${COLLEGE_BANNER})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="relative flex min-h-[8.75rem] flex-col justify-between p-4" style={{ backgroundImage: `url(${COLLEGE_BANNER})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#011B40]/75 to-[#012858]/80" />
           <div className="relative flex items-start gap-3">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md">
@@ -67,7 +67,7 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
         {/* Body */}
         <div className="flex flex-1 flex-col gap-3 p-4">
           <dl className="grid grid-cols-2 gap-2">
-            <div className="rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
+            <div className="min-h-[3.5rem] rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
               <dt className="text-[10px] font-bold uppercase tracking-wide text-gray-600">Fees</dt>
               <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{fees}</dd>
             </div>
@@ -77,13 +77,13 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
                 <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{placement}</dd>
               </div>
             )}
-            <div className="rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
+            <div className="min-h-[3.5rem] rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
               <dt className="text-[10px] font-bold uppercase tracking-wide text-gray-600">Courses</dt>
               <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{college.courses.length}</dd>
             </div>
           </dl>
 
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex min-h-[3.25rem] flex-wrap content-start gap-1.5">
             <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-semibold text-gray-700">{college.stream}</span>
             {college.entranceExams.slice(0, 2).map((e) => (
               <span key={e} className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-semibold text-gray-700">{e}</span>
