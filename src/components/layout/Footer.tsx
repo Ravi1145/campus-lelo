@@ -61,7 +61,6 @@ const footerLinks = {
   "Engineering & MBA": [
     { label: "Engineering Colleges Pune",   href: "/engineering-colleges-pune" },
     { label: "Top 10 Engineering Colleges", href: "/top-10-engineering-colleges-in-pune" },
-    { label: "Placement Rankings",          href: "/engineering-colleges-pune" },
     { label: "Low Fees Engineering",        href: "/low-fees-engineering-colleges-pune" },
     { label: "MBA Colleges Pune",           href: "/mba-colleges-pune" },
     { label: "Top 10 MBA Colleges",         href: "/top-10-mba-colleges-in-pune" },
@@ -99,7 +98,6 @@ const seoLinks = [
   { label: "Medical Colleges Pune",              href: "/medical-colleges-pune" },
   { label: "Private Engineering Colleges Pune",  href: "/private-engineering-colleges-pune" },
   { label: "Private MBA Colleges Pune",          href: "/private-mba-colleges-pune" },
-  { label: "Engineering Placement 2026",         href: "/engineering-colleges-pune" },
   { label: "MBA Placement 2026",                 href: "/mba-colleges-in-pune" },
   { label: "Cheapest Engineering Colleges",      href: "/low-fees-engineering-colleges-pune" },
   { label: "Cheapest MBA Colleges",              href: "/low-fees-mba-colleges-pune" },
@@ -181,7 +179,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 {links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label + link.href}>
                     <Link
                       href={link.href}
                       className="text-xs text-gray-400 hover:text-white transition-colors leading-snug"

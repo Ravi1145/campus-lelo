@@ -87,7 +87,7 @@ export default function PuneCollegeGuide() {
             </h3>
             <ul className="grid sm:grid-cols-2 gap-1.5">
               {streamLinks.map(link => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link href={link.href}
                     className="flex items-center justify-between py-2 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors group"
                     style={{ color: "#012858" }}>
@@ -109,7 +109,7 @@ export default function PuneCollegeGuide() {
               </h3>
               <ul className="space-y-1">
                 {examLinks.map(link => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link href={link.href}
                       className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
                       style={{ color: "#012858" }}>
@@ -127,7 +127,7 @@ export default function PuneCollegeGuide() {
               </h3>
               <ul className="space-y-1">
                 {toolLinks.map(link => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link href={link.href}
                       className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
                       style={{ color: "#012858" }}>
@@ -146,7 +146,7 @@ export default function PuneCollegeGuide() {
             </h3>
             <ul className="space-y-1 mb-6">
               {resourceLinks.map(link => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link href={link.href}
                     className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     style={{ color: "#012858" }}>
@@ -187,7 +187,7 @@ export default function PuneCollegeGuide() {
           </div>
           <ul className="grid sm:grid-cols-3 gap-1">
             {noidaLinks.map(link => (
-              <li key={link.href}>
+              <li key={link.label}>
                 <Link href={link.href}
                   className="block py-1.5 px-3 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
                   style={{ color: "#012858" }}>

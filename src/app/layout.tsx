@@ -3,10 +3,8 @@ import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
-import AIChatWidget from "@/components/ai/AIChatWidget"
 import { CompareFloatingBar } from "@/components/ui/CompareButton"
 import LeadWidgets from "@/components/leads/LeadWidgets"
-import LeadBar from "@/components/leads/LeadBar"
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -162,13 +160,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8MN7G8X" title="Google Tag Manager" height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
         </noscript>
         <a href="#main-content" className="skip-link">Skip to main content</a>
-        <LeadBar />
         <Header />
         <main id="main-content" tabIndex={-1} className="flex-1 pt-14 lg:pt-24 outline-none" style={{ marginTop: "var(--leadbar-h, 0px)" }}>
           {children}
         </main>
         <Footer />
-        <AIChatWidget />
         <CompareFloatingBar />
         <LeadWidgets />
       </body>

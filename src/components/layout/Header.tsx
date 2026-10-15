@@ -19,7 +19,6 @@ const streams = [
     staticLinks: [
       { name: "Engineering Colleges Guide 2026 →", href: "/engineering-colleges-pune" },
       { name: "Top 10 Engineering Colleges →",     href: "/top-10-engineering-colleges-in-pune" },
-      { name: "Placement Rankings 2026 →",          href: "/engineering-colleges-pune" },
       { name: "Low Fees Colleges →",               href: "/low-fees-engineering-colleges-pune" },
       { name: "All Engineering Colleges →",         href: "/colleges?stream=Engineering" },
     ],
@@ -260,31 +259,9 @@ export default function Header() {
 
             {/* Right actions */}
             <div className="flex items-center gap-2 ml-auto">
-              {/* Pune picker */}
-              <button className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-medium transition-colors hover:bg-gray-50 flex-shrink-0"
-                style={{ border: "1.5px solid #E5E9F0", color: "#012858" }}>
-                <MapPin className="w-3.5 h-3.5" style={{ color: "#E0170F" }} />
-                Pune
-                <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
-              </button>
-
-              {/* Compare */}
-              <Link href="/compare" className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-medium transition-colors hover:bg-gray-50 flex-shrink-0"
-                style={{ border: "1.5px solid #E5E9F0", color: "#012858" }}>
-                <BarChart3 className="w-3.5 h-3.5" />
-                Compare
-              </Link>
-
-              {/* AI Finder */}
-              <Link href="/ai-finder" className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                style={{ background: "#E0170F" }}>
-                <Sparkles className="w-4 h-4" />
-                <span className="hidden lg:inline">AI Finder</span>
-              </Link>
-
               {/* Free Counselling */}
               <Link href="/counselling" className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 flex-shrink-0"
-                style={{ background: "#012858" }}>
+                style={{ background: "#E0170F" }}>
                 <Headphones className="w-4 h-4" />
                 <span className="hidden lg:inline">Free Counselling</span>
               </Link>
@@ -364,7 +341,7 @@ export default function Header() {
                             ))}
                           </ul>
                           <Link href="/predictor" className="mt-3 block text-xs font-semibold px-3 py-2 rounded-lg transition-colors hover:bg-orange-100" style={{ background: "#FFF4F2", color: "#E0170F" }}>
-                            🎯 Predict your college →
+                            Predict your college →
                           </Link>
                         </div>
                       </div>
@@ -429,7 +406,6 @@ export default function Header() {
               {[
                 { label: "Blogs",           href: "/blog" },
                 { label: "Events",          href: "/events" },
-                { label: "Placements",      href: "/colleges" },
                 { label: "Admission Guide", href: "/admission-guide" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className={cn(

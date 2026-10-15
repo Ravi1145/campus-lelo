@@ -4,21 +4,14 @@ import dynamic from "next/dynamic"
 
 // ── Critical above-fold sections (server-render immediately) ──────────────────
 import HeroSection from "@/components/home/HeroSection"
-import CollegeMarquee from "@/components/home/CollegeMarquee"
 import BrowseByStream from "@/components/home/BrowseByStream"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
-const FeaturedCourses     = dynamic(() => import("@/components/home/FeaturedCourses"))
 const AIFinderBand        = dynamic(() => import("@/components/home/AIFinderBand"))
 const HowItWorks          = dynamic(() => import("@/components/home/HowItWorks"))
-const ExamCalendar        = dynamic(() => import("@/components/home/ExamCalendar"))
-const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNewsSection"))
-const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
-const RankingTables       = dynamic(() => import("@/components/home/RankingTables"))
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
-const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
 import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
 import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import NextSteps from "@/components/seo/NextSteps"
@@ -98,8 +91,6 @@ export default function HomePage() {
         {/* 1. Hero */}
         <HeroSection />
 
-        {/* 2. Trust strip — partner college marquee */}
-        <CollegeMarquee />
 
         {/* 3. Browse by Stream */}
         <BrowseByStream />
@@ -108,8 +99,6 @@ export default function HomePage() {
         {/* 4. Featured Colleges */}
         <FeaturedColleges />
 
-        {/* 5. Featured Courses */}
-        <FeaturedCourses />
 
         {/* 6. AI Finder band */}
         <AIFinderBand />
@@ -117,21 +106,12 @@ export default function HomePage() {
         {/* 7. How it works */}
         <HowItWorks />
 
-        {/* 8. Exams & Deadlines */}
-        <ExamCalendar generatedAt={Date.now()} />
-        <HomepageNewsSection />
 
-        {/* 9. Social proof */}
-        <TestimonialsSection />
 
-        {/* 10. NIRF rankings */}
-        <RankingTables />
 
         {/* 11. FAQ + Final CTA */}
         <FAQSection />
 
-        {/* 12. Guides */}
-        <GuidesScrollSection />
 
         {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
         <WhatIsCampusLelo />
@@ -146,6 +126,8 @@ export default function HomePage() {
             { href: "/colleges-in-greater-noida", label: "Colleges in Greater Noida" },
             { href: "/career-paths", label: "Career paths" },
             { href: "/courses", label: "Courses" },
+            { href: "/blog", label: "Blog and guides" },
+            { href: "/exams", label: "Entrance exams" },
             { href: "/events", label: "Admission events" },
             { href: "/news", label: "Admission news" },
             { href: "/qa", label: "Student Q&A" },
