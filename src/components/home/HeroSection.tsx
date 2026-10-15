@@ -28,13 +28,17 @@ const POPULAR = [
   { label: "Law", href: "/colleges?stream=Law" },
 ]
 
-const STATS = [
-  { icon: Building2, value: 100, suffix: "+", label: "Colleges profiled" },
-  { icon: GraduationCap, value: 50, suffix: "+", label: "Courses & streams" },
-  { icon: Users, value: 0, suffix: "", text: "Free", label: "College search & shortlist" },
-  { icon: FileText, value: 9, suffix: "", label: "MBA exam guides" },
-  { icon: ShieldCheck, value: 0, suffix: "", text: "Sourced", label: "Exam & admission data" },
-]
+export interface HeroProof { programmes: number; exams: number; cutoffs: number; checked: string }
+
+function buildStats(p: HeroProof) {
+  return [
+    { icon: Building2, value: p.programmes, suffix: "", label: "MBA programmes checked against official pages" },
+    { icon: FileText, value: p.exams, suffix: "", label: "MBA exam guides with sources" },
+    { icon: GraduationCap, value: p.cutoffs, suffix: "", label: "Institutes with published cut-offs" },
+    { icon: Users, value: 0, suffix: "", text: "Free", label: "Phone counselling" },
+    { icon: ShieldCheck, value: 0, suffix: "", text: p.checked, label: "Latest source check" },
+  ] as { icon: typeof Building2; value: number; suffix: string; text?: string; label: string }[]
+}
 
 const DAY = 86_400_000
 
@@ -92,7 +96,8 @@ function CountUp({ to, suffix, start }: { to: number; suffix: string; start: boo
   return <>{start ? v : to}{suffix}</>
 }
 
-export default function HeroSection() {
+export default function HeroSection({ proof }: { proof: HeroProof }) {
+  const STATS = useMemo(() => buildStats(proof), [proof])
   const router = useRouter()
   const [tab, setTab] = useState<"search" | "filter">("search")
   const [q, setQ] = useState("")

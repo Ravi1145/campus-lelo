@@ -4,6 +4,10 @@ import dynamic from "next/dynamic"
 
 // ── Critical above-fold sections (server-render immediately) ──────────────────
 import HeroSection from "@/components/home/HeroSection"
+import StartHere from "@/components/home/StartHere"
+import { programAdmissions } from "@/data/mba/programAdmissions"
+import { publishedCutoffs } from "@/data/mba/cutoffs"
+import { mbaExams } from "@/data/mba/exams"
 import BrowseByStream from "@/components/home/BrowseByStream"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
@@ -54,6 +58,15 @@ export const metadata: Metadata = genMeta({
 
 const faqData = homeFaqs.map((f) => ({ question: f.q, answer: f.a }))
 
+const checkedDates = programAdmissions.map((p) => p.source.accessed).sort()
+const latestCheck = checkedDates[checkedDates.length - 1]
+const proof = {
+  programmes: programAdmissions.length,
+  exams: mbaExams.length,
+  cutoffs: publishedCutoffs.length,
+  checked: new Date(latestCheck + "T00:00:00Z").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }),
+}
+
 export default function HomePage() {
   return (
     <>
@@ -92,7 +105,10 @@ export default function HomePage() {
 
       <div>
         {/* 1. Hero */}
-        <HeroSection />
+        <HeroSection proof={proof} />
+
+        {/* Tools and the proof behind them */}
+        <StartHere proof={proof} />
 
 
         {/* 3. Browse by Stream */}
