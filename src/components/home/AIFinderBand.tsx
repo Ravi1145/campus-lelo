@@ -45,7 +45,7 @@ export default function AIFinderBand() {
   }
 
   return (
-    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden bg-gradient-to-br from-[#011B40] via-[#012858] to-[#0B1E52] px-4 sm:px-6 py-16 sm:py-20">
+    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden bg-[#011B40] px-4 sm:px-6 py-16 sm:py-20">
       {/* Floating brand glows */}
       <span aria-hidden="true" className="insights-orb pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-[#E0170F]/25 blur-3xl" />
       <span aria-hidden="true" className="insights-orb insights-orb--slow pointer-events-none absolute -bottom-24 right-10 h-80 w-80 rounded-full bg-[#024692]/50 blur-3xl" />
@@ -59,7 +59,7 @@ export default function AIFinderBand() {
           </span>
           <h2 id="ai-finder-heading" className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
             Not sure where to apply?
-            <span className="block bg-gradient-to-r from-[#FB4312] to-[#FF9E8A] bg-clip-text text-transparent">Answer 4 questions.</span>
+            <span className="block text-[#FF8A73]">Answer 4 questions.</span>
           </h2>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-blue-100">
             Tell us your stream, exam, score and budget. Our AI recommender suggests Pune colleges that fit, and explains why.
@@ -108,7 +108,7 @@ export default function AIFinderBand() {
             </div>
             <button
               type="submit"
-              className="group mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#E0170F] to-[#C90D11] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/30 transition-transform hover:-translate-y-0.5"
+              className="group mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#C90D11]"
             >
               <Sparkles className="h-4 w-4" aria-hidden="true" /> Get my AI shortlist
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

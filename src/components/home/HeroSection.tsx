@@ -65,7 +65,7 @@ function RotatingWord() {
   return (
     // Own line with fixed height so words of different widths never reflow the heading
     <span aria-hidden="true" className="relative flex h-[1.15em] overflow-hidden">
-      <span key={ROTATING[i]} className="hero-word inline-block bg-gradient-to-r from-[#E0170F] to-[#FB4312] bg-clip-text text-transparent">
+      <span key={ROTATING[i]} className="hero-word inline-block text-[#E0170F]">
         {ROTATING[i]}
       </span>
     </span>

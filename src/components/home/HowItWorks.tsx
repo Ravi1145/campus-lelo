@@ -19,12 +19,12 @@ export default function HowItWorks() {
 
         <ol className="relative mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {/* Connector — draws itself from left to right when revealed */}
-          <span aria-hidden="true" className="how-line absolute left-[16.6%] right-[16.6%] top-[2.15rem] hidden h-0.5 rounded-full bg-gradient-to-r from-[#E0170F] via-[#FB4312] to-[#024692] md:block" />
+          <span aria-hidden="true" className="how-line absolute left-[16.6%] right-[16.6%] top-[2.15rem] hidden h-0.5 rounded-full bg-[#CBD5E1] md:block" />
           {STEPS.map(({ icon: Icon, title, desc }, i) => (
             <li key={title} className="reveal-item relative" style={{ "--i": i + 1 } as React.CSSProperties}>
               <div className="group mt-9 flex h-[calc(100%-2.25rem)] flex-col items-center rounded-2xl bg-white p-6 pt-0 text-center ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-orange-200">
                 <span className="relative -mt-9 flex h-[4.5rem] w-[4.5rem] items-center justify-center">
-                  <span aria-hidden="true" className="absolute inset-0 rounded-full bg-gradient-to-br from-[#E0170F] to-[#024692] opacity-90 transition-transform duration-500 group-hover:rotate-180" />
+                  <span aria-hidden="true" className="absolute inset-0 rounded-full bg-[#012858]" />
                   <span className="relative flex h-[3.9rem] w-[3.9rem] items-center justify-center rounded-full bg-white">
                     <Icon className="h-7 w-7 text-[#012858] transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                   </span>
