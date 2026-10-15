@@ -532,3 +532,12 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
   .hw-chip, .hw-fill, .hw-thumb, .hw-in, .hw-tick, .hw-dot, .hw-msg1, .hw-msg2, .hw-typing, .hw-card { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
   .hw-typing { opacity: 0 !important; }
 }
+
+/* Start here: signature tool cards */
+.us-card { transition: transform .3s ease, box-shadow .3s ease; }
+.us-card:hover { transform: translateY(-5px); }
+.us-shine { animation: us-shine 5s ease-in-out infinite; }
+@keyframes us-shine { 0%, 55% { transform: translateX(0) skewX(-12deg); opacity: 0; } 65% { opacity: 1; } 100% { transform: translateX(520%) skewX(-12deg); opacity: 0; } }
+.us-hint { animation: us-hint 1.6s ease-in-out infinite; }
+@keyframes us-hint { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@media (prefers-reduced-motion: reduce) { .us-card, .us-shine, .us-hint { animation: none !important; transition: none !important; transform: none !important; } .us-shine { display: none; } }
