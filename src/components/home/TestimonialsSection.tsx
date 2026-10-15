@@ -67,7 +67,7 @@ function CutoffArt() {
 // Small mock-ups on the right of each row. Labels only, no figures.
 function CompareMini() {
   return (
-    <div className="hidden w-44 shrink-0 rounded-xl bg-white p-2.5 ring-1 ring-gray-200 md:block" aria-hidden="true">
+    <div className="hidden w-32 shrink-0 rounded-lg bg-white p-1.5 ring-1 ring-gray-200 md:block" aria-hidden="true">
       <div className="mb-1.5 grid grid-cols-[3.2rem_1fr_1fr] gap-1.5"><span /><span className="h-5 rounded bg-blue-100" /><span className="h-5 rounded bg-orange-100" /></div>
       {["Fees", "Exams", "NAAC", "Hostel"].map((r) => (
         <div key={r} className="grid grid-cols-[3.2rem_1fr_1fr] items-center gap-1.5 py-1 text-[9px] font-semibold text-gray-500"><span>{r}</span><span className="h-1 rounded-full bg-gray-200" /><span className="h-1 rounded-full bg-gray-200" /></div>
@@ -78,10 +78,10 @@ function CompareMini() {
 
 function FinderMini() {
   return (
-    <div className="hidden w-44 shrink-0 flex-wrap justify-end gap-1.5 md:flex" aria-hidden="true">
-      <span className="hw-in inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-[11px] font-bold text-[#012858] ring-1 ring-gray-200" style={{ "--r": 0 } as React.CSSProperties}><Sparkles className="h-3 w-3 text-[#E0170F]" /> Your profile</span>
+    <div className="hidden w-32 shrink-0 flex-wrap justify-end gap-1 md:flex" aria-hidden="true">
+      <span className="hw-in inline-flex items-center gap-1 rounded-full bg-white px-2 py-0.5 text-[10px] font-bold text-[#012858] ring-1 ring-gray-200" style={{ "--r": 0 } as React.CSSProperties}><Sparkles className="h-3 w-3 text-[#E0170F]" /> Your profile</span>
       {["MBA", "Pune", "Your percentile", "Your budget"].map((t, i) => (
-        <span key={t} className="hw-in rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-gray-600 ring-1 ring-gray-200" style={{ "--r": i + 1 } as React.CSSProperties}>{t}</span>
+        <span key={t} className="hw-in rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold text-gray-600 ring-1 ring-gray-200" style={{ "--r": i + 1 } as React.CSSProperties}>{t}</span>
       ))}
     </div>
   )
@@ -89,20 +89,20 @@ function FinderMini() {
 
 function ExamMini() {
   return (
-    <div className="hidden w-40 shrink-0 md:block" aria-hidden="true">
-      <p className="us-note -rotate-3 rounded-sm bg-[#FFF1C2] px-3 py-2 font-[family-name:var(--font-fraunces)] text-sm italic leading-tight text-[#4a3b00] shadow-md">Stay updated.<br />Never miss important dates!</p>
+    <div className="hidden w-28 shrink-0 md:block" aria-hidden="true">
+      <p className="us-note -rotate-3 rounded-sm bg-[#FFF1C2] px-2 py-1 font-[family-name:var(--font-fraunces)] text-[11px] italic leading-tight text-[#4a3b00] shadow-md">Stay updated.<br />Never miss important dates!</p>
     </div>
   )
 }
 
 function CutoffMini() {
   return (
-    <div className="hidden w-44 shrink-0 items-center gap-2 md:flex" aria-hidden="true">
-      <svg viewBox="0 0 90 50" className="h-14 w-24" fill="none">
+    <div className="hidden w-32 shrink-0 items-center gap-1 md:flex" aria-hidden="true">
+      <svg viewBox="0 0 90 50" className="h-9 w-16" fill="none">
         <path className="sg-draw" pathLength={1} d="M4 40 L22 30 L38 34 L58 16 L84 8" stroke="#012858" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <circle className="sg-pop" cx="84" cy="8" r="3.5" fill="#E0170F" />
       </svg>
-      <span className="rounded-lg bg-white px-2.5 py-1.5 text-[10px] font-bold leading-tight text-[#012858] shadow ring-1 ring-gray-200">Past-year<br />cut-off trends</span>
+      <span className="rounded-md bg-white px-1.5 py-1 text-[9px] font-bold leading-tight text-[#012858] shadow ring-1 ring-gray-200">Past-year<br />cut-off trends</span>
     </div>
   )
 }
@@ -116,76 +116,76 @@ const TOOLS = [
 
 export default function TestimonialsSection() {
   return (
-    <section aria-labelledby="why-heading" className="relative overflow-hidden section-ivory px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="why-heading" className="relative overflow-hidden section-ivory px-4 py-7 sm:px-6 sm:py-8">
       <span aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-orange-50" />
       <Reveal className="relative mx-auto max-w-7xl">
         <div className="reveal-item flex items-start justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>
           <div className="max-w-2xl">
             <p className="inline-block border-b-2 border-[#E0170F] pb-0.5 text-xs font-bold uppercase tracking-widest text-[#C90D11]">Only at CampusLelo</p>
-            <h2 id="why-heading" className="mt-3 font-[family-name:var(--font-fraunces)] text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Tools for comparing colleges, and a person to ask</h2>
-            <p className="mt-2 text-sm leading-relaxed text-gray-600">Free for students. Use the tools <span className="border-b-2 border-[#F4604A]">on your own</span>, or ask a counsellor when you get stuck.</p>
+            <h2 id="why-heading" className="mt-2 font-[family-name:var(--font-fraunces)] text-xl font-bold leading-tight text-[#012858] sm:text-2xl">Tools for comparing colleges, and a person to ask</h2>
+            <p className="mt-1 text-xs leading-relaxed text-gray-600">Free for students. Use the tools <span className="border-b-2 border-[#F4604A]">on your own</span>, or ask a counsellor when you get stuck.</p>
           </div>
-          <p aria-hidden="true" className="hidden -rotate-6 text-right font-[family-name:var(--font-fraunces)] text-base italic leading-tight text-[#012858] md:block">Same dreams.<br />Smarter choices.</p>
+          <p aria-hidden="true" className="hidden -rotate-6 text-right font-[family-name:var(--font-fraunces)] text-sm italic leading-tight text-[#012858] md:block">Same dreams.<br />Smarter choices.</p>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-12">
+        <div className="mt-4 grid grid-cols-1 gap-3.5 lg:grid-cols-12">
           {/* Counselling: a conversation, then the offer */}
-          <div className="reveal-item relative overflow-hidden rounded-2xl bg-[#011B40] p-5 text-white lg:col-span-5" style={{ "--i": 1 } as React.CSSProperties}>
+          <div className="reveal-item relative overflow-hidden rounded-xl bg-[#011B40] p-3.5 text-white lg:col-span-5 lg:self-start" style={{ "--i": 1 } as React.CSSProperties}>
             <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-100"><MessageCircle className="h-4 w-4" aria-hidden="true" /> Ask our counsellor <span className="ml-1 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold normal-case tracking-normal text-blue-200">Example chat</span></p>
-            <div className="mt-3 space-y-2.5" aria-hidden="true">
-              <div className="bubble bubble-left max-w-[88%] rounded-2xl rounded-bl-md bg-white/15 px-3.5 py-2.5 text-sm text-blue-50" style={{ "--b": 0 } as React.CSSProperties}>
+            <div className="mt-2 space-y-1.5" aria-hidden="true">
+              <div className="bubble bubble-left max-w-[88%] rounded-xl rounded-bl-md bg-white/15 px-2.5 py-1.5 text-xs text-blue-50" style={{ "--b": 0 } as React.CSSProperties}>
                 I have a CMAT score and no CAT. What can I apply to?
               </div>
               <div className="bubble bubble-right flex items-end gap-2" style={{ "--b": 1 } as React.CSSProperties}>
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#E0170F] text-[10px] font-bold">CL</span>
-                <span className="rounded-2xl rounded-bl-md bg-white/10 px-3.5 py-2.5 text-sm text-white">Let&apos;s check which colleges accept CMAT, then shortlist by your budget and city.</span>
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E0170F] text-[9px] font-bold">CL</span>
+                <span className="rounded-xl rounded-bl-md bg-white/10 px-2.5 py-1.5 text-xs text-white">Let&apos;s check which colleges accept CMAT, then shortlist by your budget and city.</span>
               </div>
-              <div className="bubble bubble-left inline-flex items-center gap-1.5 rounded-2xl rounded-bl-md bg-white/10 px-3.5 py-2.5" style={{ "--b": 2 } as React.CSSProperties}>
+              <div className="bubble bubble-left inline-flex items-center gap-1 rounded-xl rounded-bl-md bg-white/10 px-2.5 py-1.5" style={{ "--b": 2 } as React.CSSProperties}>
                 <span className="typing-dot" /><span className="typing-dot" style={{ animationDelay: "0.15s" }} /><span className="typing-dot" style={{ animationDelay: "0.3s" }} />
               </div>
             </div>
 
-            <h3 className="mt-5 font-[family-name:var(--font-fraunces)] text-xl font-bold leading-tight">Get guidance that fits you</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-blue-100">Not sure which colleges you can get into? Start with a free call, or book an expert video session for CAP rounds and a personal shortlist.</p>
+            <h3 className="mt-3 font-[family-name:var(--font-fraunces)] text-base font-bold leading-tight">Get guidance that fits you</h3>
+            <p className="mt-1 text-xs leading-snug text-blue-100">Not sure which colleges you can get into? Start with a free call, or book an expert video session for CAP rounds and a personal shortlist.</p>
 
-            <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
-              <Link href="/counselling#plans" className="group flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/15 transition-colors hover:bg-white/10">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/15"><Phone className="h-4 w-4" aria-hidden="true" /></span>
-                <span className="min-w-0 flex-1"><span className="block text-sm font-bold">Free call</span><span className="block text-xs text-blue-100">Scholarships, alumni, forms and deadlines.</span></span>
+            <div className="mt-2.5 grid gap-2 sm:grid-cols-2">
+              <Link href="/counselling#plans" className="group flex items-start gap-2 rounded-lg bg-white/5 p-2 ring-1 ring-white/15 transition-colors hover:bg-white/10">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/15"><Phone className="h-3 w-3" aria-hidden="true" /></span>
+                <span className="min-w-0 flex-1"><span className="block text-xs font-bold">Free call</span><span className="block text-[10px] leading-snug text-blue-100">Scholarships, alumni, forms and deadlines.</span></span>
               </Link>
-              <Link href="/counselling#plans" className="group flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/15 transition-colors hover:bg-white/10">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#E0170F]"><Video className="h-4 w-4" aria-hidden="true" /></span>
-                <span className="min-w-0 flex-1"><span className="block text-sm font-bold">Video session · ₹{VIDEO_PRICE_INR}</span><span className="block text-xs text-blue-100">CAP rounds, career choice, a personal shortlist.</span></span>
+              <Link href="/counselling#plans" className="group flex items-start gap-2 rounded-lg bg-white/5 p-2 ring-1 ring-white/15 transition-colors hover:bg-white/10">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#E0170F]"><Video className="h-3 w-3" aria-hidden="true" /></span>
+                <span className="min-w-0 flex-1"><span className="block text-xs font-bold">Video session · ₹{VIDEO_PRICE_INR}</span><span className="block text-[10px] leading-snug text-blue-100">CAP rounds, career choice, a personal shortlist.</span></span>
               </Link>
             </div>
 
-            <Link href="/counselling#plans" className="group mt-4 flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#C90D11]">
-              Talk to an expert <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            <Link href="/counselling#plans" className="group mt-2.5 flex min-h-9 w-full items-center justify-center gap-1.5 rounded-lg bg-[#E0170F] px-4 py-1.5 text-xs font-bold text-white transition-colors hover:bg-[#C90D11]">
+              Talk to an expert <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
 
           {/* The tools: one numbered row each */}
-          <ol className="grid content-start gap-3 lg:col-span-7">
+          <ol className="grid content-start gap-2 lg:col-span-7">
             {TOOLS.map(({ art: Art, mini: Mini, title, desc, href, cta }, i) => (
               <li key={title} className="reveal-item" style={{ "--i": i + 2 } as React.CSSProperties}>
-                <Link href={href} className="group relative flex items-center gap-4 rounded-2xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-200 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
-                  <span className="absolute left-3 top-2 font-[family-name:var(--font-fraunces)] text-xs font-bold text-gray-400" aria-hidden="true">0{i + 1}</span>
-                  <span className="mt-3 h-14 w-14 shrink-0 rounded-xl bg-white p-1.5 ring-1 ring-gray-200 sm:h-16 sm:w-16"><Art /></span>
+                <Link href={href} className="group relative flex items-center gap-3 rounded-xl bg-white p-2.5 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-200 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
+                  <span className="absolute left-2 top-1 font-[family-name:var(--font-fraunces)] text-[10px] font-bold text-gray-400" aria-hidden="true">0{i + 1}</span>
+                  <span className="mt-2 h-10 w-10 shrink-0 rounded-lg bg-white p-1 ring-1 ring-gray-200"><Art /></span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-[family-name:var(--font-fraunces)] text-lg font-bold text-[#012858]">{title}</span>
-                    <span className="mt-0.5 block text-sm leading-relaxed text-gray-600">{desc}</span>
-                    <span className="mt-1.5 inline-flex min-h-8 items-center gap-1.5 text-sm font-bold text-[#C90D11]">{cta} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
+                    <span className="block font-[family-name:var(--font-fraunces)] text-sm font-bold text-[#012858]">{title}</span>
+                    <span className="block text-xs leading-snug text-gray-600">{desc}</span>
+                    <span className="mt-0.5 inline-flex min-h-7 items-center gap-1 text-xs font-bold text-[#C90D11]">{cta} <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
                   </span>
                   <Mini />
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-3 w-3" aria-hidden="true" /></span>
                 </Link>
               </li>
             ))}
           </ol>
         </div>
 
-        <p className="reveal-item mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm text-gray-600" style={{ "--i": 7 } as React.CSSProperties}>
-          <BadgeCheck className="h-5 w-5 text-emerald-600" aria-hidden="true" />
+        <p className="reveal-item mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-0 text-center text-xs text-gray-600" style={{ "--i": 7 } as React.CSSProperties}>
+          <BadgeCheck className="h-4 w-4 text-emerald-600" aria-hidden="true" />
           Exam dates and cut-offs link to their official source. We show the date we checked.
           <Link href="/editorial-policy" className="inline-flex min-h-9 items-center font-bold text-[#012858] underline underline-offset-2">How we verify data</Link>
         </p>
