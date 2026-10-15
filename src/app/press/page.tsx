@@ -104,7 +104,7 @@ export default function PressPage() {
         <section aria-labelledby="contact-h" className="rounded-3xl bg-white p-6 ring-1 ring-gray-200 sm:p-8">
           <h2 id="contact-h" className="text-2xl font-extrabold text-[#012858]">Contact</h2>
           <p className="mt-2 text-gray-700">For interviews, quotes or corrections, email the editorial team. Please mention your outlet and deadline.</p>
-          <a href="mailto:support@campuslelo.com?subject=Press%20enquiry" className="mt-4 inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition hover:bg-[#C90D11]">
+          <a href="mailto:support@campuslelo.com?subject=Press%20enquiry" className="mt-4 inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#C90D11]">
             <Mail className="h-4 w-4" aria-hidden="true" /> support@campuslelo.com
           </a>
         </section>

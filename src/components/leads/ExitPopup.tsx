@@ -181,7 +181,7 @@ export default function ExitPopup() {
                   </div>
                   <ChipGroup legend="Preferred location" options={LOCATIONS} value={form.location} onChange={(v) => set("location", v)} />
                   <ChipGroup legend="Budget" hint="per year" options={BUDGET_YEARLY} value={form.budget} onChange={(v) => set("budget", v)} />
-                  <button type="button" onClick={next} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11]">
+                  <button type="button" onClick={next} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white transition-all hover:bg-[#C90D11]">
                     Continue <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </button>
                 </>
@@ -206,7 +206,7 @@ export default function ExitPopup() {
                     <button type="button" onClick={() => setStep(1)} aria-label="Back" className="flex w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 text-gray-700 transition hover:bg-gray-50">
                       <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                     </button>
-                    <button type="submit" disabled={submitting} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
+                    <button type="submit" disabled={submitting} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white transition-all hover:bg-[#C90D11] disabled:opacity-60">
                       {submitting ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : "Get my free shortlist"}
                     </button>
                   </div>

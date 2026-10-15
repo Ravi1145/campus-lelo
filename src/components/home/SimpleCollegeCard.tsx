@@ -6,7 +6,7 @@ import Link from "next/link"
 import { MapPin, Star } from "lucide-react"
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
-import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
+import { formatFeesRange, formatCurrency } from "@/lib/utils"
 
 // Simple college card for the homepage rail: banner + name, three key facts,
 // tags, rating and actions. The richer card lives in components/colleges.
@@ -23,12 +23,13 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
   const fees = college.feesRange.min > 0 || college.feesRange.max > 0
     ? formatFeesRange(college.feesRange.min, college.feesRange.max)
     : "On request"
-  const placement = college.avgPlacement > 0 ? formatCurrency(college.avgPlacement) : "—"
+  const hasPlacement = college.avgPlacement > 0
+  const placement = hasPlacement ? formatCurrency(college.avgPlacement) : ""
   const extra = Math.max(0, college.entranceExams.length - 2)
 
   return (
     <Link href={collegeHref(college.slug)} className="group block h-full rounded-2xl">
-      <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-950/12 hover:ring-[#012858]/30">
+      <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300 hover:ring-[#012858]/40">
         {/* Header: logo, name, location, badges */}
         <div className="relative p-4" style={{ backgroundImage: `url(${COLLEGE_BANNER})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#011B40]/75 to-[#012858]/80" />
@@ -55,8 +56,8 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
                 <Star className="h-2.5 w-2.5 fill-current" aria-hidden="true" /> Featured
               </span>
             )}
-            <span className={cn("rounded-full px-2.5 py-0.5 text-[11px] font-bold", getNaacColor(college.naac))}>NAAC {college.naac}</span>
-            <span className={cn("rounded-full px-2.5 py-0.5 text-[11px] font-semibold", getTypeColor(college.type))}>{college.type}</span>
+            <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-[11px] font-semibold text-white ring-1 ring-white/30">NAAC {college.naac}</span>
+            <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-[11px] font-semibold text-white ring-1 ring-white/30">{college.type}</span>
             {college.nirfRank && (
               <span className="rounded-full bg-[#E0170F] px-2.5 py-0.5 text-[11px] font-bold text-white">NIRF #{college.nirfRank}</span>
             )}
@@ -65,25 +66,27 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
 
         {/* Body */}
         <div className="flex flex-1 flex-col gap-3 p-4">
-          <div className="grid grid-cols-3 gap-2">
-            <div className="rounded-lg bg-orange-50 px-2.5 py-2 ring-1 ring-orange-100">
-              <p className="text-[10px] font-bold uppercase tracking-wide text-[#C90D11]">Fees</p>
-              <p className="mt-0.5 text-[11px] font-extrabold leading-tight text-gray-900">{fees}</p>
+          <dl className="grid grid-cols-2 gap-2">
+            <div className="rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
+              <dt className="text-[10px] font-bold uppercase tracking-wide text-gray-600">Fees</dt>
+              <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{fees}</dd>
             </div>
-            <div className="rounded-lg bg-blue-50 px-2.5 py-2 ring-1 ring-blue-100">
-              <p className="text-[10px] font-bold uppercase tracking-wide text-[#024692]">Avg pkg</p>
-              <p className="mt-0.5 text-[11px] font-extrabold leading-tight text-gray-900">{placement}</p>
+            {hasPlacement && (
+              <div className="rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
+                <dt className="text-[10px] font-bold uppercase tracking-wide text-gray-600">Avg pkg</dt>
+                <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{placement}</dd>
+              </div>
+            )}
+            <div className="rounded-lg bg-gray-50 px-3 py-2 ring-1 ring-gray-200">
+              <dt className="text-[10px] font-bold uppercase tracking-wide text-gray-600">Courses</dt>
+              <dd className="mt-0.5 text-xs font-bold leading-tight text-gray-900">{college.courses.length}</dd>
             </div>
-            <div className="rounded-lg bg-emerald-50 px-2.5 py-2 ring-1 ring-emerald-100">
-              <p className="text-[10px] font-bold uppercase tracking-wide text-emerald-700">Courses</p>
-              <p className="mt-0.5 text-[11px] font-extrabold leading-tight text-gray-900">{college.courses.length}</p>
-            </div>
-          </div>
+          </dl>
 
           <div className="flex flex-wrap gap-1.5">
             <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-semibold text-gray-700">{college.stream}</span>
             {college.entranceExams.slice(0, 2).map((e) => (
-              <span key={e} className="rounded-full bg-indigo-50 px-2.5 py-0.5 text-[11px] font-semibold text-indigo-700">{e}</span>
+              <span key={e} className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-semibold text-gray-700">{e}</span>
             ))}
             {extra > 0 && <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-medium text-gray-600">+{extra} more</span>}
           </div>
@@ -97,7 +100,7 @@ export default function SimpleCollegeCard({ college, featured = false }: { colle
             )}
             <span className="ml-auto" />
             <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
-            <span className="shrink-0 whitespace-nowrap rounded-lg bg-[#E0170F] px-3 py-2 text-xs font-bold text-white shadow-sm transition-colors group-hover:bg-[#C90D11]">Apply Now</span>
+            <span className="shrink-0 whitespace-nowrap rounded-lg bg-[#E0170F] px-3 py-2 text-xs font-bold text-white transition-colors group-hover:bg-[#C90D11]">Apply Now</span>
           </div>
         </div>
       </article>

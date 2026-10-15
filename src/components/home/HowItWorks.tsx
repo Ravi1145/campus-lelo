@@ -38,7 +38,7 @@ export default function HowItWorks() {
         </ol>
 
         <div className="reveal-item mt-12 flex flex-wrap items-center justify-center gap-3" style={{ "--i": 4 } as React.CSSProperties}>
-          <Link href="/counselling" className="group inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-transform hover:-translate-y-0.5">
+          <Link href="/counselling" className="group inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-7 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-0.5">
             Get free counselling <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>
           <Link href="/ai-finder" className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#012858] ring-1 ring-gray-200 hover:ring-[#012858]">

@@ -104,7 +104,7 @@ export default function CollegeRowCard({ college }: { college: College }) {
               ) : "—"}
             </Fact>
             <Fact label="Annual fees"><span className="text-[#C90D11]">{hasFees ? formatFeesRange(college.feesRange.min, college.feesRange.max) : "On request"}</span></Fact>
-            <Fact label="Avg package"><span className="text-[#024692]">{college.avgPlacement > 0 ? formatCurrency(college.avgPlacement) : "—"}</span></Fact>
+            {college.avgPlacement > 0 && <Fact label="Avg package"><span className="text-[#024692]">{formatCurrency(college.avgPlacement)}</span></Fact>}
             <Fact label="Total courses">{college.courses.length} {college.courses.length === 1 ? "course" : "courses"}</Fact>
           </div>
 

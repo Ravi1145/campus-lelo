@@ -207,7 +207,7 @@ export default function CounsellingBooking({ defaultPlan = "free_phone", default
 
               <ConsentCheckbox id={`${uid}-consent`} checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose={isVideo ? "my counselling session and admission guidance" : "free counselling and admission guidance"} />
 
-              <button type="submit" disabled={loading} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
+              <button type="submit" disabled={loading} className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] py-3.5 text-sm font-bold text-white transition-all hover:bg-[#C90D11] disabled:opacity-60">
                 {loading ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>{isVideo ? `Request video session: ₹${VIDEO_PRICE_INR}` : "Request a free call"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}
               </button>
               <p className="flex items-start gap-1.5 text-xs text-gray-600">

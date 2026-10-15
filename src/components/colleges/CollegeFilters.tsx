@@ -181,7 +181,7 @@ export default function CollegeFilters({ filters, onChange, options, mobileOpen,
             <div className="overflow-y-auto px-5">{body}</div>
             <div className="flex gap-3 border-t border-gray-100 px-5 py-4">
               <button type="button" onClick={() => onChange(DEFAULT_FILTERS)} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-semibold text-gray-700">Reset</button>
-              <button type="button" onClick={onMobileClose} className="flex-[2] rounded-xl bg-[#E0170F] py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20">
+              <button type="button" onClick={onMobileClose} className="flex-[2] rounded-xl bg-[#E0170F] py-3 text-sm font-bold text-white">
                 Show {resultCount} colleges
               </button>
             </div>

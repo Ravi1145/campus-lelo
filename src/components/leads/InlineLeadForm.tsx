@@ -125,7 +125,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
           <div className="mt-4"><ConsentCheckbox id={`${uid}-consent`} checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose="my college shortlist and admission guidance" compact /></div>
 
           <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
-            <button type="submit" disabled={loading} className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11] disabled:opacity-60">
+            <button type="submit" disabled={loading} className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#C90D11] disabled:opacity-60">
               {loading ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Sending…</> : <>Get my shortlist <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></>}
             </button>
             <p className="flex items-center gap-1.5 text-xs text-gray-600">

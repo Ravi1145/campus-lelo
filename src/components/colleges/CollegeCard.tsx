@@ -204,7 +204,7 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
 
           <div className="mt-4 grid grid-cols-[1.5fr_1fr_1fr] divide-x divide-gray-200 rounded-xl bg-gradient-to-b from-gray-50 to-white py-2.5 pl-3 pr-0 ring-1 ring-gray-100">
             <Metric label="Annual fees" value={feesText} tone="red" />
-            <Metric label="Avg package" value={placementText} tone="blue" />
+            {college.avgPlacement > 0 && <Metric label="Avg package" value={placementText} tone="blue" />}
             {hasReviews ? (
               <div className="min-w-0 px-3">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500">Rating</p>

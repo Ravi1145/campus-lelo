@@ -82,7 +82,7 @@ export default function RankingTables() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div className="flex items-center gap-4">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E0170F] to-[#FB4312] text-white shadow-lg shadow-red-900/25">
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E0170F] to-[#FB4312] text-white">
               <Trophy className="h-6 w-6" aria-hidden="true" />
             </span>
             <div>

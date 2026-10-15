@@ -192,7 +192,7 @@ export default function HeroSection() {
                   </div>
                 </>
               )}
-              <button type="submit" className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-[#C90D11]">
+              <button type="submit" className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-[#C90D11]">
                 Find colleges <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </button>
             </div>
