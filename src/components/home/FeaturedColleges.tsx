@@ -111,7 +111,7 @@ export default function FeaturedColleges() {
 
         {/* College cards — featured always first */}
         {!loading && (
-          <CardRail key={activeTab} label="featured colleges">
+          <CardRail key={activeTab} label="featured colleges" itemClassName="w-[85vw] sm:w-[21rem]">
             {filtered.map((college) => (
               <div key={college.slug} className="relative h-full">
                 <SimpleCollegeCard college={college} featured={featuredSet.has(college.slug)} />
