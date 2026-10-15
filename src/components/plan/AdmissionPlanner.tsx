@@ -124,9 +124,10 @@ export default function AdmissionPlanner({ exams, programmes, cities, dataChecke
                 <div key={e.slug}>
                   <h3 className="text-base font-bold text-gray-900">{e.name} <span className="text-sm font-normal text-gray-600">· {e.cycle}</span></h3>
                   {e.keyDates.length ? (
-                    <ul className="mt-2 divide-y divide-gray-100">
-                      {e.keyDates.map((d) => (
-                        <li key={d.label} className="py-2">
+                    <ul className="plan-line mt-3 space-y-4 pl-5">
+                      {e.keyDates.map((d, di) => (
+                        <li key={d.label} className="plan-item relative" style={{ "--p": di } as React.CSSProperties}>
+                          <span className="plan-dot" aria-hidden="true" />
                           <div className="flex flex-wrap items-baseline justify-between gap-x-4 text-sm"><span className="font-semibold text-gray-900">{d.label}</span><span className="text-gray-800">{d.value}</span></div>
                           <Receipt s={d.source} />
                         </li>

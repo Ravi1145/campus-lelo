@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight, Check, Copy, Printer, RotateCcw } from "lucide-react"
 import { QUESTIONS, SCALE_INTEREST, SCALE_STRENGTH, STREAMS } from "@/data/career/questions"
+import RiasecHex from "@/components/career/RiasecHex"
 import { TOTAL, answeredCount, decode, emptyAnswers, encode, score, type Answers } from "@/lib/careerScore"
 
 const PER_PAGE = 6
@@ -83,7 +84,8 @@ export default function CareerQuiz() {
   return (
     <div ref={topRef} className="scroll-mt-28">
       {phase === "intro" && (
-        <div className="rounded-3xl bg-white p-6 ring-1 ring-gray-200 sm:p-8">
+        <div className="quiz-page-in grid gap-8 rounded-3xl bg-white p-6 ring-1 ring-gray-200 sm:p-8 md:grid-cols-[1.4fr_1fr] md:items-center">
+          <div>
           <h2 className="text-2xl font-bold text-[#012858]">Find out which path fits you</h2>
           <p className="mt-2 text-gray-700">48 short statements, about 8 minutes. You rate how much each one sounds like you. We turn your answers into your interest profile, your strengths and the study paths that fit best, with the exams and colleges to look at next.</p>
           <ul className="mt-5 grid gap-3 text-sm text-gray-800 sm:grid-cols-3">
@@ -104,6 +106,11 @@ export default function CareerQuiz() {
               <button type="button" onClick={() => start(true)} className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#E0170F] px-7 py-3 text-sm font-bold text-white hover:bg-[#C90D11]">Start the quiz <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
             )}
           </div>
+          </div>
+          <div className="hidden md:block">
+            <RiasecHex scores={{ R: 38, I: 82, A: 55, S: 30, E: 64, C: 46 }} label="Example of the interest shape you will get at the end" />
+            <p className="mt-2 text-center text-xs text-gray-600">An example shape. Yours will be different.</p>
+          </div>
         </div>
       )}
 
@@ -120,7 +127,7 @@ export default function CareerQuiz() {
             {pageQuestions[0].kind === "interest" ? "How much does each statement sound like you? Go with your first feeling." : "How true is each statement for you right now?"}
           </p>
 
-          <div className="mt-4 space-y-5">
+          <div key={page} className="quiz-page-in mt-4 space-y-5">
             {pageQuestions.map((q, i) => {
               const scale = q.kind === "interest" ? SCALE_INTEREST : SCALE_STRENGTH
               return (
@@ -131,7 +138,7 @@ export default function CareerQuiz() {
                       const v = idx + 1
                       const on = answers[q.id] === v
                       return (
-                        <label key={v} className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-xl px-3 py-2.5 text-sm ring-1 transition-colors focus-within:ring-2 focus-within:ring-[#012858] ${on ? "bg-[#012858] font-semibold text-white ring-[#012858]" : "bg-white text-gray-800 ring-gray-300 hover:ring-[#012858]"}`}>
+                        <label key={v} className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-xl px-3 py-2.5 text-sm ring-1 transition-colors focus-within:ring-2 focus-within:ring-[#012858] ${on ? "quiz-pick bg-[#012858] font-semibold text-white ring-[#012858]" : "bg-white text-gray-800 ring-gray-300 hover:ring-[#012858]"}`}>
                           <input type="radio" name={`q-${q.id}`} value={v} checked={on} onChange={() => setAnswer(q.id, v)} className="sr-only" aria-label={`${label}, ${v} of 5`} data-first={i === 0 && idx === 0 ? "1" : undefined} />
                           <span aria-hidden="true" className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${on ? "bg-white text-[#012858]" : "bg-gray-100 text-gray-700"}`}>{v}</span>
                           <span>{label}</span>
@@ -158,12 +165,17 @@ export default function CareerQuiz() {
 
       {phase === "result" && result && (
         <div className="space-y-6">
-          <div className="rounded-3xl bg-[#012858] p-6 text-white sm:p-8">
+          <div className="quiz-page-in grid gap-6 rounded-3xl bg-[#012858] p-6 text-white sm:p-8 md:grid-cols-[1.3fr_1fr] md:items-center">
+           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-orange-200">Your interest code</p>
             <p className="mt-1 font-[family-name:var(--font-fraunces)] text-5xl font-bold tracking-wide">{result.code}</p>
             <p className="mt-3 max-w-2xl text-blue-100">
               {result.code.split("").map((c) => result.interests.find((i) => i.code === c)).filter(Boolean).map((i) => `${i!.name} (${i!.nickname})`).join(", ")}. These are the kinds of work you said you enjoy most. {result.closeCall ? "Your top two study paths are close, so explore both." : ""}
             </p>
+           </div>
+           <div className="rounded-2xl bg-white p-4">
+            <RiasecHex scores={Object.fromEntries(result.interests.map((i) => [i.code, i.score])) as Record<"R" | "I" | "A" | "S" | "E" | "C", number>} />
+           </div>
           </div>
 
           <section className="rounded-3xl bg-white p-6 ring-1 ring-gray-200 sm:p-8" aria-labelledby="fit-heading">

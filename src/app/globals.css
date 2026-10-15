@@ -467,3 +467,27 @@ a:hover .sg-bar, a:focus-visible .sg-bar { animation: sg-grow 0.5s cubic-bezier(
 }
 .exam-tear::before { top: -8px; }
 .exam-tear::after { bottom: -8px; }
+
+/* ── Career quiz, interest hexagon and plan timeline ────────────────────────── */
+.hex-shape { transform-box: view-box; transform-origin: 130px 130px; animation: hex-grow 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both; }
+@keyframes hex-grow { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.hex-dot { transform-box: fill-box; transform-origin: center; animation: sg-pop 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) both; animation-delay: calc(var(--d, 0) * 80ms + 0.9s); }
+.hex-node { cursor: pointer; transition: transform 0.2s ease; transform-box: fill-box; transform-origin: center; }
+.hex-node:hover, a:focus-visible .hex-node { transform: scale(1.12); }
+a:focus-visible { outline: none; }
+a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
+
+.quiz-page-in { animation: quiz-page-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes quiz-page-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.quiz-pick { animation: quiz-pick 0.28s cubic-bezier(0.3, 1.5, 0.5, 1) both; }
+@keyframes quiz-pick { 0% { transform: scale(0.96); } 100% { transform: scale(1); } }
+
+.plan-line { position: relative; }
+.plan-line::before { content: ""; position: absolute; left: 0; top: 0.35rem; bottom: 0.35rem; width: 2px; background: #CBD5E1; transform-origin: top; animation: plan-line 0.9s cubic-bezier(0.4, 0, 0.2, 1) both; }
+@keyframes plan-line { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.plan-dot { position: absolute; left: -1.6rem; top: 0.55rem; width: 0.7rem; height: 0.7rem; border-radius: 9999px; background: #E0170F; box-shadow: 0 0 0 3px #fff; animation: sg-pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1) both; animation-delay: calc(var(--p, 0) * 70ms + 0.2s); }
+.plan-item { animation: how-row 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(var(--p, 0) * 70ms + 0.15s); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hex-shape, .hex-dot, .quiz-page-in, .quiz-pick, .plan-line::before, .plan-dot, .plan-item { animation: none !important; transform: none !important; opacity: 1 !important; }
+}

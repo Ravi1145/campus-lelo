@@ -5,6 +5,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 import { QuickAnswer } from "@/components/exams/MbaExamPage"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 import { INTERESTS, STREAMS } from "@/data/career/questions"
+import RiasecHex from "@/components/career/RiasecHex"
 
 export const revalidate = 86400
 
@@ -65,6 +66,15 @@ export default function CareerTypesPage() {
 
         <div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
           <QuickAnswer text={QUICK} />
+
+          <section className="grid items-center gap-6 rounded-3xl bg-white p-6 ring-1 ring-gray-200 sm:p-8 md:grid-cols-[1fr_1.1fr]" aria-labelledby="map-heading">
+            <div>
+              <h2 id="map-heading" className="text-xl font-bold text-[#012858]">The map</h2>
+              <p className="mt-2 text-sm leading-relaxed text-gray-700">The six types sit around a hexagon. Neighbours overlap most: Realistic and Investigative share a love of problems, Social and Enterprising both work with people. Tap a letter to jump to that type.</p>
+              <Link href="/career-quiz" className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-[#E0170F] px-6 py-3 text-sm font-bold text-white hover:bg-[#C90D11]">Find your own shape</Link>
+            </div>
+            <RiasecHex linkTypes label="Hexagon of the six career interest types. Each letter links to its section below." />
+          </section>
 
           {INTERESTS.map((t) => {
             const d = TYPE_DETAIL[t.code]
