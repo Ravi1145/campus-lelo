@@ -541,3 +541,8 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 .us-hint { animation: us-hint 1.6s ease-in-out infinite; }
 @keyframes us-hint { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
 @media (prefers-reduced-motion: reduce) { .us-card, .us-shine, .us-hint { animation: none !important; transition: none !important; transform: none !important; } .us-shine { display: none; } }
+
+/* Mobile tap comfort: breadcrumb links get a 36px hit area without changing layout much */
+@media (max-width: 767px) {
+  nav[aria-label*="readcrumb" i] a { display: inline-flex; align-items: center; min-height: 2.25rem; }
+}

@@ -53,7 +53,7 @@ export default function CompareButton({ collegeSlug, collegeName, className }: C
     <button
       onClick={toggleCompare}
       className={cn(
-        "flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border transition-all",
+        "flex min-h-9 items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border transition-all",
         className,
         isSelected
           ? "bg-navy/10 border-navy/20 text-navy"
@@ -111,7 +111,7 @@ export function CompareFloatingBar() {
   if (compareList.length === 0 || pathname === "/compare") return null
 
   return (
-    <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-40 bg-[#011B40] text-white rounded-2xl shadow-2xl px-5 py-3 flex items-center gap-4 border border-white/10">
+    <div className="fixed bottom-24 left-1/2 z-40 flex w-[calc(100vw-1.5rem)] max-w-xl -translate-x-1/2 flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl border border-white/10 bg-[#011B40] px-4 py-3 text-white shadow-2xl">
       <GitCompare className="w-5 h-5 text-orange-400 flex-shrink-0" />
       <div className="flex items-center gap-3">
         {compareList.map((c) => (

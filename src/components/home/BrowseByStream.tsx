@@ -93,7 +93,7 @@ export default function BrowseByStream() {
             <h2 id="streams-heading" className="mt-3 text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Browse by stream</h2>
             <p className="mt-2 text-base text-gray-600">Find colleges by your field of study</p>
           </div>
-          <Link href="/colleges" className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+          <Link href="/colleges" className="inline-flex min-h-9 shrink-0 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
         <ul className="grid gap-4 lg:grid-cols-12">
@@ -123,7 +123,7 @@ export default function BrowseByStream() {
                   <span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${MBA.tint} ${MBA.ink} transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105`}><GraduationCap className="h-7 w-7" strokeWidth={1.5} aria-hidden="true" /></span>
                   <span className="relative min-w-0 flex-1">
                     <span className="block font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#012858]">{MBA.name}</span>
-                    <span className="mt-0.5 block text-sm text-gray-600">{MBA.sub}</span>
+                    <span className="mt-0.5 block break-words text-sm text-gray-600">{MBA.sub}</span>
                     <span className="mt-3 block"><Count name="MBA" /></span>
                   </span>
                   <span className="relative hidden -rotate-3 text-right font-[family-name:var(--font-fraunces)] text-lg italic leading-tight text-[#012858] md:block">Leaders create<br />opportunities</span>

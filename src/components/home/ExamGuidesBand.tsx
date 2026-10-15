@@ -71,7 +71,7 @@ export default function ExamGuidesBand() {
             <h2 id="exam-guides-heading" className="mt-2 text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Upcoming entrance exams</h2>
             <p className="mt-3 max-w-xl text-base text-gray-600">Dates, eligibility, pattern and the colleges that accept each exam, every fact linked to its official source.</p>
           </div>
-          <div className="flex items-center justify-between gap-4 rounded-2xl bg-blue-50 p-4 ring-1 ring-blue-100">
+          <div className="flex flex-col gap-3 rounded-2xl bg-blue-50 p-4 ring-1 ring-blue-100 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-4">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#024692] ring-1 ring-blue-100"><BellRing className="h-6 w-6" aria-hidden="true" /></span>
               <div>
@@ -79,7 +79,7 @@ export default function ExamGuidesBand() {
                 <p className="mt-0.5 text-sm text-gray-600">Get a message when an exam date changes. Separate from counselling.</p>
               </div>
             </div>
-            <Link href="/news#alerts" className="group inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#012858] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#024692]">
+            <Link href="/news#alerts" className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#012858] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#024692]">
               Get exam alerts <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function ExamGuidesBand() {
           {PILLS.map((p) => (
             <Link key={p.label} href={p.href} className={`inline-flex min-h-9 items-center rounded-full px-4 text-sm font-semibold transition-colors ${p.on ? "bg-[#012858] text-white" : "bg-gray-100 text-[#012858] hover:bg-gray-200"}`}>{p.label}</Link>
           ))}
-          <Link href="/exams" className="ml-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all exams <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+          <Link href="/exams" className="ml-auto inline-flex min-h-9 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all exams <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
         <ul className="-mx-4 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0" aria-label="Upcoming entrance exams, scroll sideways">
@@ -115,11 +115,11 @@ export default function ExamGuidesBand() {
                 </dl>
                 <div className="mt-auto flex items-center justify-between pt-3 text-sm font-semibold text-[#024692]">
                   <nav aria-label={`${e.name} guides`} className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <Link href={`/exams/${e.slug}/syllabus`} className="hover:underline">Syllabus</Link><span aria-hidden="true" className="text-gray-300">|</span>
-                    <Link href={`/exams/${e.slug}`} className="hover:underline">Pattern</Link><span aria-hidden="true" className="text-gray-300">|</span>
-                    <Link href={`/exams/${e.slug}/colleges`} className="hover:underline">Top colleges</Link>
+                    <Link href={`/exams/${e.slug}/syllabus`} className="py-2 hover:underline">Syllabus</Link><span aria-hidden="true" className="text-gray-300">|</span>
+                    <Link href={`/exams/${e.slug}`} className="py-2 hover:underline">Pattern</Link><span aria-hidden="true" className="text-gray-300">|</span>
+                    <Link href={`/exams/${e.slug}/colleges`} className="py-2 hover:underline">Top colleges</Link>
                   </nav>
-                  <Link href={`/exams/${e.slug}`} aria-label={`${e.name} guide`} className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+                  <Link href={`/exams/${e.slug}`} aria-label={`${e.name} guide`} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
                 </div>
               </article>
             </li>

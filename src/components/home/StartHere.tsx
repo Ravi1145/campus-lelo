@@ -80,7 +80,7 @@ export default function StartHere(_props: { proof: HeroProof }) {
             <h2 id="start-heading" className="mt-3 font-[family-name:var(--font-fraunces)] text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Know yourself first. Then pick the college.</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">Three free tools built to help you choose, not just browse. Each one ends with a next step, and every figure carries its source and date.</p>
           </div>
-          <Link href="/editorial-policy" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#012858] underline-offset-4 hover:underline">How we verify data <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
+          <Link href="/editorial-policy" className="inline-flex min-h-9 items-center gap-1.5 text-sm font-bold text-[#012858] underline-offset-4 hover:underline">How we verify data <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
         {/* The three signature tools */}

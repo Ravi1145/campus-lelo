@@ -135,20 +135,20 @@ export default function Footer() {
               India&apos;s AI-powered college discovery portal for Pune. Compare the best engineering, MBA, medical, and arts colleges with real fees, placements &amp; reviews.
             </p>
 
-            <div className="space-y-2 text-sm mb-5">
+            <div className="space-y-1 text-sm mb-5">
               <div className="flex items-center gap-2 text-gray-400">
                 <MapPin className="w-4 h-4 shrink-0" style={{ color: "var(--color-accent)" }} />
                 Undri, Pune, Maharashtra 411060
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-4 h-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                <a href="mailto:support@campuslelo.com" className="hover:text-white transition-colors">
+                <a href="mailto:support@campuslelo.com" className="inline-block py-1.5 hover:text-white transition-colors">
                   support@campuslelo.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Phone className="w-4 h-4 shrink-0" style={{ color: "var(--color-accent)" }} />
-                <a href="tel:+917753831118" className="hover:text-white transition-colors">
+                <a href="tel:+917753831118" className="inline-block py-1.5 hover:text-white transition-colors">
                   +91 77538 31118
                 </a>
               </div>
@@ -177,12 +177,12 @@ export default function Footer() {
               <h3 className="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2">
                 {title}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-0.5">
                 {links.map((link) => (
                   <li key={link.label + link.href}>
                     <Link
                       href={link.href}
-                      className="text-xs text-gray-400 hover:text-white transition-colors leading-snug"
+                      className="inline-block py-1.5 text-xs text-gray-300 hover:text-white transition-colors leading-snug sm:py-0.5"
                     >
                       {link.label}
                     </Link>
@@ -203,7 +203,7 @@ export default function Footer() {
               <Link
                 key={i}
                 href={link.href}
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="inline-block py-1.5 text-xs text-gray-400 hover:text-gray-200 transition-colors"
               >
                 {link.label}
               </Link>
@@ -215,19 +215,19 @@ export default function Footer() {
       {/* ── Bottom bar ─────────────────────────────────────────────────── */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             © 2026 CampusLelo.com · All rights reserved · AI-powered college discovery for Pune
           </p>
-          <div className="flex items-center gap-5 text-xs text-gray-500">
-            <Link href="/privacy"    className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-            <Link href="/terms"      className="hover:text-gray-300 transition-colors">Terms of Use</Link>
-            <Link href="/editorial-policy" className="hover:text-gray-300 transition-colors">Editorial Policy</Link>
-            <Link href="/mba-exam-calendar" className="hover:text-gray-300 transition-colors">MBA Exam Calendar</Link>
-            <Link href="/mba-counselling" className="hover:text-gray-300 transition-colors">MBA Counselling</Link>
-            <Link href="/about" className="hover:text-gray-300 transition-colors">About Us</Link>
-            <Link href="/press" className="hover:text-gray-300 transition-colors">Press &amp; Media Kit</Link>
-            <Link href="/site-map" className="hover:text-gray-300 transition-colors">Site Map</Link>
-            <Link href="/sitemap.xml" className="hover:text-gray-300 transition-colors">Sitemap</Link>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-gray-400">
+            <Link href="/privacy"    className="inline-block py-1.5 hover:text-gray-200 transition-colors">Privacy Policy</Link>
+            <Link href="/terms"      className="inline-block py-1.5 hover:text-gray-200 transition-colors">Terms of Use</Link>
+            <Link href="/editorial-policy" className="inline-block py-1.5 hover:text-gray-200 transition-colors">Editorial Policy</Link>
+            <Link href="/mba-exam-calendar" className="inline-block py-1.5 hover:text-gray-200 transition-colors">MBA Exam Calendar</Link>
+            <Link href="/mba-counselling" className="inline-block py-1.5 hover:text-gray-200 transition-colors">MBA Counselling</Link>
+            <Link href="/about" className="inline-block py-1.5 hover:text-gray-200 transition-colors">About Us</Link>
+            <Link href="/press" className="inline-block py-1.5 hover:text-gray-200 transition-colors">Press &amp; Media Kit</Link>
+            <Link href="/site-map" className="inline-block py-1.5 hover:text-gray-200 transition-colors">Site Map</Link>
+            <Link href="/sitemap.xml" className="inline-block py-1.5 hover:text-gray-200 transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
