@@ -11,7 +11,10 @@ import FeaturedColleges from "@/components/home/FeaturedColleges"
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
 const AIFinderBand        = dynamic(() => import("@/components/home/AIFinderBand"))
 const HowItWorks          = dynamic(() => import("@/components/home/HowItWorks"))
+const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNewsSection"))
+const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
+const GuidesScrollSection = dynamic(() => import("@/components/home/GuidesScrollSection"))
 import PuneCollegeGuide from "@/components/home/PuneCollegeGuide"
 import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import NextSteps from "@/components/seo/NextSteps"
@@ -106,11 +109,20 @@ export default function HomePage() {
         {/* 7. How it works */}
         <HowItWorks />
 
+        {/* Latest blog posts and the admission calendar */}
+        <HomepageNewsSection />
+
+        {/* Comparison tools and counselling (free call, video session) */}
+        <TestimonialsSection />
+
 
 
 
         {/* 11. FAQ + Final CTA */}
         <FAQSection />
+
+        {/* College guides and insights */}
+        <GuidesScrollSection />
 
 
         {/* 13. Pune College Guide — SEO link hub + keyword-rich text */}
