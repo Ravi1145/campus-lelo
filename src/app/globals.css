@@ -51,6 +51,12 @@
 
 html {
   scroll-behavior: smooth;
+  /* Everything is sized in rem, so this one value shrinks text, spacing, cards and containers together.
+     Desktop and tablet 80% (20% smaller). Phones 90% so body text stays at about 14px. */
+  font-size: 90%;
+}
+@media (min-width: 768px) {
+  html { font-size: 80%; }
 }
 
 body {
