@@ -132,6 +132,8 @@ const streams = [
 ]
 
 const tools = [
+  { label: "MBA Cut-off Checker",  href: "/mba-cutoff-checker",                     icon: BarChart3,     desc: "Your CAT percentile vs published", color: "text-red-600 bg-red-50" },
+  { label: "Exam Acceptance Table", href: "/mba-exam-acceptance",                    icon: Compass,       desc: "Which colleges take your exam",  color: "text-blue-600 bg-blue-50" },
   { label: "College Predictor",    href: "/predictor",                              icon: GraduationCap, desc: "Find colleges by your score",   color: "text-orange-600 bg-orange-50" },
   { label: "Compare Colleges",     href: "/compare",                                icon: BarChart3,     desc: "Side-by-side comparison",        color: "text-blue-600 bg-blue-50" },
   { label: "ROI Calculator",       href: "/roi-calculator",                         icon: Calculator,    desc: "Calculate education returns",     color: "text-green-600 bg-green-50" },

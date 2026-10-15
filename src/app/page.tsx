@@ -147,6 +147,8 @@ export default function HomePage() {
             { href: "/ai-counselor", label: "AI career counsellor" },
             { href: "/ai-finder", label: "AI college finder" },
             { href: "/predictor", label: "College predictor" },
+            { href: "/mba-cutoff-checker", label: "MBA cut-off checker" },
+            { href: "/mba-exam-acceptance", label: "MBA exam acceptance table" },
             { href: "/compare", label: "Compare colleges" },
             { href: "/roi-calculator", label: "Degree ROI calculator" },
             { href: "/about", label: "About CampusLelo" },

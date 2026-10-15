@@ -24,8 +24,9 @@ function nextDate(e: (typeof mbaExams)[number]): string {
 }
 
 const TOOLS = [
+  { href: "/mba-cutoff-checker", label: "MBA cut-off checker", sub: "Your CAT percentile vs published", icon: TrendingUp },
+  { href: "/mba-exam-acceptance", label: "Exam acceptance table", sub: "Which colleges take your exam", icon: GitCompare },
   { href: "/mba-vs-pgdm", label: "MBA vs PGDM", sub: "Degree vs diploma, explained", icon: Scale },
-  { href: "/mba-cutoff-delhi-ncr", label: "MBA cut-offs Delhi NCR", sub: "FMS, IIFT & what's published", icon: TrendingUp },
   { href: "/compare", label: "Compare two colleges", sub: "Side-by-side facts", icon: GitCompare },
   { href: "/editorial-policy", label: "How we verify data", sub: "Sources & review dates", icon: ShieldCheck },
 ]

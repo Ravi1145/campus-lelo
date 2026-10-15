@@ -59,7 +59,7 @@ export const regionPages: RegionPageDef[] = [
     question: "Which MBA and PGDM colleges in Delhi NCR have we verified, and which exams do they accept?",
     keywords: ["mba colleges in delhi ncr", "best mba colleges in delhi ncr", "pgdm colleges in delhi ncr", "mba colleges in gurgaon", "mba colleges in ghaziabad", "mba in ncr", "bml munjal university mba", "mdi gurgaon pgdm"],
     leadCity: "Delhi NCR",
-    related: ["/mba-colleges-in-delhi", "/mba-colleges-in-gurugram", "/mba-colleges-in-ghaziabad", "/pgdm-colleges-in-delhi-ncr", "/mba-colleges-in-greater-noida", "/mba-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-cutoff-delhi-ncr"],
+    related: ["/mba-colleges-in-delhi", "/mba-exam-acceptance", "/mba-cutoff-checker", "/mba-colleges-in-gurugram", "/mba-colleges-in-ghaziabad", "/pgdm-colleges-in-delhi-ncr", "/mba-colleges-in-greater-noida", "/mba-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat", "/mba-cutoff-delhi-ncr"],
   },
   {
     path: "/pgdm-colleges-in-delhi-ncr",
