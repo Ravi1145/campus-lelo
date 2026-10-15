@@ -301,7 +301,7 @@ export default async function NewsPage() {
         </div>
 
         {/* News alert subscribe banner */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div id="alerts" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 scroll-mt-28">
           <NewsAlert />
         </div>
       </div>

@@ -1,84 +1,138 @@
 import Link from "next/link"
-import { ArrowRight, CalendarDays, GitCompare, Scale, ShieldCheck, TrendingUp } from "lucide-react"
+import { ArrowRight, BellRing, CalendarDays, ClipboardList, GraduationCap, ListChecks, TrendingUp } from "lucide-react"
 import { mbaExams } from "@/data/mba/exams"
 import Reveal from "./Reveal"
 
-// Homepage band: upcoming MBA/PGDM entrance exams (sourced dates from
-// src/data/mba/exams.ts) + quick decision tools. Server component.
+// Homepage "Upcoming entrance exams": one card per MBA/PGDM exam with its exam date, registration window and
+// quick links, all read from the sourced data in src/data/mba/exams.ts. No dates are typed here.
 
 const ORDER = ["cat", "nmat", "snap", "mat", "xat", "cmat", "mah-mba-cet", "atma", "gmat"]
+const STRIPE = ["#E0170F", "#024692", "#F4A53A"]
+const BADGE: Record<string, string> = { "mah-mba-cet": "MAH CET" }
 
-// Exams whose listed dates are a previous cycle or past sessions — don't show those as "upcoming"
-const SUMMARY: Record<string, string> = {
-  "mah-mba-cet": "2027 dates awaited (2026: Apr & May)",
-  atma: "Several sessions a year, see next dates",
-  gmat: "Available year-round",
-  cmat: "CMAT 2027: date awaiting NTA confirmation",
+// Exams whose listed dates are a previous cycle or past sessions: say what is true now.
+const DATE_NOTE: Record<string, string> = {
+  "mah-mba-cet": "2027 dates awaited",
+  atma: "Several sessions a year",
+  gmat: "Year-round",
+  cmat: "2027: date awaited",
 }
-const BADGE: Record<string, string> = { "mah-mba-cet": "CET" }
-
-function nextDate(e: (typeof mbaExams)[number]): string {
-  if (SUMMARY[e.slug]) return SUMMARY[e.slug]
-  const d = e.keyDates.find((k) => /exam|window|attempt|session|paper/i.test(k.label) || /tests$/i.test(k.label)) ?? e.keyDates[0]
-  return d ? d.value : e.datesNote ? "Dates to be confirmed" : e.frequency
+const REG_NOTE: Record<string, string> = {
+  "mah-mba-cet": "Not announced yet",
+  cmat: "Not announced yet",
+  gmat: "Open throughout",
+  atma: "See the guide",
 }
 
-const TOOLS = [
-  { href: "/my-admission-plan", label: "My admission plan", sub: "Dates and colleges with sources", icon: Scale },
-  { href: "/mba-cutoff-checker", label: "MBA cut-off checker", sub: "Your CAT percentile vs published", icon: TrendingUp },
-  { href: "/mba-exam-acceptance", label: "Exam acceptance table", sub: "Which colleges take your exam", icon: GitCompare },
-  { href: "/mba-vs-pgdm", label: "MBA vs PGDM", sub: "Degree vs diploma, explained", icon: Scale },
-  { href: "/compare", label: "Compare two colleges", sub: "Side-by-side facts", icon: GitCompare },
-  { href: "/editorial-policy", label: "How we verify data", sub: "Sources & review dates", icon: ShieldCheck },
+type Exam = (typeof mbaExams)[number]
+
+const clean = (v: string) => v.replace(/\s*\([^)]*\)/g, "").replace(/,\s*\d{1,2}:\d{2}.*$/, "").replace(/\s*:\s*/g, " to ").trim()
+
+function examDate(e: Exam): string {
+  if (DATE_NOTE[e.slug]) return DATE_NOTE[e.slug]
+  const d = e.keyDates.find((k) => /exam date|testing window|tests$|paper-based/i.test(k.label))
+  if (!d) return "See the guide"
+  const m = d.value.match(/^Exam (.*?),/)
+  return clean(m ? m[1] : d.value)
+}
+
+function registration(e: Exam): string {
+  if (REG_NOTE[e.slug]) return REG_NOTE[e.slug]
+  const r = e.keyDates.find((k) => /^registration$/i.test(k.label))
+  if (r) return clean(r.value)
+  const closes = e.keyDates.map((k) => k.value.match(/registration closes (.*)$/i)?.[1]).find(Boolean)
+  return closes ? `Closes ${closes}` : "See the guide"
+}
+
+const PILLS = [
+  { label: "All exams", href: "/exams" },
+  { label: "MBA / PGDM", href: "/mba", on: true },
+  { label: "Engineering", href: "/exams/mht-cet" },
+  { label: "Medical", href: "/exams/neet" },
+  { label: "Law", href: "/law-colleges-pune" },
+  { label: "Design", href: "/design-colleges-pune" },
+]
+
+const SHORTCUTS = [
+  { href: "/my-admission-plan", title: "My admission plan", sub: "Dates and colleges on one page", icon: ClipboardList, tone: "bg-emerald-50 text-emerald-700" },
+  { href: "/mba-cutoff-checker", title: "MBA cut-off checker", sub: "Your percentile vs published minimums", icon: TrendingUp, tone: "bg-blue-50 text-blue-700" },
+  { href: "/mba-exam-acceptance", title: "Top colleges by exam", sub: "Which colleges list your exam", icon: GraduationCap, tone: "bg-amber-50 text-amber-700" },
+  { href: "/exams", title: "Syllabus and pattern", sub: "Every exam guide in one place", icon: ListChecks, tone: "bg-violet-50 text-violet-700" },
 ]
 
 export default function ExamGuidesBand() {
-  const exams = ORDER.map((slug) => mbaExams.find((e) => e.slug === slug)).filter(Boolean) as typeof mbaExams
+  const exams = ORDER.map((slug) => mbaExams.find((e) => e.slug === slug)).filter(Boolean) as Exam[]
   return (
-    <section aria-labelledby="exam-guides-heading" className="relative bg-[#011B40] px-4 py-16 sm:px-6 sm:py-20">
+    <section aria-labelledby="exam-guides-heading" className="section-ivory px-4 py-16 sm:px-6 sm:py-20">
       <Reveal className="mx-auto max-w-7xl">
-        <div className="reveal-item mb-10 flex flex-wrap items-end justify-between gap-3" style={{ "--i": 0 } as React.CSSProperties}>
+        <div className="reveal-item grid items-end gap-6 lg:grid-cols-[1.1fr_1fr]" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-orange-200">MBA &amp; PGDM 2027 admissions</p>
-            <h2 id="exam-guides-heading" className="mt-1 text-3xl font-bold text-white sm:text-4xl">Upcoming entrance exams</h2>
-            <p className="mt-2 max-w-xl text-sm text-blue-100 sm:text-base">Dates, pattern, eligibility and verified accepting colleges, every fact linked to its official source.</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-[#024692]">Entrance exams</p>
+            <h2 id="exam-guides-heading" className="mt-2 text-4xl font-bold leading-tight text-[#012858] sm:text-5xl">Upcoming entrance exams</h2>
+            <p className="mt-3 max-w-xl text-base text-gray-600">Dates, eligibility, pattern and the colleges that accept each exam, every fact linked to its official source.</p>
           </div>
-          <Link href="/exams" className="text-sm font-semibold text-orange-200 hover:underline">All exam guides →</Link>
+          <div className="flex items-center justify-between gap-4 rounded-3xl bg-blue-50 p-5 ring-1 ring-blue-100">
+            <div className="flex items-start gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#024692] ring-1 ring-blue-100"><BellRing className="h-6 w-6" aria-hidden="true" /></span>
+              <div>
+                <p className="text-lg font-bold text-[#012858]">Never miss an important date</p>
+                <p className="mt-0.5 text-sm text-gray-600">Get a message when an exam date changes. Separate from counselling.</p>
+              </div>
+            </div>
+            <Link href="/news#alerts" className="group inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#012858] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#024692]">
+              Get exam alerts <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
 
-        {/* One ticket per exam: a stub with the name, a dashed tear line, then the dates */}
-        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal-item mt-8 flex flex-wrap items-center gap-2.5" style={{ "--i": 1 } as React.CSSProperties}>
+          {PILLS.map((p) => (
+            <Link key={p.label} href={p.href} className={`inline-flex min-h-11 items-center rounded-full px-5 text-sm font-semibold transition-colors ${p.on ? "bg-[#012858] text-white" : "bg-gray-100 text-[#012858] hover:bg-gray-200"}`}>{p.label}</Link>
+          ))}
+          <Link href="/exams" className="ml-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all exams <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+        </div>
+
+        <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {exams.map((e, i) => (
-            <li key={e.slug} className="reveal-item" style={{ "--i": i + 1 } as React.CSSProperties}>
-              <Link href={`/exams/${e.slug}`} className="exam-ticket group relative flex h-full overflow-hidden rounded-2xl bg-[#F6F8FB] text-gray-900 transition-transform duration-300 hover:-translate-y-1">
-                <span className="flex w-24 shrink-0 flex-col items-center justify-center bg-[#012858] px-2 py-5 text-center text-white">
-                  <span className="font-[family-name:var(--font-fraunces)] text-xl font-bold leading-none">{BADGE[e.slug] ?? e.name}</span>
-                  <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-wide text-blue-200">Exam</span>
-                </span>
-                <span aria-hidden="true" className="exam-tear relative w-0 shrink-0 border-l-2 border-dashed border-gray-300" />
-                <span className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 p-4">
-                  <span className="flex items-start gap-1.5 text-sm text-gray-700">
-                    <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-[#C90D11]" aria-hidden="true" />
-                    <span>{nextDate(e)}</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-sm font-bold text-[#012858]">
-                    Read the guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </span>
-                </span>
-              </Link>
+            <li key={e.slug} className="reveal-item" style={{ "--i": i + 2 } as React.CSSProperties}>
+              <article className="group relative flex h-full flex-col rounded-2xl bg-white p-5 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]" style={{ borderLeft: `4px solid ${STRIPE[i % 3]}` }}>
+                <div className="flex items-start gap-4">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#012858] px-1 text-center font-[family-name:var(--font-fraunces)] text-sm font-bold leading-tight text-white">{BADGE[e.slug] ?? e.name}</span>
+                  <div className="min-w-0">
+                    <h3 className="flex items-center gap-2 text-xl font-bold text-[#012858]">{e.name}<span className="rounded-full bg-red-50 px-2 py-0.5 font-sans text-[11px] font-bold text-[#C90D11]">PG</span></h3>
+                    <p className="truncate text-sm text-gray-600">{e.fullName}</p>
+                  </div>
+                </div>
+                <dl className="mt-4 grid grid-cols-2 gap-4">
+                  <div className="flex gap-2">
+                    <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-gray-500" aria-hidden="true" />
+                    <div><dt className="text-xs text-gray-600">Exam date</dt><dd className="text-sm font-semibold leading-snug text-gray-900">{examDate(e)}</dd></div>
+                  </div>
+                  <div className="flex gap-2">
+                    <ClipboardList className="mt-0.5 h-4 w-4 shrink-0 text-gray-500" aria-hidden="true" />
+                    <div><dt className="text-xs text-gray-600">Registration</dt><dd className="text-sm font-semibold leading-snug text-gray-900">{registration(e)}</dd></div>
+                  </div>
+                </dl>
+                <div className="mt-auto flex items-center justify-between pt-5 text-sm font-semibold text-[#024692]">
+                  <nav aria-label={`${e.name} guides`} className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <Link href={`/exams/${e.slug}/syllabus`} className="hover:underline">Syllabus</Link><span aria-hidden="true" className="text-gray-300">|</span>
+                    <Link href={`/exams/${e.slug}`} className="hover:underline">Pattern</Link><span aria-hidden="true" className="text-gray-300">|</span>
+                    <Link href={`/exams/${e.slug}/colleges`} className="hover:underline">Top colleges</Link>
+                  </nav>
+                  <Link href={`/exams/${e.slug}`} aria-label={`${e.name} guide`} className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+                </div>
+              </article>
             </li>
           ))}
         </ul>
 
-        <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {TOOLS.map(({ href, label, sub, icon: Icon }, i) => (
-            <li key={href} className="reveal-item" style={{ "--i": i + 10 } as React.CSSProperties}>
-              <Link href={href} className="flex h-full items-center gap-3 rounded-2xl bg-white/5 p-4 text-white ring-1 ring-white/15 transition-colors hover:bg-white/10">
-                <Icon className="h-5 w-5 shrink-0 text-orange-200" aria-hidden="true" />
-                <span>
-                  <span className="block text-sm font-semibold">{label}</span>
-                  <span className="block text-xs text-blue-100">{sub}</span>
-                </span>
+        <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {SHORTCUTS.map(({ href, title, sub, icon: Icon, tone }, i) => (
+            <li key={href} className="reveal-item" style={{ "--i": i + 11 } as React.CSSProperties}>
+              <Link href={href} className={`group flex h-full items-center gap-4 rounded-2xl p-4 ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 ${tone.split(" ")[0]}`}>
+                <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white ${tone.split(" ")[1]}`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                <span className="min-w-0 flex-1"><span className="block font-bold text-gray-900">{title}</span><span className="block text-sm text-gray-700">{sub}</span></span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-gray-500 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             </li>
           ))}
