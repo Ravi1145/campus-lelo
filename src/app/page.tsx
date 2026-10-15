@@ -11,6 +11,7 @@ import { mbaExams } from "@/data/mba/exams"
 import BrowseByStream from "@/components/home/BrowseByStream"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
+import FeaturedCourses from "@/components/home/FeaturedCourses"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
 const AIFinderBand        = dynamic(() => import("@/components/home/AIFinderBand"))
@@ -113,6 +114,7 @@ export default function HomePage() {
 
         {/* 3. Browse by Stream */}
         <BrowseByStream />
+        <FeaturedCourses />
         <ExamGuidesBand />
 
         {/* 4. Featured Colleges */}

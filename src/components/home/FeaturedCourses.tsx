@@ -1,187 +1,98 @@
 "use client"
 
 import { useState } from "react"
-import CardRail from "./CardRail"
 import Link from "next/link"
-import { ArrowRight, TrendingUp, IndianRupee } from "lucide-react"
+import { ArrowRight, Briefcase, Building2, Clock, Cpu, GraduationCap, Scale, Stethoscope } from "lucide-react"
 import { courses } from "@/data/courses"
-import { formatCurrency, formatFeesRange } from "@/lib/utils"
-import FilterTabs from "@/components/ui/FilterTabs"
+import CardRail from "./CardRail"
+import Reveal from "./Reveal"
 
-const COURSE_TABS = ["All", "Engineering", "Management", "Medical", "Law", "Architecture", "Commerce", "Arts", "Science"]
+// Featured courses: one card per course in a scrolling rail, filtered by stream. Only the course
+// name, level, length, stream and usual entrance exams are shown. Fee and salary figures are left out
+// until each carries a source.
 
-const COURSE_BANNER = "/college-default-banner.jpg"
-
-const levelColors: Record<string, string> = {
-  UG:      "bg-blue-500 text-white",
-  PG:      "bg-purple-500 text-white",
-  Diploma: "bg-green-500 text-white",
-  PhD:     "bg-orange-500 text-white",
+const STREAM_STYLE: Record<string, { icon: typeof Cpu; tile: string; band: string }> = {
+  Engineering: { icon: Cpu, tile: "bg-blue-50 text-[#024692]", band: "#024692" },
+  Management: { icon: Briefcase, tile: "bg-orange-50 text-orange-700", band: "#F4A53A" },
+  Medical: { icon: Stethoscope, tile: "bg-red-50 text-[#C90D11]", band: "#E0170F" },
+  Law: { icon: Scale, tile: "bg-violet-50 text-violet-700", band: "#7C3AED" },
+  Architecture: { icon: Building2, tile: "bg-emerald-50 text-emerald-700", band: "#16A34A" },
 }
+const FALLBACK = { icon: GraduationCap, tile: "bg-slate-100 text-slate-700", band: "#64748B" }
 
-const streamEmoji: Record<string, string> = {
-  Engineering:  "⚙️",
-  Management:   "💼",
-  Medical:      "🩺",
-  Law:          "⚖️",
-  Architecture: "🏛️",
-  Commerce:     "📊",
-  Arts:         "🎨",
-  Science:      "🔬",
-}
+const TABS = ["All", ...Array.from(new Set(courses.map((c) => c.stream)))]
 
 export default function FeaturedCourses() {
-  const [activeTab, setActiveTab] = useState("All")
-
-  const featured = courses
-    .filter((c) => activeTab === "All" || c.stream === activeTab)
-    .slice(0, 10)
+  const [tab, setTab] = useState("All")
+  const list = courses.filter((c) => tab === "All" || c.stream === tab).slice(0, 12)
 
   return (
-    <section className="py-10 section-ivory">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div className="flex items-end justify-between mb-4">
+    <section aria-labelledby="courses-heading" className="section-pearl px-4 py-10 sm:px-6 sm:py-12">
+      <Reveal className="mx-auto max-w-7xl">
+        <div className="reveal-item flex flex-wrap items-end justify-between gap-3" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Popular courses</h2>
-            <p className="text-gray-500 mt-2">Fee ranges, eligibility and entrance exams for common UG and PG courses</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#C90D11]">Courses</p>
+            <h2 id="courses-heading" className="mt-1 font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#012858] sm:text-3xl">Featured courses</h2>
+            <p className="mt-1 text-sm text-gray-600">Course length, level and the entrance exams usually asked for.</p>
           </div>
-          <Link
-            href="/courses"
-            className="hidden sm:flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 transition-colors"
-          >
-            View All <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Link href="/courses" className="inline-flex min-h-9 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all courses <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
-        {/* Filter tabs */}
-        <FilterTabs tabs={COURSE_TABS} active={activeTab} onChange={setActiveTab} className="mb-6" />
-
-        {/* Horizontal scroll row */}
-        <CardRail key={activeTab} label="featured courses" itemClassName="w-[82vw] sm:w-72">
-          {featured.map((course) => (
-            <Link
-              key={course.id}
-              href={`/courses/${course.slug}`}
-              className="block h-full group"
+        <div className="reveal-item mt-4 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Filter courses by stream" style={{ "--i": 1 } as React.CSSProperties}>
+          {TABS.map((t) => (
+            <button
+              key={t}
+              role="tab"
+              aria-selected={tab === t}
+              onClick={() => setTab(t)}
+              className={`min-h-9 shrink-0 rounded-full px-4 text-sm font-semibold transition-colors ${tab === t ? "bg-[#012858] text-white" : "bg-white text-[#012858] ring-1 ring-gray-200 hover:ring-[#012858]"}`}
             >
-              <article className="bg-white rounded-2xl border border-gray-100 hover:border-orange-400 hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full">
-
-                {/* ── Header with campus image as background ── */}
-                <div
-                  className="relative p-4 pb-3 overflow-hidden"
-                  style={{
-                    backgroundImage: `url(${COURSE_BANNER})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center top",
-                  }}
-                >
-                  {/* overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#011B40]/90 via-[#011B40]/85 to-[#011B40]/92" />
-
-                  {/* Level badge top-right */}
-                  <span className={`absolute top-3 right-3 z-20 text-xs font-bold px-2.5 py-0.5 rounded-full ${levelColors[course.level] ?? "bg-gray-500 text-white"}`}>
-                    {course.level}
-                  </span>
-
-                  {/* Logo + name row */}
-                  <div className="relative z-10 flex items-start gap-3 pr-10">
-                    {/* Icon badge */}
-                    <div className="shrink-0 w-14 h-14 rounded-xl bg-white shadow-md flex items-center justify-center">
-                      <span className="text-2xl">{streamEmoji[course.stream] ?? "📚"}</span>
-                    </div>
-
-                    {/* Name + stream */}
-                    <div className="flex-1 min-w-0 pt-0.5">
-                      <h3
-                        className="text-white font-bold text-base leading-snug group-hover:text-orange-300 transition-colors"
-                        style={{ textShadow: "0 1px 4px rgba(0,0,0,0.8)" }}
-                      >
-                        {course.name}
-                      </h3>
-                      <p
-                        className="text-xs text-white/90 mt-1 line-clamp-1"
-                        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
-                      >
-                        {course.fullName}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Badge row */}
-                  <div className="relative z-10 flex flex-wrap gap-1.5 mt-3">
-                    <span className="text-xs px-2.5 py-0.5 rounded-full font-bold bg-orange-500 text-white">
-                      {course.stream}
-                    </span>
-                    <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-white/20 text-white border border-white/30">
-                      {course.duration}
-                    </span>
-                  </div>
-                </div>
-
-                {/* ── Body ── */}
-                <div className="p-4 flex flex-col flex-1 gap-3 bg-white">
-
-                  {/* Fees + Salary */}
-                  <div className="grid grid-cols-2 gap-2.5">
-                    <div className="bg-orange-50 border border-orange-100 rounded-xl px-3 py-2.5">
-                      <div className="flex items-center gap-1 mb-1">
-                        <IndianRupee className="w-3 h-3 text-orange-400 shrink-0" />
-                        <span className="text-xs text-orange-500 font-semibold uppercase tracking-wider">Annual Fees</span>
-                      </div>
-                      <p className="text-xs font-bold text-gray-900 leading-tight">
-                        {formatFeesRange(course.avgFees.min, course.avgFees.max)}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Entrance exam tags */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {course.entranceExams.slice(0, 3).map((exam) => (
-                      <span key={exam} className="text-xs bg-indigo-50 text-indigo-600 px-2.5 py-0.5 rounded-full font-medium">
-                        {exam}
-                      </span>
-                    ))}
-                    {course.entranceExams.length > 3 && (
-                      <span className="text-xs bg-gray-100 text-gray-500 px-2.5 py-0.5 rounded-full font-medium">
-                        +{course.entranceExams.length - 3} More
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Top colleges */}
-                  <div className="flex flex-wrap gap-1.5 pt-2 border-t border-gray-100 mt-auto">
-                    <span className="text-xs text-gray-400 font-medium w-full">Top Colleges:</span>
-                    {course.topColleges.slice(0, 3).map((col) => (
-                      <span key={col} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
-                        {col}
-                      </span>
-                    ))}
-                    {course.topColleges.length > 3 && (
-                      <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">
-                        +{course.topColleges.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                </div>
-              </article>
-            </Link>
+              {t}
+            </button>
           ))}
-        </CardRail>
-
-        {/* Mobile view all */}
-        <div className="text-center mt-8 sm:hidden">
-          <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
-          >
-            View All Courses <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
 
-      </div>
+        <div className="mt-4">
+          <CardRail key={tab} label="featured courses" itemClassName="w-[78vw] sm:w-72">
+            {list.map((c) => {
+              const s = STREAM_STYLE[c.stream] ?? FALLBACK
+              const Icon = s.icon
+              return (
+                <Link key={c.id} href={`/courses/${c.slug}`} className="group block h-full">
+                  <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 group-hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
+                    <span className="h-1" style={{ background: s.band }} aria-hidden="true" />
+                    <div className="flex flex-1 flex-col p-4">
+                      <div className="flex items-start gap-3">
+                        <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${s.tile} transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-[family-name:var(--font-fraunces)] text-lg font-bold leading-tight text-[#012858]">{c.name}</h3>
+                          <p className="mt-0.5 line-clamp-2 text-xs text-gray-600">{c.fullName}</p>
+                        </div>
+                        <span className="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#024692]">{c.level}</span>
+                      </div>
+
+                      <dl className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                        <div className="rounded-lg bg-gray-50 px-2.5 py-1.5"><dt className="text-gray-600">Stream</dt><dd className="font-semibold text-gray-900">{c.stream}</dd></div>
+                        <div className="rounded-lg bg-gray-50 px-2.5 py-1.5"><dt className="flex items-center gap-1 text-gray-600"><Clock className="h-3 w-3" aria-hidden="true" />Length</dt><dd className="font-semibold text-gray-900">{c.duration}</dd></div>
+                      </dl>
+
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {c.entranceExams.slice(0, 3).map((e) => <span key={e} className="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700">{e}</span>)}
+                        {c.entranceExams.length > 3 && <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600">+{c.entranceExams.length - 3}</span>}
+                      </div>
+
+                      <span className="mt-auto flex items-center justify-between pt-4 text-sm font-bold text-[#C90D11]">
+                        View course
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#024692] transition-colors group-hover:bg-[#012858] group-hover:text-white"><ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
+                      </span>
+                    </div>
+                  </article>
+                </Link>
+              )
+            })}
+          </CardRail>
+        </div>
+      </Reveal>
     </section>
   )
 }
