@@ -92,9 +92,9 @@ export default function ExamGuidesBand() {
           <Link href="/exams" className="ml-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all exams <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
-        <ul className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="-mx-4 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0" aria-label="Upcoming entrance exams, scroll sideways">
           {exams.map((e, i) => (
-            <li key={e.slug} className={`reveal-item ${i >= 4 ? "hidden md:block" : ""}`} style={{ "--i": i + 2 } as React.CSSProperties}>
+            <li key={e.slug} className="reveal-item w-[78vw] shrink-0 snap-start sm:w-72" style={{ "--i": i + 2 } as React.CSSProperties}>
               <article className="group relative flex h-full flex-col rounded-xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]" style={{ borderLeft: `4px solid ${STRIPE[i % 3]}` }}>
                 <div className="flex items-start gap-4">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#012858] px-1 text-center font-[family-name:var(--font-fraunces)] text-xs font-bold leading-tight text-white">{BADGE[e.slug] ?? e.name}</span>
