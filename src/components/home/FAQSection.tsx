@@ -21,20 +21,20 @@ export default function FAQSection() {
           <span className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-xs font-bold uppercase tracking-wider text-orange-700 ring-1 ring-orange-200">
             <HelpCircle className="h-4 w-4" aria-hidden="true" /> FAQ
           </span>
-          <h2 id="faq-heading" className="mt-4 text-3xl font-extrabold leading-tight text-[#012858] sm:text-4xl">
+          <h2 id="faq-heading" className="mt-4 text-3xl font-bold leading-tight text-[#012858] sm:text-4xl">
             Questions students ask us
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">
             Short answers, with links to the pages that go deeper.
           </p>
 
-          <div className="bg-rich-navy relative mt-8 overflow-hidden rounded-3xl p-6 text-white shadow-xl shadow-blue-950/20">
+          <div className="bg-rich-navy relative mt-8 overflow-hidden rounded-3xl p-6 text-white">
             <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -right-10 h-48 w-48 rounded-full bg-[#E0170F]/30 blur-3xl" />
             <div className="relative">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-orange-300 ring-1 ring-white/20"><Headphones className="h-5 w-5" aria-hidden="true" /></span>
               <h3 className="mt-4 text-lg font-extrabold">Still have a question?</h3>
               <p className="mt-1 text-sm text-blue-100">Ask a counsellor. The first call is free.</p>
-              <Link href="/counselling" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/25 transition-all hover:-translate-y-0.5 hover:bg-[#C90D11]">
+              <Link href="/counselling" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#C90D11]">
                 Talk to a counsellor
               </Link>
             </div>
@@ -73,7 +73,7 @@ export default function FAQSection() {
               <button
                 type="button"
                 onClick={() => setShowAll(true)}
-                className="group inline-flex items-center gap-2 rounded-xl bg-[#012858] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-950/20 transition-all hover:-translate-y-0.5 hover:bg-[#024692]"
+                className="group inline-flex items-center gap-2 rounded-xl bg-[#012858] px-6 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#024692]"
               >
                 Show {faqs.length - INITIAL_COUNT} more questions
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />

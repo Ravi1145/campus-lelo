@@ -456,3 +456,10 @@ a:hover .sg-bar, a:focus-visible .sg-bar { animation: sg-grow 0.5s cubic-bezier(
   .how-fill, .how-thumb, .how-row, .how-ring { animation: none !important; opacity: 1 !important; }
   .how-ring { opacity: 0 !important; }
 }
+
+/* Exam tickets: semicircle notches where the stub is torn off */
+.exam-tear::before, .exam-tear::after {
+  content: ""; position: absolute; left: -9px; width: 16px; height: 16px; border-radius: 9999px; background: #011B40;
+}
+.exam-tear::before { top: -8px; }
+.exam-tear::after { bottom: -8px; }

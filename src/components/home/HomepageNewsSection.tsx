@@ -111,7 +111,7 @@ export default function HomepageNewsSection() {
             {/* Featured */}
             <Link
               href={`/blog/${featured.slug}`}
-              className="reveal-item group relative block overflow-hidden rounded-2xl bg-gradient-to-br from-[#011B40] via-[#012858] to-[#024692] p-6 sm:p-8 text-white shadow-xl shadow-blue-950/20 transition-transform duration-300 hover:-translate-y-1"
+              className="reveal-item group relative block overflow-hidden rounded-2xl bg-[#011B40] p-6 sm:p-8 text-white transition-transform duration-300 hover:-translate-y-1"
               style={{ "--i": 0 } as React.CSSProperties}
             >
               <span aria-hidden="true" className="insights-orb absolute -top-16 -right-10 w-56 h-56 rounded-full bg-[#E0170F]/40 blur-3xl" />
@@ -170,7 +170,7 @@ export default function HomepageNewsSection() {
 
           {/* ── Admission calendar ───────────────────────────────── */}
           <Reveal as="section" className="reveal-item rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-            <div className="flex items-center justify-between bg-gradient-to-r from-[#011B40] to-[#024692] px-5 py-4 text-white">
+            <div className="flex items-center justify-between bg-[#012858] px-5 py-4 text-white">
               <h3 id="calendar-heading" className="flex items-center gap-2 font-bold">
                 <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
                   <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-[#FB4312]" />
@@ -183,7 +183,7 @@ export default function HomepageNewsSection() {
 
             {events.length ? (
               <ol className="relative px-5 py-5">
-                <span aria-hidden="true" className="absolute left-[2.15rem] top-7 bottom-7 w-px bg-gradient-to-b from-orange-300 via-blue-200 to-transparent" />
+                <span aria-hidden="true" className="absolute left-[2.15rem] top-7 bottom-7 w-px bg-gray-200" />
                 {events.map((ev, i) => {
                   const d = new Date(ev.iso + "T00:00:00Z")
                   return (

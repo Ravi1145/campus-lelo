@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { ArrowRight, BadgeCheck, Clock3, Sparkles, Wand2 } from "lucide-react"
+import { ArrowRight, Check, Sparkles } from "lucide-react"
 import Reveal from "./Reveal"
 
 // Homepage AI finder: collects the four inputs the real AI recommender uses
@@ -19,12 +19,6 @@ const BUDGETS = [
   { label: "Above ₹10L / year", value: 2500000 },
 ]
 
-const POINTS = [
-  { icon: Clock3, text: "Takes under a minute" },
-  { icon: BadgeCheck, text: "Free: no sign-up to see results" },
-  { icon: Wand2, text: "Matches your score, budget and goals" },
-]
-
 const field = "w-full rounded-xl border border-white/15 bg-white px-3.5 py-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FB4312]"
 
 export default function AIFinderBand() {
@@ -33,6 +27,12 @@ export default function AIFinderBand() {
   const [score, setScore] = useState("")
   const [budget, setBudget] = useState("")
   const router = useRouter()
+  const steps = [
+    { label: "Pick your stream", done: !!stream },
+    { label: "Choose your entrance exam", done: !!exam },
+    { label: "Add your score or percentile", done: !!score.trim() },
+    { label: "Set a yearly budget", done: !!budget },
+  ]
 
   const go = (e: React.FormEvent) => {
     e.preventDefault()
@@ -46,16 +46,12 @@ export default function AIFinderBand() {
 
   return (
     <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden bg-[#011B40] px-4 sm:px-6 py-16 sm:py-20">
-      {/* Floating brand glows */}
-      <span aria-hidden="true" className="insights-orb pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-[#E0170F]/25 blur-3xl" />
-      <span aria-hidden="true" className="insights-orb insights-orb--slow pointer-events-none absolute -bottom-24 right-10 h-80 w-80 rounded-full bg-[#024692]/50 blur-3xl" />
-      <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.08]" />
 
       <Reveal className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Copy */}
         <div className="reveal-item" style={{ "--i": 0 } as React.CSSProperties}>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur">
-            <Sparkles className="finder-sparkle h-3.5 w-3.5 text-[#FB4312]" aria-hidden="true" /> AI College Finder
+            <Sparkles className="h-3.5 w-3.5 text-[#FF8A73]" aria-hidden="true" /> AI College Finder
           </span>
           <h2 id="ai-finder-heading" className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
             Not sure where to apply?
@@ -64,21 +60,23 @@ export default function AIFinderBand() {
           <p className="mt-4 max-w-lg text-base leading-relaxed text-blue-100">
             Tell us your stream, exam, score and budget. Our AI recommender suggests Pune colleges that fit, and explains why.
           </p>
-          <ul className="mt-6 space-y-3">
-            {POINTS.map(({ icon: Icon, text }, i) => (
-              <li key={text} className="reveal-item flex items-center gap-3 text-sm text-white" style={{ "--i": i + 1 } as React.CSSProperties}>
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 ring-1 ring-white/15">
-                  <Icon className="h-4 w-4 text-[#FF9E8A]" aria-hidden="true" />
+          <ol className="mt-8" aria-label="Your answers so far">
+            {steps.map(({ label, done }, i) => (
+              <li key={label} className="relative flex items-center gap-4 pb-5 last:pb-0">
+                {i < steps.length - 1 && <span aria-hidden="true" className={`absolute left-[0.95rem] top-9 h-[calc(100%-1.5rem)] w-0.5 transition-colors duration-500 ${done ? "bg-emerald-400" : "bg-white/15"}`} />}
+                <span className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ring-2 transition-all duration-500 ${done ? "bg-emerald-400 text-[#011B40] ring-emerald-400 scale-105" : "bg-transparent text-blue-100 ring-white/30"}`}>
+                  {done ? <Check className="h-4 w-4" strokeWidth={3} aria-hidden="true" /> : i + 1}
                 </span>
-                {text}
+                <span className={`text-sm transition-colors duration-300 ${done ? "font-semibold text-white" : "text-blue-100"}`}>{label}{done && <span className="sr-only"> (answered)</span>}</span>
               </li>
             ))}
-          </ul>
+          </ol>
+          <p className="mt-6 text-sm text-blue-100">Takes under a minute. Free, no sign-up to see results.</p>
         </div>
 
-        {/* Form card with animated gradient border */}
-        <div className="reveal-item finder-border rounded-3xl p-[1.5px]" style={{ "--i": 2 } as React.CSSProperties}>
-          <form onSubmit={go} className="rounded-3xl bg-[#0B1E52]/90 p-6 sm:p-7 backdrop-blur-xl" aria-label="AI college finder">
+        {/* Form card */}
+        <div className="reveal-item rounded-3xl ring-1 ring-white/20" style={{ "--i": 2 } as React.CSSProperties}>
+          <form onSubmit={go} className="rounded-3xl bg-[#0B1E52] p-6 sm:p-7" aria-label="AI college finder">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="finder-stream" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-blue-100">1 · Stream</label>

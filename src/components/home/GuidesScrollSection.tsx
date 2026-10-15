@@ -108,7 +108,6 @@ function GuideCover({ guide, colors }: { guide: GuideCard; colors: { bar: string
       <div aria-hidden="true" className={`absolute inset-0 bg-gradient-to-br ${colors.bar} opacity-50 mix-blend-multiply`} />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#011B40]/80 via-[#011B40]/10 to-transparent" />
       {/* light sweep on hover */}
-      <div aria-hidden="true" className="absolute inset-y-0 -left-1/2 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent opacity-0 transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100" />
     </div>
   )
 }
@@ -137,7 +136,7 @@ function GuideCard({ guide }: { guide: GuideCard }) {
           {guide.readTime}
         </span>
         {/* accent line draws in on hover */}
-        <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-[#E0170F] via-[#FB4312] to-[#024692] transition-transform duration-500 group-hover:scale-x-100" />
+        <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-[#E0170F] transition-transform duration-500 group-hover:scale-x-100" />
       </div>
 
       <div className="flex flex-1 flex-col gap-2.5 p-5">
@@ -149,7 +148,7 @@ function GuideCard({ guide }: { guide: GuideCard }) {
 
         <div className="mt-1 flex items-center justify-between border-t border-gray-100 pt-3">
           <div className="flex min-w-0 items-center gap-2">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#012858] to-[#024692] text-[11px] font-extrabold text-white">{initial}</span>
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#012858] text-[11px] font-extrabold text-white">{initial}</span>
             <span className="min-w-0">
               <span className="block max-w-[120px] truncate text-xs font-semibold text-gray-800">{guide.author}</span>
               {dateText && <span className="block text-[11px] text-gray-500">{dateText}</span>}
@@ -173,7 +172,7 @@ export default async function GuidesScrollSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-7 flex items-end justify-between gap-4">
           <div className="flex items-center gap-3">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#012858] to-[#024692] text-white shadow-lg shadow-blue-950/25">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#012858] text-white">
               <BookOpen className="h-6 w-6" aria-hidden="true" />
             </span>
             <div>
