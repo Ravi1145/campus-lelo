@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { ArrowRight, Check, Sparkles } from "lucide-react"
+import { ArrowRight, BadgeCheck, Check, FileText, GraduationCap, IndianRupee, Lightbulb, Lock, Sparkles, Star, BarChart3 } from "lucide-react"
 import Reveal from "./Reveal"
 
 // Homepage AI finder: collects the four inputs the real AI recommender uses
@@ -19,7 +19,7 @@ const BUDGETS = [
   { label: "Above ₹10L / year", value: 2500000 },
 ]
 
-const field = "w-full rounded-xl border border-white/15 bg-white px-3.5 py-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FB4312]"
+const field = "w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-base text-gray-900 shadow-sm focus:border-[#012858] focus:outline-none focus:ring-2 focus:ring-[#012858]/25"
 
 export default function AIFinderBand() {
   const [stream, setStream] = useState("")
@@ -27,11 +27,12 @@ export default function AIFinderBand() {
   const [score, setScore] = useState("")
   const [budget, setBudget] = useState("")
   const router = useRouter()
+
   const steps = [
-    { label: "Pick your stream", done: !!stream },
-    { label: "Choose your entrance exam", done: !!exam },
-    { label: "Add your score or percentile", done: !!score.trim() },
-    { label: "Set a yearly budget", done: !!budget },
+    { label: "Pick your stream", sub: "MBA, B.Tech, Medical and more", done: !!stream, icon: GraduationCap, tint: "bg-blue-50 text-[#024692]" },
+    { label: "Choose your entrance exam", sub: "CAT, MHT-CET, NEET, etc.", done: !!exam, icon: FileText, tint: "bg-red-50 text-[#C90D11]" },
+    { label: "Add your score or percentile", sub: "Get relevant college suggestions", done: !!score.trim(), icon: Star, tint: "bg-emerald-50 text-emerald-700" },
+    { label: "Set a yearly budget", sub: "Find options that fit your budget", done: !!budget, icon: IndianRupee, tint: "bg-amber-50 text-amber-700" },
   ]
 
   const go = (e: React.FormEvent) => {
@@ -45,74 +46,98 @@ export default function AIFinderBand() {
   }
 
   return (
-    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden bg-[#011B40] px-4 sm:px-6 py-16 sm:py-20">
+    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden section-ivory px-4 py-16 sm:px-6 sm:py-20">
+      <span className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-orange-50" aria-hidden="true" />
+      <span className="pointer-events-none absolute right-0 top-0 h-72 w-1/2 rounded-bl-[8rem] bg-blue-50/70" aria-hidden="true" />
 
-      <Reveal className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        {/* Copy */}
+      <Reveal className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+        {/* Copy and the four steps */}
         <div className="reveal-item" style={{ "--i": 0 } as React.CSSProperties}>
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-[#FF8A73]" aria-hidden="true" /> AI College Finder
-          </span>
-          <h2 id="ai-finder-heading" className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-[#C90D11]"><Sparkles className="h-4 w-4" aria-hidden="true" /> AI College Finder</span>
+          <h2 id="ai-finder-heading" className="mt-5 text-4xl font-bold leading-[1.1] text-[#012858] sm:text-5xl">
             Not sure where to apply?
-            <span className="block text-[#FF8A73]">Answer 4 questions.</span>
+            <span className="block text-[#C90D11]">Answer 4 questions.</span>
           </h2>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-blue-100">
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-gray-600">
             Tell us your stream, exam, score and budget. Our AI recommender suggests Pune colleges that fit, and explains why.
           </p>
-          <ol className="mt-8" aria-label="Your answers so far">
-            {steps.map(({ label, done }, i) => (
-              <li key={label} className="relative flex items-center gap-4 pb-5 last:pb-0">
-                {i < steps.length - 1 && <span aria-hidden="true" className={`absolute left-[0.95rem] top-9 h-[calc(100%-1.5rem)] w-0.5 transition-colors duration-500 ${done ? "bg-emerald-400" : "bg-white/15"}`} />}
-                <span className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ring-2 transition-all duration-500 ${done ? "bg-emerald-400 text-[#011B40] ring-emerald-400 scale-105" : "bg-transparent text-blue-100 ring-white/30"}`}>
+
+          <ol className="mt-8 max-w-md" aria-label="Your answers so far">
+            {steps.map(({ label, sub, done, icon: Icon, tint }, i) => (
+              <li key={label} className="relative flex items-center gap-4 pb-6 last:pb-0">
+                {i < steps.length - 1 && <span aria-hidden="true" className={`absolute left-[1.15rem] top-11 h-[calc(100%-2rem)] w-0.5 transition-colors duration-500 ${done ? "bg-emerald-400" : "bg-gray-200"}`} />}
+                <span className={`relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ring-2 transition-all duration-500 ${done ? "bg-emerald-500 text-white ring-emerald-500" : "bg-blue-50 text-[#012858] ring-blue-100"}`}>
                   {done ? <Check className="h-4 w-4" strokeWidth={3} aria-hidden="true" /> : i + 1}
                 </span>
-                <span className={`text-sm transition-colors duration-300 ${done ? "font-semibold text-white" : "text-blue-100"}`}>{label}{done && <span className="sr-only"> (answered)</span>}</span>
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${tint}`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                <span>
+                  <span className={`block text-base font-bold ${done ? "text-[#012858]" : "text-gray-900"}`}>{label}{done && <span className="sr-only"> (answered)</span>}</span>
+                  <span className="block text-sm text-gray-600">{sub}</span>
+                </span>
               </li>
             ))}
           </ol>
-          <p className="mt-6 text-sm text-blue-100">Takes under a minute. Free, no sign-up to see results.</p>
+          <p className="mt-6 inline-block -rotate-1 border-b-2 border-[#F4604A] pb-1 font-[family-name:var(--font-fraunces)] text-lg italic text-[#012858]">Takes under a minute. Free, no sign-up to see results.</p>
         </div>
 
-        {/* Form card */}
-        <div className="reveal-item rounded-3xl ring-1 ring-white/20" style={{ "--i": 2 } as React.CSSProperties}>
-          <form onSubmit={go} className="rounded-3xl bg-[#0B1E52] p-6 sm:p-7" aria-label="AI college finder">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <label htmlFor="finder-stream" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-blue-100">1 · Stream</label>
+        {/* The form */}
+        <div className="reveal-item relative" style={{ "--i": 2 } as React.CSSProperties}>
+          <span className="pointer-events-none absolute -top-6 left-6 hidden -rotate-6 font-[family-name:var(--font-fraunces)] text-lg italic leading-tight text-[#012858] xl:block" aria-hidden="true">Better colleges,<br />brighter future</span>
+          <form onSubmit={go} className="rounded-3xl bg-white p-6 shadow-[0_24px_60px_-30px_rgba(1,40,88,0.45)] ring-1 ring-gray-200 sm:p-8" aria-label="AI college finder">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-red-50 text-[#C90D11]"><Sparkles className="h-7 w-7" aria-hidden="true" /></span>
+                <div>
+                  <p className="text-xl font-bold text-[#012858]">Get your personalised college shortlist</p>
+                  <p className="mt-1 text-sm text-gray-600">Based on the exam, score and budget you choose.</p>
+                </div>
+              </div>
+              <span className="hidden shrink-0 rotate-3 rounded-md bg-[#FFE9A8] px-3 py-2 text-center font-[family-name:var(--font-fraunces)] text-sm font-bold leading-tight text-[#4a3b00] shadow-sm sm:block">100% free<br />No sign-up</span>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl bg-blue-50/60 p-4">
+                <label htmlFor="finder-stream" className="mb-2.5 flex items-center gap-2 text-sm font-bold text-[#012858]"><GraduationCap className="h-4 w-4 text-[#024692]" aria-hidden="true" /> 1. Select your stream</label>
                 <select id="finder-stream" value={stream} onChange={(e) => setStream(e.target.value)} className={field}>
                   <option value="">Choose a stream</option>
                   {STREAMS.map((s) => <option key={s}>{s}</option>)}
                 </select>
               </div>
-              <div>
-                <label htmlFor="finder-exam" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-blue-100">2 · Entrance exam</label>
+              <div className="rounded-2xl bg-blue-50/60 p-4">
+                <label htmlFor="finder-exam" className="mb-2.5 flex items-center gap-2 text-sm font-bold text-[#012858]"><FileText className="h-4 w-4 text-[#024692]" aria-hidden="true" /> 2. Select your entrance exam</label>
                 <select id="finder-exam" value={exam} onChange={(e) => setExam(e.target.value)} className={field}>
                   <option value="">Choose an exam</option>
                   {EXAMS.map((x) => <option key={x}>{x}</option>)}
                 </select>
               </div>
-              <div>
-                <label htmlFor="finder-score" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-blue-100">3 · Score / percentile</label>
+              <div className="rounded-2xl bg-blue-50/60 p-4">
+                <label htmlFor="finder-score" className="mb-2.5 flex items-center gap-2 text-sm font-bold text-[#012858]"><BarChart3 className="h-4 w-4 text-[#024692]" aria-hidden="true" /> 3. Your score / percentile</label>
                 <input id="finder-score" value={score} onChange={(e) => setScore(e.target.value)} placeholder="e.g. 85 percentile" maxLength={30} className={field} />
               </div>
-              <div>
-                <label htmlFor="finder-budget" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-blue-100">4 · Yearly budget</label>
+              <div className="rounded-2xl bg-blue-50/60 p-4">
+                <label htmlFor="finder-budget" className="mb-2.5 flex items-center gap-2 text-sm font-bold text-[#012858]"><IndianRupee className="h-4 w-4 text-[#024692]" aria-hidden="true" /> 4. Yearly budget <span className="font-normal text-gray-600">(optional)</span></label>
                 <select id="finder-budget" value={budget} onChange={(e) => setBudget(e.target.value)} className={field}>
                   <option value="">Choose a budget</option>
                   {BUDGETS.map((b) => <option key={b.value} value={b.value}>{b.label}</option>)}
                 </select>
               </div>
             </div>
-            <button
-              type="submit"
-              className="group mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#C90D11]"
-            >
-              <Sparkles className="h-4 w-4" aria-hidden="true" /> Get my AI shortlist
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+
+            <button type="submit" className="group mt-6 flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 py-4 text-base font-bold text-white transition-colors hover:bg-[#C90D11]">
+              <Sparkles className="h-5 w-5" aria-hidden="true" /> Get my AI shortlist <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </button>
-            <p className="mt-3 text-center text-xs text-blue-200">You can change any answer on the next screen.</p>
+            <p className="mt-3 flex items-center justify-center gap-2 text-sm text-gray-600"><Lock className="h-4 w-4" aria-hidden="true" /> You can change any answer on the next screen.</p>
           </form>
+
+          <ul className="mt-4 grid grid-cols-1 gap-3 rounded-2xl bg-blue-50 p-4 sm:grid-cols-3">
+            {[
+              { icon: BadgeCheck, text: "Personalised college list", tint: "text-emerald-600" },
+              { icon: BarChart3, text: "Exams and fees from official pages", tint: "text-[#024692]" },
+              { icon: Lightbulb, text: "AI explanation for each suggestion", tint: "text-amber-500" },
+            ].map(({ icon: Icon, text, tint }) => (
+              <li key={text} className="flex items-center gap-3 text-sm font-medium text-gray-800"><Icon className={`h-8 w-8 shrink-0 ${tint}`} aria-hidden="true" />{text}</li>
+            ))}
+          </ul>
         </div>
       </Reveal>
     </section>
