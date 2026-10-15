@@ -436,3 +436,23 @@ a:hover .sg-bar, a:focus-visible .sg-bar { animation: sg-grow 0.5s cubic-bezier(
   [data-reveal="pending"] .sg-draw { stroke-dashoffset: 0; }
   .typing-dot { animation: none; }
 }
+
+/* ── "How it works" pictures ────────────────────────────────────────────────── */
+.how-fill { width: var(--w, 50%); animation: how-fill 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s both; }
+@keyframes how-fill { from { width: 0; } to { width: var(--w, 50%); } }
+.how-thumb { left: calc(var(--w, 50%) - 0.5rem); animation: how-thumb 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s both; }
+@keyframes how-thumb { from { left: -0.5rem; } to { left: calc(var(--w, 50%) - 0.5rem); } }
+[data-reveal="pending"] .how-fill { animation: none; width: 0; }
+[data-reveal="pending"] .how-thumb { animation: none; left: -0.5rem; }
+
+.how-row { animation: how-row 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(var(--r, 0) * 0.35s + 0.5s); }
+@keyframes how-row { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+[data-reveal="pending"] .how-row { animation: none; opacity: 0; }
+
+.how-ring { animation: how-ring 2.4s ease-out infinite; }
+@keyframes how-ring { 0% { transform: scale(0.9); opacity: 0.8; } 100% { transform: scale(1.5); opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .how-fill, .how-thumb, .how-row, .how-ring { animation: none !important; opacity: 1 !important; }
+  .how-ring { opacity: 0 !important; }
+}
