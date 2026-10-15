@@ -63,15 +63,15 @@ const SHORTCUTS = [
 export default function ExamGuidesBand() {
   const exams = ORDER.map((slug) => mbaExams.find((e) => e.slug === slug)).filter(Boolean) as Exam[]
   return (
-    <section aria-labelledby="exam-guides-heading" className="section-ivory px-4 py-16 sm:px-6 sm:py-20">
+    <section aria-labelledby="exam-guides-heading" className="section-ivory px-4 py-10 sm:px-6 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
-        <div className="reveal-item grid items-end gap-6 lg:grid-cols-[1.1fr_1fr]" style={{ "--i": 0 } as React.CSSProperties}>
+        <div className="reveal-item grid items-end gap-4 lg:grid-cols-[1.1fr_1fr]" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#024692]">Entrance exams</p>
-            <h2 id="exam-guides-heading" className="mt-2 text-4xl font-bold leading-tight text-[#012858] sm:text-5xl">Upcoming entrance exams</h2>
+            <h2 id="exam-guides-heading" className="mt-2 text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Upcoming entrance exams</h2>
             <p className="mt-3 max-w-xl text-base text-gray-600">Dates, eligibility, pattern and the colleges that accept each exam, every fact linked to its official source.</p>
           </div>
-          <div className="flex items-center justify-between gap-4 rounded-3xl bg-blue-50 p-5 ring-1 ring-blue-100">
+          <div className="flex items-center justify-between gap-4 rounded-2xl bg-blue-50 p-4 ring-1 ring-blue-100">
             <div className="flex items-start gap-4">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#024692] ring-1 ring-blue-100"><BellRing className="h-6 w-6" aria-hidden="true" /></span>
               <div>
@@ -85,25 +85,25 @@ export default function ExamGuidesBand() {
           </div>
         </div>
 
-        <div className="reveal-item mt-8 flex flex-wrap items-center gap-2.5" style={{ "--i": 1 } as React.CSSProperties}>
+        <div className="reveal-item mt-5 flex flex-wrap items-center gap-2" style={{ "--i": 1 } as React.CSSProperties}>
           {PILLS.map((p) => (
-            <Link key={p.label} href={p.href} className={`inline-flex min-h-11 items-center rounded-full px-5 text-sm font-semibold transition-colors ${p.on ? "bg-[#012858] text-white" : "bg-gray-100 text-[#012858] hover:bg-gray-200"}`}>{p.label}</Link>
+            <Link key={p.label} href={p.href} className={`inline-flex min-h-9 items-center rounded-full px-4 text-sm font-semibold transition-colors ${p.on ? "bg-[#012858] text-white" : "bg-gray-100 text-[#012858] hover:bg-gray-200"}`}>{p.label}</Link>
           ))}
           <Link href="/exams" className="ml-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all exams <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
-        <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
           {exams.map((e, i) => (
-            <li key={e.slug} className="reveal-item" style={{ "--i": i + 2 } as React.CSSProperties}>
-              <article className="group relative flex h-full flex-col rounded-2xl bg-white p-5 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]" style={{ borderLeft: `4px solid ${STRIPE[i % 3]}` }}>
+            <li key={e.slug} className={`reveal-item ${i >= 4 ? "hidden md:block" : ""}`} style={{ "--i": i + 2 } as React.CSSProperties}>
+              <article className="group relative flex h-full flex-col rounded-xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]" style={{ borderLeft: `4px solid ${STRIPE[i % 3]}` }}>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#012858] px-1 text-center font-[family-name:var(--font-fraunces)] text-sm font-bold leading-tight text-white">{BADGE[e.slug] ?? e.name}</span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#012858] px-1 text-center font-[family-name:var(--font-fraunces)] text-xs font-bold leading-tight text-white">{BADGE[e.slug] ?? e.name}</span>
                   <div className="min-w-0">
-                    <h3 className="flex items-center gap-2 text-xl font-bold text-[#012858]">{e.name}<span className="rounded-full bg-red-50 px-2 py-0.5 font-sans text-[11px] font-bold text-[#C90D11]">PG</span></h3>
+                    <h3 className="flex items-center gap-2 text-base font-bold text-[#012858]">{e.name}<span className="rounded-full bg-red-50 px-2 py-0.5 font-sans text-[11px] font-bold text-[#C90D11]">PG</span></h3>
                     <p className="truncate text-sm text-gray-600">{e.fullName}</p>
                   </div>
                 </div>
-                <dl className="mt-4 grid grid-cols-2 gap-4">
+                <dl className="mt-3 grid grid-cols-2 gap-3">
                   <div className="flex gap-2">
                     <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-gray-500" aria-hidden="true" />
                     <div><dt className="text-xs text-gray-600">Exam date</dt><dd className="text-sm font-semibold leading-snug text-gray-900">{examDate(e)}</dd></div>
@@ -113,7 +113,7 @@ export default function ExamGuidesBand() {
                     <div><dt className="text-xs text-gray-600">Registration</dt><dd className="text-sm font-semibold leading-snug text-gray-900">{registration(e)}</dd></div>
                   </div>
                 </dl>
-                <div className="mt-auto flex items-center justify-between pt-5 text-sm font-semibold text-[#024692]">
+                <div className="mt-auto flex items-center justify-between pt-3 text-sm font-semibold text-[#024692]">
                   <nav aria-label={`${e.name} guides`} className="flex flex-wrap items-center gap-x-3 gap-y-1">
                     <Link href={`/exams/${e.slug}/syllabus`} className="hover:underline">Syllabus</Link><span aria-hidden="true" className="text-gray-300">|</span>
                     <Link href={`/exams/${e.slug}`} className="hover:underline">Pattern</Link><span aria-hidden="true" className="text-gray-300">|</span>
@@ -126,10 +126,10 @@ export default function ExamGuidesBand() {
           ))}
         </ul>
 
-        <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {SHORTCUTS.map(({ href, title, sub, icon: Icon, tone }, i) => (
             <li key={href} className="reveal-item" style={{ "--i": i + 11 } as React.CSSProperties}>
-              <Link href={href} className={`group flex h-full items-center gap-4 rounded-2xl p-4 ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 ${tone.split(" ")[0]}`}>
+              <Link href={href} className={`group flex h-full items-center gap-3 rounded-xl p-3 ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 ${tone.split(" ")[0]}`}>
                 <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white ${tone.split(" ")[1]}`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
                 <span className="min-w-0 flex-1"><span className="block font-bold text-gray-900">{title}</span><span className="block text-sm text-gray-700">{sub}</span></span>
                 <ArrowRight className="h-4 w-4 shrink-0 text-gray-500 transition-transform group-hover:translate-x-1" aria-hidden="true" />

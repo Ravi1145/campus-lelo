@@ -83,7 +83,7 @@ export default function HomepageNewsSection() {
   const F = cat(featured.category)
 
   return (
-    <section aria-labelledby="insights-heading" className="relative py-16 px-4 sm:px-6 section-pearl overflow-hidden">
+    <section aria-labelledby="insights-heading" className="relative py-10 px-4 sm:px-6 section-pearl overflow-hidden">
       {/* soft brand glows */}
       <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-orange-100/60 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-blue-100/50 blur-3xl" />

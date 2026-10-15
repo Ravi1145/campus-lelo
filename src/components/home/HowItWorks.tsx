@@ -70,7 +70,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section aria-labelledby="how-heading" className="section-pearl px-4 py-16 sm:px-6 sm:py-20">
+    <section aria-labelledby="how-heading" className="section-pearl px-4 py-10 sm:px-6 sm:py-12">
       <Reveal className="mx-auto max-w-6xl">
         <div className="reveal-item text-center" style={{ "--i": 0 } as React.CSSProperties}>
           <p className="text-xs font-bold uppercase tracking-wider text-[#C90D11]">How it works</p>

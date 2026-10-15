@@ -78,7 +78,7 @@ export default function RankingTables() {
   }
 
   return (
-    <section aria-labelledby="rankings-heading" className="py-16 section-pearl">
+    <section aria-labelledby="rankings-heading" className="py-10 section-pearl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div className="flex items-center gap-4">

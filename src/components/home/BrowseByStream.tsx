@@ -54,10 +54,10 @@ function SmallCard({ item, i }: { item: Item; i: number }) {
   const Icon = item.icon
   return (
     <li className="reveal-item" style={{ "--i": i } as React.CSSProperties}>
-      <Link href={href(item.name)} className="group flex h-full items-center gap-4 rounded-2xl bg-white p-5 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
-        <span className={`flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-2xl ${item.tint} ${item.ink} transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105`}><Icon className="h-9 w-9" strokeWidth={1.5} aria-hidden="true" /></span>
+      <Link href={href(item.name)} className="group flex h-full items-center gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
+        <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${item.tint} ${item.ink} transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105`}><Icon className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" /></span>
         <span className="min-w-0 flex-1">
-          <span className="block font-[family-name:var(--font-fraunces)] text-2xl font-bold leading-tight text-[#012858]">{item.name}</span>
+          <span className="block font-[family-name:var(--font-fraunces)] text-lg font-bold leading-tight text-[#012858]">{item.name}</span>
           <span className="mt-0.5 block text-sm text-gray-600">{item.sub}</span>
           <span className="mt-2.5 block"><Count name={item.name} /></span>
         </span>
@@ -70,7 +70,7 @@ function SmallCard({ item, i }: { item: Item; i: number }) {
 // Skyline and circuit drawing behind the Engineering card: lines draw once when the section scrolls into view.
 function Skyline() {
   return (
-    <svg viewBox="0 0 360 300" className="pointer-events-none absolute bottom-0 right-0 h-full max-h-[22rem] w-auto text-blue-200/45" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true">
+    <svg viewBox="0 0 360 300" className="pointer-events-none absolute bottom-0 right-0 h-full max-h-[15rem] w-auto text-blue-200/45" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true">
       {[[160, 120, 60, 180], [226, 70, 54, 230], [284, 140, 60, 160], [100, 170, 52, 130], [20, 200, 70, 100]].map(([x, y, w, h], i) => (
         <g key={i}>
           <rect className="sg-draw" pathLength={1} x={x} y={y} width={w} height={h} style={{ animationDelay: `${0.2 + i * 0.12}s` }} />
@@ -85,21 +85,21 @@ function Skyline() {
 
 export default function BrowseByStream() {
   return (
-    <section className="section-ivory px-4 py-16 sm:px-6 sm:py-20" aria-labelledby="streams-heading">
+    <section className="section-ivory px-4 py-10 sm:px-6 sm:py-12" aria-labelledby="streams-heading">
       <Reveal className="mx-auto max-w-7xl">
-        <div className="reveal-item mb-9 flex items-end justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>
+        <div className="reveal-item mb-6 flex items-end justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
             <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[#C90D11]"><span className="h-0.5 w-8 bg-[#E0170F]" aria-hidden="true" />Explore programmes</p>
-            <h2 id="streams-heading" className="mt-3 text-4xl font-bold leading-tight text-[#012858] sm:text-5xl">Browse by stream</h2>
+            <h2 id="streams-heading" className="mt-3 text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Browse by stream</h2>
             <p className="mt-2 text-base text-gray-600">Find colleges by your field of study</p>
           </div>
           <Link href="/colleges" className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
 
-        <ul className="grid gap-5 lg:grid-cols-12">
+        <ul className="grid gap-4 lg:grid-cols-12">
           {/* Engineering: the feature card */}
           <li className="reveal-item lg:col-span-5 lg:row-span-2" style={{ "--i": 1 } as React.CSSProperties}>
-            <Link href={href("Engineering")} className="group relative flex h-full min-h-[22rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#012858] p-7 text-white sm:p-9">
+            <Link href={href("Engineering")} className="group relative flex h-full min-h-[15rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#012858] p-6 text-white sm:p-7">
               <Skyline />
               <div className="relative">
                 <span className="block h-0.5 w-10 bg-[#F4604A]" aria-hidden="true" />
@@ -115,14 +115,14 @@ export default function BrowseByStream() {
           </li>
 
           <li className="lg:col-span-7">
-            <ul className="grid h-full gap-5">
+            <ul className="grid h-full gap-4">
               {/* MBA: the wide card */}
               <li className="reveal-item" style={{ "--i": 2 } as React.CSSProperties}>
-                <Link href={href("MBA")} className="group relative flex h-full items-center gap-5 overflow-hidden rounded-2xl bg-white p-6 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
+                <Link href={href("MBA")} className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
                   <span className="pointer-events-none absolute -right-10 -top-16 h-56 w-56 rounded-full bg-orange-50" aria-hidden="true" />
-                  <span className={`relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl ${MBA.tint} ${MBA.ink} transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105`}><GraduationCap className="h-10 w-10" strokeWidth={1.5} aria-hidden="true" /></span>
+                  <span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${MBA.tint} ${MBA.ink} transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105`}><GraduationCap className="h-7 w-7" strokeWidth={1.5} aria-hidden="true" /></span>
                   <span className="relative min-w-0 flex-1">
-                    <span className="block font-[family-name:var(--font-fraunces)] text-3xl font-bold text-[#012858]">{MBA.name}</span>
+                    <span className="block font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#012858]">{MBA.name}</span>
                     <span className="mt-0.5 block text-sm text-gray-600">{MBA.sub}</span>
                     <span className="mt-3 block"><Count name="MBA" /></span>
                   </span>
@@ -131,13 +131,13 @@ export default function BrowseByStream() {
                 </Link>
               </li>
               <li>
-                <ul className="grid h-full gap-5 sm:grid-cols-2">{PAIR.map((it, i) => <SmallCard key={it.name} item={it} i={i + 3} />)}</ul>
+                <ul className="grid h-full gap-4 sm:grid-cols-2">{PAIR.map((it, i) => <SmallCard key={it.name} item={it} i={i + 3} />)}</ul>
               </li>
             </ul>
           </li>
         </ul>
 
-        <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{ROW.map((it, i) => <SmallCard key={it.name} item={it} i={i + 5} />)}</ul>
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{ROW.map((it, i) => <SmallCard key={it.name} item={it} i={i + 5} />)}</ul>
       </Reveal>
     </section>
   )

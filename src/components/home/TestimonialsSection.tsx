@@ -73,7 +73,7 @@ const TOOLS = [
 
 export default function TestimonialsSection() {
   return (
-    <section aria-labelledby="why-heading" className="section-ivory px-4 py-16 sm:px-6 sm:py-20">
+    <section aria-labelledby="why-heading" className="section-ivory px-4 py-10 sm:px-6 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item max-w-2xl" style={{ "--i": 0 } as React.CSSProperties}>
           <p className="text-xs font-bold uppercase tracking-widest text-[#C90D11]">Why CampusLelo</p>

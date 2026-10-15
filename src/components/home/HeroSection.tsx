@@ -138,7 +138,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
       <div aria-hidden="true" className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute top-24 right-1/3 h-72 w-72 rounded-full bg-orange-100/70 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-10 pt-8 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:px-8 lg:pb-14 lg:pt-12">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-4 pb-8 pt-6 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-8 lg:pb-10 lg:pt-8">
         {/* ── Left: copy + search ─────────────────────────────── */}
         <div>
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
@@ -149,7 +149,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             Admissions 2026–27 · Pune
           </p>
 
-          <h1 id="hero-heading" className="hero-in mt-5 text-[2.1rem] font-extrabold leading-[1.1] tracking-tight text-[#012858] sm:text-5xl lg:text-[3.4rem]" style={{ "--i": 1 } as React.CSSProperties}>
+          <h1 id="hero-heading" className="hero-in mt-5 text-[1.75rem] font-extrabold leading-[1.15] tracking-tight text-[#012858] sm:text-4xl lg:text-[2.6rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune"; the stream word is decorative */}
             Find the right <RotatingWord />
             college in Pune, Noida or Delhi NCR

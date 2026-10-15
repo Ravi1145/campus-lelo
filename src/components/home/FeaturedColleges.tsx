@@ -71,7 +71,7 @@ export default function FeaturedColleges() {
     .slice(0, 12)
 
   return (
-    <section className="py-16 section-pearl">
+    <section className="py-10 section-pearl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}

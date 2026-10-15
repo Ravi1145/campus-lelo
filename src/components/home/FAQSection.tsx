@@ -14,7 +14,7 @@ export default function FAQSection() {
   const visible = showAll ? faqs : faqs.slice(0, INITIAL_COUNT)
 
   return (
-    <section aria-labelledby="faq-heading" className="py-16 sm:py-20 section-ivory">
+    <section aria-labelledby="faq-heading" className="py-10 sm:py-12 section-ivory">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14 lg:px-8">
         {/* Intro — sticks while the list scrolls */}
         <div className="lg:sticky lg:top-[calc(var(--leadbar-h,0px)+8rem)] lg:self-start">
