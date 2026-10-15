@@ -403,3 +403,36 @@ body { background-color: #F6F8FB; }
 .rank-bar { transform-origin: left center; animation: rank-bar 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 250ms); }
 @keyframes rank-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .acc-content, .rank-bar { animation: none !important; transform: none !important; } }
+
+/* ── "Why CampusLelo" drawings and the example chat ─────────────────────────── */
+/* Lines draw themselves once the section is in view */
+.sg-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sg-draw 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards; }
+@keyframes sg-draw { to { stroke-dashoffset: 0; } }
+[data-reveal="pending"] .sg-draw { animation: none; }
+
+/* Bars grow from the baseline */
+.sg-bar { transform-box: fill-box; transform-origin: bottom; animation: sg-grow 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--d, 0) * 90ms + 150ms); }
+@keyframes sg-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+[data-reveal="pending"] .sg-bar { animation: none; transform: scaleY(0); }
+
+/* Marker dots pop in after the line has drawn; the ring on the calendar pulses once */
+.sg-pop { transform-box: fill-box; transform-origin: center; animation: sg-pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) 1.1s both; }
+@keyframes sg-pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+[data-reveal="pending"] .sg-pop { animation: none; transform: scale(0); }
+.sg-star { transform-box: fill-box; transform-origin: center; animation: sg-pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) 1s both; }
+[data-reveal="pending"] .sg-star { animation: none; transform: scale(0); }
+a:hover .sg-bar, a:focus-visible .sg-bar { animation: sg-grow 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--d, 0) * 50ms); }
+
+/* Chat bubbles arrive one after another; the typing dots bounce */
+.bubble { animation: bubble-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(var(--b, 0) * 0.7s + 0.3s); }
+@keyframes bubble-in { from { opacity: 0; transform: translateY(10px) scale(0.97); } to { opacity: 1; transform: none; } }
+[data-reveal="pending"] .bubble { animation: none; opacity: 0; }
+.typing-dot { display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background: #BFD0EA; animation: typing 1.1s ease-in-out infinite; }
+@keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sg-draw { animation: none; stroke-dashoffset: 0; }
+  .sg-bar, .sg-pop, .sg-star, .bubble { animation: none !important; transform: none !important; opacity: 1 !important; }
+  [data-reveal="pending"] .sg-draw { stroke-dashoffset: 0; }
+  .typing-dot { animation: none; }
+}
