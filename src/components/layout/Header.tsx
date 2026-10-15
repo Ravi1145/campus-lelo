@@ -132,6 +132,8 @@ const streams = [
 ]
 
 const tools = [
+  { label: "Career Quiz",          href: "/career-quiz",                            icon: Compass,       desc: "Which study path fits you",      color: "text-orange-600 bg-orange-50" },
+  { label: "My Admission Plan",    href: "/my-admission-plan",                      icon: Award,         desc: "Dates and colleges, with sources", color: "text-emerald-600 bg-emerald-50" },
   { label: "MBA Cut-off Checker",  href: "/mba-cutoff-checker",                     icon: BarChart3,     desc: "Your CAT percentile vs published", color: "text-red-600 bg-red-50" },
   { label: "Exam Acceptance Table", href: "/mba-exam-acceptance",                    icon: Compass,       desc: "Which colleges take your exam",  color: "text-blue-600 bg-blue-50" },
   { label: "College Predictor",    href: "/predictor",                              icon: GraduationCap, desc: "Find colleges by your score",   color: "text-orange-600 bg-orange-50" },

@@ -24,6 +24,7 @@ function nextDate(e: (typeof mbaExams)[number]): string {
 }
 
 const TOOLS = [
+  { href: "/my-admission-plan", label: "My admission plan", sub: "Dates and colleges with sources", icon: Scale },
   { href: "/mba-cutoff-checker", label: "MBA cut-off checker", sub: "Your CAT percentile vs published", icon: TrendingUp },
   { href: "/mba-exam-acceptance", label: "Exam acceptance table", sub: "Which colleges take your exam", icon: GitCompare },
   { href: "/mba-vs-pgdm", label: "MBA vs PGDM", sub: "Degree vs diploma, explained", icon: Scale },

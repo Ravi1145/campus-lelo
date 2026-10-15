@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight, BadgeCheck, BarChart3, GitCompare, Grid3x3, Sparkles } from "lucide-react"
+import { ArrowUpRight, BadgeCheck, BarChart3, ClipboardList, Compass, GitCompare, Grid3x3, Sparkles } from "lucide-react"
 import Reveal from "./Reveal"
 import type { HeroProof } from "./HeroSection"
 
@@ -7,8 +7,10 @@ import type { HeroProof } from "./HeroSection"
 // portal research: competitors lead with predictors and comparisons but show no source on figures.
 
 const TOOLS = [
-  { icon: BarChart3, title: "MBA cut-off checker", desc: "Type your CAT percentiles and see which published minimums you meet, and by how much you miss the rest.", href: "/mba-cutoff-checker", tag: "New" },
-  { icon: Grid3x3, title: "Exam acceptance table", desc: "Pick the exams you took. Only colleges that list all of them stay in view, each linked to its own page.", href: "/mba-exam-acceptance", tag: "New" },
+  { icon: Compass, title: "Career quiz", desc: "48 short statements, 8 minutes. See your interest code and which study paths fit, from engineering to MBA.", href: "/career-quiz", tag: "New" },
+  { icon: ClipboardList, title: "My admission plan", desc: "Pick your exams and city. Get your dates and colleges on one page, every line with its source and check date.", href: "/my-admission-plan", tag: "New" },
+  { icon: BarChart3, title: "MBA cut-off checker", desc: "Type your CAT percentiles and see which published minimums you meet, and by how much you miss the rest.", href: "/mba-cutoff-checker" },
+  { icon: Grid3x3, title: "Exam acceptance table", desc: "Pick the exams you took. Only colleges that list all of them stay in view, each linked to its own page.", href: "/mba-exam-acceptance" },
   { icon: Sparkles, title: "AI college finder", desc: "Answer four questions about stream, exam, score and budget and get a matched shortlist.", href: "/ai-finder" },
   { icon: GitCompare, title: "Compare two colleges", desc: "Put two colleges side by side on the facts we have checked.", href: "/compare" },
 ]

@@ -404,6 +404,10 @@ body { background-color: #F6F8FB; }
 @keyframes rank-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .acc-content, .rank-bar { animation: none !important; transform: none !important; } }
 
+.career-bar { transform-origin: left center; animation: career-bar 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes career-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .career-bar { animation: none !important; } }
+
 /* ── "Why CampusLelo" drawings and the example chat ─────────────────────────── */
 /* Lines draw themselves once the section is in view */
 .sg-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sg-draw 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards; }
