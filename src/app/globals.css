@@ -572,13 +572,7 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 /* Hero background photo is static: no zoom, no fade */
 
 
-/* Hero background: the photo strip scrolls sideways, slowly and steadily. No fade, no zoom.
-   The strip is 400% wide and holds the two photos twice, so -50% is exactly one full loop. */
-.hero-track { animation: hero-scroll 120s linear infinite; will-change: transform; }
-@keyframes hero-scroll { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
-@media (prefers-reduced-motion: reduce) { .hero-track { animation: none !important; } }
-
-/* Hero background: each photo slowly zooms in (and eases back) while the strip scrolls. No fade. */
+/* Hero background: each photo slowly zooms in and eases back. No scrolling, no fade. */
 .hero-slide-img { animation: hero-zoomin 40s ease-in-out infinite alternate; will-change: transform; }
 @keyframes hero-zoomin { from { transform: scale(1); } to { transform: scale(1.12); } }
 @media (prefers-reduced-motion: reduce) { .hero-slide-img { animation: none !important; } }
