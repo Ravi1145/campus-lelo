@@ -223,17 +223,17 @@ export function generateWebSiteSchema() {
     "@id": `${BASE_URL}/#website`,
     name: "CampusLelo",
     url: BASE_URL,
-    description: "Find the best colleges in Pune 2026. Compare fees, placements, NAAC grades and 2026 admission details for engineering, MBA, medical, arts, design and more.",
+    description: "Compare colleges in Pune, Noida, Greater Noida and Delhi NCR by fees, entrance exams and NAAC grade. MBA and PGDM exam dates, eligibility and cut-offs link to their official sources and show the date we checked them.",
     inLanguage: "en-IN",
     publisher: { "@id": `${BASE_URL}/#organization` },
     about: {
       "@type": "Thing",
-      name: "Higher Education in Pune, Maharashtra, India",
-      description: "Full guide to colleges, universities, entrance exams, cutoffs, fees, and placement data for students seeking admission in Pune.",
+      name: "College admissions in Pune, Noida, Delhi NCR, Uttar Pradesh and Dehradun",
+      description: "Colleges, entrance exams, MBA and PGDM cut-offs and admission routes for students, with sources and check dates.",
     },
     audience: {
       "@type": "Audience",
-      audienceType: "Students and parents seeking college admission in Pune",
+      audienceType: "Students and parents seeking college admission in Pune, Noida and Delhi NCR",
       geographicArea: {
         "@type": "City",
         name: "Pune",

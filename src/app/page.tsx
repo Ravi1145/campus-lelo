@@ -20,6 +20,7 @@ const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNews
 const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
 import NextSteps from "@/components/seo/NextSteps"
+import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import { homeFaqs } from "@/data/homeFaqs"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
@@ -56,6 +57,7 @@ export const metadata: Metadata = genMeta({
 
 const faqData = homeFaqs.map((f) => ({ question: f.q, answer: f.a }))
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 const checkedDates = programAdmissions.map((p) => p.source.accessed).sort()
 const latestCheck = checkedDates[checkedDates.length - 1]
 const proof = {
@@ -77,6 +79,23 @@ export default function HomePage() {
         id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(generateWebSiteSchema()) }}
+      />
+      <script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${BASE_URL}/#webpage`,
+          url: BASE_URL,
+          name: "Colleges and MBA in Pune, Noida and Delhi NCR | CampusLelo",
+          description: "Compare colleges in Pune, Noida, Greater Noida and Delhi NCR by fees and entrance exams. MBA exam dates and cut-offs link to official sources.",
+          inLanguage: "en-IN",
+          dateModified: latestCheck,
+          isPartOf: { "@id": `${BASE_URL}/#website` },
+          publisher: { "@id": `${BASE_URL}/#organization` },
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["#hero-heading", "#what-is-q", ".quick-answer"] },
+        }) }}
       />
       <script
         id="faq-schema"
@@ -136,6 +155,9 @@ export default function HomePage() {
         {/* 11. FAQ + Final CTA */}
         <FAQSection />
 
+
+        {/* A short, self-contained answer to "What is CampusLelo?" (what assistants and snippets quote) */}
+        <WhatIsCampusLelo />
 
         {/* 14. Explore: plain links to sections that otherwise have few inbound links */}
         <NextSteps

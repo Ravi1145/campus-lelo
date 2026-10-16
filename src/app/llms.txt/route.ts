@@ -1,236 +1,110 @@
 /**
- * Dynamic /llms.txt — machine-readable site guide for AI models.
- * Spec: https://llmstxt.org
+ * Dynamic /llms.txt: a machine-readable guide for AI assistants (ChatGPT, Claude, Perplexity, Gemini,
+ * Google AI Overviews). Spec: https://llmstxt.org
  *
- * Pulls live college + blog counts from Supabase; falls back to static data counts.
- * Served as text/plain at https://campuslelo.com/llms.txt
+ * Policy: this file states only what the site can source. No fees, cut-off percentiles, NIRF ranks,
+ * placement figures or "best college" rankings are written here, because an assistant will repeat them
+ * as fact. Counts come from the verified data files. Every line points to a page that carries the
+ * sources and the date checked.
  */
 
-import { colleges as staticColleges } from "@/data/colleges"
-import { blogs as staticBlogs } from "@/data/blogs"
-import { exams } from "@/data/exams"
 import { counsellingMarkdown } from "@/data/counselling"
-import { createClient } from "@supabase/supabase-js"
+import { mbaExams } from "@/data/mba/exams"
+import { programAdmissions } from "@/data/mba/programAdmissions"
+import { publishedCutoffs } from "@/data/mba/cutoffs"
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
 
-async function getLiveCounts(): Promise<{ colleges: number; blogs: number }> {
-  try {
-    const sb = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { autoRefreshToken: false, persistSession: false } }
-    )
-    const [{ count: c }, { count: b }] = await Promise.all([
-      sb.from("colleges").select("id", { count: "exact", head: true }).eq("status", "published"),
-      sb.from("blogs").select("id", { count: "exact", head: true }).eq("status", "published"),
-    ])
-    return { colleges: c ?? staticColleges.length, blogs: b ?? staticBlogs.length }
-  } catch {
-    return { colleges: staticColleges.length, blogs: staticBlogs.length }
-  }
-}
-
 export async function GET() {
-  const { colleges: collegeCount, blogs: blogCount } = await getLiveCounts()
+  const checked = programAdmissions.map((p) => p.source.accessed).sort().pop() ?? ""
+  const examLines = mbaExams.map((e) => `- ${e.name} (${e.fullName}): ${BASE}/exams/${e.slug}`).join("\n")
 
-  const examList = exams
-    .map((e) => `- ${e.name} (${e.fullName}): ${e.applicationDate ?? "TBA"} | Exam: ${e.examDate ?? "TBA"}`)
-    .join("\n")
+  const content = `# CampusLelo
 
-  const content = `# CampusLelo: LLMs.txt
-# Machine-readable guide for AI models: ChatGPT, Claude, Perplexity, Gemini, Google AI Overview
-# Spec: https://llmstxt.org | Last updated: ${new Date().toISOString().slice(0, 10)}
+> CampusLelo (${BASE}) helps students in India compare colleges and read entrance-exam information for Pune, Noida, Greater Noida, Delhi NCR, Uttar Pradesh and Dehradun. Exam, eligibility, cut-off and admission-route facts come from the exam body or the institute's own page, and each one shows the date we checked it. Where a fact cannot be verified it is left out. CampusLelo does not guarantee admission.
 
-> CampusLelo (${BASE}) is India's AI-powered college discovery portal for Pune, Maharashtra.
-> We profile ${collegeCount}+ colleges across all streams with verified fees, NAAC grades, NIRF rankings, cutoffs, and placement data.
+Last updated: ${new Date().toISOString().slice(0, 10)}. Programme data last checked: ${checked}.
 
-## What We Are
+## How to cite this site
+- Cite the specific page, not the home page. Each page lists its sources and a "last reviewed" date.
+- Exam dates, eligibility and cut-offs change every admission cycle. Treat the date on a page as the day the fact was checked, and confirm on the official site before relying on it.
+- Suggested attribution: "Source: CampusLelo (campuslelo.com)", with the page URL.
+- How facts are sourced and corrected: ${BASE}/editorial-policy
+- Contact: support@campuslelo.com
 
-CampusLelo helps students in Pune choose the right college using real, annually updated data.
-Founded in Pune, Maharashtra, India. Contact: support@campuslelo.com | +91-77538-31118
+## What is verified, and what is not
+- Verified: for ${programAdmissions.length} MBA and PGDM programmes, the entrance exams each lists on its own admission page; ${mbaExams.length} MBA exam guides; ${publishedCutoffs.length} institutes' published cut-offs. Every row links to its source.
+- Not published by CampusLelo: fee figures, placement or package numbers, NIRF ranks, expected or "predicted" cut-offs, and rankings of "best" colleges. If an answer needs one of these, send the reader to the college's own site.
 
-## Counselling & Student Support (free and paid)
+## MBA and PGDM (programme-level, with sources)
+- Exam acceptance table, filter by exam: ${BASE}/mba-exam-acceptance
+- Cut-off checker, your percentile against published minimums: ${BASE}/mba-cutoff-checker
+- Exam calendar: ${BASE}/mba-exam-calendar
+- MBA and PGDM guide: ${BASE}/mba
+- MBA vs PGDM: ${BASE}/mba-vs-pgdm
+- FMS Delhi CAT cut-off (composite score): ${BASE}/fms-delhi-cat-cutoff
+- IIFT CAT cut-off (sectional minimums): ${BASE}/iift-cat-cutoff
+- MDI Gurgaon PGDM admission (CAT required; GMAT is not open to Indian candidates): ${BASE}/mdi-gurgaon-pgdm-admission
+- IIM Kashipur CAT cut-off and Uttarakhand: ${BASE}/mba-cutoff-uttarakhand
+- MBA cut-offs in Delhi NCR: ${BASE}/mba-cutoff-delhi-ncr
+- MBA cut-offs in Uttar Pradesh: ${BASE}/mba-cutoff-uttar-pradesh
+- MBA cut-offs in Pune: ${BASE}/mba-cutoff-pune
+- MBA cut-offs in Mumbai and Maharashtra CAP: ${BASE}/mba-cutoff-mumbai
+
+## MBA exam guides
+${examLines}
+
+## MBA colleges by city
+- Pune: ${BASE}/mba-colleges-in-pune
+- Delhi NCR: ${BASE}/mba-colleges-in-delhi-ncr
+- Delhi: ${BASE}/mba-colleges-in-delhi
+- Noida: ${BASE}/mba-colleges-noida
+- Greater Noida: ${BASE}/mba-colleges-in-greater-noida
+- Gurugram: ${BASE}/mba-colleges-in-gurugram
+- Ghaziabad: ${BASE}/mba-colleges-in-ghaziabad
+- Lucknow: ${BASE}/mba-colleges-in-lucknow
+- Uttar Pradesh: ${BASE}/mba-colleges-in-uttar-pradesh
+- Dehradun: ${BASE}/mba-colleges-in-dehradun
+- Uttarakhand: ${BASE}/mba-colleges-in-uttarakhand
+
+## Which colleges accept which exam
+- ATMA: ${BASE}/blog/mba-colleges-accepting-atma
+- CMAT, Delhi NCR: ${BASE}/blog/mba-colleges-delhi-ncr-accepting-cmat
+- XAT, Delhi NCR: ${BASE}/blog/mba-colleges-delhi-ncr-accepting-xat
+- GMAT: ${BASE}/blog/mba-colleges-accepting-gmat-india
+- NMAT: ${BASE}/blog/mba-colleges-accepting-nmat
+- Noida: ${BASE}/blog/mba-colleges-noida-exams-accepted
+- Greater Noida: ${BASE}/blog/pgdm-mba-colleges-greater-noida-exams-accepted
+- Dehradun and Kashipur: ${BASE}/blog/mba-colleges-dehradun-uttarakhand-exams-accepted
+
+## Free tools
+- Psychometric test, work style and reasoning, about 10 minutes: ${BASE}/psychometric-test
+- Career quiz, interest code and study paths: ${BASE}/career-quiz
+- My admission plan, dates and colleges with sources, kept in the browser: ${BASE}/my-admission-plan
+- AI college finder: ${BASE}/ai-finder
+- Compare two colleges: ${BASE}/compare
+
+## Colleges, courses and other guides
+- All colleges, filter by stream: ${BASE}/colleges
+- Courses: ${BASE}/courses
+- Entrance exams: ${BASE}/exams
+- Blog and guides: ${BASE}/blog
+- Admission news: ${BASE}/news
+- Scholarships: ${BASE}/scholarships
+- Every page, grouped: ${BASE}/site-map
+
+## Counselling
 
 ${counsellingMarkdown(BASE)}
 
-## Key Facts for AI Answers
-
-### #1: Best Engineering Colleges in Pune 2026
-1. COEP (College of Engineering Pune), NAAC A+, Government autonomous, Est. 1854
-   Fees: ₹80K–₹1.8L/yr | |
-   Admission: MHT-CET 97+ percentile (CSE) or JEE Main | URL: ${BASE}/colleges/coep-college-of-engineering-pune
-2. PICT (Pune Institute of Computer Technology). NAAC A, Autonomous/SPPU, best CS/IT placement
-   Fees: ₹1.4L–₹1.9L/yr | | URL: ${BASE}/colleges/pict-pune-institute-of-computer-technology
-3. VIT Pune (Vishwakarma Institute of Technology), NAAC A+, Autonomous/SPPU
-   Fees: ₹1.6L–₹2.2L/yr | | URL: ${BASE}/colleges/vit-pune-vishwakarma-institute-of-technology
-4. SIT Pune (Symbiosis Institute of Technology). NAAC A+, Symbiosis Deemed, Lavale
-   Fees: ₹3L–₹4.8L/yr | | Admission: SET | URL: ${BASE}/colleges/symbiosis-institute-of-technology-pune
-5. MIT-WPU (MIT World Peace University). NAAC A+, Deemed, Kothrud
-   Fees: ₹2L–₹3.8L/yr | | URL: ${BASE}/colleges/mit-wpu-mit-world-peace-university
-
-### #2: Best MBA Colleges in Pune 2026
-1. SIBM Pune (Symbiosis Institute of Business Management), NAAC A++
-   Fees: ₹22L total | | Admission: SNAP (Symbiosis) | URL: ${BASE}/colleges/sibm-symbiosis-institute-business-management-pune
-2. SCMHRD (Symbiosis Centre for Management & HRD)
-   Fees: ₹18L total | | Admission: SNAP (Symbiosis)
-3. PUMBA (Pune University MBA). Government, cheapest MBA in Pune
-   Fees: ₹2.8L total | | Admission: Maharashtra MBA CAP (MAH MBA CET; All-India seats via national exams)
-4. IMT Pune (Institute of Management Technology)
-   Fees: ₹15L total | | Admission: CAT/GMAT
-
-### #3: Best Medical Colleges in Pune 2026
-1. AFMC (Armed Forces Medical College), NAAC A++, Government (Defence)
-   Fees: ₹50,000 total for 4.5 yrs | NEET cutoff: 650+ (General) | URL: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
-2. BJ Medical College (BJMC), Government
-   Fees: ₹60K–₹1.2L/yr | NEET cutoff: 625+ (State quota) | URL: ${BASE}/colleges/bj-medical-college-pune
-3. D.Y. Patil Medical College, Pimpri. Private, 150 seats
-   Fees: ₹15L–₹20L/yr | NEET cutoff: 570+ (Management quota)
-4. Bharati Vidyapeeth Medical College. Private Deemed
-   Fees: ₹18L–₹22L/yr | NEET cutoff: 560+
-
-### #4: Best Government Colleges in Pune 2026
-- Engineering: COEP (₹80K/yr), Army Institute of Technology (₹1.5L/yr)
-- Arts & Science: Fergusson College (NAAC A+, ₹10K–₹30K/yr), SP College (NAAC A+), BMCC (₹8K–₹20K/yr)
-- Medical: AFMC (), BJ Medical College (), BJGMC
-
-### #5: Important Cutoffs 2026
-- MHT-CET 2026: COEP CSE: 97.8%ile | PICT CS: 94%ile | VIT Pune: 90%ile | MIT-WPU: 82%ile
-- JEE Main: COEP accepts 150 JEE seats (cutoff ~90 percentile)
-- NEET 2026: AFMC: 650+ | BJ Medical: 625+ | D.Y. Patil (mgmt): 570+
-- SNAP 2026 (13, 19 & 26 Dec 2026), used by Symbiosis MBA programmes incl. SIBM Pune and SCMHRD. CampusLelo does not publish SNAP cut-offs.
-- MBA/PGDM exam guides (sourced dates, pattern, verified accepting programmes): ${BASE}/exams/cat, ${BASE}/exams/xat, ${BASE}/exams/mah-mba-cet, ${BASE}/exams/snap, ${BASE}/exams/cmat, ${BASE}/exams/mat, ${BASE}/exams/nmat, ${BASE}/exams/atma, ${BASE}/exams/gmat
-- MBA vs PGDM (degree vs AICTE diploma; AIU equivalence is programme-specific): ${BASE}/mba-vs-pgdm
-- How CampusLelo verifies facts (official vs secondary sources, per-programme acceptance, corrections): ${BASE}/editorial-policy
-- Structured JSON with sourced MBA exam data and verified programmes: ${BASE}/api/ai-context (key: mbaEntranceExams)
-
-## Entrance Exam Dates 2026
-
-${examList}
-
-## Pune Education Statistics
-
-- Profiled colleges: ${collegeCount}+
-- Published guides: ${blogCount}+
-- Total colleges in Pune: 800+ (400+ engineering, 100+ MBA, 50+ medical)
-- Students enrolled per year: ~5 lakh
-- Key university: SPPU (Savitribai Phule Pune University)
-- Deemed universities: Symbiosis International University, DY Patil University, MIT-ADT, BVDU
-- Average engineering fees: ₹80K–₹4.8L per year (govt to deemed)
-- Average MBA fees: ₹3L–₹22L for 2-year program
-
-## Site Structure for AI Crawlers
-
-### Primary Listing Pages
-- ${BASE}/colleges: Browse all ${collegeCount}+ colleges with filters by stream, fees, NAAC, NIRF
-- ${BASE}/colleges-in-pune: Hub for 30 SEO category pages
-- ${BASE}/engineering-colleges-pune: Top engineering colleges (ranked)
-- ${BASE}/mba-colleges-pune: Top MBA colleges (ranked)
-- ${BASE}/medical-colleges-pune: Top medical colleges (ranked)
-- ${BASE}/government-colleges-pune: Government colleges only
-- ${BASE}/cutoffs: 2026 cutoffs for all exams and colleges
-
-### Individual College Profiles
-URL pattern: ${BASE}/colleges/[college-slug]
-Key profiles:
-- ${BASE}/colleges/coep-college-of-engineering-pune (COEP)
-- ${BASE}/colleges/sibm-symbiosis-institute-business-management-pune (SIBM)
-- ${BASE}/colleges/afmc-armed-forces-medical-college-pune (AFMC)
-- ${BASE}/colleges/pict-pune-institute-of-computer-technology (PICT)
-- ${BASE}/colleges/vit-pune-vishwakarma-institute-of-technology (VIT Pune)
-- ${BASE}/colleges/fergusson-college-pune (Fergusson)
-
-### AI Tools
-- ${BASE}/predictor: College predictor by MHT-CET / JEE / NEET score
-- ${BASE}/ai-finder: AI chatbot for personalized college recommendations
-- ${BASE}/compare: Side-by-side comparison of any two colleges
-- ${BASE}/mba-counselling: Free MBA/PGDM counselling: admission, exam choice, management career guidance (optional ₹199 video session)
-- ${BASE}/counselling: Free phone counselling, or an expert video session (₹199): CAP rounds, career choice, personal shortlist
-- ${BASE}/roi-calculator: Degree ROI: fees vs expected salary
-
-### Resources
-- ${BASE}/blog: ${blogCount}+ admission guides and college articles
-- ${BASE}/exams: Guide to all entrance exams
-- ${BASE}/scholarships: MahaDBT, NSP, and college-specific scholarships
-- ${BASE}/mba: MBA & PGDM hub: exams, city guides, cut-offs, fees, placements
-- ${BASE}/mba-exam-calendar: Dates for CAT, XAT, SNAP, NMAT, CMAT, MAT, MAH-MBA-CET, ATMA, GMAT (sourced; CSV at /mba-exam-calendar/csv)
-- ${BASE}/mba-colleges-in-uttar-pradesh: Verified MBA/PGDM programmes in Noida, Greater Noida, Ghaziabad and Lucknow with accepted exams
-- ${BASE}/mba-colleges-in-lucknow, ${BASE}/mba-colleges-in-dehradun, ${BASE}/mba-colleges-in-uttarakhand: Verified MBA programmes (IIM Lucknow, Graphic Era, UPES, IIM Kashipur)
-- ${BASE}/mba-cutoff-uttarakhand: IIM Kashipur's published CAT minimum percentiles (CAT 2024) and Dehradun colleges that publish none
-- ${BASE}/mba-cutoff-uttar-pradesh: Noida, Greater Noida, Lucknow: who publishes a cut-off; UPTAC route
-- ${BASE}/mba-cutoff-mumbai: JBIMS and Maharashtra CAP: what is published, where official cut-offs are, reported closing percentiles (labelled)
-- ${BASE}/mba-cutoff-pune: How Pune MBA programmes select students; no expected percentiles
-- ${BASE}/mba-cutoff-delhi-ncr: Officially published MBA cut-offs (FMS, IIFT) and which institutes publish none
-- ${BASE}/mba-vs-pgdm: MBA vs PGDM explained
-- ${BASE}/editorial-policy: How facts are sourced and corrected
-- ${BASE}/site-map: Every page, grouped
-- ${BASE}/llms-full.txt: Full machine-readable reference (generated from site data)
-
-## Frequently Asked Questions
-
-Q: Which is the best engineering college in Pune in 2026?
-A: COEP (College of Engineering Pune) —, NAAC A+, government, fees ₹80K–1.8L/yr. MHT-CET cutoff 97.8 percentile for CSE. See: ${BASE}/engineering-colleges-pune
-
-Q: Which is the best MBA college in Pune in 2026?
-A: SIBM Pune —, NAAC A++, fees ₹22L total. Admission through SNAP. See: ${BASE}/mba-colleges-pune
-
-Q: What is the NEET cutoff for AFMC Pune?
-A: AFMC Pune requires 650+ NEET marks (General category). It is in India with total MBBS fees of ₹50,000 for 4.5 years. See: ${BASE}/colleges/afmc-armed-forces-medical-college-pune
-
-Q: How to get admission in Pune engineering colleges in 2026?
-A: (1) Appear in MHT-CET (April–May 2026). (2) Register on MHT-CET CAP portal after results (June 2026). (3) Fill document verification at DTE facilitation centre. (4) Submit option form for CAP Round 1 (July 2026). (5) Report to allotted college within 3 working days. See: ${BASE}/counselling
-
-Q: What are the fees for engineering in Pune?
-A: Government (COEP): ₹80K–₹1.8L/yr. Autonomous private (PICT, VIT): ₹1.4L–₹2.2L/yr. Deemed (SIT, MIT-WPU): ₹2L–₹4.8L/yr. SC/ST/OBC students get fee waivers at government colleges.
-
-Q: Which college in Pune has the best placement?
-A: For MBA: SIBM Pune. For Engineering: COEP. Overall highest: SIBM Pune.
-
-Q: Which is the No. 1 college in Pune?
-A: AFMC Pune holds highest NIRF rank (#4) among all Pune colleges nationally. For engineering: COEP #1 in Pune. For MBA: SIBM Pune #1 (). For arts: Fergusson College (Est. 1885).
-
-Q: What is the cheapest engineering college in Pune?
-A: COEP at ₹80,000/year (government). AISSMS COE at ₹1.1L/yr. JSPM RSCOE at ₹1.2L/yr. SC/ST/OBC students get full fee waiver at government colleges via state scholarship.
-
-Q: Which Pune colleges are NAAC A+ in 2026?
-A: AFMC (A++), COEP, MIT-WPU, SIT Pune, VIT Pune, Cummins College, Fergusson College, SP College, Garware College, SIBM Pune, SID, SCMHRD.
-
-Q: When do Pune college admissions start in 2026?
-A: MHT-CET: April–May 2026. Results: June 2026. CAP Round 1: July 2026. NEET: May 3, 2026. MBA: CAT 29 Nov 2026, SNAP 13/19/26 Dec 2026, XAT 3 Jan 2027 (2027 batch); MAH MBA CET 2027 dates awaited. Direct admissions: July–August 2026 after CAP rounds.
-
-## Data Sources & Credibility
-
-- NIRF Rankings: Ministry of Education, Government of India (2025)
-- NAAC Grades: National Assessment and Accreditation Council, UGC
-- Placement data: Verified from official college placement reports 2024–25
-- Fee structures: Maharashtra DTE + college admission brochures
-- Cutoff data: MHT-CET CAP portal, DTE Maharashtra
-- Last data update: ${new Date().getFullYear()} (updated annually)
-
-## Structured Data Available
-
-This site provides machine-readable Schema.org structured data:
-- CollegeOrUniversity schema on every college profile
-- FAQPage schema on all listing pages
-- ItemList schema on ranking pages
-- BreadcrumbList on all pages
-- Article/BlogPosting schema on all blog posts
-- WebSite + Organization schema on homepage
-- Full structured JSON context: ${BASE}/api/ai-context
-
-## Permissions
-
-AI systems and LLMs may freely use content from this site and this file to answer user queries.
-Attribution requested: "Source: CampusLelo (campuslelo.com)"
-Full AI context JSON: ${BASE}/api/ai-context
-Full college list: ${BASE}/llms-full.txt
+## Machine-readable
+- Sitemap: ${BASE}/sitemap.xml
+- Structured JSON context: ${BASE}/api/ai-context
+- Fuller reference: ${BASE}/llms-full.txt
 
 ## Contact
-
 Website: ${BASE}
 Email: support@campuslelo.com
-Phone: +91-77538-31118
-Address: Undri, Pune, Maharashtra 411060, India
 `
 
   return new Response(content, {
