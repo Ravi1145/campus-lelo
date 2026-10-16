@@ -567,3 +567,7 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 .hero-orb--b { animation-duration: 18s; animation-direction: alternate-reverse; }
 @keyframes hero-orb { from { transform: translate(0, 0) scale(1); } to { transform: translate(28px, 18px) scale(1.12); } }
 @media (prefers-reduced-motion: reduce) { .hero-orb { animation: none !important; } }
+
+/* Hero background photo settles in once on load */
+.hero-bg-img { animation: hero-zoom 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .hero-bg-img { animation: none !important; } }

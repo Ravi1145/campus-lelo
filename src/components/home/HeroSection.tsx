@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import {
   ArrowRight, BadgeCheck, Brain, Briefcase, Building2, CalendarClock, ClipboardList, Compass, Cpu, FileText,
@@ -127,14 +128,14 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
   const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
 
   return (
-    <section aria-labelledby="hero-heading" className="relative overflow-hidden hero-mesh">
-      <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-40" />
-      <div aria-hidden="true" className="hero-orb pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-blue-100/70 blur-3xl" />
-      <div aria-hidden="true" className="hero-orb hero-orb--b pointer-events-none absolute -right-16 top-0 h-64 w-64 rounded-full bg-orange-100/70 blur-3xl" />
+    <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
+      {/* Background photo. Decorative, so empty alt. The wash keeps the left side readable. */}
+      <Image src="/hero-students.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-bg-img object-cover object-[78%_center] sm:object-[72%_center]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent max-lg:from-white/90 max-lg:via-white/80 max-lg:to-white/70" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-7 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-7 lg:px-8 lg:py-12">
+      <div className="relative mx-auto flex max-w-7xl flex-col justify-center gap-6 px-4 py-9 sm:px-6 lg:min-h-[30rem] lg:px-8 lg:py-12">
         {/* Left: headline, one search row, stream shortcuts */}
-        <div className="min-w-0">
+        <div className="min-w-0 lg:max-w-[41rem]">
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500" />
@@ -192,8 +193,8 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
         </div>
 
         {/* Right: signature tools and live proof */}
-        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40] p-5 text-white shadow-xl shadow-blue-950/20" style={{ "--i": 3 } as React.CSSProperties}>
-          <div className="flex items-center justify-between gap-2">
+        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40]/92 p-4 text-white shadow-xl shadow-blue-950/25 backdrop-blur lg:flex lg:max-w-5xl lg:items-center lg:gap-5" style={{ "--i": 3 } as React.CSSProperties}>
+          <div className="flex items-center justify-between gap-2 lg:w-44 lg:shrink-0 lg:flex-col lg:items-start lg:gap-2">
             <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-100"><Sparkles className="h-3.5 w-3.5 text-[#F4604A]" aria-hidden="true" /> Only on CampusLelo</p>
             {deadline && (
               <Link href={deadline.href} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold text-orange-200 hover:bg-white/15">
@@ -203,10 +204,10 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             )}
           </div>
 
-          <ul className="mt-4 grid grid-cols-3 gap-2.5">
+          <ul className="mt-3 grid grid-cols-3 gap-2.5 lg:mt-0 lg:flex-1">
             {SIGNATURE.map(({ label, icon: Icon, href }, i) => (
               <li key={label} className="hero-pop" style={{ "--i": i + 3 } as React.CSSProperties}>
-                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-5 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
+                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-4 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E0170F] text-white"><Icon className="h-4 w-4" aria-hidden="true" /></span>
                   {label}
                 </Link>
@@ -214,7 +215,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             ))}
           </ul>
 
-          <dl className="mt-4 hidden grid-cols-3 gap-2 border-t border-white/10 pt-4 sm:grid">
+          <dl className="mt-3 hidden grid-cols-3 gap-3 border-t border-white/10 pt-3 sm:grid lg:mt-0 lg:w-72 lg:shrink-0 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
             {STATS.map(({ icon: Icon, value, label }) => (
               <div key={label} className="text-center">
                 <dt className="sr-only">{label}</dt>
@@ -223,7 +224,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
               </div>
             ))}
           </dl>
-          <p className="mt-2 hidden items-center justify-center gap-1.5 text-[11px] text-blue-100 sm:flex">
+          <p className="mt-2 hidden items-center justify-center gap-1.5 text-[11px] text-blue-100 sm:flex lg:hidden">
             <ShieldCheck className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" /> Sources checked {proof.checked}
             <Link href="/editorial-policy" className="inline-flex items-center gap-1 font-bold text-white underline underline-offset-2"><BadgeCheck className="h-3 w-3" aria-hidden="true" />How we verify</Link>
           </p>
