@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
+import { blogImage } from "@/lib/blogImage"
 import {
   ArrowRight, Award, BadgeCheck, Briefcase, CalendarClock, ClipboardCheck, Clock, Compass, Cpu,
   GraduationCap, IndianRupee, Newspaper, PenLine, Stethoscope, TrendingUp, Users,
@@ -118,9 +120,9 @@ export default function HomepageNewsSection() {
                   <p className="text-xs text-gray-600"><span className="block text-sm font-semibold text-gray-900">{featured.author}</span>{fmtDate(featured.date)} · <Clock className="-mt-0.5 inline h-3 w-3" aria-hidden="true" /> {featured.readTime}</p>
                 </div>
               </div>
-              <div className="relative flex min-h-40 flex-col items-center justify-center gap-3 overflow-hidden bg-blue-50 p-5 sm:rounded-l-[3rem]">
-                <span aria-hidden="true" className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-orange-100/80" />
-                <p aria-hidden="true" className="relative -rotate-3 text-center font-[family-name:var(--font-fraunces)] text-lg italic leading-tight text-[#012858]">Understand cut-offs,<br />choose better colleges</p>
+              <div className="relative flex min-h-48 flex-col items-center justify-end gap-3 overflow-hidden bg-[#012858] p-5 sm:rounded-l-[3rem]">
+                <Image src={blogImage(featured.slug, featured.image)} alt="" fill sizes="(min-width: 1024px) 28vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#011B40]/80 via-[#011B40]/20 to-transparent" />
                 <span className="relative inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-4 py-2 text-sm font-bold text-white transition-colors group-hover:bg-[#C90D11]">Read full guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
               </div>
             </Link>
@@ -131,7 +133,10 @@ export default function HomepageNewsSection() {
                 return (
                   <li key={p.slug} className="reveal-item" style={{ "--i": i + 1 } as React.CSSProperties}>
                     <Link href={`/blog/${p.slug}`} className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]">
-                      <span className={`flex h-14 items-center justify-center ${C.tile}`}><C.icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" /></span>
+                      <span className="relative block h-28 overflow-hidden bg-[#012858]">
+                        <Image src={blogImage(p.slug, p.image)} alt="" fill sizes="(min-width: 640px) 22vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <span className={`absolute left-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg shadow ${C.tile}`}><C.icon className="h-4 w-4" aria-hidden="true" /></span>
+                      </span>
                       <span className="flex flex-1 flex-col p-4">
                         <span className={`self-start rounded-full px-2.5 py-0.5 text-xs font-bold ${C.chip}`}>{p.category}</span>
                         <span className="mt-2 line-clamp-3 text-sm font-bold leading-snug text-[#012858]">{p.title}</span>

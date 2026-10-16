@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
+import { blogImage } from "@/lib/blogImage"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { getAllBlogs } from "@/lib/db"
 import { blogs as staticBlogs } from "@/data/blogs"
@@ -254,15 +256,12 @@ export default async function BlogPage({
                 </div>
 
                 {/* Visual panel */}
-                <div className="hidden md:flex md:col-span-2 items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="text-[100px] leading-none mb-4 drop-shadow-lg">
-                      {getCat(featured.category).icon}
-                    </div>
-                    <div className="flex items-center gap-2 text-white/80 justify-center text-sm">
-                      <Clock className="w-4 h-4" />
-                      {featured.read_time ?? featured.readTime ?? "5 min read"}
-                    </div>
+                <div className="relative hidden md:block md:col-span-2 min-h-[280px]">
+                  <Image src={blogImage(featured.slug)} alt="" fill sizes="(min-width: 768px) 34vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-l from-transparent to-black/25" />
+                  <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/45 px-3 py-1.5 text-sm text-white backdrop-blur">
+                    <Clock className="w-4 h-4" />
+                    {featured.read_time ?? featured.readTime ?? "5 min read"}
                   </div>
                 </div>
               </div>
@@ -289,15 +288,12 @@ export default async function BlogPage({
                   <Link key={post.id} href={`/blog/${post.slug}`} className="group">
                     <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-200 flex flex-col h-full">
                       {/* Cover visual */}
-                      <div className={`bg-gradient-to-br ${cat.gradient} p-6 flex items-center justify-between`} style={{ minHeight: "120px" }}>
-                        <div>
-                          <span className="bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
-                            {post.category}
-                          </span>
-                        </div>
-                        <div className="text-5xl opacity-80 group-hover:scale-110 transition-transform">
-                          {cat.icon}
-                        </div>
+                      <div className="relative h-40 overflow-hidden bg-[#012858]">
+                        <Image src={blogImage(post.slug)} alt="" fill sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+                        <span className="absolute left-3 top-3 bg-black/45 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-widest backdrop-blur">
+                          {post.category}
+                        </span>
                       </div>
 
                       <div className="p-5 flex-1 flex flex-col">

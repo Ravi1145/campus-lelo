@@ -3,6 +3,8 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
 import Link from "next/link"
+import Image from "next/image"
+import { blogImage } from "@/lib/blogImage"
 import { blogs as staticBlogs, getBlogBySlug as getStaticBlog } from "@/data/blogs"
 import { getBlogBySlug as getDBBlog, getAllBlogs } from "@/lib/db"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
@@ -298,6 +300,11 @@ export default async function BlogPostPage({ params }: Props) {
           {/* ══ LEFT — Article ══════════════════════════════════════ */}
           <div className="min-w-0">
             <article className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+
+              {/* Cover photo (decorative) */}
+              <div className="relative h-44 sm:h-60 bg-[#012858]">
+                <Image src={blogImage(post.slug)} alt="" fill priority sizes="(min-width: 1024px) 760px, 100vw" className="object-cover" />
+              </div>
 
               {/* Excerpt lead */}
               <div className="bg-red-50 border-b border-red-100 px-6 py-5">
