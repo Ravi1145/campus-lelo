@@ -129,8 +129,18 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
-      {/* Background photo. Decorative, so empty alt. The wash keeps the left side readable. */}
-      <Image src="/hero-students.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-bg-img object-cover object-[78%_center] sm:object-[72%_center]" />
+      {/* Background photos: a slow sideways scroll. No fade and no zoom, the photos keep their size.
+          The strip holds the two photos twice, so moving it half its width loops without a jump.
+          Decorative, so empty alt. Off for reduced motion. */}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <div className="hero-track flex h-full w-[400%]">
+          {["/hero/campus-1.webp", "/hero/campus-2.webp", "/hero/campus-1.webp", "/hero/campus-2.webp"].map((src, i) => (
+            <div key={i} className="relative h-full w-1/4 flex-none">
+              <Image src={src} alt="" fill priority={i === 0} quality={80} sizes="100vw" className="object-cover object-center" />
+            </div>
+          ))}
+        </div>
+      </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent max-lg:from-white/90 max-lg:via-white/80 max-lg:to-white/70" />
 
       <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[30rem] lg:px-12 lg:py-12">
