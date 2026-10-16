@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useMemo, useState } from "react"
 import { Check, Minus } from "lucide-react"
 
@@ -80,7 +81,7 @@ export default function AcceptanceMatrix({ rows, exams, cities }: { rows: Matrix
             {visible.map((r) => (
               <tr key={r.id} className="border-b border-gray-100 align-top last:border-0">
                 <th scope="row" className="sticky left-0 z-10 bg-white px-4 py-3 text-left font-normal">
-                  <span className="block font-semibold text-gray-900">{r.institution}</span>
+                  <Link href={`/mba-admission/${r.id}`} className="block font-semibold text-gray-900 hover:text-orange-600 hover:underline">{r.institution}</Link>
                   <span className="block text-xs text-gray-600">{r.program} · {r.city} · intake {r.intake}</span>
                 </th>
                 {exams.map((e) => {

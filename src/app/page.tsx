@@ -196,6 +196,7 @@ export default function HomePage() {
             title="City, exam and course guides"
             steps={[
               { href: "/mba", label: "MBA and PGDM guide" },
+              { href: "/mba-admission", label: "MBA admission by college" },
               { href: "/fms-delhi-cat-cutoff", label: "FMS Delhi CAT cutoff" },
               { href: "/iift-cat-cutoff", label: "IIFT CAT cutoff" },
               { href: "/mdi-gurgaon-pgdm-admission", label: "MDI Gurgaon PGDM admission" },

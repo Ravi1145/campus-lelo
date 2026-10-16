@@ -1,6 +1,8 @@
 ﻿import { MetadataRoute } from "next"
 import { colleges } from "@/data/colleges"
 import { blogs as staticBlogs } from "@/data/blogs"
+import { programAdmissions } from "@/data/mba/programAdmissions"
+import { INSTITUTE_SHORT } from "@/data/mba/instituteLabels"
 import { exams } from "@/data/exams"
 import { courses } from "@/data/courses"
 import { getAllCutoffParams } from "@/data/cutoffs"
@@ -226,6 +228,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/fms-delhi-cat-cutoff`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/iift-cat-cutoff`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mdi-gurgaon-pgdm-admission`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/mba-admission`, lastModified: "2026-10-16", changeFrequency: "weekly",  priority: 0.9 },
+    ...programAdmissions.filter((p) => INSTITUTE_SHORT[p.id]).map((p) => ({ url: `${BASE_URL}/mba-admission/${p.id}`, lastModified: p.source.accessed, changeFrequency: "weekly" as const, priority: 0.8 })),
     { url: `${BASE_URL}/mba-cutoff-uttarakhand`,                         lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/career-quiz`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/psychometric-test`, lastModified: "2026-10-15", changeFrequency: "weekly", priority: 0.9 },

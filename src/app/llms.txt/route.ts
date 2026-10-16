@@ -38,6 +38,7 @@ Last updated: ${new Date().toISOString().slice(0, 10)}. Programme data last chec
 
 ## MBA and PGDM (programme-level, with sources)
 - Exam acceptance table, filter by exam: ${BASE}/mba-exam-acceptance
+- Admission by college (one page per verified programme: exams listed, eligibility, process): ${BASE}/mba-admission
 - Cut-off checker, your percentile against published minimums: ${BASE}/mba-cutoff-checker
 - Exam calendar: ${BASE}/mba-exam-calendar
 - MBA and PGDM guide: ${BASE}/mba
@@ -76,6 +77,12 @@ ${examLines}
 - Noida: ${BASE}/blog/mba-colleges-noida-exams-accepted
 - Greater Noida: ${BASE}/blog/pgdm-mba-colleges-greater-noida-exams-accepted
 - Dehradun and Kashipur: ${BASE}/blog/mba-colleges-dehradun-uttarakhand-exams-accepted
+
+## Admission process by region
+- Dehradun and Uttarakhand: ${BASE}/blog/mba-admission-process-dehradun-uttarakhand
+- Lucknow: ${BASE}/blog/mba-admission-process-lucknow
+- Noida and Greater Noida: ${BASE}/blog/mba-admission-process-noida-greater-noida
+- Delhi, Gurugram and Ghaziabad: ${BASE}/blog/mba-admission-process-delhi-gurugram-ghaziabad
 
 ## Free tools
 - Psychometric test, work style and reasoning, about 10 minutes: ${BASE}/psychometric-test

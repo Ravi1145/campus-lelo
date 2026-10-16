@@ -2,6 +2,7 @@ import type { BlogPost } from "@/types"
 import { mbaExams } from "@/data/mba/exams"
 import { programAdmissions } from "@/data/mba/programAdmissions"
 import type { ProgramAdmission } from "@/data/mba/types"
+import { INSTITUTE_SHORT } from "@/data/mba/instituteLabels"
 
 // Exam-acceptance guides, generated from the verified programme records in
 // src/data/mba/programAdmissions.ts. Nothing here is typed by hand about a college:
@@ -26,7 +27,7 @@ const table = (rows: ProgramAdmission[]) =>
   `<table><thead><tr><th>Institute</th><th>Programme</th><th>City</th><th>Exams it lists</th><th>Intake the source refers to</th><th>Source</th></tr></thead><tbody>${rows
     .map(
       (p) =>
-        `<tr><td>${esc(p.institution)}</td><td>${esc(p.program)}</td><td>${esc(p.city)}</td><td>${examLinks(p.examsAccepted)}</td><td>${esc(p.intake)}</td><td><a href="${p.source.url}" rel="noopener nofollow">${esc(p.source.label)}</a> (${esc(p.source.type)}, checked ${esc(p.source.accessed)})</td></tr>`,
+        `<tr><td>${INSTITUTE_SHORT[p.id] ? a(`/mba-admission/${p.id}`, esc(p.institution)) : esc(p.institution)}</td><td>${esc(p.program)}</td><td>${esc(p.city)}</td><td>${examLinks(p.examsAccepted)}</td><td>${esc(p.intake)}</td><td><a href="${p.source.url}" rel="noopener nofollow">${esc(p.source.label)}</a> (${esc(p.source.type)}, checked ${esc(p.source.accessed)})</td></tr>`,
     )
     .join("")}</tbody></table>`
 
@@ -131,6 +132,42 @@ const SPECS: Spec[] = [
     pick: (p) => p.examsAccepted.includes("gmat"),
     lead: (n) => `<strong>Quick answer:</strong> ${n} ${n === 1 ? "programme" : "programmes"} on our verified list state that they accept GMAT.`,
     how: "GMAT acceptance varies by programme. Some institutes state that Indian candidates must apply through another test, so read each source before booking the exam. See the " + a("/exams/gmat", "GMAT guide") + ".",
+  },
+  {
+    id: 52, slug: "mba-admission-process-dehradun-uttarakhand",
+    title: "MBA Admission Process in Dehradun and Uttarakhand",
+    excerpt: "How admission works at the Dehradun and Kashipur MBA programmes we have verified: the exams each lists, eligibility and selection steps, with the source for each.",
+    tags: ["MBA admission process Dehradun", "MBA admission Uttarakhand", "UPES MBA admission", "Graphic Era MBA admission", "IIM Kashipur admission"], category: "MBA",
+    pick: (p) => p.city === "Dehradun" || p.city === "Kashipur",
+    lead: (n) => `<strong>Quick answer:</strong> admission to the ${n} MBA ${n === 1 ? "programme" : "programmes"} we verified in Dehradun and Kashipur starts with an entrance score, then an interview or group discussion. The table shows the exams each lists; the notes below show each institute's own steps.`,
+    how: "Work in this order: confirm the exam you hold is on the institute's list, check the eligibility line, then plan for the interview round. IIM Kashipur runs its own process for an IIM, while the private universities generally take a valid score plus an interview. See the " + a("/mba-colleges-in-dehradun", "Dehradun guide") + " and the " + a("/mba-cutoff-uttarakhand", "Uttarakhand cut-offs") + ".",
+  },
+  {
+    id: 53, slug: "mba-admission-process-lucknow",
+    title: "MBA Admission Process in Lucknow: What the Page Says",
+    excerpt: "How admission works at the Lucknow MBA programmes we have verified: the exam each lists, eligibility, and the steps after the score, with the source and check date.",
+    tags: ["MBA admission process Lucknow", "IIM Lucknow admission process", "MBA Lucknow exams accepted", "MBA admission Uttar Pradesh"], category: "MBA",
+    pick: (p) => p.city === "Lucknow",
+    lead: (n) => `<strong>Quick answer:</strong> we have verified ${n} MBA ${n === 1 ? "programme" : "programmes"} in Lucknow against the institute's own page. The table shows the exam it lists, and the notes show the steps after the score.`,
+    how: "Read the exam line first, then the eligibility rule for your category, then the selection steps. For other Uttar Pradesh routes, see " + a("/blog/mba-admission-in-uttar-pradesh", "MBA admission in Uttar Pradesh") + " and the " + a("/mba-colleges-in-lucknow", "Lucknow MBA guide") + ".",
+  },
+  {
+    id: 54, slug: "mba-admission-process-noida-greater-noida",
+    title: "MBA Admission Process in Noida and Greater Noida",
+    excerpt: "How admission works at the Noida and Greater Noida MBA and PGDM programmes we have verified: exams listed, eligibility and selection steps, with a source for each.",
+    tags: ["MBA admission process Noida", "PGDM admission Greater Noida", "Amity Noida MBA admission", "Jaipuria Noida admission", "BIMTECH admission"], category: "MBA",
+    pick: (p) => p.city === "Noida" || p.city === "Greater Noida",
+    lead: (n) => `<strong>Quick answer:</strong> we have verified ${n} MBA or PGDM ${n === 1 ? "programme" : "programmes"} in Noida and Greater Noida against the institute's own page. Most list several national exams and then run a group discussion or interview.`,
+    how: "Shortlist by the exams you hold, then compare the selection steps in the notes. Institutes that list several exams may weigh them differently. See the " + a("/mba-colleges-noida", "Noida guide") + " and the " + a("/mba-colleges-in-greater-noida", "Greater Noida guide") + ".",
+  },
+  {
+    id: 55, slug: "mba-admission-process-delhi-gurugram-ghaziabad",
+    title: "MBA and PGDM Admission in Delhi, Gurugram and Ghaziabad",
+    excerpt: "How admission works at the Delhi, Gurugram and Ghaziabad MBA and PGDM programmes we have verified: exams listed, eligibility and selection steps, with sources.",
+    tags: ["MBA admission process Delhi", "PGDM admission Gurugram", "IMT Ghaziabad admission", "FMS Delhi admission", "MDI Gurgaon admission"], category: "MBA",
+    pick: (p) => p.city === "Delhi" || p.city === "Gurugram" || p.city === "Ghaziabad",
+    lead: (n) => `<strong>Quick answer:</strong> we have verified ${n} MBA or PGDM ${n === 1 ? "programme" : "programmes"} in Delhi, Gurugram and Ghaziabad against the institute's own page. Several are CAT-based, and some allow a second route such as GMAT or XAT.`,
+    how: "Check the exam line and the eligibility line first. A few institutes have rules a headline list misses, for example MDI Gurgaon does not take GMAT from Indian candidates. See " + a("/mba-colleges-in-delhi-ncr", "MBA colleges in Delhi NCR") + " and " + a("/mba-cutoff-delhi-ncr", "published cut-offs") + ".",
   },
   {
     id: 51, slug: "mba-colleges-accepting-nmat",
