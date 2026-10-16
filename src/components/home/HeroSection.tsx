@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import {
   ArrowRight, BadgeCheck, Brain, Briefcase, Building2, CalendarClock, ClipboardList, Compass, Cpu, FileText,
@@ -127,10 +128,13 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
   const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
 
   return (
-    <section aria-labelledby="hero-heading" className="relative overflow-hidden hero-mesh">
-      <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-40" />
-      <div aria-hidden="true" className="hero-orb pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-blue-100/70 blur-3xl" />
-      <div aria-hidden="true" className="hero-orb hero-orb--b pointer-events-none absolute -right-16 top-0 h-64 w-64 rounded-full bg-orange-100/70 blur-3xl" />
+    <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
+      {/* Campus photo behind the hero. A white wash on the left keeps the text readable. Decorative, so empty alt.
+          Slow zoom only (no scrolling, no fade); off for reduced motion. */}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <Image src="/hero/campus-sunset.webp" alt="" fill priority quality={82} sizes="100vw" className="hero-slide-img object-cover object-[60%_center]" />
+      </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/94 via-white/72 to-white/8 max-lg:from-white/92 max-lg:via-white/82 max-lg:to-white/72" />
 
       <div className="relative mx-auto grid max-w-[calc(var(--container-7xl)+6rem)] grid-cols-1 gap-4 px-5 py-7 sm:px-8 lg:gap-5 lg:px-12 lg:py-9">
         {/* Left: headline, one search row, stream shortcuts */}
