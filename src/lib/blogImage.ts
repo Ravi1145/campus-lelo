@@ -12,3 +12,8 @@ export function blogImage(slug: string, explicit?: string | null): string {
   h ^= h >>> 15
   return POOL[(h >>> 0) % POOL.length]
 }
+
+/** For lists: rotate through the photos by position, so neighbouring cards never share one. */
+export function blogImageAt(index: number, explicit?: string | null): string {
+  return explicit || POOL[((index % POOL.length) + POOL.length) % POOL.length]
+}

@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { blogImage } from "@/lib/blogImage"
+import { blogImageAt } from "@/lib/blogImage"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { getAllBlogs } from "@/lib/db"
 import { blogs as staticBlogs } from "@/data/blogs"
@@ -257,7 +257,7 @@ export default async function BlogPage({
 
                 {/* Visual panel */}
                 <div className="relative hidden md:block md:col-span-2 min-h-[280px]">
-                  <Image src={blogImage(featured.slug)} alt="" fill sizes="(min-width: 768px) 34vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Image src={blogImageAt(0)} alt="" fill sizes="(min-width: 768px) 34vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-l from-transparent to-black/25" />
                   <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/45 px-3 py-1.5 text-sm text-white backdrop-blur">
                     <Clock className="w-4 h-4" />
@@ -280,7 +280,7 @@ export default async function BlogPage({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rest.map((post) => {
+              {rest.map((post, idx) => {
                 const cat = getCat(post.category)
                 const dateStr = formatDate(post)
                 const readTime = post.read_time ?? post.readTime ?? "5 min read"
@@ -289,7 +289,7 @@ export default async function BlogPage({
                     <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-200 flex flex-col h-full">
                       {/* Cover visual */}
                       <div className="relative h-40 overflow-hidden bg-[#012858]">
-                        <Image src={blogImage(post.slug)} alt="" fill sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <Image src={blogImageAt(idx + 1)} alt="" fill sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
                         <span className="absolute left-3 top-3 bg-black/45 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-widest backdrop-blur">
                           {post.category}

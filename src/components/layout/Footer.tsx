@@ -78,6 +78,8 @@ const footerLinks = {
     { label: "Colleges with Hostel Pune",   href: "/colleges-in-pune-with-hostel" },
   ],
   "Tools & Resources": [
+    { label: "All Free Tools",              href: "/tools" },
+    { label: "MBA Admission by College",    href: "/mba-admission" },
     { label: "College Predictor",           href: "/predictor" },
     { label: "Compare Colleges",            href: "/compare" },
     { label: "ROI Calculator",              href: "/roi-calculator" },

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { blogImage } from "@/lib/blogImage"
+import { blogImageAt } from "@/lib/blogImage"
 import {
   ArrowRight, Award, BadgeCheck, Briefcase, CalendarClock, ClipboardCheck, Clock, Compass, Cpu,
   GraduationCap, IndianRupee, Newspaper, PenLine, Stethoscope, TrendingUp, Users,
@@ -121,7 +121,7 @@ export default function HomepageNewsSection() {
                 </div>
               </div>
               <div className="relative flex min-h-48 flex-col items-center justify-end gap-3 overflow-hidden bg-[#012858] p-5 sm:rounded-l-[3rem]">
-                <Image src={blogImage(featured.slug, featured.image)} alt="" fill sizes="(min-width: 1024px) 28vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src={blogImageAt(0, featured.image)} alt="" fill sizes="(min-width: 1024px) 28vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#011B40]/80 via-[#011B40]/20 to-transparent" />
                 <span className="relative inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-4 py-2 text-sm font-bold text-white transition-colors group-hover:bg-[#C90D11]">Read full guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
               </div>
@@ -134,7 +134,7 @@ export default function HomepageNewsSection() {
                   <li key={p.slug} className="reveal-item" style={{ "--i": i + 1 } as React.CSSProperties}>
                     <Link href={`/blog/${p.slug}`} className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]">
                       <span className="relative block h-28 overflow-hidden bg-[#012858]">
-                        <Image src={blogImage(p.slug, p.image)} alt="" fill sizes="(min-width: 640px) 22vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <Image src={blogImageAt(i + 1, p.image)} alt="" fill sizes="(min-width: 640px) 22vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                         <span className={`absolute left-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg shadow ${C.tile}`}><C.icon className="h-4 w-4" aria-hidden="true" /></span>
                       </span>
                       <span className="flex flex-1 flex-col p-4">

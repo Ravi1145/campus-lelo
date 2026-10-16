@@ -132,7 +132,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
       {/* Campus photo behind the hero. A white wash on the left keeps the text readable. Decorative, so empty alt.
           Slow zoom only (no scrolling, no fade); off for reduced motion. */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        <Image src="/hero/campus-sunset.webp" alt="" fill priority quality={82} sizes="100vw" className="hero-slide-img object-cover object-[60%_center]" />
+        <Image src="/hero/campus-sunset.webp" alt="" fill priority quality={85} sizes="100vw" className="hero-slide-img object-cover object-[60%_center]" />
       </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/94 via-white/72 to-white/8 max-lg:from-white/92 max-lg:via-white/82 max-lg:to-white/72" />
 
