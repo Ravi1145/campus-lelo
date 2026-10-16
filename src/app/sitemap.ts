@@ -10,6 +10,7 @@ import { seoPages as seoPageData } from "@/data/seoPages"
 import { mbaExams, getMbaExam, EXAM_TOPICS, prepPageIndexable, type ExamTopic } from "@/data/mba/exams"
 import { collegesPageIndexable } from "@/data/mba/programAdmissions"
 import { regionPages } from "@/data/mba/regionPages"
+import { bestPages } from "@/data/mba/bestPages"
 import { retiredPages } from "@/data/retiredPages"
 import { isNoindexPath } from "@/data/noindexPages"
 import { createClient } from "@supabase/supabase-js"
@@ -303,6 +304,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: r.exam || r.scope !== "all" ? 0.8 : 0.9,
   }))
 
+  // Best MBA colleges pages (NIRF 2025 data)
+  const bestEntries: MetadataRoute.Sitemap = bestPages.map((b) => ({
+    url: `${BASE_URL}${b.path}`,
+    lastModified: "2026-10-16",
+    changeFrequency: "monthly" as const,
+    priority: b.path.endsWith("-india") ? 0.9 : 0.8,
+  }))
+
   // Cutoff pages â€" one per [exam, college] pair
   const cutoffIndexPage: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/cutoffs`, lastModified: "2026-10-13", changeFrequency: "weekly" as const, priority: 0.9 },
@@ -403,6 +412,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPages,
     ...seoPages,
     ...regionEntries,
+    ...bestEntries,
     ...collegePages,
     ...dbCollegePages,
     ...comparisonPages,

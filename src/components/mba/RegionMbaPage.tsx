@@ -12,6 +12,7 @@ import { publishedCutoffs, noPublishedCutoff } from "@/data/mba/cutoffs"
 import { getMbaExam } from "@/data/mba/exams"
 import { examCalendarRows } from "@/lib/mbaCalendar"
 import { getRegionPage, regionPages, type RegionPageDef } from "@/data/mba/regionPages"
+import { bestPages } from "@/data/mba/bestPages"
 import type { ProgramAdmission } from "@/data/mba/types"
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
@@ -100,9 +101,10 @@ export default function RegionMbaPage({ path }: { path: string }) {
 
   // Related pages plus every exam-specific page that covers an overlapping city (so none is left unlinked)
   const examSiblings = regionPages.filter((r) => r.exam && r.path !== def.path && r.cities.some((c) => def.cities.includes(c))).map((r) => r.path)
-  const siblingPaths = Array.from(new Set([...def.related, ...examSiblings])).filter((h) => h !== def.path)
+  const bestHere = bestPages.filter((b) => b.place === def.place || b.path === "/best-mba-colleges-in-india" || (def.place === "Delhi NCR" && ["Delhi", "Noida", "Haryana"].includes(b.place)) || (def.place === "Gurugram" && b.place === "Haryana") || (def.place === "Ghaziabad" && b.place === "Uttar Pradesh") || (def.place === "Lucknow" && b.place === "Uttar Pradesh") || (def.place === "Dehradun" && b.place === "Uttarakhand")).map((b) => b.path)
+  const siblingPaths = Array.from(new Set([...def.related, ...examSiblings, ...bestHere])).filter((h) => h !== def.path)
   const siblings = siblingPaths.map((href) => ({ href, def: regionPages.find((r) => r.path === href) }))
-  const siblingLabel = (href: string, d?: RegionPageDef) => d?.h1 ?? ({
+  const siblingLabel = (href: string, d?: RegionPageDef) => d?.h1 ?? bestPages.find((b) => b.path === href)?.h1 ?? ({
     "/mba-cutoff-delhi-ncr": "MBA cut-offs in Delhi NCR", "/mba-vs-pgdm": "MBA vs PGDM explained", "/mba-colleges-noida": "MBA colleges in Noida", "/pgdm-colleges-noida": "PGDM colleges in Noida",
     "/colleges-in-greater-noida": "All colleges in Greater Noida", "/blog/mba-colleges-delhi-ncr-noida-guide": "Delhi NCR & Noida MBA guide", "/blog/mba-without-cat-india": "MBA without CAT in India",
   } as Record<string, string>)[href] ?? (href.startsWith("/exams/") ? href.split("/").slice(2).map((s) => s.replace(/-/g, " ")).join(" · ").toUpperCase() : href)
