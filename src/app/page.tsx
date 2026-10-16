@@ -4,7 +4,6 @@ import dynamic from "next/dynamic"
 
 // ── Critical above-fold sections (server-render immediately) ──────────────────
 import HeroSection from "@/components/home/HeroSection"
-import StartHere from "@/components/home/StartHere"
 import { programAdmissions } from "@/data/mba/programAdmissions"
 import { publishedCutoffs } from "@/data/mba/cutoffs"
 import { mbaExams } from "@/data/mba/exams"
@@ -124,8 +123,6 @@ export default function HomePage() {
         {/* 1. Hero */}
         <HeroSection proof={proof} />
 
-        {/* Tools and the proof behind them */}
-        <StartHere proof={proof} />
 
 
         {/* 3. Browse by Stream */}
@@ -196,6 +193,7 @@ export default function HomePage() {
             title="City, exam and course guides"
             steps={[
               { href: "/mba", label: "MBA and PGDM guide" },
+              { href: "/tools", label: "All free tools" },
               { href: "/mba-admission", label: "MBA admission by college" },
               { href: "/fms-delhi-cat-cutoff", label: "FMS Delhi CAT cutoff" },
               { href: "/iift-cat-cutoff", label: "IIFT CAT cutoff" },

@@ -69,7 +69,7 @@ const MORE = [
   { icon: GitCompare, title: "Compare two colleges", desc: "Put two colleges side by side on the facts we have checked.", href: "/compare" },
 ]
 
-export default function StartHere(_props: { proof: HeroProof }) {
+export default function StartHere(_props: { proof?: HeroProof } = {}) {
   return (
     <section aria-labelledby="start-heading" className="relative overflow-hidden section-ivory px-5 py-6 sm:px-8 lg:px-12 sm:py-8">
       <span aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-orange-50" />

@@ -85,6 +85,7 @@ ${examLines}
 - Delhi, Gurugram and Ghaziabad: ${BASE}/blog/mba-admission-process-delhi-gurugram-ghaziabad
 
 ## Free tools
+- All free tools: ${BASE}/tools
 - Psychometric test, work style and reasoning, about 10 minutes: ${BASE}/psychometric-test
 - Career quiz, interest code and study paths: ${BASE}/career-quiz
 - My admission plan, dates and colleges with sources, kept in the browser: ${BASE}/my-admission-plan

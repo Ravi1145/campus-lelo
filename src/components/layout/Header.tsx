@@ -132,6 +132,7 @@ const streams = [
 ]
 
 const tools = [
+  { label: "All Free Tools",     href: "/tools",                                  icon: Sparkles,      desc: "Test, quiz, plan and more",     color: "text-red-600 bg-red-50" },
   { label: "Psychometric Test",  href: "/psychometric-test",                      icon: GraduationCap, desc: "Work style and reasoning, 10 min", color: "text-purple-600 bg-purple-50" },
   { label: "Career Quiz",          href: "/career-quiz",                            icon: Compass,       desc: "Which study path fits you",      color: "text-orange-600 bg-orange-50" },
   { label: "My Admission Plan",    href: "/my-admission-plan",                      icon: Award,         desc: "Dates and colleges, with sources", color: "text-emerald-600 bg-emerald-50" },

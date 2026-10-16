@@ -228,6 +228,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/fms-delhi-cat-cutoff`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/iift-cat-cutoff`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE_URL}/mdi-gurgaon-pgdm-admission`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/tools`, lastModified: "2026-10-16", changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/mba-admission`, lastModified: "2026-10-16", changeFrequency: "weekly",  priority: 0.9 },
     ...programAdmissions.filter((p) => INSTITUTE_SHORT[p.id]).map((p) => ({ url: `${BASE_URL}/mba-admission/${p.id}`, lastModified: p.source.accessed, changeFrequency: "weekly" as const, priority: 0.8 })),
     { url: `${BASE_URL}/mba-cutoff-uttarakhand`,                         lastModified: "2026-10-09", changeFrequency: "weekly",  priority: 0.9 },
