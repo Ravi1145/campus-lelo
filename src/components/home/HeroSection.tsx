@@ -5,46 +5,39 @@ import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import {
-  ArrowRight, BadgeCheck, Brain, Briefcase, Building2, CalendarClock, ClipboardList, Compass, Cpu, FileText,
-  GraduationCap, Palette, Pill, Scale, Search, ShieldCheck, Sparkles, Stethoscope, TrendingUp,
+  ArrowRight, BadgeCheck, Briefcase, Building2, CalendarClock, Castle, ChevronLeft, ChevronRight, Factory, Landmark,
+  Library, Mountain, Search, ShieldCheck, Sparkles, TowerControl,
 } from "lucide-react"
 import { exams } from "@/data/exams"
 import { examTimeline } from "@/lib/examTimeline"
 
-// Homepage hero, portal style: one search row with filters, stream shortcuts, and a slim live panel
-// (next deadline plus what we have checked). Roughly half the height of the earlier hero.
-// Animations run once on load, plus a gentle rotating word; all are off for reduced motion (globals.css).
+// Homepage hero: campus photo, one big search bar, popular links, and a row of city shortcuts.
+// Search sends the text to /colleges. City circles link to the city pages we have sourced data for.
+// The photo has a slow zoom only (no scrolling, no fade); it is off for reduced motion (globals.css).
 
 const ROTATING = ["Engineering", "MBA", "Medical", "Law", "Design", "Commerce"]
-const STREAMS = ["Engineering", "MBA", "Medical", "Law", "Design", "Pharmacy", "Arts", "Commerce", "BBA", "BCA", "MCA"]
-const EXAMS = ["MHT-CET", "JEE Main", "CAT", "NEET", "CLAT", "SNAP", "CMAT", "XAT", "MAT"]
 
-const STREAM_TILES = [
-  { label: "Engineering", icon: Cpu, href: "/colleges?stream=Engineering", tint: "bg-blue-50 text-[#024692]" },
-  { label: "MBA", icon: Briefcase, href: "/mba-in-pune", tint: "bg-orange-50 text-orange-700" },
-  { label: "Medical", icon: Stethoscope, href: "/colleges?stream=Medical", tint: "bg-red-50 text-[#C90D11]" },
-  { label: "Law", icon: Scale, href: "/colleges?stream=Law", tint: "bg-violet-50 text-violet-700" },
-  { label: "Design", icon: Palette, href: "/design-colleges-pune", tint: "bg-pink-50 text-pink-700" },
-  { label: "Pharmacy", icon: Pill, href: "/colleges?stream=Pharmacy", tint: "bg-emerald-50 text-emerald-700" },
-  { label: "Commerce", icon: TrendingUp, href: "/colleges?stream=Commerce", tint: "bg-amber-50 text-amber-800" },
-  { label: "Arts", icon: GraduationCap, href: "/colleges?stream=Arts", tint: "bg-teal-50 text-teal-700" },
+const POPULAR = [
+  { label: "Psychometric test", href: "/psychometric-test", usp: true },
+  { label: "Career quiz", href: "/career-quiz", usp: true },
+  { label: "My admission plan", href: "/my-admission-plan", usp: true },
+  { label: "MBA in Pune", href: "/mba-in-pune" },
+  { label: "CAT colleges", href: "/mba-colleges-in-pune-accepting-cat" },
+  { label: "B.Tech", href: "/colleges?stream=Engineering" },
 ]
 
-const SIGNATURE = [
-  { label: "Psychometric test", icon: Brain, href: "/psychometric-test" },
-  { label: "Career quiz", icon: Compass, href: "/career-quiz" },
-  { label: "Admission plan", icon: ClipboardList, href: "/my-admission-plan" },
+const CITIES = [
+  { label: "Pune", href: "/colleges-in-pune", icon: Castle },
+  { label: "Delhi NCR", href: "/mba-colleges-in-delhi-ncr", icon: Landmark },
+  { label: "Noida", href: "/colleges-in-noida", icon: Building2 },
+  { label: "Greater Noida", href: "/colleges-in-greater-noida", icon: TowerControl },
+  { label: "Gurugram", href: "/mba-colleges-in-gurugram", icon: Briefcase },
+  { label: "Ghaziabad", href: "/mba-colleges-in-ghaziabad", icon: Factory },
+  { label: "Lucknow", href: "/mba-colleges-in-lucknow", icon: Library },
+  { label: "Dehradun", href: "/mba-colleges-in-dehradun", icon: Mountain },
 ]
 
 export interface HeroProof { programmes: number; exams: number; cutoffs: number; checked: string }
-
-function buildStats(p: HeroProof) {
-  return [
-    { icon: Building2, value: p.programmes, label: "MBA programmes checked" },
-    { icon: FileText, value: p.exams, label: "Exam guides with sources" },
-    { icon: GraduationCap, value: p.cutoffs, label: "Cut-off sets published" },
-  ]
-}
 
 /** Nearest upcoming deadline across all exams (registration close or exam day). */
 function useNextDeadline() {
@@ -74,164 +67,116 @@ function RotatingWord() {
     // Width is reserved by the longest word, so the heading never reflows
     <span aria-hidden="true" className="relative inline-block overflow-hidden align-bottom">
       <span className="invisible">Engineering</span>
-      <span key={ROTATING[i]} className="hero-word absolute left-0 top-0 text-[#FF9C86]">{ROTATING[i]}</span>
+      <span key={ROTATING[i]} className="hero-word absolute left-0 top-0 text-[#FF5A47]">{ROTATING[i]}</span>
     </span>
   )
 }
 
-function CountUp({ to, start }: { to: number; start: boolean }) {
-  const [v, setV] = useState(0)
-  useEffect(() => {
-    if (!start) return
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(to); return }
-    const t0 = performance.now(), dur = 1200
-    let raf = 0
-    const tick = (t: number) => {
-      const p = Math.min(1, (t - t0) / dur)
-      setV(Math.round(to * (1 - Math.pow(1 - p, 3))))
-      if (p < 1) raf = requestAnimationFrame(tick)
-    }
-    raf = requestAnimationFrame(tick)
-    const done = window.setTimeout(() => setV(to), dur + 200)
-    return () => { cancelAnimationFrame(raf); window.clearTimeout(done) }
-  }, [to, start])
-  return <>{start ? v : to}</>
-}
-
 export default function HeroSection({ proof }: { proof: HeroProof }) {
-  const STATS = useMemo(() => buildStats(proof), [proof])
   const router = useRouter()
   const [q, setQ] = useState("")
-  const [stream, setStream] = useState("")
-  const [exam, setExam] = useState("")
   const deadline = useNextDeadline()
-
-  const panelRef = useRef<HTMLDivElement>(null)
-  const [on, setOn] = useState(false)
+  const rail = useRef<HTMLUListElement>(null)
+  const [overflow, setOverflow] = useState(false)
   useEffect(() => {
-    const el = panelRef.current
+    const el = rail.current
     if (!el) return
-    const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { setOn(true); io.disconnect() } })
-    io.observe(el)
-    return () => io.disconnect()
+    const check = () => setOverflow(el.scrollWidth > el.clientWidth + 4)
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
   }, [])
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    const p = new URLSearchParams()
-    if (q.trim()) p.set("search", q.trim())
-    if (stream) p.set("stream", stream)
-    if (exam) p.set("exam", exam)
-    router.push(`/colleges${p.toString() ? `?${p}` : ""}`)
+    router.push(q.trim() ? `/colleges?search=${encodeURIComponent(q.trim())}` : "/colleges")
   }
-
-  const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
+  const slide = (dir: 1 | -1) => rail.current?.scrollBy({ left: dir * Math.max(240, rail.current.clientWidth * 0.7), behavior: "smooth" })
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#011B40]">
-      {/* One campus photo under a deep navy wash, with a slow zoom-in (no scrolling, no fade).
-          Decorative, so empty alt. The zoom is off for reduced motion. */}
+      {/* Campus photo under a navy wash that is strongest on the left, where the text sits. Decorative, so empty alt. */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        <Image src="/hero/campus-2.webp" alt="" fill priority quality={82} sizes="100vw" className="hero-slide-img object-cover object-[50%_38%]" />
+        <Image src="/hero/campus-sunset.webp" alt="" fill priority quality={82} sizes="100vw" className="hero-slide-img object-cover object-[62%_center]" />
       </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#011B40]/95 via-[#012858]/78 to-[#012858]/25 max-lg:from-[#011B40]/92 max-lg:via-[#011B40]/82 max-lg:to-[#011B40]/70" />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#011B40]/85 to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#011B40]/92 via-[#011B40]/62 to-[#011B40]/10 max-lg:from-[#011B40]/88 max-lg:via-[#011B40]/72 max-lg:to-[#011B40]/60" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#011B40]/85 to-transparent" />
 
-      <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[35rem] lg:px-12 lg:py-14">
-        {/* Left: headline, one search row, stream shortcuts */}
-        <div className="min-w-0 lg:max-w-[54rem]">
+      <div className="relative mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 pb-7 pt-8 sm:px-8 lg:px-12 lg:pb-8 lg:pt-11">
+        <div className="min-w-0 lg:max-w-[58rem]">
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white ring-1 ring-white/25 backdrop-blur" style={{ "--i": 0 } as React.CSSProperties}>
             <span className="relative flex h-2 w-2" aria-hidden="true">
-              <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
             Admissions 2026–27 · Pune, Noida, Delhi NCR
           </p>
 
-          <h1 id="hero-heading" className="hero-in mt-4 font-[family-name:var(--font-fraunces)] text-[1.95rem] font-bold leading-[1.12] tracking-tight text-white sm:text-[2.7rem] lg:text-[3.1rem]" style={{ "--i": 1 } as React.CSSProperties}>
+          <h1 id="hero-heading" className="hero-in mt-5 font-[family-name:var(--font-fraunces)] text-[2.1rem] font-bold leading-[1.08] tracking-tight text-white sm:text-[2.7rem] lg:text-[3.3rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune, Noida or Delhi NCR"; the stream word is decorative */}
-            Find the right <RotatingWord /> college<br className="hidden sm:block" /> in Pune, Noida or Delhi NCR
+            Find the right <RotatingWord /> college
+            <span className="block">in Pune, Noida or Delhi NCR</span>
           </h1>
-          <p className="hero-in mt-3 text-sm text-blue-100 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
-            Compare by fees, entrance exams and cut-offs. The first counselling call is free.
+          <p className="hero-in mt-4 max-w-2xl text-sm text-blue-50 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
+            Compare colleges by fees, entrance exams and cut-offs, then talk it through with a counsellor. The first call is free.
           </p>
 
-          <form onSubmit={submit} className="hero-in mt-6 rounded-2xl bg-white p-3 shadow-2xl shadow-black/30" style={{ "--i": 3 } as React.CSSProperties} aria-label="Find colleges">
-            <div className="grid grid-cols-2 gap-2 md:grid-cols-[1.1fr_1fr_1fr_auto]">
-              <div className="relative col-span-2 md:col-span-1">
-                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
-                <label htmlFor="hero-q" className="sr-only">Search colleges, courses or exams</label>
-                <input id="hero-q" value={q} onChange={(e) => setQ(e.target.value)} placeholder='Try "MBA with hostel" or "COEP"' className={`${sel} pl-9`} />
-              </div>
-              <div>
-                <label htmlFor="hero-stream" className="sr-only">Course or stream</label>
-                <select id="hero-stream" value={stream} onChange={(e) => setStream(e.target.value)} className={sel}>
-                  <option value="">Any stream</option>
-                  {STREAMS.map((s) => <option key={s}>{s}</option>)}
-                </select>
-              </div>
-              <div>
-                <label htmlFor="hero-exam" className="sr-only">Entrance exam</label>
-                <select id="hero-exam" value={exam} onChange={(e) => setExam(e.target.value)} className={sel}>
-                  <option value="">Any exam</option>
-                  {EXAMS.map((x) => <option key={x}>{x}</option>)}
-                </select>
-              </div>
-              <button type="submit" className="group col-span-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 text-sm font-bold text-white transition-colors hover:bg-[#C90D11] md:col-span-1">
-                Find colleges <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </button>
-            </div>
+          {/* One big search bar */}
+          <form onSubmit={submit} className="hero-in mt-5 flex items-center gap-2 rounded-2xl bg-white p-2 shadow-2xl shadow-black/30 sm:p-2.5" style={{ "--i": 3 } as React.CSSProperties} aria-label="Search colleges">
+            <label htmlFor="hero-q" className="sr-only">Search colleges, courses or exams</label>
+            <Search className="ml-2 h-5 w-5 shrink-0 text-gray-500 sm:ml-3" aria-hidden="true" />
+            <input id="hero-q" value={q} onChange={(e) => setQ(e.target.value)} placeholder='Search colleges, exams, courses: try "MBA with hostel" or "COEP"' className="min-h-12 min-w-0 flex-1 bg-transparent px-1 text-sm text-gray-900 outline-none placeholder:text-gray-500 sm:text-base" />
+            <button type="submit" className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-4 text-sm font-bold text-white transition-colors hover:bg-[#C90D11] sm:px-8">
+              <span>Search</span>
+              <ArrowRight className="hidden h-4 w-4 transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true" />
+            </button>
           </form>
 
-          {/* Stream shortcuts: a single scrolling row */}
-          <ul className="-mx-4 mt-5 flex gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse by stream">
-            {STREAM_TILES.map(({ label, icon: Icon, href, tint }, i) => (
-              <li key={label} className="hero-pop shrink-0" style={{ "--i": i } as React.CSSProperties}>
-                <Link href={href} className="group flex min-h-12 items-center gap-2.5 rounded-full bg-white/10 py-1 pl-1.5 pr-4 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
-                  <span className={`flex h-8 w-8 items-center justify-center rounded-full ${tint} transition-transform group-hover:scale-110`}><Icon className="h-4 w-4" aria-hidden="true" /></span>
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Right: signature tools and live proof */}
-        <div ref={panelRef} className="hero-in rounded-2xl bg-white/10 p-4 text-white shadow-2xl shadow-black/25 ring-1 ring-white/20 backdrop-blur-xl lg:flex lg:max-w-5xl lg:items-center lg:gap-5" style={{ "--i": 3 } as React.CSSProperties}>
-          <div className="flex items-center justify-between gap-2 lg:w-44 lg:shrink-0 lg:flex-col lg:items-start lg:gap-2">
-            <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-100"><Sparkles className="h-3.5 w-3.5 text-[#F4604A]" aria-hidden="true" /> Only on CampusLelo</p>
-            {deadline && (
-              <Link href={deadline.href} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold text-orange-200 hover:bg-white/15">
-                <CalendarClock className="h-3 w-3" aria-hidden="true" />
-                {deadline.text} {deadline.days === 0 ? "today" : `in ${deadline.days}d`}
+          {/* Popular: the three tools only CampusLelo has come first */}
+          <div className="hero-in mt-3 flex flex-wrap items-center gap-2" style={{ "--i": 4 } as React.CSSProperties}>
+            <span className="text-sm font-semibold text-blue-100">Popular:</span>
+            {POPULAR.map((p) => (
+              <Link key={p.label} href={p.href} className={`inline-flex min-h-9 items-center gap-1.5 rounded-full px-3.5 text-sm font-medium text-white ring-1 transition-colors ${p.usp ? "bg-[#E0170F]/85 ring-[#FF8A73]/60 hover:bg-[#E0170F]" : "bg-white/5 ring-white/40 hover:bg-white hover:text-[#012858]"}`}>
+                {p.usp && <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />}
+                {p.label}
               </Link>
-            )}
+            ))}
           </div>
 
-          <ul className="mt-3 grid grid-cols-3 gap-2.5 lg:mt-0 lg:flex-1">
-            {SIGNATURE.map(({ label, icon: Icon, href }, i) => (
-              <li key={label} className="hero-pop" style={{ "--i": i + 3 } as React.CSSProperties}>
-                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-4 text-center text-xs font-semibold leading-tight ring-1 ring-white/15 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E0170F] text-white"><Icon className="h-4 w-4" aria-hidden="true" /></span>
-                  {label}
+          {/* What we have checked, in one line, with the live exam countdown */}
+          <p className="hero-in mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-blue-100 sm:text-sm" style={{ "--i": 5 } as React.CSSProperties}>
+            <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-300" aria-hidden="true" />{proof.programmes} MBA programmes and {proof.exams} exam guides checked against official pages (latest check {proof.checked})</span>
+            <Link href="/editorial-policy" className="inline-flex items-center gap-1 font-bold text-white underline underline-offset-2"><BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />How we verify</Link>
+            {deadline && (
+              <Link href={deadline.href} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 font-bold text-orange-200 ring-1 ring-white/20 hover:bg-white/15">
+                <CalendarClock className="h-3.5 w-3.5" aria-hidden="true" />
+                {deadline.text} {deadline.days === 0 ? "today" : `in ${deadline.days} days`}
+              </Link>
+            )}
+          </p>
+        </div>
+
+        {/* City shortcuts: a row of circles with arrows */}
+        <div className="hero-in relative mt-5 border-t border-white/15 pt-4" style={{ "--i": 6 } as React.CSSProperties}>
+          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-blue-100">Browse by city</p>
+          <button type="button" onClick={() => slide(-1)} aria-label="Previous cities" className={`absolute -left-1 top-1/2 z-10 h-10 w-10 items-center justify-center rounded-full bg-white text-[#012858] shadow-lg transition-colors hover:bg-[#FFE9A8] ${overflow ? "hidden lg:flex" : "hidden"}`}>
+            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+          </button>
+          <ul ref={rail} className="-mx-5 flex snap-x gap-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:-mx-8 sm:gap-8 sm:px-8 lg:mx-0 lg:justify-between lg:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse colleges by city">
+            {CITIES.map(({ label, href, icon: Icon }) => (
+              <li key={label} className="shrink-0 snap-start">
+                <Link href={href} className="group flex w-20 flex-col items-center gap-2 text-center sm:w-24">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/50 backdrop-blur transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-white group-hover:text-[#012858] sm:h-[4.5rem] sm:w-[4.5rem]">
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <span className="text-sm font-semibold leading-tight text-white">{label}</span>
                 </Link>
               </li>
             ))}
           </ul>
-
-          <dl className="mt-3 hidden grid-cols-3 gap-3 border-t border-white/10 pt-3 sm:grid lg:mt-0 lg:w-72 lg:shrink-0 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
-            {STATS.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="text-center">
-                <dt className="sr-only">{label}</dt>
-                <dd className="flex items-center justify-center gap-1 text-lg font-extrabold leading-none"><Icon className="h-3.5 w-3.5 text-blue-200" aria-hidden="true" /><CountUp to={value} start={on} /></dd>
-                <dd className="mt-1 text-[10px] leading-tight text-blue-200" aria-hidden="true">{label}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-2 hidden items-center justify-center gap-1.5 text-[11px] text-blue-100 sm:flex lg:hidden">
-            <ShieldCheck className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" /> Sources checked {proof.checked}
-            <Link href="/editorial-policy" className="inline-flex items-center gap-1 font-bold text-white underline underline-offset-2"><BadgeCheck className="h-3 w-3" aria-hidden="true" />How we verify</Link>
-          </p>
+          <button type="button" onClick={() => slide(1)} aria-label="Next cities" className={`absolute -right-1 top-1/2 z-10 h-10 w-10 items-center justify-center rounded-full bg-white text-[#012858] shadow-lg transition-colors hover:bg-[#FFE9A8] ${overflow ? "hidden lg:flex" : "hidden"}`}>
+            <ChevronRight className="h-5 w-5" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </section>
