@@ -71,10 +71,11 @@ function RotatingWord() {
     return () => window.clearInterval(id)
   }, [])
   return (
-    // Width is reserved by the longest word, so the heading never reflows
-    <span aria-hidden="true" className="relative inline-block overflow-hidden align-bottom">
-      <span className="invisible">Engineering</span>
-      <span key={ROTATING[i]} className="hero-word absolute left-0 top-0 text-[#C90D11]">{ROTATING[i]}</span>
+    // The word is drawn by CSS from data-w, so it is not text in the HTML: the H1 reads
+    // "Find the right college in Pune, Noida or Delhi NCR" to crawlers and screen readers.
+    // The box reserves the width of the longest word, so the heading never reflows.
+    <span aria-hidden="true" className="rot-word">
+      <span key={ROTATING[i]} data-w={ROTATING[i]} className="hero-word rot-word-inner" />
     </span>
   )
 }
@@ -149,7 +150,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
 
           <h1 id="hero-heading" className="hero-in mt-3 font-[family-name:var(--font-fraunces)] text-[1.7rem] font-bold leading-tight tracking-tight text-[#012858] sm:text-[2.2rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune, Noida or Delhi NCR"; the stream word is decorative */}
-            Find the right <RotatingWord /> college in Pune, Noida or Delhi NCR
+            Find the right <RotatingWord />college in Pune, Noida or Delhi NCR
           </h1>
           <p className="hero-in mt-2 text-sm text-gray-600 sm:text-base" style={{ "--i": 2 } as React.CSSProperties}>
             Compare by fees, entrance exams and cut-offs. The first counselling call is free.

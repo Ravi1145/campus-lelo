@@ -576,3 +576,8 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 .hero-slide-img { animation: hero-zoomin 40s ease-in-out infinite alternate; will-change: transform; }
 @keyframes hero-zoomin { from { transform: scale(1); } to { transform: scale(1.12); } }
 @media (prefers-reduced-motion: reduce) { .hero-slide-img { animation: none !important; } }
+
+/* Hero heading: the rotating stream word is drawn from data-w so it is not text in the H1 */
+.rot-word { display: inline-block; position: relative; min-width: 6.6em; height: 1.15em; margin-right: 0.28em; overflow: hidden; vertical-align: bottom; }
+.rot-word-inner { position: absolute; left: 0; top: 0; color: #C90D11; white-space: nowrap; }
+.rot-word-inner::before { content: attr(data-w); }
