@@ -129,14 +129,14 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
-      {/* Background photos: a slow sideways scroll. No fade and no zoom, the photos keep their size.
+      {/* Background photos: a slow sideways scroll with a gentle zoom-in on each photo. No fade.
           The strip holds the two photos twice, so moving it half its width loops without a jump.
           Decorative, so empty alt. Off for reduced motion. */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <div className="hero-track flex h-full w-[400%]">
           {["/hero/campus-1.webp", "/hero/campus-2.webp", "/hero/campus-1.webp", "/hero/campus-2.webp"].map((src, i) => (
-            <div key={i} className="relative h-full w-1/4 flex-none">
-              <Image src={src} alt="" fill priority={i === 0} quality={80} sizes="100vw" className="object-cover object-center" />
+            <div key={i} className="relative h-full w-1/4 flex-none overflow-hidden">
+              <Image src={src} alt="" fill priority={i === 0} quality={80} sizes="100vw" className="hero-slide-img object-cover object-center" />
             </div>
           ))}
         </div>
