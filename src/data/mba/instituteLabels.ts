@@ -27,6 +27,7 @@ export const INSTITUTE_SHORT: Record<string, string> = {
   "bmu-gurugram-mba": "BML Munjal University",
   "glbimr-greater-noida-pgdm": "GL Bajaj Greater Noida",
   "dit-dehradun-mba": "DIT University Dehradun",
+  "doon-university-mba": "Doon University",
   "amity-noida-mba": "Amity University Noida",
 }
 

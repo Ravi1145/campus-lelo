@@ -304,6 +304,18 @@ export const programAdmissions: ProgramAdmission[] = [
     source: { label: "DIT University: MBA", url: "https://www.dituniversity.edu.in/pg-courses/masters-in-business-administration", type: "official", accessed: ACCESSED },
   },
   {
+    id: "doon-university-mba",
+    institution: "Doon University, School of Management, Dehradun",
+    program: "MBA (2-year full-time)",
+    programType: "MBA",
+    city: "Dehradun",
+    route: "Direct (institute process)",
+    examsAccepted: ["cat", "mat", "xat", "gmat", "cuet-pg"],
+    intake: "2026–28",
+    notes: "The university's notice for the 2026–28 batch lists a valid CAT, AIMA-MAT, XAT, GMAT or CUET score as the eligibility. It names these specialisations: Marketing, Finance, HR, Logistics and Supply Chain, and Business Analytics. The notice announced a walk-in admission on 23 July 2026, with a special drive for SC, ST and OBC candidates; that date has passed, so look for the next cycle's notice. It does not state a graduation percentage or the selection steps.",
+    source: { label: "Doon University School of Management: MBA admission notice, batch 2026–28 (PDF)", url: "https://doonuniversity.ac.in/admin/assets/uploads/docs/202607171515060fc6cad727.pdf", type: "official", accessed: "2026-10-16" },
+  },
+  {
     id: "amity-noida-mba",
     institution: "Amity University, Noida",
     program: "MBA",

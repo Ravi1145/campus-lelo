@@ -51,7 +51,7 @@ export default function PsychometricTestPage() {
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
               <Link href="/career-quiz" className="hover:text-white">Career quiz</Link><span>›</span><span className="text-white">Psychometric test</span>
             </nav>
-            <h1 className="mb-3 text-3xl font-bold md:text-4xl">Psychometric test for students</h1>
+            <h1 className="mb-3 text-3xl font-bold md:text-4xl">Free psychometric test for students after 12th</h1>
             <p className="max-w-2xl text-blue-100">Ten minutes, one question at a time. See how you work and how you reason, then what to explore next.</p>
           </div>
         </div>

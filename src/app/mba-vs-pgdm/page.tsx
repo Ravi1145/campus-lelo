@@ -138,6 +138,20 @@ export default function MbaVsPgdmPage() {
             </div>
           </section>
 
+          <section lang="hi-Latn" className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">MBA aur PGDM kya hai? Hindi mein fark</h2>
+            <p className="text-gray-700 leading-relaxed">
+              <strong>MBA</strong> ek master&apos;s degree hai, jo university deti hai. <strong>PGDM</strong> ek post-graduate diploma hai, jo AICTE se approved autonomous institute deta hai.
+              Dono aam taur par do saal ke management programme hote hain, lekin PGDM ko apne aap MBA ke barabar nahi maana jaata.
+            </p>
+            <ul className="mt-3 space-y-2 text-sm text-gray-700">
+              <li><strong>Equivalence:</strong> AIU kisi khaas PGDM programme ko ek tay samay ke liye MBA ke barabar maan sakta hai. PhD, UGC-NET ya &quot;MBA or equivalent&quot; wali naukri ke liye yeh zaroori ho sakta hai.</li>
+              <li><strong>Syllabus:</strong> MBA ka syllabus university tay karti hai. PGDM ka syllabus institute AICTE ke dayre mein khud banata hai, isliye woh jaldi badal sakta hai.</li>
+              <li><strong>Kaun sa behtar hai:</strong> label se nahi, programme se tay karein: current AICTE approval, accreditation, latest placement report, total fees aur woh exams jo programme accept karta hai.</li>
+            </ul>
+            <p className="mt-3 text-sm text-gray-600">Join karne se pehle institute se current AICTE approval aur (zaroorat ho to) AIU equivalence letter validity dates ke saath maangein.</p>
+          </section>
+
           <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4">Frequently asked questions</h2>
             <div className="space-y-4">
