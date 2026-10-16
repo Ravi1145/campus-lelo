@@ -124,7 +124,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
     router.push(`/colleges${p.toString() ? `?${p}` : ""}`)
   }
 
-  const sel = "min-h-11 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
+  const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden hero-mesh">
@@ -132,7 +132,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
       <div aria-hidden="true" className="hero-orb pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-blue-100/70 blur-3xl" />
       <div aria-hidden="true" className="hero-orb hero-orb--b pointer-events-none absolute -right-16 top-0 h-64 w-64 rounded-full bg-orange-100/70 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-6 lg:px-8 lg:py-6">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-7 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-7 lg:px-8 lg:py-12">
         {/* Left: headline, one search row, stream shortcuts */}
         <div className="min-w-0">
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
@@ -143,15 +143,15 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             Admissions 2026–27 · Pune, Noida, Delhi NCR
           </p>
 
-          <h1 id="hero-heading" className="hero-in mt-2 font-[family-name:var(--font-fraunces)] text-2xl font-bold leading-tight tracking-tight text-[#012858] sm:text-[1.9rem]" style={{ "--i": 1 } as React.CSSProperties}>
+          <h1 id="hero-heading" className="hero-in mt-3 font-[family-name:var(--font-fraunces)] text-[1.7rem] font-bold leading-tight tracking-tight text-[#012858] sm:text-[2.2rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune, Noida or Delhi NCR"; the stream word is decorative */}
             Find the right <RotatingWord /> college in Pune, Noida or Delhi NCR
           </h1>
-          <p className="hero-in mt-1 text-sm text-gray-600" style={{ "--i": 2 } as React.CSSProperties}>
+          <p className="hero-in mt-2 text-sm text-gray-600 sm:text-base" style={{ "--i": 2 } as React.CSSProperties}>
             Compare by fees, entrance exams and cut-offs. The first counselling call is free.
           </p>
 
-          <form onSubmit={submit} className="hero-in mt-3 rounded-2xl bg-white p-2 shadow-lg shadow-blue-950/10 ring-1 ring-gray-200" style={{ "--i": 3 } as React.CSSProperties} aria-label="Find colleges">
+          <form onSubmit={submit} className="hero-in mt-4 rounded-2xl bg-white p-2.5 shadow-lg shadow-blue-950/10 ring-1 ring-gray-200" style={{ "--i": 3 } as React.CSSProperties} aria-label="Find colleges">
             <div className="grid grid-cols-2 gap-2 md:grid-cols-[1.1fr_1fr_1fr_auto]">
               <div className="relative col-span-2 md:col-span-1">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
@@ -172,17 +172,17 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
                   {EXAMS.map((x) => <option key={x}>{x}</option>)}
                 </select>
               </div>
-              <button type="submit" className="group col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 text-sm font-bold text-white transition-colors hover:bg-[#C90D11] md:col-span-1">
+              <button type="submit" className="group col-span-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#E0170F] px-6 text-sm font-bold text-white transition-colors hover:bg-[#C90D11] md:col-span-1">
                 Find colleges <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </button>
             </div>
           </form>
 
           {/* Stream shortcuts: a single scrolling row */}
-          <ul className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse by stream">
+          <ul className="-mx-4 mt-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse by stream">
             {STREAM_TILES.map(({ label, icon: Icon, href, tint }, i) => (
               <li key={label} className="hero-pop shrink-0" style={{ "--i": i } as React.CSSProperties}>
-                <Link href={href} className="group flex min-h-11 items-center gap-2 rounded-full bg-white py-1 pl-1 pr-3.5 text-sm font-semibold text-[#012858] ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:ring-[#012858]">
+                <Link href={href} className="group flex min-h-12 items-center gap-2.5 rounded-full bg-white py-1 pl-1.5 pr-4 text-sm font-semibold text-[#012858] ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:ring-[#012858]">
                   <span className={`flex h-8 w-8 items-center justify-center rounded-full ${tint} transition-transform group-hover:scale-110`}><Icon className="h-4 w-4" aria-hidden="true" /></span>
                   {label}
                 </Link>
@@ -192,7 +192,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
         </div>
 
         {/* Right: signature tools and live proof */}
-        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40] p-3.5 text-white shadow-xl shadow-blue-950/20" style={{ "--i": 3 } as React.CSSProperties}>
+        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40] p-5 text-white shadow-xl shadow-blue-950/20" style={{ "--i": 3 } as React.CSSProperties}>
           <div className="flex items-center justify-between gap-2">
             <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-100"><Sparkles className="h-3.5 w-3.5 text-[#F4604A]" aria-hidden="true" /> Only on CampusLelo</p>
             {deadline && (
@@ -203,10 +203,10 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             )}
           </div>
 
-          <ul className="mt-2.5 grid grid-cols-3 gap-2">
+          <ul className="mt-4 grid grid-cols-3 gap-2.5">
             {SIGNATURE.map(({ label, icon: Icon, href }, i) => (
               <li key={label} className="hero-pop" style={{ "--i": i + 3 } as React.CSSProperties}>
-                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-2.5 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
+                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-5 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E0170F] text-white"><Icon className="h-4 w-4" aria-hidden="true" /></span>
                   {label}
                 </Link>
@@ -214,7 +214,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             ))}
           </ul>
 
-          <dl className="mt-2.5 hidden grid-cols-3 gap-2 border-t border-white/10 pt-2.5 sm:grid">
+          <dl className="mt-4 hidden grid-cols-3 gap-2 border-t border-white/10 pt-4 sm:grid">
             {STATS.map(({ icon: Icon, value, label }) => (
               <div key={label} className="text-center">
                 <dt className="sr-only">{label}</dt>

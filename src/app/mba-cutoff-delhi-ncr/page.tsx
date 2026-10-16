@@ -143,6 +143,9 @@ export default function MbaCutoffDelhiNcrPage() {
             </ul>
             <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 text-sm font-semibold">
               <Link href="/exams/cat" className="text-orange-600 hover:underline">CAT 2026 guide →</Link>
+              <Link href="/fms-delhi-cat-cutoff" className="text-orange-600 hover:underline">FMS Delhi CAT cutoff →</Link>
+              <Link href="/iift-cat-cutoff" className="text-orange-600 hover:underline">IIFT CAT cutoff →</Link>
+              <Link href="/mdi-gurgaon-pgdm-admission" className="text-orange-600 hover:underline">MDI Gurgaon PGDM admission →</Link>
               <Link href="/exams/cat/score-vs-percentile" className="text-orange-600 hover:underline">How CAT percentiles work →</Link>
               <Link href="/exams/cat/colleges" className="text-orange-600 hover:underline">Verified CAT-accepting programmes →</Link>
               <Link href="/blog/mba-colleges-delhi-ncr-noida-guide" className="text-orange-600 hover:underline">MBA in Delhi NCR & Noida guide →</Link>

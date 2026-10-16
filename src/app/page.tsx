@@ -174,6 +174,9 @@ export default function HomePage() {
             title="City, exam and course guides"
             steps={[
               { href: "/mba", label: "MBA and PGDM guide" },
+              { href: "/fms-delhi-cat-cutoff", label: "FMS Delhi CAT cutoff" },
+              { href: "/iift-cat-cutoff", label: "IIFT CAT cutoff" },
+              { href: "/mdi-gurgaon-pgdm-admission", label: "MDI Gurgaon PGDM admission" },
               { href: "/admission-guide", label: "Pune admission guide" },
               { href: "/engineering-colleges-pune", label: "Engineering colleges in Pune" },
               { href: "/mba-colleges-in-pune", label: "MBA colleges in Pune" },

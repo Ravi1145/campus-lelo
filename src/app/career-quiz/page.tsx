@@ -50,7 +50,7 @@ export default function CareerQuizPage() {
             <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-xs text-blue-200">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span><span className="text-white">Career quiz</span>
             </nav>
-            <h1 className="mb-3 text-3xl font-bold md:text-4xl">Which study path fits you?</h1>
+            <h1 className="mb-3 text-3xl font-bold md:text-4xl">Career quiz after 12th: which study path fits you?</h1>
             <p className="max-w-2xl text-blue-100">A free 8-minute quiz on what you enjoy and what you are good at. Get your interest code, the paths that match, and the exams and colleges to look at next.</p>
           </div>
         </div>
