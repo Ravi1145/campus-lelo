@@ -573,8 +573,18 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 .hero-bg-img { animation: hero-zoom 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 @media (prefers-reduced-motion: reduce) { .hero-bg-img { animation: none !important; } }
 
-/* Hero background: the photo strip scrolls sideways, slowly and steadily. No fade, no zoom.
-   The strip is 400% wide and holds the two photos twice, so -50% is exactly one full loop. */
-.hero-track { animation: hero-scroll 120s linear infinite; will-change: transform; }
-@keyframes hero-scroll { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
-@media (prefers-reduced-motion: reduce) { .hero-track { animation: none !important; } }
+/* Hero background slideshow: slow cross-fade plus a gentle drift, 20s loop for two photos */
+.hero-slide { opacity: 0; animation: hero-slide 20s linear infinite; will-change: opacity, transform; }
+.hero-slide--b { animation-delay: 10s; }
+@keyframes hero-slide {
+  0%   { opacity: 0; transform: scale(1.02) translate3d(0, 0, 0); }
+  6%   { opacity: 1; }
+  50%  { opacity: 1; }
+  58%  { opacity: 0; transform: scale(1.13) translate3d(-2.5%, -1.2%, 0); }
+  100% { opacity: 0; transform: scale(1.13) translate3d(-2.5%, -1.2%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation: none !important; transform: none !important; }
+  .hero-slide--a { opacity: 1; }
+  .hero-slide--b { display: none; }
+}

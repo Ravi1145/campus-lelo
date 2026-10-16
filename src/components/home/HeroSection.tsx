@@ -129,16 +129,11 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
-      {/* Background photos: a slow sideways scroll, no fade and no zoom. The strip holds the two photos twice,
-          so moving it half its width loops without a jump. Decorative, so empty alt. Off for reduced motion. */}
-      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        <div className="hero-track flex h-full w-[400%]">
-          {["/hero/campus-1.webp", "/hero/campus-2.webp", "/hero/campus-1.webp", "/hero/campus-2.webp"].map((src, i) => (
-            <div key={i} className="relative h-full w-1/4 flex-none">
-              <Image src={src} alt="" fill priority={i === 0} quality={80} sizes="100vw" className="object-cover object-center" />
-            </div>
-          ))}
-        </div>
+      {/* Background photos: two campuses that cross-fade and drift slowly. Decorative, so empty alt.
+          The wash keeps the left side readable. Motion is off for reduced motion (globals.css). */}
+      <div aria-hidden="true" className="absolute inset-0">
+        <Image src="/hero/campus-1.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-slide hero-slide--a object-cover object-[60%_center]" />
+        <Image src="/hero/campus-2.webp" alt="" fill quality={80} sizes="100vw" className="hero-slide hero-slide--b object-cover object-[60%_center]" />
       </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/78 to-white/15 max-lg:from-white/92 max-lg:via-white/82 max-lg:to-white/72" />
 
