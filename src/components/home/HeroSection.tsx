@@ -74,7 +74,7 @@ function RotatingWord() {
     // Width is reserved by the longest word, so the heading never reflows
     <span aria-hidden="true" className="relative inline-block overflow-hidden align-bottom">
       <span className="invisible">Engineering</span>
-      <span key={ROTATING[i]} className="hero-word absolute left-0 top-0 text-[#C90D11]">{ROTATING[i]}</span>
+      <span key={ROTATING[i]} className="hero-word absolute left-0 top-0 text-[#FF9C86]">{ROTATING[i]}</span>
     </span>
   )
 }
@@ -128,22 +128,19 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
   const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
 
   return (
-    <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
-      {/* Background photos: the two campuses side by side, each with a slow zoom-in. No scrolling, no fade.
+    <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#011B40]">
+      {/* One campus photo under a deep navy wash, with a slow zoom-in (no scrolling, no fade).
           Decorative, so empty alt. The zoom is off for reduced motion. */}
-      <div aria-hidden="true" className="absolute inset-0 flex">
-        {["/hero/campus-1.webp", "/hero/campus-2.webp"].map((src, i) => (
-          <div key={src} className="relative h-full w-1/2 flex-none overflow-hidden">
-            <Image src={src} alt="" fill priority={i === 0} quality={80} sizes="50vw" className="hero-slide-img object-cover object-center" />
-          </div>
-        ))}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <Image src="/hero/campus-2.webp" alt="" fill priority quality={82} sizes="100vw" className="hero-slide-img object-cover object-[50%_38%]" />
       </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent max-lg:from-white/90 max-lg:via-white/80 max-lg:to-white/70" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#011B40]/95 via-[#012858]/78 to-[#012858]/25 max-lg:from-[#011B40]/92 max-lg:via-[#011B40]/82 max-lg:to-[#011B40]/70" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#011B40]/85 to-transparent" />
 
-      <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[30rem] lg:px-12 lg:py-12">
+      <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[35rem] lg:px-12 lg:py-14">
         {/* Left: headline, one search row, stream shortcuts */}
-        <div className="min-w-0 lg:max-w-[41rem]">
-          <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
+        <div className="min-w-0 lg:max-w-[54rem]">
+          <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white ring-1 ring-white/25 backdrop-blur" style={{ "--i": 0 } as React.CSSProperties}>
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -151,15 +148,15 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
             Admissions 2026–27 · Pune, Noida, Delhi NCR
           </p>
 
-          <h1 id="hero-heading" className="hero-in mt-3 font-[family-name:var(--font-fraunces)] text-[1.7rem] font-bold leading-tight tracking-tight text-[#012858] sm:text-[2.2rem]" style={{ "--i": 1 } as React.CSSProperties}>
+          <h1 id="hero-heading" className="hero-in mt-4 font-[family-name:var(--font-fraunces)] text-[1.95rem] font-bold leading-[1.12] tracking-tight text-white sm:text-[2.7rem] lg:text-[3.1rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune, Noida or Delhi NCR"; the stream word is decorative */}
-            Find the right <RotatingWord /> college in Pune, Noida or Delhi NCR
+            Find the right <RotatingWord /> college<br className="hidden sm:block" /> in Pune, Noida or Delhi NCR
           </h1>
-          <p className="hero-in mt-2 text-sm text-gray-600 sm:text-base" style={{ "--i": 2 } as React.CSSProperties}>
+          <p className="hero-in mt-3 text-sm text-blue-100 sm:text-lg" style={{ "--i": 2 } as React.CSSProperties}>
             Compare by fees, entrance exams and cut-offs. The first counselling call is free.
           </p>
 
-          <form onSubmit={submit} className="hero-in mt-4 rounded-2xl bg-white p-2.5 shadow-lg shadow-blue-950/10 ring-1 ring-gray-200" style={{ "--i": 3 } as React.CSSProperties} aria-label="Find colleges">
+          <form onSubmit={submit} className="hero-in mt-6 rounded-2xl bg-white p-3 shadow-2xl shadow-black/30" style={{ "--i": 3 } as React.CSSProperties} aria-label="Find colleges">
             <div className="grid grid-cols-2 gap-2 md:grid-cols-[1.1fr_1fr_1fr_auto]">
               <div className="relative col-span-2 md:col-span-1">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
@@ -187,10 +184,10 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
           </form>
 
           {/* Stream shortcuts: a single scrolling row */}
-          <ul className="-mx-4 mt-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse by stream">
+          <ul className="-mx-4 mt-5 flex gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" aria-label="Browse by stream">
             {STREAM_TILES.map(({ label, icon: Icon, href, tint }, i) => (
               <li key={label} className="hero-pop shrink-0" style={{ "--i": i } as React.CSSProperties}>
-                <Link href={href} className="group flex min-h-12 items-center gap-2.5 rounded-full bg-white py-1 pl-1.5 pr-4 text-sm font-semibold text-[#012858] ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:ring-[#012858]">
+                <Link href={href} className="group flex min-h-12 items-center gap-2.5 rounded-full bg-white/10 py-1 pl-1.5 pr-4 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
                   <span className={`flex h-8 w-8 items-center justify-center rounded-full ${tint} transition-transform group-hover:scale-110`}><Icon className="h-4 w-4" aria-hidden="true" /></span>
                   {label}
                 </Link>
@@ -200,7 +197,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
         </div>
 
         {/* Right: signature tools and live proof */}
-        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40]/92 p-4 text-white shadow-xl shadow-blue-950/25 backdrop-blur lg:flex lg:max-w-5xl lg:items-center lg:gap-5" style={{ "--i": 3 } as React.CSSProperties}>
+        <div ref={panelRef} className="hero-in rounded-2xl bg-white/10 p-4 text-white shadow-2xl shadow-black/25 ring-1 ring-white/20 backdrop-blur-xl lg:flex lg:max-w-5xl lg:items-center lg:gap-5" style={{ "--i": 3 } as React.CSSProperties}>
           <div className="flex items-center justify-between gap-2 lg:w-44 lg:shrink-0 lg:flex-col lg:items-start lg:gap-2">
             <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-100"><Sparkles className="h-3.5 w-3.5 text-[#F4604A]" aria-hidden="true" /> Only on CampusLelo</p>
             {deadline && (
@@ -214,7 +211,7 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
           <ul className="mt-3 grid grid-cols-3 gap-2.5 lg:mt-0 lg:flex-1">
             {SIGNATURE.map(({ label, icon: Icon, href }, i) => (
               <li key={label} className="hero-pop" style={{ "--i": i + 3 } as React.CSSProperties}>
-                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-4 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
+                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-4 text-center text-xs font-semibold leading-tight ring-1 ring-white/15 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E0170F] text-white"><Icon className="h-4 w-4" aria-hidden="true" /></span>
                   {label}
                 </Link>
