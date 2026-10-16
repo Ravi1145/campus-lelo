@@ -111,7 +111,7 @@ const categories = [
 export default function QuickExploreSection() {
   return (
     <section className="py-12 bg-surface">
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* Stream Cards */}
         <div className="mb-10">

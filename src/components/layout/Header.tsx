@@ -225,7 +225,7 @@ export default function Header() {
   }
 
   const navTabCls = (id: string) => cn(
-    "h-full px-3 text-sm font-medium flex items-center gap-1 border-b-2 transition-colors whitespace-nowrap",
+    "h-full px-2.5 text-sm font-medium flex items-center gap-1 border-b-2 transition-colors whitespace-nowrap",
     activeDropdown === id
       ? "text-orange-500 border-orange-500"
       : "text-[#012858] hover:text-orange-500 border-transparent"
@@ -240,14 +240,14 @@ export default function Header() {
         {/* Scroll progress: a thin red line that grows as you read */}
         <span aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#E0170F]" style={{ transform: `scaleX(${progress})`, transition: "transform 80ms linear" }} />
 
-        <div className="mx-auto flex h-14 max-w-[calc(var(--container-7xl)+3rem)] items-center gap-3 px-4 sm:px-6">
+        <div className="mx-auto flex h-14 max-w-[calc(var(--container-7xl)+6rem)] items-center gap-3 px-5 sm:px-8 lg:px-12">
           {/* Logo */}
           <Link href="/" className="mr-1 flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
             <Image src="/logo.webp" alt="CampusLelo: Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-10 w-auto" priority unoptimized />
           </Link>
 
           {/* Main navigation (desktop): one row, streams then tools */}
-          <nav aria-label="Main navigation" className="hidden h-full items-center lg:flex">
+          <nav aria-label="Main navigation" className="hidden h-full items-center xl:flex">
             {streams.map(stream => (
               <div key={stream.label} onMouseEnter={() => open(stream.label)} onMouseLeave={close} className="relative flex h-full items-center">
                 <button className={navTabCls(stream.label)} aria-expanded={activeDropdown === stream.label}>
@@ -359,7 +359,7 @@ export default function Header() {
 
           {/* Right side: compact search, counselling, mobile buttons */}
           <div className="ml-auto flex items-center gap-2">
-            <form onSubmit={handleSearch} className="hidden md:block lg:hidden xl:block">
+            <form onSubmit={handleSearch} className="hidden 2xl:block">
               <div className="group flex w-44 items-center rounded-full bg-gray-100 pl-3 pr-1 ring-1 ring-transparent transition-all duration-300 focus-within:w-64 focus-within:bg-white focus-within:ring-[#024692]/40 lg:w-40 xl:w-52 xl:focus-within:w-72">
                 <Search className="h-4 w-4 flex-shrink-0" style={{ color: "#64748B" }} aria-hidden="true" />
                 <input
@@ -379,10 +379,10 @@ export default function Header() {
               <span className="whitespace-nowrap">Free Counselling</span>
             </Link>
 
-            <button type="button" aria-label="Search colleges" className="rounded-lg p-2 hover:bg-gray-100 md:hidden lg:inline-flex xl:hidden" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
+            <button type="button" aria-label="Search colleges" className="rounded-lg p-2 hover:bg-gray-100 2xl:hidden" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
               <Search className="h-5 w-5" />
             </button>
-            <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="rounded-lg p-2 hover:bg-gray-100 lg:hidden" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
+            <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="rounded-lg p-2 hover:bg-gray-100 xl:hidden" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>
               <Menu className="h-5 w-5" />
             </button>
           </div>
@@ -391,7 +391,7 @@ export default function Header() {
 
       {/* ══ MOBILE SLIDE-OVER ═════════════════════════════════ */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[200] lg:hidden">
+        <div className="fixed inset-0 z-[200] xl:hidden">
           <div className="absolute inset-0 bg-black/60" onClick={() => setMobileOpen(false)} />
           <div className="absolute top-0 left-0 h-full w-[320px] max-w-full bg-white flex flex-col shadow-2xl">
 

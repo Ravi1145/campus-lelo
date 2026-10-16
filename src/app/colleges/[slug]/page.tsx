@@ -447,7 +447,7 @@ export default async function CollegePage({ params }: Props) {
             which AI crawlers cannot execute. This section duplicates the same FAQ
             data as static HTML so Google AIO, ChatGPT and Perplexity can cite it.  */}
         <section className="bg-white border-t py-10 px-4" id="faq-section">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
             <h2 className="text-xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions: {college.name}
             </h2>

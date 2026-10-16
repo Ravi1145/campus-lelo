@@ -75,7 +75,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section aria-labelledby="how-heading" className="relative overflow-hidden section-pearl px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="how-heading" className="relative overflow-hidden section-pearl px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <span aria-hidden="true" className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-orange-50" />
       <span aria-hidden="true" className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-blue-50" />
       <Reveal className="relative mx-auto max-w-6xl">

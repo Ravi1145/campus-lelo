@@ -79,7 +79,7 @@ export default function MbaHubPage() {
       <div className="bg-rich-navy relative overflow-hidden">
         <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.12]" />
         <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#E0170F]/20 blur-3xl" />
-        <div className="relative mx-auto max-w-[calc(var(--container-7xl)+3rem)] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="relative mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 py-12 sm:px-8 sm:py-16 lg:px-12">
           <nav aria-label="Breadcrumb" className="hero-in mb-5 flex gap-1.5 text-xs text-blue-200" style={{ "--i": 0 } as React.CSSProperties}>
             <Link href="/" className="hover:text-white">Home</Link><span aria-hidden="true">›</span><span className="text-white" aria-current="page">MBA &amp; PGDM guide</span>
           </nav>
@@ -98,7 +98,7 @@ export default function MbaHubPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[calc(var(--container-7xl)+3rem)] space-y-16 px-4 py-14 sm:px-6">
+      <div className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] space-y-16 px-5 py-14 sm:px-8 lg:px-12">
         {/* Topic guides */}
         <section aria-labelledby="guides-h">
           <h2 id="guides-h" className="flex items-center gap-2 text-2xl font-extrabold text-[#012858]"><BookOpen className="h-6 w-6 text-[#C90D11]" aria-hidden="true" /> Guides to your biggest MBA questions</h2>

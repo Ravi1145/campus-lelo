@@ -53,7 +53,7 @@ export default function AIFinderPage() {
 
       {/* Chat Section */}
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <MessageCircle className="w-10 h-10 text-orange-400 mx-auto mb-3" />
           <h2 className="text-2xl font-bold text-white mb-2">Need More Help?</h2>
           <p className="text-gray-400 mb-6">

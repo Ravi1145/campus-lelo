@@ -118,7 +118,7 @@ export default function Footer() {
     <footer style={{ backgroundColor: "var(--color-navy)" }} className="bg-rich-navy text-gray-300">
 
       {/* ── Main grid ─────────────────────────────────────────────────── */}
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12 py-12">
         {/* Brand full width on mobile, then 2-col tablet, then 6-col desktop */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
 
@@ -197,7 +197,7 @@ export default function Footer() {
 
       {/* ── SEO keyword strip ──────────────────────────────────────────── */}
       <div className="border-t border-white/10">
-        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-5">
+        <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12 py-5">
           <div className="flex flex-wrap gap-x-4 gap-y-2">
             {seoLinks.map((link, i) => (
               <Link
@@ -214,7 +214,7 @@ export default function Footer() {
 
       {/* ── Bottom bar ─────────────────────────────────────────────────── */}
       <div className="border-t border-white/10">
-        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-400">
             © 2026 CampusLelo.com · All rights reserved · AI-powered college discovery for Pune
           </p>

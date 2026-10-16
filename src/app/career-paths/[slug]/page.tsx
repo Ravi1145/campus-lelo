@@ -45,7 +45,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
     <div className="bg-surface min-h-screen">
       {/* Hero */}
       <div className="bg-gradient-to-r from-[#011B40] to-[#1A2E4A] py-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
           <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center flex-wrap">
             <Link href="/" className="hover:text-white">Home</Link>
             <span>›</span>
@@ -69,7 +69,7 @@ export default async function CareerPathDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-10 space-y-10">
 
 
         {/* Career Roadmap */}

@@ -15,7 +15,7 @@ export default function FAQSection() {
 
   return (
     <section aria-labelledby="faq-heading" className="py-10 sm:py-12 section-ivory">
-      <div className="mx-auto grid max-w-[calc(var(--container-7xl)+3rem)] gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14">
+      <div className="mx-auto grid max-w-[calc(var(--container-7xl)+6rem)] gap-10 px-5 sm:px-8 lg:px-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14">
         {/* Intro — sticks while the list scrolls */}
         <div className="lg:sticky lg:top-[calc(var(--leadbar-h,0px)+8rem)] lg:self-start">
           <span className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-xs font-bold uppercase tracking-wider text-orange-700 ring-1 ring-orange-200">
@@ -51,7 +51,7 @@ export default function FAQSection() {
                 style={{ "--i": i >= INITIAL_COUNT ? i - INITIAL_COUNT : i } as React.CSSProperties}
               >
                 <Accordion.Header className="m-0">
-                  <Accordion.Trigger className="group flex w-full items-center gap-4 px-4 py-4 text-left sm:px-6 sm:py-5">
+                  <Accordion.Trigger className="group flex w-full items-center gap-4 px-5 py-4 text-left sm:px-8 lg:px-12 sm:py-5">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-xs font-extrabold text-[#012858] transition-colors group-data-[state=open]:bg-[#E0170F] group-data-[state=open]:text-white">
                       {String(i + 1).padStart(2, "0")}
                     </span>

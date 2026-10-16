@@ -211,7 +211,7 @@ export default function Top10MedicalCollegesPage() {
       <div className="min-h-screen bg-white">
         {/* Hero */}
         <div className="bg-gradient-to-br from-[#011B40] via-[#0D2040] to-[#1a1a2e] text-white py-14">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
             <nav className="flex items-center gap-2 text-sm text-white/60 mb-6">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>
@@ -234,7 +234,7 @@ export default function Top10MedicalCollegesPage() {
         </div>
 
         {/* Table */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-12">
           <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
             <table className="w-full text-sm">
               <thead>

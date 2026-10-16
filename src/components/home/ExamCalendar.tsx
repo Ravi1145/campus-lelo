@@ -53,7 +53,7 @@ export default function ExamCalendar({ generatedAt = Date.now() }: { generatedAt
   const upcomingCount = all.filter((s) => s === "upcoming" || s === "ongoing").length
 
   return (
-    <section aria-labelledby="exam-tracker-heading" className="relative py-10 px-4 sm:px-6 section-ivory overflow-hidden">
+    <section aria-labelledby="exam-tracker-heading" className="relative py-10 px-5 sm:px-8 lg:px-12 section-ivory overflow-hidden">
       <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.35]" />
       <div className="relative max-w-7xl mx-auto">
         {/* Heading + live summary */}

@@ -85,7 +85,7 @@ function Skyline() {
 
 export default function BrowseByStream() {
   return (
-    <section className="section-ivory px-4 py-6 sm:px-6 sm:py-8" aria-labelledby="streams-heading">
+    <section className="section-ivory px-5 py-6 sm:px-8 lg:px-12 sm:py-8" aria-labelledby="streams-heading">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item mb-3 flex items-end justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>
           <div>

@@ -46,7 +46,7 @@ export default function AIFinderBand() {
   }
 
   return (
-    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden section-ivory px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="ai-finder-heading" className="relative overflow-hidden section-ivory px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <span className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-orange-50" aria-hidden="true" />
       <span className="pointer-events-none absolute right-0 top-0 h-72 w-1/2 rounded-bl-[8rem] bg-blue-50/70" aria-hidden="true" />
 

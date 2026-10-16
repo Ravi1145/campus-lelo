@@ -12,7 +12,7 @@ const stats = [
 export default function StatsCounter() {
   return (
     <section className="py-12 bg-white border-y border-gray-100">
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {stats.map(({ icon: Icon, value, label, color, bg }) => (
             <div key={label} className="text-center">

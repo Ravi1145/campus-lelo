@@ -56,7 +56,7 @@ export default function CollegesHinjewadiPune() {
 
       <div className="bg-surface min-h-screen">
         <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link><span>›</span>
               <Link href="/colleges" className="hover:text-white">Colleges</Link><span>›</span>
@@ -75,7 +75,7 @@ export default function CollegesHinjewadiPune() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-10 space-y-8">
 
           {/* Area Info */}
           <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">

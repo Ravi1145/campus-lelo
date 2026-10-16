@@ -5,7 +5,7 @@ import { VIDEO_PRICE_INR } from "@/data/counselling"
 // Short, self-contained definition of the site (homepage). Plain facts about what exists on the site.
 export default function WhatIsCampusLelo() {
   return (
-    <section className="px-4 py-10 sm:px-6">
+    <section className="px-5 py-10 sm:px-8 lg:px-12">
       <div className="mx-auto max-w-4xl">
         <AnswerBlock id="what-is-q" question="What is CampusLelo?" updated="2026-10-05">
           <p>

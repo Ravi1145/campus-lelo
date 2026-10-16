@@ -42,7 +42,7 @@ export default async function CollegeMarquee() {
   return (
     <section aria-labelledby="marquee-heading" className="marquee-wrap section-ivory py-8 border-b border-gray-100">
       {/* Section title */}
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 mb-6">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12 mb-6">
         <div className="flex items-center gap-3 justify-center">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-200 max-w-[80px]" />
           <h2 id="marquee-heading" className="flex items-center gap-2 text-gray-500 text-xs font-semibold uppercase tracking-widest">

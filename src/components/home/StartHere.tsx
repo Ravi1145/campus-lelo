@@ -71,7 +71,7 @@ const MORE = [
 
 export default function StartHere(_props: { proof: HeroProof }) {
   return (
-    <section aria-labelledby="start-heading" className="relative overflow-hidden section-ivory px-4 py-6 sm:px-6 sm:py-8">
+    <section aria-labelledby="start-heading" className="relative overflow-hidden section-ivory px-5 py-6 sm:px-8 lg:px-12 sm:py-8">
       <span aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-orange-50" />
       <Reveal className="relative mx-auto max-w-7xl">
         <div className="reveal-item flex flex-wrap items-end justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>

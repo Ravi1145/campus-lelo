@@ -86,7 +86,7 @@ export default function HomepageNewsSection() {
   const TINT = ["bg-red-50 text-[#C90D11]", "bg-blue-50 text-[#024692]", "bg-emerald-50 text-emerald-700", "bg-violet-50 text-violet-700", "bg-amber-50 text-amber-800", "bg-teal-50 text-teal-700"]
 
   return (
-    <section aria-labelledby="insights-heading" className="relative overflow-hidden section-ivory px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="insights-heading" className="relative overflow-hidden section-ivory px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <div className="relative mx-auto max-w-7xl">
         <Reveal className="mb-6 flex flex-wrap items-end justify-between gap-3">
           <div className="reveal-item flex items-center gap-3" style={{ "--i": 0 } as React.CSSProperties}>

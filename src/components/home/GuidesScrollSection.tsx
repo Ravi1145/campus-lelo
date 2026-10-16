@@ -169,7 +169,7 @@ export default async function GuidesScrollSection() {
 
   return (
     <section aria-labelledby="guides-heading" className="marquee-wrap py-14 section-pearl">
-      <div className="mx-auto max-w-[calc(var(--container-7xl)+3rem)] px-4 sm:px-6">
+      <div className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 sm:px-8 lg:px-12">
         <div className="mb-7 flex items-end justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#012858] text-white">

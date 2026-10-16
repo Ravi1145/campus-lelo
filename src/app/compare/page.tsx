@@ -28,7 +28,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
         <AIComparison initialCollege1={valid(c1)} initialCollege2={valid(c2)} />
       </div>
       <NextSteps exclude="/compare" />

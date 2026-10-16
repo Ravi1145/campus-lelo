@@ -116,7 +116,7 @@ const TOOLS = [
 
 export default function TestimonialsSection() {
   return (
-    <section aria-labelledby="why-heading" className="relative overflow-hidden section-ivory px-4 py-7 sm:px-6 sm:py-8">
+    <section aria-labelledby="why-heading" className="relative overflow-hidden section-ivory px-5 py-7 sm:px-8 lg:px-12 sm:py-8">
       <span aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-orange-50" />
       <Reveal className="relative mx-auto max-w-7xl">
         <div className="reveal-item flex items-start justify-between gap-4" style={{ "--i": 0 } as React.CSSProperties}>

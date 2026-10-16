@@ -93,7 +93,7 @@ export default function MBACollegesPunePage() {
       <div className="bg-white min-h-screen">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 border-b border-gray-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-3">
             <ol className="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
               <li><Link href="/" className="hover:text-orange-600">Home</Link></li>
               <li>/</li>
@@ -106,7 +106,7 @@ export default function MBACollegesPunePage() {
 
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-500/30 text-orange-300 text-sm font-medium px-4 py-2 rounded-full mb-4">
                 <Award className="w-4 h-4" />
@@ -128,7 +128,7 @@ export default function MBACollegesPunePage() {
         </section>
 
         {/* Quick Answer Box — GEO/AIO optimized */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
           <div className="bg-green-50 border-l-4 border-green-500 rounded-xl p-5 sm:p-6" data-speakable="true">
             <h2 className="text-lg font-bold text-green-800 mb-2">Quick Answer: Best MBA College in Pune 2026</h2>
             <p className="text-green-900 text-sm leading-relaxed">
@@ -139,7 +139,7 @@ export default function MBACollegesPunePage() {
         </section>
 
         {/* Top 3 Detailed Cards */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Top 3 MBA Colleges in Pune. Detailed Review</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {/* SIBM */}
@@ -196,7 +196,7 @@ export default function MBACollegesPunePage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">All MBA Colleges in Pune 2026. Comparison Table</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm">
@@ -241,7 +241,7 @@ export default function MBACollegesPunePage() {
 
         {/* Admission Process */}
         <section className="bg-gray-50 py-12">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">MBA Admission Process 2026. Pune Colleges</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
@@ -261,7 +261,7 @@ export default function MBACollegesPunePage() {
         </section>
 
         {/* Exam Comparison */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">MBA Entrance Exams for Pune 2026. Which Colleges Accept What?</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-200">
             <table className="w-full text-sm">
@@ -299,7 +299,7 @@ export default function MBACollegesPunePage() {
           if (!sibmData) return null
           return (
             <section className="py-10 bg-white">
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                     <div>
@@ -319,7 +319,7 @@ export default function MBACollegesPunePage() {
 
         {/* FAQ Section */}
         <section className="bg-gray-50 py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">FAQs: MBA Colleges in Pune 2026</h2>
             <div className="space-y-4">
               {faqs.map((faq, i) => (

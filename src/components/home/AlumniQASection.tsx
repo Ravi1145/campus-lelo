@@ -283,7 +283,7 @@ export default function AlumniQASection() {
 
   return (
     <section className="py-10 bg-surface border-t border-gray-100">
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* Header */}
         <div className="flex items-center justify-between mb-5">

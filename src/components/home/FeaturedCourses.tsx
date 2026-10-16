@@ -27,7 +27,7 @@ export default function FeaturedCourses() {
   const list = courses.filter((c) => tab === "All" || c.stream === tab).slice(0, 12)
 
   return (
-    <section aria-labelledby="courses-heading" className="section-pearl px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="courses-heading" className="section-pearl px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item flex flex-wrap items-end justify-between gap-3" style={{ "--i": 0 } as React.CSSProperties}>
           <div>

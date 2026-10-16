@@ -63,7 +63,7 @@ const SHORTCUTS = [
 export default function ExamGuidesBand() {
   const exams = ORDER.map((slug) => mbaExams.find((e) => e.slug === slug)).filter(Boolean) as Exam[]
   return (
-    <section aria-labelledby="exam-guides-heading" className="section-ivory px-4 py-10 sm:px-6 sm:py-12">
+    <section aria-labelledby="exam-guides-heading" className="section-ivory px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item grid items-end gap-4 lg:grid-cols-[1.1fr_1fr]" style={{ "--i": 0 } as React.CSSProperties}>
           <div>

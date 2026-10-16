@@ -189,7 +189,7 @@ export default async function AlumniProfilePage({ params }: Props) {
       <div className="bg-white min-h-screen">
         {/* ── Hero strip ──────────────────────────────────────────────────── */}
         <section className="bg-[#011B40] text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 py-10 sm:py-14">
             {/* Breadcrumb */}
             <nav
               aria-label="Breadcrumb"
@@ -234,7 +234,7 @@ export default async function AlumniProfilePage({ params }: Props) {
         </section>
 
         {/* ── Content card ────────────────────────────────────────────────── */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 py-10">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 space-y-8">
             {/* Bio */}
             <div>

@@ -172,7 +172,7 @@ export default async function CutoffPage({ params }: Props) {
       <div className="bg-surface min-h-screen">
         {/* Hero */}
         <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center flex-wrap">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>
@@ -203,7 +203,7 @@ export default async function CutoffPage({ params }: Props) {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-8 space-y-8">
 
           {/* Other exam tabs */}
           {otherExams.length > 0 && (
@@ -332,7 +332,7 @@ export default async function CutoffPage({ params }: Props) {
           </div>
 
         {/* Merit list alert subscribe */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 py-6">
           <NewsAlert
             examName={examLabel}
             source="cutoff_news_alert"

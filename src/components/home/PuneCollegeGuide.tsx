@@ -54,7 +54,7 @@ const noidaLinks = [
 export default function PuneCollegeGuide() {
   return (
     <section className="section-ivory" aria-label="Pune College Guide">
-      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-14">
+      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12 py-14">
 
         {/* Main heading — targets "colleges in pune 2026" and variants */}
         <div className="max-w-3xl mb-10">

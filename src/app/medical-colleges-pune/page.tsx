@@ -93,7 +93,7 @@ export default function MedicalCollegesPunePage() {
       <div className="bg-white min-h-screen">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 border-b border-gray-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-3">
             <ol className="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
               <li><Link href="/" className="hover:text-orange-600">Home</Link></li>
               <li>/</li>
@@ -106,7 +106,7 @@ export default function MedicalCollegesPunePage() {
 
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#011B40] to-[#024692] text-white py-12 sm:py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-500/30 text-red-300 text-sm font-medium px-4 py-2 rounded-full mb-4">
                 <Award className="w-4 h-4" />
@@ -128,7 +128,7 @@ export default function MedicalCollegesPunePage() {
         </section>
 
         {/* Quick Answer Box */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
           <div className="bg-green-50 border-l-4 border-green-500 rounded-xl p-5 sm:p-6" data-speakable="true">
             <h2 className="text-lg font-bold text-green-800 mb-2">Quick Answer: Best Medical College in Pune 2026</h2>
             <p className="text-green-900 text-sm leading-relaxed">
@@ -140,7 +140,7 @@ export default function MedicalCollegesPunePage() {
         </section>
 
         {/* NEET Alert */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-6">
           <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex gap-3">
             <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
             <div>
@@ -151,7 +151,7 @@ export default function MedicalCollegesPunePage() {
         </section>
 
         {/* Top 3 College Cards */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Top 3 Medical Colleges in Pune. Detailed Comparison</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {/* AFMC */}
@@ -210,7 +210,7 @@ export default function MedicalCollegesPunePage() {
         </section>
 
         {/* Full Comparison Table */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">All Medical Colleges in Pune 2026. NEET Cutoff & Fees</h2>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm">
@@ -255,7 +255,7 @@ export default function MedicalCollegesPunePage() {
 
         {/* Govt vs Private Comparison */}
         <section className="bg-gray-50 py-12">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Government vs Private Medical College in Pune. Which is Better?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
@@ -287,7 +287,7 @@ export default function MedicalCollegesPunePage() {
           if (!afmcData) return null
           return (
             <section className="py-10 bg-white">
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                   <h2 className="text-xl font-bold text-gray-900 mb-1">AFMC Pune NEET Cutoff Trend 2020–2026</h2>
                   <p className="text-sm text-gray-500 mb-4">Historical NEET score required for AFMC. India&apos;s top defence medical college.</p>
@@ -300,7 +300,7 @@ export default function MedicalCollegesPunePage() {
 
         {/* FAQ Section */}
         <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">FAQs: Medical Colleges in Pune 2026</h2>
             <div className="space-y-4">
               {faqs.map((faq, i) => (

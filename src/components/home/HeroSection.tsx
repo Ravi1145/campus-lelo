@@ -133,9 +133,9 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
       <Image src="/hero-students.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-bg-img object-cover object-[78%_center] sm:object-[72%_center]" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent max-lg:from-white/90 max-lg:via-white/80 max-lg:to-white/70" />
 
-      <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+3rem)] flex-col justify-center gap-6 px-4 py-9 sm:px-6 lg:min-h-[30rem] lg:py-12">
+      <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[30rem] lg:px-12 lg:py-12">
         {/* Left: headline, one search row, stream shortcuts */}
-        <div className="min-w-0 lg:max-w-[50rem]">
+        <div className="min-w-0 lg:max-w-[41rem]">
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500" />

@@ -144,7 +144,7 @@ export default function CollegeGrid() {
   const filterCount = countActiveFilters(filters)
 
   return (
-    <div className="mx-auto max-w-[calc(var(--container-7xl)+3rem)] px-4 py-8 sm:px-6">
+    <div className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 py-8 sm:px-8 lg:px-12">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
         <div className="lg:w-72 lg:shrink-0">
           <CollegeFilters filters={filters} onChange={setFilters} options={options} mobileOpen={mobileFilters} onMobileClose={() => setMobileFilters(false)} resultCount={filteredColleges.length} />
