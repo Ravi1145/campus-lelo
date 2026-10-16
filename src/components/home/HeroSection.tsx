@@ -129,13 +129,9 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
 
   return (
     <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
-      {/* Background photos: two campuses that cross-fade and drift slowly. Decorative, so empty alt.
-          The wash keeps the left side readable. Motion is off for reduced motion (globals.css). */}
-      <div aria-hidden="true" className="absolute inset-0">
-        <Image src="/hero/campus-1.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-slide hero-slide--a object-cover object-[60%_center]" />
-        <Image src="/hero/campus-2.webp" alt="" fill quality={80} sizes="100vw" className="hero-slide hero-slide--b object-cover object-[60%_center]" />
-      </div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/78 to-white/15 max-lg:from-white/92 max-lg:via-white/82 max-lg:to-white/72" />
+      {/* Background photo. Decorative, so empty alt. The wash keeps the left side readable. */}
+      <Image src="/hero-students.webp" alt="" fill priority quality={80} sizes="100vw" className="hero-bg-img object-cover object-[78%_center] sm:object-[72%_center]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent max-lg:from-white/90 max-lg:via-white/80 max-lg:to-white/70" />
 
       <div className="relative mx-auto flex max-w-[calc(var(--container-7xl)+6rem)] flex-col justify-center gap-6 px-5 py-9 sm:px-8 lg:min-h-[30rem] lg:px-12 lg:py-12">
         {/* Left: headline, one search row, stream shortcuts */}
