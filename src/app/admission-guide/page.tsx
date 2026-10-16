@@ -200,7 +200,7 @@ export default function AdmissionGuidePage() {
 
         {/* Hero */}
         <section className="bg-white border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10 lg:py-14">
             <nav className="flex items-center gap-2 text-xs text-gray-400 mb-5">
               <Link href="/" className="hover:text-orange-500">Home</Link>
               <ChevronRight className="w-3 h-3" />
@@ -227,7 +227,7 @@ export default function AdmissionGuidePage() {
         </section>
 
         {/* Stream sections */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10 space-y-10">
           {streams.map(stream => {
             const Icon = stream.icon
             return (
@@ -310,7 +310,7 @@ export default function AdmissionGuidePage() {
         </div>
 
         {/* Documents checklist */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <section className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pb-10">
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-100">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(224, 23, 15,0.1)" }}>
@@ -337,7 +337,7 @@ export default function AdmissionGuidePage() {
         </section>
 
         {/* Quick links */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <section className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pb-10">
           <h2 className="text-xl font-bold mb-4" style={{ color: "#011B40" }}>Useful Admission Resources</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -362,7 +362,7 @@ export default function AdmissionGuidePage() {
         </section>
 
         {/* FAQs */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+        <section className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pb-14">
           <h2 className="text-2xl font-bold mb-6" style={{ color: "#011B40" }}>Admission FAQs</h2>
           <div className="space-y-4 max-w-3xl">
             {faqs.map((faq, i) => (

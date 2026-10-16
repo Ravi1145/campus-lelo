@@ -55,7 +55,7 @@ export default function CollegesPage() {
         <div className="bg-rich-navy relative overflow-hidden">
           <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.12]" />
           <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#E0170F]/20 blur-3xl" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+          <div className="relative max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10 sm:py-14">
             <nav aria-label="Breadcrumb" className="hero-in text-xs text-blue-200 mb-5 flex gap-1.5" style={{ "--i": 0 } as React.CSSProperties}>
               <Link href="/" className="hover:text-white">Home</Link>
               <span aria-hidden="true">›</span>

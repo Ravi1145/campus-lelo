@@ -6,6 +6,14 @@
      red #EB1B11 ("Lelo") → accessible CTA red #E0170F (4.88:1 with white),
      orange-red #FB4312 (gradient start, decorative / large text only),
      deep red #C90D11 (gradient end, hover). */
+  /* Page container widths in px, not rem. The root font size is 80% on desktop, so the default rem
+     widths (max-w-7xl = 80rem) had shrunk to 1024px and left wide empty margins on large screens.
+     These keep the text 20% smaller but give the layout its real width back. */
+  --container-4xl: 896px;
+  --container-5xl: 1024px;
+  --container-6xl: 1152px;
+  --container-7xl: 1680px;
+
   --color-background: #F6F8FB;
   --color-foreground: #0F172A;
   --color-primary: #012858;

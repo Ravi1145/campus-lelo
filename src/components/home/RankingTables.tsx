@@ -79,7 +79,7 @@ export default function RankingTables() {
 
   return (
     <section aria-labelledby="rankings-heading" className="py-10 section-pearl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[calc(var(--container-7xl)+3rem)] px-4 sm:px-6">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div className="flex items-center gap-4">
             <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E0170F] to-[#FB4312] text-white">

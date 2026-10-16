@@ -103,7 +103,7 @@ export default function EngineeringCollegesNoidaPage() {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10">
           <div className="grid lg:grid-cols-3 gap-8">
 
             <div className="lg:col-span-2 space-y-5">

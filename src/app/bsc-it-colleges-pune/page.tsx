@@ -137,7 +137,7 @@ export default function BscITCollegesPunePage() {
       <div className="bg-surface min-h-screen">
         {/* Hero */}
         <div className="bg-gradient-to-r from-[#011B40] to-[#1A4A6B] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>
@@ -165,7 +165,7 @@ export default function BscITCollegesPunePage() {
         </div>
 
         {/* Colleges */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10">
           <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Top BSc IT / BSc CS Colleges in Pune 2026</h2>
           <div className="space-y-4">
             {colleges.map((c) => (

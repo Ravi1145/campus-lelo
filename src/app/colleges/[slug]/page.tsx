@@ -470,7 +470,7 @@ export default async function CollegePage({ params }: Props) {
         {/* Similar Colleges — server-rendered for SEO link equity */}
         {similarColleges.length > 0 && (
           <section className="bg-white border-t py-10 px-4">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-lg font-bold text-gray-900">
                   Similar {college.stream} Colleges in Pune

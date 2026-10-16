@@ -240,7 +240,7 @@ export default function Header() {
         {/* Scroll progress: a thin red line that grows as you read */}
         <span aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-[#E0170F]" style={{ transform: `scaleX(${progress})`, transition: "transform 80ms linear" }} />
 
-        <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-14 max-w-[calc(var(--container-7xl)+3rem)] items-center gap-3 px-4 sm:px-6">
           {/* Logo */}
           <Link href="/" className="mr-1 flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
             <Image src="/logo.webp" alt="CampusLelo: Pehle Dekho. Samjho. Phir Choose Karo." height={52} width={172} className="h-10 w-auto" priority unoptimized />
@@ -359,7 +359,7 @@ export default function Header() {
 
           {/* Right side: compact search, counselling, mobile buttons */}
           <div className="ml-auto flex items-center gap-2">
-            <form onSubmit={handleSearch} className="hidden md:block">
+            <form onSubmit={handleSearch} className="hidden md:block lg:hidden xl:block">
               <div className="group flex w-44 items-center rounded-full bg-gray-100 pl-3 pr-1 ring-1 ring-transparent transition-all duration-300 focus-within:w-64 focus-within:bg-white focus-within:ring-[#024692]/40 lg:w-40 xl:w-52 xl:focus-within:w-72">
                 <Search className="h-4 w-4 flex-shrink-0" style={{ color: "#64748B" }} aria-hidden="true" />
                 <input
@@ -379,7 +379,7 @@ export default function Header() {
               <span className="whitespace-nowrap">Free Counselling</span>
             </Link>
 
-            <button type="button" aria-label="Search colleges" className="rounded-lg p-2 hover:bg-gray-100 md:hidden" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
+            <button type="button" aria-label="Search colleges" className="rounded-lg p-2 hover:bg-gray-100 md:hidden lg:inline-flex xl:hidden" style={{ color: "#012858" }} onClick={() => router.push("/colleges")}>
               <Search className="h-5 w-5" />
             </button>
             <button type="button" aria-label="Open menu" aria-expanded={mobileOpen} className="rounded-lg p-2 hover:bg-gray-100 lg:hidden" style={{ color: "#012858" }} onClick={() => setMobileOpen(true)}>

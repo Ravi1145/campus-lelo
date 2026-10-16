@@ -73,7 +73,7 @@ export default async function CoursePage({ params }: Props) {
       <script id="course-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumb) }} />
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
             <Link href="/" className="hover:text-orange-600">Home</Link>
             <ChevronRight className="w-4 h-4" />
@@ -84,7 +84,7 @@ export default async function CoursePage({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Hero */}

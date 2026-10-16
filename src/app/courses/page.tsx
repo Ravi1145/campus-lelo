@@ -24,7 +24,7 @@ export default function CoursesPage() {
   return (
     <div className="bg-surface min-h-screen">
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
             Courses in Pune 2026
           </h1>
@@ -35,7 +35,7 @@ export default function CoursesPage() {
       </div>
 
       {/* AI Course Recommender */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
         <div className="bg-white rounded-2xl border border-blue-100 shadow-sm overflow-hidden mb-8">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-4">
             <div className="flex items-center gap-3">

@@ -9,7 +9,7 @@ import { colleges } from "@/data/colleges"
 // instead of a "Loading…" message.
 export default function CollegeListFallback() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
       <p className="text-sm text-gray-600 mb-4">{colleges.length} colleges · loading filters…</p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {colleges.map((c) => (

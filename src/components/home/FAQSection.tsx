@@ -15,7 +15,7 @@ export default function FAQSection() {
 
   return (
     <section aria-labelledby="faq-heading" className="py-10 sm:py-12 section-ivory">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14 lg:px-8">
+      <div className="mx-auto grid max-w-[calc(var(--container-7xl)+3rem)] gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14">
         {/* Intro — sticks while the list scrolls */}
         <div className="lg:sticky lg:top-[calc(var(--leadbar-h,0px)+8rem)] lg:self-start">
           <span className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-xs font-bold uppercase tracking-wider text-orange-700 ring-1 ring-orange-200">

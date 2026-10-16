@@ -17,7 +17,7 @@ export default function AIFinderPage() {
     <div className="bg-surface min-h-screen">
       {/* Hero */}
       <div className="bg-gradient-to-br from-[#011B40] to-[#024692] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-sm font-medium px-4 py-2 rounded-full mb-5">
             <Sparkles className="w-4 h-4" />
             Powered by Claude AI
@@ -47,7 +47,7 @@ export default function AIFinderPage() {
       </div>
 
       {/* AI Recommender */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10">
         <AIRecommender />
       </div>
 

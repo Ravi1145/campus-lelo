@@ -84,7 +84,7 @@ export default function ExamsPage() {
       <script id="exams-events" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(eventListSchema) }} />
 
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
             Entrance Exam Calendar 2026
           </h1>
@@ -94,7 +94,7 @@ export default function ExamsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
         <section className="mb-8 bg-white rounded-2xl border border-gray-100 p-5">
           <h2 className="text-lg font-bold text-gray-900 mb-1">MBA & PGDM entrance exam guides</h2>
           <p className="text-sm text-gray-600 mb-4">Dates, eligibility, pattern, syllabus, score-vs-percentile and verified accepting colleges for each exam, with official sources.</p>

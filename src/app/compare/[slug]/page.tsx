@@ -128,7 +128,7 @@ export default async function CompareSlugPage({ params }: { params: Promise<{ sl
       <div className="bg-surface min-h-screen">
         {/* Hero */}
         <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>

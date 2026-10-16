@@ -94,7 +94,7 @@ export default function CollegesInNoidaPage() {
       <div style={{ background: "#F7F9FC" }}>
 
         {/* AEO Quick Answer — targeted by speakable schema for AI Overview snippets */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <QuickAnswer
             question="Which is the best college in Noida in 2026?"
             answer="JIIT Noida (Sector 62) is the best engineering college in Noida. NAAC A, strong CS/IT. Amity University (NAAC A+) is the best overall private university across all streams."
@@ -135,7 +135,7 @@ export default function CollegesInNoidaPage() {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10">
           <div className="grid lg:grid-cols-3 gap-8">
 
             {/* College cards — left 2/3 */}

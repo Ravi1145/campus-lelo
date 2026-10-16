@@ -18,7 +18,7 @@ export default function CoursesClient() {
   })
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
       {/* Stream tabs */}
       <div className="bg-white rounded-2xl border border-gray-100 px-5 py-4 mb-4">
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Filter by Stream</p>

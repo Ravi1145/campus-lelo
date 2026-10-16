@@ -137,7 +137,7 @@ export default async function NewsPage() {
       <div className="bg-surface min-h-screen">
         {/* Hero */}
         <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
             <nav className="text-xs text-blue-300 mb-4 flex gap-1 items-center">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>
@@ -156,7 +156,7 @@ export default async function NewsPage() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             {/* Main content */}
@@ -301,7 +301,7 @@ export default async function NewsPage() {
         </div>
 
         {/* News alert subscribe banner */}
-        <div id="alerts" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 scroll-mt-28">
+        <div id="alerts" className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pb-10 scroll-mt-28">
           <NewsAlert />
         </div>
       </div>

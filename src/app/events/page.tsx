@@ -179,7 +179,7 @@ export default function EventsPage() {
 
         {/* Hero */}
         <section className="bg-white border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10 lg:py-14">
             <nav className="flex items-center gap-2 text-xs text-gray-400 mb-5">
               <Link href="/" className="hover:text-orange-500">Home</Link>
               <ChevronRight className="w-3 h-3" />
@@ -204,7 +204,7 @@ export default function EventsPage() {
 
         {/* Notify banner */}
         <section className="bg-[#011B40]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3 text-white">
               <Bell className="w-5 h-5 text-orange-400 flex-shrink-0" />
               <p className="text-sm font-medium">Get WhatsApp reminders before every Pune college event, free</p>
@@ -219,7 +219,7 @@ export default function EventsPage() {
         </section>
 
         {/* Events list */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <section className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10">
           <div className="grid lg:grid-cols-3 gap-6">
 
             {/* Featured events */}
@@ -326,7 +326,7 @@ export default function EventsPage() {
         </section>
 
         {/* FAQs */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+        <section className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pb-14">
           <h2 className="text-2xl font-bold mb-6" style={{ color: "#011B40" }}>Frequently Asked Questions</h2>
           <div className="space-y-4 max-w-3xl">
             {faqs.map((faq, i) => (

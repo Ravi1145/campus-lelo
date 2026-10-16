@@ -72,7 +72,7 @@ export default function FeaturedColleges() {
 
   return (
     <section className="py-10 section-pearl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div className="flex items-end justify-between mb-6">

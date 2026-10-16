@@ -242,7 +242,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── Breadcrumb ──────────────────────────────────────────── */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-2.5">
           <nav className="flex items-center gap-1 text-sm text-gray-500 flex-wrap">
             <Link href="/"     className="hover:text-orange-500 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-300 flex-shrink-0" />
@@ -292,7 +292,7 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       {/* ── Two-column layout ───────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-start">
 
           {/* ══ LEFT — Article ══════════════════════════════════════ */}

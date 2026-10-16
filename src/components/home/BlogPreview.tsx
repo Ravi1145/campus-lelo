@@ -7,7 +7,7 @@ export default function BlogPreview() {
 
   return (
     <section className="py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-gray-900">

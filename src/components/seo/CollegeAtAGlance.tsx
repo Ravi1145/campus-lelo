@@ -15,7 +15,7 @@ export default function CollegeAtAGlance({ college }: { college: College }) {
   ].filter(Boolean)
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-[calc(var(--container-7xl)+3rem)] px-4 py-8 sm:px-6">
       <AnswerBlock id="glance-q" question={`What is ${college.shortName ?? college.name}? Key facts at a glance`}>
         <p>{facts.join(" ")}</p>
         <p className="text-xs text-gray-600">Fees, placements and cut-offs change every year. Confirm them on the college&apos;s official website before you apply.</p>

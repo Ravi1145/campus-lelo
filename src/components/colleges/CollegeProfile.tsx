@@ -322,7 +322,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
       >
         {/* Dark overlay so text stays readable */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#011B40]/90 to-[#024692]/85" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-0">
+        <div className="relative z-10 max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 pt-6 pb-0">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-blue-300 mb-5">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -453,7 +453,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
       </div>
 
       {/* ── Tab Content ─────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main */}
           <div className="lg:col-span-2 space-y-6">
@@ -1194,7 +1194,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
 
       {/* Related Searches */}
       <section className="border-t bg-white py-10 px-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <h2 className="text-base font-semibold text-gray-700 mb-4">Related Searches</h2>
           <div className="flex flex-wrap gap-2">
             {[
