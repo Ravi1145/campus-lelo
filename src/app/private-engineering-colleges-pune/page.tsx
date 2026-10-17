@@ -9,9 +9,9 @@ import { safeJsonLd } from "@/lib/jsonld"
 export const revalidate = 300
 
 export const metadata: Metadata = genMeta({
-  title: "Private Engineering Colleges in Pune 2026 | Fees, Rankings & Admission",
+  title: "Private Engineering Colleges in Pune 2026: Admission",
   description:
-    "Top private engineering colleges in Pune 2026. Compare VIT Pune, SIT Pune, MIT-WPU, PICT, Cummins by fees (₹1.1L–₹4.8L/yr), NAAC grade, and placements.",
+    "Private engineering colleges in Pune 2026: VIT Pune, SIT Pune, MIT-WPU, PICT and Cummins compared by NAAC grade, entrance exams accepted and admission route.",
   path: "/private-engineering-colleges-pune",
   keywords: [
     "private engineering colleges in pune",

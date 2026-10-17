@@ -6,8 +6,8 @@ import { Award, BookOpen, TrendingUp, Users } from "lucide-react"
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Best BCA Colleges in Pune 2026 | Fees, MHT-CET Cutoff & IT Placements",
-  description: "Top BCA (Bachelor of Computer Applications) colleges in Pune 2026. Compare Symbiosis, MIT, Fergusson, Indira and more.",
+  title: "BCA Colleges in Pune 2026: Admission, Fees, Eligibility",
+  description: "BCA colleges in Pune 2026: Symbiosis, MIT, Fergusson, Indira and more. See the admission route, eligibility and where to check current fees for each college.",
   path: "/bca-colleges-pune",
   keywords: [
     "bca colleges in pune 2026",
