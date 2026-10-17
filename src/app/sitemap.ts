@@ -305,7 +305,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Best MBA colleges pages (NIRF 2025 data)
-  const bestEntries: MetadataRoute.Sitemap = bestPages.map((b) => ({
+  const bestEntries: MetadataRoute.Sitemap = bestPages.filter((b) => !b.noindex).map((b) => ({
     url: `${BASE_URL}${b.path}`,
     lastModified: "2026-10-16",
     changeFrequency: "monthly" as const,

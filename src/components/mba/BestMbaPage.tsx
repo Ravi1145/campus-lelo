@@ -31,7 +31,8 @@ const PLACE_CITIES: Record<string, ProgramAdmission["city"][]> = {
 
 export function bestMetadata(path: string): Metadata {
   const d = getBestPage(path)!
-  return genMeta({ title: d.title, description: d.description, path: d.path, keywords: d.keywords })
+  const m = genMeta({ title: d.title, description: d.description, path: d.path, keywords: d.keywords })
+  return d.noindex ? { ...m, robots: { index: false, follow: true } } : m
 }
 
 export default function BestMbaPage({ path }: { path: string }) {

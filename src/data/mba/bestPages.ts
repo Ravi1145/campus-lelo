@@ -20,6 +20,8 @@ export interface BestPageDef {
   leadCity: "Delhi NCR" | "Greater Noida" | "Dehradun" | "Lucknow"
   keywords: string[]
   related: string[]
+  /** NIRF rows only, no verified admission records yet: kept out of the index and the sitemap until there are */
+  noindex?: boolean
 }
 
 const state = (s: string) => (r: NirfRow) => r.state === s
@@ -96,6 +98,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in Karnataka (NIRF 2025)", place: "Karnataka", match: state("Karnataka"), leadCity: "Delhi NCR",
     keywords: ["best mba colleges in karnataka", "best mba colleges in bangalore", "top mba colleges in bangalore", "iim bangalore nirf rank"],
     related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-tamil-nadu", "/mba-exam-acceptance", "/mba-exam-calendar"],
+    noindex: true,
   },
   {
     path: "/best-mba-colleges-in-tamil-nadu", title: "Best MBA Colleges in Tamil Nadu 2026: NIRF Ranked",
@@ -103,6 +106,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in Tamil Nadu (NIRF 2025)", place: "Tamil Nadu", match: state("Tamil Nadu"), leadCity: "Delhi NCR",
     keywords: ["best mba colleges in tamil nadu", "best mba colleges in chennai", "top mba colleges in chennai", "great lakes chennai nirf rank"],
     related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-karnataka", "/mba-exam-acceptance", "/mba-exam-calendar"],
+    noindex: true,
   },
   {
     path: "/best-mba-colleges-in-gujarat", title: "Best MBA Colleges in Gujarat 2026: NIRF Ranked",
@@ -110,6 +114,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in Gujarat (NIRF 2025)", place: "Gujarat", match: state("Gujarat"), leadCity: "Delhi NCR",
     keywords: ["best mba colleges in gujarat", "best mba colleges in ahmedabad", "top mba colleges in ahmedabad", "iim ahmedabad nirf rank"],
     related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-maharashtra", "/mba-exam-acceptance", "/mba-exam-calendar"],
+    noindex: true,
   },
   {
     path: "/best-mba-colleges-in-west-bengal", title: "Best MBA Colleges in West Bengal 2026: NIRF Ranked",
@@ -117,6 +122,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in West Bengal (NIRF 2025)", place: "West Bengal", match: state("West Bengal"), leadCity: "Delhi NCR",
     keywords: ["best mba colleges in west bengal", "best mba colleges in kolkata", "iim calcutta nirf rank", "top mba colleges in kolkata"],
     related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-delhi", "/mba-exam-acceptance", "/mba-exam-calendar"],
+    noindex: true,
   },
 ]
 

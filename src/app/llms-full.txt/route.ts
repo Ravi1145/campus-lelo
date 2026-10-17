@@ -12,7 +12,6 @@ import { blogs } from "@/data/blogs"
 import { mbaExams } from "@/data/mba/exams"
 import { publishedCutoffs, noPublishedCutoff, CUTOFFS_LAST_REVIEWED } from "@/data/mba/cutoffs"
 import { COUNSELLING_UPDATED, counsellingMarkdown } from "@/data/counselling"
-import { formatFeesRange, formatCurrency } from "@/lib/utils"
 
 export const dynamic = "force-static"
 export const revalidate = 3600
@@ -59,13 +58,11 @@ export function GET() {
   add("")
 
   const streams = Array.from(new Set(colleges.map((c) => c.stream)))
-  add(`## College profiles (${colleges.length})`, "Fields: name: type, NAAC grade, NIRF rank if any, fee range, entrance exams, profile URL.", "")
+  add(`## College profiles (${colleges.length})`, "Fields: name, type, NAAC grade, entrance exams, profile URL. Fees, packages and ranks are not repeated here: see each profile.", "")
   for (const s of streams) {
     add(`### ${s}`)
     for (const c of colleges.filter((x) => x.stream === s)) {
-      const fees = c.feesRange.min > 0 || c.feesRange.max > 0 ? formatFeesRange(c.feesRange.min, c.feesRange.max) : "fees on request"
-      const pkg = c.avgPlacement > 0 ? `, avg package ${formatCurrency(c.avgPlacement)}` : ""
-      add(`- ${c.name}, ${c.type}, NAAC ${c.naac}${c.nirfRank ? `, NIRF #${c.nirfRank}` : ""}, ${fees}${pkg}, exams: ${c.entranceExams.slice(0, 4).join(", ") || "n/a"}, ${BASE}/colleges/${c.slug}`)
+      add(`- ${c.name}, ${c.type}, NAAC ${c.naac}, exams: ${c.entranceExams.slice(0, 4).join(", ") || "n/a"}, ${BASE}/colleges/${c.slug}`)
     }
     add("")
   }
