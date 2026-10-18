@@ -9,7 +9,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "Top MBA Colleges in Pune 2026: Exams & Admission",
+  title: "Best MBA College in Pune 2026: SIBM, SCMHRD, MIT-SOM",
   description: "Well-known MBA colleges in Pune, including SIBM, SCMHRD and MIT-SOM, with the SNAP, CAT and MAH-CET routes, eligibility and how to apply. Compare free.",
   path: "/mba-colleges-pune",
   keywords: [

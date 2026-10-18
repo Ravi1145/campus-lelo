@@ -149,7 +149,7 @@ export default function MbaVsPgdmPage() {
               <li><strong>Syllabus:</strong> MBA ka syllabus university tay karti hai. PGDM ka syllabus institute AICTE ke dayre mein khud banata hai, isliye woh jaldi badal sakta hai.</li>
               <li><strong>Kaun sa behtar hai:</strong> label se nahi, programme se tay karein: current AICTE approval, accreditation, latest placement report, total fees aur woh exams jo programme accept karta hai.</li>
             </ul>
-            <p className="mt-3 text-sm text-gray-600">Join karne se pehle institute se current AICTE approval aur (zaroorat ho to) AIU equivalence letter validity dates ke saath maangein.</p>
+            <p className="mt-3 text-sm text-gray-600">MBA ke baare mein basics: <Link href="/mba-kya-hai" className="font-bold text-[#C90D11] hover:underline">MBA kya hai</Link>. Join karne se pehle institute se current AICTE approval aur (zaroorat ho to) AIU equivalence letter validity dates ke saath maangein.</p>
           </section>
 
           <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
