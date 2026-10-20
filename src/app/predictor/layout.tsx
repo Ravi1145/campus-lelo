@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College Predictor 2026: MHT-CET, JEE, NEET, CAT | CampusLelo",
@@ -18,5 +19,8 @@ export const metadata: Metadata = genMeta({
 })
 
 export default function PredictorLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <>
+    <PageSchema name="College Predictor" path="/predictor" description="Predict which Pune colleges your exam score can get you." />
+    {children}
+  </>
 }

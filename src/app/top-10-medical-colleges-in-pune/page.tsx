@@ -311,7 +311,7 @@ export default function Top10MedicalCollegesPage() {
             ].map(({ icon, title, desc }) => (
               <div key={title} className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
                 <span className="text-2xl">{icon}</span>
-                <h3 className="font-bold text-gray-900 mt-2 mb-1">{title}</h3>
+                <h2 className="font-bold text-gray-900 mt-2 mb-1">{title}</h2>
                 <p className="text-sm text-gray-600">{desc}</p>
               </div>
             ))}

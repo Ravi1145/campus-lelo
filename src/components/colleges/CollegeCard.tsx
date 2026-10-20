@@ -8,7 +8,7 @@ import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 
-const COLLEGE_BANNER = "/college-default-banner.jpg"
+const COLLEGE_BANNER = "/college-default-banner.webp"
 
 const SHORTLIST_KEY = "shortlisted_colleges"
 

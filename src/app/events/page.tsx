@@ -5,7 +5,7 @@ import { Calendar, MapPin, Clock, ExternalLink, ChevronRight, Bell, GraduationCa
 import { safeJsonLd } from "@/lib/jsonld"
 
 export const metadata: Metadata = genMeta({
-  title: "Pune College Events 2026 | Admission Open Days, Fests & Education Expos",
+  title: "Pune College Events 2026: Open Days, Fests, Expos",
   description: "Upcoming college events in Pune 2026, open days, admission counselling, tech fests, MBA events, entrance exam dates & education fairs. Stay updated with CampusLelo.",
   path: "/events",
   keywords: [

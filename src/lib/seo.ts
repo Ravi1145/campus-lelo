@@ -320,7 +320,7 @@ export function generateCollegeSchema(college: {
     description: college.description,
     image: college.image
       ? { "@type": "ImageObject", url: college.image, name: college.name, width: 1200, height: 630 }
-      : { "@type": "ImageObject", url: `${BASE_URL}/college-default-banner.jpg`, name: college.name },
+      : { "@type": "ImageObject", url: `${BASE_URL}/college-default-banner.webp`, name: college.name },
     logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.webp`, width: 200, height: 60 },
     address: {
       "@type": "PostalAddress",

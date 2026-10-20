@@ -6,7 +6,7 @@ import AIChatWidget from "@/components/ai/AIChatWidget"
 import { Sparkles, Brain, MessageCircle, Users } from "lucide-react"
 
 export const metadata: Metadata = genMeta({
-  title: "AI College Finder Pune: Find Your Perfect College in Minutes",
+  title: "AI College Finder for Pune: Shortlist in Minutes",
   description: "Use our AI-powered college finder to discover the best matching college in Pune. Tell us your stream, budget, exam score and preferences, our AI analyzes 25+ colleges instantly.",
   path: "/ai-finder",
   keywords: ["ai college finder pune", "college recommendation pune", "best college for me pune"],

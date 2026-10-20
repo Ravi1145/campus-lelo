@@ -80,9 +80,9 @@ const CATEGORY_ICON: Record<string, React.ComponentType<{ className?: string }>>
   Scholarships: Award, Careers: GraduationCap, "Fees & Finance": Wallet, "Student Life": Users, Rankings: Trophy,
 }
 const PHOTOS = [
-  { src: "/college-default-banner.jpg", pos: "30% 50%" },
+  { src: "/college-default-banner.webp", pos: "30% 50%" },
   { src: "/hero-students.webp", pos: "62% 22%" },
-  { src: "/college-default-banner.jpg", pos: "72% 45%" },
+  { src: "/college-default-banner.webp", pos: "72% 45%" },
   { src: "/hero-students.webp", pos: "55% 42%" },
 ]
 const hash = (s: string) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h }

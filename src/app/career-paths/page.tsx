@@ -2,9 +2,10 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import { careerPaths } from "@/data/careerPaths"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
-  title: "Career Path Mapper: Explore Careers After Pune College 2026",
+  title: "Career Path Mapper: Careers After Pune College",
   description: "Explore 8+ career paths available after Pune college. See salary growth, required courses, top recruiters, roadmaps, and Pune colleges that get you there. Free career guidance.",
   path: "/career-paths",
   keywords: [
@@ -41,6 +42,7 @@ export default function CareerPathsPage() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <PageSchema name="Career Path Mapper" path="/career-paths" description="Explore career paths after college in Pune." />
       {/* Hero */}
       <div className="bg-gradient-to-r from-[#011B40] to-[#1A2E4A] py-12">
         <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">

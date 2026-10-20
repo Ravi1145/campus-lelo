@@ -190,7 +190,7 @@ export default function AskPage() {
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4">
               <div className="flex items-start gap-2 mb-2">
                 <HelpCircle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                <h3 className="font-bold text-gray-900 text-sm">Tips for better answers</h3>
+                <h2 className="font-bold text-gray-900 text-sm">Tips for better answers</h2>
               </div>
               <ul className="text-xs text-gray-600 space-y-1.5">
                 <li>• Be specific: mention the exam, score, and year</li>
@@ -201,7 +201,7 @@ export default function AskPage() {
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-4">
-              <h3 className="font-bold text-gray-900 text-sm mb-3">Popular Questions</h3>
+              <h2 className="font-bold text-gray-900 text-sm mb-3">Popular Questions</h2>
               <div className="space-y-2">
                 {[
                   "COEP MHT-CET cutoff 2026?",

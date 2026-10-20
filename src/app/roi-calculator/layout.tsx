@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
   title: "Pune College ROI Calculator 2026: Is Your College Worth the Fees? | CampusLelo",
@@ -17,5 +18,8 @@ export const metadata: Metadata = genMeta({
 })
 
 export default function ROICalculatorLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <>
+    <PageSchema name="College ROI Calculator" path="/roi-calculator" description="Estimate break-even and return on investment for a college." />
+    {children}
+  </>
 }

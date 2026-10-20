@@ -3,6 +3,7 @@ import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import AIComparison from "@/components/ai/AIComparison"
 import { colleges } from "@/data/colleges"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
   title: "Compare Colleges in Pune 2026 | AI Side-by-Side Tool | CampusLelo",
@@ -17,6 +18,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
   const { c1, c2 } = await searchParams
   return (
     <div className="bg-surface min-h-screen">
+      <PageSchema name="Compare Colleges" path="/compare" description="Compare Pune colleges side by side." />
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
         <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">

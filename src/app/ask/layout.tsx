@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { generateMetadata as genMeta } from "@/lib/seo"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
   title: "Ask a Question About Pune Colleges: Get Answers in 48 Hours | CampusLelo",
@@ -16,5 +17,8 @@ export const metadata: Metadata = genMeta({
 })
 
 export default function AskLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <>
+    <PageSchema name="Ask a Question" path="/ask" description="Ask a question about Pune colleges, admissions and careers." />
+    {children}
+  </>
 }

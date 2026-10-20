@@ -315,7 +315,7 @@ export default function CollegeProfile({ college, details }: CollegeProfileProps
       <div
         className="text-white relative"
         style={{
-          backgroundImage: `url('/college-default-banner.jpg')`,
+          backgroundImage: `url('/college-default-banner.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}

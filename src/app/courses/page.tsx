@@ -3,6 +3,7 @@ import NextSteps from "@/components/seo/NextSteps"
 import { generateMetadata as genMeta } from "@/lib/seo"
 import CoursesClient from "@/components/courses/CoursesClient"
 import CourseRecommender from "@/components/courses/CourseRecommender"
+import PageSchema from "@/components/seo/PageSchema"
 
 export const metadata: Metadata = genMeta({
   title: "Courses in Pune 2026: Engineering, MBA, MBBS, BCA & More",
@@ -23,6 +24,7 @@ export const metadata: Metadata = genMeta({
 export default function CoursesPage() {
   return (
     <div className="bg-surface min-h-screen">
+      <PageSchema name="Courses in Pune" path="/courses" description="Courses offered by colleges in Pune: engineering, MBA, MBBS, BCA and more." />
       <div className="bg-gradient-to-r from-[#011B40] to-[#024692] py-12">
         <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">

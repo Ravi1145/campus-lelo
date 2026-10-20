@@ -14,7 +14,7 @@ import { formatFeesRange, formatCurrency } from "@/lib/utils"
 // The photo is a shared campus image: college.image holds third-party logos, not campus photos,
 // so it is not used here. Add a real campus photo per college and show it instead.
 
-const COLLEGE_BANNER = "/college-default-banner.jpg"
+const COLLEGE_BANNER = "/college-default-banner.webp"
 
 function abbrev(shortName: string): string {
   return shortName.split(/[\s\-]/)[0].slice(0, 5).toUpperCase()
