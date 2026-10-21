@@ -1,137 +1,44 @@
-"use client"
+import FeaturedInstitutesTabs, { type FeaturedRow } from "./FeaturedInstitutesTabs"
+import { nirf2025Management } from "@/data/mba/nirf2025"
+import { nirf2025Engineering, nirf2025Medical, nirf2025Law, NIRF_CATEGORY_URL } from "@/data/mba/nirf2025Top"
+import { programAdmissions } from "@/data/mba/programAdmissions"
+import { getMbaExam } from "@/data/mba/exams"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { colleges as staticColleges } from "@/data/colleges"
-import type { College } from "@/types"
-import SimpleCollegeCard from "./SimpleCollegeCard"
-import FilterTabs from "@/components/ui/FilterTabs"
-import CardRail from "./CardRail"
+// Home-page "top colleges" block: the institutes NIRF 2025 ranks highest in each field, copied as published.
+// Server component, so every tab's list is in the HTML for crawlers. Only management rows can show exams,
+// and only where we have a verified programme record. Nothing here is re-ranked or estimated.
 
-const TABS = ["All", "Engineering", "MBA", "Medical", "Law", "Architecture", "Government"]
-const CACHE_KEY = "cp_featured_colleges"
-const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+const examName = (slug: string) => getMbaExam(slug)?.name ?? slug.toUpperCase()
+const byId = new Map(programAdmissions.map((p) => [p.id, p]))
 
-function getCached(): College[] | null {
-  try {
-    const raw = sessionStorage.getItem(CACHE_KEY)
-    if (!raw) return null
-    const { data, ts } = JSON.parse(raw)
-    if (Date.now() - ts > CACHE_TTL) return null
-    return data
-  } catch {
-    return null
+const management: FeaturedRow[] = nirf2025Management.slice(0, 12).map((r) => {
+  const rec = r.programId ? byId.get(r.programId) : undefined
+  return {
+    rank: r.rank, name: r.name, city: r.city, state: r.state, score: r.score,
+    href: rec ? `/mba-admission/${rec.id}` : undefined,
+    detail: rec && rec.examsAccepted.length ? `Exams: ${rec.examsAccepted.slice(0, 4).map(examName).join(", ")}` : undefined,
   }
-}
-
-function setCache(colleges: College[]) {
-  try {
-    sessionStorage.setItem(CACHE_KEY, JSON.stringify({ data: colleges, ts: Date.now() }))
-  } catch {}
-}
+})
+const plain = (rows: { rank: number; name: string; city: string; state: string; score: number }[]): FeaturedRow[] => rows.map((r) => ({ ...r }))
 
 export default function FeaturedColleges() {
-  const [activeTab, setActiveTab] = useState("All")
-  const [allColleges, setAllColleges] = useState<College[]>([])
-  const [featuredSet, setFeaturedSet] = useState<Set<string>>(new Set())
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const cached = getCached()
-    if (cached) {
-      setAllColleges(cached)
-      setLoading(false)
-      return
-    }
-
-    fetch("/api/colleges/featured")
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.colleges?.length > 0) {
-          setAllColleges(data.colleges)
-          setFeaturedSet(new Set(data.featuredSlugs ?? []))
-          setCache(data.colleges)
-        } else {
-          // client-side static fallback
-          setAllColleges(staticColleges.slice(0, 12))
-        }
-      })
-      .catch(() => setAllColleges(staticColleges.slice(0, 12)))
-      .finally(() => setLoading(false))
-  }, [])
-
-  const filtered = allColleges
-    .filter((c) => {
-      if (activeTab === "All") return true
-      if (activeTab === "Government") return c.type === "Government"
-      if (activeTab === "MBA") return c.stream === "MBA" || c.stream === "Management"
-      return c.stream === activeTab
-    })
-    .slice(0, 12)
-
   return (
-    <section className="py-10 section-pearl">
-      <div className="max-w-[calc(var(--container-7xl)+6rem)] mx-auto px-5 sm:px-8 lg:px-12">
-
-        {/* Header */}
-        <div className="flex items-end justify-between mb-6">
-          <div>
-            <p className="text-xs font-bold tracking-widest uppercase mb-2 flex items-center gap-2" style={{ color: "#C90D11" }}>
-              Popular colleges
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "#0F172A" }}>
-              Featured Colleges in{" "}
-              <span style={{ color: "#C90D11" }}>Pune</span>
-            </h2>
-            <p className="mt-1.5 text-sm" style={{ color: "#475569" }}>
-              A mix of colleges across streams. Open a profile for courses, fees and accepted exams.
-            </p>
-          </div>
-          <Link
-            href="/colleges"
-            className="hidden sm:flex items-center gap-1.5 font-semibold text-sm transition-opacity hover:opacity-80"
-            style={{ color: "#C90D11" }}
-          >
-            View All Colleges <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        {/* Filter tabs */}
-        <FilterTabs tabs={TABS} active={activeTab} onChange={setActiveTab} className="mb-6" />
-
-        {/* Skeleton — only shown on very first load before any data */}
-        {loading && (
-          <div className="flex gap-3 sm:gap-5 pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 overflow-x-hidden">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex-shrink-0 w-[82vw] sm:w-72 h-64 bg-gray-100 rounded-2xl animate-pulse" />
-            ))}
-          </div>
-        )}
-
-        {/* College cards — featured always first */}
-        {!loading && (
-          <CardRail key={activeTab} label="featured colleges" itemClassName="w-[85vw] sm:w-[21rem]">
-            {filtered.map((college) => (
-              <div key={college.slug} className="relative h-full">
-                <SimpleCollegeCard college={college} featured={featuredSet.has(college.slug)} />
-              </div>
-            ))}
-          </CardRail>
-        )}
-
-        {/* Mobile view all */}
-        <div className="text-center mt-8 sm:hidden">
-          <Link
-            href="/colleges"
-            className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl transition-opacity hover:opacity-90"
-            style={{ background: "#E0170F" }}
-          >
-            View All Colleges <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-      </div>
-    </section>
+    <FeaturedInstitutesTabs
+      tabs={[
+        { id: "mba", label: "MBA & PGDM", rows: management, source: NIRF_CATEGORY_URL.Management, more: { href: "/best-mba-colleges-in-india", label: "Best MBA colleges in India" } },
+        { id: "eng", label: "Engineering", rows: plain(nirf2025Engineering), source: NIRF_CATEGORY_URL.Engineering },
+        { id: "med", label: "Medical", rows: plain(nirf2025Medical), source: NIRF_CATEGORY_URL.Medical },
+        { id: "law", label: "Law", rows: plain(nirf2025Law), source: NIRF_CATEGORY_URL.Law },
+      ]}
+      regions={[
+        { href: "/best-mba-colleges-in-delhi", label: "Delhi" },
+        { href: "/best-mba-colleges-in-noida", label: "Noida" },
+        { href: "/best-mba-colleges-in-greater-noida", label: "Greater Noida" },
+        { href: "/best-mba-colleges-in-uttar-pradesh", label: "Uttar Pradesh" },
+        { href: "/best-mba-colleges-in-uttarakhand", label: "Uttarakhand" },
+        { href: "/best-mba-colleges-in-haryana", label: "Haryana" },
+        { href: "/best-mba-colleges-in-maharashtra", label: "Maharashtra" },
+      ]}
+    />
   )
 }
