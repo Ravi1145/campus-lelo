@@ -26,6 +26,8 @@ const ATMA_OFFICIAL = src("ATMA official website (AIMS)", "https://atmaaims.com"
 const CMAT_SECONDARY = src("CMAT pattern & eligibility as reported by Careers360 and MBA Universe (NTA site blocked automated access)", "https://exams.nta.ac.in/CMAT/", "secondary")
 const MAHCET_OFFICIAL = src("State Common Entrance Test Cell, Maharashtra", "https://cetcell.mahacet.org")
 const MAHCET_SECONDARY = src("MAH MBA CET pattern & CAP process as reported by MBA Universe", "https://www.mbauniverse.com/mah-mba-cet", "secondary")
+const CUETPG_OFFICIAL = { label: "NTA: CUET (PG) 2026 Information Bulletin (PDF)", url: "https://cdnbbsr.s3waas.gov.in/s388a839f2f6f1427879fc33ee4acf4f66/uploads/2025/12/202512161583029269.pdf", type: "official" as const, accessed: "2026-10-21" }
+const CUETPG_SITE = { label: "NTA CUET (PG) official page", url: "https://exams.nta.nic.in/cuet-pg/", type: "official" as const, accessed: "2026-10-21" }
 const GMAT_OFFICIAL = src("GMAC: GMAT Focus Edition exam structure", "https://accounts.gmac.com/exams/gmat-exam/about/exam-structure")
 
 export const mbaExams: ExamProfile[] = [
@@ -582,6 +584,66 @@ export const mbaExams: ExamProfile[] = [
     ],
     relatedExams: ["nmat", "cat"],
     lastReviewed: ACCESSED,
+  },
+  // ── CUET (PG) ───────────────────────────────────────────────────────
+  {
+    slug: "cuet-pg",
+    name: "CUET PG",
+    fullName: "Common University Entrance Test (Postgraduate)",
+    conductingBody: "National Testing Agency (NTA)",
+    officialSite: "https://exams.nta.nic.in/cuet-pg/",
+    frequency: "Once a year",
+    cycleLabel: "CUET (PG) 2026 (latest official bulletin; the 2027 cycle is not announced)",
+    programs: ["MBA"],
+    summary: "CUET PG is NTA's common entrance test for postgraduate programmes at participating universities. For management programmes, candidates choose the question paper for their discipline from NTA's list; the 2026 bulletin lists \"General - Management\" (code COQP12). Universities run their own counselling on the NTA score.",
+    usage: "Participating central, state and other universities admit to postgraduate programmes, including MBA at some, on the CUET PG score; each university sets its own eligibility and counselling.",
+    usageSource: CUETPG_OFFICIAL,
+    keyDates: [
+      { label: "2026 cycle: registration", value: "14 Dec 2025 to 14 Jan 2026 (closed)", source: CUETPG_OFFICIAL },
+      { label: "2026 cycle: application correction window", value: "18 to 20 Jan 2026 (closed)", source: CUETPG_OFFICIAL },
+      { label: "2026 cycle: exam month", value: "March 2026 (held)", source: CUETPG_OFFICIAL },
+    ],
+    datesNote: "NTA's CUET (PG) page, checked on 21 Oct 2026, shows the 2026 cycle as complete (result declared) and does not yet show a 2027 bulletin. Some websites report a tentative 2027 schedule; treat it as unconfirmed until NTA publishes it.",
+    eligibility: {
+      text: "A bachelor's degree or equivalent, or appearing in the final year of a bachelor's degree in the exam year, per the 2026 bulletin. There is no age limit for the test, but each university sets its own programme eligibility, age, reservation and subject rules, so check the university you apply to.",
+      source: CUETPG_OFFICIAL,
+    },
+    fee: { text: "2026 cycle: Rs 1,400 (General) for up to two test papers and Rs 700 per additional paper; Rs 1,200 / Rs 600 for Gen-EWS and OBC-NCL; Rs 1,100 / Rs 600 for SC, ST and Third Gender; Rs 1,000 / Rs 600 for PwD. The 2027 fee is not announced.", source: CUETPG_OFFICIAL },
+    pattern: {
+      mode: "Computer-based test (CBT)",
+      durationMinutes: 90,
+      totalQuestions: 75,
+      sections: [{ name: "One paper per question-paper code; up to four codes can be chosen", questions: 75, minutes: 90 }],
+      marking: "+4 for each correct answer, -1 for each incorrect answer, no marks for unattempted questions.",
+      source: CUETPG_OFFICIAL,
+    },
+    syllabus: [
+      { section: "Syllabus by question-paper code", topics: ["NTA publishes the syllabus for each question-paper code, including COQP12 General - Management, at exams.nta.nic.in/cuet-pg/syllabus/. We do not copy it here so that it never goes out of date."] },
+    ],
+    scoring: {
+      headline: "NTA reports a score for each paper you take, and universities counsel on that score.",
+      points: [
+        "Where a paper is held in more than one session, NTA's bulletin describes a normalisation procedure based on percentile scores (Appendices V and VI).",
+        "Each university decides its own cut-off and selection steps, so a CUET PG score alone does not guarantee a seat.",
+      ],
+      source: CUETPG_OFFICIAL,
+    },
+    preparation: [
+      { area: "Pick the right paper code", tips: ["Match the question-paper code to the programme and university you want; the bulletin's Appendix II lists them. For MBA at many universities that is General - Management (COQP12), but confirm with the university."] },
+      { area: "Pace and negative marking", tips: ["75 questions in 90 minutes is about 72 seconds each, so practise timed sets.", "A wrong answer costs 1 mark against 4 for a right one, so guess only when you can rule out options."] },
+      { area: "Use official material", tips: ["Read the information bulletin and the syllabus page on NTA's site before using any coaching material.", "The bulletin includes a replica of the exam interface in Appendix VIII."] },
+    ],
+    officialPractice: [{ label: "NTA CUET (PG) official page", url: "https://exams.nta.nic.in/cuet-pg/" }],
+    faqs: [
+      { question: "What is the CUET PG exam pattern?", answer: "According to NTA's 2026 information bulletin, CUET PG is a computer-based test of 90 minutes with 75 questions per paper. Each correct answer carries 4 marks and each incorrect answer loses 1 mark. Candidates can choose up to four question-paper codes." },
+      { question: "Is there a CUET PG exam in 2027?", answer: "NTA's CUET (PG) page, checked on 21 October 2026, shows the 2026 cycle as complete and no 2027 bulletin yet. Some websites report a tentative March 2027 schedule, but it is not confirmed on NTA's page. Watch exams.nta.nic.in/cuet-pg/ for the bulletin." },
+      { question: "What was the CUET PG 2026 registration window?", answer: "Registration ran from 14 December 2025 to 14 January 2026, with a correction window from 18 to 20 January 2026, according to NTA's 2026 information bulletin." },
+      { question: "What is the CUET PG application fee?", answer: "For the 2026 cycle, General candidates paid Rs 1,400 for up to two test papers and Rs 700 for each additional paper. Other categories paid less, as listed in the bulletin. The 2027 fee has not been announced." },
+      { question: "Is there an age limit for CUET PG?", answer: "No. NTA's 2026 bulletin says there is no age limit for the test, but each university can set age rules for its own programmes, so check the university you apply to." },
+      { question: "Is CUET PG accepted for MBA?", answer: "Some universities admit to MBA on the CUET PG score, for example Doon University's 2026 to 2028 MBA notice lists a valid CUET score among the accepted tests. Each university decides, so check the programme's own admission page." },
+    ],
+    relatedExams: ["cat", "cmat", "mat"],
+    lastReviewed: "2026-10-21",
   },
 ]
 
