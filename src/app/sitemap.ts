@@ -225,6 +225,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/site-map`,                                          lastModified: "2026-10-08", changeFrequency: "weekly",  priority: 0.5 },
     { url: `${BASE_URL}/about`,                                          lastModified: "2026-10-08", changeFrequency: "yearly",  priority: 0.5 },
     { url: `${BASE_URL}/press`,                                              lastModified: "2026-10-05", changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${BASE_URL}/mba-admission-in-delhi`,                               lastModified: "2026-10-27", changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/pgdm-admission-in-delhi`,                              lastModified: "2026-10-27", changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/mba-kya-hai`,                                         lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/mba-vs-pgdm`,                                          lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/fms-delhi-cat-cutoff`, lastModified: "2026-10-15", changeFrequency: "weekly",  priority: 0.9 },

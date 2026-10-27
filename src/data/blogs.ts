@@ -4,6 +4,7 @@ import { mbaDelhiNcrGuide } from "./blog-posts/mba-delhi-ncr-noida"
 import { mbaIndiaGuides } from "./blog-posts/mba-india-guides"
 import { mbaCutoffGuides } from "./blog-posts/mba-cutoff-guides"
 import { mbaAcceptanceGuides } from "./blog-posts/mba-acceptance-guides"
+import { delhiLeadGuides } from "./blog-posts/delhi-lead-guides"
 
 const rawBlogs: BlogPost[] = [
   {
@@ -1069,6 +1070,8 @@ Pune has a unique recruitment ecosystem that differs significantly from Bangalor
   ...mbaIndiaGuides,
   ...mbaCutoffGuides,
   ...mbaAcceptanceGuides,
+  // Scheduled guides: included once their publishAt date has passed at build time (see auto-publish workflow)
+  ...delhiLeadGuides.filter((g) => g.publishAt <= new Date().toISOString().slice(0, 10)),
 ]
 
 // Package and NIRF figures are removed from articles until they are sourced (src/lib/verified.ts)
