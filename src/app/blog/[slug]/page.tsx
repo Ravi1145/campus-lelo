@@ -7,7 +7,7 @@ import Image from "next/image"
 import { blogImage } from "@/lib/blogImage"
 import { blogs as staticBlogs, getBlogBySlug as getStaticBlog } from "@/data/blogs"
 import { getBlogBySlug as getDBBlog, getAllBlogs } from "@/lib/db"
-import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
+import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 import { Clock, Calendar, ChevronRight, Tag, ArrowRight, BookOpen, Phone, GraduationCap, Star } from "lucide-react"
 import ReadingProgress from "@/components/blog/ReadingProgress"
 import ShareButtons from "@/components/blog/ShareButtons"
@@ -17,6 +17,25 @@ import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 export const revalidate = 300
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://campuslelo.com"
+
+
+/** FAQ pairs from an HTML article: each <h3> question under the "Frequently asked questions" <h2>, with the paragraph after it. */
+function extractFaqs(html: string): { question: string; answer: string }[] {
+  const start = html.search(/<h2[^>]*>\s*Frequently asked questions/i)
+  if (start < 0) return []
+  const rest = html.slice(start)
+  const next = rest.slice(5).search(/<h2[\s>]/i)
+  const section = next < 0 ? rest : rest.slice(0, next + 5)
+  const strip = (x: string) => x.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+  const out: { question: string; answer: string }[] = []
+  const re = /<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi
+  let m: RegExpExecArray | null
+  while ((m = re.exec(section))) {
+    const q = strip(m[1]), a = strip(m[2])
+    if (q.endsWith("?") && a) out.push({ question: q, answer: a })
+  }
+  return out
+}
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -234,6 +253,7 @@ export default async function BlogPostPage({ params }: Props) {
   const isHTML  = post.body.trimStart().startsWith("<")
   const processedBody = isHTML ? injectHeadingIds(post.body) : post.body
   const toc = isHTML ? extractTOC(post.body) : []
+  const faqs = isHTML ? extractFaqs(post.body) : []
   const pageUrl = `${BASE_URL}/blog/${slug}`
 
   return (
@@ -241,6 +261,7 @@ export default async function BlogPostPage({ params }: Props) {
       <ReadingProgress />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <script id="blog-schema"       type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(blogPostingSchema) }} />
+      {faqs.length >= 2 && <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(generateFAQSchema(faqs)) }} />}
 
       {/* ── Breadcrumb ──────────────────────────────────────────── */}
       <div className="bg-white border-b border-gray-200">
