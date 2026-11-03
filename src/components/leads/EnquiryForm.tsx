@@ -119,6 +119,7 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
       if (data.success) {
         localStorage.setItem("last_enquiry", JSON.stringify({ college: collegeName, ref: data.bookingRef }))
         setSuccess({ bookingRef: data.bookingRef })
+        ;(window as unknown as { dataLayer?: Record<string, unknown>[] }).dataLayer?.push({ event: "generate_lead", lead_source: "college_enquiry", lead_placement: `college:${collegeSlug}`, page: window.location.pathname })
       } else {
         setErrors({ name: "Submission failed. Please try again." })
       }

@@ -55,7 +55,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
       const data = await res.json().catch(() => ({}))
       if (data.success) {
         setSuccess(true)
-        window.dataLayer?.push({ event: "generate_lead", lead_source: "inline_form", budget: form.budget || "none", location: form.location || "none" })
+        window.dataLayer?.push({ event: "generate_lead", lead_source: "inline_form", lead_placement: context ?? "inline", page: window.location.pathname, budget: form.budget || "none", location: form.location || "none" })
       } else {
         setErrors({ form: "Submission failed. Please try again." })
       }

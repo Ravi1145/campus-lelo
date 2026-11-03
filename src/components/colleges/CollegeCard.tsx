@@ -6,6 +6,7 @@ import Link from "next/link"
 import { MapPin, Heart, Star, ArrowUpRight, Award, BedDouble } from "lucide-react"
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
+import FeeEnquiryButton from "@/components/leads/FeeEnquiryButton"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 
 const COLLEGE_BANNER = "/college-default-banner.webp"
@@ -226,7 +227,10 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
               View details
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
             </span>
-            <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
+            <span className="flex items-center gap-2">
+              <FeeEnquiryButton collegeName={college.name} collegeSlug={college.slug} courses={college.courses ?? []} />
+              <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
+            </span>
           </div>
         </div>
       </article>

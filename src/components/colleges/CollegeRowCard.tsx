@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Award, BedDouble, Heart, MapPin, Star } from "lucide-react"
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
+import FeeEnquiryButton from "@/components/leads/FeeEnquiryButton"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 import { examLabel } from "@/lib/collegeFacets"
 
@@ -123,6 +124,9 @@ export default function CollegeRowCard({ college }: { college: College }) {
         <div className="relative z-10 flex flex-row items-stretch gap-2 border-t border-gray-100 bg-gray-50/70 p-3.5 sm:p-4 lg:w-56 lg:shrink-0 lg:flex-col lg:justify-center lg:border-l lg:border-t-0">
           <div className="flex-1 lg:flex-none [&>button]:w-full [&>button]:justify-center [&>button]:bg-white [&>button]:py-2.5 [&>button]:text-[13px] [&>button]:font-bold">
             <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
+          </div>
+          <div className="flex-1 lg:flex-none [&>button]:w-full [&>button]:justify-center [&>button]:py-2.5 [&>button]:text-[13px]">
+            <FeeEnquiryButton collegeName={college.name} collegeSlug={college.slug} courses={college.courses ?? []} />
           </div>
           <button
             type="button"
