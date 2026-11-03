@@ -40,7 +40,7 @@ function isValidPost(p: { title: string; slug: string }): boolean {
 
 async function fetchPosts(): Promise<Post[]> {
   try {
-    const result = await getAllBlogs({ status: "published", limit: 50 })
+    const result = await getAllBlogs({ status: "published", limit: 500 })
     if (result.blogs && result.blogs.length > 0) {
       return (result.blogs as Post[]).filter(isValidPost)
     }

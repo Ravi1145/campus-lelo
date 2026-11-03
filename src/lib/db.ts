@@ -673,51 +673,46 @@ export async function getAllBlogs(filters?: {
   page?: number
   limit?: number
 }): Promise<{ blogs: DBBlog[]; total: number; page: number; totalPages: number }> {
-  // ── Try Supabase first ──────────────────────────────────────────────────────
+  const status = filters?.status ?? 'published'
+
+  // Posts written in the admin panel or by the auto-blog live in Supabase. They are merged with the posts kept in
+  // code (src/data/blogs.ts) so adding a database post never hides the rest. A database post wins on a shared slug.
+  let dbList: DBBlog[] = []
   try {
     const { createAdminClient } = await import('@/lib/supabase/admin')
     const admin = createAdminClient()
-    const page  = filters?.page  ?? 1
-    const limit = filters?.limit ?? 10
-    const start = (page - 1) * limit
-
-    let query = admin
+    const { data, error } = await admin
       .from('blogs')
-      .select('id, slug, title, excerpt, content, author_id, category, tags, image_url, cover_url, status, published_at, read_time, views, created_at, updated_at', { count: 'exact' })
-      .eq('status', filters?.status ?? 'published')
+      .select('id, slug, title, excerpt, content, author_id, category, tags, image_url, cover_url, status, published_at, read_time, views, created_at, updated_at')
+      .eq('status', status)
       .order('published_at', { ascending: false })
-      .range(start, start + limit - 1)
+      .limit(1000)
+    if (!error && data) dbList = (data as Record<string, unknown>[]).map(supabaseBlogToDBBlog)
+  } catch { /* fall back to static only */ }
 
-    if (filters?.category) query = query.ilike('category', filters.category)
-    if (filters?.search)   query = query.or(
-      `title.ilike.%${filters.search}%,excerpt.ilike.%${filters.search}%`
-    )
+  const staticList: DBBlog[] = status === 'published'
+    ? staticBlogs.map(b => ({
+        id:           b.id,
+        slug:         b.slug,
+        title:        b.title,
+        excerpt:      b.excerpt,
+        body:         b.body,
+        author:       b.author,
+        category:     b.category,
+        tags:         b.tags,
+        read_time:    b.readTime,
+        status:       'published',
+        image_url:    b.image,
+        published_at: b.publishedAt ?? b.date,
+        created_at:   b.date,
+      }))
+    : []
 
-    const { data, count, error } = await query
-
-    if (!error && data && data.length > 0) {
-      const blogs = (data as Record<string, unknown>[]).map(supabaseBlogToDBBlog)
-      const total = count ?? blogs.length
-      return { blogs, total, page, totalPages: Math.ceil(total / limit) }
-    }
-  } catch { /* fall through to static */ }
-
-  // ── Fallback: static data ───────────────────────────────────────────────────
-  let list: DBBlog[] = staticBlogs.map(b => ({
-    id:           b.id,
-    slug:         b.slug,
-    title:        b.title,
-    excerpt:      b.excerpt,
-    body:         b.body,
-    author:       b.author,
-    category:     b.category,
-    tags:         b.tags,
-    read_time:    b.readTime,
-    status:       'published',
-    image_url:    b.image,
-    published_at: b.publishedAt ?? b.date,
-    created_at:   b.date,
-  }))
+  const bySlug = new Map<string, DBBlog>()
+  for (const b of staticList) bySlug.set(b.slug, b)
+  for (const b of dbList) bySlug.set(b.slug, b)
+  const stamp = (b: DBBlog) => { const t = Date.parse(b.published_at ?? b.created_at ?? ''); return Number.isNaN(t) ? 0 : t }
+  let list = Array.from(bySlug.values()).sort((x, y) => stamp(y) - stamp(x))
 
   if (filters?.category) {
     const cat = filters.category.toLowerCase()

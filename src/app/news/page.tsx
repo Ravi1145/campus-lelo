@@ -112,7 +112,7 @@ export default async function NewsPage() {
   // Fetch published blog posts (revalidated hourly)
   let blogPosts: BlogPost[] = []
   try {
-    const { blogs: dbBlogs } = await getAllBlogs({ status: "published", limit: 50 })
+    const { blogs: dbBlogs } = await getAllBlogs({ status: "published", limit: 500 })
     blogPosts = dbBlogs as BlogPost[]
   } catch {
     blogPosts = staticBlogs
