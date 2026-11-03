@@ -4,6 +4,7 @@ import type { ProgramAdmission } from "@/data/mba/types"
 import { INSTITUTE_SHORT } from "@/data/mba/instituteLabels"
 import { nirf2025Management, NIRF_SOURCE } from "@/data/mba/nirf2025"
 import { FLAGSHIP_DELHI_NCR_HTML } from "./flagship-delhi-ncr"
+import { MDI_FEES_HTML, IMT_FEES_HTML } from "./fee-guides"
 
 // Ten decision guides for students choosing an MBA or PGDM exam and a city. They are stored in Supabase (seeded by
 // /api/cron/seed-guides) so they show in the admin Blogs list and can be edited there.
@@ -93,7 +94,7 @@ const SPECS: Spec[] = [
   },
   {
     slug: "which-mba-entrance-exam-should-you-take-comparison",
-    title: "Which MBA Entrance Exam Should You Take? A Comparison of All Ten",
+    title: "Which MBA Entrance Exam Should You Take? All Ten Compared",
     excerpt: "All ten exams on one page: who runs them, mode, duration, how often they are held and how many verified programmes list each.",
     category: "Exams", tags: ["which MBA exam to take", "MBA exam comparison", "CAT vs XAT vs CMAT", "best MBA entrance exam"],
     body: () => {
@@ -246,6 +247,22 @@ export const researchGuides: ResearchGuide[] = [
     category: "MBA",
     tags: ["MBA in Delhi NCR 2027", "MBA colleges in Delhi NCR fees", "MBA colleges in Delhi cutoff", "PGDM admission Delhi", "MDI fees 2027", "FMS Delhi fees", "IIFT fees"],
     body: FLAGSHIP_DELHI_NCR_HTML,
+  },
+  {
+    slug: "mdi-gurgaon-fees-2027-29-pgdm-fee-structure-explained",
+    title: "MDI Gurgaon Fees 2027-29: PGDM Fee Structure Explained",
+    excerpt: "MDI Gurgaon's official PGDM fee for 2027-29 is Rs 26,55,310 including hostel. Year-wise split, what it covers, eligibility, deadline and FAQs.",
+    category: "MBA",
+    tags: ["MDI Gurgaon fees", "MDI fees 2027", "MDI PGDM fee structure", "MDI Gurgaon hostel fee", "MDI admission 2027"],
+    body: MDI_FEES_HTML,
+  },
+  {
+    slug: "imt-ghaziabad-fees-2027-29-pgdm-fee-structure-explained",
+    title: "IMT Ghaziabad Fees 2027-29: PGDM Fee Structure Explained",
+    excerpt: "IMT Ghaziabad's official PGDM fee for 2027-29 is Rs 23 lakh, with boarding and lodging. Year-wise split, what it covers, exams, deadline and FAQs.",
+    category: "MBA",
+    tags: ["IMT Ghaziabad fees", "IMT Ghaziabad fees 2027", "IMT PGDM fee structure", "IMT Ghaziabad admission 2027"],
+    body: IMT_FEES_HTML,
   },
   ...SPECS.map((s) => ({ slug: s.slug, title: s.title, excerpt: s.excerpt, category: s.category, tags: s.tags, body: s.body() })),
 ]

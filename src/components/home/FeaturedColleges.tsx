@@ -25,12 +25,13 @@ export default function FeaturedColleges() {
   return (
     <FeaturedInstitutesTabs
       tabs={[
-        { id: "mba", label: "MBA & PGDM", rows: management, source: NIRF_CATEGORY_URL.Management, more: { href: "/best-mba-colleges-in-india", label: "Best MBA colleges in India" } },
+        { id: "mba", label: "MBA & PGDM", rows: management, source: NIRF_CATEGORY_URL.Management, more: { href: "/blog/mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission", label: "MBA in Delhi NCR 2027: fees, cut-offs and admission guide" } },
         { id: "eng", label: "Engineering", rows: plain(nirf2025Engineering), source: NIRF_CATEGORY_URL.Engineering },
         { id: "med", label: "Medical", rows: plain(nirf2025Medical), source: NIRF_CATEGORY_URL.Medical },
         { id: "law", label: "Law", rows: plain(nirf2025Law), source: NIRF_CATEGORY_URL.Law },
       ]}
       regions={[
+        { href: "/blog/mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission", label: "Delhi NCR 2027 guide" },
         { href: "/best-mba-colleges-in-delhi", label: "Delhi" },
         { href: "/best-mba-colleges-in-noida", label: "Noida" },
         { href: "/best-mba-colleges-in-greater-noida", label: "Greater Noida" },

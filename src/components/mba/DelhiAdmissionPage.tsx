@@ -88,6 +88,7 @@ export default function DelhiAdmissionPage({ kind }: { kind: DelhiAdmissionKind 
   const howTo = { "@context": "https://schema.org", "@type": "HowTo", name: `How to get ${d.type} admission in Delhi`, step: steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.h, text: s.p })) }
 
   const more = [
+    { href: "/blog/mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission", label: "MBA in Delhi NCR 2027: fees, cut-offs and admission guide" },
     d.other,
     { href: kind === "mba" ? "/mba-colleges-in-delhi" : "/pgdm-colleges-in-delhi", label: kind === "mba" ? "MBA colleges in Delhi" : "PGDM colleges in Delhi" },
     { href: "/mba-colleges-in-delhi-without-cat", label: "MBA in Delhi without CAT" },
