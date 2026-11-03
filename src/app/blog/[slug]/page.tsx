@@ -2,6 +2,7 @@ import { collegeHref } from "@/lib/collegeHref"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
+import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import Link from "next/link"
 import Image from "next/image"
 import { blogImage } from "@/lib/blogImage"
@@ -35,6 +36,19 @@ function extractFaqs(html: string): { question: string; answer: string }[] {
     if (q.endsWith("?") && a) out.push({ question: q, answer: a })
   }
   return out
+}
+
+
+/** Split an HTML article at the <h2> closest to 45% of its length, so a lead form can sit mid-article. */
+function splitForMidForm(html: string): [string, string] | null {
+  const starts: number[] = []
+  const re = /<h2[\s>]/gi
+  let m: RegExpExecArray | null
+  while ((m = re.exec(html))) starts.push(m.index)
+  if (starts.length < 4) return null
+  const target = html.length * 0.45
+  const cut = starts.slice(1).reduce((best, x) => (Math.abs(x - target) < Math.abs(best - target) ? x : best), starts[1])
+  return [html.slice(0, cut), html.slice(cut)]
 }
 
 interface Props {
@@ -254,6 +268,7 @@ export default async function BlogPostPage({ params }: Props) {
   const processedBody = isHTML ? injectHeadingIds(post.body) : post.body
   const toc = isHTML ? extractTOC(post.body) : []
   const faqs = isHTML ? extractFaqs(post.body) : []
+  const midSplit = isHTML ? splitForMidForm(processedBody) : null
   const pageUrl = `${BASE_URL}/blog/${slug}`
 
   return (
@@ -334,6 +349,14 @@ export default async function BlogPostPage({ params }: Props) {
                 </p>
               </div>
 
+              {/* Trust strip: who wrote it, when it was checked, how facts are verified */}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-gray-100 px-6 py-3 text-xs text-gray-600">
+                <span>By <strong className="text-gray-800">{post.author ?? "CampusLelo Editorial Team"}</strong></span>
+                {dateStr && <span>Last reviewed {dateStr}</span>}
+                <span>Facts checked against official institute and exam pages</span>
+                <Link href="/editorial-policy" className="font-semibold text-[#024692] hover:underline">How we verify</Link>
+              </div>
+
               {/* Inline TOC — shown only on mobile/tablet (sidebar handles desktop) */}
               {toc.length >= 3 && (
                 <div className="lg:hidden border-b border-gray-100 px-6 py-5 bg-gray-50">
@@ -368,7 +391,15 @@ export default async function BlogPostPage({ params }: Props) {
                   prose-ul:text-gray-700 prose-li:text-[15px]
                   prose-table:text-sm prose-table:border-collapse
                   prose-blockquote:border-l-4 prose-blockquote:border-orange-400 prose-blockquote:bg-orange-50 prose-blockquote:not-italic prose-blockquote:py-1 prose-blockquote:rounded-r-lg">
-                  {isHTML ? (
+                  {isHTML && midSplit ? (
+                    <>
+                      <div dangerouslySetInnerHTML={{ __html: midSplit[0] }} />
+                      <div className="not-prose my-8">
+                        <InlineLeadForm context={`blog:${slug}`} />
+                      </div>
+                      <div dangerouslySetInnerHTML={{ __html: midSplit[1] }} />
+                    </>
+                  ) : isHTML ? (
                     <div dangerouslySetInnerHTML={{ __html: processedBody }} />
                   ) : (
                     <p className="text-gray-700 leading-relaxed whitespace-pre-line text-[15px]">{post.body}</p>

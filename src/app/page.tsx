@@ -10,6 +10,7 @@ import { mbaExams } from "@/data/mba/exams"
 import BrowseByStream from "@/components/home/BrowseByStream"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
+import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import FeaturedCourses from "@/components/home/FeaturedCourses"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
@@ -122,6 +123,11 @@ export default function HomePage() {
       <div>
         {/* 1. Hero */}
         <HeroSection proof={proof} />
+
+        {/* 2. Quick lead capture right under the hero: the first thing most visitors can act on */}
+        <section aria-label="Free admission shortlist" className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 pt-6 sm:px-8 lg:px-12">
+          <InlineLeadForm context="home-hero" />
+        </section>
 
 
 
