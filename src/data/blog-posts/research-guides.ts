@@ -3,6 +3,7 @@ import { programAdmissions } from "@/data/mba/programAdmissions"
 import type { ProgramAdmission } from "@/data/mba/types"
 import { INSTITUTE_SHORT } from "@/data/mba/instituteLabels"
 import { nirf2025Management, NIRF_SOURCE } from "@/data/mba/nirf2025"
+import { FLAGSHIP_DELHI_NCR_HTML } from "./flagship-delhi-ncr"
 
 // Ten decision guides for students choosing an MBA or PGDM exam and a city. They are stored in Supabase (seeded by
 // /api/cron/seed-guides) so they show in the admin Blogs list and can be edited there.
@@ -237,4 +238,14 @@ const SPECS: Spec[] = [
 ]
 
 export interface ResearchGuide { slug: string; title: string; excerpt: string; category: string; tags: string[]; body: string }
-export const researchGuides: ResearchGuide[] = SPECS.map((s) => ({ slug: s.slug, title: s.title, excerpt: s.excerpt, category: s.category, tags: s.tags, body: s.body() }))
+export const researchGuides: ResearchGuide[] = [
+  {
+    slug: "mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission",
+    title: "MBA in Delhi NCR 2027: Colleges, Fees, Cut-offs, Admission",
+    excerpt: "Official 2027 fees, published cut-offs, accepted exams and NIRF ranks for FMS, IIFT, MDI, IMT, FORE, FIIB, BIMTECH and more, with admission steps and dates.",
+    category: "MBA",
+    tags: ["MBA in Delhi NCR 2027", "MBA colleges in Delhi NCR fees", "MBA colleges in Delhi cutoff", "PGDM admission Delhi", "MDI fees 2027", "FMS Delhi fees", "IIFT fees"],
+    body: FLAGSHIP_DELHI_NCR_HTML,
+  },
+  ...SPECS.map((s) => ({ slug: s.slug, title: s.title, excerpt: s.excerpt, category: s.category, tags: s.tags, body: s.body() })),
+]
