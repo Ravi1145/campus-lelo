@@ -242,7 +242,7 @@ export const researchGuides: ResearchGuide[] = [
   {
     slug: "mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission",
     title: "MBA in Delhi NCR 2027: Colleges, Fees, Cut-offs, Admission",
-    excerpt: "Official 2027 fees, published cut-offs, exams and NIRF ranks for FMS, IIFT, MDI, IMT, FORE, FIIB and BIMTECH, with admission steps, dates and FAQs.",
+    excerpt: "Official 2027 fees, published cut-offs and accepted exams for FMS, IIFT, MDI, IMT, FORE, FIIB and BIMTECH, with admission steps, dates and FAQs.",
     category: "MBA",
     tags: ["MBA in Delhi NCR 2027", "MBA colleges in Delhi NCR fees", "MBA colleges in Delhi cutoff", "PGDM admission Delhi", "MDI fees 2027", "FMS Delhi fees", "IIFT fees"],
     body: FLAGSHIP_DELHI_NCR_HTML,
