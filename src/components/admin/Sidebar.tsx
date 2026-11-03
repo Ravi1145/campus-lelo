@@ -7,6 +7,7 @@ const superAdminLinks = [
   { href: '/admin/colleges', label: 'Colleges', icon: '🏫' },
   { href: '/admin/courses', label: 'Courses', icon: '📚' },
   { href: '/admin/blogs', label: 'Blogs', icon: '📝' },
+  { href: '/admin/auto-blog', label: 'Auto-blog', icon: '🤖' },
   { href: '/admin/leads', label: 'Leads', icon: '👥' },
   { href: '/admin/approvals', label: 'Approvals', icon: '✅' },
   { href: '/admin/reviews', label: 'Reviews', icon: '⭐' },

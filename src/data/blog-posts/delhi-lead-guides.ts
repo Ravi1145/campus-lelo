@@ -85,6 +85,9 @@ const compare = (ids: string[], intro: string, cutoffs: string[] = []) => () => 
   )
 }
 
+/** Body for a side-by-side comparison of verified programmes. Also used by the auto-blog queue (src/lib/autoBlog.ts). */
+export const buildComparisonBody = (ids: string[], intro: string, cutoffs: string[] = []): string => compare(ids, intro, cutoffs)()
+
 const SPECS: Spec[] = [
   {
     id: 56, slug: "fms-vs-iift-vs-iit-delhi-dms-mba-admission", publishAt: "2026-10-27", category: "MBA",
