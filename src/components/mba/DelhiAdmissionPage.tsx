@@ -90,6 +90,7 @@ export default function DelhiAdmissionPage({ kind }: { kind: DelhiAdmissionKind 
   const more = [
     { href: "/blog/mba-in-delhi-ncr-2027-colleges-fees-cutoffs-admission", label: "MBA in Delhi NCR 2027: fees, cut-offs and admission guide" },
     d.other,
+    { href: "/mba-searches", label: "Fees, cut-offs and deadlines by institute" },
     { href: kind === "mba" ? "/mba-colleges-in-delhi" : "/pgdm-colleges-in-delhi", label: kind === "mba" ? "MBA colleges in Delhi" : "PGDM colleges in Delhi" },
     { href: "/mba-colleges-in-delhi-without-cat", label: "MBA in Delhi without CAT" },
     { href: "/mba-colleges-in-delhi-accepting-cat", label: "Delhi colleges accepting CAT" },

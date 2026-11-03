@@ -6,6 +6,7 @@ import { programAdmissions } from "@/data/mba/programAdmissions"
 import { mbaExams } from "@/data/mba/exams"
 import { INSTITUTE_SHORT, CUTOFF_MATCH, CITY_HUB } from "@/data/mba/instituteLabels"
 import InstituteGuide from "@/components/mba/InstituteGuide"
+import { FEE_GUIDES, DEADLINE_GUIDE, VERIFIED_DEADLINES } from "@/data/mba/instituteGuides"
 
 // One page per verified programme: "<college> MBA admission: exams, eligibility, process".
 // Every fact is read from programAdmissions.ts and cutoffs.ts. Nothing is typed by hand here.
@@ -94,6 +95,8 @@ export default async function Page({ params }: Props) {
         "Shortlist two or three similar institutes in the same city and compare their selection steps, not only their exam lists.",
       ]}
       links={[
+        ...(FEE_GUIDES[p.id] ? [{ href: FEE_GUIDES[p.id], label: `${short} fees 2027-29: official fee structure` }] : []),
+        ...(VERIFIED_DEADLINES.has(p.id) ? [{ href: DEADLINE_GUIDE, label: `${short} last date to apply and other 2027 deadlines` }] : []),
         ...(hub ? [hub] : []),
         { href: "/mba-exam-acceptance", label: "Filter all colleges by your exam" },
         ...(p.collegeSlug ? [{ href: `/colleges/${p.collegeSlug}`, label: `${short} college profile` }] : []),

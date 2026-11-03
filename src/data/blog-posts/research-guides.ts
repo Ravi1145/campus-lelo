@@ -5,6 +5,8 @@ import { INSTITUTE_SHORT } from "@/data/mba/instituteLabels"
 import { nirf2025Management, NIRF_SOURCE } from "@/data/mba/nirf2025"
 import { FLAGSHIP_DELHI_NCR_HTML } from "./flagship-delhi-ncr"
 import { MDI_FEES_HTML, IMT_FEES_HTML } from "./fee-guides"
+import { FORE_FEES_HTML, BIMTECH_FEES_HTML } from "./fee-guides-2"
+import { XAT_DELHI_HTML, DEADLINES_HTML } from "./timely-guides"
 
 // Ten decision guides for students choosing an MBA or PGDM exam and a city. They are stored in Supabase (seeded by
 // /api/cron/seed-guides) so they show in the admin Blogs list and can be edited there.
@@ -263,6 +265,38 @@ export const researchGuides: ResearchGuide[] = [
     category: "MBA",
     tags: ["IMT Ghaziabad fees", "IMT Ghaziabad fees 2027", "IMT PGDM fee structure", "IMT Ghaziabad admission 2027"],
     body: IMT_FEES_HTML,
+  },
+  {
+    slug: "fore-school-of-management-fees-pgdm-fee-structure-explained",
+    title: "FORE School of Management Fees: PGDM Fee Structure",
+    excerpt: "FORE's official PGDM fee is Rs 23.24 lakh (self-sponsored) plus a Rs 23,000 registration fee. What it covers, exams, eligibility, rank and FAQs.",
+    category: "MBA",
+    tags: ["FORE School of Management fees", "FORE fees 2027", "FORE PGDM fee structure", "FORE admission 2027"],
+    body: FORE_FEES_HTML,
+  },
+  {
+    slug: "bimtech-fees-2027-29-pgdm-fee-structure-explained",
+    title: "BIMTECH Fees 2027-29: PGDM Fee Structure Explained",
+    excerpt: "BIMTECH's official PGDM tuition is Rs 14 lakh; hostel and mess are extra. Charges listed, exams, eligibility, rank and FAQs for 2027-29.",
+    category: "MBA",
+    tags: ["BIMTECH fees", "BIMTECH fees 2027", "BIMTECH PGDM fee structure", "BIMTECH hostel fees"],
+    body: BIMTECH_FEES_HTML,
+  },
+  {
+    slug: "xat-2027-colleges-in-delhi-ncr-pgdm-mba-list-and-deadline",
+    title: "XAT 2027 Colleges in Delhi NCR: List, Dates and Deadline",
+    excerpt: "Delhi NCR MBA and PGDM programmes that list XAT, XAT 2027 dates (registration to 6 Dec, test 3 Jan), eligibility notes and how to plan.",
+    category: "Exams",
+    tags: ["XAT 2027 colleges Delhi NCR", "XAT accepted colleges Delhi", "XAT 2027 registration last date", "PGDM through XAT Delhi"],
+    body: XAT_DELHI_HTML,
+  },
+  {
+    slug: "mba-pgdm-application-deadlines-2027-intake-delhi-ncr",
+    title: "MBA and PGDM Application Deadlines for 2027: Delhi NCR",
+    excerpt: "Verified application deadlines (MDI 28 Nov, IMT 27 Nov), XAT, CAT and other exam dates, and final-year dates for the 2027 intake.",
+    category: "MBA",
+    tags: ["MBA application deadlines 2027", "MDI Gurgaon last date to apply", "IMT Ghaziabad last date 2027", "PGDM admission last date Delhi"],
+    body: DEADLINES_HTML,
   },
   ...SPECS.map((s) => ({ slug: s.slug, title: s.title, excerpt: s.excerpt, category: s.category, tags: s.tags, body: s.body() })),
 ]
