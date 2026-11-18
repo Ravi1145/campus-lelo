@@ -7,6 +7,7 @@ import { MapPin, Heart, Star, ArrowUpRight, Award, BedDouble } from "lucide-reac
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
 import FeeEnquiryButton from "@/components/leads/FeeEnquiryButton"
+import CardContactButtons from "@/components/leads/CardContactButtons"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 
 const COLLEGE_BANNER = "/college-default-banner.webp"
@@ -222,13 +223,14 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
 
           <div className="mt-3">{tags}</div>
 
-          <div className="mt-auto flex items-center justify-between gap-2 border-t border-gray-100 pt-3.5">
+          <div className="mt-auto flex flex-wrap items-center justify-between gap-x-2 gap-y-2 border-t border-gray-100 pt-3.5">
             <span className="inline-flex items-center gap-1 text-sm font-bold text-[#012858] transition-colors group-hover:text-[#C90D11]">
               View details
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
             </span>
             <span className="flex items-center gap-2">
               <FeeEnquiryButton collegeName={college.name} collegeSlug={college.slug} courses={college.courses ?? []} />
+              <CardContactButtons collegeName={college.name} collegeSlug={college.slug} />
               <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
             </span>
           </div>

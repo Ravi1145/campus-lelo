@@ -126,13 +126,13 @@ export default function ExamGuidesBand() {
           ))}
         </ul>
 
-        <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-4 grid grid-cols-2 gap-3 lg:grid-cols-4">
           {SHORTCUTS.map(({ href, title, sub, icon: Icon, tone }, i) => (
             <li key={href} className="reveal-item" style={{ "--i": i + 11 } as React.CSSProperties}>
-              <Link href={href} className={`group flex h-full items-center gap-3 rounded-xl p-3 ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 ${tone.split(" ")[0]}`}>
-                <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white ${tone.split(" ")[1]}`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
-                <span className="min-w-0 flex-1"><span className="block font-bold text-gray-900">{title}</span><span className="block text-sm text-gray-700">{sub}</span></span>
-                <ArrowRight className="h-4 w-4 shrink-0 text-gray-500 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              <Link href={href} className={`group flex h-full items-center gap-2 rounded-xl p-2.5 ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 sm:gap-3 sm:p-3 ${tone.split(" ")[0]}`}>
+                <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white ${tone.split(" ")[1]}`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                <span className="min-w-0 flex-1"><span className="block text-sm font-bold leading-snug text-gray-900 sm:text-base">{title}</span><span className="hidden text-sm text-gray-700 sm:block">{sub}</span></span>
+                <ArrowRight className="hidden h-4 w-4 shrink-0 text-gray-500 transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true" />
               </Link>
             </li>
           ))}

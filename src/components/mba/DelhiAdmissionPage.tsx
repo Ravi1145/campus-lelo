@@ -6,6 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 import AnswerBlock from "@/components/seo/AnswerBlock"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
+import FirstScreenLead from "@/components/leads/FirstScreenLead"
 import { programAdmissions } from "@/data/mba/programAdmissions"
 import { publishedCutoffs } from "@/data/mba/cutoffs"
 import { getMbaExam } from "@/data/mba/exams"
@@ -127,6 +128,7 @@ export default function DelhiAdmissionPage({ kind }: { kind: DelhiAdmissionKind 
 
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_20rem]">
         <div className="min-w-0 space-y-10">
+          <FirstScreenLead context={`delhi-admission:${kind}`} />
           <AnswerBlock id="adm-q" question={`How do I get ${d.type} admission in Delhi?`} updated={updated}><p>{answer}</p></AnswerBlock>
 
           <section aria-labelledby="steps-h">

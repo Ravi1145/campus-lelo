@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { ArrowUpRight, Calculator, CalendarDays, GraduationCap, Headphones, Sparkles, TrendingUp } from "lucide-react"
+import { ArrowUpRight, Calculator, CalendarDays, ClipboardCheck, GraduationCap, Headphones, ListChecks, Search, Sparkles, TrendingUp, Table2 } from "lucide-react"
 import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
 import StartHere from "@/components/home/StartHere"
@@ -23,6 +23,15 @@ const MORE = [
   { href: "/counselling", label: "Free counselling", desc: "Talk to an expert", icon: Headphones },
 ]
 
+const MBA_TOOLS = [
+  { href: "/mba-cutoff-checker", label: "MBA cut-off checker", desc: "Compare your score with published cut-offs", icon: ClipboardCheck },
+  { href: "/mba-exam-acceptance", label: "Exam acceptance table", desc: "Which colleges take your exam", icon: Table2 },
+  { href: "/mba-exam-calendar", label: "MBA exam calendar", desc: "Registration and test dates in one place", icon: CalendarDays },
+  { href: "/blog/mba-pgdm-application-deadlines-2027-intake-delhi-ncr", label: "2027 application deadlines", desc: "Institute and exam last dates", icon: ListChecks },
+  { href: "/mba-searches", label: "Fees, cut-offs and deadlines index", desc: "Every verified institute on one page", icon: Search },
+  { href: "/mba-admission-in-delhi#lead-form", label: "Free Delhi MBA/PGDM shortlist", desc: "A counsellor matches your score and budget", icon: Headphones },
+]
+
 export default function ToolsPage() {
   return (
     <>
@@ -41,6 +50,25 @@ export default function ToolsPage() {
       </div>
 
       <StartHere />
+
+      <section aria-labelledby="mba-tools-heading" className="px-5 pb-8 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[calc(var(--container-7xl)+6rem)]">
+          <h2 id="mba-tools-heading" className="text-lg font-bold text-[#012858]">MBA and PGDM tools</h2>
+          <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {MBA_TOOLS.map(({ href, label, desc, icon: Icon }) => (
+              <li key={href}>
+                <Link href={href} className="group flex h-full items-start gap-3 rounded-2xl bg-white p-4 ring-1 ring-gray-200 transition-shadow hover:shadow-[0_10px_26px_-14px_rgba(1,40,88,0.35)]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#C90D11] text-white transition-transform group-hover:-rotate-6"><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                  <span>
+                    <span className="flex items-center gap-1 text-sm font-bold text-[#012858]">{label}<ArrowUpRight className="h-3.5 w-3.5 text-[#C90D11]" aria-hidden="true" /></span>
+                    <span className="mt-0.5 block text-sm text-gray-700">{desc}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section aria-labelledby="more-tools-heading" className="px-5 pb-10 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[calc(var(--container-7xl)+6rem)]">

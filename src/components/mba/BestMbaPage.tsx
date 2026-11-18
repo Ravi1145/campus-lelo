@@ -6,6 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 import AnswerBlock from "@/components/seo/AnswerBlock"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
+import FirstScreenLead from "@/components/leads/FirstScreenLead"
 import { bestPages, getBestPage } from "@/data/mba/bestPages"
 import { nirf2025Management, NIRF_SOURCE, type NirfRow } from "@/data/mba/nirf2025"
 import { programAdmissions } from "@/data/mba/programAdmissions"
@@ -125,6 +126,7 @@ export default function BestMbaPage({ path }: { path: string }) {
 
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_20rem]">
         <div className="min-w-0 space-y-10">
+          <FirstScreenLead context={`best:${def.path.slice(1)}`} />
           <AnswerBlock id="best-q" question={`Which are the best MBA colleges in ${def.place}?`} updated={updated}><p>{answer}</p></AnswerBlock>
 
           {rows.length > 0 && (

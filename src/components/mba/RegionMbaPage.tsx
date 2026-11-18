@@ -6,6 +6,7 @@ import { safeJsonLd } from "@/lib/jsonld"
 import AnswerBlock from "@/components/seo/AnswerBlock"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 import MbaLeadForm from "@/components/leads/MbaLeadForm"
+import FirstScreenLead from "@/components/leads/FirstScreenLead"
 import { ProgramList } from "@/components/exams/MbaExamPage"
 import { programAdmissions } from "@/data/mba/programAdmissions"
 import { publishedCutoffs, noPublishedCutoff } from "@/data/mba/cutoffs"
@@ -135,6 +136,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
 
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_20rem]">
         <div className="min-w-0 space-y-10">
+          <FirstScreenLead context={`region:${def.path.slice(1)}`} />
           <AnswerBlock id="region-q" question={def.question} updated={updated}><p>{answer}</p></AnswerBlock>
 
           {programmes.length > 0 && (

@@ -10,6 +10,7 @@ import { mbaExams } from "@/data/mba/exams"
 import BrowseByStream from "@/components/home/BrowseByStream"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
 import FeaturedColleges from "@/components/home/FeaturedColleges"
+import MbaFocusBand from "@/components/home/MbaFocusBand"
 import InlineLeadForm from "@/components/leads/InlineLeadForm"
 import FeaturedCourses from "@/components/home/FeaturedCourses"
 
@@ -126,18 +127,21 @@ export default function HomePage() {
 
         {/* 2. Quick lead capture right under the hero: the first thing most visitors can act on */}
         <section aria-label="Free admission shortlist" className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 pt-6 sm:px-8 lg:px-12">
-          <InlineLeadForm context="home-hero" />
+          <InlineLeadForm context="home-hero" compact />
         </section>
 
 
 
-        {/* 3. Browse by Stream */}
+        {/* 3. The main audience first: MBA and PGDM in Delhi NCR, with the institutes' own fees */}
+        <MbaFocusBand />
+
+        {/* 4. Highest-ranked colleges (NIRF 2025) */}
+        <FeaturedColleges />
+
+        {/* 5. Browse by stream, courses and exams */}
         <BrowseByStream />
         <FeaturedCourses />
         <ExamGuidesBand />
-
-        {/* 4. Featured Colleges */}
-        <FeaturedColleges />
 
 
         {/* 6. AI Finder band */}

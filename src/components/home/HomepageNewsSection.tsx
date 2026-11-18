@@ -127,11 +127,11 @@ export default function HomepageNewsSection() {
               </div>
             </Link>
 
-            <ol className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <ol className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0" aria-label="Latest guides, scroll sideways on a phone">
               {rest.slice(0, 3).map((p, i) => {
                 const C = cat(p.category)
                 return (
-                  <li key={p.slug} className="reveal-item" style={{ "--i": i + 1 } as React.CSSProperties}>
+                  <li key={p.slug} className="reveal-item w-[78vw] shrink-0 snap-start sm:w-auto" style={{ "--i": i + 1 } as React.CSSProperties}>
                     <Link href={`/blog/${p.slug}`} className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]">
                       <span className="relative block h-28 overflow-hidden bg-[#012858]">
                         <Image src={blogImageAt(i + 1, p.image)} alt="" fill sizes="(min-width: 640px) 22vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -167,7 +167,7 @@ export default function HomepageNewsSection() {
 
             {events.length ? (
               <ol className="mt-3 divide-y divide-gray-100 rounded-xl bg-white px-3 shadow-sm">
-                {events.map((ev, i) => {
+                {events.slice(0, 5).map((ev, i) => {
                   const d = new Date(ev.iso + "T00:00:00Z")
                   return (
                     <li key={ev.iso + ev.title} className="reveal-item" style={{ "--i": i + 1 } as React.CSSProperties}>

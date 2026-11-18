@@ -11,10 +11,12 @@ declare global {
 
 interface InlineLeadFormProps {
   context?: string
+  /** On phones, ask only for name and number (budget and location are optional) so the form is short */
+  compact?: boolean
 }
 
 // Compact lead band for lists and articles: name, phone, budget, location.
-export default function InlineLeadForm({ context }: InlineLeadFormProps) {
+export default function InlineLeadForm({ context, compact = false }: InlineLeadFormProps) {
   const [form, setForm] = useState({ name: "", phone: "", budget: "", location: "", consent: false, website: "" })
   const [errors, setErrors] = useState<{ name?: string; phone?: string; consent?: string; form?: string }>({})
   const [loading, setLoading] = useState(false)
@@ -84,7 +86,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
       <div className="grid gap-5 p-5 pl-7 lg:grid-cols-[0.75fr_1.6fr] lg:items-center lg:gap-8 lg:p-6 lg:pl-8">
         <div>
           <p className="text-lg font-extrabold leading-snug text-[#012858]">Get a shortlist that fits your budget</p>
-          <p className="mt-1 text-sm text-gray-600">Tell us what you can spend and where you want to study. A counsellor sends matching colleges, free.</p>
+          <p className={`mt-1 text-sm text-gray-600${compact ? " hidden sm:block" : ""}`}>Tell us what you can spend and where you want to study. A counsellor sends matching colleges, free.</p>
         </div>
 
         <form onSubmit={handleSubmit} noValidate className="relative">
@@ -102,6 +104,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
                 <input id={`${uid}-phone`} type="tel" inputMode="numeric" autoComplete="tel-national" maxLength={10} value={form.phone} onChange={(e) => set("phone", e.target.value.replace(/\D/g, "").slice(0, 10))} placeholder="10-digit number" aria-invalid={!!errors.phone} className={`${inputCls} rounded-l-none`} />
               </div>
             </Field>
+            <div className={compact ? "hidden sm:block" : undefined}>
             <Field label="Budget (per year)" htmlFor={`${uid}-budget`}>
               <div className="relative">
                 <Wallet className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
@@ -111,6 +114,8 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
                 </select>
               </div>
             </Field>
+            </div>
+            <div className={compact ? "hidden sm:block" : undefined}>
             <Field label="Preferred location" htmlFor={`${uid}-loc`}>
               <div className="relative">
                 <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
@@ -120,6 +125,7 @@ export default function InlineLeadForm({ context }: InlineLeadFormProps) {
                 </select>
               </div>
             </Field>
+            </div>
           </div>
 
           <div className="mt-4"><ConsentCheckbox id={`${uid}-consent`} checked={form.consent} onChange={(v) => set("consent", v)} error={errors.consent} purpose="my college shortlist and admission guidance" compact /></div>

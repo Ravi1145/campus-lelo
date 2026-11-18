@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, MapPin } from "lucide-react"
 
 export interface FeaturedRow { rank: number; name: string; city: string; state: string; score: number; href?: string; detail?: string }
 interface Tab { id: string; label: string; rows: FeaturedRow[]; source: string; more?: { href: string; label: string } }
@@ -48,25 +48,29 @@ export default function FeaturedInstitutesTabs({ tabs, regions }: { tabs: Tab[];
 
         {tabs.map((t) => (
           <div key={t.id} role="tabpanel" id={`feat-panel-${t.id}`} aria-labelledby={`feat-tab-${t.id}`} hidden={active !== t.id}>
-            <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <ol className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3 xl:grid-cols-4" aria-label={`${t.label}: highest-ranked institutes, scroll sideways on a phone`}>
               {t.rows.map((r) => {
-                const body = (
-                  <>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#012858] text-sm font-extrabold text-white" aria-label={`NIRF rank ${r.rank}`}>{r.rank}</span>
-                    <span className="min-w-0">
-                      <span className="block text-sm font-bold leading-snug text-gray-900">{r.name}</span>
-                      <span className="block text-xs text-gray-600">{r.city}, {r.state} · score {r.score.toFixed(2)}</span>
-                      {r.detail && <span className="mt-0.5 block text-xs font-semibold text-[#024692]">{r.detail}</span>}
-                    </span>
-                  </>
-                )
+                const top = r.rank <= 3
+                const cta = r.href ? { href: r.href, label: "View details" } : { href: t.id === "mba" ? "/mba-admission-in-delhi#lead-form" : "/counselling#book", label: "Free guidance" }
                 return (
-                  <li key={`${r.rank}-${r.name}`}>
-                    {r.href ? (
-                      <Link href={r.href} className="flex h-full items-start gap-3 rounded-2xl bg-white p-4 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:ring-[#012858]">{body}</Link>
-                    ) : (
-                      <div className="flex h-full items-start gap-3 rounded-2xl bg-white p-4 ring-1 ring-gray-200">{body}</div>
-                    )}
+                  <li key={`${r.rank}-${r.name}`} className="w-[78vw] shrink-0 snap-start sm:w-auto">
+                    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-14px_rgba(1,40,88,0.4)] hover:ring-[#012858]/30">
+                      <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1 ${top ? "bg-[#E0170F]" : "bg-[#024692]"}`} />
+                      <div className="flex items-start justify-between gap-3">
+                        <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl font-[family-name:var(--font-fraunces)] text-lg font-bold text-white ${top ? "bg-[#E0170F]" : "bg-[#012858]"}`} aria-label={`NIRF rank ${r.rank}`}>{r.rank}</span>
+                        <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#024692]">NIRF 2025</span>
+                      </div>
+                      <h3 className="mt-3 line-clamp-2 min-h-[2.6rem] text-[15px] font-bold leading-snug text-[#012858]">{r.name}</h3>
+                      <p className="mt-1 flex items-center gap-1 text-xs text-gray-600"><MapPin className="h-3.5 w-3.5 shrink-0 text-[#C90D11]" aria-hidden="true" />{r.city}, {r.state}</p>
+                      <div className="mt-3">
+                        <div className="flex items-center justify-between text-[11px] font-semibold text-gray-600"><span>NIRF score</span><span className="tabular-nums text-[#012858]">{r.score.toFixed(2)} / 100</span></div>
+                        <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-gray-100" role="presentation"><div className={`h-full rounded-full ${top ? "bg-[#E0170F]" : "bg-[#024692]"}`} style={{ width: `${Math.min(100, r.score)}%` }} /></div>
+                      </div>
+                      {r.detail && <p className="mt-3 rounded-lg bg-gray-50 px-2.5 py-1.5 text-xs font-semibold text-[#024692]">{r.detail}</p>}
+                      <div className="mt-auto flex items-center justify-between pt-4">
+                        <Link href={cta.href} className="inline-flex items-center gap-1 text-sm font-bold text-[#C90D11] hover:underline">{cta.label}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" /></Link>
+                      </div>
+                    </article>
                   </li>
                 )
               })}
