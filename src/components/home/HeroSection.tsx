@@ -1,18 +1,15 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import {
-  ArrowRight, BadgeCheck, Brain, Briefcase, Building2, CalendarClock, ClipboardList, Compass, Cpu, FileText,
-  GraduationCap, Palette, Pill, Scale, Search, ShieldCheck, Sparkles, Stethoscope, TrendingUp,
+  ArrowRight, Briefcase, Cpu, GraduationCap, Palette, Pill, Scale, Search, Stethoscope, TrendingUp,
 } from "lucide-react"
-import { exams } from "@/data/exams"
-import { examTimeline } from "@/lib/examTimeline"
 
-// Homepage hero, portal style: one search row with filters, stream shortcuts, and a slim live panel
-// (next deadline plus what we have checked). Roughly half the height of the earlier hero.
+// Homepage hero, portal style: one search row with filters, stream shortcuts.
+// Roughly half the height of the earlier hero.
 // Animations run once on load, plus a gentle rotating word; all are off for reduced motion (globals.css).
 
 const ROTATING = ["Engineering", "MBA", "Medical", "Law", "Design", "Commerce"]
@@ -30,38 +27,7 @@ const STREAM_TILES = [
   { label: "Arts", icon: GraduationCap, href: "/colleges?stream=Arts", tint: "bg-teal-50 text-teal-700" },
 ]
 
-const SIGNATURE = [
-  { label: "Psychometric test", icon: Brain, href: "/psychometric-test" },
-  { label: "Career quiz", icon: Compass, href: "/career-quiz" },
-  { label: "Admission plan", icon: ClipboardList, href: "/my-admission-plan" },
-]
-
 export interface HeroProof { programmes: number; exams: number; cutoffs: number; checked: string }
-
-function buildStats(p: HeroProof) {
-  return [
-    { icon: Building2, value: p.programmes, label: "MBA programmes checked" },
-    { icon: FileText, value: p.exams, label: "Exam guides with sources" },
-    { icon: GraduationCap, value: p.cutoffs, label: "Cut-off sets published" },
-  ]
-}
-
-/** Nearest upcoming deadline across all exams (registration close or exam day). */
-function useNextDeadline() {
-  const [now, setNow] = useState<number | null>(null)
-  useEffect(() => setNow(Date.now()), [])
-  return useMemo(() => {
-    if (now === null) return null
-    let best: { text: string; days: number; href: string } | null = null
-    for (const e of exams) {
-      const t = examTimeline(e.applicationDate, e.examDate, now)
-      if (t.daysTo === undefined || (t.status !== "open" && t.status !== "upcoming")) continue
-      const text = t.status === "open" ? `${e.name} registration closes` : `${e.name} exam`
-      if (!best || t.daysTo < best.days) best = { text, days: t.daysTo, href: `/exams/${e.name.toLowerCase().replace(/\s+/g, "-")}` }
-    }
-    return best
-  }, [now])
-}
 
 function RotatingWord() {
   const [i, setI] = useState(0)
@@ -80,42 +46,12 @@ function RotatingWord() {
   )
 }
 
-function CountUp({ to, start }: { to: number; start: boolean }) {
-  const [v, setV] = useState(0)
-  useEffect(() => {
-    if (!start) return
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(to); return }
-    const t0 = performance.now(), dur = 1200
-    let raf = 0
-    const tick = (t: number) => {
-      const p = Math.min(1, (t - t0) / dur)
-      setV(Math.round(to * (1 - Math.pow(1 - p, 3))))
-      if (p < 1) raf = requestAnimationFrame(tick)
-    }
-    raf = requestAnimationFrame(tick)
-    const done = window.setTimeout(() => setV(to), dur + 200)
-    return () => { cancelAnimationFrame(raf); window.clearTimeout(done) }
-  }, [to, start])
-  return <>{start ? v : to}</>
-}
-
-export default function HeroSection({ proof }: { proof: HeroProof }) {
-  const STATS = useMemo(() => buildStats(proof), [proof])
+export default function HeroSection(_props: { proof?: HeroProof } = {}) {
   const router = useRouter()
   const [q, setQ] = useState("")
   const [stream, setStream] = useState("")
   const [exam, setExam] = useState("")
-  const deadline = useNextDeadline()
 
-  const panelRef = useRef<HTMLDivElement>(null)
-  const [on, setOn] = useState(false)
-  useEffect(() => {
-    const el = panelRef.current
-    if (!el) return
-    const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { setOn(true); io.disconnect() } })
-    io.observe(el)
-    return () => io.disconnect()
-  }, [])
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -196,43 +132,6 @@ export default function HeroSection({ proof }: { proof: HeroProof }) {
           </ul>
         </div>
 
-        {/* Right: signature tools and live proof */}
-        <div ref={panelRef} className="hero-in rounded-2xl bg-[#011B40] p-5 text-white shadow-xl shadow-blue-950/20" style={{ "--i": 3 } as React.CSSProperties}>
-          <div className="flex items-center justify-between gap-2">
-            <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-100"><Sparkles className="h-3.5 w-3.5 text-[#F4604A]" aria-hidden="true" /> Only on CampusLelo</p>
-            {deadline && (
-              <Link href={deadline.href} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold text-orange-200 hover:bg-white/15">
-                <CalendarClock className="h-3 w-3" aria-hidden="true" />
-                {deadline.text} {deadline.days === 0 ? "today" : `in ${deadline.days}d`}
-              </Link>
-            )}
-          </div>
-
-          <ul className="mt-4 grid grid-cols-3 gap-2.5">
-            {SIGNATURE.map(({ label, icon: Icon, href }, i) => (
-              <li key={label} className="hero-pop" style={{ "--i": i + 3 } as React.CSSProperties}>
-                <Link href={href} className="group flex h-full flex-col items-center gap-1.5 rounded-xl bg-white/10 px-2 py-5 text-center text-xs font-semibold leading-tight ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E0170F] text-white"><Icon className="h-4 w-4" aria-hidden="true" /></span>
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <dl className="mt-4 hidden grid-cols-3 gap-2 border-t border-white/10 pt-4 sm:grid">
-            {STATS.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="text-center">
-                <dt className="sr-only">{label}</dt>
-                <dd className="flex items-center justify-center gap-1 text-lg font-extrabold leading-none"><Icon className="h-3.5 w-3.5 text-blue-200" aria-hidden="true" /><CountUp to={value} start={on} /></dd>
-                <dd className="mt-1 text-[10px] leading-tight text-blue-200" aria-hidden="true">{label}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-2 hidden items-center justify-center gap-1.5 text-[11px] text-blue-100 sm:flex">
-            <ShieldCheck className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" /> Sources checked {proof.checked}
-            <Link href="/editorial-policy" className="inline-flex items-center gap-1 font-bold text-white underline underline-offset-2"><BadgeCheck className="h-3 w-3" aria-hidden="true" />How we verify</Link>
-          </p>
-        </div>
       </div>
     </section>
   )

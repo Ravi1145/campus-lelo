@@ -1,5 +1,5 @@
 /**
- * lib/ai/prompts.ts — Structured AI prompt templates for CollegePune
+ * lib/ai/prompts.ts — Structured AI prompt templates for CampusLelo
  *
  * All prompts use structured JSON output to eliminate fragile regex parsing.
  * Templates follow the PRD Section 7.2 design.

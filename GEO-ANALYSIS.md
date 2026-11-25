@@ -79,7 +79,7 @@ The `public/robots.txt` explicitly allows:
 
 | Platform | Status | Notes |
 |----------|--------|-------|
-| Wikipedia | ❌ Not present | No CampusLelo or CollegePune Wikipedia article |
+| Wikipedia | ❌ Not present | No CampusLelo or CampusLelo Wikipedia article |
 | Reddit | ❌ Not detected | No r/pune, r/india college discussions referencing site |
 | YouTube | ❌ Not detected | No YouTube channel or video mentions |
 | LinkedIn | ❌ Not detected | No company LinkedIn page found |

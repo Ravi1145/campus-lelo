@@ -2,7 +2,7 @@
 
 Demand and difficulty are **relative estimates** from SERP observation. No SEO tool was connected (Ahrefs or Semrush would add volumes). Status: **Live** = page exists and is indexable · **Noindex** = page exists but is held back · **Planned** = needs verified data first · **Won't build** = reason given.
 
-The existing workbook (`keyword-research.json`) has 80 keywords; 14 of them are MBA/exam-related, and those are all mapped below. Its "CollegePune" title suggestions are obsolete.
+The existing workbook (`keyword-research.json`) has 80 keywords; 14 of them are MBA/exam-related, and those are all mapped below. Its "CampusLelo" title suggestions are obsolete.
 
 ## Exam information
 

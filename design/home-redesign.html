@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>CampusLelo Home Redesign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* CampusLelo home redesign (design file only; the live site code is untouched).
+   Layout concept: a student-first portal. Hero with search and a short lead card, then a proof strip, programme
+   cards, an official-fees band for MBA/PGDM, featured colleges, courses and exams as card rails, tools,
+   how it works, counselling, guides, FAQ. Palette from the logo: navy, deep navy, royal blue, red. */
+:root{
+  --navy:#012858; --deep:#011B40; --royal:#024692; --red:#E0170F; --red-d:#C90D11;
+  --ink:#0F172A; --muted:#475569; --line:#E2E8F0; --pearl:#EEF2F8; --ivory:#F7F9FC; --white:#FFFFFF;
+  --sky:#DCEBFA; --green:#0F7B4B; --amber:#B45309;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r-sm:10px; --r:16px; --r-lg:24px;
+  --shadow:0 2px 14px -6px rgba(1,40,88,.28); --shadow-lg:0 22px 50px -24px rgba(1,40,88,.45);
+  --wrap:78rem;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--royal);outline-offset:2px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+section{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red-d)}
+.eyebrow.light{color:#BBD4F5}
+h1,h2,h3{font-family:var(--display);color:var(--navy);line-height:1.12;text-wrap:balance}
+h2{font-size:clamp(1.65rem,3.4vw,2.35rem);margin-top:.5rem}
+.sub{color:var(--muted);max-width:44rem;margin-top:.6rem}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem}
+.link{font-weight:700;color:var(--royal);display:inline-flex;gap:.35rem;align-items:center}
+.link:hover{color:var(--red-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:700;border-radius:12px;padding:.8rem 1.3rem;border:0;cursor:pointer;font-family:inherit;font-size:.95rem;transition:transform .18s,background .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 22px -10px rgba(224,23,15,.7)}
+.btn-red:hover{background:var(--red-d)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--royal)}
+.btn-line{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-line:hover{background:#fff;color:var(--navy)}
+.btn-wa{background:#25D366;color:#fff}
+.chip{display:inline-block;font-size:.72rem;font-weight:700;border-radius:999px;padding:.22rem .65rem;background:#EAF1FB;color:var(--royal)}
+.chip.red{background:#FDECEB;color:var(--red-d)}
+.chip.green{background:#E6F5EE;color:var(--green)}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--line)}
+
+/* announcement bar */
+.announce{background:var(--deep);color:#DDE8F8;font-size:.82rem;text-align:center;padding:.5rem 1rem}
+.announce b{color:#fff}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .bar{display:flex;align-items:center;gap:1.5rem;height:64px}
+.logo{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--navy)}
+.logo i{color:var(--red);font-style:normal}
+.logo svg{width:34px;height:34px}
+nav.main{display:none;gap:1.6rem;margin-left:1rem;font-weight:600;font-size:.93rem;color:#1E293B}
+nav.main a:hover{color:var(--red-d)}
+.bar .push{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+.bar .btn{padding:.6rem 1.05rem;font-size:.88rem}
+@media(min-width:960px){nav.main{display:flex}}
+@media(max-width:560px){.bar .btn-navy{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--sky) 0%,#F3F8FF 70%,#fff 100%);position:relative;overflow:hidden;padding-block:clamp(2.2rem,5vw,4rem) clamp(2.5rem,5vw,3.5rem)}
+.hero:before{content:"";position:absolute;inset:auto -10% -40% auto;width:60vw;height:60vw;max-width:760px;max-height:760px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(2,70,146,.14),transparent 62%)}
+.hero:after{content:"";position:absolute;inset:-30% auto auto -10%;width:44vw;height:44vw;max-width:520px;max-height:520px;border-radius:50%;background:radial-gradient(circle at 60% 60%,rgba(224,23,15,.08),transparent 60%)}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:2rem}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.25fr .85fr;align-items:center;gap:3rem}}
+.pill{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.8rem;font-weight:700;color:var(--navy);box-shadow:var(--shadow)}
+.dot{width:8px;height:8px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 4px rgba(22,163,74,.18)}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.7rem);margin-top:1rem}
+.hero h1 em{font-style:normal;color:var(--red-d)}
+.hero p.lead{margin-top:1rem;color:#334155;font-size:1.08rem;max-width:34rem}
+.search{margin-top:1.5rem;background:#fff;border-radius:var(--r-lg);padding:.7rem;box-shadow:var(--shadow-lg);border:1px solid var(--line);display:grid;gap:.6rem}
+@media(min-width:720px){.search{grid-template-columns:1.6fr 1fr 1fr auto}}
+.search input,.search select{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:.85rem 1rem;font:inherit;font-size:.95rem;color:var(--ink)}
+.search .btn{padding-inline:1.5rem}
+.streams{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.streams a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.45rem .95rem;font-size:.86rem;font-weight:700;color:var(--navy);transition:.18s}
+.streams a:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.leadcard{background:#fff;border-radius:var(--r-lg);padding:1.4rem;box-shadow:var(--shadow-lg);border:1px solid var(--line);position:relative}
+.leadcard:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;border-radius:var(--r-lg) var(--r-lg) 0 0;background:linear-gradient(90deg,var(--red),var(--royal))}
+.leadcard h3{font-size:1.35rem;margin-top:.4rem}
+.leadcard p.s{color:var(--muted);font-size:.9rem;margin-top:.35rem}
+.leadcard form{display:grid;gap:.7rem;margin-top:1rem}
+.leadcard label{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#334155}
+.leadcard input,.leadcard select{width:100%;margin-top:.25rem;border:1px solid var(--line);border-radius:12px;padding:.8rem .95rem;font:inherit}
+.phone{display:flex}
+.phone span{display:flex;align-items:center;padding:0 .8rem;border:1px solid var(--line);border-right:0;border-radius:12px 0 0 12px;background:var(--ivory);font-weight:700;margin-top:.25rem;font-size:.9rem}
+.phone input{border-radius:0 12px 12px 0}
+.consent{display:flex;gap:.6rem;font-size:.76rem;color:var(--muted);line-height:1.45}
+.consent input{width:auto;margin-top:.15rem;flex:none}
+.leadcard .note{display:flex;gap:.45rem;align-items:center;font-size:.76rem;color:var(--muted);margin-top:.2rem}
+
+/* proof strip */
+.proof{background:var(--navy);color:#fff;padding-block:1.2rem}
+.proof ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(min-width:800px){.proof ul{grid-template-columns:repeat(4,1fr)}}
+.proof li{display:flex;gap:.75rem;align-items:center}
+.proof svg{width:30px;height:30px;flex:none;color:#fff;opacity:.9}
+.proof b{display:block;font-size:1.05rem;line-height:1.2}
+.proof span{font-size:.78rem;color:#BBD4F5}
+
+/* programme cards */
+.programmes{background:var(--ivory)}
+.pgrid{display:grid;gap:.9rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.pgrid{grid-template-columns:repeat(4,1fr)}}
+.pcard{display:flex;flex-direction:column;gap:.5rem;padding:1.1rem;border-radius:var(--r);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.pcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(1,40,88,.3)}
+.pcard .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#EAF1FB;color:var(--royal)}
+.pcard.feat{grid-column:span 2;background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;border:0}
+.pcard.feat .ic{background:rgba(255,255,255,.14);color:#fff}
+.pcard.feat h3{color:#fff}
+.pcard.feat p{color:#CFE0F6}
+.pcard h3{font-size:1.15rem}
+.pcard p{font-size:.84rem;color:var(--muted);line-height:1.4}
+.pcard .go{margin-top:auto;font-size:.85rem;font-weight:800;color:var(--red-d);display:inline-flex;gap:.3rem;align-items:center}
+.pcard.feat .go{color:#fff}
+.pcard svg{width:24px;height:24px}
+
+/* MBA band */
+.band{background:var(--navy);color:#fff}
+.band .wrap{display:grid;gap:2rem}
+@media(min-width:960px){.band .wrap{grid-template-columns:1fr 1.1fr;align-items:start;gap:3rem}}
+.band h2{color:#fff}
+.band p{color:#CFE0F6}
+.band .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.band .stats{display:grid;gap:.7rem;margin-top:1.4rem;grid-template-columns:repeat(3,1fr)}
+.band .stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:.8rem}
+.band .stats b{display:block;font-size:1.25rem;font-family:var(--display)}
+.band .stats span{font-size:.74rem;color:#BBD4F5;line-height:1.3;display:block}
+.fees{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:1.1rem 1.2rem;box-shadow:0 30px 60px -28px rgba(0,0,0,.55)}
+.fees h3{font-family:var(--body);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:800}
+.fees ul{list-style:none;padding:0;margin-top:.4rem}
+.fees li{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:space-between;align-items:center;padding:.8rem 0;border-bottom:1px solid #EEF2F7}
+.fees li:last-child{border:0}
+.fees .n{font-weight:800;color:var(--navy)}
+.fees .n small{font-weight:600;color:#64748B}
+.fees .w{font-size:.76rem;color:#64748B;line-height:1.35}
+.fees .amt{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--red-d);text-align:right}
+.fees .lk{font-size:.76rem;font-weight:700;display:flex;gap:.8rem;justify-content:flex-end;color:var(--royal)}
+.fees .foot{font-size:.74rem;color:#64748B;margin-top:.5rem}
+
+/* featured colleges */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1.05rem;font:inherit;font-weight:700;font-size:.88rem;cursor:pointer;color:#334155}
+.tabs button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.3rem max(20px,env(safe-area-inset-right,0px)) 1rem;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px)));scrollbar-width:thin}
+.rail>*{scroll-snap-align:start;flex:none}
+@media(min-width:1100px){.rail.grid4{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin-inline:0;padding-inline:0}}
+.col{width:min(80vw,19rem);padding:1.1rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.col:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+@media(min-width:1100px){.col{width:auto}}
+.col:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--royal)}
+.col.top:before{background:var(--red)}
+.col .row{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem}
+.rank{width:46px;height:46px;border-radius:13px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.3rem}
+.top .rank{background:var(--red)}
+.col h3{font-family:var(--body);font-weight:800;font-size:.98rem;line-height:1.3;margin-top:.8rem;min-height:2.55rem;color:var(--navy)}
+.loc{font-size:.8rem;color:#64748B;margin-top:.25rem;display:flex;gap:.3rem;align-items:center}
+.meter{margin-top:.9rem;font-size:.72rem;font-weight:700;color:#64748B}
+.meter div.t{display:flex;justify-content:space-between}
+.meter .bar{height:6px;background:#EEF2F7;border-radius:99px;margin-top:.3rem;overflow:hidden}
+.meter .bar i{display:block;height:100%;background:var(--royal);border-radius:99px}
+.top .meter .bar i{background:var(--red)}
+.col .ex{margin-top:.8rem;background:var(--ivory);border-radius:10px;padding:.45rem .65rem;font-size:.76rem;font-weight:700;color:var(--royal)}
+.col .cta{margin-top:auto;padding-top:1rem;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:.88rem;color:var(--red-d)}
+.src{font-size:.78rem;color:#64748B;margin-top:.4rem}
+
+/* courses */
+.courses{background:var(--ivory)}
+.ccard{width:min(72vw,16rem);padding:1.1rem;display:flex;flex-direction:column;gap:.55rem;border-top:4px solid var(--royal)}
+.ccard.m{border-top-color:#F4A53A}.ccard.r{border-top-color:var(--red)}.ccard.v{border-top-color:#7C3AED}.ccard.g{border-top-color:#16A34A}
+.ccard h3{font-size:1.2rem}
+.ccard dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .8rem;font-size:.82rem}
+.ccard dt{color:#64748B}.ccard dd{font-weight:700;color:var(--ink)}
+.ccard .tags{display:flex;flex-wrap:wrap;gap:.35rem}
+@media(min-width:1100px){.ccard{width:auto}}
+
+/* exams */
+.ecard{width:min(78vw,18rem);padding:1.1rem;display:flex;flex-direction:column;gap:.7rem}
+.ecard .top{display:flex;gap:.8rem;align-items:center}
+.ecard .badge{width:48px;height:48px;border-radius:13px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:.8rem;text-align:center;line-height:1.05;padding:.2rem}
+.ecard h3{font-family:var(--body);font-weight:800;font-size:1.05rem}
+.ecard .fn{font-size:.76rem;color:#64748B;line-height:1.3}
+.ecard dl{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;font-size:.78rem}
+.ecard dt{color:#64748B}.ecard dd{font-weight:800;color:var(--ink);line-height:1.3;margin-top:.1rem}
+.ecard .links{margin-top:auto;display:flex;gap:.9rem;font-size:.82rem;font-weight:800;color:var(--royal)}
+.alert{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;background:#EAF1FB;border:1px solid #CFE0F6;border-radius:var(--r);padding:1rem 1.2rem;margin-top:.6rem}
+@media(min-width:1100px){.ecard{width:auto}}
+
+/* tools */
+.tools{background:var(--ivory)}
+.tgrid{display:grid;gap:.9rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+.tool{display:flex;gap:.9rem;align-items:flex-start;padding:1rem;transition:.2s}
+.tool:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.tool .ic{flex:none;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--red);color:#fff}
+.tool.b .ic{background:var(--navy)}
+.tool b{display:block;color:var(--navy);font-size:.95rem;line-height:1.25}
+.tool span{font-size:.8rem;color:var(--muted);display:block;margin-top:.15rem;line-height:1.4}
+@media(max-width:560px){.tool span{display:none}.tool{align-items:center}}
+
+/* steps */
+.steps{display:grid;gap:1rem;counter-reset:s}
+@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:1.2rem;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:1.1rem;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.9rem;box-shadow:0 6px 14px -6px rgba(224,23,15,.7)}
+.step h3{font-family:var(--body);font-weight:800;font-size:1.02rem;margin-top:.6rem}
+.step p{font-size:.86rem;color:var(--muted);margin-top:.3rem}
+
+/* counselling */
+.counsel{background:linear-gradient(135deg,var(--deep),var(--navy) 55%,var(--royal));color:#fff}
+.counsel .wrap{display:grid;gap:1.6rem}
+@media(min-width:900px){.counsel .wrap{grid-template-columns:1.2fr .8fr;align-items:center}}
+.counsel h2{color:#fff}
+.counsel p{color:#CFE0F6;margin-top:.7rem;max-width:36rem}
+.counsel ul{list-style:none;padding:0;margin-top:1rem;display:grid;gap:.5rem}
+.counsel li{display:flex;gap:.6rem;align-items:center;font-weight:600;font-size:.93rem}
+.counsel li svg{width:20px;height:20px;color:#7FE0A8;flex:none}
+.counsel .box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-lg);padding:1.3rem}
+.counsel .box .btn{width:100%;margin-top:.7rem}
+
+/* guides */
+.gcard{width:min(80vw,19rem);display:flex;flex-direction:column;overflow:hidden;transition:.2s}
+.gcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.gcard .img{height:120px;background:linear-gradient(135deg,var(--navy),var(--royal));position:relative;display:grid;place-items:center;color:rgba(255,255,255,.9)}
+.gcard .img svg{width:44px;height:44px;opacity:.85}
+.gcard .img .chip{position:absolute;left:.8rem;top:.8rem;background:#fff}
+.gcard .body{padding:1rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.gcard h3{font-family:var(--body);font-weight:800;font-size:.98rem;line-height:1.35;color:var(--navy)}
+.gcard p{font-size:.82rem;color:var(--muted);line-height:1.45}
+.gcard .more{margin-top:auto;font-size:.84rem;font-weight:800;color:var(--red-d)}
+@media(min-width:1100px){.gcard{width:auto}}
+
+/* faq */
+.faq{background:var(--ivory)}
+.faq .wrap{max-width:52rem}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-top:.7rem;box-shadow:var(--shadow)}
+summary{cursor:pointer;list-style:none;padding:1rem 1.2rem;font-weight:800;color:var(--navy);display:flex;justify-content:space-between;gap:1rem;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;background:#EAF1FB;color:var(--royal);display:grid;place-items:center;font-size:1.2rem;transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding:0 1.2rem 1.1rem;color:var(--muted);font-size:.93rem}
+
+/* final CTA + footer */
+.final{text-align:center;background:linear-gradient(180deg,#fff,var(--sky))}
+.final h2{max-width:36rem;margin-inline:auto}
+.final .btns{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.4rem}
+footer.site{background:var(--deep);color:#B6C7E3;padding-block:3rem 5.5rem;font-size:.88rem}
+footer .cols{display:grid;gap:1.8rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){footer .cols{grid-template-columns:1.4fr repeat(4,1fr)}}
+footer h4{color:#fff;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem}
+footer a{display:block;padding:.2rem 0}
+footer a:hover{color:#fff}
+footer .logo{color:#fff}
+footer .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.2rem;font-size:.78rem;color:#8FA6CB}
+
+/* phone bar */
+.pbar{position:fixed;inset:auto 0 0 0;z-index:60;display:grid;grid-template-columns:auto 1fr;gap:.5rem;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:.5rem max(12px,env(safe-area-inset-right,0px)) calc(.5rem + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.pbar .btn{height:44px;padding-inline:1rem;font-size:.9rem}
+@media(min-width:760px){.pbar{display:none}footer.site{padding-bottom:3rem}}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2.2 9 2.2 12 0v-5"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-steth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7ZM19 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 20 8-8-4-4-8 8v4h4ZM14 6l4 4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-45 12 12)"/><path d="m8.5 8.5 7 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M12 12h2M16 12h0M8 16h2M12 16h2M16 16h0"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.2-4.4A8 8 0 1 1 21 12Z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  </defs>
+</svg>
+
+<div class="announce"><b>CAT 2026 is on 29 November.</b> XAT 2027 registration closes 6 December. <a href="#exams">See all exam dates</a></div>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="CampusLelo home">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#012858"/><use href="#i-cap" x="5" y="5" width="24" height="24" style="color:#fff"/><circle cx="26" cy="9" r="3" fill="#E0170F"/></svg>
+      <span>Campus<i>Lelo</i></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#programmes">Programmes</a>
+      <a href="#fees">MBA fees</a>
+      <a href="#colleges">Top colleges</a>
+      <a href="#exams">Exams</a>
+      <a href="#tools">Tools</a>
+      <a href="#guides">Guides</a>
+    </nav>
+    <div class="push">
+      <a class="btn btn-navy" href="#tools">Free tools</a>
+      <a class="btn btn-red" href="#counselling">Free counselling</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div>
+      <span class="pill"><span class="dot"></span> Admissions 2026-27 · Pune, Noida, Delhi NCR</span>
+      <h1 id="hero-h">Find the right <em>college</em> in Pune, Noida or Delhi NCR</h1>
+      <p class="lead">Compare colleges by fees, entrance exams and cut-offs, every figure checked against the institute's own page. Your first counselling call is free.</p>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder='Try "MBA in Delhi" or "COEP"' aria-label="Search colleges, courses or exams">
+        <select aria-label="Stream"><option>Any stream</option><option>MBA / PGDM</option><option>BBA / BCA</option><option>Engineering</option><option>Medical</option><option>Law</option></select>
+        <select aria-label="Entrance exam"><option>Any exam</option><option>CAT</option><option>XAT</option><option>CMAT</option><option>MAT</option><option>MHT-CET</option><option>JEE Main</option></select>
+        <button class="btn btn-red" type="submit">Find colleges <svg width="18" height="18"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="streams" aria-label="Popular streams">
+        <a href="#programmes">MBA / PGDM</a><a href="#programmes">BBA</a><a href="#programmes">BCA</a><a href="#programmes">Engineering</a><a href="#programmes">Medical</a><a href="#programmes">Law</a><a href="#programmes">Design</a>
+      </div>
+    </div>
+
+    <aside class="leadcard" aria-labelledby="lead-h">
+      <span class="chip red">Free · takes 20 seconds</span>
+      <h3 id="lead-h">Get a shortlist that fits your score and budget</h3>
+      <p class="s">A counsellor sends colleges, fees and deadlines that match you.</p>
+      <form onsubmit="return false">
+        <div><label for="n">Name</label><input id="n" autocomplete="name" placeholder="Your name"></div>
+        <div><label for="p">WhatsApp number</label><div class="phone"><span>+91</span><input id="p" inputmode="numeric" maxlength="10" placeholder="10-digit number"></div></div>
+        <div><label for="c">Course you want</label><select id="c"><option>MBA / PGDM</option><option>BBA / BCA</option><option>B.Tech</option><option>Medical</option><option>Law</option><option>Not sure</option></select></div>
+        <label class="consent"><input type="checkbox"> I agree to be contacted on WhatsApp or phone about my shortlist. I can withdraw consent at any time.</label>
+        <button class="btn btn-red" type="submit">Get my free shortlist <svg width="18" height="18"><use href="#i-arrow"/></svg></button>
+        <p class="note"><svg width="15" height="15" style="color:#16A34A"><use href="#i-shield"/></svg> We never sell your details.</p>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- 2. PROOF -->
+<div class="proof" aria-label="Why students trust CampusLelo">
+  <div class="wrap">
+    <ul>
+      <li><svg><use href="#i-shield"/></svg><div><b>26 programmes</b><span>checked against official pages</span></div></li>
+      <li><svg><use href="#i-file"/></svg><div><b>Source + date</b><span>shown on every figure</span></div></li>
+      <li><svg><use href="#i-trophy"/></svg><div><b>NIRF 2025</b><span>ranks copied as published</span></div></li>
+      <li><svg><use href="#i-phone"/></svg><div><b>Free counselling</b><span>first call costs nothing</span></div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 3. PROGRAMMES -->
+<section class="programmes" id="programmes" aria-labelledby="prog-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Explore programmes</p><h2 id="prog-h">What do you want to study?</h2><p class="sub">Pick a programme to see colleges, entrance exams, cut-offs and how to apply.</p></div>
+      <a class="link" href="#">All programmes <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="pgrid">
+      <a class="pcard feat" href="#fees">
+        <span class="ic"><svg><use href="#i-brief"/></svg></span>
+        <h3>MBA and PGDM</h3>
+        <p>26 programmes checked in Delhi NCR, Uttar Pradesh, Uttarakhand and Pune: exams accepted, official fees and published cut-offs.</p>
+        <span class="go">Explore MBA <svg width="16" height="16"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-chart"/></svg></span><h3>BBA</h3><p>Management after 12th</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-code"/></svg></span><h3>BCA</h3><p>Computer applications</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-chip"/></svg></span><h3>Engineering</h3><p>B.Tech · MHT-CET · JEE</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-steth"/></svg></span><h3>Medical</h3><p>MBBS · BDS · NEET</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-scale"/></svg></span><h3>Law</h3><p>LLB · BA LLB · CLAT</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-pen"/></svg></span><h3>Design</h3><p>B.Des · NID · NIFT</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+      <a class="pcard" href="#"><span class="ic"><svg><use href="#i-pill"/></svg></span><h3>Pharmacy</h3><p>B.Pharm · MHT-CET</p><span class="go">Explore <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. MBA FEES BAND -->
+<section class="band" id="fees" aria-labelledby="fees-h">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow light">MBA and PGDM · Delhi NCR · 2027 intake</p>
+      <h2 id="fees-h">What the fee actually is, from the institute itself</h2>
+      <p style="margin-top:.8rem;max-width:34rem">Education websites quote different fees for the same institute, sometimes on two pages of the same site. We show only the figure each institute publishes, for the batch it names, and say what it covers, so you compare like with like.</p>
+      <div class="stats"><div><b>26</b><span>programmes checked</span></div><div><b>7</b><span>institutes with fee guides</span></div><div><b>2027</b><span>intake data</span></div></div>
+      <div class="btns"><a class="btn btn-red" href="#">Read the Delhi NCR 2027 guide <svg width="18" height="18"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="#counselling">Get a free shortlist</a></div>
+    </div>
+    <div class="fees">
+      <h3>Official fees by institute</h3>
+      <ul>
+        <li><div><div class="n">MDI Gurgaon <small>· Gurugram</small></div><div class="w">Two years, includes boarding and lodging · 2027-29</div></div><div><div class="amt">Rs 26.55 lakh</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+        <li><div><div class="n">FORE School of Management <small>· Delhi</small></div><div class="w">Self-sponsored; hostel not mentioned on the page</div></div><div><div class="amt">Rs 23.24 lakh</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+        <li><div><div class="n">IMT Ghaziabad <small>· Ghaziabad</small></div><div class="w">Two years, includes boarding and lodging (per IMT) · 2027-29</div></div><div><div class="amt">Rs 23.00 lakh</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+        <li><div><div class="n">IIFT (MBA IB) <small>· Delhi</small></div><div class="w">Tuition and charges; hostel and mess extra · 2026-28</div></div><div><div class="amt">Rs 19.73 lakh</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+        <li><div><div class="n">BIMTECH <small>· Greater Noida</small></div><div class="w">Tuition only; hostel and mess extra · 2027-29</div></div><div><div class="amt">Rs 14.00 lakh</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+        <li><div><div class="n">FMS Delhi <small>· Delhi</small></div><div class="w">Four semesters, about Rs 2.6 lakh; before hostel</div></div><div><div class="amt">Rs 65,075 / sem</div><div class="lk"><a href="#">Details</a><a href="#">Source ↗</a></div></div></li>
+      </ul>
+      <p class="foot">Institutes revise fees, so confirm on the official page before you pay. IIT Delhi DMS, IMI, LBSIM and FIIB are not shown because we have not verified their totals yet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FEATURED COLLEGES -->
+<section id="colleges" aria-labelledby="col-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Featured colleges</p><h2 id="col-h">Highest-ranked colleges in India, <span style="color:var(--red-d)">NIRF 2025</span></h2><p class="sub">Ranks and scores are copied from the Ministry of Education's NIRF list. NIRF ranks only the institutes that took part.</p></div>
+      <a class="link" href="#">Best MBA colleges in India <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="tabs" role="tablist" aria-label="College field">
+      <button role="tab" aria-selected="true" data-tab="mba">MBA &amp; PGDM</button>
+      <button role="tab" aria-selected="false" data-tab="eng">Engineering</button>
+      <button role="tab" aria-selected="false" data-tab="med">Medical</button>
+      <button role="tab" aria-selected="false" data-tab="law">Law</button>
+    </div>
+
+    <div class="rail grid4" data-panel="mba" role="tabpanel" aria-label="MBA and PGDM, NIRF 2025">
+      <article class="card col top"><div class="row"><span class="rank">1</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Management Ahmedabad</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Ahmedabad, Gujarat</p><div class="meter"><div class="t"><span>NIRF score</span><span>83.29 / 100</span></div><div class="bar"><i style="width:83.29%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">2</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Management Bangalore</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Bengaluru, Karnataka</p><div class="meter"><div class="t"><span>NIRF score</span><span>81.56 / 100</span></div><div class="bar"><i style="width:81.56%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">3</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Management Kozhikode</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Kozhikode, Kerala</p><div class="meter"><div class="t"><span>NIRF score</span><span>79.85 / 100</span></div><div class="bar"><i style="width:79.85%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">4</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Technology Delhi</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>New Delhi, Delhi</p><div class="meter"><div class="t"><span>NIRF score</span><span>78.94 / 100</span></div><div class="bar"><i style="width:78.94%"></i></div></div><p class="ex">Exam: CAT</p><div class="cta"><a href="#">View details</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">5</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Management Lucknow</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Lucknow, Uttar Pradesh</p><div class="meter"><div class="t"><span>NIRF score</span><span>77.97 / 100</span></div><div class="bar"><i style="width:77.97%"></i></div></div><p class="ex">Exam: CAT</p><div class="cta"><a href="#">View details</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">9</span><span class="chip">NIRF 2025</span></div><h3>Management Development Institute</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Gurugram, Haryana</p><div class="meter"><div class="t"><span>NIRF score</span><span>71.96 / 100</span></div><div class="bar"><i style="width:71.96%"></i></div></div><p class="ex">Exam: CAT</p><div class="cta"><a href="#">View details</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">17</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Foreign Trade</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>New Delhi, Delhi</p><div class="meter"><div class="t"><span>NIRF score</span><span>62.93 / 100</span></div><div class="bar"><i style="width:62.93%"></i></div></div><p class="ex">Exam: CAT</p><div class="cta"><a href="#">View details</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">30</span><span class="chip">NIRF 2025</span></div><h3>Institute of Management Technology</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Ghaziabad, Uttar Pradesh</p><div class="meter"><div class="t"><span>NIRF score</span><span>59.85 / 100</span></div><div class="bar"><i style="width:59.85%"></i></div></div><p class="ex">Exams: CAT, XAT, GMAT</p><div class="cta"><a href="#">View details</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+    </div>
+
+    <div class="rail grid4" data-panel="eng" role="tabpanel" aria-label="Engineering, NIRF 2025" hidden>
+      <article class="card col top"><div class="row"><span class="rank">1</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Technology Madras</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Chennai, Tamil Nadu</p><div class="meter"><div class="t"><span>NIRF score</span><span>88.72 / 100</span></div><div class="bar"><i style="width:88.72%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">2</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Technology Delhi</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>New Delhi, Delhi</p><div class="meter"><div class="t"><span>NIRF score</span><span>85.74 / 100</span></div><div class="bar"><i style="width:85.74%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">3</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Technology Bombay</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Mumbai, Maharashtra</p><div class="meter"><div class="t"><span>NIRF score</span><span>83.65 / 100</span></div><div class="bar"><i style="width:83.65%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col"><div class="row"><span class="rank">4</span><span class="chip">NIRF 2025</span></div><h3>Indian Institute of Technology Kanpur</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Kanpur, Uttar Pradesh</p><div class="meter"><div class="t"><span>NIRF score</span><span>81.82 / 100</span></div><div class="bar"><i style="width:81.82%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+    </div>
+
+    <div class="rail grid4" data-panel="med" role="tabpanel" aria-label="Medical, NIRF 2025" hidden>
+      <article class="card col top"><div class="row"><span class="rank">1</span><span class="chip">NIRF 2025</span></div><h3>All India Institute of Medical Sciences, Delhi</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>New Delhi, Delhi</p><div class="meter"><div class="t"><span>NIRF score</span><span>91.80 / 100</span></div><div class="bar"><i style="width:91.8%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">2</span><span class="chip">NIRF 2025</span></div><h3>Post Graduate Institute of Medical Education and Research</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Chandigarh</p><div class="meter"><div class="t"><span>NIRF score</span><span>82.58 / 100</span></div><div class="bar"><i style="width:82.58%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">3</span><span class="chip">NIRF 2025</span></div><h3>Christian Medical College</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Vellore, Tamil Nadu</p><div class="meter"><div class="t"><span>NIRF score</span><span>76.48 / 100</span></div><div class="bar"><i style="width:76.48%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+    </div>
+
+    <div class="rail grid4" data-panel="law" role="tabpanel" aria-label="Law, NIRF 2025" hidden>
+      <article class="card col top"><div class="row"><span class="rank">1</span><span class="chip">NIRF 2025</span></div><h3>National Law School of India University</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Bengaluru, Karnataka</p><div class="meter"><div class="t"><span>NIRF score</span><span>82.97 / 100</span></div><div class="bar"><i style="width:82.97%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">2</span><span class="chip">NIRF 2025</span></div><h3>National Law University</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>New Delhi, Delhi</p><div class="meter"><div class="t"><span>NIRF score</span><span>80.00 / 100</span></div><div class="bar"><i style="width:80%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+      <article class="card col top"><div class="row"><span class="rank">3</span><span class="chip">NIRF 2025</span></div><h3>Nalsar University of Law</h3><p class="loc"><svg width="14" height="14" style="color:var(--red-d)"><use href="#i-pin"/></svg>Hyderabad, Telangana</p><div class="meter"><div class="t"><span>NIRF score</span><span>79.50 / 100</span></div><div class="bar"><i style="width:79.5%"></i></div></div><div class="cta"><a href="#">Free guidance</a><svg width="18" height="18"><use href="#i-arrow"/></svg></div></article>
+    </div>
+    <p class="src">Source: NIRF 2025 India Rankings (nirfindia.org), checked 21 Oct 2026. Swipe sideways on a phone.</p>
+  </div>
+</section>
+
+<!-- 6. FEATURED COURSES -->
+<section class="courses" aria-labelledby="crs-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Featured courses</p><h2 id="crs-h">Course length and the exams usually asked</h2><p class="sub">Fees and salaries are left out until each figure has a source.</p></div>
+      <a class="link" href="#">View all courses <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="rail grid4">
+      <article class="card ccard m"><span class="chip">PG · Management</span><h3>MBA</h3><dl><dt>Length</dt><dd>2 years</dd><dt>Stream</dt><dd>Management</dd></dl><div class="tags"><span class="chip">CAT</span><span class="chip">XAT</span><span class="chip">CMAT</span><span class="chip">MAT</span></div><a class="link" href="#" style="margin-top:auto">View course <svg width="16" height="16"><use href="#i-arrow"/></svg></a></article>
+      <article class="card ccard m"><span class="chip">PG · Management</span><h3>PGDM</h3><dl><dt>Length</dt><dd>2 years</dd><dt>Stream</dt><dd>Management</dd></dl><div class="tags"><span class="chip">CAT</span><span class="chip">XAT</span><span class="chip">GMAT</span></div><a class="link" href="#" style="margin-top:auto">View course <svg width="16" height="16"><use href="#i-arrow"/></svg></a></article>
+      <article class="card ccard"><span class="chip">UG · Engineering</span><h3>B.Tech</h3><dl><dt>Length</dt><dd>4 years</dd><dt>Stream</dt><dd>Engineering</dd></dl><div class="tags"><span class="chip">MHT-CET</span><span class="chip">JEE Main</span></div><a class="link" href="#" style="margin-top:auto">View course <svg width="16" height="16"><use href="#i-arrow"/></svg></a></article>
+      <article class="card ccard r"><span class="chip red">UG · Medical</span><h3>MBBS</h3><dl><dt>Length</dt><dd>5.5 years</dd><dt>Stream</dt><dd>Medical</dd></dl><div class="tags"><span class="chip">NEET UG</span></div><a class="link" href="#" style="margin-top:auto">View course <svg width="16" height="16"><use href="#i-arrow"/></svg></a></article>
+      <article class="card ccard v"><span class="chip">UG · Law</span><h3>BA LLB</h3><dl><dt>Length</dt><dd>5 years</dd><dt>Stream</dt><dd>Law</dd></dl><div class="tags"><span class="chip">CLAT</span></div><a class="link" href="#" style="margin-top:auto">View course <svg width="16" height="16"><use href="#i-arrow"/></svg></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FEATURED EXAMS -->
+<section id="exams" aria-labelledby="ex-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Featured exams</p><h2 id="ex-h">Upcoming MBA and PGDM entrance exams</h2><p class="sub">Dates, eligibility, pattern and the colleges that accept each exam, every fact linked to its official source.</p></div>
+      <a class="link" href="#">MBA exam calendar <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="rail grid4">
+      <article class="card ecard"><div class="top"><span class="badge">CAT</span><div><h3>CAT 2026</h3><p class="fn">Common Admission Test</p></div></div><dl><div><dt>Exam date</dt><dd>29 Nov 2026</dd></div><div><dt>Registration</dt><dd>Closed (22 Sep)</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">XAT</span><div><h3>XAT 2027</h3><p class="fn">Xavier Aptitude Test</p></div></div><dl><div><dt>Exam date</dt><dd>3 Jan 2027</dd></div><div><dt>Registration</dt><dd>Until 6 Dec 2026</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">MAT</span><div><h3>MAT December</h3><p class="fn">Management Aptitude Test</p></div></div><dl><div><dt>Exam dates</dt><dd>20 Dec (paper), 27 Dec (computer)</dd></div><div><dt>Registration</dt><dd>Closes 14 / 21 Dec</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">NMAT</span><div><h3>NMAT by GMAC</h3><p class="fn">NMIMS test, now by GMAC</p></div></div><dl><div><dt>Testing window</dt><dd>2 Nov to 20 Dec 2026</dd></div><div><dt>Registration</dt><dd>Closed (10 Oct)</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">SNAP</span><div><h3>SNAP 2026</h3><p class="fn">Symbiosis National Aptitude</p></div></div><dl><div><dt>Test dates</dt><dd>13, 19, 26 Dec 2026</dd></div><div><dt>Attempts</dt><dd>Up to three</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">CUET PG</span><div><h3>CUET (PG)</h3><p class="fn">NTA, for university MBAs</p></div></div><dl><div><dt>2027 cycle</dt><dd>Not announced yet</dd></div><div><dt>2026 exam</dt><dd>March 2026 (held)</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">GMAT</span><div><h3>GMAT Focus</h3><p class="fn">Graduate Management Admission Test</p></div></div><dl><div><dt>Exam date</dt><dd>Year-round</dd></div><div><dt>Registration</dt><dd>Open throughout</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+      <article class="card ecard"><div class="top"><span class="badge">CMAT</span><div><h3>CMAT 2027</h3><p class="fn">Common Management Admission Test</p></div></div><dl><div><dt>Exam date</dt><dd>Date awaited</dd></div><div><dt>Registration</dt><dd>Not announced yet</dd></div></dl><div class="links"><a href="#">Syllabus</a><a href="#">Pattern</a><a href="#">Colleges</a></div></article>
+    </div>
+    <div class="alert"><div><b style="color:var(--navy)">Never miss an important date</b><p style="font-size:.88rem;color:var(--muted)">Get a message when an exam date changes. Separate from counselling.</p></div><a class="btn btn-navy" href="#">Get exam alerts <svg width="18" height="18"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<!-- 8. TOOLS -->
+<section class="tools" id="tools" aria-labelledby="tl-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Free tools</p><h2 id="tl-h">Check your options before you apply</h2><p class="sub">Work out what suits you, compare your score with published cut-offs and plan your dates.</p></div>
+      <a class="link" href="#">All free tools <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="tgrid">
+      <a class="card tool" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-spark"/></svg></span><div><b>Psychometric test</b><span>Find the stream that fits you</span></div></a>
+      <a class="card tool b" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-chat"/></svg></span><div><b>Career quiz</b><span>Interests mapped to careers</span></div></a>
+      <a class="card tool" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-doc"/></svg></span><div><b>Admission plan</b><span>Your dates and colleges on one page</span></div></a>
+      <a class="card tool b" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-chart"/></svg></span><div><b>MBA cut-off checker</b><span>Your score vs published cut-offs</span></div></a>
+      <a class="card tool" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-table"/></svg></span><div><b>Exam acceptance table</b><span>Which colleges take your exam</span></div></a>
+      <a class="card tool b" href="#"><span class="ic"><svg width="22" height="22"><use href="#i-calc"/></svg></span><div><b>ROI calculator</b><span>Fees against expected returns</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. HOW IT WORKS -->
+<section aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow">How CampusLelo works</p><h2 id="how-h">From a long list to a short list in four steps</h2></div></div>
+    <div class="steps">
+      <div class="card step"><h3>Tell us your goal</h3><p>Course, exam score, budget and city. Twenty seconds, no account.</p></div>
+      <div class="card step"><h3>See checked facts</h3><p>Fees, exams and cut-offs from official pages, each with its date and source.</p></div>
+      <div class="card step"><h3>Shortlist with a counsellor</h3><p>A real person helps you compare options and deadlines. The first call is free.</p></div>
+      <div class="card step"><h3>Apply with confidence</h3><p>Register for the right exam and apply to each institute before its deadline.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. COUNSELLING -->
+<section class="counsel" id="counselling" aria-labelledby="co-h">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow light">Free counselling</p>
+      <h2 id="co-h">Not sure where to apply? Talk to a person.</h2>
+      <p>Tell us your exam, score and budget. A counsellor will share realistic options and deadlines, and tell you plainly when a college is out of reach.</p>
+      <ul>
+        <li><svg><use href="#i-check"/></svg>Free first call, no obligation</li>
+        <li><svg><use href="#i-check"/></svg>Advice built on official fees and cut-offs</li>
+        <li><svg><use href="#i-check"/></svg>We contact you only with your consent</li>
+      </ul>
+    </div>
+    <div class="box">
+      <b style="font-size:1.1rem">Choose how to reach us</b>
+      <a class="btn btn-wa" href="#"><svg width="20" height="20"><use href="#i-chat"/></svg> Chat on WhatsApp</a>
+      <a class="btn btn-red" href="#"><svg width="20" height="20"><use href="#i-phone"/></svg> Request a free call</a>
+      <a class="btn btn-line" href="#">Take the 4-question finder</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11. GUIDES -->
+<section id="guides" aria-labelledby="gd-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">Latest guides</p><h2 id="gd-h">Read before you decide</h2><p class="sub">Sourced guides on fees, exams and deadlines, reviewed by the CampusLelo editorial team.</p></div>
+      <a class="link" href="#">All guides <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="rail grid4">
+      <a class="card gcard" href="#"><div class="img"><span class="chip">MBA</span><svg><use href="#i-doc"/></svg></div><div class="body"><h3>MBA in Delhi NCR 2027: colleges, fees, cut-offs, admission</h3><p>Official fees, published cut-offs and accepted exams for MDI, IMT, FORE, BIMTECH and more.</p><span class="more">Read the guide →</span></div></a>
+      <a class="card gcard" href="#"><div class="img"><span class="chip">Fees</span><svg><use href="#i-calc"/></svg></div><div class="body"><h3>MDI Gurgaon fees 2027-29: PGDM fee structure explained</h3><p>Rs 26.55 lakh including hostel. Year-wise split, what it covers and the deadline.</p><span class="more">Read the guide →</span></div></a>
+      <a class="card gcard" href="#"><div class="img"><span class="chip">Exams</span><svg><use href="#i-cal"/></svg></div><div class="body"><h3>XAT 2027 colleges in Delhi NCR: list, dates and deadline</h3><p>Which programmes list XAT, and the 6 December registration deadline.</p><span class="more">Read the guide →</span></div></a>
+      <a class="card gcard" href="#"><div class="img"><span class="chip">Deadlines</span><svg><use href="#i-cal"/></svg></div><div class="body"><h3>MBA and PGDM application deadlines for 2027</h3><p>MDI 28 November, IMT 27 November, and the exam dates that follow.</p><span class="more">Read the guide →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FAQ -->
+<section class="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <p class="eyebrow">Questions students ask us</p>
+    <h2 id="fq-h">Quick answers</h2>
+    <details open><summary>What is CampusLelo?</summary><p>CampusLelo is a college and MBA admissions guide for Pune, Noida, Delhi NCR, Uttar Pradesh and Uttarakhand. It shows fees, entrance exams and cut-offs that are checked against the institute's own pages, and offers a free counselling call.</p></details>
+    <details><summary>Is the counselling really free?</summary><p>Yes. The first counselling call is free. We contact you only after you tick the consent box, and you can withdraw consent at any time.</p></details>
+    <details><summary>Where do your fees and cut-offs come from?</summary><p>From each institute's official page or brochure, and from exam bodies' own sites. Every figure shows its source and the date we checked it. If we cannot confirm a figure, we leave it out.</p></details>
+    <details><summary>Can I get an MBA in Delhi without CAT?</summary><p>Some programmes list other exams such as XAT, GMAT, CMAT or MAT. FMS, IIFT, IIT Delhi DMS and MDI use CAT for most applicants. See the without-CAT guide for the full picture.</p></details>
+    <details><summary>Is a PGDM the same as an MBA?</summary><p>Not automatically. An MBA is a university degree; a PGDM is a diploma from an AICTE-approved institute, and equivalence depends on the programme. Ask the institute for its equivalence letter if it matters to you.</p></details>
+  </div>
+</section>
+
+<!-- 13. FINAL CTA -->
+<section class="final" aria-labelledby="fin-h">
+  <div class="wrap">
+    <h2 id="fin-h">Ready for a shortlist built around you?</h2>
+    <p class="sub" style="margin-inline:auto">Tell us your exam, score and budget. It takes twenty seconds and the first call is free.</p>
+    <div class="btns"><a class="btn btn-red" href="#top">Get my free shortlist <svg width="18" height="18"><use href="#i-arrow"/></svg></a><a class="btn btn-navy" href="#fees">See official MBA fees</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#fff" fill-opacity=".12"/><use href="#i-cap" x="5" y="5" width="24" height="24" style="color:#fff"/><circle cx="26" cy="9" r="3" fill="#E0170F"/></svg><span>Campus<i>Lelo</i></span></a>
+        <p style="margin-top:.8rem;max-width:20rem">Pehle dekho. Samjho. Phir choose karo. Checked facts and free counselling for college admissions.</p>
+      </div>
+      <div><h4>MBA and PGDM</h4><a href="#">MBA in Delhi NCR</a><a href="#">MBA fees 2027</a><a href="#">MBA without CAT</a><a href="#">Exam calendar</a><a href="#">Cut-off checker</a></div>
+      <div><h4>Colleges</h4><a href="#">Top colleges (NIRF)</a><a href="#">Colleges in Noida</a><a href="#">Colleges in Pune</a><a href="#">Compare colleges</a></div>
+      <div><h4>Exams</h4><a href="#">CAT</a><a href="#">XAT</a><a href="#">CMAT</a><a href="#">MAT</a><a href="#">CUET PG</a></div>
+      <div><h4>CampusLelo</h4><a href="#">About</a><a href="#">Editorial policy</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <p class="copy">© 2026 CampusLelo. Fees, cut-offs and dates change every cycle; confirm on the institute's and exam body's official site before you apply or pay.</p>
+  </div>
+</footer>
+
+<nav class="pbar" aria-label="Quick help">
+  <a class="btn btn-wa" href="#"><svg width="18" height="18"><use href="#i-chat"/></svg> WhatsApp</a>
+  <a class="btn btn-red" href="#counselling">Free counselling <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+</nav>
+
+<script>
+/* Tabs for featured colleges. Every panel is in the HTML; inactive ones are only hidden. */
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+      document.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.getAttribute('data-panel')!==t.getAttribute('data-tab')});
+    });
+  });
+})();
+</script>
+</body>
+</html>

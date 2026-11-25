@@ -93,7 +93,7 @@ The codebase is strong on SEO. It has 166 indexable routes, a dense programmatic
 | Check | Status | Details |
 |---|---|---|
 | Production domain serves the app | **Fail** | campuslelo.com serves the GoDaddy placeholder (H1 "Launching Soon", about 85 words, no meta description). Its live sitemap is GoDaddy's (`sitemap.website.xml`). |
-| Old-domain migration | **Fail** | collegepune.com returns 200 with the old "CollegePune" build and ranks on page 1. There are no 301s to campuslelo.com. |
+| Old-domain migration | **Fail** | collegepune.com returns 200 with the old "CampusLelo" build and ranks on page 1. There are no 301s to campuslelo.com. |
 | HTTPS / www → apex | Pass | `www.campuslelo.com` → apex; HSTS is configured in `next.config.ts`. |
 | robots.txt | **Warning** | `src/app/robots.ts` **and** `public/robots.txt` both exist and conflict. `robots.ts` disallows `/_next/`, which blocks the JS and CSS Google needs to render pages. |
 | XML sitemap | **Warning** | Dynamic and thorough, but it has 4 URLs that 301 and 13 URLs with no page (`/colleges-aundh-pune`, `/colleges-baner-pune`, `/colleges-kharadi-pune`, `/colleges-nigdi-pune`, 9 Noida URLs). `/alumni`, `/mba-in-pune` and `/pgdm-in-pune` are missing from it. Blog `lastModified` is always `new Date()`. |

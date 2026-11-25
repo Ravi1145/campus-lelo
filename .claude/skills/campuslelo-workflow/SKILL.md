@@ -1,9 +1,9 @@
 ---
-name: collegepune-workflow
-description: Use for any CollegePune-specific development task — adding colleges, blogs, admin features, SEO pages, or DB schema changes
+name: campuslelo-workflow
+description: Use for any CampusLelo-specific development task — adding colleges, blogs, admin features, SEO pages, or DB schema changes
 ---
 
-# CollegePune Development Workflow
+# CampusLelo Development Workflow
 
 ## Stack Cheatsheet
 

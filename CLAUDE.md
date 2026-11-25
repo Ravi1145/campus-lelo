@@ -2,10 +2,10 @@
 
 ## Project Overview
 
-**CampusLelo** is an AI-powered Pune college discovery portal (rebranded from CollegePune).
+**CampusLelo** is an AI-powered Pune college discovery portal (rebranded from CampusLelo).
 
 - **Stack:** Next.js 16 (App Router), Tailwind CSS v4, Claude AI (no separate backend)
-- **Location:** `D:\collegepune\college-pune`
+- **Location:** `D:\campuslelo\campuslelo-web`
 - **Live URL:** https://campuslelo.com (previously https://collegepune.com)
 - **Data:** Static files in `src/data/` — no Express backend required
 

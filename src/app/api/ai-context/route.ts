@@ -5,7 +5,7 @@
  * - AI crawlers (Perplexity, Claude, ChatGPT) fetching structured site context
  * - AI agents querying live college data
  * - RAG (Retrieval Augmented Generation) pipelines
- * - Developers building on top of CollegePune data
+ * - Developers building on top of CampusLelo data
  *
  * Returns: site overview, top colleges by stream, exam calendar, quick stats
  */

@@ -1,5 +1,5 @@
 /**
- * db.ts — CollegePune data layer
+ * db.ts — CampusLelo data layer
  *
  * Read operations  → Supabase first, static fallback
  * Write operations → Supabase (leads, enquiries, bookings) + email notification

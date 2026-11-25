@@ -1,5 +1,5 @@
 /**
- * CollegePune Design System Tokens
+ * CampusLelo Design System Tokens
  * Single source of truth for colours, fonts, spacing, and shadows.
  * Import this wherever you need design constants — Tailwind tokens are
  * also configured to use these values via tailwind.config.ts.
@@ -8,7 +8,7 @@
 export const tokens = {
   colors: {
     // ── Core brand — matches globals.css @theme CSS variables ──
-    primary:   "#011B40",   // CollegePune Navy — header, footer, dark CTAs (CSS: --color-primary)
+    primary:   "#011B40",   // CampusLelo Navy — header, footer, dark CTAs (CSS: --color-primary)
     secondary: "#024692",   // Navy medium — card headers, AI sections (CSS: --color-secondary)
     accent:    "#FF6B2C",   // Admission Orange — primary CTA buttons, highlights (CSS: --color-accent)
     // ── Semantic ──

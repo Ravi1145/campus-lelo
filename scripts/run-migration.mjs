@@ -290,7 +290,7 @@ async function section10_verify() {
 // ── Main ──────────────────────────────────────────────────────────────────
 async function main() {
   console.log('╔══════════════════════════════════════════════════════════════╗')
-  console.log('║   CollegePune — Supabase Migration Runner                    ║')
+  console.log('║   CampusLelo — Supabase Migration Runner                    ║')
   console.log('║   Project: tfdcpljbozadshhmvhfk                              ║')
   console.log('╚══════════════════════════════════════════════════════════════╝')
 

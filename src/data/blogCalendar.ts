@@ -1,5 +1,5 @@
 /**
- * CollegePune Blog Content Calendar — 20 High-Opportunity Topics
+ * CampusLelo Blog Content Calendar — 20 High-Opportunity Topics
  * Sorted by: publish priority (week) + estimated monthly search volume
  *
  * HOW TO PUBLISH:
