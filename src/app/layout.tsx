@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Plus_Jakarta_Sans, DM_Sans, Fraunces } from "next/font/google"
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
@@ -12,14 +12,6 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
   display: "swap",        // avoids render-blocking, text shows in fallback font while custom loads
   preload: true,
-})
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  preload: false,         // secondary font, no need to block on it
 })
 
 // Serif for page titles (h1, h2): gives the pages a printed, editorial feel next to the sans body text
@@ -126,7 +118,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-IN" className={`${plusJakarta.variable} ${dmSans.variable} ${fraunces.variable} h-full antialiased`}>
+    <html lang="en-IN" className={`${plusJakarta.variable} ${fraunces.variable} h-full antialiased`}>
       <head>
         {/* Google Tag Manager — loads GA4 (G-8WS0ZBG1VD) via GTM; no separate gtag/js needed */}
         <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -163,7 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs Full: Full AI reference" />
         <link rel="alternate" type="application/json" href="/api/ai-context" title="Structured JSON context for AI agents" />
       </head>
-      <body className="min-h-full flex flex-col font-dm-sans">
+      <body className="min-h-full flex flex-col">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8MN7G8X" title="Google Tag Manager" height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
