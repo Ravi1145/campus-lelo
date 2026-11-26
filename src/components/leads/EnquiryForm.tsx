@@ -140,8 +140,6 @@ export default function EnquiryForm({ collegeName, collegeSlug, courses, isOpen,
 
       {/* Modal */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
-        {/* Orange top bar */}
-        <div className="h-2 bg-gradient-to-r from-orange-400 to-orange-600 rounded-t-2xl" />
 
         {/* Header */}
         <div className="px-6 pt-5 pb-4 border-b border-gray-100">

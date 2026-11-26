@@ -115,7 +115,7 @@ export default function MbaCounsellingPage() {
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-14 sm:px-6 sm:py-20">
         {/* Direct answer */}
-        <section aria-label="Quick answer" className="quick-answer -mt-6 rounded-2xl border-l-4 border-[#E0170F] bg-white p-6 shadow-sm ring-1 ring-gray-200 sm:p-7">
+        <section aria-label="Quick answer" className="quick-answer -mt-6 rounded-2xl bg-white ring-1 ring-gray-200 p-6 shadow-sm ring-1 ring-gray-200 sm:p-7">
           <p className="text-xs font-bold uppercase tracking-wider text-[#C90D11]">Quick answer</p>
           <p className="mt-2 text-base leading-relaxed text-gray-800 sm:text-lg">{MBA_QUICK_ANSWER}</p>
           <p className="mt-3 text-xs text-gray-600">Last reviewed <time dateTime={MBA_COUNSELLING_UPDATED}>{new Date(MBA_COUNSELLING_UPDATED).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</time></p>

@@ -7,21 +7,17 @@ import HeroSection from "@/components/home/HeroSection"
 import { programAdmissions } from "@/data/mba/programAdmissions"
 import { publishedCutoffs } from "@/data/mba/cutoffs"
 import { mbaExams } from "@/data/mba/exams"
-import BrowseByStream from "@/components/home/BrowseByStream"
+import StreamCourseFinder from "@/components/home/StreamCourseFinder"
 import ExamGuidesBand from "@/components/home/ExamGuidesBand"
-import FeaturedColleges from "@/components/home/FeaturedColleges"
-import MbaFocusBand from "@/components/home/MbaFocusBand"
-import InlineLeadForm from "@/components/leads/InlineLeadForm"
+import ExploreCards from "@/components/home/ExploreCards"
+import FindNearYou from "@/components/home/FindNearYou"
+import FeaturedPuneColleges from "@/components/home/FeaturedPuneColleges"
 import FeaturedCourses from "@/components/home/FeaturedCourses"
 
 // ── Below-fold sections (lazy load — don't block initial paint) ───────────────
-const AIFinderBand        = dynamic(() => import("@/components/home/AIFinderBand"))
-const HowItWorks          = dynamic(() => import("@/components/home/HowItWorks"))
 const HomepageNewsSection = dynamic(() => import("@/components/home/HomepageNewsSection"))
-const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"))
 const FAQSection          = dynamic(() => import("@/components/home/FAQSection"))
 import NextSteps from "@/components/seo/NextSteps"
-import WhatIsCampusLelo from "@/components/home/WhatIsCampusLelo"
 import { homeFaqs } from "@/data/homeFaqs"
 import { generateMetadata as genMeta, generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema, generateLocalBusinessSchema, generateItemListSchema } from "@/lib/seo"
 import { safeJsonLd } from "@/lib/jsonld"
@@ -95,7 +91,7 @@ export default function HomePage() {
           dateModified: latestCheck,
           isPartOf: { "@id": `${BASE_URL}/#website` },
           publisher: { "@id": `${BASE_URL}/#organization` },
-          speakable: { "@type": "SpeakableSpecification", cssSelector: ["#hero-heading", "#what-is-q", ".quick-answer"] },
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["#hero-heading"] },
         }) }}
       />
       <script
@@ -125,46 +121,25 @@ export default function HomePage() {
         {/* 1. Hero */}
         <HeroSection proof={proof} />
 
-        {/* 2. Quick lead capture right under the hero: the first thing most visitors can act on */}
-        <section aria-label="Free admission shortlist" className="mx-auto max-w-[calc(var(--container-7xl)+6rem)] px-5 pt-6 sm:px-8 lg:px-12">
-          <InlineLeadForm context="home-hero" compact />
-        </section>
+        {/* 2. Four doors: colleges, exams, courses, predictor */}
+        <ExploreCards />
 
+        {/* 3. Featured colleges */}
+        <FeaturedPuneColleges />
 
+        {/* 4. Find colleges by city */}
+        <FindNearYou />
 
-        {/* 3. The main audience first: MBA and PGDM in Delhi NCR, with the institutes' own fees */}
-        <MbaFocusBand />
-
-        {/* 4. Highest-ranked colleges (NIRF 2025) */}
-        <FeaturedColleges />
-
-        {/* 5. Browse by stream, courses and exams */}
-        <BrowseByStream />
+        {/* 5. Courses and exams, then the stream and course finder */}
         <FeaturedCourses />
         <ExamGuidesBand />
+        <StreamCourseFinder />
 
-
-        {/* 6. AI Finder band */}
-        <AIFinderBand />
-
-        {/* 7. How it works */}
-        <HowItWorks />
-
-        {/* Latest blog posts and the admission calendar */}
+        {/* 5. Latest guides and the admission calendar */}
         <HomepageNewsSection />
 
-        {/* Comparison tools and counselling (free call, video session) */}
-        <TestimonialsSection />
-
-
-
-
-        {/* 11. FAQ + Final CTA */}
+        {/* 6. FAQ + Final CTA */}
         <FAQSection />
-
-
-        {/* A short, self-contained answer to "What is CampusLelo?" (what assistants and snippets quote) */}
-        <WhatIsCampusLelo />
 
         {/* 14. Explore: plain links to sections that otherwise have few inbound links */}
         <NextSteps

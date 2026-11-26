@@ -236,7 +236,7 @@ export default function RegionMbaPage({ path }: { path: string }) {
             </ol>
           </section>
 
-          <section aria-labelledby="unv-h" className="rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-5">
+          <section aria-labelledby="unv-h" className="rounded-2xl bg-gray-50 p-5 ring-1 ring-gray-200">
             <h2 id="unv-h" className="text-lg font-extrabold text-amber-950">What we have not verified yet</h2>
             <p className="mt-2 text-sm leading-relaxed text-amber-950">
               This page lists {programmes.length} programme{programmes.length === 1 ? "" : "s"}, not every college in {placeIn}. Many other institutes exist, and fees, placement figures and direct-admission seats are not shown here because we cannot source them yet.

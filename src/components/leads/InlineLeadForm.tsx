@@ -82,7 +82,6 @@ export default function InlineLeadForm({ context, compact = false }: InlineLeadF
 
   return (
     <section aria-label="Get a free college shortlist" className="relative overflow-hidden rounded-2xl bg-white shadow-md shadow-blue-950/5 ring-1 ring-gray-200">
-      <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-[#E0170F] to-[#024692]" />
       <div className="grid gap-5 p-5 pl-7 lg:grid-cols-[0.75fr_1.6fr] lg:items-center lg:gap-8 lg:p-6 lg:pl-8">
         <div>
           <p className="text-lg font-extrabold leading-snug text-[#012858]">Get a shortlist that fits your budget</p>

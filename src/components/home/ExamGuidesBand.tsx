@@ -7,7 +7,6 @@ import Reveal from "./Reveal"
 // quick links, all read from the sourced data in src/data/mba/exams.ts. No dates are typed here.
 
 const ORDER = ["cat", "nmat", "snap", "mat", "xat", "cmat", "mah-mba-cet", "atma", "gmat"]
-const STRIPE = ["#E0170F", "#024692", "#F4A53A"]
 const BADGE: Record<string, string> = { "mah-mba-cet": "MAH CET" }
 
 // Exams whose listed dates are a previous cycle or past sessions: say what is true now.
@@ -54,21 +53,20 @@ const PILLS = [
 ]
 
 const SHORTCUTS = [
-  { href: "/my-admission-plan", title: "My admission plan", sub: "Dates and colleges on one page", icon: ClipboardList, tone: "bg-emerald-50 text-emerald-700" },
-  { href: "/mba-cutoff-checker", title: "MBA cut-off checker", sub: "Your percentile vs published minimums", icon: TrendingUp, tone: "bg-blue-50 text-blue-700" },
-  { href: "/mba-exam-acceptance", title: "Top colleges by exam", sub: "Which colleges list your exam", icon: GraduationCap, tone: "bg-amber-50 text-amber-700" },
-  { href: "/exams", title: "Syllabus and pattern", sub: "Every exam guide in one place", icon: ListChecks, tone: "bg-violet-50 text-violet-700" },
+  { href: "/my-admission-plan", title: "My admission plan", sub: "Dates and colleges on one page", icon: ClipboardList, tone: "bg-gray-50 text-[#024692]" },
+  { href: "/mba-cutoff-checker", title: "MBA cut-off checker", sub: "Your percentile vs published minimums", icon: TrendingUp, tone: "bg-gray-50 text-[#024692]" },
+  { href: "/mba-exam-acceptance", title: "Top colleges by exam", sub: "Which colleges list your exam", icon: GraduationCap, tone: "bg-gray-50 text-[#024692]" },
+  { href: "/exams", title: "Syllabus and pattern", sub: "Every exam guide in one place", icon: ListChecks, tone: "bg-gray-50 text-[#024692]" },
 ]
 
 export default function ExamGuidesBand() {
   const exams = ORDER.map((slug) => mbaExams.find((e) => e.slug === slug)).filter(Boolean) as Exam[]
   return (
-    <section aria-labelledby="exam-guides-heading" className="section-ivory px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
+    <section aria-labelledby="exam-guides-heading" className="bg-white px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item grid items-end gap-4 lg:grid-cols-[1.1fr_1fr]" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-[#024692]">Entrance exams</p>
-            <h2 id="exam-guides-heading" className="mt-2 text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Upcoming entrance exams</h2>
+            <h2 id="exam-guides-heading" className="text-2xl font-bold leading-tight text-[#012858] sm:text-3xl">Upcoming entrance exams</h2>
             <p className="mt-3 max-w-xl text-base text-gray-600">Dates, eligibility, pattern and the colleges that accept each exam, every fact linked to its official source.</p>
           </div>
           <div className="flex flex-col gap-3 rounded-2xl bg-blue-50 p-4 ring-1 ring-blue-100 sm:flex-row sm:items-center sm:justify-between">
@@ -95,7 +93,7 @@ export default function ExamGuidesBand() {
         <ul className="-mx-4 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0" aria-label="Upcoming entrance exams, scroll sideways">
           {exams.map((e, i) => (
             <li key={e.slug} className="reveal-item w-[78vw] shrink-0 snap-start sm:w-72" style={{ "--i": i + 2 } as React.CSSProperties}>
-              <article className="group relative flex h-full flex-col rounded-xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]" style={{ borderLeft: `4px solid ${STRIPE[i % 3]}` }}>
+              <article className="group relative flex h-full flex-col rounded-xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 hover:shadow-[0_10px_26px_-12px_rgba(1,40,88,0.4)]">
                 <div className="flex items-start gap-4">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#012858] px-1 text-center font-[family-name:var(--font-fraunces)] text-xs font-bold leading-tight text-white">{BADGE[e.slug] ?? e.name}</span>
                   <div className="min-w-0">

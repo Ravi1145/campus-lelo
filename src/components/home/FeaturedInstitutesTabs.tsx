@@ -55,7 +55,6 @@ export default function FeaturedInstitutesTabs({ tabs, regions }: { tabs: Tab[];
                 return (
                   <li key={`${r.rank}-${r.name}`} className="w-[78vw] shrink-0 snap-start sm:w-auto">
                     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-14px_rgba(1,40,88,0.4)] hover:ring-[#012858]/30">
-                      <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1 ${top ? "bg-[#E0170F]" : "bg-[#024692]"}`} />
                       <div className="flex items-start justify-between gap-3">
                         <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl font-[family-name:var(--font-fraunces)] text-lg font-bold text-white ${top ? "bg-[#E0170F]" : "bg-[#012858]"}`} aria-label={`NIRF rank ${r.rank}`}>{r.rank}</span>
                         <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#024692]">NIRF 2025</span>

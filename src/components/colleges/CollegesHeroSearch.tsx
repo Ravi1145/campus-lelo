@@ -19,7 +19,7 @@ export default function CollegesHeroSearch() {
 
   return (
     <div className="max-w-2xl">
-      <form onSubmit={(e) => { e.preventDefault(); go(q) }} role="search" aria-label="Search colleges" className="flex gap-2 rounded-2xl bg-white p-2 shadow-2xl shadow-black/25">
+      <form onSubmit={(e) => { e.preventDefault(); go(q) }} role="search" aria-label="Search colleges" className="flex gap-2 rounded-xl bg-white p-1.5">
         <div className="relative flex-1">
           <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" aria-hidden="true" />
           <label htmlFor="colleges-hero-q" className="sr-only">Search colleges by name, course or exam</label>
@@ -28,7 +28,7 @@ export default function CollegesHeroSearch() {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search college, course or exam, e.g. COEP, MBA, CAT"
-            className="w-full rounded-xl bg-gray-50 py-3.5 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#024692]/30"
+            className="w-full rounded-lg bg-gray-50 py-2.5 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#024692]/30"
           />
         </div>
         <button type="submit" className="group inline-flex items-center gap-2 rounded-xl bg-[#E0170F] px-5 text-sm font-bold text-white transition-colors hover:bg-[#C90D11]">
@@ -36,10 +36,10 @@ export default function CollegesHeroSearch() {
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </button>
       </form>
-      <div className="mt-3 flex flex-wrap items-center gap-2">
+      <div className="mt-2 flex flex-wrap items-center gap-1.5">
         <span className="text-xs font-semibold text-blue-200">Try:</span>
         {QUICK.map((s) => (
-          <button key={s} type="button" onClick={() => go(s)} className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/20 backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#012858]">
+          <button key={s} type="button" onClick={() => go(s)} className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/20 transition-colors hover:bg-white hover:text-[#012858]">
             {s}
           </button>
         ))}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
@@ -29,19 +29,85 @@ const STREAM_TILES = [
 
 export interface HeroProof { programmes: number; exams: number; cutoffs: number; checked: string }
 
+// Typewriter for the rest of the heading. The sentence is real text in the HTML, split into letters that are only
+// faded in, so crawlers and screen readers get it at once and the layout never jumps while it types. Runs once; with reduced motion the sentence is simply shown.
+function TypeTail({ text }: { text: string }) {
+  const [n, setN] = useState<number | null>(0) // letters start hidden; null = show everything (reduced motion)
+  const [caret, setCaret] = useState(false)
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(null); return }
+    let i = 0
+    let timer = 0
+    setCaret(true)
+    const start = window.setTimeout(() => {
+      timer = window.setInterval(() => {
+        i += 1
+        setN(i)
+        if (i >= text.length) {
+          window.clearInterval(timer)
+          window.setTimeout(() => setCaret(false), 2400)
+        }
+      }, 55)
+    }, 700)
+    return () => { window.clearTimeout(start); window.clearInterval(timer) }
+  }, [text])
+
+  let idx = 0
+  return (
+    <>
+      <span>
+        {text.split(" ").map((word, w) => (
+          <span key={w}>
+            {w > 0 && " "}
+            <span className="inline-block whitespace-nowrap">
+              {word.split("").map((ch) => {
+                const k = idx++
+                const shown = n === null || k < n
+                const isCaret = caret && n !== null && k === Math.min(n, text.length) - 1
+                return <span key={k} className={`tw-ch${shown ? " tw-on" : ""}${isCaret ? " tw-caret" : ""}`}>{ch}</span>
+              })}
+            </span>
+          </span>
+        ))}
+      </span>
+    </>
+  )
+}
+
 function RotatingWord() {
   const [i, setI] = useState(0)
+  const [widths, setWidths] = useState<number[] | null>(null)
+  const box = useRef<HTMLSpanElement>(null)
+
+  // Measure each word with the heading's own font, so the box is exactly as wide as the word on show and the
+  // rest of the sentence slides to meet it. The measuring uses a canvas, so no extra text enters the HTML.
+  useEffect(() => {
+    const measure = () => {
+      const el = box.current
+      const ctx = document.createElement("canvas").getContext("2d")
+      if (!el || !ctx) return
+      const cs = getComputedStyle(el)
+      ctx.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`
+      setWidths(ROTATING.map((w) => Math.ceil(ctx.measureText(w).width) + 6))
+    }
+    measure()
+    document.fonts?.ready.then(measure)
+  }, [])
+
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
-    const id = window.setInterval(() => setI((x) => (x + 1) % ROTATING.length), 2200)
+    const id = window.setInterval(() => setI((x) => (x + 1) % ROTATING.length), 2400)
     return () => window.clearInterval(id)
   }, [])
+
   return (
     // The word is drawn by CSS from data-w, so it is not text in the HTML: the H1 reads
     // "Find the right college in Pune, Noida or Delhi NCR" to crawlers and screen readers.
-    // The box reserves the width of the longest word, so the heading never reflows.
-    <span aria-hidden="true" className="rot-word">
+    // Before the widths are measured (server render, first paint) the box falls back to the longest word.
+    <span ref={box} aria-hidden="true" className="rot-word" style={widths ? { width: widths[i], minWidth: 0 } : undefined}>
       <span key={ROTATING[i]} data-w={ROTATING[i]} className="hero-word rot-word-inner" />
+      <span key={`u-${ROTATING[i]}`} className="rot-underline" />
     </span>
   )
 }
@@ -65,7 +131,7 @@ export default function HeroSection(_props: { proof?: HeroProof } = {}) {
   const sel = "min-h-12 w-full min-w-0 rounded-xl border border-gray-200 bg-white px-2.5 text-sm text-gray-900 focus:border-[#024692] focus:outline-none focus:ring-2 focus:ring-[#024692]/20"
 
   return (
-    <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-[#DCEBFA]">
+    <section aria-labelledby="hero-heading" className="relative flex min-h-[705px] items-center overflow-hidden bg-[#DCEBFA] lg:min-h-[480px]">
       {/* Campus photo behind the hero. A white wash on the left keeps the text readable. Decorative, so empty alt.
           Slow zoom only (no scrolling, no fade); off for reduced motion. */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
@@ -73,20 +139,16 @@ export default function HeroSection(_props: { proof?: HeroProof } = {}) {
       </div>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/94 via-white/72 to-white/8 max-lg:from-white/92 max-lg:via-white/82 max-lg:to-white/72" />
 
-      <div className="relative mx-auto grid max-w-[calc(var(--container-7xl)+6rem)] grid-cols-1 gap-4 px-5 py-7 sm:px-8 lg:gap-5 lg:px-12 lg:py-9">
+      <div className="relative mx-auto grid w-full max-w-[calc(var(--container-7xl)+6rem)] grid-cols-1 gap-4 px-5 py-7 sm:px-8 lg:gap-5 lg:px-12 lg:py-9">
         {/* Left: headline, one search row, stream shortcuts */}
         <div className="min-w-0">
           <p className="hero-in inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#012858] shadow-sm ring-1 ring-gray-200" style={{ "--i": 0 } as React.CSSProperties}>
-            <span className="relative flex h-2 w-2" aria-hidden="true">
-              <span className="insights-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            </span>
             Admissions 2026–27 · Pune, Noida, Delhi NCR
           </p>
 
           <h1 id="hero-heading" className="hero-in mt-3 font-[family-name:var(--font-fraunces)] text-[1.7rem] font-bold leading-tight tracking-tight text-[#012858] sm:text-[2.2rem]" style={{ "--i": 1 } as React.CSSProperties}>
             {/* Accessible name / SEO text is "Find the right college in Pune, Noida or Delhi NCR"; the stream word is decorative */}
-            Find the right <RotatingWord />college in Pune, Noida or Delhi NCR
+            Find the right <RotatingWord /><TypeTail text="college in Pune, Noida or Delhi NCR" />
           </h1>
           <p className="hero-in mt-2 text-sm text-gray-600 sm:text-base" style={{ "--i": 2 } as React.CSSProperties}>
             Compare by fees, entrance exams and cut-offs. The first counselling call is free.

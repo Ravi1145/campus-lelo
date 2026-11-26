@@ -348,13 +348,14 @@ html, body {
 @keyframes hero-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
 /* Rotating stream word slides up */
 .hero-word { animation: hero-word 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-@keyframes hero-word { from { opacity: 0; transform: translateY(70%); } to { opacity: 1; transform: none; } }
+@keyframes hero-word { from { opacity: 0; transform: translateY(70%); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
 
 /* Marquee: pause via button, keyboard focus or hover */
 [data-marquee-paused="true"] :is(.animate-marquee, .animate-guides-scroll), .marquee-wrap:focus-within :is(.animate-marquee, .animate-guides-scroll) { animation-play-state: paused; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-in, .hero-pop, .hero-frame img, .hero-word { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .hero-in, .hero-pop, .hero-frame img, .hero-word, .rot-underline { animation: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+  .rot-word { transition: none !important; }
 }
 
 /* ── Surfaces (flat, one tint per band) ────────────────────────────────────── */
@@ -578,6 +579,15 @@ a:focus-visible .hex-node circle { stroke: #E0170F; stroke-width: 3; }
 @media (prefers-reduced-motion: reduce) { .hero-slide-img { animation: none !important; } }
 
 /* Hero heading: the rotating stream word is drawn from data-w so it is not text in the H1 */
-.rot-word { display: inline-block; position: relative; min-width: 6.2em; height: 1.15em; margin-right: 0.22em; overflow: hidden; vertical-align: bottom; }
+.rot-word { display: inline-block; position: relative; min-width: 6.2em; height: 1.2em; margin-right: 0.22em; overflow: hidden; vertical-align: bottom; transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .rot-word-inner { position: absolute; left: 0; top: 0; color: #C90D11; white-space: nowrap; }
 .rot-word-inner::before { content: attr(data-w); }
+/* Typewriter letters: faded in one by one from a script; the caret blinks on the letter just typed */
+.tw-ch { opacity: 0; }
+.tw-ch.tw-on { opacity: 1; }
+.tw-caret { box-shadow: 2px 0 0 #C90D11; animation: tw-blink 0.9s steps(1) infinite; }
+@keyframes tw-blink { 50% { box-shadow: 2px 0 0 transparent; } }
+@media (prefers-reduced-motion: reduce) { .tw-ch { opacity: 1 !important; } .tw-caret { box-shadow: none; animation: none; } }
+/* A red line is drawn under each new word */
+.rot-underline { position: absolute; left: 0; bottom: 0.04em; height: 0.09em; width: 100%; border-radius: 99px; background: linear-gradient(90deg, #E0170F, #FB4312); transform-origin: left; animation: rot-underline 0.7s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes rot-underline { from { transform: scaleX(0); } to { transform: scaleX(1); } }

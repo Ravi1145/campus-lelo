@@ -6,7 +6,6 @@ import Link from "next/link"
 import CollegeGrid from "@/components/colleges/CollegeGrid"
 import CollegeListFallback from "@/components/colleges/CollegeListFallback"
 import CollegesHeroSearch from "@/components/colleges/CollegesHeroSearch"
-import { Award, Building2, BedDouble, Landmark } from "lucide-react"
 import { colleges } from "@/data/colleges"
 import { seoPageHref } from "@/data/seoPages"
 import { safeJsonLd } from "@/lib/jsonld"
@@ -34,12 +33,6 @@ export default function CollegesPage() {
     { name: "Colleges in Pune", url: "/colleges" },
   ])
   const faqSchema = generateFAQSchema(listingFaqs)
-  const stats = [
-    { icon: Building2, value: `${colleges.length}+`, label: "Colleges profiled" },
-    { icon: Award, value: colleges.filter(c => c.nirfRank !== null).length, label: "NIRF ranked" },
-    { icon: Landmark, value: colleges.filter(c => c.type === "Government").length, label: "Government colleges" },
-    { icon: BedDouble, value: colleges.filter(c => c.hostel).length, label: "With hostel" },
-  ]
   const topColleges = colleges.slice(0, 10)
   const itemList = generateItemListSchema(
     topColleges.map(c => ({ name: c.name, url: collegeHref(c.slug), description: `${c.type} college, NAAC ${c.naac}` }))
@@ -51,43 +44,28 @@ export default function CollegesPage() {
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="item-list" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemList) }} />
       <div className="bg-surface min-h-screen">
-        {/* Page Header */}
-        <div className="bg-rich-navy relative overflow-hidden">
-          <div aria-hidden="true" className="tracker-grid pointer-events-none absolute inset-0 opacity-[0.12]" />
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#E0170F]/20 blur-3xl" />
-          <div className="relative max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-10 sm:py-14">
-            <nav aria-label="Breadcrumb" className="hero-in text-xs text-blue-200 mb-5 flex gap-1.5" style={{ "--i": 0 } as React.CSSProperties}>
+        {/* Page Header: compact, headline and search side by side */}
+        <div className="bg-[#011B40]">
+          <div className="max-w-[calc(var(--container-7xl)+3rem)] mx-auto px-4 sm:px-6 py-8 sm:py-11">
+            <nav aria-label="Breadcrumb" className="text-xs text-blue-200 mb-4 flex gap-1.5">
               <Link href="/" className="hover:text-white">Home</Link>
               <span aria-hidden="true">›</span>
               <span className="text-white" aria-current="page">Colleges in Pune</span>
             </nav>
 
-            <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div className="grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
               <div>
-                <h1 className="hero-in text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.1]" style={{ "--i": 1 } as React.CSSProperties}>
-                  All Colleges in Pune <span className="bg-gradient-to-r from-[#FB4312] to-[#FF9E8A] bg-clip-text text-transparent">2026</span>
+                <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+                  All Colleges in Pune <span className="text-[#FB4312]">2026</span>
                 </h1>
-                <p className="hero-in mt-4 text-base sm:text-lg text-blue-100 max-w-xl leading-relaxed" style={{ "--i": 2 } as React.CSSProperties}>
-                  Discover and compare {colleges.length}+ engineering, MBA, medical, law and arts colleges, fees, placements, NAAC grades and accepted exams in one place.
+                <p className="mt-2 text-sm text-blue-100 max-w-xl leading-relaxed">
+                  Compare {colleges.length}+ engineering, MBA, medical, law and arts colleges by fees, NAAC grade and accepted exams.
                 </p>
-                <div className="hero-in mt-7" style={{ "--i": 3 } as React.CSSProperties}>
-                  <CollegesHeroSearch />
-                </div>
               </div>
-
-              {/* Live stats — counted from the college data */}
-              <ul className="hidden lg:grid grid-cols-2 gap-3">
-                {stats.map(({ icon: Icon, value, label }, i) => (
-                  <li key={label} className="hero-pop rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur" style={{ "--i": i + 1 } as React.CSSProperties}>
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-orange-300"><Icon className="h-5 w-5" aria-hidden="true" /></span>
-                    <p className="mt-3 text-3xl font-extrabold text-white">{value}</p>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-blue-200">{label}</p>
-                  </li>
-                ))}
-              </ul>
+              <CollegesHeroSearch />
             </div>
 
-            <div className="hero-in mt-8 flex flex-wrap items-center gap-2" style={{ "--i": 5 } as React.CSSProperties}>
+            <div className="mt-5 flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold text-blue-200">Explore:</span>
               {["Engineering", "MBA", "Medical", "Law", "Design", "Government"].map(s => (
                 <Link key={s} href={seoPageHref(`${s.toLowerCase()}-colleges-pune`)}

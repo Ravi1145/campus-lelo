@@ -26,6 +26,7 @@ export interface BestPageDef {
 
 const state = (s: string) => (r: NirfRow) => r.state === s
 const NOIDA = new Set(["Noida", "Gautam Budh Nagar"])
+const NCR_CITIES = new Set(["Delhi", "New Delhi", "Noida", "Gautam Budh Nagar", "Greater Noida", "Gurugram", "Gurgaon", "Ghaziabad", "Faridabad"])
 
 export const bestPages: BestPageDef[] = [
   {
@@ -34,7 +35,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in India (NIRF 2025 Top 25)", place: "India", match: () => true, limit: 25,
     admissionsPage: { href: "/mba-admission", label: "MBA admission by college" }, leadCity: "Delhi NCR",
     keywords: ["best mba colleges in india", "top mba colleges in india", "top 10 mba colleges in india", "nirf mba ranking 2025", "best b schools in india", "top management institutes in india"],
-    related: ["/best-mba-colleges-in-delhi", "/best-mba-colleges-in-uttar-pradesh", "/best-mba-colleges-in-maharashtra", "/mba-exam-acceptance", "/mba-exam-calendar", "/mba-vs-pgdm"],
+    related: ["/best-mba-colleges-in-delhi", "/best-mba-colleges-in-delhi-ncr", "/best-mba-colleges-in-uttar-pradesh", "/best-mba-colleges-in-maharashtra", "/mba-exam-acceptance", "/mba-exam-calendar", "/mba-vs-pgdm"],
   },
   {
     path: "/best-mba-colleges-in-delhi", title: "Best MBA Colleges in Delhi 2026: NIRF Ranked + Exams",
@@ -42,7 +43,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in Delhi (NIRF 2025)", place: "Delhi", match: state("Delhi"),
     admissionsPage: { href: "/mba-colleges-in-delhi", label: "MBA colleges in Delhi: exams and cut-offs" }, leadCity: "Delhi NCR",
     keywords: ["best mba colleges in delhi", "top mba colleges in delhi", "top 10 mba colleges in delhi", "mba colleges in delhi nirf ranking", "best pgdm colleges in delhi"],
-    related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-noida", "/best-mba-colleges-in-haryana", "/mba-colleges-in-delhi-ncr", "/mba-cutoff-delhi-ncr", "/fms-delhi-cat-cutoff", "/iift-cat-cutoff"],
+    related: ["/best-mba-colleges-in-india", "/best-mba-colleges-in-delhi-ncr", "/best-mba-colleges-in-noida", "/best-mba-colleges-in-haryana", "/mba-colleges-in-delhi-ncr", "/mba-cutoff-delhi-ncr", "/fms-delhi-cat-cutoff", "/iift-cat-cutoff"],
   },
   {
     path: "/best-mba-colleges-in-noida", title: "Best MBA Colleges in Noida 2026: NIRF Ranked + Exams",
@@ -50,7 +51,7 @@ export const bestPages: BestPageDef[] = [
     h1: "Best MBA Colleges in Noida (NIRF 2025)", place: "Noida", match: (r) => NOIDA.has(r.city),
     admissionsPage: { href: "/mba-colleges-noida", label: "MBA colleges in Noida: exams accepted" }, leadCity: "Delhi NCR",
     keywords: ["best mba colleges in noida", "top mba colleges in noida", "mba colleges in noida nirf", "best pgdm colleges in noida", "mba in noida"],
-    related: ["/best-mba-colleges-in-greater-noida", "/best-mba-colleges-in-delhi", "/best-mba-colleges-in-uttar-pradesh", "/pgdm-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat"],
+    related: ["/best-mba-colleges-in-delhi-ncr", "/best-mba-colleges-in-greater-noida", "/best-mba-colleges-in-delhi", "/best-mba-colleges-in-uttar-pradesh", "/pgdm-colleges-noida", "/mba-colleges-in-delhi-ncr-without-cat"],
   },
   {
     path: "/best-mba-colleges-in-greater-noida", title: "Best MBA Colleges in Greater Noida 2026: NIRF + Exams",
@@ -59,6 +60,46 @@ export const bestPages: BestPageDef[] = [
     admissionsPage: { href: "/mba-colleges-in-greater-noida", label: "MBA colleges in Greater Noida: exams accepted" }, leadCity: "Greater Noida",
     keywords: ["best mba colleges in greater noida", "top mba colleges in greater noida", "bimtech greater noida ranking", "pgdm colleges in greater noida", "mba in greater noida"],
     related: ["/best-mba-colleges-in-noida", "/best-mba-colleges-in-uttar-pradesh", "/mba-colleges-in-delhi-ncr", "/mba-admission/bimtech-greater-noida-pgdm", "/mba-admission/glbimr-greater-noida-pgdm"],
+  },
+  {
+    path: "/best-mba-colleges-in-delhi-ncr", title: "Best MBA Colleges in Delhi NCR 2026: NIRF Ranked + Exams",
+    description: "Delhi NCR's management institutes in the NIRF 2025 ranking across Delhi, Noida, Greater Noida, Gurugram and Ghaziabad, with exams accepted and admission details we verified.",
+    h1: "Best MBA Colleges in Delhi NCR (NIRF 2025)", place: "Delhi NCR", match: (r) => NCR_CITIES.has(r.city),
+    admissionsPage: { href: "/mba-colleges-in-delhi-ncr", label: "MBA colleges in Delhi NCR: exams and cut-offs" }, leadCity: "Delhi NCR",
+    keywords: ["best mba colleges in delhi ncr", "top mba colleges in delhi ncr", "top 10 mba colleges in delhi ncr", "best pgdm colleges in delhi ncr", "mba colleges in delhi ncr nirf ranking"],
+    related: ["/best-mba-colleges-in-delhi", "/best-mba-colleges-in-noida", "/best-mba-colleges-in-gurugram", "/best-mba-colleges-in-greater-noida", "/best-mba-colleges-in-ghaziabad", "/mba-cutoff-delhi-ncr", "/mba-colleges-in-delhi-ncr-without-cat"],
+  },
+  {
+    path: "/best-mba-colleges-in-gurugram", title: "Best MBA Colleges in Gurugram 2026: NIRF Ranked + Exams",
+    description: "Gurugram (Gurgaon) institutes in the NIRF 2025 management ranking, including MDI, with the exams each accepts and the admission details we have verified.",
+    h1: "Best MBA Colleges in Gurugram (NIRF 2025)", place: "Gurugram", match: (r) => r.city === "Gurugram" || r.city === "Gurgaon",
+    admissionsPage: { href: "/mba-colleges-in-gurugram", label: "MBA colleges in Gurugram: exams accepted" }, leadCity: "Delhi NCR",
+    keywords: ["best mba colleges in gurgaon", "best mba colleges in gurugram", "top mba colleges in gurgaon", "mdi gurgaon ranking", "pgdm colleges in gurgaon"],
+    related: ["/best-mba-colleges-in-delhi-ncr", "/best-mba-colleges-in-haryana", "/best-mba-colleges-in-delhi", "/mba-colleges-in-delhi-ncr", "/mba-admission/mdi-gurugram-pgdm"],
+  },
+  {
+    path: "/best-mba-colleges-in-ghaziabad", title: "Best MBA Colleges in Ghaziabad 2026: NIRF Ranked + Exams",
+    description: "Ghaziabad's management institutes in the NIRF 2025 ranking, including IMT Ghaziabad, with the exams accepted and the admission details we have verified.",
+    h1: "Best MBA Colleges in Ghaziabad (NIRF 2025)", place: "Ghaziabad", match: (r) => r.city === "Ghaziabad",
+    admissionsPage: { href: "/mba-colleges-in-ghaziabad", label: "MBA colleges in Ghaziabad: exams accepted" }, leadCity: "Delhi NCR",
+    keywords: ["best mba colleges in ghaziabad", "top mba colleges in ghaziabad", "imt ghaziabad ranking", "pgdm colleges in ghaziabad", "mba in ghaziabad"],
+    related: ["/best-mba-colleges-in-delhi-ncr", "/best-mba-colleges-in-noida", "/best-mba-colleges-in-uttar-pradesh", "/mba-colleges-in-delhi-ncr", "/mba-admission/imt-ghaziabad-pgdm"],
+  },
+  {
+    path: "/best-mba-colleges-in-lucknow", title: "Best MBA Colleges in Lucknow 2026: NIRF Ranked + Exams",
+    description: "Lucknow's management institutes in the NIRF 2025 ranking, led by IIM Lucknow, with the exams each accepts and the admission details we have verified.",
+    h1: "Best MBA Colleges in Lucknow (NIRF 2025)", place: "Lucknow", match: (r) => r.city === "Lucknow",
+    admissionsPage: { href: "/mba-colleges-in-lucknow", label: "MBA colleges in Lucknow: IIM Lucknow and exams" }, leadCity: "Lucknow",
+    keywords: ["best mba colleges in lucknow", "top mba colleges in lucknow", "iim lucknow ranking", "pgdm colleges in lucknow", "mba in lucknow"],
+    related: ["/best-mba-colleges-in-uttar-pradesh", "/best-mba-colleges-in-noida", "/best-mba-colleges-in-india", "/mba-admission-process-lucknow", "/mba-admission/iim-lucknow-mba"],
+  },
+  {
+    path: "/best-mba-colleges-in-dehradun", title: "Best MBA Colleges in Dehradun 2026: NIRF Ranked + Exams",
+    description: "Dehradun's management institutes in the NIRF 2025 ranking, including UPES and Graphic Era, with the exams accepted and the admission details we have verified.",
+    h1: "Best MBA Colleges in Dehradun (NIRF 2025)", place: "Dehradun", match: (r) => r.city === "Dehradun",
+    admissionsPage: { href: "/mba-colleges-in-dehradun", label: "MBA colleges in Dehradun: exams accepted" }, leadCity: "Dehradun",
+    keywords: ["best mba colleges in dehradun", "top mba colleges in dehradun", "upes dehradun mba ranking", "mba colleges in uttarakhand", "pgdm colleges in dehradun"],
+    related: ["/best-mba-colleges-in-uttarakhand", "/best-mba-colleges-in-india", "/mba-cutoff-uttarakhand", "/mba-colleges-in-uttarakhand"],
   },
   {
     path: "/best-mba-colleges-in-uttar-pradesh", title: "Best MBA Colleges in Uttar Pradesh 2026: NIRF + Exams",

@@ -129,7 +129,7 @@ export default function MedicalCollegesPunePage() {
 
         {/* Quick Answer Box */}
         <section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
-          <div className="bg-green-50 border-l-4 border-green-500 rounded-xl p-5 sm:p-6" data-speakable="true">
+          <div className="bg-gray-50 ring-1 ring-gray-200 rounded-xl p-5 sm:p-6" data-speakable="true">
             <h2 className="text-lg font-bold text-green-800 mb-2">Quick Answer: Best Medical College in Pune 2026</h2>
             <p className="text-green-900 text-sm leading-relaxed">
               <strong>AFMC Pune</strong> (NAAC A++) is the best medical college in Pune, nearly free education (₹50,000 total) but requires 650+ NEET + separate test + SSB.{" "}

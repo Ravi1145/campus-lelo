@@ -390,7 +390,7 @@ export default async function BlogPostPage({ params }: Props) {
                   prose-strong:text-gray-900
                   prose-ul:text-gray-700 prose-li:text-[15px]
                   prose-table:text-sm prose-table:border-collapse
-                  prose-blockquote:border-l-4 prose-blockquote:border-orange-400 prose-blockquote:bg-orange-50 prose-blockquote:not-italic prose-blockquote:py-1 prose-blockquote:rounded-r-lg">
+                  prose-blockquote:border-l-0 prose-blockquote:bg-gray-50 prose-blockquote:not-italic prose-blockquote:py-1 prose-blockquote:rounded-r-lg">
                   {isHTML && midSplit ? (
                     <>
                       <div dangerouslySetInnerHTML={{ __html: midSplit[0] }} />
@@ -461,8 +461,6 @@ export default async function BlogPostPage({ params }: Props) {
                     return (
                       <Link key={r.id} href={`/blog/${r.slug}`} className="group">
                         <article className="bg-white rounded-xl border border-gray-200 hover:border-orange-300 hover:shadow-md transition-all h-full flex flex-col overflow-hidden">
-                          {/* Thin top bar */}
-                          <div className="h-1 bg-orange-400" />
                           <div className="p-4 flex-1 flex flex-col">
                             <span className={`self-start text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 ${badgeCls(r.category)}`}>
                               {r.category}

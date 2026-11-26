@@ -22,9 +22,9 @@ interface QuickAnswerProps {
 export default function QuickAnswer({ question, answer, note }: QuickAnswerProps) {
   return (
     <div
-      className="quick-answer speakable my-6 rounded-2xl border-l-4 p-5"
+      className="quick-answer speakable my-6 rounded-2xl p-5 ring-1 ring-gray-200"
       data-speakable="true"
-      style={{ background: "#F7F9FC", borderLeftColor: "#E0170F" }}
+      style={{ background: "#F7F9FC" }}
       itemScope
       itemType="https://schema.org/Question"
     >

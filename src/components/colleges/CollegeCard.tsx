@@ -7,7 +7,6 @@ import { MapPin, Heart, Star, ArrowUpRight, Award, BedDouble } from "lucide-reac
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
 import FeeEnquiryButton from "@/components/leads/FeeEnquiryButton"
-import CardContactButtons from "@/components/leads/CardContactButtons"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 
 const COLLEGE_BANNER = "/college-default-banner.webp"
@@ -184,7 +183,6 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
         )}
       >
         {/* accent line that draws in on hover */}
-        <span aria-hidden="true" className="absolute inset-x-0 top-0 z-30 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-[#E0170F] via-[#FB4312] to-[#024692] transition-transform duration-500 group-hover:scale-x-100" />
 
         {banner}
 
@@ -230,7 +228,6 @@ export default function CollegeCard({ college, variant = "default", layout = "gr
             </span>
             <span className="flex items-center gap-2">
               <FeeEnquiryButton collegeName={college.name} collegeSlug={college.slug} courses={college.courses ?? []} />
-              <CardContactButtons collegeName={college.name} collegeSlug={college.slug} />
               <CompareButton collegeSlug={college.slug} collegeName={college.shortName} />
             </span>
           </div>

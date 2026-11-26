@@ -7,7 +7,6 @@ import { Award, BedDouble, Heart, MapPin, Star } from "lucide-react"
 import { College } from "@/types"
 import CompareButton from "@/components/ui/CompareButton"
 import FeeEnquiryButton from "@/components/leads/FeeEnquiryButton"
-import CardContactButtons from "@/components/leads/CardContactButtons"
 import { formatFeesRange, formatCurrency, getNaacColor, getTypeColor, cn } from "@/lib/utils"
 import { examLabel } from "@/lib/collegeFacets"
 
@@ -64,7 +63,6 @@ export default function CollegeRowCard({ college }: { college: College }) {
 
   return (
     <article className="group relative overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-950/10 hover:ring-[#012858]/25">
-      <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gradient-to-b from-[#E0170F] to-[#024692] transition-transform duration-500 group-hover:scale-y-100" />
 
       <div className="flex flex-col lg:flex-row">
         {/* Main */}
@@ -130,7 +128,6 @@ export default function CollegeRowCard({ college }: { college: College }) {
             <FeeEnquiryButton collegeName={college.name} collegeSlug={college.slug} courses={college.courses ?? []} />
           </div>
           <div className="flex-1 lg:flex-none [&>span]:w-full [&>span>button]:flex-1 [&>span>button]:justify-center [&>span>button]:py-2.5 [&>span>button]:text-[13px]">
-            <CardContactButtons collegeName={college.name} collegeSlug={college.slug} />
           </div>
           <button
             type="button"

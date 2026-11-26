@@ -27,12 +27,11 @@ export default function FeaturedCourses() {
   const list = courses.filter((c) => tab === "All" || c.stream === tab).slice(0, 12)
 
   return (
-    <section aria-labelledby="courses-heading" className="section-pearl px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
+    <section aria-labelledby="courses-heading" className="bg-gray-50 px-5 py-10 sm:px-8 lg:px-12 sm:py-12">
       <Reveal className="mx-auto max-w-7xl">
         <div className="reveal-item flex flex-wrap items-end justify-between gap-3" style={{ "--i": 0 } as React.CSSProperties}>
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-[#C90D11]">Courses</p>
-            <h2 id="courses-heading" className="mt-1 font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#012858] sm:text-3xl">Featured courses</h2>
+            <h2 id="courses-heading" className="font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#012858] sm:text-3xl">Featured courses</h2>
             <p className="mt-1 text-sm text-gray-600">Course length, level and the entrance exams usually asked for.</p>
           </div>
           <Link href="/courses" className="inline-flex min-h-9 items-center gap-1.5 text-sm font-bold text-[#024692] hover:underline">View all courses <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
@@ -60,7 +59,6 @@ export default function FeaturedCourses() {
               return (
                 <Link key={c.id} href={`/courses/${c.slug}`} className="group block h-full">
                   <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_14px_-6px_rgba(1,40,88,0.25)] ring-1 ring-gray-200 transition-shadow duration-300 group-hover:shadow-[0_12px_28px_-14px_rgba(1,40,88,0.45)]">
-                    <span className="h-1" style={{ background: s.band }} aria-hidden="true" />
                     <div className="flex flex-1 flex-col p-4">
                       <div className="flex items-start gap-3">
                         <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${s.tile} transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105`}><Icon className="h-5 w-5" aria-hidden="true" /></span>
