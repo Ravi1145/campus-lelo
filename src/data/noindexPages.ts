@@ -100,6 +100,10 @@ export const noindexExact: string[] = [
   "/exams/snap/colleges",
   "/exams/nmat/colleges",
   "/exams/atma/colleges",
+  // Step 8 of the duplicate-content plan: fee, loan-rate and scholarship tables on these pages are not sourced from the colleges or banks;
+  // kept out of search until each figure is verified.
+  "/low-fees-mba-colleges-pune",
+  "/low-fees-engineering-colleges-pune",
 ]
 
 /** Every URL under these prefixes (the index pages /courses, /compare and /career-paths themselves stay indexed). */

@@ -89,10 +89,14 @@ export default async function Page({ params }: Props) {
       noCutoff={noCutoff}
       admission={p}
       howTo={[
-        `Compare the exams ${short} lists with the scores you hold. If you have only one of them, check the notes for any second-test rule.`,
-        "Read the eligibility line in the notes before you pay an application fee, including the rule for final-year students.",
-        "Exam lists and criteria change every cycle. Open the official page for the intake you are applying to.",
-        "Shortlist two or three similar institutes in the same city and compare their selection steps, not only their exam lists.",
+        `${short} lists ${list(exams)}. Compare that with the scores you hold${exams.length > 1 ? " and check the notes for any rule about which one is used" : ""}.`,
+        `${short}'s ${p.program} information above refers to the ${p.intake} intake. Read the eligibility line in the notes before you pay the application fee.`,
+        cutoff
+          ? `${short} has published a cut-off for the ${cutoff.admissionYear} batch, shown above. Treat it as a guide to last year, not a promise for yours.`
+          : `We found no published cut-off for ${short}, so ask the admissions office what the last batch needed rather than relying on a figure from a third-party site.`,
+        neighbours.length
+          ? `In ${p.city}, you could also compare ${list(neighbours.map((n) => INSTITUTE_SHORT[n.id]))} on their selection steps, not only their exam lists.`
+          : `Compare ${short} with one or two similar institutes on their selection steps, not only their exam lists.`,
       ]}
       links={[
         ...(FEE_GUIDES[p.id] ? [{ href: FEE_GUIDES[p.id], label: `${short} fees 2027-29: official fee structure` }] : []),

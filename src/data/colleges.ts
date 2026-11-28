@@ -22,13 +22,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "L&T", "Cummins", "Volkswagen", "Bosch", "Wipro", "Cognizant"],
     entranceExams: ["MHT-CET", "JEE Main", "JEE Advanced"],
     hostel: true,
-    rating: 4.5,
-    reviewCount: 1240,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Rahul Sharma", course: "B.Tech CSE", year: 2023, rating: 5, title: "Best government engineering college in Pune", body: "COEP has been an incredible journey. The faculty is highly experienced and the infrastructure is world-class for a government college.", pros: ["Affordable fees", "Great placements", "Strong alumni network"], cons: ["Limited hostel seats", "Outdated some labs"] },
-      { id: 2, studentName: "Priya Desai", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Excellent campus life and placements", body: "The placement cell is very active. Got placed in Cummins with 12 LPA package.", pros: ["Great faculty", "Industry connections", "Cultural fest"], cons: ["Parking issues", "Canteen food"] }
-    ],
+    reviews: [],
     tags: ["Top Government College", "NIRF Ranked", "Best Engineering Pune", "Autonomous"],
     description: "College of Engineering Pune (COEP) is one of India's oldest and most prestigious engineering institutions, established in 1854. It is an autonomous institute affiliated with Savitribai Phule Pune University, offering world-class education in engineering and technology. COEP consistently ranks among the top 50 engineering colleges in India as per NIRF rankings. With excellent infrastructure, experienced faculty, and strong industry connections, COEP produces graduates who lead organizations globally.",
     highlights: ["Established in 1854, one of India's oldest engineering colleges", "NIRF Rank 49 among engineering colleges", "Average package of 12 LPA with highest at 45 LPA", "Autonomous institute with NAAC A+ accreditation", "Strong alumni network across Fortune 500 companies"],
@@ -57,12 +54,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Persistent", "Zensar", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 980,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Amit Kulkarni", course: "B.Tech CS", year: 2023, rating: 4, title: "Good college with decent placements", body: "VIT Pune has good faculty and decent infrastructure. The placement rate is around 85%.", pros: ["Good campus", "Active placement cell", "Sports facilities"], cons: ["High fees", "Traffic near campus"] }
-    ],
+    reviews: [],
     tags: ["Autonomous College", "NAAC A+", "Good Placements", "Pune Engineering"],
     description: "Vishwakarma Institute of Technology (VIT Pune) is a premier autonomous engineering institute in Pune, affiliated with Savitribai Phule Pune University. Established in 1983, VIT Pune offers undergraduate and postgraduate programs in engineering and management. The institute has NAAC A+ accreditation and consistently achieves good placement results with top IT and manufacturing companies recruiting from campus. VIT Pune is known for its strong technical education and lively campus culture.",
     highlights: ["NAAC A+ accredited autonomous institution", "85%+ placement rate every year", "Modern labs and research centers", "Active student technical clubs and fests", "Strong industry-academia interface"],
@@ -91,12 +86,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Goldman Sachs", "Deutsche Bank", "Barclays", "Persistent", "TCS", "Infosys", "Accenture"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 876,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Sneha Joshi", course: "B.Tech Computer", year: 2023, rating: 5, title: "Best CS college in Pune after COEP", body: "PICT is known for its strong CS curriculum and amazing placements. Goldman Sachs and Deutsche Bank frequently visit for recruitment.", pros: ["Excellent placements for CS", "Great coding culture", "Alumni support"], cons: ["Limited non-CS branches", "Parking issues"] }
-    ],
+    reviews: [],
     tags: ["Top CS College Pune", "Finance Sector Placements", "Autonomous", "NAAC A"],
     description: "Pune Institute of Computer Technology (PICT) is one of Pune's most sought-after engineering colleges, particularly known for its Computer Engineering and IT programs. Established in 1983, PICT has built a reputation for producing top software engineers and finance sector professionals. The college is autonomous and affiliated with Savitribai Phule Pune University, with NAAC 'A' grade accreditation. PICT's placement record is exceptional with global investment banks and top IT companies regularly recruiting graduates.",
     highlights: ["Premier autonomous computer technology institute in Pune", "Attracts global investment banks for campus placement", "Strong alumni network in Silicon Valley and India's top tech firms", "NAAC 'A' grade accredited institution", "Annual placement average package of 7.5 LPA"],
@@ -125,12 +118,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Wipro", "TCS", "HCL", "Mphasis", "Bajaj Auto", "KPIT", "Persistent"],
     entranceExams: ["MHT-CET", "JEE Main", "MIT-WPU Entrance Test"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 1560,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Kiran Patil", course: "B.Tech AI & ML", year: 2024, rating: 4, title: "Modern deemed university with good facilities", body: "MIT-WPU has state-of-the-art infrastructure and offers modern courses like AI & ML. The campus is beautiful.", pros: ["Modern infrastructure", "Good for AI/ML", "Liberal arts approach"], cons: ["High fees", "Still building brand value"] }
-    ],
+    reviews: [],
     tags: ["Deemed University", "Modern Campus", "AI & ML", "Multi-disciplinary"],
     description: "MIT World Peace University (MIT-WPU) is a deemed university in Pune established by the MIT Group of Institutions. It offers a unique multi-disciplinary approach to education combining technology, management, and liberal arts. MIT-WPU is known for its modern infrastructure, innovative pedagogy, and strong focus on entrepreneurship and research. The university offers programs across engineering, management, science, and humanities with NAAC A+ accreditation.",
     highlights: ["Deemed university offering well-rounded multi-disciplinary education", "NAAC A+ accredited with modern research facilities", "Specialization in emerging technologies like AI, IoT, Robotics", "Strong entrepreneurship cell and startup incubator", "International collaborations with universities in USA, Germany, and Australia"],
@@ -159,12 +150,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Barclays", "Infosys BPM", "TCS", "Wipro", "Tech Mahindra", "Capgemini", "Oracle"],
     entranceExams: ["SET", "JEE Main", "MHT-CET"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 620,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Rohan Mehta", course: "B.Tech CS", year: 2023, rating: 4, title: "Premium engineering college with international exposure", body: "SIT Pune is part of Symbiosis International University which gives great international exposure and brand value.", pros: ["International university brand", "Excellent placement", "Good campus life"], cons: ["Very high fees", "Far from city"] }
-    ],
+    reviews: [],
     tags: ["Symbiosis Group", "Deemed University", "International", "Premium"],
     description: "Symbiosis Institute of Technology (SIT) is a premier engineering institute under Symbiosis International (Deemed University). Situated in the serene campus at Lavale Hills near Pune, SIT offers top-quality engineering education with a focus on research, innovation, and international exposure. The institute benefits from the strong Symbiosis brand, excellent industry connections, and a diverse student body from across India and abroad.",
     highlights: ["Part of prestigious Symbiosis International University", "International collaborations with 200+ universities worldwide", "Research-driven curriculum with industry projects", "Beautiful 100-acre campus in Lavale Hills", "Among Pune's top private engineering colleges for placements"],
@@ -193,12 +182,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "Capgemini", "HCL", "Persistent"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 540,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Akash Shinde", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Good college for mechanical engineering", body: "RSCOE has decent infrastructure and good faculty for mechanical branch. Placement rate is around 75%.", pros: ["Good location", "Sports facilities", "Reasonable fees"], cons: ["Average placements for CS", "Limited industry exposure"] }
-    ],
+    reviews: [],
     tags: ["JSPM Group", "Tathawade", "Affordable", "NAAC A"],
     description: "JSPM's Rajarshi Shahu College of Engineering (RSCOE) is a well-regarded private engineering college in Pune's Tathawade area. Part of the JSPM Group of Institutions, RSCOE offers undergraduate and postgraduate engineering programs affiliated with Savitribai Phule Pune University. The college has NAAC 'A' grade accreditation and is known for its good infrastructure, dedicated faculty, and consistent placement results.",
     highlights: ["NAAC 'A' accredited private engineering institute", "Part of established JSPM Group of Institutions", "Well-connected location near Pune-Mumbai highway", "Dedicated placement cell with 75%+ placement rate", "Active student technical and cultural clubs"],
@@ -227,12 +214,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Cummins India", "TCS", "Infosys", "Accenture", "Wipro", "Persistent"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Pooja Wagh", course: "B.Tech CS", year: 2023, rating: 5, title: "Best women's engineering college in Pune", body: "Cummins College provides a safe, supportive environment for women engineers. The placement statistics are excellent.", pros: ["Safe campus for women", "Excellent placements", "Strong alumni"], cons: ["Women only", "Limited branches"] }
-    ],
+    reviews: [],
     tags: ["Women's College", "NAAC A+", "Top Women Engineering", "Autonomous"],
     description: "Cummins College of Engineering for Women is Pune's premier women's engineering college, established in 1991. Named after the globally renowned Cummins engine company, this autonomous institute offers exceptional engineering education to women students. With NAAC A+ accreditation and strong industry ties, particularly with Cummins India and other manufacturing giants, the college consistently achieves outstanding placement results.",
     highlights: ["Pune's top women's engineering college since 1991", "NAAC A+ accredited autonomous institution", "Strong corporate partnership with Cummins India Ltd", "Excellent placement rate of 90%+ for graduating batch", "Safe, supportive campus environment for women engineers"],
@@ -261,12 +246,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "L&T", "Persistent", "HCL"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 430,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Sachin Lokhande", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Good college in central Pune", body: "AISSMS COE is well-located in central Pune with good infrastructure. Faculty is experienced.", pros: ["Central location", "Affordable fees", "Good faculty"], cons: ["No hostel", "Average placements"] }
-    ],
+    reviews: [],
     tags: ["Central Pune", "Affordable", "NAAC A", "SPPU Affiliated"],
     description: "AISSMS College of Engineering is a well-established private engineering college located centrally in Pune near the RTO area. Managed by All India Shri Shivaji Memorial Society, the college offers quality engineering education at affordable fees. NAAC 'A' accredited and affiliated with SPPU, AISSMS COE is a popular choice for students seeking good engineering education in the heart of Pune city.",
     highlights: ["Strategically located in central Pune", "NAAC 'A' grade accreditation", "Managed by prestigious All India Shri Shivaji Memorial Society", "Experienced faculty with industry background", "Good infrastructure with modern computer labs"],
@@ -295,12 +278,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Mahindra", "Bajaj Auto", "KPIT", "TCS", "Wipro", "Mercedes"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 580,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Vinay Gaikwad", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Best mechanical engineering placements in PCMC area", body: "DYPCOE Akurdi is great for mechanical students due to its proximity to Bajaj Auto, Mahindra plants.", pros: ["Great auto industry connections", "Hostel available", "Affordable fees"], cons: ["Average CS placements", "Far from main Pune"] }
-    ],
+    reviews: [],
     tags: ["PCMC Area", "Auto Industry", "Affordable", "NAAC A"],
     description: "D.Y. Patil College of Engineering Akurdi is a well-known engineering college in the PCMC (Pimpri-Chinchwad) area of Pune, part of the D.Y. Patil Group. Established in 1984, it is strategically located near major automotive manufacturing plants like Bajaj Auto and Mahindra, making it particularly strong for mechanical and production engineering placements. NAAC 'A' accredited and affiliated with SPPU.",
     highlights: ["Strategic location near Bajaj Auto and Mahindra plants", "NAAC 'A' accredited institution since 1984", "Strong automotive industry placement record", "Affordable fees with hostel facility available", "Active NSS, sports, and cultural activities"],
@@ -360,13 +341,7 @@ const rawColleges: College[] = [
         { agency: "Times Engineering Ranking", category: "Engineering Colleges Maharashtra", rank: 42, year: "2024" },
         { agency: "Silicon India", category: "Top Engineering Colleges Pune", rank: 15, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹1.05L–₹1.38L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Scholarship (Post-Matric)", eligibility: "SC/ST students (no income limit up to ₹2.5 lakh; partial concession up to ₹6 lakh)", amount: "Full tuition + exam fee waiver + maintenance allowance", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "D.Y. Patil Group Merit Scholarship", eligibility: "Students scoring 80%+ in HSC or 90+ percentile in MHT-CET", amount: "25% tuition fee waiver (₹26,000–₹34,500/yr)", provider: "D.Y. Patil Group Trust" },
-        { name: "Minority Scholarship", eligibility: "Muslim, Christian, Buddhist, Sikh, Jain, Zoroastrian minority students with income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Automotive & Mechanical Labs", description: "State-of-the-art mechanical engineering labs including CNC machining centre, fluid mechanics lab, heat & mass transfer lab, and automobile workshop equipped with modern diagnostic tools. Proximity to Bajaj Auto and Mahindra plants allows for industry lab visits." },
         { name: "Computer & IT Labs", description: "6 computer labs with 250+ workstations running Windows and Linux. Software including MATLAB, AutoCAD, SolidWorks, ANSYS, and Oracle. High-speed 1 Gbps internet connectivity. Dedicated lab for programming courses." },
@@ -377,14 +352,7 @@ const rawColleges: College[] = [
         { name: "NSS & NCC", description: "Active National Service Scheme unit with 200+ volunteers participating in community development activities including blood donation drives, tree plantation, and rural outreach programs. NCC (Army wing) is also available." },
         { name: "Transport Facility", description: "College buses connecting major residential areas including Chinchwad, Wakad, Pimple Saudagar, Bhosari, and Dehu Road. Annual bus pass at ₹12,000–₹18,000 depending on route distance." },
       ],
-      alumni: [
-        { name: "Nilesh Kulkarni", designation: "Senior Engineer, Bajaj Auto Ltd.", batch: "2010" },
-        { name: "Priya Deshpande", designation: "Project Manager, KPIT Technologies", batch: "2012" },
-        { name: "Suresh Bhosale", designation: "Plant Head, Mahindra & Mahindra PCMC", batch: "2008" },
-        { name: "Amol Pawar", designation: "Lead Developer, TCS Digital", batch: "2015" },
-        { name: "Sneha Jadhav", designation: "Product Engineer, Mercedes-Benz R&D India", batch: "2016" },
-        { name: "Ravi Shinde", designation: "Founder, AutoTech Solutions (Pune startup)", batch: "2014" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -430,12 +398,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Cognizant", "HCL", "Capgemini"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.7,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Mahesh Pawar", course: "B.Tech IT", year: 2022, rating: 4, title: "Decent college with active placement cell", body: "Sinhgad College is a well-known name in Pune for engineering education. The Sinhgad brand has good recognition.", pros: ["Good brand recognition", "Active placement", "Sports culture"], cons: ["Average infrastructure", "Traffic issues"] }
-    ],
+    reviews: [],
     tags: ["Sinhgad Group", "Popular", "NAAC A", "Vadgaon"],
     description: "Sinhgad College of Engineering (SCOE) is part of the renowned Sinhgad Technical Education Society, one of Maharashtra's largest education groups. The college offers quality engineering education in Pune with NAAC 'A' accreditation. SCOE is affiliated with Savitribai Phule Pune University and has established itself as a reliable engineering college with consistent placement results and a lively campus culture.",
     highlights: ["Part of prestigious Sinhgad Technical Education Society", "NAAC 'A' accredited engineering institute", "Active placement cell with major IT recruiters", "Lively campus with cultural and technical fests", "Strong alumni network across Maharashtra"],
@@ -464,8 +430,8 @@ const rawColleges: College[] = [
     topRecruiters: ["McKinsey", "BCG", "Deloitte", "KPMG", "Amazon", "Microsoft", "Flipkart", "P&G", "Unilever"],
     entranceExams: ["SNAP"], // verified 2026-10-04: SIU admits via SNAP
     hostel: true,
-    rating: 4.7,
-    reviewCount: 1850,
+    rating: 0,
+    reviewCount: 0,
     stream: "MBA",
     tags: ["Top MBA Pune", "NIRF Ranked", "Symbiosis Group", "Premier B-School"],
     description: "Symbiosis Institute of Business Management (SIBM) Pune is consistently ranked among India's top 15 management institutes and is the flagship B-school of Symbiosis International University. Established in 1978, SIBM Pune is NAAC A+ accredited and NIRF ranked 13th among management institutes. With top consulting firms, FMCG giants, and technology companies recruiting on campus, SIBM offers exceptional ROI on MBA investment.",
@@ -474,11 +440,7 @@ const rawColleges: College[] = [
     website: "https://www.sibmpune.edu.in",
     phone: "+91-20-66195900",
     email: "admissions@sibmpune.edu.in",
-    reviews: [
-      { id: 1, studentName: "Ananya Singh", course: "MBA Marketing", year: 2023, rating: 5, title: "Top MBA college in Pune: excellent placements", body: "SIBM is truly world-class. The faculty, curriculum, and peer group are exceptional. The case-study pedagogy, industry immersion weeks, and constant industry interaction make you industry-ready from Day 1. Got placed at P&G at ₹28 LPA.", pros: ["NIRF Rank 13: top MBA brand", "McKinsey, BCG, P&G, Amazon recruit on campus", "Peer group quality is phenomenal. IITians, CA, doctors", "Strong alumni mentorship programme"], cons: ["Very expensive: ₹16–22 lakh total", "Extremely competitive admission: 60+ SNAP percentile needed", "Work-life balance during placements can be stressful"] },
-      { id: 2, studentName: "Vikram Nair", course: "MBA Finance", year: 2022, rating: 5, title: "Best ROI on MBA in Pune: hands down", body: "I spent ₹20 lakh on SIBM. Got placed at a top investment bank at ₹35 LPA. ROI achieved in 7 months. The finance faculty are ex-Goldman Sachs and RBI economists. Case competitions are intense but build real skills.", pros: ["NIRF Rank 13 nationally", "Highest placement ₹65 LPA, realistic at SIBM", "Bloomberg terminal access for Finance", "Strong investment banking and consulting alumni network"], cons: ["High peer pressure during placement season", "Fees are steep without scholarship"] },
-      { id: 3, studentName: "Priya Mehta", course: "MBA HR", year: 2024, rating: 4, title: "Great for HR and OB specialisation", body: "SIBM is one of the few B-schools where HR is taken seriously. The OB faculty and HR specialisation courses are taught by ex-Unilever and Aon Hewitt practitioners. CHRO roles from campus is rare anywhere else in India.", pros: ["HR specialisation depth is rare in Indian B-schools", "Unilever, Aon, Deloitte HR roles on campus", "Symbiosis campus ecosystem with other SIU schools", "Case competitions nationally and internationally"], cons: ["HR batch is smaller, fewer electives than Marketing/Finance", "Hostel allocation can be competitive"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA (2 Year Full-Time)", duration: "2 Years", level: "PG", eligibility: "Bachelor's degree in any discipline with 50% (General); 45% (SC/ST). SNAP 2025 score mandatory. Work experience preferred but not mandatory", selection: "SNAP Score + Written Ability Test (WAT) + Personal Interaction (PI)", fees_per_year: 1075000, total_fees: 2150000, seats: 180 },
@@ -528,14 +490,7 @@ const rawColleges: College[] = [
         { agency: "Business Today", category: "Best B-Schools India", rank: 15, year: "2024" },
         { agency: "The Week", category: "Best MBA Colleges India", rank: 13, year: "2024" },
       ],
-      scholarships: [
-        { name: "SIU Merit Scholarship", eligibility: "Students with SNAP percentile 99+ or CAT 98+ who join SIBM Pune", amount: "25% tuition fee waiver for Year 1 (₹2.7 lakh); renewable on maintaining top 10% CGPA in Year 1", provider: "Symbiosis International University" },
-        { name: "SIU SC/ST Scholarship", eligibility: "SC/ST students admitted to SIBM Pune through SNAP/CAT process", amount: "20% fee concession per year (₹2.15 lakh/year waiver)", provider: "Symbiosis International University Trust" },
-        { name: "SIU Sports Excellence Scholarship", eligibility: "National or international level sports achievers joining SIBM Pune", amount: "Up to 50% tuition fee waiver for both years", provider: "Symbiosis International University" },
-        { name: "SIU Need-Based Financial Aid", eligibility: "Admitted students with annual family income below ₹6 lakh; merit required", amount: "₹1.0–₹2.5 lakh per year partial relief; does not cover full fees", provider: "SIU Financial Aid Committee" },
-        { name: "Vidyadhan Scholarship (HDFC Parivartan)", eligibility: "First-generation MBA students from low-income families with SNAP 95+ percentile", amount: "₹1.5–₹2.5 lakh per year", provider: "HDFC Bank Parivartan / Sarojini Damodaran Foundation" },
-        { name: "Education Loan (Moratorium)", eligibility: "All admitted SIBM Pune students; SBI, Axis, HDFC, and Canara Bank have tie-ups", amount: "Up to ₹30 lakh at 9–11% with full moratorium during course + 1 year after placement", provider: "SBI, Axis Bank, HDFC Bank, Canara Bank (SIBM tie-ups)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Academic Block & Smart Classrooms", description: "SIBM Pune's main campus at Model Colony houses modern tiered classrooms with smart boards, case-study discussion rooms (Harvard-style seating), and breakout rooms for group projects. The campus is compact but efficiently designed, all facilities within a 5-minute walk. Fully Wi-Fi enabled with 1 Gbps fibre. Dedicated Bloomberg terminal lab for Finance students, live market data and financial modelling tools used daily." },
         { name: "Symbiosis Management Library", description: "Library with 35,000+ management books, Harvard Business Review full archive, McKinsey Quarterly, and case repositories from Harvard, IVEY, and Darden. Online access to EBSCO, ProQuest, CMIE Prowess (Indian company financials), Bloomberg, and Reuters Eikon. 24×7 digital access from hostel. The HBR and McKinsey case library is particularly valued. SIBM uses case pedagogy extensively across all specialisations." },
@@ -546,14 +501,7 @@ const rawColleges: College[] = [
         { name: "Entrepreneurship & Innovation Cell", description: "SIBM's E-Cell, 'Symbiosis Incubation Centre', is one of Pune's active startup incubators. MBA students with startup ideas can access seed funding (up to ₹5 lakh from SIU Innovation Fund), mentorship from serial entrepreneurs, and co-working space on campus. SIBM alumni who are founders mentor current students regularly. Notable alumni startups include ventures in EdTech, FinTech, and D2C FMCG. E-Cell organises Symbiosis Startup Summit annually." },
         { name: "International Exchange & Global Immersion", description: "SIBM Pune has academic exchange partnerships with University of Cologne (Germany), Grenoble École de Management (France), Edinburgh Business School (UK), Nyenrode Business University (Netherlands), and NUS Business School (Singapore). Select MBA students (competitive application) spend a semester abroad in Year 2. Alternatively, Global Immersion Programmes (1–2 weeks) to EU/Singapore are available to all students as part of curriculum. International exposure is a key differentiator of SIBM over most other Pune B-schools." },
       ],
-      alumni: [
-        { name: "Neeraj Garg", designation: "Managing Director, Volkswagen India", batch: "1995" },
-        { name: "Rohit Kapoor", designation: "CEO, OYO International (Southeast Asia)", batch: "2002" },
-        { name: "Priya Nair", designation: "Chief Marketing Officer, Hindustan Unilever Ltd.", batch: "1998" },
-        { name: "Siddharth Lal", designation: "MD & CEO, Eicher Motors (Royal Enfield)", batch: "1994" },
-        { name: "Ashok Ramachandran", designation: "President: HR, Aditya Birla Group", batch: "1993" },
-        { name: "Neha Punater", designation: "Partner, KPMG India (Digital & Tech)", batch: "2009" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -598,12 +546,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Bajaj Auto", "Mahindra", "HDFC Bank", "ICICI Bank", "Deloitte", "EY", "Wipro"],
     entranceExams: ["CAT", "MAT", "CMAT", "ATMA"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 920,
+    rating: 0,
+    reviewCount: 0,
     stream: "MBA",
-    reviews: [
-      { id: 1, studentName: "Siddharth Kapoor", course: "MBA Finance", year: 2023, rating: 4, title: "Good B-school with industry connections", body: "MIT SOM has good industry connections especially in manufacturing sector. Bajaj Auto and Mahindra are top recruiters.", pros: ["Industry connections", "Affordable fees", "Good campus"], cons: ["Not as prestigious as SIBM", "Limited international exposure"] }
-    ],
+    reviews: [],
     tags: ["MIT Group", "Affordable MBA", "Industry Connections", "Kothrud"],
     description: "MIT School of Management (MIT-SOM) is a premier management institute in Pune, part of the MIT Group of Institutions with a legacy since 1924. Offering MBA and BBA programs, MIT-SOM is known for its industry-integrated curriculum and strong connections with Pune's manufacturing and IT sectors. The institute provides good value for money with NAAC A+ accreditation and reasonable fee structure.",
     highlights: ["Part of MIT Group with 100+ years of educational legacy", "NAAC A+ accredited management institution", "Strong connections with Pune's automotive and manufacturing sector", "Average placement of 12 LPA with strong domestic recruiters", "Entrepreneurship cell supporting startup ventures"],
@@ -632,12 +578,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Amazon", "HDFC", "ICICI", "Asian Paints", "HUL", "Bajaj Finserv", "Marico"],
     entranceExams: ["CAT", "SNAP", "MAT", "CMAT"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     stream: "MBA",
-    reviews: [
-      { id: 1, studentName: "Nisha Bhatt", course: "MBA Marketing", year: 2023, rating: 4, title: "Good MBA with decent placements", body: "BIMM is a good option for MBA in Pune. The placement average is around 8.5 LPA which is decent.", pros: ["Good placement support", "Industry visits", "Reasonable fees"], cons: ["Not as branded as SIBM", "Average infrastructure"] }
-    ],
+    reviews: [],
     tags: ["Balaji Group", "Good Placements", "Tathawade", "NAAC A"],
     description: "Balaji Institute of Modern Management (BIMM) is a reputed management institute in Pune's Tathawade area, part of the Balaji Society. Offering MBA and PGDM programs, BIMM focuses on practical, industry-integrated management education. With NAAC 'A' accreditation and consistent placement record, BIMM is a popular choice for MBA aspirants looking for quality management education at moderate investment.",
     highlights: ["NAAC 'A' accredited management institute", "Part of Sri Balaji Society running multiple management institutes", "Strong placement record with FMCG, BFSI, and e-commerce sectors", "Industry visit programs and live projects as part of curriculum", "Average placement package of 8.5 LPA"],
@@ -666,12 +610,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "HDFC Bank", "Bajaj Finserv", "Wipro", "Deloitte"],
     entranceExams: ["CAT", "MAT", "CMAT", "MH-CET Law"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 520,
+    rating: 0,
+    reviewCount: 0,
     stream: "MBA",
-    reviews: [
-      { id: 1, studentName: "Ranjit Iyer", course: "MBA Finance", year: 2022, rating: 4, title: "Solid MBA college for BFSI sector jobs", body: "IIMM has good connections with banking and financial services sector. Good option for finance specialization.", pros: ["Good BFSI placements", "Experienced faculty", "Industry exposure"], cons: ["Average campus life", "Below average non-finance placements"] }
-    ],
+    reviews: [],
     tags: ["Indira Group", "BFSI Placements", "Affordable MBA", "NAAC A"],
     description: "Indira Institute of Management (IIMM) Pune is a well-established management institution in the Wakad area of Pune, part of the Indira Group of Institutes. Offering MBA, MMS, and BBA programs, IIMM is known for its strong connections with the banking, financial services, and IT sectors. With NAAC 'A' accreditation, the institute provides quality management education at affordable fees.",
     highlights: ["NAAC 'A' accredited management institute since 1994", "Part of Indira Group of Institutes with multiple campuses", "Strong placement record in BFSI and IT sectors", "Industry-oriented curriculum with internship programs", "Affordable fees with scholarship programs available"],
@@ -700,12 +642,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Indian Armed Forces", "AIIMS", "Fortis", "Apollo Hospitals", "Manipal Hospitals"],
     entranceExams: ["NEET", "AFMC Entrance Exam"],
     hostel: true,
-    rating: 4.8,
-    reviewCount: 320,
+    rating: 0,
+    reviewCount: 0,
     stream: "Medical",
-    reviews: [
-      { id: 1, studentName: "Lt. Dr. Prerna Gupta", course: "MBBS", year: 2022, rating: 5, title: "Elite medical college with amazing facilities", body: "AFMC is the crown jewel of medical education in Pune. Practically free education, world-class teaching hospitals, and guaranteed career in Indian Army.", pros: ["Near zero fees", "Elite status", "NIRF Rank 4"], cons: ["Limited seats", "Strict discipline", "Bond period"] }
-    ],
+    reviews: [],
     tags: ["Top Medical Pune", "NIRF Rank 4", "Government", "Elite", "NAAC A++"],
     description: "Armed Forces Medical College (AFMC) Pune is one of India's most prestigious medical institutions, consistently ranked among the top 5 medical colleges nationally. Established in 1948 by the Indian Armed Forces, AFMC offers MBBS and postgraduate medical programs with near-zero tuition fees for selected candidates. NAAC A++ accredited and NIRF Rank 4, AFMC produces exceptional medical officers who serve the nation.",
     highlights: ["NIRF Rank 4 among medical colleges in India", "NAAC A++ highest accreditation grade", "Near-zero fee education with scholarship and stipend", "Directly under Indian Armed Forces with guaranteed service commission", "World-class teaching hospital with advanced medical facilities"],
@@ -803,12 +743,7 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Top Medical Colleges", rank: 4, year: "2024" },
         { agency: "The Week", category: "Best Medical Colleges", rank: 3, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of India Sponsored Cadet Scholarship", eligibility: "All AFMC MBBS students, automatic upon selection", amount: "₹6,500 per month stipend + free tuition, hostel, mess, uniform, and medical care", provider: "Ministry of Defence, Government of India" },
-        { name: "Armed Forces Medical Services PG Fellowship", eligibility: "Serving AMC officers pursuing MD/MS/PhD at AFMC", amount: "Full salary as Army officer continues + no additional fees", provider: "Indian Armed Forces" },
-        { name: "SC/ST Special Concession", eligibility: "SC/ST civilian PG students at AFMC", amount: "Fee waiver as per Government of India norms for SC/ST candidates", provider: "Government of India: Ministry of Social Justice" },
-        { name: "Central Government Health Scheme Scholarship", eligibility: "Dependent children of Central Government employees with high academic merit", amount: "₹15,000 per year towards miscellaneous expenses", provider: "Central Government" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Command Hospital (Southern Command) to 1,200 Beds", description: "AFMC's primary teaching hospital with 1,200+ beds, 40+ speciality departments, modern OT complexes, ICUs, NICU, dialysis unit, and advanced diagnostic equipment. One of the best military hospitals in Asia." },
         { name: "Anatomy, Physiology & Biochemistry Labs", description: "State-of-the-art pre-clinical laboratories with modern equipment including digital microscopes, fully equipped dissection hall with 100 tables, advanced biochemistry analysers, and physiology recording equipment." },
@@ -821,14 +756,7 @@ const rawColleges: College[] = [
         { name: "Auditorium & Lecture Theatres", description: "Modern 600-seat air-conditioned auditorium, 4 large lecture theatres with audio-visual systems, 8 tutorial rooms, and conference halls used for CME programs, national symposia, and academic events." },
         { name: "Chapel, Temple & Mosque", description: "Multi-faith prayer facilities on campus ensuring students of all religions can practice their faith. Part of the inclusive armed forces culture." },
       ],
-      alumni: [
-        { name: "Lt. Gen. (Dr.) Punita Arora", designation: "First woman to command a tri-services medical institution; Former Vice Chancellor, Jamia Hamdard", batch: "1975" },
-        { name: "Surg Vice Admiral (Dr.) Shekhar Sinha", designation: "Former Chief of Naval Staff (Medical); Chief of Integrated Defence Staff", batch: "1980" },
-        { name: "Maj. Gen. (Dr.) A.K. Singh", designation: "Former Director General, Armed Forces Medical Services (AFMS)", batch: "1978" },
-        { name: "Dr. Randeep Guleria", designation: "Former Director, AIIMS New Delhi; Padma Shri Awardee. India's leading pulmonologist", batch: "1983" },
-        { name: "Dr. S.K. Sarin", designation: "Director, ILBS New Delhi; World-renowned hepatologist; Padma Bhushan Awardee", batch: "1977" },
-        { name: "Brig. (Dr.) Atul Kotwal", designation: "Executive Director, National Health Systems Resource Centre (NHSRC), Government of India", batch: "1990" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -860,18 +788,15 @@ const rawColleges: College[] = [
     topRecruiters: ["Sassoon General Hospital", "Ruby Hall Clinic", "KEM Hospital Mumbai", "Jehangir Hospital", "Deenanath Mangeshkar Hospital", "Apollo Hospitals", "Fortis Healthcare", "Armed Forces Medical Services"],
     entranceExams: ["NEET UG", "NEET PG"],
     hostel: true,
-    rating: 4.5,
-    reviewCount: 580,
+    rating: 0,
+    reviewCount: 0,
     stream: "Medical",
-    reviews: [
-      { id: 1, studentName: "Dr. Kavya Kulkarni", course: "MBBS", year: 2022, rating: 5, title: "Prestigious government medical college in Pune", body: "BJMC is one of Maharashtra's best government medical colleges. The clinical exposure at Sassoon Hospital is unmatched. We handled 2000+ OPD cases daily and had exposure to rare tropical diseases. The faculty are senior consultants who are leaders in their fields.", pros: ["Unmatched clinical exposure at 1800-bed hospital", "Very affordable government fees", "Strong NAAC A+ & NIRF #18 ranking", "Excellent senior faculty consultants"], cons: ["Old infrastructure in some wards", "High competition for PG seats", "Hostel needs renovation"] },
-      { id: 2, studentName: "Dr. Rohan Patil", course: "MD General Medicine", year: 2023, rating: 4, title: "Best PG training in Maharashtra for medicine", body: "The residency program is intense but extremely rewarding. You manage complex multi-system disease patients independently. The breadth of cases at Sassoon is something private hospitals cannot match.", pros: ["Excellent case mix and volume", "Research opportunities with ICMR grants", "Affordable PG fees"], cons: ["Long duty hours (36-hour shifts common)", "Limited modern equipment in some departments"] }
-    ],
+    reviews: [],
     tags: ["Top Government Medical College", "NIRF Rank 18", "Clinical Excellence", "Affordable MBBS", "NEET Pune", "NAAC A+"],
-    description: "Byramjee Jeejeebhoy Medical College (BJMC), Pune, commonly known as B.J. Medical College, is one of Maharashtra's most prestigious government medical institutions, established in 1946. Permanently attached to the 1,800-bed Sassoon General Hospital, BJMC offers unparalleled clinical training exposure with over 3,500 daily OPD patients. The college holds NAAC A+ accreditation and ranks #18 among all medical institutions in India as per NIRF 2024. With some of the lowest government medical fees in Maharashtra, BJMC produces exceptional doctors serving in premier hospitals across India and internationally. The college offers MBBS, MD, MS, and DNB programs with 20+ post-graduate specializations.",
+    description: "Byramjee Jeejeebhoy Medical College (BJMC), Pune, commonly known as B.J. Medical College, is one of Maharashtra's most prestigious government medical institutions, established in 1946. Permanently attached to Sassoon General Hospital, BJMC offers unparalleled clinical training exposure with over 3,500 daily OPD patients. The college holds NAAC A+ accreditation and ranks #18 among all medical institutions in India as per NIRF 2024. With some of the lowest government medical fees in Maharashtra, BJMC produces exceptional doctors serving in premier hospitals across India and internationally. The college offers MBBS, MD, MS, and DNB programs with 20+ post-graduate specializations.",
     highlights: [
       "NIRF Rank #18 among all medical colleges in India (2024)",
-      "Attached to 1,800-bed Sassoon General Hospital, 3,500+ daily OPD patients",
+      "Attached to Sassoon General Hospital, a government teaching hospital",
       "NAAC A+ accredited government institution established in 1946",
       "One of the most affordable MBBS programs in Maharashtra, ₹60,000/yr",
       "20+ MD/MS post-graduate specializations available",
@@ -885,7 +810,7 @@ const rawColleges: College[] = [
     faqs: [
       { q: "What is the NEET cutoff for BJMC Pune MBBS admission?", a: "For 2024-25, the NEET cutoff at B.J. Medical College Pune (AIQ 15% seats) was approximately 630-645 marks for General category. State quota (85%) cutoffs are set by Maharashtra CET Cell and vary by category. Open category typically requires 620+ marks, OBC around 590+, SC/ST around 540+." },
       { q: "What is the total MBBS fee at B.J. Medical College Pune?", a: "As a government medical college under Maharashtra state, the annual fee for MBBS at BJMC is approximately ₹60,000 per year for state quota seats. The 4.5-year MBBS program costs around ₹2.7 lakh in total tuition fees, making it one of the most affordable MBBS programs in India. Additional hostel and mess charges apply." },
-      { q: "How is the clinical exposure at BJMC Sassoon Hospital?", a: "BJMC is attached to Sassoon General Hospital, one of Maharashtra's largest government hospitals with 1,800+ beds and approximately 3,500 OPD patients daily. Students get hands-on exposure to a high volume and diverse case mix including rare tropical diseases, trauma cases, and complex multi-system diseases from day one of their clinical years. This clinical exposure is considered among the best in Maharashtra." },
+      { q: "How is the clinical exposure at BJMC Sassoon Hospital?", a: "BJMC is attached to Sassoon General Hospital, a government teaching hospital. Students get hands-on exposure to a high volume and diverse case mix including rare tropical diseases, trauma cases, and complex multi-system diseases from day one of their clinical years. This clinical exposure is considered among the best in Maharashtra." },
       { q: "What are the MD/MS specializations available at BJMC Pune?", a: "B.J. Medical College offers PG programs (MD/MS/DNB) in 20+ specializations including General Medicine, General Surgery, Obstetrics & Gynaecology, Paediatrics, Orthopaedics, Radiology, Pathology, Microbiology, Biochemistry, Psychiatry, ENT, Ophthalmology, Anaesthesiology, Community Medicine, Forensic Medicine, Dermatology, and more. NEET PG is required for admission." },
       { q: "Is hostel available for MBBS students at BJMC?", a: "Yes, hostel facility is available for both boys and girls at B.J. Medical College campus. The hostel is located close to the college and Sassoon Hospital. Priority is given to students from outside Pune. Hostel fees are subsidized being a government college. Students are encouraged to stay in the hostel during clinical postings for easy hospital access." },
       { q: "What is the BJMC Pune ranking and accreditation?", a: "B.J. Medical College Pune holds NIRF Rank #18 among all medical colleges in India as per the 2024 NIRF Rankings published by the Ministry of Education. The college also holds NAAC A+ accreditation. It is affiliated with Savitribai Phule Pune University (SPPU) and is recognized by the National Medical Commission (NMC) / Medical Council of India." },
@@ -973,15 +898,9 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Top Govt Medical Colleges", rank: 8, year: "2024" },
         { agency: "The Week", category: "Best Medical Colleges", rank: 16, year: "2023" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra Merit Scholarship", eligibility: "Top 10% students in MBBS each year based on university exam performance", amount: "₹25,000 per year", provider: "Government of Maharashtra" },
-        { name: "EBC / OBC Scholarship", eligibility: "Students from EBC/OBC category with family income below ₹8 lakh/year", amount: "Full tuition fee waiver + ₹10,000 stipend/year", provider: "Maharashtra Social Justice Department" },
-        { name: "SC/ST Free Ship Scheme", eligibility: "SC/ST students: all fees exempted", amount: "Full tuition fee exemption + ₹15,000/year stipend", provider: "Government of Maharashtra / Central Government" },
-        { name: "NMC Merit Cum Means Scholarship", eligibility: "Students with family income below ₹4.5 lakh with 60%+ in MBBS", amount: "₹20,000 per year", provider: "National Medical Commission (NMC)" },
-        { name: "ICMR Junior Research Fellowship (JRF)", eligibility: "PG/PhD students engaged in biomedical research, competitive exam required", amount: "₹37,000–42,000 per month", provider: "Indian Council of Medical Research (ICMR)" },
-      ],
+      scholarships: [],
       facilities: [
-        { name: "Sassoon General Hospital (1800 beds)", description: "Attached 1,800-bed government hospital with 45+ speciality departments, daily OPD of 3,500+ patients, providing unmatched clinical training for all students." },
+        { name: "Sassoon General Hospital", description: "Attached government teaching hospital where students get clinical training." },
         { name: "Central Library", description: "Modern medical library with 40,000+ books, 200+ national and international journal subscriptions, digital library access (PubMed, Cochrane, UpToDate), and 24×7 reading hall." },
         { name: "Anatomy & Pathology Labs", description: "Well-equipped dissection hall, histopathology lab, and clinical pathology lab with modern microscopes, automated analysers, and digital pathology systems." },
         { name: "Skills Simulation Lab", description: "Medical skills lab with mannequins for ACLS/BLS training, laparoscopy simulation, suturing practice stations, and OSCE examination preparation." },
@@ -992,14 +911,7 @@ const rawColleges: College[] = [
         { name: "Auditorium & Conference Hall", description: "400-seat air-conditioned auditorium for CME programs, annual functions, guest lectures, and academic conferences." },
         { name: "Research Facility & ICMR Unit", description: "Dedicated research wing with ICMR-funded projects, cell culture lab, PCR facility, ELISA equipment, and support for student research publications." },
       ],
-      alumni: [
-        { name: "Dr. T.P. Lahane", designation: "Director, Directorate of Medical Education & Research (DMER), Maharashtra", batch: "1982" },
-        { name: "Dr. Sanjay Oak", designation: "Former Dean, KEM Hospital Mumbai; Padma Shri Awardee", batch: "1978" },
-        { name: "Dr. Ajit Diwan", designation: "Professor & Head, Orthopedics, KEM Hospital Mumbai", batch: "1988" },
-        { name: "Dr. Padmaja Jogekar", designation: "Senior Consultant Gynaecologist, Jehangir Hospital Pune", batch: "1995" },
-        { name: "Dr. Nitin Karnik", designation: "Head of Cardiology, Ruby Hall Clinic Pune", batch: "1991" },
-        { name: "Dr. Avinash Supe", designation: "Former Dean, KEM Hospital & Seth GS Medical College Mumbai", batch: "1979" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -1031,12 +943,10 @@ const rawColleges: College[] = [
     topRecruiters: ["D.Y. Patil Hospital", "Ruby Hall Clinic", "Fortis", "Apollo", "Manipal Hospitals"],
     entranceExams: ["NEET"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 420,
+    rating: 0,
+    reviewCount: 0,
     stream: "Medical",
-    reviews: [
-      { id: 1, studentName: "Dr. Arjun Mehta", course: "MBBS", year: 2022, rating: 4, title: "Good private medical college with advanced facilities", body: "DY Patil Medical College has excellent infrastructure and attached 1000-bed hospital. Fees are high but facilities justify it.", pros: ["Advanced facilities", "Good clinical exposure", "Research opportunities"], cons: ["Very expensive fees", "Management quota issues"] }
-    ],
+    reviews: [],
     tags: ["Private Medical", "D.Y. Patil Group", "Advanced Facilities", "Deemed University"],
     description: "D.Y. Patil Medical College Hospital & Research Centre in Pimpri is a leading private medical institution under D.Y. Patil Deemed University. Offering MBBS, MD, MS, and dental programs, the college is equipped with state-of-the-art medical infrastructure including a 1000-bed teaching hospital. NAAC A+ accredited, it is one of Pune's top private medical colleges with strong clinical training programs.",
     highlights: ["Attached 1000-bed superspeciality teaching hospital", "NAAC A+ accredited deemed medical university", "Advanced simulation labs and research facilities", "Strong PG admission guidance and coaching", "Part of renowned D.Y. Patil Group of Institutions"],
@@ -1142,13 +1052,7 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Top Private Medical Colleges Maharashtra", rank: 8, year: "2024" },
         { agency: "Times Engineering Survey", category: "Medical Colleges Pune", rank: 3, year: "2024" },
       ],
-      scholarships: [
-        { name: "D.Y. Patil University Merit Scholarship", eligibility: "Students scoring 600+ in NEET UG, top 10% of incoming batch", amount: "25% tuition fee waiver (₹2.75 lakh/year)", provider: "D.Y. Patil Deemed University" },
-        { name: "Maharashtra Government EBC Scholarship", eligibility: "Students from Economically Backward Class with family income below ₹8 lakh/year", amount: "Up to ₹60,000 per year", provider: "Government of Maharashtra" },
-        { name: "SC/ST Freeship (Maharashtra)", eligibility: "SC/ST students domiciled in Maharashtra", amount: "Full tuition fee exemption + ₹15,000/year maintenance allowance", provider: "Government of Maharashtra" },
-        { name: "NMC Merit Cum Means Scholarship", eligibility: "Students with annual family income below ₹4.5 lakh and 60%+ in MBBS", amount: "₹20,000 per year", provider: "National Medical Commission (NMC)" },
-        { name: "ICMR Short Term Studentship", eligibility: "MBBS students in 2nd/3rd year interested in research projects", amount: "₹10,000 (one-time) for 2-month research project", provider: "Indian Council of Medical Research (ICMR)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "D.Y. Patil Hospital & Research Centre (1000+ Beds)", description: "Multi-speciality teaching hospital with 1,000+ beds, 40+ speciality departments, robotic surgery unit, cath lab, bone marrow transplant unit, level-3 ICU, NICU, PICU, dialysis centre, and PET-CT scanner. Daily OPD of 1,500+ patients." },
         { name: "Anatomy & Pre-clinical Labs", description: "Modern anatomy dissection hall with 80 tables, histopathology and cytology labs, microbiology culture lab, biochemistry automated analysers, and physiology recording systems." },
@@ -1160,13 +1064,7 @@ const rawColleges: College[] = [
         { name: "Sports & Recreation Complex", description: "Multi-purpose sports complex with cricket ground, basketball/volleyball courts, badminton hall, table tennis, swimming pool, gym with modern equipment, and outdoor jogging track." },
         { name: "Cafeteria & Student Amenities", description: "Large student cafeteria with multi-cuisine food options at subsidized rates. Separate faculty lounge, pharmacy, bank ATM, stationery shop, and travel desk on campus." },
       ],
-      alumni: [
-        { name: "Dr. Nitin Dange", designation: "Senior Neurosurgeon, D.Y. Patil Hospital; Pioneer in minimally invasive spine surgery in Maharashtra", batch: "1998" },
-        { name: "Dr. Prashant Bhojwani", designation: "Chief of Cardiology, Kokilaben Dhirubhai Ambani Hospital, Mumbai", batch: "2002" },
-        { name: "Dr. Swati Rajadhyaksha", designation: "Head of Oncology, Manipal Hospitals Pune; Fellowship from MD Anderson, USA", batch: "2000" },
-        { name: "Dr. Kiran Rukadikar", designation: "Founder, BariBuddy: Bariatric surgery app; Prominent bariatric surgeon and obesity specialist", batch: "2005" },
-        { name: "Dr. Mugdha Tasgaonkar", designation: "Consultant Gynaecologist, Ruby Hall Clinic Pune; Laparoscopic surgery expert", batch: "2008" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -1198,12 +1096,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Bharati Hospital", "Sahyadri Hospitals", "Ruby Hall", "Jehangir Hospital"],
     entranceExams: ["NEET"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 340,
+    rating: 0,
+    reviewCount: 0,
     stream: "Medical",
-    reviews: [
-      { id: 1, studentName: "Dr. Pallavi Shinde", course: "MBBS", year: 2021, rating: 4, title: "Decent medical college with good clinical exposure", body: "BVMC Pune provides good clinical training at Bharati Hospital. The faculty is experienced.", pros: ["Good clinical training", "Experienced faculty", "Research facilities"], cons: ["Expensive fees", "Less prestigious than AFMC/BJMC"] }
-    ],
+    reviews: [],
     tags: ["Bharati Vidyapeeth", "Deemed Medical", "NEET", "Katraj"],
     description: "Bharati Vidyapeeth Medical College is a reputed private medical institution in Pune, part of Bharati Vidyapeeth University (BVU). Established in 1989 and offering MBBS, MD/MS programs, the college provides quality medical education with strong clinical training at the attached Bharati Hospital. NAAC 'A' accredited, BVMC Pune is a popular choice for medical students seeking quality private medical education in Pune.",
     highlights: ["Part of established Bharati Vidyapeeth University", "Attached Bharati Hospital providing excellent clinical training", "NAAC 'A' accredited medical institution", "Experienced medical faculty with research focus", "Strong postgraduate medical program admissions support"],
@@ -1300,13 +1196,7 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Top Private Medical Colleges Pune", rank: 5, year: "2024" },
         { agency: "Careers360", category: "Medical Colleges Rating", rank: null, grade: "AAA", year: "2024" },
       ],
-      scholarships: [
-        { name: "Bharati Vidyapeeth Merit Scholarship", eligibility: "Top 5% of incoming MBBS batch (NEET score 560+)", amount: "20% tuition fee waiver (₹1.8 lakh/year)", provider: "Bharati Vidyapeeth Deemed University" },
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Economically Backward Class students with annual family income below ₹8 lakh", amount: "Up to ₹60,000 per year", provider: "Government of Maharashtra" },
-        { name: "SC/ST Freeship Scheme (Maharashtra)", eligibility: "SC/ST students domiciled in Maharashtra", amount: "Full tuition fee waiver + ₹15,000/year maintenance allowance", provider: "Government of Maharashtra" },
-        { name: "OBC Post-Matric Scholarship", eligibility: "OBC students with family income below ₹3 lakh/year", amount: "Up to ₹40,000 per year", provider: "Ministry of Social Justice & Empowerment, Government of India" },
-        { name: "NMC Merit Cum Means Scholarship", eligibility: "Family income below ₹4.5 lakh and 60%+ in MBBS annual exams", amount: "₹20,000 per year", provider: "National Medical Commission (NMC)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Bharati Hospital (700+ Beds)", description: "Attached multi-speciality teaching hospital with 700+ beds, 30+ departments, emergency & trauma centre, ICU, NICU, operation theatres, dialysis unit, and diagnostic imaging centre. Daily OPD of 1,200+ patients." },
         { name: "Pre-Clinical Laboratories", description: "Well-equipped anatomy dissection hall with 60 tables, pathology and microbiology labs, biochemistry analyser lab, physiology recording systems, and community medicine field study units." },
@@ -1318,13 +1208,7 @@ const rawColleges: College[] = [
         { name: "Sports & Recreation Facilities", description: "Cricket ground, basketball court, volleyball court, badminton hall, table tennis, and indoor games room. Outdoor jogging track and gym for fitness training." },
         { name: "Cafeteria & Student Services", description: "Student cafeteria with affordable meals, separate faculty canteen, bank ATM, stationery & medical book shop, pharmacy, and a medical store catering to student needs." },
       ],
-      alumni: [
-        { name: "Dr. Ashok Rajguru", designation: "Former Vice Chancellor, Bharati Vidyapeeth Deemed University; Renowned physician and academic administrator", batch: "1985" },
-        { name: "Dr. Seema Parekh", designation: "Senior Consultant Gynaecologist & Laparoscopic Surgeon, Sahyadri Hospitals Pune", batch: "1992" },
-        { name: "Dr. Nikhil Patil", designation: "Head of Orthopaedics, Jehangir Hospital Pune; Sports medicine specialist", batch: "1998" },
-        { name: "Dr. Varsha Naik", designation: "Associate Professor & Gastroenterologist, KEM Hospital Mumbai", batch: "1995" },
-        { name: "Dr. Aditya Kelkar", designation: "Consultant Paediatric Surgeon, Ruby Hall Clinic Pune", batch: "2003" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -1356,12 +1240,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "TCS", "Wipro", "HDFC Bank", "Government Jobs"],
     entranceExams: ["Class 12 Merit"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 2100,
+    rating: 0,
+    reviewCount: 0,
     stream: "Arts & Science",
-    reviews: [
-      { id: 1, studentName: "Meera Iyer", course: "BSc Mathematics", year: 2023, rating: 5, title: "Historic college with excellent academics", body: "Fergusson College is one of the most prestigious colleges in Pune with a 130+ year history. The faculty is outstanding.", pros: ["Historic legacy", "Excellent faculty", "Beautiful campus"], cons: ["Old infrastructure", "Limited professional courses"] }
-    ],
+    reviews: [],
     tags: ["Historic College", "Prestigious", "NAAC A+", "Arts & Science"],
     description: "Fergusson College is one of India's most historic and prestigious educational institutions, established in 1885 by the Deccan Education Society. Located on FC Road in the heart of Pune, this autonomous college affiliated with SPPU offers undergraduate and postgraduate programs in arts, science, and commerce. With NAAC A+ accreditation and a legacy of 130+ years, Fergusson College has produced eminent scientists, politicians, and intellectuals.",
     highlights: ["Established in 1885, one of India's oldest and most prestigious colleges", "NAAC A+ accredited autonomous institution", "Beautiful colonial heritage campus in heart of Pune", "Produced eminent alumni including scientists and political leaders", "Excellent faculty with strong research tradition"],
@@ -1470,13 +1352,7 @@ const rawColleges: College[] = [
         { agency: "The Week", category: "Best Colleges Pune", rank: 3, year: "2024" },
         { agency: "NIRF", category: "Colleges", rank: null, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra Open Merit Scholarship", eligibility: "Students securing 60%+ in HSC and 60%+ in first year college exams. Family income below ₹8 lakh.", amount: "₹5,000–12,000 per year", provider: "Government of Maharashtra" },
-        { name: "SC/ST Freeship Scheme", eligibility: "SC/ST students domiciled in Maharashtra, all fees exempt", amount: "Full tuition fee waiver + ₹5,000/year maintenance", provider: "Government of Maharashtra" },
-        { name: "EBC Scholarship (Economically Backward Class)", eligibility: "Students with annual family income below ₹8 lakh from EBC category", amount: "Up to ₹8,000 per year", provider: "Government of Maharashtra" },
-        { name: "DST-INSPIRE Scholarship", eligibility: "BSc students ranked in top 1% in Class 12 board exams, pursuing basic sciences", amount: "₹80,000 per year for 5 years (BSc + MSc)", provider: "Dept. of Science & Technology, Government of India" },
-        { name: "Fergusson College Alumni Association Scholarship", eligibility: "Meritorious students from economically weaker sections, selected by college scholarship committee", amount: "₹10,000–25,000 per year", provider: "Fergusson College Alumni Association" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Heritage Library (Est. 1885)", description: "One of the oldest college libraries in Maharashtra with 1,50,000+ books, rare manuscripts, historical periodicals, N-LIST digital access, reading hall for 300 students, and a special heritage section preserving colonial-era texts." },
         { name: "Science Laboratories", description: "Well-equipped Physics, Chemistry, Botany, Zoology, Microbiology, and Computer Science labs. The Chemistry lab has advanced spectrometers; Zoology has museum specimens; Computer lab has 200+ workstations with broadband internet." },
@@ -1488,14 +1364,7 @@ const rawColleges: College[] = [
         { name: "Student Activity Centre", description: "Multi-purpose centre hosting cultural fests (Firodiya Karandak winner multiple times), Fergusson Annual Social Gathering (FASG), NSS/NCC activities, debate competitions, and departmental associations." },
         { name: "Canteen & Cafeteria", description: "Iconic Fergusson canteen: a social institution itself. Students across generations have gathered here for affordable chai and snacks. Recently renovated with expanded seating and improved hygiene standards." },
       ],
-      alumni: [
-        { name: "Bal Gangadhar Tilak", designation: "Freedom Fighter, Journalist & Social Reformer. 'Father of Indian Unrest'; Founded Fergusson College with Gokhale", batch: "1879" },
-        { name: "Gopal Krishna Gokhale", designation: "Freedom Fighter, Social Reformer, Mentor of Mahatma Gandhi; Co-founder of Deccan Education Society", batch: "1884" },
-        { name: "Dr. Vijay Bhatkar", designation: "Scientist: Creator of PARAM Supercomputer; Former Chairman, Nalanda University", batch: "1965" },
-        { name: "Dilip Kumar (Yusuf Khan)", designation: "Legendary Bollywood Actor: 'Tragedy King'; Padma Vibhushan & Dadasaheb Phalke Award winner", batch: "1940s" },
-        { name: "Shivajirao Bhosale", designation: "Former Chief Minister of Maharashtra (1982–85)", batch: "1950s" },
-        { name: "Dr. Narendra Jadhav", designation: "Economist, Author, Former Member. Planning Commission of India; Author of 'Untouchables'", batch: "1972" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -1527,12 +1396,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Persistent Systems", "TCS", "HDFC Bank", "SBI", "Government Jobs"],
     entranceExams: ["Class 12 Merit"],
     hostel: false,
-    rating: 4.3,
-    reviewCount: 1580,
+    rating: 0,
+    reviewCount: 0,
     stream: "Arts & Science",
-    reviews: [
-      { id: 1, studentName: "Swati Kulkarni", course: "BSc Chemistry", year: 2022, rating: 4, title: "Excellent science education at affordable cost", body: "SP College provides top-notch science education. The laboratory facilities are very good for a government-aided college.", pros: ["Affordable fees", "Good science labs", "Central location"], cons: ["No hostel", "Limited management courses"] }
-    ],
+    reviews: [],
     tags: ["Historic College", "Affordable", "NAAC A+", "Central Pune"],
     description: "Sir Parashurambhau (SP) College is a prestigious autonomous arts and science college in Pune established in 1916. Located on Tilak Road in Sadashiv Peth, SP College is affiliated with SPPU and has NAAC A+ accreditation. Known for excellence in science education, the college offers undergraduate and postgraduate programs in arts, science, and commerce at very affordable fees.",
     highlights: ["Established in 1916, over a century of academic excellence", "NAAC A+ accredited autonomous institution", "Centrally located in Sadashiv Peth with easy accessibility", "Excellent science laboratories for practical learning", "Affordable quality education with government-aided fee structure"],
@@ -1561,12 +1428,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HDFC Bank", "Bajaj Finserv"],
     entranceExams: ["Class 12 Merit"],
     hostel: false,
-    rating: 4.1,
-    reviewCount: 1840,
+    rating: 0,
+    reviewCount: 0,
     stream: "Arts & Science",
-    reviews: [
-      { id: 1, studentName: "Aditi Patil", course: "BCom Computer Science", year: 2023, rating: 4, title: "Best commerce college in Pune", body: "Modern College is one of the most sought-after colleges for BCom and BSc in Pune. Large campus with good facilities.", pros: ["Large student community", "Multiple courses", "Affordable"], cons: ["Very crowded", "Average placements"] }
-    ],
+    reviews: [],
     tags: ["Popular College", "Affordable", "NAAC A", "Central Pune"],
     description: "Modern College of Arts, Science and Commerce is one of Pune's most popular and largest colleges, established in 1969. Located in Shivajinagar and affiliated with SPPU, Modern College offers a wide range of undergraduate and postgraduate programs in arts, science, commerce, and computer science. With NAAC 'A' accreditation and a large student body, it is a top choice for arts and commerce students in Pune.",
     highlights: ["One of Pune's largest colleges with 8,000+ students", "NAAC 'A' accredited autonomous institution", "Wide range of UG and PG programs across disciplines", "Active placement cell with IT and BFSI sector connections", "Lively student life with cultural and technical activities"],
@@ -1595,12 +1460,10 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "ICICI Bank", "Deloitte", "EY", "KPMG", "Capgemini"],
     entranceExams: ["Class 12 Merit"],
     hostel: false,
-    rating: 4.2,
-    reviewCount: 1320,
+    rating: 0,
+    reviewCount: 0,
     stream: "Arts & Science",
-    reviews: [
-      { id: 1, studentName: "Rucha Tambe", course: "BCom Finance", year: 2023, rating: 4, title: "Best commerce college for CA aspirants", body: "Garware College is the go-to college for BCom students. Many alumni are CA and work in Big 4 firms.", pros: ["CA coaching support", "Good finance faculty", "Prestigious"], cons: ["No hostel", "Commuting issues"] }
-    ],
+    reviews: [],
     tags: ["Top Commerce College", "CA Support", "NAAC A+", "Finance"],
     description: "Garware College of Commerce is one of Pune's most prestigious commerce colleges, established in 1951. Located on Karve Road and affiliated with SPPU, Garware College is the go-to institution for commerce, finance, and business administration students. With NAAC A+ accreditation, it has a strong tradition of producing Chartered Accountants and finance professionals who excel in Big 4 firms and banking sector.",
     highlights: ["One of Pune's most prestigious commerce colleges since 1951", "NAAC A+ accredited institution with strong finance faculty", "High pass rate in CA exams with dedicated coaching support", "Strong alumni in Big 4 accounting firms and banking sector", "Well-connected location on Karve Road with excellent transport access"],
@@ -1629,12 +1492,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "HCL", "Cognizant", "Persistent"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 490,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Nikhil Patel", course: "B.Tech CS", year: 2022, rating: 4, title: "Good deemed university engineering college", body: "BVCOE is a solid choice for engineering. The Bharati Vidyapeeth brand has good recognition in Pune.", pros: ["University status", "Good campus", "Multiple courses"], cons: ["Average placements", "Moderate fees"] }
-    ],
+    reviews: [],
     tags: ["Bharati Vidyapeeth", "Deemed University", "NAAC A", "Katraj"],
     description: "Bharati Vidyapeeth College of Engineering (BVCOE) is a well-regarded engineering college under Bharati Vidyapeeth (Deemed) University in Pune. Established in 1983, BVCOE offers quality engineering education with the backing of BVU's university status. NAAC 'A' accredited, the college provides undergraduate and postgraduate engineering programs with good industry connections in Pune's tech sector.",
     highlights: ["Part of Bharati Vidyapeeth University with deemed university status", "NAAC 'A' accredited engineering institution", "Strong industry connections in Pune's IT and manufacturing sectors", "Modern labs and infrastructure with hostel facilities", "Well-established alumni network across India's tech companies"],
@@ -1663,12 +1524,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "HCL", "Infosys", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.6,
-    reviewCount: 340,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Swapnil More", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Good affordable engineering college near Pune", body: "ICEM is a decent affordable option for engineering near Pune. Good for mechanical students.", pros: ["Very affordable", "Hostel available", "Near Chakan auto hub"], cons: ["Far from main city", "Average placements"] }
-    ],
+    reviews: [],
     tags: ["Indira Group", "Affordable", "Parandwadi", "B++ NAAC"],
     description: "Indira College of Engineering & Management (ICEM) is part of the Indira Group of Institutes, offering quality engineering education at affordable fees near Pune. Located in Parandwadi near the Chakan auto industrial hub, ICEM is particularly advantageous for mechanical engineering students. NAAC B++ accredited and affiliated with SPPU, it provides good value engineering education.",
     highlights: ["Part of Indira Group of Institutes with strong educational background", "Strategically located near Chakan automotive industrial hub", "Affordable fees with hostel facility for outstation students", "Strong placement support with IT and automotive sector connections", "Active technical clubs and project competitions"],
@@ -1697,12 +1556,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Zee News", "Star TV", "Times Group", "HDFC Bank", "ICICI Bank", "HUL"],
     entranceExams: ["CAT", "MAT", "CMAT"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 480,
+    rating: 0,
+    reviewCount: 0,
     stream: "MBA",
-    reviews: [
-      { id: 1, studentName: "Ritika Sawant", course: "MBA Marketing", year: 2022, rating: 4, title: "Good for marketing and media management careers", body: "Suryadatta is a good option for MBA with a media career focus. The mass communication courses are excellent.", pros: ["Good media connections", "Marketing focus", "Reasonable fees"], cons: ["Less brand value vs. SIBM", "Average placement avg"] }
-    ],
+    reviews: [],
     tags: ["Media & Management", "Marketing Focus", "Bavdhan", "NAAC A"],
     description: "Suryadatta Institute of Management and Mass Communication (SIMMC) is a unique management institute in Pune that combines business education with media and communication studies. Part of the Suryadatta Group, it offers MBA, BBA, and mass communication programs. NAAC 'A' accredited and affiliated with SPPU, SIMMC has strong connections with media companies and is a popular choice for students interested in marketing and media management careers.",
     highlights: ["Unique combination of management and mass communication education", "NAAC 'A' accredited institution with 25+ years of excellence", "Strong industry connections with leading media companies", "Good placement support for marketing and media careers", "Located on NH-48 with excellent transport connectivity"],
@@ -1731,12 +1588,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "Wipro", "TCS", "L&T", "Bajaj Auto", "Mahindra", "Persistent"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Vikram Singh", course: "B.Tech CSE", year: 2023, rating: 5, title: "Discipline and academics both excellent", body: "AIT gives you the best of discipline and quality education. Army-run institute with amazing infrastructure.", pros: ["Discipline", "Great infrastructure", "Low fees"], cons: ["Far from city", "Limited nightlife"] }
-    ],
+    reviews: [],
     tags: ["Army Run", "Government", "NAAC A+", "Dighi"],
     description: "Army Institute of Technology (AIT), Pune is a premier engineering college established in 1994 under the aegis of the Army Welfare Education Society (AWES). It is affiliated to Savitribai Phule Pune University and offers B.Tech and M.Tech programs. AIT is known for its excellent discipline, strong academic culture, and good placement record. Admission priority is given to wards of Army personnel.",
     highlights: ["Established 1994 under Army Welfare Education Society", "NAAC A+ accredited autonomous institution", "Priority admission for army personnel wards", "Excellent discipline and campus infrastructure", "Good placement record with avg 9.5 LPA"],
@@ -1765,12 +1620,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Persistent", "Zensar", "KPIT"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Sneha Kulkarni", course: "B.Tech IT", year: 2023, rating: 4, title: "Good IT college with strong placement record", body: "VIIT is one of the best IT colleges in Pune. Faculty is very helpful and industry connections are strong.", pros: ["IT focused", "Good placements", "Active clubs"], cons: ["Fees slightly high", "Parking issues"] }
-    ],
+    reviews: [],
     tags: ["IT Focused", "NAAC A+", "Kondhwa", "Autonomous"],
     description: "Vishwakarma Institute of Information Technology (VIIT) is a leading autonomous engineering institute in Pune, sister institution of VIT Pune. Established in 2002 and affiliated with SPPU, VIIT offers specialized programs in IT and computer science. With NAAC A+ accreditation and strong industry partnerships, VIIT consistently achieves excellent placements especially in IT and software sectors.",
     highlights: ["NAAC A+ accredited autonomous institution", "Sister institute of VIT Pune (NAAC A+)", "Strong IT and software sector placements", "State-of-the-art computing labs and infrastructure", "Active coding clubs and hackathon culture"],
@@ -1799,12 +1652,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "TCS", "Wipro", "Capgemini", "Tech Mahindra", "L&T"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 590,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Akash Pawar", course: "B.Tech Civil", year: 2022, rating: 4, title: "Good college with decent placements", body: "SKNCOE is a solid choice for Sinhgad Road area. Faculty is good and the infrastructure is well maintained.", pros: ["Good location", "Affordable fees", "Active sports"], cons: ["Average brand value", "Placement could be better"] }
-    ],
+    reviews: [],
     tags: ["Sinhgad Road", "NAAC A", "Private", "Navale Group"],
     description: "Smt. Kashibai Navale College of Engineering (SKNCOE) is a prominent engineering college in Pune, established in 2001 under the Kashibai Navale Charitable Society. Affiliated with SPPU and NAAC 'A' accredited, SKNCOE offers UG and PG engineering programs. Located on Sinhgad Road, the college provides quality technical education at affordable fees with good placement support.",
     highlights: ["NAAC 'A' accredited private engineering college", "Established 2001 under Navale Charitable Society", "Modern labs and computing infrastructure", "Good placement support from active training & placement cell", "Strategic location on Sinhgad Road with easy access"],
@@ -1833,12 +1684,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "L&T", "Persistent", "KPIT", "Bajaj"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 850,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Pooja Joshi", course: "B.Tech Computer", year: 2023, rating: 4, title: "MAEER MIT COE - legacy engineering college", body: "MIT COE has a great legacy. 40+ years old, the faculty is very experienced. Good for Mechanical and Computer branches.", pros: ["Legacy institution", "Experienced faculty", "Good campus"], cons: ["Heavy traffic area", "Older infrastructure in some blocks"] }
-    ],
+    reviews: [],
     tags: ["MAEER Group", "NAAC A+", "Kothrud", "Legacy Institute"],
     description: "Maharashtra Institute of Technology (MIT COE) Kothrud is one of Pune's oldest and most respected engineering institutions, established in 1983 by the Maharashtra Academy of Engineering and Educational Research (MAEER). NAAC A+ accredited and autonomous, MIT COE offers B.Tech, M.Tech, MBA, and MCA programs. It is a flagship institute of the MIT Group of Institutions and has produced thousands of successful engineers over four decades.",
     highlights: ["Established 1983: one of Pune's oldest engineering colleges", "NAAC A+ accredited autonomous institution", "Part of prestigious MAEER Group", "40+ years of engineering excellence", "Strong alumni network in core and IT industries"],
@@ -1867,12 +1716,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Cognizant", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: false,
-    rating: 3.9,
-    reviewCount: 430,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Rahul Bhor", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Good college for mechanical engineering", body: "PVG COE is a solid affordable engineering option. Faculty is good and the campus is clean.", pros: ["Affordable fees", "Good faculty", "Clean campus"], cons: ["No hostel", "Less brand recognition"] }
-    ],
+    reviews: [],
     tags: ["Nashik Phata", "NAAC A", "Autonomous", "Affordable"],
     description: "PVG's College of Engineering & Technology, Pune (PVGCOET) is a well-established autonomous engineering institute affiliated with SPPU. Established in 1999 under Pune Vidhyarthi Griha's Trust, PVGCOET offers UG and PG programs in engineering. NAAC 'A' accredited, the college provides quality education at affordable fees, making it a popular choice among engineering aspirants in Pune.",
     highlights: ["NAAC 'A' accredited autonomous engineering college", "Established 1999 under PVG Trust", "Affordable fees with quality education", "Active placement cell with 70%+ placement rate", "Strong industry connections in core engineering sectors"],
@@ -1901,12 +1748,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "HCL", "Tech Mahindra"],
     entranceExams: ["MHT-CET"],
     hostel: false,
-    rating: 3.7,
-    reviewCount: 310,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Saurabh Gaikwad", course: "B.Tech Computer", year: 2022, rating: 3, title: "Affordable engineering option in Narhe", body: "Zeal is a decent college for engineering. Fees are low and placement support is improving year by year.", pros: ["Very affordable", "Good faculty in CS dept", "Improving placements"], cons: ["Less brand value", "Limited extracurriculars"] }
-    ],
+    reviews: [],
     tags: ["Narhe", "Affordable", "NAAC A", "Private"],
     description: "Zeal College of Engineering & Research, Narhe is an engineering institution in Pune established in 2008. Affiliated with SPPU and NAAC 'A' accredited, it offers B.Tech and M.Tech programs at competitive fees. Popular among students looking for affordable quality engineering education in South Pune.",
     highlights: ["NAAC 'A' accredited private engineering institution", "Very competitive annual fees", "Improving industry connections and placement rates", "Located in fast-developing Narhe corridor", "Good student-faculty ratio"],
@@ -1935,12 +1780,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "TCS", "Wipro", "L&T", "Cognizant", "HCL"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 270,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Amol Bhosale", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Good engineering college in Wagholi area", body: "GSMCOE is a good college for mechanical and civil branches. Nice campus and helpful faculty.", pros: ["Good campus", "Helpful faculty", "Hostel facility"], cons: ["Far from city center", "Brand value could improve"] }
-    ],
+    reviews: [],
     tags: ["Wagholi", "Private", "NAAC A", "Hostel Available"],
     description: "Genba Sopanrao Moze College of Engineering (GSMCOE) is an engineering college established in 2009 in Wagholi, Pune. Affiliated with SPPU and NAAC 'A' accredited, it offers B.Tech programs in multiple disciplines. Popular among students from Nagar Road and East Pune areas.",
     highlights: ["NAAC 'A' accredited engineering institution", "Hostel facility available on campus", "Located in rapidly growing Wagholi corridor", "Good for mechanical and civil engineering programs", "Active placement cell with growing industry network"],
@@ -1969,12 +1812,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Bajaj Auto", "L&T", "KPIT", "Capgemini"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 520,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Mayank Sharma", course: "B.Tech CS", year: 2023, rating: 4, title: "Good college near PCMC industrial area", body: "DYPIT is well connected to PCMC industries. Good internship opportunities with Bajaj and L&T companies nearby.", pros: ["Near PCMC industries", "Good internships", "Hostel available"], cons: ["Traffic near campus", "Canteen food"] }
-    ],
+    reviews: [],
     tags: ["DY Patil Group", "Pimpri", "NAAC A", "PCMC"],
     description: "Dr. DY Patil Institute of Technology (DYPIT), Pimpri is an engineering college under the DY Patil Pratishthan group. Established in 2001 and NAAC 'A' accredited, it offers B.Tech, M.Tech, and MCA programs. Located near the PCMC industrial belt, DYPIT provides excellent internship and placement opportunities with manufacturing and IT companies in the region.",
     highlights: ["NAAC 'A' accredited engineering college in Pimpri-Chinchwad", "Proximity to PCMC industrial area for internship opportunities", "DY Patil Group's strong industry connections", "Good placements in IT and manufacturing sectors", "Modern labs with updated equipment"],
@@ -2033,13 +1874,7 @@ const rawColleges: College[] = [
         { agency: "Silicon India", category: "Top Private Engineering Colleges Pune", rank: 18, year: "2024" },
         { agency: "Outlook India", category: "Best Engineering Colleges Pune Region", rank: 22, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with annual family income below ₹8 lakh and 60%+ in HSC", amount: "Full tuition fee waiver (₹1.20L–₹1.55L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT students with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC / ST Post-Matric Scholarship", eligibility: "SC/ST students (no income cap up to ₹2.5 lakh; partial up to ₹6 lakh)", amount: "Full tuition + exam fee waiver + maintenance allowance ₹7,000/year", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "DY Patil Group Merit Scholarship", eligibility: "Students with 85%+ in HSC or 88+ percentile in MHT-CET", amount: "20% tuition fee waiver (₹24,000–₹31,000/yr) for all 4 years", provider: "DY Patil Pratishthan Trust" },
-        { name: "AICTE Pragati Scholarship (Women)", eligibility: "Female engineering students with family income below ₹8 lakh", amount: "₹30,000/year + ₹2,000/month contingency", provider: "AICTE, Government of India" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Advanced Computing & AI Labs", description: "8 computer labs with 400+ workstations. Dedicated AI/ML lab with NVIDIA GPU workstations, TensorFlow, PyTorch, and cloud computing access (AWS Educate, Azure for Students). Software: MATLAB, AutoCAD, SolidWorks, Autodesk Inventor, and SAP for business courses." },
         { name: "Mechanical & Manufacturing Labs", description: "Fully equipped mechanical labs including CNC lathe and milling machines, 3D printing lab, robotics lab, fluid mechanics lab, thermodynamics lab, and automobile workshop. Located close to Bajaj Auto plant for live industry visits and internships." },
@@ -2050,14 +1885,7 @@ const rawColleges: College[] = [
         { name: "Transport & Connectivity", description: "College bus service covering Pimpri, Chinchwad, Wakad, Bhosari, Akurdi, Talegaon, Dehu Road, and Nigdi. Annual bus pass ₹13,000–₹19,000 depending on distance. Located near Pimpri railway station (2 km) and accessible by PMPML buses." },
         { name: "Canteen & Food Court", description: "Main canteen with seating for 200+ students. Menu includes North Indian, South Indian, and fast food options. Separate air-conditioned faculty lounge. Hygienic kitchen with regular FSSAI inspections." },
       ],
-      alumni: [
-        { name: "Rahul Deshmukh", designation: "Senior Software Engineer, Infosys Digital (Pune)", batch: "2012" },
-        { name: "Priya Tamboli", designation: "Product Manager, KPIT Technologies", batch: "2014" },
-        { name: "Sanjay Naik", designation: "Plant Engineer, Bajaj Auto Ltd.", batch: "2010" },
-        { name: "Aarti Joshi", designation: "Lead Engineer, L&T Construction (Mumbai)", batch: "2013" },
-        { name: "Vivek Mane", designation: "DevOps Engineer, Capgemini (Pune)", batch: "2016" },
-        { name: "Swapnil Kulkarni", designation: "Founder & CTO, AutomateX Technologies (Pune startup)", batch: "2015" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -2103,12 +1931,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "TCS", "Wipro", "Cognizant", "Persistent", "Zensar", "NVIDIA"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 640,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Devika Nair", course: "B.Tech IT", year: 2023, rating: 4, title: "Best location for IT placements in Pune", body: "I2IT's location inside Rajiv Gandhi IT Park is unbeatable. Companies literally walk in for placements. NVIDIA also recruits here!", pros: ["Hinjewadi IT Park location", "Great IT placements", "Industry exposure"], cons: ["Fees slightly high", "Traffic can be bad"] }
-    ],
+    reviews: [],
     tags: ["Hinjewadi IT Park", "IT Focused", "NAAC A", "Autonomous"],
     description: "International Institute of Information Technology (I2IT) Pune is a premier autonomous IT engineering institute located inside Rajiv Gandhi IT Park, Hinjewadi. Established in 2002, I2IT offers B.Tech, M.Tech, MCA and MBA programs. Its unique location within India's largest IT hub gives students unparalleled access to internships and placements with top IT companies including Infosys, NVIDIA, and Persistent Systems.",
     highlights: ["Located inside Rajiv Gandhi IT Park, Hinjewadi", "Direct access to 150+ IT companies for internships", "NAAC 'A' accredited autonomous institution", "Top IT placements including NVIDIA and Persistent", "Industry-integrated curriculum with IT park collaboration"],
@@ -2137,12 +1963,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "HCL", "Tech Mahindra"],
     entranceExams: ["MHT-CET"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 380,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Ganesh Pol", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Affordable Sinhgad group college", body: "NBNSOE is a good affordable option on Sinhgad Road. Sinhgad group has good reputation in Pune.", pros: ["Affordable fees", "Sinhgad brand", "Good for core engineering"], cons: ["No hostel", "Less CS placements vs VIT/PICT"] }
-    ],
+    reviews: [],
     tags: ["Sinhgad Group", "Ambegaon", "NAAC A", "Budget Option"],
     description: "NBN Sinhgad School of Engineering, Pune is part of the well-known Sinhgad group of institutions. Established in 2001 and NAAC 'A' accredited, it offers engineering programs at affordable fees. The Sinhgad group brand gives students access to group-level placement support and industry connections across Pune.",
     highlights: ["Part of reputed Sinhgad group of institutions", "NAAC 'A' accredited with very affordable fees", "Group-level placement support across Sinhgad campuses", "Strong focus on mechanical and core engineering disciplines", "Well-connected through Sinhgad Road corridor"],
@@ -2171,12 +1995,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"],
     entranceExams: ["MHT-CET"],
     hostel: false,
-    rating: 3.5,
-    reviewCount: 210,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Sagar Mane", course: "B.Tech Computer", year: 2022, rating: 3, title: "Budget engineering college in Pune", body: "Trinity is a decent budget option. Infrastructure is average but the faculty tries their best.", pros: ["Very affordable", "Improving every year", "Good location near Hadapsar"], cons: ["Below average brand", "Limited placements"] }
-    ],
+    reviews: [],
     tags: ["Pisoli", "Budget College", "NAAC B+", "Private"],
     description: "Trinity Academy of Engineering, Pisoli is an emerging private engineering college in South Pune established in 2009. Affiliated with SPPU and NAAC 'B+' accredited, it provides engineering education at very competitive fees. Located near the Hadapsar-Phursungi industrial area, the college benefits from local industry connections.",
     highlights: ["Very affordable engineering programs in South Pune", "Improving academic standards year-on-year", "Located near Hadapsar-Phursungi industrial corridor", "Small batch sizes for better student-faculty interaction", "Active placement cell with growing industry network"],
@@ -2205,12 +2027,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Bajaj Auto", "L&T", "Capgemini", "KPIT"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 560,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Pratik Shinde", course: "B.Tech CS", year: 2023, rating: 4, title: "Excellent college in PCMC area", body: "PCCOER is a great option for students from PCMC area. Good infrastructure and placement record.", pros: ["Good location", "Industry proximity", "Active coding clubs"], cons: ["Heavy traffic area", "Parking issues"] }
-    ],
+    reviews: [],
     tags: ["PCMC", "NAAC A", "Autonomous", "Ravet"],
     description: "Pimpri Chinchwad College of Engineering (PCCOER) is a reputed autonomous engineering institute established in 1999 in the PCMC region of Pune. NAAC 'A' accredited and affiliated with SPPU, PCCOER offers B.Tech, M.Tech, and MBA programs. Located near the Pimpri-Chinchwad industrial belt, it has strong connections with automotive and manufacturing industries including Bajaj Auto and Tata Motors.",
     highlights: ["NAAC 'A' accredited autonomous college in PCMC area", "Proximity to PCMC industrial hub with 500+ companies", "Good placements in automotive and IT sectors", "Modern infrastructure with well-equipped labs", "Active sports and cultural activities"],
@@ -2239,12 +2059,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Bajaj", "L&T"],
     entranceExams: ["MHT-CET"],
     hostel: false,
-    rating: 3.9,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Vaibhav Desai", course: "B.Tech CS", year: 2023, rating: 4, title: "Sinhgad brand delivers consistent quality", body: "Being part of the Sinhgad group is a big advantage. Group-level placements, events and resources are shared.", pros: ["Sinhgad group resources", "Affordable fees", "Good for CS"], cons: ["Not autonomous", "No hostel"] }
-    ],
+    reviews: [],
     tags: ["Sinhgad Group", "Vadgaon", "NAAC A", "Budget Friendly"],
     description: "Sinhgad College of Engineering (SCOE), Vadgaon Budruk is one of the flagship engineering institutions of the Sinhgad group in Pune. Established in 1997, NAAC 'A' accredited and affiliated with SPPU, SCOE offers B.Tech and M.Tech programs at affordable fees. The Sinhgad group's wide network and shared placement resources benefit all students.",
     highlights: ["Flagship engineering college of the Sinhgad group", "NAAC 'A' accredited with 25+ years of excellence", "Group-level placement and training resources", "Affordable fees with good academic quality", "Located on Sinhgad Road with excellent transport"],
@@ -2273,12 +2091,10 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys BPM", "TCS", "HCL", "Wipro", "Capgemini"],
     entranceExams: ["MHT-CET"],
     hostel: false,
-    rating: 3.4,
-    reviewCount: 180,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Rohit Jagtap", course: "B.Tech Mechanical", year: 2022, rating: 3, title: "Budget option for South Pune students", body: "FIT is a budget-friendly option for students from South Pune and Solapur highway belt. Basic facilities available.", pros: ["Very low fees", "Good for budget students", "Local industry connections"], cons: ["Basic infrastructure", "Low brand value"] }
-    ],
+    reviews: [],
     tags: ["Khopi", "Budget", "NAAC B+", "South Pune"],
     description: "Flora Institute of Technology, Khopi is an engineering college in the Pune metropolitan area established in 2011. Affiliated with SPPU and NAAC 'B+' accredited, it provides engineering programs at very affordable fees catering to students from South Pune, Solapur Highway, and rural Maharashtra who aspire for technical education.",
     highlights: ["Very affordable engineering programs", "NAAC 'B+' accredited private institution", "Accessible location for students from Solapur highway belt", "Small batch size for personalized attention", "Growing placement network"],
@@ -2307,12 +2123,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.7,
-    reviewCount: 320,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Shubham Patil", course: "B.Tech Mechanical", year: 2022, rating: 4, title: "Peaceful campus near Lonavala belt", body: "SVIT has a beautiful campus near Maval. Very peaceful learning environment. Good for students who prefer non-city life.", pros: ["Beautiful campus", "Hostel available", "Peaceful environment"], cons: ["Far from city", "Limited public transport"] }
-    ],
+    reviews: [],
     tags: ["Sinhgad Group", "Maval", "NAAC A", "Hostel"],
     description: "Sinhgad Valley Institute of Technology (SVIT), Maval is an engineering college in the scenic Sinhgad Valley near Pune. Part of the Sinhgad group, established in 2003, NAAC 'A' accredited and affiliated with SPPU. The college offers a serene learning environment with hostel facilities and Sinhgad group placement support.",
     highlights: ["Scenic valley campus with a peaceful learning environment", "Sinhgad group placement and training resources", "NAAC 'A' accredited with hostel facility", "Good for students preferring residential campus experience", "Close to Lonavala and expressway for easy access"],
@@ -2341,12 +2155,10 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "L&T", "Bajaj Auto"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 410,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Kiran Waghmare", course: "B.Tech Civil", year: 2022, rating: 4, title: "Good college in east Pune with hostel", body: "DPCOER has a good campus and decent placements. Civil branch especially has strong ties with construction companies.", pros: ["Hostel available", "Good civil engineering", "East Pune location"], cons: ["Average IT placements", "Traffic near campus"] }
-    ],
+    reviews: [],
     tags: ["Wagholi", "East Pune", "NAAC A", "Hostel"],
     description: "Dhole Patil College of Engineering (DPCOER), Wagholi is a private engineering college in East Pune established in 2008. NAAC 'A' accredited and affiliated with SPPU, DPCOER provides engineering programs with hostel facilities. Located in the rapidly developing Wagholi corridor, the college has growing industry connections especially in civil and core engineering sectors.",
     highlights: ["NAAC 'A' accredited with hostel facility", "Located in rapidly developing Wagholi area", "Strong in core engineering disciplines", "Growing IT placement network", "Active NSS and cultural activities"],
@@ -2375,12 +2187,10 @@ const rawColleges: College[] = [
     topRecruiters: ["NVIDIA", "Infosys", "Amazon", "Ubisoft", "TCS", "Zynga"],
     entranceExams: ["MIT-ADT Entrance", "JEE Main", "NATA"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 520,
+    rating: 0,
+    reviewCount: 0,
     stream: "Engineering",
-    reviews: [
-      { id: 1, studentName: "Ananya Rao", course: "B.Design Game Design", year: 2023, rating: 4, title: "Best design + tech college in Pune", body: "MIT-ADT is unique: merges tech with creative arts beautifully. Game design and UX programs are top-notch.", pros: ["Unique design+tech blend", "Modern campus", "Creative atmosphere"], cons: ["High fees for design courses", "Less traditional engineering"] }
-    ],
+    reviews: [],
     tags: ["Design+Technology", "MIT Group", "Creative", "NAAC A", "Loni Kalbhor"],
     description: "MIT Art, Design & Technology University (MIT-ADT), Loni Kalbhor is a unique institution combining engineering with creative arts, design, and technology. Established in 2015 under MIT Group, NAAC 'A' accredited, it offers B.Tech, B.Design, BFA, and MBA programs. MIT-ADT attracts students wanting to blend technical skills with creative design, particularly in game design, UX, and digital media.",
     highlights: ["Unique fusion of engineering, arts, design and technology", "India's first art and technology university", "NAAC 'A' accredited with modern residential campus", "Game design and UX programs attracting NVIDIA, Zynga recruiters", "Creative, innovation-focused campus culture"],
@@ -2409,12 +2219,10 @@ const rawColleges: College[] = [
     topRecruiters: ["McKinsey", "Deloitte", "EY", "KPMG", "HDFC", "Infosys", "Amazon"],
     entranceExams: ["FLAME Entrance Test", "CUET", "CAT"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     stream: "Arts & Science",
-    reviews: [
-      { id: 1, studentName: "Ishaan Mehta", course: "BBA", year: 2023, rating: 5, title: "India's best liberal arts university experience", body: "FLAME gives you a truly world-class liberal arts experience. Small classes, engaged faculty, and amazing campus life.", pros: ["World-class liberal arts", "Amazing campus life", "Great faculty"], cons: ["Very expensive", "Limited engineering"] }
-    ],
+    reviews: [],
     tags: ["Liberal Arts", "NAAC A+", "Premium", "Lavale", "Residential"],
     description: "FLAME University, Lavale is a premier private university in Pune focused on liberal arts and management education. Established in 2015 and NAAC A+ accredited, FLAME offers BBA, BA, B.Sc, MBA, and MA programs. Known for its residential campus, small class sizes, and interdisciplinary approach, FLAME attracts students seeking a world-class liberal arts education in India.",
     highlights: ["India's leading liberal arts university", "NAAC A+ accredited with world-class residential campus", "McKinsey, Deloitte, EY recruiting for management graduates", "Interdisciplinary curriculum with global exposure", "Average placement ₹8.5 LPA for management programs"],
@@ -2444,8 +2252,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Goldman Sachs", "McKinsey", "Deloitte", "EY", "Amazon", "Google", "Accenture", "KPMG"],
     entranceExams: ["SNAP"], // verified 2026-10-04: SIU admits via SNAP
     hostel: true,
-    rating: 4.6,
-    reviewCount: 890,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top MBA Pune", "Symbiosis Group", "NIRF Ranked", "Premium B-School"],
     description: "SCMHRD is one of India's premier business schools, part of the Symbiosis International University. Located in the heart of Hinjewadi IT Hub, it offers world-class MBA programs with exceptional industry exposure.",
     highlights: ["NIRF Rank 28 among Management Institutes", "Located inside Rajiv Gandhi IT Park, direct industry access", "Average placement ₹22 LPA for MBA batch 2024", "Goldman Sachs, McKinsey among top recruiters", "State-of-the-art campus with Bloomberg terminals"],
@@ -2453,9 +2261,7 @@ const rawColleges: College[] = [
     website: "https://www.scmhrd.edu",
     phone: "+91-20-22934330",
     email: "admissions@scmhrd.edu",
-    reviews: [
-      { id: 1, studentName: "Aditya Kulkarni", course: "MBA Finance", year: 2023, rating: 5, title: "Best MBA college in Pune", body: "SCMHRD placement is top notch. Got placed at Goldman Sachs with 24 LPA. The faculty is world class.", pros: ["Excellent placements", "IT Park location", "Industry exposure"], cons: ["Very high fees", "Competitive peer group"] }
-    ]
+    reviews: []
   },
   {
     id: 47,
@@ -2478,8 +2284,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Bajaj Auto", "Thermax", "Infosys BPO", "HDFC Bank", "ICICI Bank", "TCS"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 760,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Government MBA Pune", "Affordable MBA", "NIRF Ranked", "University Campus"],
     description: "PUMBA is the flagship management department of Savitribai Phule Pune University. One of Maharashtra's oldest and most affordable MBA programs with strong industry connections.",
     highlights: ["NIRF Rank 42 among Management Institutes", "Lowest fees among top MBA colleges in Pune", "Located on serene university campus", "Strong alumni network across Maharashtra industry", "Regular industry interaction programs"],
@@ -2487,9 +2293,7 @@ const rawColleges: College[] = [
     website: "https://www.unipune.ac.in",
     phone: "+91-20-25601306",
     email: "dms@unipune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Sneha Joshi", course: "MBA Marketing", year: 2023, rating: 4, title: "Best value MBA in Pune", body: "For the fees you pay, PUMBA delivers exceptional value. Placement of 9 LPA average for a government college is commendable.", pros: ["Very affordable", "Government institute credibility", "Good alumni"], cons: ["Infrastructure needs upgrade", "Limited international exposure"] }
-    ]
+    reviews: []
   },
   {
     id: 49,
@@ -2512,8 +2316,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "Bajaj Finserv", "Wipro", "Cognizant", "Amazon", "Infosys"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT", "MAT"],
     hostel: false,
-    rating: 4.0,
-    reviewCount: 420,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Affordable MBA Pune", "Central Pune Location", "Good Placements", "NAAC A+"],
     description: "IMDR is a reputed management institute in the heart of Pune's Deccan area. It offers quality management education at affordable fees with strong industry connections in Pune's business ecosystem.",
     highlights: ["Central Pune location near Deccan Gymkhana", "Affordable fees compared to private B-schools", "Strong industry interface programs", "Active alumni network in Pune's business community"],
@@ -2521,9 +2325,7 @@ const rawColleges: College[] = [
     website: "https://www.imdr.edu",
     phone: "+91-20-25657802",
     email: "info@imdr.edu",
-    reviews: [
-      { id: 1, studentName: "Priya Patil", course: "PGDM Marketing", year: 2023, rating: 4, title: "Good MBA at affordable cost", body: "IMDR is a hidden gem in Pune. Good faculty, central location, and decent placements at affordable fees.", pros: ["Central location", "Affordable", "Good faculty"], cons: ["No hostel", "Average brand recognition"] }
-    ]
+    reviews: []
   },
   {
     id: 50,
@@ -2546,8 +2348,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Mahindra", "Bajaj Auto", "HDFC Bank", "Accenture", "Wipro", "TCS"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT", "GMAT"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 380,
+    rating: 0,
+    reviewCount: 0,
     tags: ["DY Patil Group", "MBA Pune", "PCMC Area", "Hostel Available"],
     description: "D.Y. Patil Business School offers industry-oriented MBA programs with strong focus on entrepreneurship and corporate readiness. Good for students in the Pimpri-Chinchwad industrial belt.",
     highlights: ["Strong industry ties with PCMC industrial belt", "Healthcare management specialization unique in Pune", "Hostel facility available on campus", "Regular CEO talks and industry interaction sessions"],
@@ -2555,9 +2357,7 @@ const rawColleges: College[] = [
     website: "https://www.dypbs.edu.in",
     phone: "+91-20-27653000",
     email: "admissions@dypbs.edu.in",
-    reviews: [
-      { id: 1, studentName: "Sunil Kamble", course: "MBA Finance", year: 2023, rating: 4, title: "Good MBA in PCMC area", body: "DPBS is good for students from PCMC. The management is supportive and placements are decent for an MBA.", pros: ["PCMC location", "Hostel available", "Industry exposure"], cons: ["Brand value not top tier", "Average infrastructure"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA (2-year full-time)", duration: "2 Years", level: "PG", eligibility: "Graduation 50% aggregate; MAH MBA CET / CAT / CMAT / GMAT", selection: "MAH MBA CET Score + GD/PI + Written Test", fees_per_year: 520000, total_fees: 1040000, seats: 120 },
@@ -2603,13 +2403,7 @@ const rawColleges: College[] = [
         { agency: "Business India", category: "Best Business Schools Pune", rank: 10, year: "2024" },
         { agency: "Education World", category: "Top Management Institutes Maharashtra", rank: 18, year: "2024" },
       ],
-      scholarships: [
-        { name: "DY Patil Group Academic Excellence Scholarship", eligibility: "Students with 70%+ in graduation and 90+ percentile in MAH MBA CET / 80+ %ile in CAT", amount: "25% tuition fee waiver (₹1.3L per year) for full 2-year program", provider: "D.Y. Patil Pratishthan Trust" },
-        { name: "OBC / EWS Scholarship (Maharashtra)", eligibility: "OBC/EWS students with family income below ₹8 lakh/year and 50%+ graduation", amount: "Up to ₹50,000/year fee concession", provider: "Maharashtra State Government: Social Justice Dept." },
-        { name: "SC / ST Post-Matric Scholarship", eligibility: "SC/ST students (any income) pursuing MBA at DPBS", amount: "Full tuition fee coverage (up to ₹5.2 lakh/year) + maintenance allowance ₹8,400/year", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "Women in Leadership Scholarship", eligibility: "Female students with strong academic record and demonstrated leadership potential", amount: "₹50,000 one-time waiver + mentorship with senior industry women leaders", provider: "D.Y. Patil Business School & Industry Partners" },
-        { name: "AICTE Merit Scholarship", eligibility: "Top 3 rankers from MAH MBA CET admitted to DPBS", amount: "₹1 lakh/year for 2 years", provider: "AICTE, Government of India" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Bloomberg Terminal Lab", description: "DPBS has a dedicated Bloomberg Terminal lab with 10 terminals providing real-time financial market data. MBA Finance and Business Analytics students use Bloomberg for live market analysis, portfolio management simulations, and fixed income research, a facility rare in Pune MBA colleges at this fee level." },
         { name: "Case Study Library & Digital Resources", description: "Access to Harvard Business School case studies library, Emerald Management eJournals, and EBSCO Business Source Complete database. Over 25,000 management case studies. Dedicated case preparation rooms for group discussions." },
@@ -2619,14 +2413,7 @@ const rawColleges: College[] = [
         { name: "Entrepreneurship Cell (E-Cell)", description: "Active E-Cell with startup incubator support from DY Patil Group's incubation network. Organises annual business plan competitions with ₹2 lakh prize pool. Several DPBS alumni have launched ventures in healthcare tech, automotive supply chain, and fintech." },
         { name: "Seminar Hall & Conference Rooms", description: "600-seat main auditorium for annual management conclaves and corporate events. 4 air-conditioned conference rooms equipped with projectors and video conferencing for live virtual corporate sessions. Used for DPBS Annual Management Summit each December." },
       ],
-      alumni: [
-        { name: "Rohit Chandorkar", designation: "Head of Operations, Bajaj Auto Parts Division (PCMC)", batch: "2010" },
-        { name: "Priti Ingale", designation: "Hospital Administrator, Ruby Hall Clinic, Pune", batch: "2012" },
-        { name: "Kunal Shetty", designation: "Senior Manager: Supply Chain, Mahindra Logistics", batch: "2013" },
-        { name: "Smita Kadam", designation: "VP: Retail Banking, HDFC Bank (Pune Zone)", batch: "2011" },
-        { name: "Amol Desai", designation: "Founder, MedSupply Tech (healthcare procurement startup)", batch: "2015" },
-        { name: "Tanvi Patole", designation: "Consultant, Deloitte Healthcare Practice (Mumbai)", batch: "2016" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -2672,8 +2459,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Sassoon General Hospital", "Ruby Hall Clinic", "KEM Hospital", "Government Health Services"],
     entranceExams: ["NEET"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Government Medical College", "Affordable MBBS", "NIRF Ranked", "Oldest Medical College Pune"],
     description: "BJMC is Pune's oldest and most respected government medical college, attached to Sassoon General Hospital. It offers affordable MBBS and postgraduate medical education with massive patient exposure.",
     highlights: ["NIRF Rank 22 among Medical Colleges in India", "Attached to Sassoon General Hospital with 1,400+ beds", "One of India's largest clinical training facilities", "Affordable government fees for Maharashtra students", "Strong postgraduate medical programs"],
@@ -2681,11 +2468,7 @@ const rawColleges: College[] = [
     website: "https://bjmc.edu.in",
     phone: "+91-20-26128000",
     email: "dean@bjmc.edu.in",
-    reviews: [
-      { id: 1, studentName: "Dr. Anjali Wagh", course: "MBBS", year: 2022, rating: 4, title: "Best government medical college in Pune", body: "Patient exposure at Sassoon is truly unmatched anywhere in Maharashtra. In a single day of OPD you see more cases than some doctors see in a month elsewhere. The 3,500+ daily OPD patients and 1,800+ bed capacity means you are constantly surrounded by complex, real clinical challenges from your very first clinical year.", pros: ["Massive and diverse patient load at Sassoon Hospital", "Affordable government fees: ₹60K/year for MBBS", "NIRF Rank 18: top 20 medical colleges India", "Strong postgraduate MD/MS programmes"], cons: ["Old and cramped infrastructure in some departments", "Overcrowded OPD: long shifts", "No AC in older wards"] },
-      { id: 2, studentName: "Dr. Rohan Deshmukh", course: "MD General Medicine", year: 2023, rating: 5, title: "PG training here is second to none in Maharashtra", body: "I did my MD General Medicine at BJMC after MBBS at a private college. The difference in case exposure is night and day. Sassoon Hospital gets every type of case, tropical diseases, poisoning, multi-trauma, and as a PG resident you manage these under guidance. NEET PG cutoff is high but worth it.", pros: ["Unparalleled case diversity for PG training", "Strong MUHS-affiliated MD/MS programmes", "Seniors and faculty are excellent clinicians", "State-of-the-art operation theatres in new block"], cons: ["Resident duty hours are very long", "Hostel facilities for PG are basic"] },
-      { id: 3, studentName: "Priya Kulkarni", course: "MBBS", year: 2024, rating: 4, title: "Affordable and prestigious: best combo for MBBS", body: "Getting into BJMC with NEET is a dream for most Maharashtra medical aspirants. The prestige, clinical exposure, and fee of just ₹60K/year is an extraordinary value. Yes, Sassoon is chaotic but it teaches you to be a competent doctor fast.", pros: ["₹60,000/year MBBS fee: best value in Pune", "Premier government medical institution since 1946", "MUHS affiliation: strong examination system", "Graduates respected across India and abroad for USMLE/PLAB"], cons: ["Admission is extremely competitive. NEET 625+ needed", "Hospital infrastructure needs upgradation in older blocks", "PG hostel accommodation is limited"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBBS", duration: "4.5 Years + 1 Year Internship", level: "UG", eligibility: "10+2 PCB with 50% (General); 40% (SC/ST/OBC). NEET UG qualified. Age 17–25 years (General); relaxable for reserved categories", selection: "NEET UG Score: 85% State Quota via Maharashtra CET Cell; 15% All-India Quota via MCC", fees_per_year: 60000, total_fees: 270000, seats: 200 },
@@ -2737,16 +2520,9 @@ const rawColleges: College[] = [
         { agency: "Outlook", category: "Best Government Medical Colleges India", rank: 12, year: "2024" },
         { agency: "National Medical Commission (NMC)", category: "Recognised Medical Institution", rank: null, grade: "Recognised", year: "2024" },
       ],
-      scholarships: [
-        { name: "SC/ST Post-Matric Scholarship (Full Fee Waiver)", eligibility: "SC/ST students admitted to BJMC MBBS, no income limit for full waiver", amount: "Full tuition fee waiver (₹60,000/year) + hostel fee subsidy + maintenance allowance ₹1,200–₹2,250/month, effectively free MBBS education", provider: "Ministry of Social Justice & Empowerment (GOI) / Maharashtra Government" },
-        { name: "OBC/SBC/VJNT/NT Scholarship", eligibility: "OBC/SBC/VJNT students with family income below ₹8 lakh/year", amount: "Full tuition fee waiver (₹60,000/year) + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "EBC (Economically Backward Class) Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver, at BJMC's ₹60K/year fees, this is fully covered by EBC scholarship", provider: "Maharashtra Social Justice Department" },
-        { name: "Government of India Merit Scholarship (MBBS)", eligibility: "Students with state rank 1–10 in NEET admitted to government medical colleges", amount: "₹10,000/month for entire duration of MBBS (4.5 years + internship)", provider: "Ministry of Education / Ministry of Health & Family Welfare (GOI)" },
-        { name: "Internship Stipend", eligibility: "All MBBS graduates completing 1-year compulsory rotatory internship at Sassoon General Hospital", amount: "₹18,000–₹22,000/month during internship year, paid position", provider: "Government of Maharashtra / BJMC Dean Office" },
-        { name: "Junior Resident (JR) Stipend. PG", eligibility: "All BJMC MD/MS/Diploma postgraduate residents during their programme", amount: "₹55,000–₹70,000/month (Junior Resident Year 1–2); ₹65,000–₹80,000/month (Senior Resident). Maharashtra government medical college PG stipend rates", provider: "Government of Maharashtra: DMER Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
-        { name: "Sassoon General Hospital: 1,800 Beds, 3,500+ Daily OPD", description: "Sassoon General Hospital, attached to BJMC, is one of Maharashtra's largest public hospitals. With 1,800 beds across 45+ speciality departments, it handles 3,500+ outpatients daily and is the primary trauma, referral, and super-speciality centre for Pune and neighbouring districts (Satara, Solapur, Ahmednagar, Nashik). The case diversity: tropical diseases, poisoning, complex trauma, rare genetic conditions, high-risk obstetrics, gives BJMC students and PG residents unparalleled clinical training that private medical college students rarely encounter." },
+        { name: "Sassoon General Hospital", description: "Sassoon General Hospital, attached to BJMC, is one of Maharashtra's largest public hospitals. It is a primary trauma, referral, and super-speciality centre for Pune and neighbouring districts (Satara, Solapur, Ahmednagar, Nashik). The case diversity: tropical diseases, poisoning, complex trauma, rare genetic conditions, high-risk obstetrics, gives BJMC students and PG residents unparalleled clinical training that private medical college students rarely encounter." },
         { name: "Trauma Care Centre & Emergency Medicine", description: "Sassoon's 24×7 trauma centre is a designated Level 1 Trauma Centre handling road accident casualties, blast injuries, industrial accidents, and mass casualty events from across Pune and surrounding districts. BJMC students rotating through the emergency medicine and trauma departments witness complex cases including polytrauma, crush injuries, and acute neurosurgical emergencies. The sheer volume and severity of trauma cases at Sassoon is considered second to none in Maharashtra outside Mumbai's KEM and LTMG hospitals." },
         { name: "Operation Theatres & Surgical Training", description: "BJMC has 18 functional operation theatres including dedicated OTs for general surgery, orthopaedics, obstetrics, ENT, ophthalmology, and neurosurgery. A new state-of-the-art modular OT complex was inaugurated in 2022. MS Surgery and MS Orthopaedics residents at BJMC get exceptional surgical volumes, performing and assisting in 20–30 surgeries per month compared to 5–10 at most private college PG programmes." },
         { name: "Diagnostics, Radiology, Pathology & Microbiology", description: "Central diagnostic block with digital X-ray, CT scan (128-slice dual energy), MRI (1.5T), mammography, and ultrasound facilities. The pathology and microbiology labs process 5,000+ samples daily, one of Maharashtra's busiest government diagnostic labs. MD Radiology residents have access to high CT and MRI volumes. MD Pathology students process a uniquely diverse case mix. The microbiology lab is a state reference laboratory for infectious disease surveillance." },
@@ -2755,14 +2531,7 @@ const rawColleges: College[] = [
         { name: "Superspeciality Block & Teaching Hospital", description: "BJMC's new superspeciality block (inaugurated 2021, funded under PM Ayushman Bharat infrastructure scheme) houses Cardiology (cath lab), Nephrology (dialysis unit), Medical Oncology (chemotherapy), Neurology (epilepsy monitoring), and Neonatology (NICU). BJMC students and PG residents get exposure to super-specialty procedures that most government hospitals in Maharashtra cannot offer. The cath lab performs 200+ cardiac procedures annually including emergency angioplasty for Ayushman Bharat beneficiaries." },
         { name: "Location: Heart of Pune City", description: "BJMC is located at Jai Prakash Narayan Road, Rasta Peth / Sassoon Road, the historic medical hub of Pune, just 2 km from Pune Railway Station and 3 km from Swargate. The college and hospital are easily accessible from all parts of Pune. The Pune Municipal Corporation referral network ensures a constant flow of complex cases to Sassoon. Being in central Pune also means proximity to Pune's renowned private hospitals. Ruby Hall, Jehangir, Deenanath Mangeshkar, and Inamdar, for elective rotations and post-graduation employment." },
       ],
-      alumni: [
-        { name: "Dr. Sanjay Kolte", designation: "Director of Interventional Cardiology, Massachusetts General Hospital, Boston (USA)", batch: "1985" },
-        { name: "Dr. Padma Shrikhande", designation: "Director, Shrikhande Surgical Clinic, Pune (Bariatric Surgery Pioneer)", batch: "1982" },
-        { name: "Dr. Arvind Saple", designation: "Dean, Grant Medical College & JJ Hospital, Mumbai", batch: "1990" },
-        { name: "Dr. Mrunal Phatak", designation: "Senior Consultant, KEM Hospital Mumbai (Infectious Diseases)", batch: "1995" },
-        { name: "Dr. Sonali Kolhatkar", designation: "Consultant Oncologist, Tata Memorial Hospital, Mumbai", batch: "1998" },
-        { name: "Dr. Rajesh Goel", designation: "Professor & Head of Medicine, AIIMS Bhopal", batch: "1993" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -2808,8 +2577,8 @@ const rawColleges: College[] = [
     topRecruiters: ["DMH Pune", "Ruby Hall Clinic", "Sahyadri Hospitals", "KEM Hospital"],
     entranceExams: ["NEET PG", "DNB CET"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 340,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Private Hospital Pune", "Super-Specialty Training", "Cardiac Centre", "Oncology Centre"],
     description: "Deenanath Mangeshkar Hospital is Pune's most trusted multi-specialty hospital offering postgraduate medical training. Known for excellence in cardiac care, oncology, and neurosciences.",
     highlights: ["One of Pune's most trusted hospitals for 65+ years", "Excellent postgraduate medical training environment", "State-of-the-art cardiac catheterization lab", "Full oncology and bone marrow transplant unit", "Strong nursing and paramedical programs"],
@@ -2817,9 +2586,7 @@ const rawColleges: College[] = [
     website: "https://www.deenanathmangeshhospital.org",
     phone: "+91-20-40151000",
     email: "info@dmhospital.org",
-    reviews: [
-      { id: 1, studentName: "Dr. Meera Joshi", course: "MD Cardiology", year: 2023, rating: 5, title: "Best cardiac training in Pune", body: "The cath lab exposure at DMH is phenomenal. You see more cases here than anywhere else in Pune.", pros: ["Excellent cardiac exposure", "Great mentors", "Modern equipment"], cons: ["Very competitive selection", "Long working hours"] }
-    ]
+    reviews: []
   },
   {
     id: 55,
@@ -2842,8 +2609,8 @@ const rawColleges: College[] = [
     topRecruiters: ["SKNMC Hospital", "Ruby Hall Clinic", "KEM Hospital", "Government Health Services"],
     entranceExams: ["NEET"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 310,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Medical College Pune", "South Pune", "Affordable Private Medical", "NAAC A"],
     description: "SKNMC is a reputed private medical college in South Pune's Narhe area. Offers MBBS and postgraduate medical education with a general hospital for clinical training.",
     highlights: ["Attached general hospital with 730+ beds", "Located in fast-developing South Pune corridor", "Affordable fees compared to other private medical colleges", "Active research programs in clinical medicine"],
@@ -2851,9 +2618,7 @@ const rawColleges: College[] = [
     website: "https://www.sknmc.edu.in",
     phone: "+91-20-24390280",
     email: "info@sknmc.edu.in",
-    reviews: [
-      { id: 1, studentName: "Dr. Akash Mane", course: "MBBS", year: 2022, rating: 4, title: "Decent private medical college", body: "SKNMC has good patient exposure in surgery. The campus is clean and faculty is supportive.", pros: ["Good surgery exposure", "Supportive faculty", "Hostel available"], cons: ["Far from city centre", "Limited speciality OPD"] }
-    ]
+    reviews: []
   },
   {
     id: 56,
@@ -2876,8 +2641,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Cyril Amarchand Mangaldas", "AZB & Partners", "Khaitan & Co", "J. Sagar Associates", "Supreme Court Bar"],
     entranceExams: ["CLAT", "MH CET Law"],
     hostel: false,
-    rating: 4.5,
-    reviewCount: 670,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Law College India", "NIRF Rank 6", "Oldest Law College Pune", "Autonomous"],
     description: "ILS Law College is one of India's premier law colleges, established in 1924. Consistently ranked among India's top 10 law schools by NIRF, it is the most prestigious law college in Pune.",
     highlights: ["NIRF Rank 6 among Law Colleges in India", "100-year legacy of legal excellence", "Strong moot court tradition, national winners", "Graduates at Supreme Court, High Courts, and top law firms", "Affordable government-level fees for a top-10 law college"],
@@ -2885,11 +2650,7 @@ const rawColleges: College[] = [
     website: "https://www.ilslaw.edu",
     phone: "+91-20-25652434",
     email: "info@ilslaw.edu",
-    reviews: [
-      { id: 1, studentName: "Adv. Priya Sharma", course: "BA LL.B.", year: 2023, rating: 5, title: "Best law college experience", body: "ILS gives you the foundation to be a great lawyer. The moot court culture, debates, faculty, and peer quality are all exceptional. The alumni network spans the Supreme Court, High Courts, and top law firms across India.", pros: ["NIRF Rank 6: top 10 law college in India", "Extremely affordable fees for the quality", "Legendary moot court tradition", "Alumni at Supreme Court, Bombay High Court, AZB, Cyril Amarchand"], cons: ["No hostel: must arrange own PG", "Extremely competitive CLAT/MH CET Law cutoffs", "Old buildings in some sections"] },
-      { id: 2, studentName: "Rohit Desai", course: "LL.B. (3 Year)", year: 2022, rating: 5, title: "100 years of legal excellence: and it shows", body: "The ILS library alone is worth coming here. The sheer volume of case law, legal texts, and rare jurisprudence books is unmatched in Pune. Faculty are practising advocates and retired judges, real-world knowledge at every lecture.", pros: ["World-class law library", "Faculty are practising lawyers and ex-judges", "Location on Law College Road, legal hub of Pune", "Strong alumni network nationally"], cons: ["LLB 3-year admission is competitive", "No on-campus accommodation", "Infrastructure needs some modernisation"] },
-      { id: 3, studentName: "Sneha Kulkarni", course: "BBA LL.B.", year: 2024, rating: 4, title: "Best corporate law foundation in Pune", body: "BBA LL.B. at ILS is the best blend of business and law in Pune. The corporate law and IPR specialisation is strong. Placements at top tier law firms like AZB and Khaitan are real. I got placed at J. Sagar Associates.", pros: ["BBA + LL.B. dual degree", "Corporate law specialisation excellent", "Tier-1 law firm placements", "NIRF credibility helps in interviews"], cons: ["5-year programme is long but worth it", "Campus social life is more academic than fun"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "BA LL.B. (Hons.)", duration: "5 Years", level: "Integrated UG", eligibility: "10+2 / HSC in any stream with 45% (General); 40% (SC/ST). Age below 20 years (22 for SC/ST)", selection: "CLAT Score / MH CET Law Score + Merit List", fees_per_year: 20000, total_fees: 100000, seats: 120 },
@@ -2937,14 +2698,7 @@ const rawColleges: College[] = [
         { agency: "The Week", category: "Best Law Colleges India", rank: 9, year: "2024" },
         { agency: "QS World University Rankings", category: "Law (India)", rank: null, grade: "Top 10", year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC / Graduation", amount: "Full tuition fee waiver (₹15,000–₹22,000/yr), highly impactful at ILS's already-low fees", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category students with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (no income limit for full waiver up to ₹2.5 lakh; partial up to ₹6 lakh)", amount: "Full tuition + exam fee waiver + maintenance allowance, effectively free legal education", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "ILS Law College Merit Scholarship", eligibility: "Students topping the MH CET Law merit list (rank 1–5) who join ILS", amount: "Full fee waiver for all years of the programme", provider: "ILS Law College Autonomous Trust, Pune" },
-        { name: "Bar Council of Maharashtra & Goa Scholarship", eligibility: "Meritorious law students with financial need, enrolled in Maharashtra law colleges", amount: "₹10,000–₹25,000 per year depending on merit and need", provider: "Bar Council of Maharashtra and Goa" },
-        { name: "National Fellowship for Legal Education (NFLE)", eligibility: "SC/ST students pursuing LL.M. or PhD in recognised Indian law schools", amount: "₹25,000/month stipend + contingency grant of ₹10,000/year", provider: "University Grants Commission (UGC)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Law Library, Among India's Finest", description: "ILS Law Library is widely regarded as one of the best law libraries in India. It houses 60,000+ volumes including rare legal texts, colonial-era law reports, All India Reporter (AIR) complete series since 1914, SCC (Supreme Court Cases) complete collection, and international law journals. Digital access to Manupatra, SCC Online, Westlaw India, and LexisNexis. The library is open to practising lawyers and researchers, a sign of its standing in the legal community." },
         { name: "Moot Court Hall", description: "Dedicated moot court hall designed to replicate a High Court chamber. ILS has one of India's most celebrated moot court traditions, the Jal Dastur Memorial Moot is one of Maharashtra's oldest and most prestigious inter-college moot court competitions. Teams from ILS have won national-level moots including Jessup, Vis Moot, National Law School tournaments, and NLSIU competitions. Advocacy skills are embedded into the curriculum from the first year." },
@@ -2955,14 +2709,7 @@ const rawColleges: College[] = [
         { name: "Location, Law College Road, Erandwane", description: "ILS is situated on the iconic Law College Road in Erandwane, Pune's premier legal and educational corridor. The Bombay High Court (Pune Bench) is 4 km away. Pune District Court is 6 km away. Multiple law firms, chambers of advocates, and legal aid organisations are within walking distance. Students get easy access to observe court proceedings, attend hearings, and network with the legal fraternity. FC Road and Deccan Gymkhana for food, study cafes, and recreation are 10 minutes away." },
         { name: "Alumni Network & Bar Association Ties", description: "ILS alumni network spans 100 years and includes sitting judges of the Bombay High Court, Supreme Court advocates, senior advocates, Attorney General office members, Law Commission members, and founding partners of India's top law firms. The ILS Alumni Association actively supports student mentorship, internship referrals, and job placements. Being an ILS alumnus carries significant prestige in Maharashtra's legal community." },
       ],
-      alumni: [
-        { name: "Justice Abhay Thipsay", designation: "Former Judge, Bombay High Court", batch: "1975" },
-        { name: "Adv. Mihir Desai", designation: "Senior Advocate, Bombay High Court (Human Rights)", batch: "1985" },
-        { name: "Adv. Uday Warunjikar", designation: "Senior Advocate, Bombay High Court", batch: "1988" },
-        { name: "Asim Pandya", designation: "Partner, Cyril Amarchand Mangaldas Mumbai", batch: "2005" },
-        { name: "Vrinda Grover", designation: "Senior Advocate, Supreme Court of India (Human Rights)", batch: "1990" },
-        { name: "Adv. Priya Deshpande", designation: "Partner, AZB & Partners Pune", batch: "2010" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -3009,8 +2756,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Trilegal", "Shardul Amarchand", "AZB", "Cyril Amarchand", "Lakshmikumaran & Sridharan"],
     entranceExams: ["CLAT", "SLAT", "MH CET Law"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 510,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top 10 Law India", "Symbiosis Group", "NIRF Ranked", "Corporate Law"],
     description: "Symbiosis Law School is among India's top 10 law schools and the most prominent private law college in Pune. Known for excellent corporate law placements and moot court achievements.",
     highlights: ["NIRF Rank 10 among Law Schools in India", "Strong corporate law placement record", "National and international moot court champions", "Hostel facility within Symbiosis campus", "International exchange programs in law"],
@@ -3018,11 +2765,7 @@ const rawColleges: College[] = [
     website: "https://www.symlaw.edu.in",
     phone: "+91-20-26510000",
     email: "admissions@symlaw.edu.in",
-    reviews: [
-      { id: 1, studentName: "Kavya Nair", course: "BBA LL.B.", year: 2023, rating: 4, title: "Top law school in Pune for corporate law", body: "SLS Pune is genuinely one of India's best law schools for corporate law. The faculty includes retired Bombay HC judges and senior advocates from top firms. Trilegal, Shardul, and AZB visit every year.", pros: ["NIRF Rank 10", "Excellent corporate law placements", "Hostel on Symbiosis campus", "International exchange programmes"], cons: ["Very high fees: ₹1.8L–₹3.8L/year", "SLAT cutoffs are steep", "Heavy focus on corporate law, limited for litigation aspirants"] },
-      { id: 2, studentName: "Arjun Mehta", course: "BA LL.B.", year: 2022, rating: 4, title: "Great campus, global outlook", body: "The Symbiosis campus ecosystem is fantastic. Library, moot court, international moots, exchange semester in Europe. SLS gives you a global legal education. Alumni network at international firms is strong.", pros: ["International exchange programme (Europe, Singapore)", "World-class library with foreign law reports", "Strong alumni in global law firms", "Mock parliament and moot court facilities"], cons: ["₹18 lakh for 5 years is a big financial commitment", "Not the right fit if you want to be a trial lawyer"] },
-      { id: 3, studentName: "Prachi Joshi", course: "LL.M. (Corporate Law)", year: 2023, rating: 5, title: "Best LL.M. for corporate & IPR in Pune", body: "The LL.M. Corporate Law programme at SLS is genuinely excellent. Small batch, expert faculty, and placement support that actually works. Got placed at Lakshmikumaran & Sridharan after LL.M.", pros: ["Small LL.M. batch: personal attention", "Specialist corporate, IPR and international law faculty", "Industry connections with Mumbai and Pune law firms", "Placement support for LL.M. batch"], cons: ["LL.M. fees are high", "One year is very intense"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "BA LL.B. (Hons.)", duration: "5 Years", level: "Integrated UG", eligibility: "10+2 / HSC in any stream with 45% (General); 40% (SC/ST). Age below 20 years (22 for SC/ST/PwD)", selection: "SLAT (Symbiosis Law Admission Test) Score + Personal Interaction (PI)", fees_per_year: 220000, total_fees: 1100000, seats: 180 },
@@ -3071,14 +2814,7 @@ const rawColleges: College[] = [
         { agency: "The Week", category: "Best Law Colleges India", rank: 12, year: "2024" },
         { agency: "QS Asia University Rankings", category: "Law: Symbiosis International University", rank: null, grade: "Top 200 Asia", year: "2024" },
       ],
-      scholarships: [
-        { name: "Symbiosis Merit Scholarship", eligibility: "Students with SLAT rank in top 50 All-India who join SLS Pune", amount: "25–50% tuition fee waiver for the first year, renewable on 70%+ CGPA", provider: "Symbiosis International University, Pune" },
-        { name: "SIU SC/ST Scholarship", eligibility: "SC/ST students admitted to any SIU programme including SLS", amount: "25% fee concession per year for all 5 years / 3 years of programme", provider: "Symbiosis International University (SIU) Trust" },
-        { name: "SIU Sports Scholarship", eligibility: "National or state-level sports achievers admitted to SLS Pune", amount: "Up to 50% tuition fee waiver depending on sports achievement level", provider: "Symbiosis International University" },
-        { name: "Symbiosis Need-Based Financial Aid", eligibility: "Students with family income below ₹5 lakh/year demonstrating financial hardship", amount: "₹30,000–₹80,000 per year; does not cover full fees but provides partial relief", provider: "Symbiosis International University Financial Aid Committee" },
-        { name: "Bar Council of Maharashtra & Goa Scholarship", eligibility: "Meritorious law students with financial need enrolled in Maharashtra law colleges", amount: "₹10,000–₹25,000 per year", provider: "Bar Council of Maharashtra and Goa" },
-        { name: "Vidyadhan Scholarship (HDFC Parivartan)", eligibility: "First-generation college students from low-income families with academic merit", amount: "₹75,000–₹1,50,000 per year (covers significant portion of SLS fees)", provider: "HDFC Bank Parivartan / Sarojini Damodaran Foundation" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Law Library & Digital Resources", description: "SLS Pune's library holds 50,000+ volumes including SCC, AIR, and ITR complete series. Digital subscriptions to Manupatra, SCC Online, Westlaw India, LexisNexis, HeinOnline, and JSTOR. Access to foreign law databases (OSCOLA, UK Law Reports) for international law coursework. The library supports comparative law research, used by students pursuing LL.M. abroad. Open till 10 PM on weekdays." },
         { name: "Moot Court Complex", description: "SLS Pune has two dedicated moot court rooms modelled on District Court and High Court chambers. National and international moot court achievements include: Jessup International Law Moot (semi-final), Vis Moot (Vienna), National ADR competitions, FICCI and SIAC arbitration moots. Advocacy training is mandatory from Semester 1 and is considered SLS's strongest practical output." },
@@ -3089,14 +2825,7 @@ const rawColleges: College[] = [
         { name: "Centre for Advanced Legal Studies & Research (CALSAR)", description: "SLS's research centre, CALSAR, promotes faculty and student research in corporate law, IPR, environmental law, international law, and legal technology. Publishes the Symbiosis Law Review (peer-reviewed journal). Organises annual international law conferences with speakers from academia, Supreme Court, and international arbitration community. Students who contribute to CALSAR research papers gain a significant edge in LL.M. applications to Oxford, Harvard, and NUS." },
         { name: "Location: Viman Nagar, Pune", description: "SLS is located on Senapati Bapat Road in Viman Nagar. Pune's premium eastern suburb. Proximity to Pune Airport (3 km), Kalyani Nagar, Kharadi IT hub, and Nagar Road makes it one of Pune's most accessible campuses. The Viman Nagar-Kharadi corridor hosts offices of leading law firms' Pune branches and MNC legal departments, useful for networking. Airport proximity is convenient for students flying in from Mumbai and Delhi for interviews." },
       ],
-      alumni: [
-        { name: "Shardul Shroff", designation: "Managing Partner, Shardul Amarchand Mangaldas & Co.", batch: "1985" },
-        { name: "Adv. Rajiv Sabharwal", designation: "Partner, Trilegal Mumbai", batch: "2003" },
-        { name: "Priya Venkataraman", designation: "Senior Counsel, Cyril Amarchand Mangaldas Pune", batch: "2008" },
-        { name: "Aditya Bhat", designation: "In-House Counsel, Infosys Legal (Bangalore)", batch: "2012" },
-        { name: "Neha Chaturvedi", designation: "Partner, Khaitan & Co. Pune", batch: "2010" },
-        { name: "Rohit Kapoor", designation: "Legal Director, Tata Motors Ltd.", batch: "2007" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -3143,8 +2872,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Pune District Court", "Bombay High Court", "Legal Aid", "Law Firms", "Corporate Legal Teams"],
     entranceExams: ["MH CET Law", "CLAT"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 290,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Affordable Law College Pune", "Bharati Vidyapeeth", "Central Pune", "NAAC A+"],
     description: "New Law College is one of Pune's oldest law colleges under Bharati Vidyapeeth. Offers affordable legal education with strong ties to the Pune court system.",
     highlights: ["One of Pune's oldest law colleges with 85+ year legacy", "Affordable fees suitable for all economic backgrounds", "Strong ties with Pune District Court and Bombay High Court", "Active legal aid cell serving the community"],
@@ -3152,9 +2881,7 @@ const rawColleges: College[] = [
     website: "https://www.bvuniversity.edu.in",
     phone: "+91-20-24407100",
     email: "nlcpune@bvuniversity.edu.in",
-    reviews: [
-      { id: 1, studentName: "Adv. Sumit Jadhav", course: "LL.B.", year: 2022, rating: 4, title: "Good law college for litigation career", body: "NLC is perfect for those who want to practice in Pune courts. Great exposure to real cases through legal aid cell.", pros: ["Affordable fees", "Court exposure", "Good teachers"], cons: ["Infrastructure dated", "Average placements"] }
-    ]
+    reviews: []
   },
   {
     id: 59,
@@ -3177,8 +2904,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Hafeez Contractor", "RSP Architects", "HOK", "Godrej Properties", "Mahindra Lifespaces"],
     entranceExams: ["NATA", "JEE Main (Paper 2)"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 240,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Architecture College Pune", "MIT Group", "B.Arch", "NATA"],
     description: "MIT College of Architecture is one of Pune's top architecture schools, offering B.Arch and M.Arch programs. It has a strong design culture with regular workshops by leading architects.",
     highlights: ["Strong design culture with national award-winning student projects", "Regular workshops by leading Indian and international architects", "Well-equipped design studios and model-making labs", "Located in Kothrud: Pune's cultural hub"],
@@ -3186,9 +2913,7 @@ const rawColleges: College[] = [
     website: "https://www.mitpune.com",
     phone: "+91-20-25424040",
     email: "arch@mitpune.com",
-    reviews: [
-      { id: 1, studentName: "Neha Kulkarni", course: "B.Arch", year: 2023, rating: 4, title: "Great architecture school in Pune", body: "MIT COA has a lively design culture. The studio environment is competitive but very creative.", pros: ["Creative environment", "Good faculty", "Kothrud location"], cons: ["High workload", "Average placements"] }
-    ]
+    reviews: []
   },
   {
     id: 60,
@@ -3211,8 +2936,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Morphogenesis", "Studio Lotus", "Godrej Properties", "DLF", "Brigade Group"],
     entranceExams: ["NATA", "JEE Main (Paper 2)"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 180,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Architecture Pune", "MIT-ADT University", "Interior Design", "Modern Campus"],
     description: "MIT School of Architecture offers innovative B.Arch and design programs on the sprawling MIT-ADT University campus. Known for digital design tools and sustainable architecture focus.",
     highlights: ["Part of MIT-ADT University, modern integrated campus", "Focus on digital design tools, BIM, parametric design", "Strong interior design program in Pune", "Regular study tours to architectural landmarks"],
@@ -3220,9 +2945,7 @@ const rawColleges: College[] = [
     website: "https://www.mituniversity.edu.in",
     phone: "+91-2115-290300",
     email: "soa@mituniversity.edu.in",
-    reviews: [
-      { id: 1, studentName: "Rahul Joshi", course: "B.Arch", year: 2023, rating: 4, title: "Good architecture program in Pune", body: "MIT SOA offers a good blend of traditional and digital architecture. The campus is excellent.", pros: ["Modern campus", "Digital tools focus", "Hostel available"], cons: ["Far from city", "Average placement support"] }
-    ]
+    reviews: []
   },
 
   // ── UNIVERSITIES ─────────────────────────────────────────────
@@ -3247,8 +2970,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HDFC Bank", "Bajaj Auto", "Cognizant"],
     entranceExams: ["MHT-CET", "CUET", "CAT", "MAH-MBA CET", "MH CET Law"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 5200,
+    rating: 0,
+    reviewCount: 0,
     tags: ["State University", "NAAC A++", "Affiliating University", "NIRF Ranked", "800+ Colleges"],
     description: "Savitribai Phule Pune University (formerly University of Pune) is Maharashtra's premier state university, established in 1949. It is a NAAC A++ accredited affiliating university with over 800 affiliated colleges across Pune, Ahmednagar, and Nashik districts. SPPU is ranked among India's top universities by NIRF and offers world-class education through its 46 on-campus departments.",
     highlights: ["NAAC A++: highest accreditation grade", "NIRF Rank 58 among universities in India", "800+ affiliated colleges across 3 districts", "46 on-campus departments across all disciplines", "Named after social reformer Savitribai Phule in 2014", "Strong research ecosystem with 5,000+ PhD scholars"],
@@ -3256,9 +2979,7 @@ const rawColleges: College[] = [
     website: "http://www.unipune.ac.in",
     phone: "+91-20-25601099",
     email: "info@unipune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Aditya Kulkarni", course: "M.Sc. Chemistry", year: 2023, rating: 4, title: "Premier university for research", body: "SPPU's campus departments have excellent research facilities. The library is vast and the environment is academic.", pros: ["Great research culture", "Affordable fees", "Huge campus"], cons: ["Bureaucratic processes", "Overcrowded departments"] }
-    ]
+    reviews: []
   },
   {
     id: 62,
@@ -3281,8 +3002,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Deloitte", "McKinsey", "Goldman Sachs", "Amazon", "Google", "Microsoft", "Infosys", "HSBC"],
     entranceExams: ["SNAP", "SET", "SLAT", "SITEEE", "NEET"],
     hostel: true,
-    rating: 4.5,
-    reviewCount: 8700,
+    rating: 0,
+    reviewCount: 0,
     tags: ["NAAC A++", "NIRF Rank 22", "International University", "Top Deemed University", "Lavale Campus"],
     description: "Symbiosis International University is one of India's most prestigious deemed universities, known for globally benchmarked education across 15+ constituent institutions. SIU's sprawling Lavale campus houses schools of business, law, engineering, health sciences, media, design, and liberal arts.",
     highlights: ["NAAC A++: highest accreditation grade", "NIRF Rank 22 among Indian universities", "15+ constituent institutions under one umbrella", "International collaborations with 200+ global universities", "SNAP scores accepted across all SIU management schools", "Over 35,000 students from 80+ countries"],
@@ -3290,11 +3011,7 @@ const rawColleges: College[] = [
     website: "https://www.siu.edu.in",
     phone: "+91-20-39116300",
     email: "info@siu.edu.in",
-    reviews: [
-      { id: 1, studentName: "Riya Mehta", course: "MBA (SIBM)", year: 2023, rating: 5, title: "World-class university: truly international ecosystem", body: "SIU is unlike any other university in Pune. The Lavale campus with 35,000+ students from 80+ countries, 15+ constituent colleges, a hospital, sports complex, and amphitheatre, it is a self-contained world. SNAP opened doors I didn't imagine. Placed at McKinsey after SIBM.", pros: ["NAAC A++: highest grade", "NIRF Rank 22", "200+ global university tie-ups", "One campus for MBA, Law, Engineering, Medicine, Design"], cons: ["Total cost of education is very high", "Lavale campus can feel isolated from Pune city", "Traffic on Hinjawadi-Lavale road during peak hours"] },
-      { id: 2, studentName: "Ankit Sharma", course: "B.Tech CS (SITE)", year: 2022, rating: 4, title: "Great for global-minded engineering students", body: "SIT Pune gave me a semester exchange in the Netherlands (Utrecht University). The international exposure on the Lavale campus is real, we have students from Afghanistan, Ethiopia, Sri Lanka, Iran, and Nepal in our batch. Placed at Microsoft after graduation.", pros: ["Genuine international student community", "Industry collaboration from Year 1", "SITEEE entrance is relatively accessible", "Exchange programme to Europe/US available"], cons: ["Fees are ₹3–5 lakh/year, expensive", "SIU brand is strong but individual college brand matters more for placements"] },
-      { id: 3, studentName: "Fatima Sheikh", course: "BA LL.B. (SLS)", year: 2024, rating: 4, title: "SIU ecosystem makes law school unique", body: "Studying law at SLS Pune as part of SIU means you interact with MBA students at SIBM, engineers at SITE, and doctors at Symbiosis Medical College. This interdisciplinary environment is rare in Indian law schools. Got placed at Trilegal through SLS campus recruitment.", pros: ["Cross-disciplinary interaction across SIU institutes", "International moot court achievements", "SLAT opens all SIU law campuses", "SIU's global university network for LL.M. abroad"], cons: ["Law fees ₹2.2–2.4 lakh/year is steep", "SLS Pune admission is extremely competitive"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech (Computer Science / AI / IoT / VLSI). SITE", duration: "4 Years", level: "UG", eligibility: "10+2 PCM with 50% (General); SITEEE / JEE Main", selection: "SITEEE Score or JEE Main Score + PI", fees_per_year: 380000, total_fees: 1520000, seats: 480 },
@@ -3356,15 +3073,7 @@ const rawColleges: College[] = [
         { agency: "Outlook", category: "Top Deemed Universities India", rank: 8, year: "2024" },
         { agency: "Business Today", category: "Best Universities India", rank: 14, year: "2024" },
       ],
-      scholarships: [
-        { name: "SIU Merit Scholarship (Programme-Specific)", eligibility: "Top performers in SNAP / SET / SLAT / SITEEE admitted to SIU institutes", amount: "25–50% tuition fee waiver (Year 1); renewable on maintaining top 10–15% CGPA annually. Value: ₹50,000–₹2.7 lakh/year depending on programme", provider: "Symbiosis International University" },
-        { name: "SIU SC/ST Scholarship", eligibility: "SC/ST students admitted to any SIU constituent institute", amount: "20–25% fee concession per year across entire programme duration", provider: "Symbiosis International University Trust" },
-        { name: "SIU Sports Excellence Scholarship", eligibility: "National or international level sports achievers joining any SIU institute", amount: "Up to 50% tuition fee waiver for the duration of programme", provider: "Symbiosis International University" },
-        { name: "SIU Need-Based Financial Aid", eligibility: "Students with annual family income below ₹5 lakh demonstrating financial hardship", amount: "₹30,000–₹1.0 lakh/year partial relief; does not cover full fees of any programme", provider: "SIU Financial Aid & Scholarship Committee" },
-        { name: "SIU International Student Scholarship", eligibility: "International students from developing countries (Asia, Africa, Middle East) admitted to SIU", amount: "15–30% tuition fee waiver depending on country of origin and academic profile", provider: "Symbiosis International University / SIEL (Symbiosis International Education Ltd)" },
-        { name: "Vidyadhan Scholarship (HDFC Parivartan)", eligibility: "First-generation students from low-income families with strong entrance exam scores at SIU", amount: "₹75,000–₹2.5 lakh per year (programme-dependent)", provider: "HDFC Bank Parivartan / Sarojini Damodaran Foundation" },
-        { name: "Education Loan (SIU Bank Tie-ups)", eligibility: "All admitted SIU students; SBI, Axis Bank, HDFC, and Canara Bank have formal tie-ups", amount: "Up to ₹40 lakh at 9–11% with moratorium during course + 1 year post-completion", provider: "SBI, Axis Bank, HDFC Bank, Canara Bank" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Lavale Campus, 300 Acres, Self-Contained Township", description: "SIU's Lavale campus (Gram Lavale, Mulshi, 20 km from Pune city) is a sprawling 300-acre self-sufficient campus set in the Sahyadri hills. The campus houses 15+ institutes, 35,000+ students, 2,500+ faculty and staff, a hospital, an amphitheatre, sports complex, food court zone, retail stores, ATMs, and residential facilities. It is India's most diverse university campus, students from 80+ countries study here simultaneously, creating a genuinely international learning environment." },
         { name: "Symbiosis University Hospital & Research Centre (SUHRC)", description: "SIU's 700-bed multi-specialty teaching hospital on the Lavale campus serves students, staff, and the surrounding community. 24×7 emergency, OPD covering 20+ specialties, ICU, blood bank, and diagnostic labs. MBBS students (Symbiosis Medical College for Women) train here. The hospital is also a research centre for clinical trials and health sciences research. Students from all SIU institutes can access basic healthcare free of cost at SUHRC." },
@@ -3376,14 +3085,7 @@ const rawColleges: College[] = [
         { name: "Cultural & Student Life. Kaleidoscope & Tarang", description: "SIU hosts Symbiosis Kaleidoscope, one of India's largest inter-university cultural festivals, annually in September, drawing 10,000+ participants from 200+ colleges across India. Tarang is SIU's intra-university sports festival. Student clubs span astronomy, robotics, finance (investment club), drama, classical music, photography, literature, and social outreach. The diverse student body (80+ nationalities, 28 Indian states) creates year-round cultural exchange. International Food Festival, Diversity Day, and National Integration Camp are signature SIU events." },
         { name: "Symbiosis Centre for Distance Learning (SCDL) & Online Programmes", description: "SCDL is India's largest distance learning institution, part of SIU, with 3 lakh+ enrolled students. SCDL offers PGDBA, PGDHRM, PGDIB, PGDIT, and other postgraduate diploma programmes through correspondence and online mode at ₹25,000–₹40,000 total fees. SCDL degrees are UGC-DEB approved. Working professionals who cannot attend SIU's regular programmes use SCDL, particularly for the PGDBA which is widely accepted in the corporate sector as equivalent to an MBA for promotions and job applications." },
       ],
-      alumni: [
-        { name: "Neeraj Garg", designation: "Managing Director, Volkswagen India (SIBM alumni)", batch: "1995" },
-        { name: "Priya Nair", designation: "Chief Marketing Officer, Hindustan Unilever (SIBM alumni)", batch: "1998" },
-        { name: "Siddharth Lal", designation: "MD & CEO, Eicher Motors / Royal Enfield (SIBM alumni)", batch: "1994" },
-        { name: "Shardul Shroff", designation: "Managing Partner, Shardul Amarchand Mangaldas (SLS alumni)", batch: "1985" },
-        { name: "Aakash Vaghela", designation: "Co-Founder, Classplus (EdTech Unicorn, ₹3,000+ Cr valuation)", batch: "2012" },
-        { name: "Dr. Vibha Pathak", designation: "Vice Chancellor, Amity University (SIU PhD alumni)", batch: "2005" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 10,
@@ -3429,8 +3131,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Bajaj Auto", "HDFC Bank", "Ruby Hall Clinic", "Sahyadri Hospitals"],
     entranceExams: ["NEET", "MHT-CET", "MH CET Law", "MAH-MBA CET"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 4200,
+    rating: 0,
+    reviewCount: 0,
     tags: ["NAAC A+", "Deemed University", "Medical & Law", "Affordable Fees", "South Pune"],
     description: "Bharati Vidyapeeth Deemed University, founded by Dr. Patangrao Kadam in 1964, is one of Maharashtra's largest and most diverse universities. It operates 30+ constituent colleges across medical, dental, law, engineering, management, and arts streams with campuses across Maharashtra and beyond.",
     highlights: ["30+ constituent colleges across diverse disciplines", "NAAC A+ accredited deemed university", "One of Maharashtra's largest universities by student strength", "Operates medical, dental, law, engineering, and management colleges", "Campuses in Pune, Mumbai, Navi Mumbai, Delhi, and Kolhapur"],
@@ -3438,11 +3140,7 @@ const rawColleges: College[] = [
     website: "https://www.bvuniversity.edu.in",
     phone: "+91-20-24407100",
     email: "registrar@bvuniversity.edu.in",
-    reviews: [
-      { id: 1, studentName: "Kavita Pawar", course: "MBBS", year: 2022, rating: 4, title: "Solid medical college under BVDU: Sassoon exposure is unique", body: "BVDU Medical College has ties with Bharati Hospital (650+ beds). Clinical exposure starts from 2nd MBBS unlike some private colleges. Fees are among the most affordable for a deemed medical college in Pune. The campus at Dhankawadi is spread out but the hostel is decent. Would recommend if NEET score doesn't make it to government college.", pros: ["Affordable MBBS fees for a deemed university", "Early clinical exposure at Bharati Hospital", "NAAC A+ credibility", "Multiple disciplines under one umbrella"], cons: ["Quality varies significantly across constituent colleges", "Coordination between campuses can be bureaucratic", "Brand value lower than AFMC or BJ Medical"] },
-      { id: 2, studentName: "Rohit Kulkarni", course: "LLB (3 Year)", year: 2023, rating: 4, title: "New Law School underrated: Bar Council approved, affordable", body: "BVDU New Law College is a solid choice for law in Pune. Fees at ₹35,000/yr are very reasonable. The moot court participation is active and some professors have practised at Bombay High Court. Not at the level of ILS Law College for the ILS brand, but gives a proper legal education for those who couldn't clear ILS or SLS. Placements in Pune law firms and corporate legal teams are decent. 60% cleared Bar Exam in one attempt in our batch.", pros: ["Highly affordable law education", "Active moot court programs", "Good faculty with real-world experience", "Pune High Court proximity for internships"], cons: ["Library resources need expansion", "Not as prestigious as ILS for top law firm hiring", "Limited national-level exposure"] },
-      { id: 3, studentName: "Sneha Joshi", course: "MBA", year: 2023, rating: 4, title: "IMC BVDU: Good MBA for MAH-MBA CET admits, honest review", body: "BVDU's Institute of Management and Commerce (IMC) is a decent MBA college for students who get 85–90 percentile in MAH-MBA CET. Fees are ₹1.1L/yr: one of the most affordable MBA programs in Pune as a deemed university. Placement average is ₹6–7 LPA, with some Finance students going to HDFC, ICICI, and Bajaj Finance. Don't expect SIBM-level placements but for the fee you pay, the ROI is good. Faculty is experienced with industry backgrounds.", pros: ["Very affordable MBA fees", "Good Finance and Marketing placements", "Reasonable MAH-MBA CET cutoffs", "NAAC A+ credibility helps in resume"], cons: ["Average placement not comparable to SIBM/SCMHRD", "Limited global exposure or exchange programs", "Infrastructure at IMC campus could be upgraded"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBBS", duration: "5.5 Years (including 1 yr internship)", level: "UG", eligibility: "Class 12 PCB, 50%+ (40% for reserved); NEET qualified", selection: "NEET score + DMER counselling (State/AIQ quota)", fees_per_year: 850000, total_fees: 4250000, seats: 150 },
@@ -3497,14 +3195,7 @@ const rawColleges: College[] = [
         { agency: "Outlook", category: "Top Private Universities Maharashtra", rank: 8, year: "2024" },
         { agency: "Times Higher Education", category: "India University Rankings", rank: 85, year: "2024" },
       ],
-      scholarships: [
-        { name: "Dr. Patangrao Kadam Merit Scholarship", eligibility: "Top 5% students by marks in each program", amount: "50% fee waiver", provider: "BVDU Trust" },
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Family income < ₹8L/yr; 60%+ in qualifying exam", amount: "Full tuition fee (government colleges) / Partial (aided)", provider: "Government of Maharashtra" },
-        { name: "SC/ST/OBC Scholarships (GoI & State)", eligibility: "SC/ST/OBC/VJNT/SBC category students", amount: "Full fee reimbursement (government scheme)", provider: "GoI / GoM" },
-        { name: "BVDU Sports Scholarship", eligibility: "State / National level sports representatives", amount: "25–50% fee concession", provider: "BVDU Sports Board" },
-        { name: "BVDU Need-Based Scholarship", eligibility: "Family income < ₹3L/yr; satisfactory academic record", amount: "₹20,000–₹50,000/yr", provider: "BVDU Welfare Fund" },
-        { name: "Vidyadhan Scholarship", eligibility: "Meritorious students from rural Maharashtra, family income < ₹2L/yr", amount: "₹35,000–₹60,000/yr", provider: "Sarojini Damodaran Foundation" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Bharati Hospital (650+ Beds)", description: "Teaching hospital for BVDU Medical College at Dhankawadi, 650+ beds, 30+ specialities. Provides clinical exposure from 2nd MBBS. 1800+ daily OPD. Superspeciality services in Cardiology, Neurology, Oncology, and Orthopedics." },
         { name: "Dental Hospital (BVDU Dental College)", description: "300-chair dental teaching hospital. One of Pune's largest dental OPDs with 500+ daily patients. Attached to Dental College with panoramic X-ray, CBCT, and implant surgery units." },
@@ -3515,13 +3206,7 @@ const rawColleges: College[] = [
         { name: "Research & Innovation Centres", description: "BVDU Research Park encourages interdisciplinary research. Active research in traditional medicine (Ayurvedic), pharma drug discovery, and environmental science. 200+ research publications annually." },
         { name: "Hostels (Boys & Girls Separate)", description: "7 hostel blocks across Pune campuses. Total capacity 2800. Modern rooms with Wi-Fi, 24/7 CCTV, RO water. Medical campus hostel is walking distance from Bharati Hospital for interns and PG residents." },
       ],
-      alumni: [
-        { name: "Dr. Kiran Bedi (Hon. Doctorate)", designation: "Former Lieutenant Governor of Puducherry & IPS Officer", batch: "2015" },
-        { name: "Adv. Ujjwala Pawar", designation: "Senior Advocate, Bombay High Court", batch: "2000" },
-        { name: "Dr. Ashish Bharati", designation: "HOD Cardiology, Narayana Health", batch: "1995" },
-        { name: "Rohan Supekar", designation: "VP Engineering, Persistent Systems", batch: "2008" },
-        { name: "Dr. Sheetal Mane", designation: "Director, Pune Municipal Medical Services", batch: "1990" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 4,
@@ -3567,8 +3252,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Accenture", "HCL", "Tech Mahindra", "Amazon"],
     entranceExams: ["MHT-CET", "JEE Main", "CUET", "CAT", "CMAT"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 1800,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Private University Pune", "Film School", "AI & Data Science", "Sports University", "Lohegaon"],
     description: "Ajeenkya DY Patil University (ADYPU) is a modern private university near Pune's international airport. Known for its unconventional programs in film, media, game design, and sports management alongside traditional engineering and management courses.",
     highlights: ["India's first university with a dedicated Film and Media school", "Modern AI, Data Science, and Blockchain programs", "Sports Excellence program with professional-grade facilities", "Industry-integrated curriculum with live projects", "Close proximity to Pune International Airport"],
@@ -3576,9 +3261,7 @@ const rawColleges: College[] = [
     website: "https://www.adypu.edu.in",
     phone: "+91-20-66754000",
     email: "admissions@adypu.edu.in",
-    reviews: [
-      { id: 1, studentName: "Arjun Singh", course: "B.Tech CSE (AI)", year: 2023, rating: 4, title: "Great for tech and media programs", body: "ADYPU has excellent infrastructure and unique programs. The film school is top-notch.", pros: ["Unique programs", "Modern campus", "Good tech labs"], cons: ["Expensive", "Brand value still developing"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech CSE (Artificial Intelligence & ML)", duration: "4 Years", fees_per_year: 295000, total_fees: 1180000, eligibility: "Class 12 PCM, 50%+", selection: "MHT-CET / JEE Main merit", seats: 120 },
@@ -3628,13 +3311,7 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Best Universities India", rank: 100, year: "2024" },
         { agency: "QS World University Rankings", category: "Impact (SDGs)", rank: null, grade: "Rated", year: "2024" },
       ],
-      scholarships: [
-        { name: "ADYPU Merit Scholarship", amount: "25–100% tuition waiver", eligibility: "85%+ in Class 12 or 90th percentile in MHT-CET / JEE Main" },
-        { name: "Sports Excellence Scholarship", amount: "50% tuition waiver", eligibility: "National / State level sports representation with certificate" },
-        { name: "Film & Design Talent Scholarship", amount: "25–50% tuition waiver", eligibility: "Outstanding portfolio submission during ADYPU aptitude test" },
-        { name: "Girl Child Scholarship", amount: "10% additional waiver on tuition", eligibility: "Female students in B.Tech / MBA programs" },
-        { name: "AICTE Pragati Scholarship", amount: "₹50,000 per year", eligibility: "Female students in AICTE-approved technical programs; family income < ₹8 LPA" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "AI & Data Science Lab", description: "Dedicated GPU computing cluster with NVIDIA DGX workstations, TensorFlow / PyTorch environments, and Kaggle-competition ready datasets" },
         { name: "Film & Media Production Studio", description: "Industry-grade film sets, 4K cameras, Avid editing suites, Dolby sound mixing studio, and green-screen facility, one of the best in a university setting in India" },
@@ -3645,14 +3322,7 @@ const rawColleges: College[] = [
         { name: "Hostel Campus", description: "Separate boys and girls hostels (1,200 capacity total), AC rooms, solar power, food courts, and 24×7 security" },
         { name: "Industry Connect Centre", description: "Dedicated corporate relations office facilitating internships, live projects, and pre-placement offers from 200+ partner companies" },
       ],
-      alumni: [
-        { name: "Akash Banerjee (Deshbhakt)", designation: "YouTuber & Digital Journalist. Self (16M+ subscribers)", batch: "2010" },
-        { name: "Rahul Khatri", designation: "Game Designer: Ubisoft India", batch: "2020" },
-        { name: "Priya Menon", designation: "AI/ML Engineer: Amazon Hyderabad (₹24 LPA)", batch: "2022" },
-        { name: "Siddharth Kulkarni", designation: "Sports Performance Analyst: Mumbai Indians (IPL)", batch: "2021" },
-        { name: "Shreya Nair", designation: "UX Designer & Product Manager. Swiggy", batch: "2023" },
-        { name: "Tanvir Sheikh", designation: "Cybersecurity Consultant: Deloitte India", batch: "2022" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         total_capacity: 1200,
@@ -3696,8 +3366,8 @@ const rawColleges: College[] = [
     topRecruiters: ["DY Patil Hospital", "Apollo Hospitals", "Fortis Healthcare", "Columbia Asia", "Armed Forces"],
     entranceExams: ["NEET", "NEET PG"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 2100,
+    rating: 0,
+    reviewCount: 0,
     tags: ["NAAC A++", "Medical University", "PCMC Pune", "DY Patil Group", "Health Sciences"],
     description: "Dr. D.Y. Patil Vidyapeeth is a NAAC A++ deemed university specialising in health sciences. It operates multiple colleges including medical, dental, nursing, pharmacy, and allied health science institutions under one campus in Pimpri.",
     highlights: ["NAAC A++: highest accreditation in health sciences", "1,500-bed teaching hospital for clinical training", "Full health sciences ecosystem on one campus", "Active research and Ph.D. programs in medical disciplines", "International MOU with global health institutions"],
@@ -3705,11 +3375,7 @@ const rawColleges: College[] = [
     website: "https://www.dpu.edu.in",
     phone: "+91-20-67116200",
     email: "registrar@dpu.edu.in",
-    reviews: [
-      { id: 1, studentName: "Dr. Sneha Thorat", course: "MBBS", year: 2022, rating: 4, title: "Best private medical college in PCMC: strong clinical exposure", body: "DPU Medical College's teaching hospital has 1500+ beds. From 2nd year MBBS onward I was seeing 150+ patients daily in OPD. Faculty includes practising specialists, not just academics. Yes the fees are steep, ₹1.8 crore total is a big commitment, but the clinical training quality justifies it if you can afford it. NEET cutoff was 620+ for open category this year.", pros: ["NAAC A++: highest grade for health sciences", "1500-bed hospital with 3500+ daily OPD", "All health disciplines under one campus, easy interdisciplinary learning", "Strong PG (MD/MS) placements within DPU hospital and Apollo/Fortis network"], cons: ["Very high total fees. MBBS costs ₹1.6–1.8 crore total", "Traffic around Pimpri campus can be challenging", "Limited merit scholarships compared to government colleges"] },
-      { id: 2, studentName: "Priya Kelkar", course: "BDS", year: 2023, rating: 4, title: "DPU Dental: excellent infrastructure, expensive but worth it", body: "DPU Dental College has the largest teaching dental hospital in PCMC with 400+ chairs. We get far more patient exposure than most dental colleges. Faculty are active researchers, our HOD published in Journal of Dental Research. MDS placements are strong with most students getting hospital positions or starting their own clinics. If you're serious about dentistry and NEET score permits government, go government first.", pros: ["400-chair dental teaching hospital", "Active research culture", "Strong MDS alumni network", "Interdisciplinary access to DPU medical, pharmacy, and physio teams"], cons: ["BDS fees ₹85 lakh total is premium", "NEET requirement still applies"] },
-      { id: 3, studentName: "Kunal Deshpande", course: "B.Sc. Physiotherapy", year: 2023, rating: 4, title: "Allied health programs at DPU: hidden gems", body: "Most people know DPU for MBBS but the Physiotherapy, Optometry, and Medical Imaging programs are genuinely excellent. I did B.Sc. Physiotherapy: fees are ₹80K/yr, far more affordable than MBBS. Clinical posting at DPU's 1500-bed hospital means I was treating 40+ patients per day in Year 3. 85% of my batch placed within 6 months. Average salary ₹4.5 LPA for Physiotherapy which is competitive.", pros: ["Affordable allied health programs (₹80K–1.2L/yr)", "Hospital training volume unmatched in Pune", "Good OPD and ICU exposure for physio/optometry students", "Hostel available near campus"], cons: ["Physio and OT programs less prestigious nationally than MBBS/BDS", "Campus traffic and parking is a real issue"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBBS", duration: "5.5 Years (incl. 1yr internship)", level: "UG", eligibility: "Class 12 PCB 50%+; NEET qualified", selection: "NEET score + DMER Maharashtra counselling (State/AIQ quota)", fees_per_year: 1800000, total_fees: 9000000, seats: 150 },
@@ -3760,12 +3426,7 @@ const rawColleges: College[] = [
         { agency: "India Today", category: "Top Medical Colleges India", rank: 28, year: "2024" },
         { agency: "Outlook India", category: "Best Deemed Medical Universities", rank: 15, year: "2024" },
       ],
-      scholarships: [
-        { name: "DPU Merit Scholarship (MBBS/BDS)", eligibility: "NEET score above 650 (MBBS) / 600 (BDS) for open category", amount: "₹50,000–₹1,00,000 per year fee waiver", provider: "Dr. D.Y. Patil Vidyapeeth Trust" },
-        { name: "SC/ST Full Fee Concession", eligibility: "SC/ST students in allied health programs (Nursing, Physiotherapy)", amount: "Full tuition fee waiver under state scholarship scheme", provider: "Government of Maharashtra" },
-        { name: "NRI / Foreign Student Scholarship", eligibility: "High-merit NRI/OCI students in MBBS", amount: "10–25% fee concession on NRI quota fees", provider: "DPU International Affairs Office" },
-        { name: "Sports Scholarship", eligibility: "State/National level sports representation", amount: "₹30,000–₹60,000/year fee concession in eligible programs", provider: "DPU Sports Board" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "DPU Super Speciality Hospital (1500 Beds)", description: "The cornerstone of DPU's clinical training. 1500+ beds, 3500+ daily OPD, 35+ specialities. NABH accredited. ICU, NICU, PICU, Cath lab, Cardiac surgery, Neurosurgery, Oncology, Organ transplant, all available for student clinical posting from Year 2 MBBS. Among the largest private teaching hospitals in Pune." },
         { name: "DPU Dental Hospital (400+ Chairs)", description: "One of India's largest dental teaching hospitals with 400+ dental chairs. All dental specialities operational: Oral Surgery, Orthodontics, Periodontics, Endodontics, Pedodontics, Prosthodontics, Oral Medicine. 500+ daily patient OPD. CBCT and digital dentistry labs available for UG and PG students." },
@@ -3774,12 +3435,7 @@ const rawColleges: College[] = [
         { name: "College of Pharmacy (DPU)", description: "DPU's pharmacy college has industry-grade pharmaceutical manufacturing simulation lab, formulation lab, and quality control unit. GPAT coaching integrated in M.Pharm curriculum. Tie-ups with Sun Pharma, Dr. Reddy's, and Cipla for internship." },
         { name: "Hostels (All Professional Streams)", description: "Separate boys and girls hostels with total capacity 1200. Medical interns hostel is walking distance from DPU hospital for night duties. Mess with special diet options for NEET exam prep. 24×7 doctor on call for hostel medical emergencies." },
       ],
-      alumni: [
-        { name: "Dr. Nilesh Satbhai", designation: "Senior Interventional Cardiologist, Kokilaben Hospital Mumbai", batch: "2005" },
-        { name: "Dr. Priya Karmarkar", designation: "Consultant Plastic Surgeon, DPU Super Speciality Hospital", batch: "2010" },
-        { name: "Dr. Rohan Thakur", designation: "USMLE Step 3 cleared; Resident Physician, New York Presbyterian Hospital", batch: "2018" },
-        { name: "Dr. Swati Kulkarni", designation: "HOD Orthodontics, NAIR Mumbai", batch: "2008" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -3823,8 +3479,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "Capgemini", "Persistent Systems", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "JEE Main", "CUET", "CAT"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 950,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Private University Pune", "New University", "South Pune", "Industry Connected"],
     description: "Vishwakarma University is a modern private university in South Pune offering engineering, management, design, and science programs. Established in 2017, it provides industry-integrated curriculum with focus on skill development and entrepreneurship.",
     highlights: ["Modern private university with industry-first curriculum", "Strong ties with Pune's IT and manufacturing industry", "Focus on entrepreneurship and startup ecosystem", "Well-equipped labs and digital classrooms", "Located in South Pune, fast-growing education hub"],
@@ -3832,11 +3488,7 @@ const rawColleges: College[] = [
     website: "https://www.vupune.ac.in",
     phone: "+91-20-26950200",
     email: "admissions@vupune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Rahul Desai", course: "B.Tech CSE", year: 2023, rating: 4, title: "Good new university: modern approach, South Pune location", body: "VU Pune spun out of VIT Pune's parent group and has a fresh private university feel. Faculty is young, industry-connected, and accessible. The CSE program has Python, ML, and cloud tracks from Year 1. MHT-CET cutoff is moderate, around 68–75%ile for CSE, so a good fit for students who want a better alternative to lower-tier SPPU colleges. Campus at Bibwewadi is urban, not a campus-in-the-field setup.", pros: ["Modern curriculum with industry-first approach", "Young faculty with industry backgrounds", "South Pune location: well connected", "Persistent, Capgemini, KPIT recruit here"], cons: ["New university: brand still building nationally", "Limited alumni network compared to established colleges", "No NIRF ranking yet"] },
-      { id: 2, studentName: "Aarti Naik", course: "MBA Business Analytics", year: 2023, rating: 4, title: "MBA Analytics at VU Pune: decent for MAH-MBA CET admits", body: "VU Pune's MBA in Business Analytics is an interesting choice for students interested in data-driven management. We used Python, Tableau, and Power BI throughout the program. Fees are ₹2.6L total: very competitive for a private university MBA. Placement average is ₹6.5 LPA. Not SIBM-level, but for the cost and the analytics focus, it offers good ROI. Faculty in analytics were largely industry professionals.", pros: ["Affordable MBA Analytics fees", "Industry tools integrated in curriculum", "South Pune: close to IT companies for internships", "Responsive placement cell"], cons: ["Not yet in top MBA college rankings", "Limited brand recognition outside Pune", "Hostel capacity insufficient for all students"] },
-      { id: 3, studentName: "Vijay Patil", course: "B.Des Product Design", year: 2024, rating: 4, title: "Design program at VU: underrated and practical", body: "VU Pune's B.Des in Product Design is taught by faculty who've worked at Godrej, Persistent, and KPIT. We used Fusion 360, SolidWorks, and Adobe XD. Fees ₹2.2L/yr for Design is reasonable. Placements for Design were 80% with design studios, product companies, and UX teams. Most unique aspect: the 'Industry Immersion' semester where we worked with actual companies on live product briefs.", pros: ["Industry-professional faculty in design", "Live product project semester", "Good design tools and software access", "UX/product design placements in tech firms"], cons: ["Design program less known nationally", "Portfolio-review based admission can be opaque"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech CSE (Core)", duration: "4 Years", level: "UG", eligibility: "Class 12 PCM 45%+; MHT-CET / JEE Main", selection: "MHT-CET / JEE Main merit + VU counselling", fees_per_year: 185000, total_fees: 740000, seats: 120 },
@@ -3887,12 +3539,7 @@ const rawColleges: College[] = [
         { agency: "India Today", category: "Best Private Engineering Colleges India", rank: 90, year: "2024" },
         { agency: "Outlook India", category: "Best Private Universities Maharashtra", rank: 15, year: "2024" },
       ],
-      scholarships: [
-        { name: "VU Merit Scholarship", eligibility: "85%+ in Class 12 or 80th+ percentile in MHT-CET", amount: "25–50% tuition fee waiver for first year; continued on merit", provider: "Vishwakarma University" },
-        { name: "Girl Child Scholarship", eligibility: "Female students in B.Tech programs", amount: "10% additional waiver on tuition", provider: "VU Gender Equity Fund" },
-        { name: "AICTE Pragati Scholarship", eligibility: "Female B.Tech students; family income < ₹8L/yr", amount: "₹50,000/year", provider: "AICTE" },
-        { name: "Sports & Cultural Scholarship", eligibility: "State/National level representation in sports or performing arts", amount: "₹20,000–₹40,000/year", provider: "VU Student Affairs" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Innovation & Research Labs", description: "Dedicated AI/ML lab with GPU servers, IoT lab, 3D printing and prototyping centre, advanced mechanical workshop with CNC machines. All labs accessible to students for live projects and hackathons." },
         { name: "Design Studio", description: "Dedicated B.Des studio space with Wacom tablets, Fusion 360/SolidWorks workstations, fabric prototyping zone, and UX usability testing lab with eye-tracking equipment." },
@@ -3901,11 +3548,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus hostel (800 capacity) with separate blocks for boys and girls. AC optional rooms, mess with multiple cuisine options, 24×7 security and Wi-Fi." },
         { name: "Entrepreneurship Cell (E-Cell)", description: "Active E-Cell with annual startup competition. VU has partnered with Startup India and SIDBI for pre-incubation support. 5+ student startups registered from 2023–24 batch." },
       ],
-      alumni: [
-        { name: "Akshay Kulkarni", designation: "Software Engineer, Persistent Systems", batch: "2021" },
-        { name: "Neha Sharma", designation: "UX Designer, Infosys Pune", batch: "2022" },
-        { name: "Tushar Patil", designation: "Product Manager, KPIT Technologies", batch: "2020" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -3947,8 +3590,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Government Schools", "NGOs", "Media Houses", "Banks", "Teaching Institutions"],
     entranceExams: ["CUET", "MAH-MBA CET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 1200,
+    rating: 0,
+    reviewCount: 0,
     tags: ["100-Year Legacy", "Affordable Education", "Arts & Commerce", "Deemed University", "Gultekdi"],
     description: "Tilak Maharashtra Vidyapeeth (TMV) is one of Pune's oldest deemed universities with over 100 years of educational legacy. Founded in 1921, TMV is known for promoting Indian culture, languages, and traditional knowledge alongside modern disciplines.",
     highlights: ["100+ year legacy: one of Maharashtra's oldest deemed universities", "Strongly promotes Sanskrit, Marathi, and Indian culture", "Highly affordable fees across all programs", "Specialised programs in Ayurveda and traditional knowledge", "Active distance education and correspondence programs"],
@@ -3956,11 +3599,7 @@ const rawColleges: College[] = [
     website: "https://www.tilakvidyapeeth.edu.in",
     phone: "+91-20-24261856",
     email: "info@tilakvidyapeeth.edu.in",
-    reviews: [
-      { id: 1, studentName: "Vaibhav Joshi", course: "M.A. Sanskrit", year: 2022, rating: 4, title: "Best place in India for Sanskrit: affordable and authentic", body: "TMV is the top choice for Sanskrit, Pali, and Prakrit studies in India. Faculty includes Sahitya Akademi awardees and retired SPPU professors. Fees are just ₹8,000–12,000/year, you won't find this level of scholarship at this price anywhere. If you're aiming for UGC-NET Sanskrit, TMV's preparation is rigorous.", pros: ["Very affordable: ₹8K–40K/year fees", "Best Sanskrit faculty in Maharashtra", "100+ year legacy: Lokmanya Tilak's institution", "Distance/correspondence programs for working students"], cons: ["Limited modern infrastructure", "Job market perception for classical studies", "No engineering or management streams"] },
-      { id: 2, studentName: "Meera Kulkarni", course: "M.A. Journalism & Mass Communication", year: 2023, rating: 4, title: "TMV Journalism: practical, affordable, and Pune-centric", body: "TMV's Journalism program is highly practical. We produced the campus newspaper 'Vidyanagari Varta', worked with radio stations, and attended Mumbai press conferences as part of coursework. Fees ₹22,000/year for PG Journalism is unbeatable. Faculty includes working journalists from Sakal and Loksatta. If you want a career in Marathi media, newspapers, digital, TV. TMV is the launching pad.", pros: ["Working journalist faculty", "Practical media training", "Affordable fees for PG", "Strong Marathi media industry connect"], cons: ["Limited English media exposure", "Infrastructure less modern than private media schools"] },
-      { id: 3, studentName: "Anand Bhosale", course: "M.Com.", year: 2022, rating: 3, title: "M.Com at TMV: affordable but not for top corporate placement", body: "TMV M.Com is cheap (₹18,000/yr) and the degree is respected for government job exams. About 40% of our batch cleared MPSC/Bank exams within 2 years. If you want a corporate finance career, SIBM or FC Pune is a better choice. But if you're aiming for government teaching (Maharashtra SET/NET) or government banking exams. TMV M.Com is cost-effective and gives you time to prepare.", pros: ["Very affordable", "Strong for government exam aspirants", "Maharashtra SET preparation integrated", "Gultekdi campus is centrally located in South Pune"], cons: ["Limited corporate placement connect", "Infrastructure not comparable to private universities"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (Sanskrit / Marathi / Hindi / English / History / Political Science / Economics / Sociology / Philosophy / Psychology)", duration: "3 Years", level: "UG", eligibility: "Class 12 any stream 45%+", selection: "CUET / TMV direct merit", fees_per_year: 12000, total_fees: 36000, seats: 480 },
@@ -4010,13 +3649,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "University Accreditation", rank: 0, grade: "A", year: "2022" },
         { agency: "Outlook India", category: "Top Arts & Humanities Universities India", rank: 38, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra Scholarship (EBC)", eligibility: "Family income < ₹8L; 60%+ in qualifying exam; Maharashtra domicile", amount: "Full tuition fee waiver (government/aided programs)", provider: "Government of Maharashtra" },
-        { name: "SC/ST/OBC Fee Concession", eligibility: "SC/ST/OBC/VJNT/SBC category students", amount: "Full/partial fee concession per GoM scholarship scheme", provider: "GoM Social Justice Department" },
-        { name: "TMV Merit Award", eligibility: "University topper in each department annually", amount: "₹5,000–₹10,000 cash award + certificate", provider: "Tilak Maharashtra Vidyapeeth" },
-        { name: "UGC-NET/SET Coaching Fee Concession", eligibility: "MA/M.Com/M.Sc. students preparing for NET/SET teaching career", amount: "Subsidised coaching at TMV study centre", provider: "TMV Academic Affairs" },
-        { name: "Distance Education Fee Concession", eligibility: "Working professionals and students from rural areas enrolling in TMV Open University programs", amount: "Additional 10–15% fee concession on already-affordable distance fees", provider: "TMV Open University" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Tilak Research Institute & Rare Manuscripts Archive", description: "TMV houses one of India's richest archives of Sanskrit manuscripts, Vedic texts, and Marathi literary works. Researchers from IITs, Oxford, and Harvard have collaborated with TMV's manuscript library. The archive includes palm-leaf manuscripts dating back to the 16th century. Open to PhD researchers with prior appointment." },
         { name: "Bharatiya Sanskriti Bhavan (Indian Culture Centre)", description: "Dedicated centre for Indian classical music, dance, and performing arts. Regular concerts, lectures, and workshops by eminent scholars. Students of M.A. Sanskrit and Marathi actively participate in cultural programs upholding Lokmanya Tilak's vision of cultural education." },
@@ -4026,12 +3659,7 @@ const rawColleges: College[] = [
         { name: "Hostel (Limited Capacity)", description: "Limited hostel facility on campus primarily for outstation female students. 150-bed girls' hostel at very affordable rates (₹45,000/yr meals inclusive). Boys are directed to PG accommodations near Gultekdi." },
         { name: "Yoga & Wellness Centre", description: "Dedicated Yoga and Indian wellness centre reflecting TMV's well-rounded education philosophy. Daily morning yoga sessions open to all students and faculty. Ayurvedic health consultation by visiting vaidya (traditional physician)." },
       ],
-      alumni: [
-        { name: "Dr. Vasant Patwardhan", designation: "Renowned Sanskrit Scholar; Sahitya Akademi Awardee", batch: "1975" },
-        { name: "Adv. Nandini Gore", designation: "Senior Advocate, Bombay High Court (LLB from TMV)", batch: "1985" },
-        { name: "Shrikant Inavdekar", designation: "Editor, Sakal Newspaper, Pune", batch: "1990" },
-        { name: "Dr. Smita Datar", designation: "Head, Sanskrit Dept, SPPU", batch: "1993" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 0,
@@ -4074,8 +3702,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Adventist Hospitals", "Schools and Colleges", "NGOs", "IT Companies", "Banks"],
     entranceExams: ["CUET", "MHT-CET"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Christian University", "110-Year Legacy", "Aundh Pune", "International Affiliation", "Well-rounded Education"],
     description: "Spicer Adventist University is one of India's oldest Christian universities, affiliated with the Seventh-day Adventist Church. Established in 1915, SAU is known for its well-rounded, values-based education and beautiful residential campus in Aundh, Pune.",
     highlights: ["One of India's oldest Christian universities, 110-year legacy", "Residential campus with a strong focus on character development", "International affiliation with Adventist education network worldwide", "Strong nursing, theology, and computer science programs", "Peaceful green campus in Aundh, Pune"],
@@ -4083,11 +3711,7 @@ const rawColleges: College[] = [
     website: "https://www.sau.edu.in",
     phone: "+91-20-27280017",
     email: "admissions@sau.edu.in",
-    reviews: [
-      { id: 1, studentName: "Grace Thomas", course: "B.Sc. Computer Science", year: 2023, rating: 4, title: "Value-based education in a beautiful, peaceful campus", body: "SAU's 100-acre campus in Aundh is one of the most beautiful in Pune. It's a completely residential campus with a strong community feel. Adventist values mean no alcohol, tobacco, and Saturday is Sabbath rest. For someone who wants a focused, values-based college environment. SAU is perfect. The CS program is practical with industry internships. My batch had 75% placement, mostly in Pune IT companies.", pros: ["100-acre green campus in Aundh. Pune's most beautiful", "Strong community and residential campus life", "International Adventist network: exchange programs available", "Good CS and Nursing programs"], cons: ["Religious environment may not suit all students", "Limited programs compared to larger universities", "Career counselling could be more aggressive"] },
-      { id: 2, studentName: "Samuel Mathew", course: "B.Th. (Theology)", year: 2022, rating: 5, title: "Best theology program in India: SAU is an Adventist gem", body: "SAU has the most full theology program in India within the Adventist tradition. Faculty include PhDs from Andrews University (USA) and Adventist International Institute. The campus chapel, morning devotion programs, and weekly Sabbath worship are integral to campus life, for a devout student, this is transformative. Graduates join Adventist hospitals, schools, and churches across South Asia.", pros: ["Accredited Adventist theology degree", "Faculty with international Adventist academic credentials", "Strong mission and community service component", "International Adventist alumni network, 150 countries"], cons: ["Theology program has very niche career scope outside Adventist institutions", "Campus is strictly Adventist, no meat/fish on campus"] },
-      { id: 3, studentName: "Priya Solomon", course: "B.Ed. / M.Ed.", year: 2023, rating: 4, title: "Teacher education at SAU: great foundation for Adventist schools", body: "SAU's Education programs (B.Ed./M.Ed.) are excellent for those planning to teach in Adventist schools or pursue school leadership. The integrated approach combines subject knowledge with pedagogical training and spiritual formation. 90% of B.Ed. graduates from SAU get placed in Adventist schools across India within 6 months. Government school applicants also do well in TET/CTET after SAU B.Ed.", pros: ["Strong B.Ed./M.Ed. teacher training", "90% placement in private schools", "Affordable fees (₹60K–80K/yr)", "Peaceful campus ideal for focused teacher education"], cons: ["Most placements are in Adventist/Christian schools", "M.Ed. program small batch (20 students)"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (English / Theology / Music / Psychology / History)", duration: "3 Years", level: "UG", eligibility: "Class 12 any stream 45%+", selection: "Direct merit / CUET", fees_per_year: 65000, total_fees: 195000, seats: 180 },
@@ -4136,13 +3760,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "University Accreditation", rank: 0, grade: "A", year: "2022" },
         { agency: "Outlook India", category: "Top Deemed Universities India", rank: 65, year: "2024" },
       ],
-      scholarships: [
-        { name: "Adventist Church Scholarship", eligibility: "Seventh-day Adventist church members and their children", amount: "25–50% tuition fee waiver", provider: "Seventh-day Adventist Church South Asia Division" },
-        { name: "SAU Merit Scholarship", eligibility: "Top 5% students by Class 12 / previous exam marks in each program", amount: "20–40% tuition waiver for first year", provider: "Spicer Adventist University" },
-        { name: "SC/ST Government Scholarship", eligibility: "SC/ST students from Maharashtra", amount: "Full tuition fee reimbursement per GoM scheme", provider: "Government of Maharashtra" },
-        { name: "Need-Based Bursary", eligibility: "Students with family income < ₹3L/yr; demonstrate financial hardship", amount: "₹15,000–₹30,000/year", provider: "SAU Welfare Fund" },
-        { name: "International Student Scholarship", eligibility: "Students from South Asian and African nations in Adventist programs", amount: "20% tuition waiver", provider: "SAU International Office" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "100-Acre Residential Green Campus (Aundh)", description: "SAU's 100-acre campus in Aundh is one of Pune's most beautiful campuses, tree-lined paths, well-maintained grounds, botanical garden, and Pashan Lake visible nearby. As a fully residential campus, virtually all students live on campus. The peaceful environment makes SAU ideal for focused study and well-rounded development." },
         { name: "Tagore Hall (Central Auditorium)", description: "1200-seat auditorium for campus-wide worship, concerts, graduation ceremonies, and cultural events. Home to SAU's acclaimed Symphony Orchestra and Choir, one of the finest in any Indian university." },
@@ -4153,12 +3771,7 @@ const rawColleges: College[] = [
         { name: "International Student Centre", description: "SAU hosts students from 30+ countries. Philippines, Rwanda, South Korea, USA, Kenya. International student centre facilitates cultural exchange, visa support, and integration. Regular international food festivals and cultural nights." },
         { name: "Hostels (Fully Residential: Boys & Girls Separate)", description: "SAU is a fully residential campus. Boys and girls hostels with strict separate wings. AC/non-AC room options. Cafeteria (strictly vegetarian on campus, no alcohol, no tobacco). Chapel accessible from hostel blocks. 24×7 security. Warden system for student welfare." },
       ],
-      alumni: [
-        { name: "Dr. Sarah Thomas", designation: "Senior Physician, Adventist Hospital, Chennai", batch: "2005" },
-        { name: "Pastor Rajan Mathew", designation: "South Asia Division Secretary, Seventh-day Adventist Church", batch: "1995" },
-        { name: "Anand George", designation: "Software Engineer, Infosys Bangalore", batch: "2018" },
-        { name: "Dr. Leena Abraham", designation: "Professor of Music, Andrews University, USA", batch: "2000" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -4201,8 +3814,8 @@ const rawColleges: College[] = [
     topRecruiters: ["RBI", "NABARD", "World Bank", "IMF", "McKinsey", "Deloitte", "IAS/IES Services", "Think Tanks"],
     entranceExams: ["CUET", "GIPE Entrance Test"],
     hostel: true,
-    rating: 4.5,
-    reviewCount: 890,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Economics Institute India", "NAAC A+", "Research Excellence", "Gopal Krishna Gokhale Legacy", "Civil Services"],
     description: "Gokhale Institute of Politics and Economics is India's premier institution for economics research and education, founded in 1930. Named after freedom fighter Gopal Krishna Gokhale, GIPE is a deemed university renowned for producing top economists, civil servants, and policy makers.",
     highlights: ["India's top institution for economics, 90+ year legacy", "NAAC A+ accredited deemed university", "Graduates include IAS officers, RBI governors, and World Bank officials", "Strong research culture with prestigious journals and publications", "Highly affordable fees for world-class economics education"],
@@ -4210,11 +3823,7 @@ const rawColleges: College[] = [
     website: "http://www.gipe.ac.in",
     phone: "+91-20-25657581",
     email: "admin@gipe.unipune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Akash Sharma", course: "M.A. Economics", year: 2023, rating: 5, title: "Best economics institute in India: GIPE is a national treasure", body: "GIPE's M.A. Economics faculty includes former RBI Deputy Governors, World Bank consultants, and NIPFP fellows. The curriculum uses advanced econometrics from Day 1, more rigorous than most IIM economics programs. The 90-year-old institute has produced IAS/IES officers, central bank economists, and academic leaders. The campus on BMCC Road is serene. Fees of ₹15,000/year for this level of education is absurd value.", pros: ["Faculty includes RBI, World Bank, NIPFP alumni, world-class", "Rigorous econometrics: better than many IIM electives", "90+ year legacy in economics research", "Produces IAS/IES officers, RBI economists, and academics in every batch"], cons: ["Very selective: limited seats (60–80 per program)", "Programs limited to economics, statistics, no engineering or law", "No engineering hostel, limited city facilities (research-first institute)"] },
-      { id: 2, studentName: "Ananya Joshi", course: "M.Sc. Statistics", year: 2022, rating: 5, title: "GIPE Statistics: gateway to ISI, RBI, and data science careers", body: "GIPE's M.Sc. Statistics program uses Econometrics, Bayesian Stats, and R/Stata from Year 1. Faculty are published researchers in Journal of Development Economics and Economic and Political Weekly. My batchmates went to ISI Kolkata for PhD, RBI Grade B, and McKinsey Analytics. CUET cutoff is tough, 95th+ percentile, but the program is worth fighting for. Stipend of ₹5,000/month available for meritorious students.", pros: ["Advanced statistical training using R, Stata, SPSS", "Pathway to ISI PhD, RBI Grade B, and data science careers", "₹5K/month merit stipend available", "Intimate research community: batch size 20 means direct professor access"], cons: ["CUET cutoff very competitive", "No private sector internship cell, students arrange own internships", "Small campus: limited sports/recreation"] },
-      { id: 3, studentName: "Rohan Kale", course: "Ph.D. Agricultural Economics", year: 2019, rating: 5, title: "GIPE PhD: best agricultural economics research in India", body: "GIPE's agricultural economics tradition is unparalleled, founded by the same circle as Gopal Krishna Gokhale who championed rural Maharashtra's development. My PhD supervisor published in the American Economic Review. UGC-JRF fellowship covered all my costs. After PhD, I joined IGIDR Mumbai and then NABARD's research division. For anyone serious about development economics, agricultural policy, or rural finance research in India, there is no better place than GIPE.", pros: ["Agricultural economics research legacy dating to 1930", "UGC-JRF fellowship fully funds PhD expenses", "Direct access to NSS, NSSO, RBI, and NABARD datasets", "Alumni at NABARD, World Bank, UN agencies, IGIDR, IES"], cons: ["PhD is a long commitment (4–6 years)", "Remote working and rural fieldwork required for agricultural economics research"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. Economics (Hons)", duration: "3 Years", level: "UG", eligibility: "Class 12 any stream with Maths, 60%+", selection: "CUET Economics + Maths merit", fees_per_year: 15000, total_fees: 45000, seats: 60 },
@@ -4259,13 +3868,7 @@ const rawColleges: College[] = [
         { agency: "Outlook India", category: "Top Economics Institutions India", rank: 5, year: "2024" },
         { agency: "India Today", category: "Best Social Science Institutions India", rank: 8, year: "2024" },
       ],
-      scholarships: [
-        { name: "GIPE Merit Stipend", eligibility: "Top 20% admitted students by entrance score in each program", amount: "₹5,000/month during the program", provider: "Gokhale Institute of Politics and Economics" },
-        { name: "UGC-JRF Fellowship (PhD Students)", eligibility: "PhD students qualifying UGC-NET with JRF rank", amount: "₹31,000/month (JRF) → ₹35,000/month (SRF) + contingency grant", provider: "University Grants Commission (UGC)" },
-        { name: "ICSSR Doctoral Fellowship", eligibility: "PhD students in social sciences; competitive selection", amount: "₹25,000/month + ₹10,000 contingency grant per year", provider: "Indian Council of Social Science Research (ICSSR)" },
-        { name: "GIPE SC/ST Fee Concession", eligibility: "SC/ST students: full fee waiver under GoM and UGC scheme", amount: "Full tuition fee waiver + ₹1,200/month maintenance allowance", provider: "Government of Maharashtra / UGC" },
-        { name: "GIPE-NABARD Research Fellowship", eligibility: "Agricultural Economics PhD students researching rural finance/agriculture", amount: "₹18,000/month + research travel grant", provider: "NABARD (National Bank for Agriculture and Rural Development)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "V.G. Kale Library, One of India's Finest Economics Libraries", description: "GIPE's library is one of the best specialised economics libraries in India, 2 lakh+ volumes spanning economics, statistics, agriculture, policy, law, and related fields. Rare collection includes first-edition Keynes, Marshall, and Indian economic planning documents from 1930s. Complete runs of Economic and Political Weekly from inception. N-LIST + JSTOR + NBER + Springer access. Repository of RBI Bulletin, NSSO/NSS data reports, and NABARD annual surveys." },
         { name: "Data Resource Centre", description: "GIPE has digitised access to NSSO (National Sample Survey Organisation), Census of India, RBI DBIE database, CMIE Prowess, and World Development Indicators. Students are trained in STATA, R, Eviews, and Python for econometric analysis. Unique: GIPE has ICRISAT longitudinal survey datasets for rural agricultural research, used by researchers globally." },
@@ -4274,14 +3877,7 @@ const rawColleges: College[] = [
         { name: "Hostel (Limited: Research-Focused)", description: "Limited hostel capacity (120 beds) primarily for outstation PG and PhD students. Simple residential facility with mess. Most students live in nearby Deccan Gymkhana PG accommodations. The BMCC Road location gives easy access to FC Road, BMCC, and Pune University campus." },
         { name: "Guest Lecture Series", description: "GIPE regularly hosts eminent economists and policy makers, former RBI Governors, Finance Ministry secretaries, World Bank senior economists, and Nobel Laureates (Prof. Amartya Sen has lectured at GIPE). The annual D.R. Gadgil Memorial Lecture is a landmark event in India's economics calendar." },
       ],
-      alumni: [
-        { name: "Dr. C. Rangarajan", designation: "Former Governor, Reserve Bank of India; Former Chairman, PMEAC", batch: "1957" },
-        { name: "Dr. V.M. Dandekar", designation: "Economist; Pioneered poverty-line methodology in India", batch: "1945" },
-        { name: "Dr. Neeraj Hatekar", designation: "Former Vice Chancellor, Mumbai University; GIPE Faculty", batch: "1985" },
-        { name: "Dr. Rajas Parchure", designation: "Former Director, GIPE; RBI Board Member", batch: "1975" },
-        { name: "Dr. Srijit Mishra", designation: "Senior Research Fellow, NABARD, Mumbai", batch: "1995" },
-        { name: "Kavita Datar", designation: "Senior Economist, World Bank, Washington D.C.", batch: "2002" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -4325,8 +3921,8 @@ const rawColleges: College[] = [
     topRecruiters: ["IITs", "TIFR", "BARC", "IISc", "MIT", "Stanford (Research)", "Google", "Microsoft Research"],
     entranceExams: ["KVPY", "JEE Advanced", "IISER Aptitude Test", "CUET"],
     hostel: true,
-    rating: 4.8,
-    reviewCount: 1650,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Institute of National Importance", "NAAC A++", "Top Science Institute", "NIRF Rank 12", "Research Excellence"],
     description: "IISER Pune is an Institute of National Importance established by the Ministry of Education in 2006. It is one of India's premier science institutions dedicated to research and education, consistently ranked in India's top 15. IISER Pune produces world-class scientists and researchers.",
     highlights: ["Institute of National Importance, one of 7 IISERs in India", "NAAC A++ and NIRF Rank 12 among research institutions", "BS-MS dual degree, unique 5-year integrated program", "Research output on par with global top institutions", "Faculty are active researchers published in Nature, Science, Cell", "Almost free education for KVPY/JEE Advanced scholars"],
@@ -4334,11 +3930,7 @@ const rawColleges: College[] = [
     website: "https://www.iiserpune.ac.in",
     phone: "+91-20-25908001",
     email: "registrar@iiserpune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Shreya Nair", course: "BS-MS Chemistry", year: 2022, rating: 5, title: "World-class science education in India", body: "IISER Pune has faculty who are globally recognised scientists publishing in Nature, Science, and Cell. The research freedom, lab access, and peer quality are simply unmatched in India outside IISc and the IITs.", pros: ["World-class research environment", "Almost free fees with KVPY fellowship", "Faculty published in top global journals", "PhD at IITs/IISc/MIT for most graduates"], cons: ["Extremely competitive admission: top 0.1% students only", "Pure research track: not for those seeking corporate jobs"] },
-      { id: 2, studentName: "Arjun Krishnan", course: "BS-MS Mathematics", year: 2023, rating: 5, title: "Better than most IITs for pure science", body: "I got JEE Advanced rank ~3000 and chose IISER over NIT Trichy and Warangal. Best decision of my life. The math faculty includes Fields Medal collaborators. Small batches mean you actually work directly with professors.", pros: ["Small batch size: direct faculty mentorship", "Interdisciplinary research possible from Year 1", "International conference funding available", "Alumni at IMSc Chennai, TIFR, Cambridge, Stanford for PhD"], cons: ["No engineering or MBA, pure sciences only", "Placement for industry roles is limited compared to IITs"] },
-      { id: 3, studentName: "Dr. Pooja Iyer", course: "Integrated PhD Biology", year: 2020, rating: 5, title: "Gateway to world-class PhD programmes", body: "IISER Pune's Integrated PhD biology programme is extraordinary. I worked on protein folding research and published in PNAS before graduating. Directly joined Harvard for postdoc. The level of science here is genuinely comparable to top global institutions.", pros: ["Research published in PNAS, Nature Comm, JACS", "Direct PhD pathway at Harvard, MIT, Max Planck", "KVPY SX scholarship covers full expenses", "Collaborative research culture across disciplines"], cons: ["Not suitable if you want an engineering career", "Pune campus is isolated from city, limited urban exposure"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "BS-MS (Biology)", duration: "5 Years", level: "Integrated UG-PG", eligibility: "10+2 PCB/PCM with 60% (General); KVPY SA/SX/SB or JEE Advanced qualified; IISER Aptitude Test or CUET", selection: "KVPY Channel / JEE Advanced Channel / IAT Channel / CUET Channel, separate merit lists", fees_per_year: 15600, total_fees: 78000, seats: 60 },
@@ -4390,14 +3982,7 @@ const rawColleges: College[] = [
         { agency: "Times Higher Education (THE)", category: "Young Universities (<50 years)", rank: null, grade: "Top 200", year: "2024" },
         { agency: "Scimago Institutions Rankings", category: "Research Output: India", rank: 8, year: "2024" },
       ],
-      scholarships: [
-        { name: "INSPIRE SHE (formerly KVPY) Scholarship", eligibility: "Students selected through INSPIRE SHE (Scholarship for Higher Education in Science), awarded based on JEE Advanced rank or board merit", amount: "₹60,000/year (₹5,000/month) stipend from DST; enhanced to ₹80,000/year for BS-MS years 3–5. Continues during PhD as INSPIRE Fellowship (₹31,000/month)", provider: "Department of Science & Technology (DST), Government of India" },
-        { name: "IISER Merit-cum-Means Scholarship", eligibility: "Admitted students with family income below ₹8 lakh/year and in top 25% of IISER merit list", amount: "Full tuition fee waiver (₹15,600/year) + ₹3,000/month stipend", provider: "IISER Pune / Ministry of Education" },
-        { name: "SC/ST Government Scholarship (Post-Matric)", eligibility: "SC/ST students enrolled in IISER Pune BS-MS or PhD programme", amount: "Full tuition + hostel fee waiver + maintenance allowance ₹1,200–₹2,250/month", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "CSIR-NET JRF Fellowship (PhD Students)", eligibility: "PhD students who qualify CSIR-NET with JRF rank", amount: "₹31,000/month (JRF, first 2 years) → ₹35,000/month (SRF); HRA additional", provider: "Council of Scientific & Industrial Research (CSIR)" },
-        { name: "GATE / JEST / NBHM Fellowship (PhD)", eligibility: "PhD students at IISER Pune qualifying GATE (engineering sciences), JEST (physics), or NBHM (mathematics)", amount: "₹25,000–₹28,000/month stipend + HRA during PhD tenure", provider: "Ministry of Education / Respective national agencies" },
-        { name: "DST-INSPIRE Faculty / Postdoc Award (Alumni)", eligibility: "IISER Pune BS-MS / PhD graduates below 32 years pursuing independent research in India", amount: "₹1.25 lakh/month + ₹7 lakh/year research grant for 5 years", provider: "Department of Science & Technology (DST)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Research Laboratories, World-Class Infrastructure", description: "IISER Pune's 100-acre Pashan campus houses 80+ active research laboratories equipped with state-of-the-art instruments. Facilities include: 600 MHz NMR spectrometer, single-crystal X-ray diffractometer, cryo-electron microscope, high-resolution mass spectrometers, ultrafast laser systems, atomic force microscopes, flow cytometers, and high-performance computing clusters. Students get direct lab access from Year 1 of BS-MS, unmatched in India at undergraduate level." },
         { name: "IISER Pune Library & Digital Resources", description: "Central library with 60,000+ books and access to 30,000+ e-journals including Nature, Science, Cell, Physical Review, JACS, PNAS, and all major science databases. Digital access through J-Gate, SciFinder, Web of Science, and ACS Publications. Specialised sections for Mathematics, Earth Sciences, and interdisciplinary research. Open 24×7 during exam periods. The library's journal access is comparable to IISc Bangalore." },
@@ -4408,14 +3993,7 @@ const rawColleges: College[] = [
         { name: "Wellness & Student Life", description: "IISER Pune has a student health centre with full-time doctors and nurse on duty 24×7. Counselling services available for academic and personal stress. Active student body, clubs for astronomy (Krittika), robotics, music, drama, literature (Literati), and environmental science. The Pashan campus is next to the Pashan Lake bird sanctuary, students enjoy exceptional natural surroundings. Regular inter-IISER cultural and academic exchanges." },
         { name: "Computation & High-Performance Computing", description: "Dedicated HPC (High Performance Computing) cluster with 500+ CPU cores and GPU nodes for computational biology, molecular dynamics simulations, quantum chemistry, climate modelling, and machine learning research. All students get HPC access from Year 3. The computing centre runs 24×7 and is used for both coursework and research projects. Students pursuing Data Science & AI have access to dedicated GPU servers for deep learning model training." },
       ],
-      alumni: [
-        { name: "Dr. Abhinav Kumar", designation: "Assistant Professor, IIT Bombay (Chemistry)", batch: "2012" },
-        { name: "Dr. Priya Bhatt", designation: "Postdoctoral Fellow, Harvard Medical School (Biology)", batch: "2015" },
-        { name: "Rohan Naik", designation: "Quant Researcher, Two Sigma Investments, New York", batch: "2016" },
-        { name: "Dr. Sneha Joshi", designation: "Staff Scientist, TIFR Mumbai (Physics)", batch: "2013" },
-        { name: "Arjun Menon", designation: "PhD Student, MIT (Mathematics)", batch: "2018" },
-        { name: "Dr. Kavita Sharma", designation: "Research Scientist, Max Planck Institute for Chemistry, Germany", batch: "2014" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 5,
@@ -4461,8 +4039,8 @@ const rawColleges: College[] = [
     topRecruiters: ["DRDO", "HAL", "BEL", "ISRO", "Indian Armed Forces", "Ordnance Factories", "Defence PSUs"],
     entranceExams: ["GATE", "DIAT Entrance Test"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 540,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Defence University", "Ministry of Defence", "Aerospace Technology", "DRDO Affiliated", "Government Institute"],
     description: "Defence Institute of Advanced Technology (DIAT) is a deemed university under the Ministry of Defence, specializing in advanced defence technology education and research. Established in 1952, DIAT trains defence scientists, engineers, and officers in modern technologies.",
     highlights: ["Only defence technology university in India", "Direct linkage with DRDO, HAL, ISRO, and Armed Forces", "Highly specialized programs in aerospace, armament, and guided weapons", "Access to classified defence research projects", "Excellent career placement in defence and aerospace sector"],
@@ -4470,11 +4048,7 @@ const rawColleges: College[] = [
     website: "https://www.diat.ac.in",
     phone: "+91-20-24304091",
     email: "registrar@diat.ac.in",
-    reviews: [
-      { id: 1, studentName: "Cdr. Rajesh Kumar", course: "M.Tech. Explosives Technology", year: 2022, rating: 4, title: "Unique defence technology: only DIAT offers this in India", body: "DIAT's Explosives Technology program is literally one-of-a-kind in India. Faculty are serving/retired DRDO scientists, my supervisor had 30+ patents in propellant chemistry. Access to classified research facilities is something no private college can offer. Admission is restricted: you need GATE + security clearance. Most students are from defence background (serving officers doing sponsored studies). Civilian PhDs are also admitted in non-classified domains.", pros: ["Programs unavailable anywhere else in India", "Faculty are DRDO/HAL/ISRO scientists with real-world defence experience", "Access to classified testing facilities for serious research", "100% placement in DRDO, HAL, BEL, Indian Armed Forces"], cons: ["Extremely restrictive admission: GATE + security clearance mandatory", "Essentially defence sector only, not for those wanting IT/corporate careers", "Campus in Girinagar is secure zone, restricted public access"] },
-      { id: 2, studentName: "Lt. Col. Anand Sharma", course: "M.Tech. Aerospace Engineering", year: 2021, rating: 5, title: "DIAT for serving officers: transformative defence technology education", body: "As a serving Indian Army officer on sponsored study, DIAT provided the best-in-class aerospace engineering education. Labs include wind tunnels, supersonic flow test rigs, and UAV design facilities that rival ISRO's academic wings. My project involved guidance system design for which I now hold an ISRO collaborative patent. DIAT's greatest strength is bridging academic theory with actual defence system design.", pros: ["Access to DRDO/HAL/ISRO labs and test facilities", "Officer-friendly study environment: batch of 30 officers creates collegial learning", "Research output classified but publishable in defence technology journals", "Direct pathway to DRDO Scientist B post for civilian PhD graduates"], cons: ["Civilian admission very competitive, mostly reserved for defence personnel", "Campus restrictions limit socialising outside the institute"] },
-      { id: 3, studentName: "Riya Joshi", course: "Ph.D. Electronic Systems", year: 2023, rating: 4, title: "DIAT civilian PhD: challenging admission, rewarding research", body: "Getting a civilian PhD at DIAT required GATE Electronics (99+ percentile), security clearance, and a strong research proposal in non-classified electronic systems. Once admitted, the research quality is extraordinary. My supervisor published in IEEE Transactions on Aerospace & Electronic Systems. DRDO Scientist recruitment for PhD holders bypasses the standard written exam, direct interview level entry. Starting salary ₹78,000/month as Scientist B.", pros: ["DRDO Scientist B direct entry after PhD (₹78K–1L/month)", "Research in modern electronic systems with classified hardware access", "DIAT PhD highly valued in HAL, ISRO, ECIL recruitment", "Only 12 students per batch, exceptional faculty attention"], cons: ["PhD takes 4–5 years minimum, long commitment", "Non-classified research domains are limited and must be negotiated upfront"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "M.Tech. Aerospace Engineering", duration: "2 Years", level: "PG", eligibility: "B.Tech/B.E. Aerospace/Mechanical/E&TC 60%+; GATE qualified; Security clearance", selection: "GATE score + DIAT entrance + security clearance", fees_per_year: 60000, total_fees: 120000, seats: 30 },
@@ -4519,12 +4093,7 @@ const rawColleges: College[] = [
         { agency: "Ministry of Defence", category: "Only Defence Technology University in India", rank: 1, year: "2024" },
         { agency: "NIRF", category: "Engineering (Defence Category)", rank: null, grade: "Not NIRF participant (restricted)", year: "2024" },
       ],
-      scholarships: [
-        { name: "DRDO Sponsored Study Fellowship", eligibility: "DRDO scientists sponsored for M.Tech/PhD at DIAT", amount: "Full fee waiver + full salary continuation during study", provider: "DRDO / Ministry of Defence" },
-        { name: "Armed Forces Sponsored Study", eligibility: "Serving Army/Navy/Air Force officers sponsored for M.Sc./M.Tech.; Service HQ recommendation required", amount: "Full fee waiver + full salary/allowances", provider: "Ministry of Defence" },
-        { name: "DIAT Merit Fellowship (Civilian)", eligibility: "Civilian PhD scholars with GATE 95th+ percentile and strong proposal", amount: "₹25,000/month fellowship during PhD", provider: "DIAT / Ministry of Education HEFA fund" },
-        { name: "UGC-JRF for PhD (Applicable disciplines)", eligibility: "DIAT PhD students qualifying UGC-NET JRF in relevant engineering science disciplines", amount: "₹31,000–₹35,000/month", provider: "UGC" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Supersonic Wind Tunnel & Aerodynamics Lab", description: "DIAT houses one of only 3 supersonic wind tunnels in Indian academic institutions. Used for aerodynamic testing of aircraft components, missile fairings, and high-speed vehicle design. M.Tech and PhD students in Aerospace Engineering get direct access under faculty supervision. Collaborative use with HAL R&D and DRDO ADA (Aeronautical Development Agency)." },
         { name: "Explosives & Propellant Research Centre", description: "Purpose-built explosives testing range and propellant synthesis lab, the most full in any Indian university setting. Safety protocols are defence-grade. Research on insensitive munitions, high-energy materials, and rocket propellants. Faculty hold 50+ patents in propellant formulation and explosive ordnance." },
@@ -4533,12 +4102,7 @@ const rawColleges: College[] = [
         { name: "UAV / Unmanned Systems Lab", description: "Modern unmanned systems lab with quadcopter development platforms, fixed-wing UAV prototyping tools, and autopilot programming environment (ArduPilot, Pixhawk). Faculty collaborate with DRDO CAIR (Centre for AI and Robotics) Bangalore on autonomous systems research." },
         { name: "Hostel (On-Campus, Residential)", description: "Residential campus with hostels for M.Tech and PhD students. Separate accommodation for serving officers. High-security campus with controlled entry. Mess facilities with government canteen standards. Sports facilities on campus. Located in Girinagar, Pune, 8 km from Pune city centre." },
       ],
-      alumni: [
-        { name: "Dr. A.P.J. Abdul Kalam (Associated)", designation: "Former President of India; Honorary Association with DIAT defense research ecosystem", batch: "1960s" },
-        { name: "Dr. Satheesh Reddy", designation: "Former Chairman, DRDO; Science Advisor to Govt of India", batch: "1985" },
-        { name: "Air Cmde. Rajan Mathur", designation: "Director, Aeronautical Quality Assurance, IAF (Retd.)", batch: "1995" },
-        { name: "Dr. Vivek Sahai", designation: "Scientist H, DRDO DRDL Hyderabad (Missile Systems)", batch: "2003" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -4581,8 +4145,8 @@ const rawColleges: College[] = [
     topRecruiters: ["L&T Construction", "Shapoorji Pallonji", "DLF", "Godrej Properties", "JLL", "CBRE", "Sobha Developers", "Prestige Group"],
     entranceExams: ["CAT", "MAT", "CMAT", "NICMAR Entrance Test"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 1100,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Construction Management", "NAAC A+", "Real Estate MBA", "Infrastructure Management", "Balewadi Pune"],
     description: "NICMAR University is India's premier institution for construction and real estate management education. Established in 1984, it is the go-to college for students seeking careers in construction project management, real estate, and infrastructure development.",
     highlights: ["India's #1 institution for Construction Management education", "NAAC A+ accredited deemed university", "90%+ placement rate in top construction and real estate companies", "Strong industry partnerships with L&T, DLF, Shapoorji Pallonji", "Unique PGDM in Construction Management, unmatched in India"],
@@ -4590,11 +4154,7 @@ const rawColleges: College[] = [
     website: "https://www.nicmar.ac.in",
     phone: "+91-20-27390820",
     email: "admissions@nicmar.ac.in",
-    reviews: [
-      { id: 1, studentName: "Saurabh Kulkarni", course: "PGDM Construction Management", year: 2023, rating: 4, title: "Best college for construction management: L&T, Shapoorji recruit here directly", body: "NICMAR is in a category of its own for construction and real estate management. L&T Construction has a dedicated NICMAR hiring program, they take 30–40 students from every batch. Shapoorji Pallonji, DLF, Godrej Properties all have long-standing recruitment relationships. Average placement was ₹9.5 LPA in my batch. The site visits to mega infrastructure projects, metro construction, expressways, SEZs, are unlike any MBA program experience.", pros: ["L&T, Shapoorji, DLF recruit directly from NICMAR, unmatched sector placement", "PGDM in Construction Management, only globally recognised program of its type in India", "Field visits to live construction sites, real learning beyond classroom", "NAAC A+ deemed university with 40-year legacy"], cons: ["High fees: ₹12–14 lakh total for PGDM", "Niche sector: if you want FMCG/IT/BFSI career, this is not the right MBA", "Limited brand recognition outside construction/real estate sector"] },
-      { id: 2, studentName: "Priya Menon", course: "M.Sc. Project Management", year: 2023, rating: 4, title: "NICMAR M.Sc. PM: affordable alternative to PGDM, same quality", body: "M.Sc. Project Management at NICMAR is a lesser-known gem. Fees are ₹6.8L total vs ₹13L for PGDM, but the faculty and industry connections are the same. Core subjects: construction planning, Primavera P6, BIM (Building Information Modelling), contracts management, FIDIC. Placement average ₹7.2 LPA. Great for engineers who want construction PM roles without paying MBA-level fees.", pros: ["Fees significantly lower than PGDM", "Same NICMAR industry network", "BIM and Primavera P6 certifications built-in", "Strong niche placement in project management roles"], cons: ["Less brand recognition than PGDM among top-tier construction companies", "Requires background in engineering or architecture"] },
-      { id: 3, studentName: "Vikram Nair", course: "PGDM Real Estate Management", year: 2022, rating: 4, title: "Real estate management at NICMAR: boom sector, right timing", body: "NICMAR's PGDM in Real Estate Management prepares you for the booming Indian real estate market. Subjects cover RERA compliance, property valuation, real estate finance, and sustainable construction. Our batch saw 88% placement. JLL, CBRE, Knight Frank, Anarock, and Mahindra Lifespace were among recruiters. Average ₹8.5 LPA. Real estate is India's 2nd largest employment sector and NICMAR remains the premier institution to get a foot in it.", pros: ["Real estate boom sector, growing rapidly in India", "RERA, property law, and valuation curriculum is current and practical", "JLL, CBRE, Knight Frank are regular recruiters", "Pune campus is near major real estate development zones (Baner, Wakad, Hinjawadi)"], cons: ["Real estate sector is cyclical, downturn can impact placements", "High fees (₹13L+) must be weighed against sector salary trajectory"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "PGDM Construction Management", duration: "2 Years", level: "PG Diploma", eligibility: "Graduation in any stream 50%+; CAT/MAT/CMAT/NICMAR test", selection: "CAT/MAT/CMAT score + GD-PI", fees_per_year: 680000, total_fees: 1360000, seats: 120 },
@@ -4640,13 +4200,7 @@ const rawColleges: College[] = [
         { agency: "India Today", category: "Best Niche Management Programs India", rank: 3, year: "2024" },
         { agency: "CRISIL", category: "Assessment of NICMAR PGDM Programs", rank: null, grade: "Gold: Highest Grade", year: "2023" },
       ],
-      scholarships: [
-        { name: "NICMAR Merit Scholarship", eligibility: "CAT 85+ percentile or top 10% of NICMAR entrance test scorers", amount: "₹1 lakh tuition fee waiver on PGDM programs", provider: "NICMAR University" },
-        { name: "Industry Scholarship (L&T Construction)", eligibility: "PGDM Construction Management students sponsored by L&T for pre-placement", amount: "₹50,000–₹1,00,000 plus guaranteed pre-placement offer", provider: "Larsen & Toubro Construction" },
-        { name: "SC/ST Fee Concession", eligibility: "SC/ST students: per UGC and Maharashtra government norms", amount: "Full tuition fee waiver for applicable categories", provider: "UGC / Government of Maharashtra" },
-        { name: "Women in Construction Scholarship", eligibility: "Female students in PGDM Construction Management", amount: "₹50,000/year tuition fee waiver", provider: "NICMAR Women in Construction Initiative" },
-        { name: "Education Loan (Bank linkage)", eligibility: "All students; NICMAR has MOU with HDFC Bank, SBI, Axis Bank for education loans", amount: "Up to ₹15 lakh at subsidised rates", provider: "HDFC Bank / SBI / Axis Bank" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "BIM (Building Information Modelling) Lab", description: "NICMAR's BIM lab is among the most advanced in any Indian management institution. Equipped with Autodesk Revit, Navisworks, BIM 360, and Primavera P6. Students complete BIM-level 2 certification during the program. NICMAR is an Autodesk Authorised Training Centre, certificates have global recognition in construction sector." },
         { name: "Construction Industry Simulation Centre", description: "NICMAR's signature facility: a full-scale construction site simulation with scheduling boards, cost control dashboards, live CCTV feeds from partner construction sites, and dispute resolution mock arbitration chambers. Site visits to live Pune projects (Pune Metro, Infosys Campus Hinjawadi, residential townships in Wakad) are part of curriculum." },
@@ -4655,13 +4209,7 @@ const rawColleges: College[] = [
         { name: "Sports & Recreation (Balewadi Campus)", description: "NICMAR Balewadi campus is 2 km from Balewadi Sports Complex (Pune's Olympic-grade sports venue). On-campus basketball court, volleyball, badminton, cricket pitch. Annual NICMAR Sports League is highly competitive. Proximity to Baner-Balewadi IT corridor means easy access for internship visits." },
         { name: "Hostel (On Campus)", description: "On-campus hostel with 500 capacity. Separate wings for boys and girls. AC optional. Mess with construction-hour friendly schedules (early site visits require 5am readiness). 24×7 security and CCTV. Many students live off-campus in Balewadi/Baner PG for more independence." },
       ],
-      alumni: [
-        { name: "Sanjay Bajaj", designation: "COO, L&T Construction (EPC Division)", batch: "1995" },
-        { name: "Priya Nair", designation: "MD, India, JLL Real Estate Consultancy", batch: "2003" },
-        { name: "Rajesh Gupta", designation: "Infrastructure Finance Director, World Bank Group, Delhi", batch: "2000" },
-        { name: "Meera Sharma", designation: "Head, Real Estate Portfolio, Godrej Properties", batch: "2008" },
-        { name: "Suresh Patel", designation: "CEO, Anarock Property Consultants (Pune Region)", batch: "2006" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -4705,8 +4253,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Bajaj Finance", "HDFC Bank"],
     entranceExams: ["MHT-CET", "CUET", "CAT", "CMAT"],
     hostel: false,
-    rating: 3.7,
-    reviewCount: 420,
+    rating: 0,
+    reviewCount: 0,
     tags: ["New Private University", "Camp Pune", "Affordable", "Multi-Disciplinary"],
     description: "P.A. Inamdar University is a newly established private university in Pune's Camp area. It offers multi-disciplinary programs in engineering, management, law, and arts at affordable fees, making it an accessible choice for students seeking university-level education in Pune.",
     highlights: ["Multi-disciplinary university in central Pune", "Affordable fees for a private university", "Programs across engineering, law, management, and arts", "Founded by P.A. Inamdar Educational Trust: established education group", "Focus on skill development and employability"],
@@ -4714,11 +4262,7 @@ const rawColleges: College[] = [
     website: "https://www.paiuuniversity.edu.in",
     phone: "+91-20-26130090",
     email: "info@paiuuniversity.edu.in",
-    reviews: [
-      { id: 1, studentName: "Pooja Kale", course: "BBA", year: 2023, rating: 3, title: "New university: central Pune location is its biggest asset", body: "PAIU is a new private university founded on the P.A. Inamdar Trust's decades of educational experience. Being in Camp (central Pune) is a huge practical advantage. I commuted from Kondhwa. Fees are ₹1.1L/yr for BBA which is reasonable. Faculty includes visiting professors with industry backgrounds. Management is responsive: complaints get addressed. Brand is still developing but the trust backing gives it credibility.", pros: ["Central Pune location: Camp area", "Affordable fees for a private university", "P.A. Inamdar Trust backing: credible education group", "Responsive management: student-friendly"], cons: ["New university: brand still building nationally", "Limited dedicated placement cell", "Infrastructure not yet at par with established universities"] },
-      { id: 2, studentName: "Amir Khan", course: "B.Tech CSE", year: 2024, rating: 3, title: "PAIU B.Tech: practical for students who want Pune city life", body: "PAIU B.Tech CSE is decent for students who prefer living in the city vs a campus in an outskirt area. Fees ₹1.5L/yr. Faculty includes both experienced professors and industry practitioners. The university is still building its brand, my honest advice: if MHT-CET score allows, go to COEP/PICT/VIT. But if you're looking for an affordable private university degree in central Pune without moving far from home, PAIU works. TCS and Wipro came for campus placements.", pros: ["Central Pune location (Camp area)", "Affordable B.Tech fees", "Industry practitioner guest faculty", "Growing placement relationships"], cons: ["Not yet NIRF ranked", "Campus infrastructure still developing", "Alumni network very thin being new university"] },
-      { id: 3, studentName: "Fatima Inamdar", course: "LL.B. (3 Year)", year: 2023, rating: 4, title: "Law at PAIU: affordable, SPPU-equivalent experience", body: "PAIU Law School (3-Year LLB) is a decent option for Pune-based law students. MH CET Law cutoff is moderate, 60–70%ile. Fees are ₹1.2L/yr which is affordable for a private university law program (ILS charges ₹20K/yr but cutoff is 95%ile+). Faculty includes practising advocates from Pune district courts. Moot court sessions are taken seriously. For Bar Council exam, 65% pass rate in our batch first attempt.", pros: ["Affordable private university law degree", "Practising advocate faculty from Pune courts", "Central location: easy access to Pune District Court for internships", "P.A. Inamdar Trust's credibility in Pune's Muslim community educational network"], cons: ["ILS Law (NIRF #6) and SLS are significantly stronger brands for law careers", "Library legal resources need expansion"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech CSE / Data Science / AI", duration: "4 Years", level: "UG", eligibility: "Class 12 PCM 45%+; MHT-CET", selection: "MHT-CET / CUET merit + PAIU counselling", fees_per_year: 150000, total_fees: 600000, seats: 120 },
@@ -4764,12 +4308,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "University Accreditation", rank: 0, grade: "A", year: "2023" },
         { agency: "P.A. Inamdar Trust", category: "Educational institution with 50+ year legacy", rank: null, grade: "Established Trust", year: "2024" },
       ],
-      scholarships: [
-        { name: "PAIU Merit Scholarship", eligibility: "80%+ in Class 12 or strong entrance exam score (80th+ percentile)", amount: "20–50% tuition fee waiver in first year", provider: "P.A. Inamdar University" },
-        { name: "Minority Scholarship (Maharashtra Government)", eligibility: "Muslim, Christian, Buddhist, Parsi, Sikh, Jain minority students with income < ₹8L/yr", amount: "Full tuition fee reimbursement under Pre-Matric / Post-Matric scheme", provider: "Government of Maharashtra (Minority Affairs Dept.)" },
-        { name: "SC/ST Scholarship", eligibility: "SC/ST students in Maharashtra", amount: "Full tuition fee under GoM scholarship", provider: "Government of Maharashtra" },
-        { name: "Girl Child Discount", eligibility: "All female students enrolled in PAIU programs", amount: "10% additional tuition fee waiver", provider: "PAIU Gender Equity Initiative" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Academic Building (Camp, Central Pune)", description: "Modern academic building in Camp area, Pune. Well-equipped classrooms with digital projectors, Wi-Fi, and air-conditioning. Computer labs with internet access. Located near Pune district court (for Law students' easy internship access) and Camp commercial hub." },
         { name: "Library", description: "Growing library with 25,000+ volumes across disciplines. Legal library with Manupatra and SCC Online access for Law students. Business databases for MBA and BBA students. N-LIST digital access." },
@@ -4777,10 +4316,7 @@ const rawColleges: College[] = [
         { name: "Media Lab", description: "Equipped media production lab for B.A. Media Studies students: video camera kits, editing software (Adobe Premiere Pro), radio broadcast simulation, and digital journalism tools." },
         { name: "Legal Aid Clinic", description: "PAIU Law School operates a legal aid clinic providing free legal assistance to economically weaker sections of Camp/Yerawada area. Students gain real court experience through supervised legal consultations and filings." },
       ],
-      alumni: [
-        { name: "Adv. Farhan Inamdar", designation: "Practising Advocate, Pune District Court (LLB batch 2022)", batch: "2022" },
-        { name: "Rahul Shaikh", designation: "Software Developer, Wipro Technologies (B.Tech CSE 2023)", batch: "2023" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -4822,8 +4358,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Bajaj Finserv", "HDFC Bank", "TCS", "Wipro", "Accenture", "HCL"],
     entranceExams: ["CUET", "CAT", "CMAT", "MHT-CET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 560,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Private University", "Tathawade", "Management Focus", "New University Pune"],
     description: "Indira University Pune is a private university on the Mumbai-Pune highway, offering programs in management, engineering, and sciences. It is backed by the Indira Group of Institutes, one of Pune's established education groups with 25+ years of experience.",
     highlights: ["Backed by Indira Group, 25+ years in Pune education", "Strategic location on Mumbai-Pune Expressway", "Strong management and commerce programs", "Good industry internship and placement support", "Modern campus with hostel facility"],
@@ -4831,11 +4367,7 @@ const rawColleges: College[] = [
     website: "https://www.iupune.ac.in",
     phone: "+91-20-66739400",
     email: "admissions@iupune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Sachin Mane", course: "MBA Finance", year: 2023, rating: 4, title: "Good MBA backed by Indira Group's industry network", body: "Indira University MBA Finance gave me solid exposure to BFSI sector. The Indira Group has 25+ years of Pune education experience, their industry connections (HDFC, Bajaj Finserv, Axis Bank) are genuine. MAH-MBA CET cutoff is 80–88 percentile. Avg placement ₹7.2 LPA for Finance specialisation. The Tathawade campus on Mumbai-Pune highway has good connectivity. If SIBM/SCMHRD are out of reach on SNAP, Indira University MBA is a solid Plan B.", pros: ["Indira Group's 25-year industry network in Pune", "Strategic location on Mumbai-Pune highway, good for Hinjawadi IT sector internships", "BFSI and IT sector placements are strong", "Modern campus with hostel"], cons: ["New university: brand still developing nationally", "Not in top NIRF MBA rankings yet", "Limited international exposure"] },
-      { id: 2, studentName: "Prajakta Deshpande", course: "B.Tech CSE", year: 2024, rating: 4, title: "Indira University B.Tech: Hinjawadi proximity is a real advantage", body: "Indira University's Tathawade campus is literally 5 km from Hinjawadi IT Park. India's 3rd largest IT hub. This means tech company visits, guest lectures, and industrial training happen with companies you'd actually want to work at. MHT-CET cutoff is moderate, 72–80%ile for CSE. Wipro, Infosys, HCL, Capgemini all recruited from our campus. Avg ₹6.5 LPA for CSE. Not COEP level but better than many Pune engineering colleges in this fee range.", pros: ["5 km from Hinjawadi IT Park, excellent for internships", "Wipro, Infosys, HCL on-campus recruitment", "Modern labs with cloud and AI infrastructure", "Backed by Indira Group, established education brand"], cons: ["Not yet as prominent as SIT, VIT Pune, or PICT in engineering rankings", "Hostel demand exceeds capacity, some students need off-campus PG"] },
-      { id: 3, studentName: "Amol Patil", course: "BBA", year: 2023, rating: 3, title: "BBA at Indira University: affordable and practical", body: "Indira University BBA is a practical option for Pune students who want a commerce/management degree without high fees. ₹1.2L/yr is reasonable. Faculty includes Indira Group alumni with corporate backgrounds. Placement was 70% in my batch, mostly BFSI (HDFC Bank, ICICI, Bajaj Finserv) and retail (D-Mart, Amazon operations). Average ₹4.8 LPA for BBA. Location on Tathawade near the expressway is good for reaching Pune and Mumbai companies.", pros: ["Affordable BBA fees", "BFSI and retail sector placements", "Good faculty with corporate backgrounds", "Hostel available for outstation students"], cons: ["Brand recognition limited outside Pune", "BBA program still building depth compared to Symbiosis BBA/SIBM"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech CSE / Data Science / AI & ML", duration: "4 Years", level: "UG", eligibility: "Class 12 PCM 45%+; MHT-CET / JEE Main", selection: "MHT-CET / JEE Main + IU counselling / DTE CAP", fees_per_year: 160000, total_fees: 640000, seats: 180 },
@@ -4881,13 +4413,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "University Accreditation", rank: 0, grade: "A", year: "2023" },
         { agency: "Indira Group of Institutes", category: "25+ years in Pune education", rank: null, grade: "Established Private Group", year: "2024" },
       ],
-      scholarships: [
-        { name: "IU Merit Scholarship", eligibility: "85%+ in Class 12 or 85th percentile in MHT-CET / 85+ in MAH-MBA CET", amount: "25–50% tuition fee waiver in Year 1; renewable on merit", provider: "Indira University" },
-        { name: "Girl Child Scholarship", eligibility: "Female students in B.Tech programs", amount: "₹15,000 tuition fee discount annually", provider: "IU Gender Equity Initiative" },
-        { name: "AICTE Pragati Scholarship", eligibility: "Female students in AICTE-approved B.Tech programs; family income < ₹8L/yr", amount: "₹50,000/year", provider: "AICTE" },
-        { name: "SC/ST Scholarship (GoM)", eligibility: "SC/ST students; Maharashtra domicile", amount: "Full tuition fee reimbursement under GoM scheme", provider: "Government of Maharashtra" },
-        { name: "Indira Alumni Legacy Discount", eligibility: "Children of Indira Group institute alumni who studied at Indira College of Engineering, Indira Commerce College, etc.", amount: "10% tuition fee concession", provider: "Indira University Legacy Program" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Modern Engineering Labs", description: "30+ labs including AI/ML GPU cluster (NVIDIA), IoT lab, robotics lab, advanced mechanical workshop (CNC, 3D printing), civil materials testing lab, and microprocessor lab. All labs have industry-grade equipment with vendor partnerships from IBM, Microsoft, and Bosch." },
         { name: "Industry Connect Hub (Hinjawadi Proximity)", description: "Tathawade campus is 5 km from Hinjawadi IT Park, India's 3rd largest IT cluster housing Infosys, Wipro, Cognizant, TCS, IBM. Indira University's Industry Connect Hub facilitates regular company visits, guest lectures, hackathons, and internship placements directly with Hinjawadi companies, a location-based advantage unavailable to most Pune engineering colleges." },
@@ -4897,12 +4423,7 @@ const rawColleges: College[] = [
         { name: "Hostel (On Campus)", description: "800-bed campus hostel (separate boys/girls blocks). Well-maintained rooms with Wi-Fi and generator backup. Mess with multi-cuisine options. 24×7 security. Proximity to Mumbai-Pune Expressway makes weekend travel easy. Limited hostel capacity: early application advised." },
         { name: "Entrepreneurship & Innovation Cell", description: "Active E-Cell with support from Indira Group's alumni network and Hinjawadi startup ecosystem. Annual 'Synapse' startup competition. Students have launched 3 registered startups from 2023–24 batch with Indira Group seed funding support." },
       ],
-      alumni: [
-        { name: "Vivek Kadam", designation: "Senior Software Engineer, Infosys Pune (B.Tech 2021)", batch: "2021" },
-        { name: "Shreya Naik", designation: "Assistant Manager, HDFC Bank (MBA Finance 2022)", batch: "2022" },
-        { name: "Rahul Deshmukh", designation: "Data Analyst, Wipro Analytics (B.Tech Data Science 2023)", batch: "2023" },
-        { name: "Priya Kapoor", designation: "Product Manager, Persistent Systems (MBA 2022)", batch: "2022" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -4944,8 +4465,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Capgemini", "Amazon", "IBM"],
     entranceExams: ["MHT-CET", "JEE Main", "CUET", "CAT"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 780,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Private University", "AI & Robotics", "PCMC Pune", "International Curriculum", "Modern Campus"],
     description: "DY Patil International University (DYPIU) in Akurdi offers internationally benchmarked education in engineering, management, design, and liberal arts. With a focus on global curriculum and digital-first learning, DYPIU prepares students for careers in a rapidly changing world.",
     highlights: ["International curriculum benchmarked against global universities", "Strong focus on AI, Robotics, and emerging technologies", "Industry-integrated programs with live project experience", "Modern campus with state-of-the-art labs in PCMC area", "Good placement record in IT and engineering sector"],
@@ -4953,11 +4474,7 @@ const rawColleges: College[] = [
     website: "https://www.dypiu.ac.in",
     phone: "+91-20-27653100",
     email: "admissions@dypiu.ac.in",
-    reviews: [
-      { id: 1, studentName: "Nisha Jadhav", course: "B.Tech. AI & ML", year: 2023, rating: 4, title: "DYPIU AI & ML: modern labs, international curriculum in PCMC", body: "DYPIU's B.Tech AI & ML program has excellent GPU lab, NVIDIA DGX workstations, and a dedicated research project in Year 3. The international curriculum is benchmarked against Singapore's NUS and uses case studies from MIT OpenCourseWare. Fees ₹3L/yr is on the higher side but the facilities justify it. Accenture AI, Amazon, and HCL recruited from campus. Avg placement ₹7.5 LPA for AI/ML. The Akurdi campus near Pimpri Chinchwad is clean and modern.", pros: ["Excellent AI/ML and Robotics labs with NVIDIA GPU infrastructure", "International curriculum benchmarked against global universities", "Good placement in AI/ML roles. Accenture, Amazon, HCL", "PCMC location near industrial belt, good for engineering internships"], cons: ["Higher fees: ₹3L/yr vs ₹1.5–2L at comparable Pune colleges", "New private university: brand recognition still developing", "Limited alumni network at senior corporate levels"] },
-      { id: 2, studentName: "Rohit Supekar", course: "MBA (Business Analytics)", year: 2023, rating: 4, title: "DYPIU MBA Analytics: good value in PCMC", body: "DYPIU MBA Business Analytics is a practical, industry-linked program with Python, Tableau, and Power BI from Semester 1. MAH-MBA CET cutoff 80–88%ile. Fees ₹2.4L/yr for MBA is affordable. Capgemini, HCL, and Bajaj Finance were top recruiters. Avg ₹7 LPA. The professor for Financial Analytics was from JP Morgan, that's the level of industry practitioner faculty they bring. Not SIBM: but for PCMC students who want to avoid commuting to Pune city, DYPIU MBA is a strong local option.", pros: ["Industry practitioner MBA faculty", "Python, Tableau, Power BI integrated from Day 1", "PCMC location: avoid long Pune city commute for PCMC residents", "Affordable MBA Analytics fees"], cons: ["MBA brand recognition below SIU / Symbiosis group", "Limited international exchange programs", "Hostel demand exceeds supply"] },
-      { id: 3, studentName: "Aditya Bhosle", course: "B.Tech Robotics", year: 2024, rating: 4, title: "Robotics at DYPIU: unique program, real industry exposure", body: "DYPIU is one of the very few private universities in Pune offering dedicated B.Tech in Robotics (not just a specialisation within Mechanical). The lab has Boston Dynamics Spot legged robot, ROS2 programming environment, and FANUC industrial robot arms, comparable to IIT Pune Robot Lab setup. Faculty includes ex-Tata Technologies robotics engineers. Placements for Robotics: 78% placed, avg ₹6.8 LPA, mostly in automotive robotics (Bajaj Auto, Mahindra Robotics, ABB India).", pros: ["Dedicated Robotics B.Tech: rare in Pune private universities", "FANUC, ABB industrial robots in labs", "Faculty from Tata Technologies and Bajaj robotics teams", "Automotive and industrial robot company placements"], cons: ["Robotics sector niche: fewer companies recruit vs CS/IT", "₹3L/yr fees for Robotics is premium", "Program too new to have strong alumni at senior roles"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech CSE (AI & Machine Learning)", duration: "4 Years", level: "UG", eligibility: "Class 12 PCM 45%+; MHT-CET / JEE Main", selection: "MHT-CET / JEE Main merit + DYPIU counselling", fees_per_year: 295000, total_fees: 1180000, seats: 120 },
@@ -5009,13 +4526,7 @@ const rawColleges: College[] = [
         { agency: "India Today", category: "Best Private Universities India", rank: 85, year: "2024" },
         { agency: "Outlook India", category: "Best Engineering Universities Maharashtra", rank: 20, year: "2024" },
       ],
-      scholarships: [
-        { name: "DYPIU Merit Scholarship", eligibility: "90%+ in Class 12 or 90th percentile in MHT-CET / JEE Main", amount: "50–100% tuition fee waiver for Year 1; renewed on merit", provider: "DY Patil International University" },
-        { name: "Girl Child Scholarship", eligibility: "Female students in B.Tech programs", amount: "₹20,000/year fee waiver", provider: "DYPIU Gender Equity Fund" },
-        { name: "AICTE Pragati Scholarship", eligibility: "Female students in AICTE-approved B.Tech; family income < ₹8L/yr", amount: "₹50,000/year", provider: "AICTE" },
-        { name: "SC/ST Fee Reimbursement (GoM)", eligibility: "SC/ST students; Maharashtra domicile", amount: "Full tuition fee reimbursement per GoM scheme", provider: "Government of Maharashtra" },
-        { name: "International Collaboration Scholarship", eligibility: "Students selected for semester exchange at partner universities (NUS Singapore, Coventry UK)", amount: "50% of overseas programme fees", provider: "DYPIU International Affairs" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "AI & Robotics Innovation Lab", description: "DYPIU's flagship lab with NVIDIA DGX A100 GPU workstations (for deep learning model training), FANUC and ABB industrial robot arms, Boston Dynamics Spot quadruped robot, ROS2 simulation environment, and drone flight testing arena. One of the best robotics labs among private universities in Maharashtra. Microsoft Azure AI and AWS DeepRacer partnerships for cloud-based AI training." },
         { name: "International Curriculum Centre", description: "DYPIU's academic programs are benchmarked against NUS Singapore, Coventry University (UK), and RMIT Melbourne curricula. Regular visiting faculty from partner universities teach intensive 1-week block courses. Semester exchange programs available for B.Tech and MBA students at 15% subsidised fees." },
@@ -5025,12 +4536,7 @@ const rawColleges: College[] = [
         { name: "Sports & Wellness Complex", description: "On-campus cricket ground, football field, basketball courts, badminton courts, and indoor gymnasium. PCMC sports complex (Akurdi) accessible for swimming and athletics. Annual DYPIU Sports Fest. Yoga and wellness sessions twice weekly for all enrolled students." },
         { name: "Hostel", description: "On-campus hostel with 1000 capacity (800 boys, 200 girls). AC and non-AC room options. Three-meal mess system with veg/non-veg options. 24×7 security and CCTV. Generator and solar backup. Wi-Fi campus-wide." },
       ],
-      alumni: [
-        { name: "Ajay Patil", designation: "AI Engineer, Accenture AI Lab, Pune (B.Tech AI 2023)", batch: "2023" },
-        { name: "Sakshi Kadam", designation: "Robotics Engineer, ABB India Automation (B.Tech Robotics 2022)", batch: "2022" },
-        { name: "Rohan Bhosle", designation: "Data Analyst, Amazon India (B.Tech Data Science 2023)", batch: "2023" },
-        { name: "Priya Joshi", designation: "Product Manager, Bajaj Finserv EdTech (MBA 2022)", batch: "2022" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 3,
@@ -5073,8 +4579,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Bajaj Auto", "Tata Motors", "Infosys BPO", "HDFC Bank", "Marriott", "IBM", "Amazon"],
     entranceExams: ["SET", "MHT-CET", "CUET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 620,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Skills University", "Industry 4.0", "Symbiosis Group", "Hinjawadi", "Job-Ready Programs"],
     description: "Symbiosis Skills and Professional University (SSPU) is India's first skills university, offering industry-ready programs that bridge the gap between academia and employment. Located near Hinjawadi IT Park, SSPU focuses on practical, vocational, and skill-based education for direct employability.",
     highlights: ["India's first skills-focused university", "Located near Hinjawadi: Pune's largest IT park", "100% job-ready programs with guaranteed internship placements", "Symbiosis Group's legacy for quality education", "Strong ties with Bajaj Auto, Tata Motors, and IT companies"],
@@ -5082,11 +4588,7 @@ const rawColleges: College[] = [
     website: "https://www.sspu.ac.in",
     phone: "+91-20-61087500",
     email: "admissions@sspu.ac.in",
-    reviews: [
-      { id: 1, studentName: "Ganesh Shinde", course: "B.Tech. Automotive Engineering", year: 2023, rating: 4, title: "India's first skills university: job on Day 1 after graduation", body: "SSPU's model is completely different from regular universities. Every semester has industry immersion. I worked 3 days/week at Bajaj Auto's Chakan plant from Semester 3. The SET entrance score required for B.Tech is the Symbiosis Entrance Test, moderate difficulty. Fees ₹1.8L/yr but the ROI is exceptional because placement rate is 92%+ and you leave with 1.5 years of real industry experience. Not for students who want a traditional academic environment.", pros: ["Industry immersion from Semester 3 to 3 days/week at actual companies", "92%+ placement rate: Bajaj Auto, Tata Motors, Infosys BPO, Amazon", "Symbiosis Group brand backing", "Near Hinjawadi: India's 3rd largest IT park"], cons: ["Academic coursework is lighter than traditional engineering", "SET entrance exam required vs MHT-CET", "New concept: parents sometimes confused about 'skills university' model"] },
-      { id: 2, studentName: "Aisha Shaikh", course: "BBA (Banking, Financial Services & Insurance)", year: 2023, rating: 4, title: "BFSI BBA at SSPU: got HDFC Bank job in 3rd year", body: "SSPU BBA in BFSI is genuinely industry-integrated. By 3rd year I was doing live client onboarding at HDFC Bank as part of my industry semester. Fees ₹1.4L/yr for BBA is affordable for a Symbiosis group institution. 85% placement in BFSI sector. The campus at Kiwale near Hinjawadi Phase 3 is well-connected. If you want a banking career, this program is more practical than a regular BBA.", pros: ["Live industry semester at HDFC, ICICI, Axis Bank", "BBA fees ₹1.4L/yr: affordable for Symbiosis brand", "85% BFSI sector placement", "Symbiosis credibility in placement conversations"], cons: ["B.Voc. programs have lower industry recognition outside Symbiosis ecosystem", "Campus at Kiwale is a bit remote from Pune city"] },
-      { id: 3, studentName: "Mohan Deshpande", course: "B.Voc. Healthcare Technology", year: 2022, rating: 4, title: "Healthcare Technology B.Voc: niche, practical, and growing field", body: "SSPU's B.Voc in Healthcare Technology is a 3-year vocational degree designed for hospital operations, medical devices, and healthcare IT. I got placed at Philips Healthcare in Pune. The program covers medical device operations, hospital information systems, and healthcare compliance, skills hospitals genuinely need but rarely find in regular engineering graduates. Fees ₹95K/yr: very affordable. A smart choice for students interested in healthcare without doing MBBS.", pros: ["Unique healthcare technology vocational program", "Philips, Siemens Healthineers, Pune hospitals recruit", "Very affordable fees (₹95K/yr)", "Practical skills immediately applicable to hospital environment"], cons: ["B.Voc degree less understood than B.Tech in traditional industries", "Limited PG pathway compared to regular B.Sc. or B.Tech"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech. Automotive Engineering (Industry-Integrated)", duration: "4 Years", level: "UG", eligibility: "Class 12 PCM 45%+; SET (Symbiosis Entrance Test)", selection: "SET score + SSPU counselling / MHT-CET merit", fees_per_year: 185000, total_fees: 740000, seats: 120 },
@@ -5136,12 +4638,7 @@ const rawColleges: College[] = [
         { agency: "Symbiosis International University", category: "Skills University Constituent", rank: null, grade: "India's 1st Skills University", year: "2024" },
         { agency: "India Today", category: "Best Skills Universities India", rank: 2, year: "2024" },
       ],
-      scholarships: [
-        { name: "SIU Merit Scholarship", eligibility: "SET 90th+ percentile scorers admitted to SSPU", amount: "20–50% tuition fee waiver", provider: "Symbiosis International University" },
-        { name: "SC/ST Fee Concession (GoM/UGC)", eligibility: "SC/ST students in Maharashtra", amount: "Full tuition fee reimbursement per applicable scheme", provider: "Government of Maharashtra / UGC" },
-        { name: "Industry Partner Scholarship", eligibility: "Students selected by premium industry partners (Bajaj Auto, IBM, HDFC) with outstanding industry performance", amount: "₹25,000–₹50,000/year stipend from industry partner", provider: "Respective Industry Partners" },
-        { name: "Girl Child Scholarship", eligibility: "Female students in B.Tech programs", amount: "₹10,000/year additional waiver", provider: "SSPU Gender Initiative" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Industry Immersion Infrastructure", description: "SSPU's defining feature: 3-day/week industry placement from Semester 3 onwards. Students work at actual Bajaj Auto, Tata Motors, Infosys BPO, HDFC Bank, and Marriott facilities. A dedicated 'Industry Relations Office' manages 100+ company partnerships and student placements. Student gets a real job role with mentorship, not just an observation internship." },
         { name: "Automotive & Manufacturing Lab", description: "Automotive engineering lab with EV drivetrain models, engine assembly training kits, CNC simulation, Industry 4.0 sensor networks, and PLC programming environments. Direct partnership with Bajaj Auto's training academy for curriculum design. Students use actual Bajaj Pulsar/CT series components for disassembly-assembly exercises." },
@@ -5150,12 +4647,7 @@ const rawColleges: College[] = [
         { name: "Healthcare Simulation Lab", description: "B.Voc Healthcare Technology students train on ECG machines, ultrasound training simulators, hospital information system (HIS) software, and medical device calibration equipment. Partnership with Philips Healthcare for device technology curriculum design." },
         { name: "Hostel (Kiwale Campus)", description: "On-campus hostel with 600 capacity near Hinjawadi Phase 3. Separate blocks for boys and girls. 3-time meals, Wi-Fi, 24×7 security. Generator backup. Cafeteria with extended hours for students on industry immersion schedules." },
       ],
-      alumni: [
-        { name: "Rohit Marathe", designation: "Production Supervisor, Bajaj Auto Chakan (B.Tech Automotive 2021)", batch: "2021" },
-        { name: "Sneha Verma", designation: "Relationship Manager, HDFC Bank (BBA BFSI 2022)", batch: "2022" },
-        { name: "Akash Pawar", designation: "Associate, Infosys BPO Hinjawadi (B.Tech CS 2023)", batch: "2023" },
-        { name: "Priya Nair", designation: "Guest Relations Executive, Marriott Pune (BBA Hospitality 2022)", batch: "2022" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -5200,8 +4692,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Persistent", "KPIT", "Bajaj Auto"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 980,
+    rating: 0,
+    reviewCount: 0,
     tags: ["MIT Group", "Autonomous College", "Alandi Pune", "Good Placements", "NAAC A"],
     description: "MIT Academy of Engineering (MITAOE) is an autonomous engineering college in Alandi, Pune, part of the reputed MIT Group of Institutions. It offers B.Tech programs across core and emerging engineering disciplines with strong industry connections.",
     highlights: ["Autonomous status: flexible curriculum and internal exams", "MIT Group's strong brand in Pune education", "Good placements in IT and core engineering sectors", "Modern labs for AI, robotics, and manufacturing", "Hostel available on campus for outstation students"],
@@ -5209,11 +4701,7 @@ const rawColleges: College[] = [
     website: "https://www.mitaoe.ac.in",
     phone: "+91-2135-225500",
     email: "info@mitaoe.ac.in",
-    reviews: [
-      { id: 1, studentName: "Rohan Patil", course: "B.Tech CSE", year: 2023, rating: 4, title: "Good autonomous engineering college", body: "MITAOE has good faculty and decent placements. The MIT brand helps in getting placed well. Being autonomous means flexible exams and updated curriculum compared to regular SPPU colleges.", pros: ["MIT brand recognition", "Autonomous curriculum flexibility", "Good IT placements", "Hostel on campus"], cons: ["Alandi Road traffic on weekends", "30 km from Pune city centre", "Core engineering placements average"] },
-      { id: 2, studentName: "Priya Deshmukh", course: "M.Tech Data Science", year: 2024, rating: 4, title: "Strong postgraduate program", body: "M.Tech at MITAOE is well-structured with research opportunities. Faculty for Data Science are industry-experienced. MIT Group's labs are well-equipped. NVIDIA GPU cluster available for ML projects.", pros: ["Good research facilities", "Industry-experienced faculty", "NVIDIA GPU lab", "MIT Group backing"], cons: ["PG batch size small", "Limited cross-campus mobility", "Stipend for TA roles low"] },
-      { id: 3, studentName: "Saurabh Kulkarni", course: "MBA", year: 2023, rating: 3, title: "MBA here is secondary to engineering", body: "MITAOE's MBA program is decent but the institute is primarily engineering-focused. Good if you want a technical MBA combining engineering background. Placements could be better for pure management roles.", pros: ["Technical MBA advantage", "Good engineering connections", "SPPU affiliation", "Reasonable fees"], cons: ["MBA not primary focus", "Limited management specializations", "B-school culture missing"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Tech Computer Engineering", duration: "4 years", level: "UG", eligibility: "10+2 PCM, MHT-CET/JEE Main", selection: "MHT-CET Merit / JEE Main", fees_per_year: 155000, total_fees: 620000, seats: 120 },
@@ -5257,12 +4745,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Autonomous Engineering College", rank: 0, grade: "A", year: "2022" },
         { agency: "MIT Group", category: "Group Rank", rank: 3, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra Scholarship", eligibility: "SC/ST/OBC/VJNT categories under DTE Maharashtra norms", amount: "Full fee waiver or up to ₹50,000/year", provider: "Government of Maharashtra" },
-        { name: "MIT Group Merit Scholarship", eligibility: "Top 5% of students by CGPA each academic year", amount: "Up to ₹30,000 fee concession per year", provider: "MIT Group of Institutions" },
-        { name: "MITAOE Sports Scholarship", eligibility: "State/National-level sports achievement", amount: "Up to ₹20,000 per year", provider: "MITAOE" },
-        { name: "EBC (Economically Backward Class) Scholarship", eligibility: "Family income below ₹8L/year, non-reserved category", amount: "50% fee waiver", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "NVIDIA GPU Computing Lab", description: "NVIDIA DGX workstations for deep learning and AI research projects" },
         { name: "Industry 4.0 Lab", description: "PLC/SCADA systems, industrial robots, IoT sensors for automation engineering" },
@@ -5271,11 +4754,7 @@ const rawColleges: College[] = [
         { name: "Sports Complex", description: "Cricket ground, football field, basketball courts, indoor badminton" },
         { name: "Startup Incubation Cell", description: "MIT Innovation Lab: seed funding and mentoring for student startups" },
       ],
-      alumni: [
-        { name: "Aniket Bhide", designation: "Senior Software Engineer, Microsoft Hyderabad", batch: "2015" },
-        { name: "Rutuja Salve", designation: "Data Scientist, Persistent Systems", batch: "2018" },
-        { name: "Nikhil More", designation: "Product Manager, Bajaj Auto", batch: "2016" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -5318,8 +4797,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Cognizant", "Bajaj Auto", "L&T", "Bosch"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 760,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Karvenagar Pune", "40-Year Legacy", "SPPU Affiliated", "Good Placements", "NAAC A"],
     description: "MMCOE is a well-established engineering college in Karvenagar, Pune, with over 40 years of history. It offers B.E. programs across all major engineering branches under SPPU affiliation, with a strong focus on industry-academia collaboration.",
     highlights: ["40+ year legacy in Pune engineering education", "Strong alumni network across IT and manufacturing sectors", "Annual technical festival: TechFusion attracts 5,000+ students", "Industry internship programs with Pune's manufacturing belt", "Hostel facilities for outstation students"],
@@ -5327,11 +4806,7 @@ const rawColleges: College[] = [
     website: "https://www.mmcoe.edu.in",
     phone: "+91-20-25463400",
     email: "principal@mmcoe.edu.in",
-    reviews: [
-      { id: 1, studentName: "Amol Deshpande", course: "B.E. Mechanical", year: 2022, rating: 4, title: "Solid engineering college in Pune", body: "MMCOE has good infrastructure and decent placements. Mechanical is particularly strong. Bajaj Auto and L&T visit every year. Alumni network in Pune's manufacturing sector is solid.", pros: ["Strong mechanical branch", "Bajaj Auto & L&T placements", "Good sports facilities", "40-year brand"], cons: ["IT placements below MIT-WPU/PICT", "Labs need more modern equipment"] },
-      { id: 2, studentName: "Rutuja Pawar", course: "B.E. Computer Engineering", year: 2023, rating: 4, title: "Good CS placements for non-autonomous college", body: "Despite not being autonomous, MMCOE's CS branch placed 80% students above 6 LPA. The annual TechFusion fest attracts good companies for pre-placement talks. The Karvenagar location is convenient, near Kothrud and Warje.", pros: ["Convenient Karvenagar location", "Good CS placements", "TechFusion fest networking", "Reasonable fees"], cons: ["SPPU curriculum less flexible than autonomous", "Library needs digital upgrades", "Hostel facilities basic"] },
-      { id: 3, studentName: "Vishal Bobade", course: "M.E. Mechanical", year: 2023, rating: 4, title: "Strong postgraduate and research culture", body: "M.E. program at MMCOE has dedicated research labs and faculty with industry experience. Ph.D. programs active in mechanical and CS. AICTE Research Promotion Scheme grants received in 2023.", pros: ["Research-active faculty", "AICTE grants for research", "Industry project tie-ups", "Affordable PG fees"], cons: ["PG batch small", "Limited international collaboration", "Publication support can improve"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 years", level: "UG", eligibility: "10+2 PCM, MHT-CET/JEE Main", selection: "MHT-CET Merit / JEE Main", fees_per_year: 135000, total_fees: 540000, seats: 120 },
@@ -5374,11 +4849,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "Engineering College", rank: 0, grade: "A", year: "2021" },
       ],
-      scholarships: [
-        { name: "Maharashtra Government Fee Concession", eligibility: "SC/ST/OBC/VJNT categories: DTE norms", amount: "Full fee waiver to partial concession per government scheme", provider: "Government of Maharashtra" },
-        { name: "MMCOE Merit Scholarship", eligibility: "Top 10% by CGPA in each semester", amount: "₹15,000–₹25,000 fee waiver per year", provider: "Marathwada Mitra Mandal Trust" },
-        { name: "EBC Scholarship", eligibility: "Non-reserved category, family income below ₹8L/year", amount: "50% of tuition fee", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "TechFusion Innovation Centre", description: "Hub for annual technical festival and year-round hackathons, hosting 5,000+ students annually" },
         { name: "Manufacturing & CAD/CAM Lab", description: "CNC machines, 3D printers, CATIA/SolidWorks workstations for mechanical engineering" },
@@ -5387,11 +4858,7 @@ const rawColleges: College[] = [
         { name: "Sports Ground", description: "Cricket pitch, volleyball, basketball, and indoor table tennis and carom facilities" },
         { name: "Hostel", description: "Boys and girls hostels with mess, Wi-Fi, and 24-hour security near campus" },
       ],
-      alumni: [
-        { name: "Sachin Kulkarni", designation: "Deputy Manager, Bajaj Auto", batch: "2010" },
-        { name: "Preeti More", designation: "Software Engineer, Infosys Pune", batch: "2016" },
-        { name: "Kiran Shinde", designation: "Site Engineer, L&T Construction", batch: "2014" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -5434,8 +4901,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "HCL", "Tech Mahindra", "Capgemini"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.7,
-    reviewCount: 620,
+    rating: 0,
+    reviewCount: 0,
     tags: ["G.H. Raisoni Group", "Wagholi Pune", "East Pune", "IT Placements"],
     description: "G.H. Raisoni College of Engineering and Management, Pune is part of the renowned G.H. Raisoni Group with campuses across Maharashtra. Located in Wagholi: east Pune's rapidly growing area, it offers solid engineering programs with decent IT placements.",
     highlights: ["Part of G.H. Raisoni Group, 20+ institutions across India", "Located in Wagholi, close to Kharadi IT hub", "Good IT placement track record", "Regular hackathons and coding competitions", "Affordable fees with hostel available"],
@@ -5443,11 +4910,7 @@ const rawColleges: College[] = [
     website: "https://www.ghrcem.raisoni.net",
     phone: "+91-20-66812000",
     email: "info.pune@raisoni.net",
-    reviews: [
-      { id: 1, studentName: "Karan Bhosle", course: "B.E. CSE", year: 2023, rating: 3, title: "Decent college with good IT placements", body: "GHRCEM is decent for IT placements. The Raisoni group brand helps with campus recruiters.", pros: ["IT placements", "Affordable fees", "Hostel available", "Active coding clubs"], cons: ["Far from city centre", "Infrastructure is average", "Limited research facilities"] },
-      { id: 2, studentName: "Priya Jagtap", course: "B.E. Mechanical", year: 2022, rating: 4, title: "Good for Mechanical with Kharadi proximity", body: "Location near Kharadi and Wagholi IT corridor is a big plus. Mechanical labs are decent. Faculty is responsive.", pros: ["Near Kharadi IT hub", "Industry exposure", "Good mechanical labs"], cons: ["Wagholi traffic can be bad", "Bus connectivity needs improvement"] },
-      { id: 3, studentName: "Rohan Patil", course: "B.E. E&TC", year: 2024, rating: 3, title: "Average but affordable", body: "GHRCEM is an affordable option in East Pune. E&TC placements are decent but not outstanding. Raisoni brand helps nationally.", pros: ["Affordable compared to other private colleges", "Active student clubs", "Good canteen"], cons: ["E&TC placements could be better", "Campus is under-developed"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET / JEE Main", selection: "MHT-CET CAP Round / JEE Main CAP", fees_per_year: 145000, total_fees: 580000, seats: 180 },
@@ -5501,14 +4964,7 @@ const rawColleges: College[] = [
         { agency: "Times Engineering Ranking", category: "Engineering Colleges Maharashtra", rank: 58, year: "2024" },
         { agency: "India Today", category: "Top Private Engineering Colleges Pune", rank: 18, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹1.15L–₹1.45L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh, full; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "G.H. Raisoni Group Merit Scholarship", eligibility: "Students scoring 75%+ in HSC or 80+ percentile in MHT-CET", amount: "20–25% tuition fee waiver for first year, renewable on maintaining 60%+ CGPA", provider: "G.H. Raisoni Group Trust, Nagpur" },
-        { name: "Minority Scholarship", eligibility: "Muslim, Christian, Buddhist, Sikh, Jain, Zoroastrian minority students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-        { name: "Institute Free Seat Scholarship", eligibility: "Top 2 rank holders from MHT-CET (state level) admitted to GHRCEM", amount: "Full fee waiver for 4 years (B.E.)", provider: "G.H. Raisoni College of Engineering and Management, Pune" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Labs", description: "5 computer labs with 200+ workstations. Software includes MATLAB, Python, Java, Oracle, AutoCAD, and SolidWorks. 1 Gbps internet connectivity via BSNL and Jio fiber. Separate lab for Data Science and AI/ML courses with GPU-enabled workstations." },
         { name: "Mechanical & Civil Engineering Labs", description: "Well-equipped mechanical workshop with lathe machines, CNC simulation software, fluid mechanics lab, thermodynamics lab, and strength of materials testing facility. Civil lab includes concrete and soil testing equipment." },
@@ -5519,14 +4975,7 @@ const rawColleges: College[] = [
         { name: "Auditorium & Seminar Halls", description: "250-seat air-conditioned auditorium for college events, TechFest, and cultural programs. 3 seminar halls with projectors and smart boards for industry expert talks and workshops. Annual TechFest 'Raisoni Utsav' attracts participants from across Pune." },
         { name: "Transport Facility", description: "College buses covering Wagholi, Kharadi, Viman Nagar, Hadapsar, Koregaon Park, Shivajinagar, and Wakad. Annual bus pass at ₹10,000–₹16,000 depending on route. Rickshaw and auto-rickshaw connectivity from Wagholi junction." },
       ],
-      alumni: [
-        { name: "Aditya Kulkarni", designation: "Software Engineer, Infosys Pune", batch: "2015" },
-        { name: "Neha Sharma", designation: "Data Analyst, Wipro Technologies", batch: "2018" },
-        { name: "Vishal Gaikwad", designation: "Mechanical Design Engineer, Tata Motors", batch: "2016" },
-        { name: "Pooja Bapat", designation: "Product Manager, Tech Mahindra Pune", batch: "2017" },
-        { name: "Rahul Deshmukh", designation: "Senior Developer, HCL Technologies", batch: "2019" },
-        { name: "Snehal Jadhav", designation: "Embedded Systems Engineer, Bosch Pune", batch: "2020" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -5572,8 +5021,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Infosys", "TCS", "Wipro", "HCL", "Cognizant", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.6,
-    reviewCount: 480,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Hinjawadi Pune", "Near IT Park", "Affordable", "Engineering College"],
     description: "Alard College of Engineering and Management is strategically located near Hinjawadi IT Park in Marunje, Pune. It offers engineering and management programs at affordable fees with good proximity to Pune's largest IT employment hub.",
     highlights: ["Strategic location: 2 km from Hinjawadi IT Park Phase 3", "Affordable fees suitable for all backgrounds", "Direct industry exposure through proximity to IT sector", "Active student clubs and technical events", "Hostel facility for outstation students"],
@@ -5581,11 +5030,7 @@ const rawColleges: College[] = [
     website: "https://www.alardce.ac.in",
     phone: "+91-20-22952000",
     email: "info@alardce.ac.in",
-    reviews: [
-      { id: 1, studentName: "Swapnil More", course: "B.E. IT", year: 2022, rating: 3, title: "Decent college near Hinjawadi", body: "Good location near IT park. Placements are decent for CSE and IT. Infosys and Wipro regularly visit campus.", pros: ["Near Hinjawadi IT park", "Affordable fees", "Good for IT students", "Active placement cell"], cons: ["Average infrastructure", "Limited extracurriculars", "NAAC B++ not A grade"] },
-      { id: 2, studentName: "Rohini Kulkarni", course: "B.E. Computer Engineering", year: 2023, rating: 4, title: "Location is the biggest advantage", body: "Being 2 km from Hinjawadi Phase 3 is a massive advantage. Internship opportunities are easy to find. College is average but proximity to IT park compensates.", pros: ["2 km from Hinjawadi IT Park", "Easy internships in tech companies", "Affordable hostel"], cons: ["College brand name is weak", "Faculty quality varies by department"] },
-      { id: 3, studentName: "Pratik Shinde", course: "B.E. Mechanical", year: 2021, rating: 3, title: "Average for Mechanical", body: "For Mechanical, ACEM is average. The IT location advantage doesn't help core Mechanical students much. But fees are very affordable and Pune placements are okay.", pros: ["Very affordable fees", "Hostel on campus", "Some core engineering companies visit"], cons: ["Not ideal for Mechanical", "Labs need upgrading", "Far from Pimpri-Chinchwad industrial belt"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET / JEE Main", selection: "MHT-CET CAP Round / JEE Main CAP", fees_per_year: 135000, total_fees: 540000, seats: 120 },
@@ -5635,13 +5080,7 @@ const rawColleges: College[] = [
         { agency: "Times Engineering Ranking", category: "Engineering Colleges Maharashtra", rank: 72, year: "2024" },
         { agency: "Silicon India", category: "Top Private Engineering Colleges Pune", rank: 22, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹1.0L–₹1.35L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh, full; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "Alard Institute Merit Scholarship", eligibility: "Students with 70%+ in HSC or 75+ percentile in MHT-CET joining ACEM", amount: "15–20% tuition fee waiver in first year, renewable on 60%+ CGPA", provider: "Alard Education Society, Pune" },
-        { name: "Minority Scholarship", eligibility: "Minority community students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer & IT Labs", description: "4 computer labs with 180+ workstations running Windows and Linux environments. Software includes Python, Java, Oracle, AutoCAD, and basic MATLAB. Dedicated lab for web development and software engineering courses. 1 Gbps internet via Jio Fiber. Labs are accessible during extended hours for project work." },
         { name: "Mechanical & Civil Engineering Labs", description: "Workshop with lathe, drilling, welding, and fitting machines. Fluid mechanics lab, strength of materials lab, and thermodynamics lab. Civil lab has surveying instruments and concrete mix testing equipment. Adequate for undergraduate practical curriculum under SPPU syllabus." },
@@ -5652,14 +5091,7 @@ const rawColleges: College[] = [
         { name: "Industry Interaction Cell", description: "Active placement and industry interaction cell using the college's proximity to Hinjawadi IT Park (2 km). Organises industry talks, company visits, and coding bootcamps. Tie-ups with local tech companies for internship referrals. Students benefit from walkable access to one of India's largest IT employment hubs." },
         { name: "Transport", description: "College buses from Wakad, Baner, Aundh, Pimple Saudagar, Vishrantwadi, and Kothrud. Annual bus pass ₹9,000–₹14,000 depending on route. Hinjawadi Metro station (Phase 3 extension) expected nearby, which will further improve connectivity." },
       ],
-      alumni: [
-        { name: "Akash Chavan", designation: "Software Engineer, Infosys Pune", batch: "2016" },
-        { name: "Sneha Kadam", designation: "Business Analyst, Wipro Hinjawadi", batch: "2018" },
-        { name: "Vishal Patil", designation: "Full Stack Developer, TCS Hinjawadi", batch: "2017" },
-        { name: "Neha Shinde", designation: "HR Manager, Cognizant Pune", batch: "2015" },
-        { name: "Ravi Jadhav", designation: "Mechanical Design Engineer, Tata Technologies", batch: "2019" },
-        { name: "Pooja Desai", designation: "Data Analyst, HCL Technologies", batch: "2020" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -5706,8 +5138,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Cognizant", "Tech Mahindra", "Bajaj Auto"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 540,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Hadapsar Pune", "East Pune", "NAAC A", "Engineering College"],
     description: "Jayawantrao Sawant College of Engineering (JSCOE) in Hadapsar is a NAAC A accredited engineering college offering B.E. and M.E. programs. Located in East Pune close to Magarpatta City and Hadapsar industrial area, it has good industry exposure.",
     highlights: ["NAAC A accredited institution", "Located in Hadapsar: close to Magarpatta and Kharadi IT hub", "Strong industry ties with East Pune industrial area", "Active placement cell with consistent IT sector placements", "Well-equipped computer and engineering labs"],
@@ -5715,11 +5147,7 @@ const rawColleges: College[] = [
     website: "https://www.jscoepune.ac.in",
     phone: "+91-20-26990025",
     email: "principal@jscoepune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Prashant Jagtap", course: "B.E. Computer", year: 2022, rating: 4, title: "Good engineering college in East Pune", body: "JSCOE has solid placements and decent faculty. The East Pune location near Hadapsar and Magarpatta is a definite plus. NAAC A is reassuring.", pros: ["East Pune location near Magarpatta", "Good IT placements", "NAAC A accredited", "Experienced faculty"], cons: ["No hostel on campus", "Limited extracurricular activities", "Campus size is small"] },
-      { id: 2, studentName: "Ankita More", course: "B.E. IT", year: 2023, rating: 4, title: "Solid mid-tier college with good CS placement", body: "For IT and Computer Engineering, JSCOE is a solid choice in the Hadapsar area. TCS, Infosys, Wipro visit regularly. Kharadi IT hub is very accessible for internships.", pros: ["Strong CS/IT placements", "Close to Kharadi IT hub", "Good labs", "Experienced professors"], cons: ["No hostel: must arrange PG accommodation", "Traffic near Hadapsar"] },
-      { id: 3, studentName: "Saurabh Kulkarni", course: "B.E. Mechanical", year: 2021, rating: 4, title: "Best value for Mechanical in Hadapsar area", body: "Bajaj Auto, Force Motors, and Tata Motors visit JSCOE for Mechanical. The East Pune industrial connection is real. Fees are reasonable for a NAAC A college.", pros: ["Bajaj Auto and Tata Motors recruit here", "Affordable for NAAC A", "Good Mechanical labs", "Industry visits possible nearby"], cons: ["No hostel", "Older campus buildings"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET / JEE Main", selection: "MHT-CET CAP Round / JEE Main CAP", fees_per_year: 155000, total_fees: 620000, seats: 120 },
@@ -5768,14 +5196,7 @@ const rawColleges: College[] = [
         { agency: "Times Engineering Ranking", category: "Engineering Colleges Maharashtra", rank: 48, year: "2024" },
         { agency: "Silicon India", category: "Top Engineering Colleges Pune", rank: 14, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹1.15L–₹1.55L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh, full; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "JSCOE Merit Scholarship", eligibility: "Students scoring 80%+ in HSC or 85+ percentile in MHT-CET admitted to JSCOE", amount: "20% tuition fee waiver for first year, renewable on maintaining 65%+ CGPA", provider: "Jayawantrao Sawant Institute of Management & Research Trust" },
-        { name: "Minority Scholarship", eligibility: "Minority community students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-        { name: "DTE Maharashtra Tuition Fee Waiver (TFW)", eligibility: "Students from economically weaker sections; admission through special TFW round", amount: "Full tuition fee waiver for all 4 years", provider: "DTE Maharashtra / State Government" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer & IT Labs", description: "5 well-equipped computer labs with 220+ workstations. Software suite includes Python, Java, C++, MATLAB, Oracle Database, AutoCAD, and Visual Studio. Dedicated AI/ML lab with GPU-enabled systems introduced in 2023. 1 Gbps fibre internet connectivity. Labs accessible for extended hours for project work and competitive programming practice." },
         { name: "Mechanical Engineering Labs", description: "Full mechanical labs including CNC simulation, fluid mechanics, thermodynamics, heat transfer, and metrology labs. Workshop with lathe, milling, drilling, welding, and fitting facilities. Students benefit from proximity to Bajaj Auto's service network in Hadapsar for industrial visit tie-ups." },
@@ -5786,14 +5207,7 @@ const rawColleges: College[] = [
         { name: "Placement & Industry Interaction Cell", description: "Active Placement Cell with strong East Pune industry connections. Located near Magarpatta City, Hadapsar industrial area, and 8 km from Kharadi IT hub. Top recruiters include TCS, Infosys, Wipro, Cognizant, Tech Mahindra, Bajaj Auto, Force Motors, and Tata Motors. Consistent on-campus drives each February–April." },
         { name: "Transport", description: "College buses from Hadapsar, Magarpatta, Wanowrie, Kondhwa, Bibvewadi, Katraj, Sinhgad Road, and Pune Railway Station. Annual bus pass ₹8,000–₹12,000 depending on route. Auto-rickshaws freely available from Hadapsar Junction (2 km). Students typically find PG accommodation in Hadapsar, Kondhwa, and Wanowrie nearby." },
       ],
-      alumni: [
-        { name: "Rahul Sawant", designation: "Senior Software Engineer, TCS Pune", batch: "2010" },
-        { name: "Priya Kulkarni", designation: "QA Lead, Cognizant Pune", batch: "2013" },
-        { name: "Amol Gaikwad", designation: "Mechanical Design Engineer, Bajaj Auto Pune", batch: "2011" },
-        { name: "Sneha Pawar", designation: "Project Manager, Infosys Hadapsar", batch: "2015" },
-        { name: "Vikram Jadhav", designation: "Embedded Engineer, Force Motors Pune", batch: "2016" },
-        { name: "Nisha Deshpande", designation: "Data Engineer, Wipro Pune", batch: "2018" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -5839,8 +5253,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "HCL", "Persistent Systems"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.5,
-    reviewCount: 320,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Affordable Engineering", "South Pune", "Rural Campus", "Budget Option"],
     description: "Rajgad Dnyanpeeth Technical Campus in Dhangawadi offers affordable engineering education in South Pune. It is a budget-friendly option for students seeking B.E. education with good connectivity to Pune city.",
     highlights: ["Very affordable fees: among the lowest for engineering in Pune", "Good connectivity to South Pune via Sinhgad Road", "Hostel available for rural students", "Computer and mechanical labs regularly upgraded"],
@@ -5848,11 +5262,7 @@ const rawColleges: College[] = [
     website: "https://www.rdtcpune.ac.in",
     phone: "+91-20-24390700",
     email: "info@rdtcpune.ac.in",
-    reviews: [
-      { id: 1, studentName: "Suresh Wagh", course: "B.E. Mechanical", year: 2022, rating: 3, title: "Affordable option for engineering", body: "RDTC is a solid budget option. Fees are very low compared to most Pune colleges and faculty is dedicated. Placements are average but improving.", pros: ["Very affordable fees", "Hostel on campus", "Dedicated faculty", "Peaceful campus environment"], cons: ["Limited brand recognition", "Average placements", "Far from city IT hubs"] },
-      { id: 2, studentName: "Kavita Mane", course: "B.E. Computer Engineering", year: 2023, rating: 3, title: "Good for budget-conscious students", body: "If budget is a constraint, RDTC is genuinely one of the most affordable SPPU-affiliated colleges. CS placements are decent with TCS and Wipro visiting. Don't expect PICT-level placements though.", pros: ["Among lowest fees in Pune", "TCS, Wipro visit for placements", "Calm study environment"], cons: ["Weak brand name", "Limited industry connections", "Public transport to campus is limited"] },
-      { id: 3, studentName: "Mangesh Pawar", course: "B.E. Civil", year: 2021, rating: 4, title: "Best value civil engineering college near South Pune", body: "For civil engineering, RDTC is quite good. Fees are the lowest in the region and Dhangawadi's location near Sinhgad Road means good connectivity. Government job aspirants find the quiet campus great for study.", pros: ["Lowest civil engineering fees in Pune", "Good for MPSC/government job prep", "Hostel available", "Near Sinhgad Road"], cons: ["Private sector placements weak for Civil", "Campus needs modernisation"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET", selection: "MHT-CET CAP Round", fees_per_year: 115000, total_fees: 460000, seats: 60 },
@@ -5898,14 +5308,7 @@ const rawColleges: College[] = [
         { agency: "Savitribai Phule Pune University (SPPU)", category: "University Affiliation", rank: null, grade: "Affiliated", year: "2024" },
         { agency: "Silicon India", category: "Affordable Engineering Colleges Pune", rank: 28, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹90K–₹1.15L/yr): among most impactful at RDTC's low fee structure", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh: full; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance, effectively free education", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "DTE Maharashtra TFW Scheme", eligibility: "Economically weaker section students admitted through TFW special round", amount: "Full tuition fee waiver for all 4 years of B.E.", provider: "DTE Maharashtra / State Government" },
-        { name: "Rajgad Dnyanpeeth Trust Scholarship", eligibility: "Meritorious students with 75%+ HSC marks joining RDTC", amount: "10–15% tuition fee concession, renewable on academic merit", provider: "Rajgad Dnyanpeeth Trust, Pune" },
-        { name: "Minority Scholarship", eligibility: "Minority community students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Labs", description: "3 computer labs with 120+ workstations. Software includes C, C++, Java, Python, Oracle, and AutoCAD. Internet access via broadband connection. Labs serve the SPPU curriculum for all CS/IT-related subjects. Labs are open during extended hours for practicals and mini-project work." },
         { name: "Mechanical & Civil Labs", description: "Workshop with lathe, drilling, milling, and welding machines. Fluid mechanics lab, strength of materials lab, and thermodynamics lab. Civil lab has basic survey instruments, concrete mix testing, and soil mechanics equipment. Adequately equipped for SPPU practical curriculum." },
@@ -5916,14 +5319,7 @@ const rawColleges: College[] = [
         { name: "Canteen & Campus Life", description: "On-campus canteen providing affordable meals and snacks. The campus has a calm, focused study environment. Annual college festival 'Rajgad Utsav' brings students together. Cultural and technical events organised by student committees across all branches." },
         { name: "Transport", description: "College buses from Pune city (Swargate, Katraj, Kondhwa, Bibvewadi) via Sinhgad Road. Annual bus pass ₹7,000–₹10,000 depending on route. Dhangawadi is accessible via Sinhgad Road from central Pune in approximately 30–40 minutes. Auto-rickshaws available from Dhangawadi village junction." },
       ],
-      alumni: [
-        { name: "Ganesh Shinde", designation: "Software Developer, TCS Pune", batch: "2014" },
-        { name: "Pooja Jadhav", designation: "Site Engineer, L&T Construction", batch: "2013" },
-        { name: "Rahul Bankar", designation: "Mechanical Engineer, Bajaj Electricals", batch: "2015" },
-        { name: "Sunita More", designation: "Quality Analyst, Wipro Pune", batch: "2016" },
-        { name: "Akshay Pawar", designation: "Civil Engineer, MHADA Maharashtra", batch: "2012" },
-        { name: "Priya Gaikwad", designation: "Software Engineer, HCL Technologies Pune", batch: "2018" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -5969,8 +5365,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "Local Manufacturing Companies"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.5,
-    reviewCount: 280,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Rural Engineering College", "Affordable", "Sharad Pawar Group", "Junnar Pune"],
     description: "Sharadchandra Pawar College of Engineering in Otur is a rural engineering college backed by the Sharad Pawar group. It offers affordable engineering education with hostel facilities, primarily serving students from Pune and Nashik rural regions.",
     highlights: ["Backed by Sharad Pawar's educational trust", "Affordable fees for rural and semi-urban students", "Hostel for students from Nashik, Nagar, and Pune districts", "Focuses on manufacturing and civil engineering"],
@@ -5978,11 +5374,7 @@ const rawColleges: College[] = [
     website: "https://www.spcoeotur.ac.in",
     phone: "+91-2132-243243",
     email: "principal@spcoeotur.ac.in",
-    reviews: [
-      { id: 1, studentName: "Nilesh Pawar", course: "B.E. Civil", year: 2022, rating: 3, title: "Good rural engineering option", body: "SPCOE Otur is perfect for students from Junnar, Narayangaon, and nearby rural areas. Affordable fees and hostel make it a practical choice. The Sharad Pawar brand brings some credibility.", pros: ["Very affordable fees", "On-campus hostel", "Good for rural area students", "Sharad Pawar trust backing"], cons: ["Remote location 80 km from Pune city", "Limited IT company placements", "Basic infrastructure"] },
-      { id: 2, studentName: "Vaishali Bhosale", course: "B.E. Computer Engineering", year: 2023, rating: 3, title: "Decent CS option for rural students", body: "If you're from Junnar or Narayangaon taluka, SPCOE is the most accessible and affordable engineering college. TCS and Wipro visit for campus placements. Not comparable to city colleges but good value for money.", pros: ["Closest engineering college for Junnar region", "Affordable: among lowest in SPPU", "Supportive faculty", "Good mess food in hostel"], cons: ["No IT park nearby for internships", "Internet connectivity on campus can be slow", "Limited career development resources"] },
-      { id: 3, studentName: "Sagar Nale", course: "B.E. Mechanical", year: 2021, rating: 4, title: "Best for Mechanical in North Pune rural belt", body: "For Mechanical engineering students from Pune-Nashik belt, SPCOE is a solid option. Local manufacturing and agri-equipment companies do visit. Peaceful campus is good for focused study.", pros: ["Low fees for Mechanical", "Local manufacturing companies recruit", "Peaceful study environment", "Sharad Pawar Trust scholarship helps"], cons: ["Must own a vehicle or rely on college bus", "Limited PG accommodation options near campus"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET", selection: "MHT-CET CAP Round", fees_per_year: 105000, total_fees: 420000, seats: 60 },
@@ -6029,14 +5421,7 @@ const rawColleges: College[] = [
         { agency: "Savitribai Phule Pune University (SPPU)", category: "University Affiliation", rank: null, grade: "Affiliated", year: "2024" },
         { agency: "Silicon India", category: "Affordable Rural Engineering Colleges Maharashtra", rank: 35, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹80K–₹1.05L/yr): very impactful at SPCOE's low fees", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh: full; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance, effectively free B.E. for SC/ST students", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "Sharadchandra Pawar Trust Merit Scholarship", eligibility: "Students scoring 70%+ in HSC from rural backgrounds admitted to SPCOE", amount: "₹10,000–₹20,000 per year tuition concession, renewable on academic merit", provider: "Sharadchandra Pawar Sahakari Shikshan Sanstha, Pune" },
-        { name: "DTE Maharashtra TFW Scheme", eligibility: "Economically weaker section students admitted through TFW special round", amount: "Full tuition fee waiver for all 4 years", provider: "DTE Maharashtra / State Government" },
-        { name: "Minority Scholarship", eligibility: "Minority community students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Labs", description: "2 computer labs with 90+ workstations. Software covers SPPU curriculum including C, C++, Java, Python, and database management. Internet available. Labs accessible during extended hours for practical work. Basic but sufficient for SPPU coursework and final-year project development." },
         { name: "Mechanical & Civil Engineering Labs", description: "Workshop with standard machining equipment including lathe, drilling, and welding. Fluid mechanics, thermodynamics, and strength of materials labs. Civil lab with survey instruments, concrete testing equipment, and soil mechanics apparatus. Adequate for SPPU practical examination requirements." },
@@ -6047,14 +5432,7 @@ const rawColleges: College[] = [
         { name: "Agricultural & Rural Industry Exposure", description: "Unique to SPCOE's rural setting: students gain exposure to agri-processing, sugar factory operations, and rural infrastructure projects in the Junnar-Narayangaon belt. Junnar is known for pomegranate and grape cultivation; local agri-processing units provide project and internship opportunities for Mechanical, Civil, and Electrical students." },
         { name: "Transport", description: "College buses from Pune city (Shivajinagar, Nigdi, Alandi junction), Nashik, and Narayangaon. The campus is 80 km from Pune via Pune-Nashik Highway NH60, about 1.5 hours by bus. Students from Junnar, Narayangaon, Otur, and Manchar can commute daily. Annual bus pass ₹8,000–₹14,000 depending on route distance." },
       ],
-      alumni: [
-        { name: "Rohan Shinde", designation: "Software Engineer, TCS Pune", batch: "2014" },
-        { name: "Sunita Pawar", designation: "Civil Engineer, MHADA Maharashtra", batch: "2013" },
-        { name: "Ganesh Bhosale", designation: "Mechanical Engineer, Kirloskar Industries", batch: "2015" },
-        { name: "Priya Waghmare", designation: "Quality Engineer, Wipro Pune", batch: "2016" },
-        { name: "Amol Gade", designation: "Electrical Engineer, MSEDCL Maharashtra", batch: "2012" },
-        { name: "Kavita Thombare", designation: "Software Developer, Infosys Pune", batch: "2018" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -6100,8 +5478,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "Cognizant", "Bajaj Auto", "Thermax"],
     entranceExams: ["MHT-CET", "JEE Main"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 640,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Sinhgad Group", "Narhe Pune", "South Pune", "NAAC A"],
     description: "Sinhgad Institute of Technology and Science (SITS) in Narhe is one of several Sinhgad Group institutions in South Pune. It offers B.E. and M.E. programs with NAAC A accreditation and has good placements in IT and core engineering.",
     highlights: ["NAAC A accredited, Sinhgad Group's quality standard", "Located in South Pune's developing Narhe-Ambegaon corridor", "Biomedical engineering, a unique offering in Pune", "Active technical clubs and inter-college events", "Good hostel facilities for outstation students"],
@@ -6109,11 +5487,7 @@ const rawColleges: College[] = [
     website: "https://www.sitspune.edu.in",
     phone: "+91-20-24691301",
     email: "info@sitspune.edu.in",
-    reviews: [
-      { id: 1, studentName: "Omkar Kulkarni", course: "B.E. Computer", year: 2023, rating: 4, title: "Good Sinhgad campus in South Pune", body: "SITS Narhe is a solid Sinhgad campus. Faculty is experienced and placements are consistent. TCS, Infosys, and Wipro are regulars on campus. The NAAC A grade is reassuring.", pros: ["NAAC A accredited", "South Pune location near Sinhgad Road corridor", "Consistent IT placements", "Biomedical Engineering: rare offering"], cons: ["Traffic congestion near Narhe junction", "Sinhgad brand is spread across many campuses", "No major research culture"] },
-      { id: 2, studentName: "Rutuja Deshmukh", course: "B.E. Biomedical Engineering", year: 2022, rating: 4, title: "Unique biomedical branch with good placement", body: "SITS is one of the very few Pune colleges offering Biomedical Engineering B.E. The faculty is specialist and the batch is small (60 seats) so individual attention is great. Placed at Siemens Healthineers.", pros: ["Rare Biomedical Engineering branch", "Small batch: individual attention", "Siemens Healthineers, Philips Medical recruit here", "Good labs"], cons: ["Biomedical placements limited to niche sector", "Not all companies visit for Biomedical"] },
-      { id: 3, studentName: "Saurabh Jadhav", course: "B.E. Mechanical", year: 2021, rating: 4, title: "Strong Mechanical with Bajaj and Thermax recruiting", body: "For Mechanical Engineering in South Pune, SITS Narhe is a top choice. Bajaj Auto and Thermax regularly visit for campus placements. South Pune's industrial proximity is a genuine advantage.", pros: ["Bajaj Auto, Thermax, Cummins recruit", "South Pune industrial belt proximity", "Good Mechanical labs", "Affordable compared to SCOE Vadgaon"], cons: ["No NIRF ranking yet", "Campus parking is an issue"] },
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 Years", level: "UG", eligibility: "HSC PCM 45% + MHT-CET / JEE Main", selection: "MHT-CET CAP Round / JEE Main CAP", fees_per_year: 158000, total_fees: 632000, seats: 120 },
@@ -6169,14 +5543,7 @@ const rawColleges: College[] = [
         { agency: "Silicon India", category: "Top Engineering Colleges South Pune", rank: 12, year: "2024" },
         { agency: "Sinhgad Group Internal", category: "Best Performing Sinhgad Campus", rank: 3, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category students with family income below ₹8 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver (₹1.15L–₹1.58L/yr)", provider: "Maharashtra Social Justice Department" },
-        { name: "OBC / SBC / VJNT Scholarship", eligibility: "OBC/SBC/VJNT category with income below ₹8 lakh/year", amount: "Full tuition fee waiver + maintenance allowance ₹3,000/year", provider: "Maharashtra Backward Class Development Corporation" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students (income up to ₹2.5 lakh, full waiver; up to ₹6 lakh, partial)", amount: "Full tuition + exam fee waiver + maintenance allowance", provider: "Ministry of Social Justice & Empowerment (GOI)" },
-        { name: "Sinhgad Group Merit Scholarship", eligibility: "Students scoring 80%+ in HSC or 85+ percentile in MHT-CET admitted to any Sinhgad campus including SITS", amount: "20–25% tuition fee waiver for first year, renewable on 65%+ CGPA", provider: "Sinhgad Technical Education Society, Pune" },
-        { name: "DTE Maharashtra TFW Scheme", eligibility: "Economically weaker section students admitted through TFW special round", amount: "Full tuition fee waiver for all 4 years of B.E.", provider: "DTE Maharashtra / State Government" },
-        { name: "Minority Scholarship", eligibility: "Minority community students with family income below ₹2 lakh/year", amount: "₹5,000–₹20,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer & IT Labs", description: "6 computer labs with 260+ workstations. Software includes Python, Java, C++, MATLAB, Oracle, AutoCAD, and Cisco Packet Tracer. Dedicated AI/ML lab with GPU-enabled workstations set up in 2023. Network security lab for cybersecurity coursework. 1 Gbps fibre internet. Labs accessible during extended hours including weekends for project work." },
         { name: "Biomedical Engineering Lab", description: "One of the best-equipped Biomedical Engineering labs among Pune's SPPU-affiliated colleges. Equipment includes ECG machines, patient simulators, ultrasound trainers, biosignal processing kits, and medical imaging analysis systems. Students regularly collaborate with nearby hospitals (Sinhgad Hospital) for clinical exposure and project validation." },
@@ -6187,14 +5554,7 @@ const rawColleges: College[] = [
         { name: "Sports Complex", description: "Full-size cricket ground, basketball, volleyball, badminton, and football courts. Indoor TT, carrom, chess, and gym facilities. SITS participates in SPPU Ashwamedh and Sinhgad Group inter-campus sports meets. Annual sports week 'Spardha' is a major student event. The South Pune campus has more space than most city-centre colleges." },
         { name: "Transport", description: "Sinhgad Group fleet of buses serving Pune city. Shivajinagar, Swargate, Katraj, Kondhwa, Bibvewadi, Wanowrie, Hadapsar, and Warje. Annual bus pass ₹9,000–₹13,000 depending on route. The campus is on Sinhgad Road, one of South Pune's main arterials: making it accessible from Pune Railway Station (~12 km) and expressway junction (~8 km)." },
       ],
-      alumni: [
-        { name: "Ankit Pawar", designation: "Software Engineer, TCS Digital Pune", batch: "2015" },
-        { name: "Shweta Kulkarni", designation: "Biomedical Engineer, Siemens Healthineers Pune", batch: "2016" },
-        { name: "Rahul Bhosale", designation: "Mechanical Design Engineer, Bajaj Auto Pune", batch: "2014" },
-        { name: "Priya Jadhav", designation: "Data Analyst, Wipro Pune", batch: "2018" },
-        { name: "Nikhil More", designation: "Embedded Engineer, Thermax Pune", batch: "2017" },
-        { name: "Snehal Deshpande", designation: "Product Engineer, Philips Healthcare Pune", batch: "2019" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -6240,8 +5600,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "HCL", "Local Companies"],
     entranceExams: ["MHT-CET"],
     hostel: true,
-    rating: 3.4,
-    reviewCount: 230,
+    rating: 0,
+    reviewCount: 0,
     tags: ["East Pune", "Affordable Engineering", "Near Kharadi", "Hostel Available"],
     description: "Keystone School of Engineering near Manjri in East Pune offers B.E. programs at affordable fees. Its location close to Kharadi and Hadapsar IT zones provides students with internship and campus placement opportunities in Pune's growing tech sector.",
     highlights: ["Affordable fees with hostel facility", "Close to Kharadi and Magarpatta IT hubs", "Improving placement record in IT sector", "Student-friendly environment"],
@@ -6249,11 +5609,7 @@ const rawColleges: College[] = [
     website: "https://www.keystoneengg.edu.in",
     phone: "+91-20-27015100",
     email: "info@keystoneengg.edu.in",
-    reviews: [
-      { id: 1, studentName: "Varun Jadhav", course: "B.E. Computer", year: 2022, rating: 3, title: "Affordable option in East Pune", body: "KSE is good for students who want a budget engineering degree near Kharadi IT hub. Faculty are approachable. Internship support from the college has improved, got an internship at a startup in Kharadi thanks to their placement cell.", pros: ["Affordable fees", "Close to Kharadi IT zone", "Hostel on campus", "Approachable faculty"], cons: ["Average brand recognition", "Labs need upgrades", "Core engineering placements weak"] },
-      { id: 2, studentName: "Shruti Nagare", course: "B.E. Electronics & TC", year: 2023, rating: 3, title: "Decent for rural Maharashtra students", body: "KSE gives students from rural backgrounds a chance to study engineering in Pune affordably with hostel. Faculty are helpful but not all industry-experienced. The B+ NAAC grade is honest, it's a developing college.", pros: ["Very affordable hostel + college", "Friendly environment", "Improving placements", "Near Magarpatta"], cons: ["NAAC B+: below A-grade colleges", "Limited electives", "Placement drive small"] },
-      { id: 3, studentName: "Yogesh Patil", course: "B.E. Mechanical", year: 2022, rating: 3, title: "Good value for money but limited scope", body: "If your MHT-CET percentile is between 55–70 and you want to stay in Pune, KSE is a practical choice. Core mechanical has some MSME company placements nearby. The campus is green and peaceful near Manjri.", pros: ["Value for money", "Peaceful campus", "MSME company placements", "Government scholarship eligible"], cons: ["Not well-known outside Pune", "IT placements few", "Infrastructure developing"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.E. Computer Engineering", duration: "4 years", level: "UG", eligibility: "10+2 PCM, MHT-CET", selection: "MHT-CET Merit", fees_per_year: 95000, total_fees: 380000, seats: 60 },
@@ -6290,11 +5646,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "Engineering College", rank: 0, grade: "B+", year: "2021" },
       ],
-      scholarships: [
-        { name: "Maharashtra Government SC/ST Scholarship", eligibility: "SC/ST category students per DTE norms", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "EBC Scholarship", eligibility: "Non-reserved, family income below ₹8L/year", amount: "50% tuition waiver", provider: "Government of Maharashtra" },
-        { name: "KSE Merit Scholarship", eligibility: "Top 5% by CGPA in the preceding year", amount: "₹10,000–₹20,000 fee concession", provider: "Keystone School of Engineering" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Lab", description: "150 workstations with internet access, programming software, and cloud tools" },
         { name: "Mechanical Workshop", description: "Conventional lathe, milling, welding, and CNC machines for manufacturing" },
@@ -6302,10 +5654,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus hostel for boys and girls with mess facility near Manjri" },
         { name: "Seminar Hall", description: "300-seat seminar hall for industry guest lectures and national-level events" },
       ],
-      alumni: [
-        { name: "Rohit Kale", designation: "Software Developer, Zensar Technologies", batch: "2019" },
-        { name: "Aishwarya Thakare", designation: "Site Engineer, Shapoorji Pallonji", batch: "2018" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -6349,8 +5698,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "ICICI Bank", "Reliance", "HUL", "P&G", "Zee Media", "Times Group", "Amazon"],
     entranceExams: ["CAT", "MAT", "CMAT", "XAT", "GMAT"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 890,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Media Management MBA", "Pashan Pune", "Good Placements", "Marketing Focus"],
     description: "International School of Business & Media (ISB&M) is a reputed management institute on Pashan-Sus Road known for its dual focus on business management and media. Its PGDM in Media Management is unique in Pune and attracts students from across India.",
     highlights: ["Only B-school in Pune offering PGDM in Media Management", "Strong placements in FMCG, banking, and media sectors", "Beautiful campus on the Pashan-Sus Road corridor", "Active industry immersion: live projects and case studies", "Strong alumni in leading media houses and MNCs"],
@@ -6358,11 +5707,7 @@ const rawColleges: College[] = [
     website: "https://www.isbm.ac.in",
     phone: "+91-20-66739300",
     email: "admissions@isbm.ac.in",
-    reviews: [
-      { id: 1, studentName: "Aditi Kulkarni", course: "PGDM Marketing", year: 2023, rating: 4, title: "Great for marketing and media management", body: "ISB&M has excellent faculty for marketing and media. Placements in FMCG are very good. My batch had 95% placements within 2 months of final semester. The Pashan-Sus campus is beautiful with greenery all around, very peaceful for case study sessions.", pros: ["Unique media MBA program", "FMCG & media placements", "Beautiful campus", "Industry live projects"], cons: ["High fees (₹9.5L total)", "Remote Nande location (35 km from Pune station)", "PGDM not equivalent to MBA for PSU jobs"] },
-      { id: 2, studentName: "Kiran Bhat", course: "PGDM Media Management", year: 2023, rating: 4, title: "Best choice for media + business combo", body: "No other Pune B-school offers this combination. ISB&M Media Management got me placed at Zee Media Mumbai. The curriculum blends advertising, PR, digital media, and business strategy. Faculty from NDTV and Ogilvy guest lectures.", pros: ["Unique Media Management specialization", "Media company placements", "Guest faculty from industry", "Strong alumni in media"], cons: ["Fees high for media job salaries", "Batch size small (40 for media)", "Limited engineering/IT recruiters"] },
-      { id: 3, studentName: "Rohan Mehta", course: "BBA", year: 2023, rating: 4, title: "Good BBA program for commerce students", body: "ISB&M's BBA is well-structured for students aiming for PGDM later. Good foundation in marketing, finance, and communication. Campus life is active with cultural fests and sports.", pros: ["PGDM pathway advantage", "Good communication skills training", "Active campus life", "Hostel available"], cons: ["BBA fees high for the category", "Limited brand outside Pune", "Fewer BBA-level recruiter visits"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "PGDM (Marketing / Finance / HR)", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, CAT/MAT/CMAT/XAT", selection: "Written Test + GD + PI", fees_per_year: 475000, total_fees: 950000, seats: 120 },
@@ -6402,12 +5747,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "B-School", rank: 0, grade: "A", year: "2022" },
         { agency: "Business India", category: "Top B-Schools Pune", rank: 8, year: "2024" },
       ],
-      scholarships: [
-        { name: "ISB&M Merit Scholarship", eligibility: "CAT 80th %ile+ or equivalent; strong academic record", amount: "Up to ₹1,50,000 fee waiver (over 2 years)", provider: "ISB&M" },
-        { name: "Women Empowerment Scholarship", eligibility: "Female applicants with strong academic background", amount: "₹50,000 fee concession", provider: "ISB&M" },
-        { name: "SC/ST Minority Scholarship", eligibility: "SC/ST category, income criteria per government norms", amount: "Partial fee waiver up to ₹75,000", provider: "Government of Maharashtra" },
-        { name: "Alumni Referral Benefit", eligibility: "Children of ISB&M alumni", amount: "₹25,000 fee concession", provider: "ISB&M" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Media Lab & Studio", description: "Professional TV studio, editing suites, and radio lab for Media Management students" },
         { name: "Bloomberg Finance Lab", description: "Bloomberg terminals for real-time financial data and trading simulations" },
@@ -6416,11 +5756,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus boys and girls hostels with attached mess and 24-hour Wi-Fi" },
         { name: "Sports Facilities", description: "Cricket, basketball, volleyball, badminton, and gymnasium on campus" },
       ],
-      alumni: [
-        { name: "Priya Sharma", designation: "Brand Manager, Hindustan Unilever", batch: "2014" },
-        { name: "Amey Kulkarni", designation: "Senior Editor, Zee Media", batch: "2012" },
-        { name: "Ritu Agarwal", designation: "VP Marketing, ICICI Prudential", batch: "2010" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -6463,8 +5799,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Amazon", "Deloitte", "KPMG", "HDFC Bank", "Axis Bank", "HUL", "ITC", "Wipro"],
     entranceExams: ["CAT", "MAT", "CMAT", "XAT"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 1100,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top MBA Pune", "100% Placement Record", "Wanowrie Pune", "Industry Focused"],
     description: "Pune Institute of Business Management (PIBM) is known for its remarkable 100% placement record and strong industry interface. Located in Wanowrie, it is one of Pune's most placement-focused B-schools with tie-ups with 1,200+ companies.",
     highlights: ["Claimed 100% placement record for 15+ consecutive years", "1,200+ company tie-ups for placements and internships", "International business immersion trips", "Industry mentorship program: each student gets a corporate mentor", "State-of-the-art Bloomberg finance lab"],
@@ -6472,11 +5808,7 @@ const rawColleges: College[] = [
     website: "https://www.pibm.in",
     phone: "+91-20-26854900",
     email: "admissions@pibm.in",
-    reviews: [
-      { id: 1, studentName: "Neha Shah", course: "PGDM Finance", year: 2023, rating: 4, title: "Best placement-focused MBA in Pune", body: "PIBM's placements are genuinely impressive. Got placed at Deloitte with 9 LPA. The institute has 1,200+ company tie-ups and their placement cell works 365 days. Bloomberg terminals in finance lab are genuinely used in curriculum, not just for show.", pros: ["Excellent placements", "Bloomberg finance lab", "Industry exposure and mentorship", "International business trips"], cons: ["High fees (₹11L total)", "Very rigorous: 6:30 AM wake-up schedule", "Wanowrie location traffic"] },
-      { id: 2, studentName: "Abhishek Roy", course: "PGDM Marketing", year: 2024, rating: 5, title: "Delivered on the 100% placement promise", body: "I was skeptical about PIBM's 100% placement claim but it turned out to be real for our batch. Every student got placed, average 7.8 LPA. Top offer was ₹28 LPA from Amazon. The corporate mentor program gave me practical guidance from an HUL brand manager throughout my 2 years.", pros: ["Genuine 100% placement", "Corporate mentor program", "Amazon, Deloitte, KPMG visit", "Business analytics specialization"], cons: ["Fees are high", "Strict attendance policy", "Limited campus area"] },
-      { id: 3, studentName: "Swati Desai", course: "PGDM HR", year: 2023, rating: 4, title: "Excellent HR program with strong FMCG placements", body: "PIBM's HR program has dedicated sessions with industry HR heads. Annual HR summit brings leaders from Infosys, KPMG, and Mahindra to campus. My HR specialization led to placement at ITC with ₹8.5 LPA: one of Pune's best HR packages.", pros: ["Strong HR faculty", "Annual HR summit", "ITC, Mahindra HR placements", "Industry-relevant curriculum"], cons: ["No university-equivalent MBA degree (PGDM only)", "Hostel fees additional ₹1.1L/year", "Research output limited"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "PGDM (Marketing / Finance / HR / Ops)", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, CAT/MAT/CMAT/XAT", selection: "Online Test + GD + PI", fees_per_year: 550000, total_fees: 1100000, seats: 180 },
@@ -6516,11 +5848,7 @@ const rawColleges: College[] = [
         { agency: "Business Standard", category: "Top MBA Pune", rank: 5, year: "2024" },
         { agency: "Times B-School", category: "Top Placement B-Schools", rank: 12, year: "2024" },
       ],
-      scholarships: [
-        { name: "PIBM Excellence Scholarship", eligibility: "CAT 80th %ile+ or equivalent, strong academics", amount: "Up to ₹2,00,000 fee waiver", provider: "PIBM" },
-        { name: "Women Leaders Scholarship", eligibility: "Female applicants with leadership achievements", amount: "₹75,000 fee concession", provider: "PIBM" },
-        { name: "Early Bird Scholarship", eligibility: "Admission confirmed within first 30 days of admissions open", amount: "₹50,000 fee concession", provider: "PIBM" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Bloomberg Finance Lab", description: "24 Bloomberg terminals with real-time market data; integrated into Finance curriculum" },
         { name: "Business Analytics Lab", description: "SAS, R, Python, Tableau, and Power BI workstations for analytics specialization" },
@@ -6529,11 +5857,7 @@ const rawColleges: College[] = [
         { name: "Library", description: "18,000+ management books, Harvard Business Publishing case library, HBR digital access" },
         { name: "Hostel", description: "On-campus hostel for 400 students (separate boys/girls) with attached mess" },
       ],
-      alumni: [
-        { name: "Anuj Mehta", designation: "Senior Manager, Amazon India", batch: "2012" },
-        { name: "Shweta Kulkarni", designation: "Deputy Manager, Deloitte Consulting", batch: "2015" },
-        { name: "Rajesh Patil", designation: "VP Sales, Bajaj Finserv", batch: "2010" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -6576,8 +5900,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "Amazon", "Reliance", "Bajaj Finance", "Infosys BPO", "L&T"],
     entranceExams: ["CAT", "MAT", "CMAT"],
     hostel: true,
-    rating: 3.9,
-    reviewCount: 540,
+    rating: 0,
+    reviewCount: 0,
     tags: ["MBA Pune", "Leadership Focus", "East Pune", "Wagholi"],
     description: "Lexicon MILE (Management Institute of Leadership and Excellence) offers PGDM programs with a focus on leadership development, entrepreneurship, and professional excellence. Located in Wagholi, it is close to Pune's eastern IT corridor.",
     highlights: ["Leadership and entrepreneurship-focused curriculum", "Active startup incubator on campus", "Close to Kharadi and Hadapsar IT hubs", "Strong soft skills and personality development programs", "Good placements in banking and retail sectors"],
@@ -6585,11 +5909,7 @@ const rawColleges: College[] = [
     website: "https://www.lexiconmile.in",
     phone: "+91-20-67905200",
     email: "info@lexiconmile.in",
-    reviews: [
-      { id: 1, studentName: "Manasi Joshi", course: "PGDM Marketing", year: 2023, rating: 4, title: "Good MBA with leadership focus", body: "Lexicon MILE builds leadership skills through real projects and simulations. My PGDM Marketing had live project with Reliance Retail, presented to actual brand managers. Placements at HDFC Bank, Bajaj Finance are consistent. Wagholi location is close to Kharadi IT hub.", pros: ["Leadership-focused curriculum", "Live brand projects", "East Pune / Kharadi access", "Active startup incubator"], cons: ["Brand recognition below SIBM/PIBM", "Infrastructure still expanding", "High fees vs. placement returns"] },
-      { id: 2, studentName: "Sushant Bhave", course: "PGDM Finance", year: 2023, rating: 4, title: "Good choice for mid-tier MBA in Pune", body: "Lexicon MILE is NAAC A with decent placements. Not among the top 5 Pune B-schools but solid for students with 65–75th percentile CAT. Finance placements in BFSI sector are the best from this institute. KPMG and Axis Bank visited our batch.", pros: ["NAAC A accreditation", "BFSI placements good", "Reasonable fees", "Good faculty"], cons: ["No Bloomberg terminal", "Infrastructure average", "Small alumni network nationally"] },
-      { id: 3, studentName: "Rupali Shinde", course: "MBA", year: 2022, rating: 4, title: "Wagholi campus is a good base for IT internships", body: "Being in Wagholi means Kharadi and Hadapsar IT zones are 5–10 minutes away, great for internships. Lexicon MILE's entrepreneurship cell is active, helped me launch a small digital marketing consultancy during my second year.", pros: ["Close to Kharadi IT hub", "Active startup incubator", "Entrepreneurship-friendly", "Good location for internships"], cons: ["Less known than PIBM, ISB&M", "Research culture low", "No international exchange program"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "PGDM (Marketing / Finance / HR / Ops)", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, CAT/MAT/CMAT", selection: "Written Test + GD + PI", fees_per_year: 425000, total_fees: 850000, seats: 120 },
@@ -6628,11 +5948,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "B-School", rank: 0, grade: "A", year: "2022" },
       ],
-      scholarships: [
-        { name: "Lexicon Merit Scholarship", eligibility: "CAT 75th %ile+ or academic excellence", amount: "Up to ₹1,00,000 fee concession", provider: "Lexicon MILE" },
-        { name: "Women Empowerment Scholarship", eligibility: "Female students with leadership background", amount: "₹50,000 fee waiver", provider: "Lexicon MILE" },
-        { name: "Entrepreneurship Scholarship", eligibility: "Students with proven startup idea or prior entrepreneurship", amount: "₹75,000 fee concession", provider: "Lexicon MILE" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Startup Incubation Hub", description: "Active incubator with seed funding (₹1–5L) and mentoring from Pune startup ecosystem" },
         { name: "Leadership Lab", description: "Psychometric assessment tools, simulation exercises, and personality development sessions" },
@@ -6641,11 +5957,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus hostel in Wagholi for boys and girls with mess facility" },
         { name: "Sports Facilities", description: "Cricket, basketball, and indoor sports in Wagholi campus" },
       ],
-      alumni: [
-        { name: "Prashant Patil", designation: "Area Sales Manager, Reliance Retail", batch: "2016" },
-        { name: "Komal Raut", designation: "Credit Manager, HDFC Bank", batch: "2018" },
-        { name: "Amar Singh", designation: "Founder, EdgeUp Edtech", batch: "2017" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -6687,8 +5999,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HDFC Bank", "ICICI Bank", "Capgemini"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 430,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Central Pune", "Kennedy Road", "Affordable MBA", "SPPU Affiliated"],
     description: "AISSMS Institute of Management is centrally located near Pune Railway Station on Kennedy Road. It offers affordable MBA/MMS programs under SPPU with a strong focus on commerce, finance, and IT management.",
     highlights: ["Prime central location: near Pune Railway Station", "Affordable fees for a Pune B-school", "Strong ties with Pune's banking and finance sector", "Regular industry guest lectures and seminars", "Good alumni network in Pune's business community"],
@@ -6696,11 +6008,7 @@ const rawColleges: College[] = [
     website: "https://www.aissmsiom.com",
     phone: "+91-20-26050941",
     email: "principal@aissmsiom.com",
-    reviews: [
-      { id: 1, studentName: "Rahul Kale", course: "MBA Finance", year: 2023, rating: 4, title: "Affordable MBA in central Pune", body: "AISSMS IOM is great value for money at ₹2L total fees. Kennedy Road location is brilliant, 10 minutes from Pune station, accessible from anywhere in the city. Finance placements in banking sector are solid. HDFC, ICICI, Axis Bank visit every year.", pros: ["Central Kennedy Road location", "Very affordable fees (₹2L total)", "Banking & finance placements", "NAAC A accredited"], cons: ["No hostel: must arrange own accommodation", "Smaller campus (no sports/playground)", "Less known than top-tier Pune B-schools"] },
-      { id: 2, studentName: "Pallavi Bhatt", course: "MBA Marketing", year: 2023, rating: 3, title: "Best bang for buck in central Pune", body: "For ₹2L total fees (MBA), you get NAAC A accreditation and SPPU-recognized degree. Marketing placements are average (₹4–6 LPA) but central Pune location means you can attend industry events, workshops, and build network. Good choice if you're already working and doing MBA part-time.", pros: ["SPPU recognized MBA degree", "Affordable for working professionals", "Close to Pune commercial centres", "Good alumni in Pune companies"], cons: ["Average marketing placements", "No full-time MBA experience (no hostel/campus life)", "Infrastructure limited (rented building)"] },
-      { id: 3, studentName: "Suresh Jadhav", course: "MBA IT Management", year: 2022, rating: 4, title: "AISSMS IOM is ideal for working IT professionals", body: "Doing MBA in IT Management here while working at Infosys was very manageable, evening classes, weekend sessions, and central location. Faculty brings real-world IT management experience. Cost of ₹2L is unbeatable for a NAAC A college.", pros: ["Great for working professionals", "IT Management specialization", "Affordable", "NAAC A + SPPU degree"], cons: ["Full-time students get limited campus experience", "Placements for IT Management average 5 LPA", "Canteen/facilities basic"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA Finance", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, MAH-MBA CET/CAT/CMAT", selection: "MAH-MBA CET Merit + PI", fees_per_year: 190000, total_fees: 380000, seats: 60 },
@@ -6739,22 +6047,14 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "B-School", rank: 0, grade: "A", year: "2022" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra MBA Scholarship", eligibility: "SC/ST/OBC/VJNT category students per DTE norms", amount: "Partial to full fee waiver per government scheme", provider: "Government of Maharashtra" },
-        { name: "AISSMS Merit Scholarship", eligibility: "Top 5% by CGPA each year", amount: "₹10,000–₹20,000 fee concession", provider: "AISSMS Society" },
-        { name: "EBC Scholarship", eligibility: "Non-reserved category, income below ₹8L/year", amount: "50% tuition fee waiver", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Finance & IT Lab", description: "Workstations with Tally, SAP, and financial modeling tools for Finance and IT students" },
         { name: "Seminar Hall", description: "200-seat hall for guest lectures from Pune banking and IT industry professionals" },
         { name: "Library", description: "8,000+ management books, SPPU digital library access, and e-journal subscriptions" },
         { name: "Central Pune Access", description: "Kennedy Road location gives access to Pune's corporate offices, MCCIA events, and SEAP seminars within 2 km" },
       ],
-      alumni: [
-        { name: "Vinod Pawar", designation: "Branch Manager, HDFC Bank Pune", batch: "2012" },
-        { name: "Sneha Kulkarni", designation: "HR Manager, Infosys BPO", batch: "2015" },
-        { name: "Ramesh Gaikwad", designation: "Finance Controller, Bajaj Auto", batch: "2013" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -6797,8 +6097,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Wipro", "TCS", "HDFC Bank", "Axis Bank", "Bajaj Finserv", "Cognizant"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT", "MAT"],
     hostel: true,
-    rating: 3.7,
-    reviewCount: 510,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Sinhgad Group", "Affordable MBA", "South Pune", "SPPU Affiliated"],
     description: "Sinhgad Institute of Management (SIM) is part of the large Sinhgad Group of Institutes in South Pune. Offering MBA and MMS programs at affordable fees with the Sinhgad brand, it is a popular choice for students from South Pune and rural Maharashtra.",
     highlights: ["Sinhgad Group's established brand in Pune education", "Affordable MBA/MMS fees under SPPU", "Good placements in banking and IT sectors", "South Pune location with hostel facility", "Annual management fest: Sinhgad Management Summit"],
@@ -6806,11 +6106,7 @@ const rawColleges: College[] = [
     website: "https://www.sinhgad.edu",
     phone: "+91-20-24394949",
     email: "info@sinhgad.edu",
-    reviews: [
-      { id: 1, studentName: "Pooja Shinde", course: "MBA Marketing", year: 2022, rating: 3, title: "Decent affordable MBA", body: "SIM Pune is good for its price point. At ₹2L total fees, you get NAAC A and SPPU recognition. Marketing placements are average, ₹4–5 LPA mostly in Pune companies. South Pune / Sinhgad Road location is familiar if you're from the area.", pros: ["Very affordable (₹2L total)", "NAAC A + SPPU recognized", "Hostel available", "South Pune location"], cons: ["Sinhgad brand diluted across 50+ institutes", "Average placements (₹4–5 LPA)", "Research culture minimal"] },
-      { id: 2, studentName: "Amit Salunke", course: "MBA Finance", year: 2023, rating: 4, title: "Good MBA for budget-conscious Pune students", body: "SIM Pune gave me an SPPU MBA at ₹2L. For Pune students from SPPU background it is a familiar system. Placements in banking sector from this college are honest. HDFC Bank, Axis Bank, and Bajaj Finserv visit. Got placed at Bajaj Finserv with 5 LPA.", pros: ["Bajaj Finserv, HDFC placements", "Affordable fees", "Sinhgad name recognition in Pune", "Evening batch option"], cons: ["Not known nationally", "Faculty mix quality", "Infrastructure basic"] },
-      { id: 3, studentName: "Rutuja More", course: "MMS", year: 2022, rating: 3, title: "Fine option for MAH-CET MBA aspirants", body: "If your MAH-MBA CET score gets you SIM Pune, it's not a bad outcome. SPPU MMS degree is recognized. Hostel in Vadgaon is affordable at ₹55K/year. Annual management summit brings decent industry speakers from Pune.", pros: ["MAH-MBA CET eligible", "Affordable hostel", "Annual management summit", "SPPU MMS recognized"], cons: ["Less placement support than PIBM/ISB&M", "Sinhgad brand not premium", "Limited electives"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA Finance", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, MAH-MBA CET/CAT/MAT", selection: "MAH-MBA CET Merit + PI", fees_per_year: 200000, total_fees: 400000, seats: 60 },
@@ -6850,11 +6146,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "B-School", rank: 0, grade: "A", year: "2021" },
       ],
-      scholarships: [
-        { name: "Maharashtra Government MBA Scholarship", eligibility: "SC/ST/OBC/VJNT per DTE norms", amount: "Partial to full fee waiver", provider: "Government of Maharashtra" },
-        { name: "Sinhgad Group Merit Scholarship", eligibility: "Top 5% CGPA each semester", amount: "₹10,000–₹20,000 fee concession", provider: "Sinhgad Technical Education Society" },
-        { name: "EBC Scholarship", eligibility: "Non-reserved category, income below ₹8L/year", amount: "50% fee waiver", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Management Lab", description: "Computers with Tally, SAP, and business analytics tools" },
         { name: "Library", description: "10,000+ management books and SPPU e-library access" },
@@ -6862,11 +6154,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus hostel in Vadgaon with mess facility" },
         { name: "Sports Ground", description: "Cricket, badminton, and outdoor sports near the Sinhgad campus cluster" },
       ],
-      alumni: [
-        { name: "Sandesh Patil", designation: "Area Manager, Bajaj Finserv", batch: "2014" },
-        { name: "Priya Kadam", designation: "HR Business Partner, Wipro", batch: "2016" },
-        { name: "Mahesh Jadhav", designation: "Branch Manager, Axis Bank", batch: "2012" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -6909,8 +6197,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "Bajaj Finance", "Infosys", "Wipro", "Mahindra", "Forbes Marshall"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT"],
     hostel: false,
-    rating: 4.0,
-    reviewCount: 680,
+    rating: 0,
+    reviewCount: 0,
     tags: ["50-Year Legacy", "Law College Road", "NAAC A+", "Affordable MBA"],
     description: "IndSearch is one of Pune's oldest management institutes with 50+ years of history. Located on the prestigious Law College Road, it offers NAAC A+ accredited MBA programs at affordable fees with a strong focus on HR, marketing, and international business.",
     highlights: ["50+ year legacy: one of Pune's oldest B-schools", "NAAC A+ accreditation", "Prime Law College Road location", "Affordable fees with strong alumni network in Pune industry", "Active HR and marketing practice groups"],
@@ -6918,11 +6206,7 @@ const rawColleges: College[] = [
     website: "https://www.indsearch.org",
     phone: "+91-20-25671099",
     email: "info@indsearch.org",
-    reviews: [
-      { id: 1, studentName: "Snehal Patil", course: "MBA HR", year: 2023, rating: 4, title: "50-year legacy B-school on Law College Road", body: "IndSearch has a 50-year legacy and NAAC A+, rare for a college at this fee point (₹4.5L total). Law College Road location is prime Pune, close to FC Road, Deccan Gymkhana, and Pune University. HR alumni work across HDFC, Mahindra, and Forbes Marshall. The 'IndSearch HR Excellence Awards' brings top HR leaders to campus annually.", pros: ["NAAC A+ at affordable fees", "Prime Law College Road location", "50-year alumni network", "Strong HR and marketing focus"], cons: ["No hostel: private PG needed", "Small campus (urban college)", "Brand less visible than SIBM/PIBM nationally"] },
-      { id: 2, studentName: "Kiran Deshmukh", course: "MBA Marketing", year: 2023, rating: 4, title: "Excellent for Pune-based careers", body: "If you're planning to build a career in Pune, IndSearch is ideal. Law College Road connects you to FC Road, Pune University, and Deccan corporate area. Alumni in Pune companies are very helpful, got my first job through an IndSearch alumni working at Forbes Marshall.", pros: ["Strong Pune alumni network", "Active placement cell", "NAAC A+ recognition", "Good faculty with industry experience"], cons: ["Limited national brand", "No research focus", "Small batch (120 students)"] },
-      { id: 3, studentName: "Anjali Bhosale", course: "PGDM International Business", year: 2022, rating: 4, title: "Best value PGDM in central Pune", body: "IndSearch's PGDM International Business covers trade finance, export documentation, EXIM policy, and foreign exchange management, very niche curriculum. Placed at Mahindra International Division with ₹7.2 LPA. At ₹4.5L fees this is exceptional value.", pros: ["Unique International Business specialization", "EXIM/trade finance curriculum", "Affordable for PGDM", "Central Pune for networking"], cons: ["PGDM not university degree", "Small batch size limits diversity", "No global exchange program"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA Marketing", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, MAH-MBA CET/CAT/CMAT", selection: "MAH-MBA CET Merit + PI", fees_per_year: 225000, total_fees: 450000, seats: 60 },
@@ -6963,11 +6247,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "B-School", rank: 0, grade: "A+", year: "2022" },
         { agency: "Business Standard", category: "Heritage B-Schools India", rank: 18, year: "2024" },
       ],
-      scholarships: [
-        { name: "Maharashtra Government MBA Scholarship", eligibility: "SC/ST/OBC/VJNT per DTE norms", amount: "Partial to full tuition waiver", provider: "Government of Maharashtra" },
-        { name: "IndSearch Excellence Scholarship", eligibility: "Top entrance exam scorers and academic toppers", amount: "Up to ₹75,000 fee concession", provider: "IndSearch Institute" },
-        { name: "Women Management Scholarship", eligibility: "Female applicants with strong academic or leadership record", amount: "₹25,000 fee concession", provider: "IndSearch Institute" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "HR Practice Group Lab", description: "Dedicated HR lab with psychometric tools, competency mapping software, and HRMS simulations" },
         { name: "International Business Centre", description: "EXIM documentation, trade finance case library, and international business scenario room" },
@@ -6975,11 +6255,7 @@ const rawColleges: College[] = [
         { name: "Seminar Hall", description: "300-seat hall hosting annual IndSearch HR Excellence Awards and management conclave" },
         { name: "Law College Road Location", description: "Prime Pune location: FC Road, Pune University, and Deccan commercial area within 2 km" },
       ],
-      alumni: [
-        { name: "Deepak Sathe", designation: "General Manager HR, Mahindra & Mahindra", batch: "1998" },
-        { name: "Anjali Rege", designation: "VP Marketing, Forbes Marshall", batch: "2005" },
-        { name: "Suresh Deshpande", designation: "Trade Finance Head, HDFC Bank", batch: "2008" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7022,8 +6298,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Amazon", "Microsoft", "Nestlé", "Mahindra", "KPMG", "Deloitte", "Cargill", "DHL"],
     entranceExams: ["SNAP"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 760,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top International Business MBA", "Symbiosis Group", "Hinjawadi", "Global Focus", "SNAP"],
     description: "Symbiosis Institute of International Business (SIIB) is one of India's premier B-schools for international business education. Located in Hinjawadi, it offers focused MBA programs in International Business, Agribusiness, and Energy & Environment with exceptional global placements.",
     highlights: ["India's top institution for International Business MBA", "Unique Agribusiness and Energy & Environment specialisations", "Strong global placements with MNCs, Amazon, Nestlé, KPMG", "Located in Hinjawadi, Pune's largest IT park", "Strong alumni network across 40+ countries"],
@@ -7031,11 +6307,7 @@ const rawColleges: College[] = [
     website: "https://www.siib.ac.in",
     phone: "+91-20-22934200",
     email: "info@siib.ac.in",
-    reviews: [
-      { id: 1, studentName: "Aishwarya Rao", course: "MBA International Business", year: 2023, rating: 4, title: "Best for international business MBA", body: "SIIB's curriculum is globally benchmarked. Cargill, Amazon, DHL, and Nestlé came for placements. The IB specialization covers international trade law, foreign exchange, global supply chain, things no other Pune B-school teaches at this depth.", pros: ["Deep IB curriculum", "MNC placements (Amazon, Nestlé, DHL)", "Hinjawadi IT park location", "NAAC A+ Symbiosis brand"], cons: ["Only SNAP accepted: no CAT", "High fees (₹14L total)", "Batch of only 180"] },
-      { id: 2, studentName: "Rohan Kapoor", course: "MBA Agribusiness", year: 2023, rating: 4, title: "Unique MBA: Agribusiness is in high demand", body: "SIIB's MBA Agribusiness is India's best. Placed at Cargill Agri-Business with ₹18 LPA. Curriculum covers commodity markets, rural marketing, agri-finance, and supply chain. ITC, Cargill, Tata Agrico visit only here.", pros: ["Unique Agribusiness specialization", "Cargill, ITC, Tata Agrico placements", "₹18 LPA average for Agribusiness", "Case-study methodology"], cons: ["Rural/agri sector limited earning ceiling vs. consulting", "Hinjawadi campus commute from Pune city", "No lateral entry"] },
-      { id: 3, studentName: "Nidhi Sharma", course: "MBA Energy & Environment", year: 2022, rating: 4, title: "Excellent for sustainability and ESG careers", body: "SIIB Energy is unique for students aiming at ESG, renewable energy, and climate consulting. KPMG ESG, Mahindra Sustainability, and Deloitte Climate visited our batch. Growing sector: salaries are rising fast in ESG roles.", pros: ["Only Pune MBA for energy/ESG careers", "KPMG, Deloitte ESG placements", "Future-proof specialization", "Strong faculty from energy sector"], cons: ["Small batch (60 seats)", "Lower brand vs. SIBM despite similar campus", "Fewer traditional business placements"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA International Business", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, SNAP 2025", selection: "SNAP Score + GE-PIWAT", fees_per_year: 700000, total_fees: 1400000, seats: 120 },
@@ -7073,11 +6345,7 @@ const rawColleges: College[] = [
         { agency: "NIRF", category: "Management", rank: 51, year: "2024" },
         { agency: "Business Today", category: "Top MBA India: IB Focus", rank: 3, year: "2024" },
       ],
-      scholarships: [
-        { name: "SNAP Merit Scholarship", eligibility: "Top 5% SNAP scorers admitted to SIIB", amount: "Up to ₹1,50,000 fee waiver", provider: "Symbiosis International University" },
-        { name: "SIU Alumni Referral", eligibility: "Children of SIU alumni", amount: "₹50,000 fee concession", provider: "Symbiosis International University" },
-        { name: "SC/ST Fee Concession", eligibility: "SC/ST category per government norms", amount: "Partial fee waiver up to ₹1,00,000", provider: "Government of Maharashtra / SIU" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Global Trade Simulation Lab", description: "Real-time commodity pricing, forex trading simulations, and international trade documentation tools" },
         { name: "Agribusiness Research Centre", description: "SIIB's dedicated centre for agri-market analysis, commodity futures, and rural business case studies" },
@@ -7085,11 +6353,7 @@ const rawColleges: College[] = [
         { name: "Hinjawadi IT Park Campus", description: "Located in Rajiv Gandhi Infotech Park, 5 minutes from Amazon, Wipro, Infosys Hinjawadi offices" },
         { name: "Hostel", description: "On-campus hostel for SIIB students with attached mess and 24-hour security" },
       ],
-      alumni: [
-        { name: "Aamir Khan", designation: "International Trade Manager, Cargill India", batch: "2010" },
-        { name: "Priya Ranganathan", designation: "ESG Consultant, KPMG India", batch: "2015" },
-        { name: "Sameer Mehta", designation: "Supply Chain Director, Amazon India", batch: "2012" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -7131,8 +6395,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "Wipro", "TCS", "Bajaj Finance", "Mahindra", "Cognizant"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 380,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Bavdhan Pune", "West Pune", "Affordable MBA", "Industry Connected"],
     description: "RIIM (Renaissance Institute of Management) in Bavdhan, West Pune offers MBA programs with a focus on well-rounded management education. With its west Pune location close to the Mumbai-Bangalore bypass, it attracts students from Pune and surrounding districts.",
     highlights: ["West Pune location close to IT hubs of Baner and Aundh", "Strong focus on industry interface and live projects", "Affordable MBA fees with good ROI", "Active alumni network in Pune's banking and IT sector"],
@@ -7140,11 +6404,7 @@ const rawColleges: College[] = [
     website: "https://www.riim.net.in",
     phone: "+91-20-66027900",
     email: "info@riim.net.in",
-    reviews: [
-      { id: 1, studentName: "Yogesh Patil", course: "MBA Marketing", year: 2022, rating: 4, title: "Decent MBA in West Pune", body: "RIIM is a solid choice for west Pune students. Bavdhan location means easy access to Baner and Aundh IT companies for internships. Faculty brings real industry experience. Placements in banking and IT are decent for the fee point.", pros: ["West Pune location (Baner/Aundh access)", "Affordable fees (₹5.5L total)", "Industry-connected faculty", "Live projects with Pune companies"], cons: ["No hostel: must arrange own PG", "Average national brand recognition", "Small batch limits diversity"] },
-      { id: 2, studentName: "Shreya Nair", course: "MBA Finance", year: 2023, rating: 4, title: "Good value MBA with banking placements", body: "RIIM placed me at Bajaj Finance with ₹6.2 LPA. For ₹5.5L total fees, that's solid ROI. Bavdhan is close to Baner which has many startup and finance company offices. Good choice for Maharashtra students who miss PIBM/ISB&M cutoffs.", pros: ["Good ROI (₹5.5L fees, ₹6+ LPA placement)", "Bajaj Finance, HDFC Bank placements", "Bavdhan near Baner corridor", "NAAC A"], cons: ["No hostel", "Less known than PIBM/Lexicon MILE", "Marketing placements average"] },
-      { id: 3, studentName: "Amit Shinde", course: "PGDM", year: 2022, rating: 3, title: "Reasonable PGDM option in West Pune", body: "RIIM's PGDM is AICTE approved. West Pune location on the bypass is convenient. Annual management fest brings decent industry professionals. Faculty is a mix of full-time and visiting industry practitioners.", pros: ["AICTE approved PGDM", "Industry practitioner faculty", "Annual management fest", "West Pune location"], cons: ["Less campus life (no hostel)", "Brand building needed", "Alumni network smaller than legacy institutes"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA Marketing", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, MAH-MBA CET/CAT/CMAT", selection: "MAH-MBA CET Merit + GD-PI", fees_per_year: 275000, total_fees: 550000, seats: 60 },
@@ -7181,21 +6441,14 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "B-School", rank: null, grade: "A", year: "2022" },
       ],
-      scholarships: [
-        { name: "RIIM Merit Scholarship", eligibility: "CAT 70th %ile+ or MAH-MBA CET top scorers", amount: "Up to ₹50,000 fee waiver", provider: "RIIM" },
-        { name: "Maharashtra Government MBA Scholarship", eligibility: "SC/ST/OBC/VJNT per DTE norms", amount: "Partial fee waiver", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Management Lab", description: "Tally, SAP, and business analytics software workstations" },
         { name: "Library", description: "10,000+ management books, SPPU digital library, EBSCO journal access" },
         { name: "Seminar Hall", description: "200-seat hall for industry lectures and annual management conclave" },
         { name: "Bavdhan Location", description: "Off Mumbai-Bangalore bypass: 5 km from Baner and Aundh IT companies for internships" },
       ],
-      alumni: [
-        { name: "Nilesh Pawar", designation: "Relationship Manager, Bajaj Finance", batch: "2015" },
-        { name: "Rashmi Joshi", designation: "HR Business Partner, Wipro BPS", batch: "2017" },
-        { name: "Sunil More", designation: "Business Analyst, Cognizant", batch: "2016" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7237,8 +6490,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Bajaj Auto", "Thermax", "Cummins", "HDFC Bank", "Wipro", "TCS", "Infosys"],
     entranceExams: ["MAH-MBA CET", "CAT", "CMAT", "MAT"],
     hostel: false,
-    rating: 3.8,
-    reviewCount: 460,
+    rating: 0,
+    reviewCount: 0,
     tags: ["40-Year Legacy", "PCMC Area", "Affordable MBA", "ASM Group", "Chinchwad"],
     description: "ASM's IBMR is one of Pune's oldest management institutes with 40+ years of legacy. Located in Chinchwad's PCMC industrial belt, it offers excellent connections with Pune's manufacturing sector: Bajaj Auto, Thermax, Cummins and more.",
     highlights: ["40+ year legacy in management education", "Strong industry ties with PCMC manufacturing belt", "Affordable MBA/PGDM programs", "Active corporate training and executive education division", "Strong alumni in Pune's manufacturing and banking sector"],
@@ -7246,11 +6499,7 @@ const rawColleges: College[] = [
     website: "https://www.asmibmr.org",
     phone: "+91-20-27476500",
     email: "info@asmibmr.org",
-    reviews: [
-      { id: 1, studentName: "Sandeep Kulkarni", course: "MBA Operations", year: 2022, rating: 4, title: "Best for manufacturing sector MBA", body: "ASM IBMR is great if you want to work in core manufacturing companies. Bajaj Auto, Thermax, Cummins, and Kirloskar come for placements every year. The Operations MBA curriculum covers supply chain, quality management, and lean manufacturing, very practical.", pros: ["Manufacturing sector placements (Bajaj, Cummins, Thermax)", "40-year legacy", "Affordable fees (₹4.2L)", "PCMC industrial belt access"], cons: ["No hostel", "Chinchwad location (far from main Pune)", "IT/consulting placements weak"] },
-      { id: 2, studentName: "Kavita Raut", course: "MBA HR", year: 2023, rating: 4, title: "Strong HR placements in PCMC companies", body: "ASM IBMR's HR program has excellent ties with PCMC's large factories. HDFC Bank, Cummins, and Bajaj Auto HR teams visit. HR analytics and HRMS tools are taught practically. Placed at Thermax HR with ₹6 LPA.", pros: ["PCMC industrial HR placements", "Practical HRMS training", "40-year alumni network", "NAAC A at affordable fees"], cons: ["No hostel for PG students", "Less brand recognition in Mumbai", "Marketing placements lower than PIBM/Lexicon MILE"] },
-      { id: 3, studentName: "Pradeep Jadhav", course: "PGDM", year: 2022, rating: 3, title: "Solid MBA for PCMC area students", body: "If you're from Chinchwad, Akurdi, or Pimpri, ASM IBMR is a practical choice. Affordable fees, strong manufacturing sector connections, and 40-year alumni network. Won't compete with PIBM or ISB&M nationally but gives good value in PCMC region.", pros: ["Local PCMC alumni network", "Affordable", "Good manufacturing operations MBA", "Corporate training division for exposure"], cons: ["Brand recognition limited to Pune/PCMC", "Infrastructure needs upgrading", "Research output low"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBA Marketing", duration: "2 years", level: "PG", eligibility: "Bachelor's degree 50%+, MAH-MBA CET/CAT/CMAT/MAT", selection: "MAH-MBA CET Merit + GD-PI", fees_per_year: 210000, total_fees: 420000, seats: 60 },
@@ -7291,11 +6540,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "B-School", rank: null, grade: "A", year: "2022" },
       ],
-      scholarships: [
-        { name: "ASM Group Merit Scholarship", eligibility: "Top 10% CGPA in each academic year", amount: "₹15,000–₹25,000 fee concession", provider: "ASM Group of Institutes" },
-        { name: "Government MBA Scholarship", eligibility: "SC/ST/OBC/VJNT per DTE norms", amount: "Partial fee waiver per government scheme", provider: "Government of Maharashtra" },
-        { name: "EBC Scholarship", eligibility: "Non-reserved category, family income below ₹8L/year", amount: "50% tuition waiver", provider: "Government of Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Manufacturing Simulation Lab", description: "Industry 4.0 tools: lean manufacturing simulations, supply chain scenarios, quality management cases" },
         { name: "ERP & Business Analytics Lab", description: "SAP, Tally, and Power BI tools for Finance, Operations, and HR students" },
@@ -7303,11 +6548,7 @@ const rawColleges: College[] = [
         { name: "Corporate Training Centre", description: "Executive education and corporate training programs, generates industry interface for students" },
         { name: "Seminar Hall", description: "400-seat hall for annual management conclave with PCMC industry leaders" },
       ],
-      alumni: [
-        { name: "Rajesh Patil", designation: "Operations Manager, Bajaj Auto Chakan", batch: "2005" },
-        { name: "Sunita Deshpande", designation: "HR Manager, Thermax Ltd.", batch: "2010" },
-        { name: "Ajay Kulkarni", designation: "Finance Controller, Cummins India", batch: "2008" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7351,8 +6592,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "ICICI Bank", "TCS", "Infosys", "Wipro", "Deloitte", "EY", "KPMG"],
     entranceExams: ["MHT-CET", "CUET"],
     hostel: false,
-    rating: 4.3,
-    reviewCount: 2800,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Commerce College Pune", "NAAC A+", "Deccan Gymkhana", "80-Year Legacy", "Autonomous"],
     description: "Brihan Maharashtra College of Commerce (BMCC) is Pune's most prestigious commerce college with an 80-year legacy. An autonomous institution on BMCC Road, it offers B.Com., BBA, B.Sc. (CS/IT), and postgraduate programs and is consistently among Maharashtra's top commerce colleges.",
     highlights: ["Pune's most sought-after commerce college for 80+ years", "NAAC A+ accredited autonomous institution", "Exceptional alumni in banking, CA, and IT sectors", "Annual commerce and technology festivals", "Proximity to Deccan Gymkhana. Pune's cultural hub"],
@@ -7360,11 +6601,7 @@ const rawColleges: College[] = [
     website: "https://www.bmcc.ac.in",
     phone: "+91-20-25664335",
     email: "principal@bmcc.ac.in",
-    reviews: [
-      { id: 1, studentName: "Priya Deshpande", course: "B.Com.", year: 2023, rating: 5, title: "Best commerce college in Pune", body: "BMCC is an incredible place. The exposure, faculty, and environment are top-class. Being a BMCCian opens doors, alumni in KPMG, EY, Big 4 actively mentor current students. The commerce fests attract 10,000+ students.", pros: ["Pune's top commerce brand", "Big 4 audit firm placements", "Deccan Gymkhana location", "Strong CA/CS exam support"], cons: ["No hostel: very competitive admission (90%+ required)", "Popular programs fill up fast", "Infrastructure old in parts"] },
-      { id: 2, studentName: "Aditya Shah", course: "BBA (CA)", year: 2023, rating: 5, title: "Outstanding faculty for CA prep alongside BBA", body: "BMCC's BBA (CA) is the best of both worlds, professional accounting education and management fundamentals. Faculty are CA-qualified and guide both academics and CA Foundation/Intermediate preparation. EY and Deloitte came to our campus for BBA placements.", pros: ["CA-qualified faculty", "Dual BBA + CA prep", "Big 4 recruitment visits", "NAAC A+ autonomous curriculum"], cons: ["Very high cutoff (~92%+ for BBA)", "Placement cell less structured than engineering colleges", "Urban campus: no sports ground"] },
-      { id: 3, studentName: "Meera Iyer", course: "B.Sc. IT", year: 2023, rating: 4, title: "Excellent IT program in Deccan", body: "BMCC's B.Sc. IT is one of the best in Pune for non-engineering IT education. The autonomous curriculum is updated annually. TCS and Wipro campus drive visited. The location at Deccan Gymkhana is perfect. FC Road, Shivajinagar IT offices, and Pune University all within 2 km.", pros: ["Updated autonomous IT curriculum", "TCS and Wipro placements", "Deccan location for networking", "Affordable ₹20K/year fees"], cons: ["IT infrastructure below engineering colleges", "B.Sc. IT not equivalent to B.Tech for some companies", "Labs could be upgraded"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Com. (General)", duration: "3 years", level: "UG", eligibility: "10+2 Commerce/Science 45%+; 12th merit-based", selection: "12th Merit List", fees_per_year: 20000, total_fees: 60000, seats: 480 },
@@ -7406,12 +6643,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Autonomous Commerce College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Commerce Colleges Maharashtra", rank: 2, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government of Maharashtra EBC Scholarship", eligibility: "Open category, family income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students per GOI norms", amount: "Full fees + maintenance", provider: "Ministry of Social Justice (GOI)" },
-        { name: "BMCC Merit Scholarship", eligibility: "Top 5% by CGPA each year", amount: "₹5,000–₹10,000 cash award", provider: "BMCC Alumni Association" },
-        { name: "Minority Scholarship", eligibility: "Muslim, Christian, Buddhist minority students, income below ₹2L/year", amount: "₹5,000–₹15,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Commerce & Finance Lab", description: "Tally, SAP, Bloomberg feeds, and financial modeling workstations" },
         { name: "Commerce Research Centre", description: "Active research in commerce, economics, and taxation with faculty publications" },
@@ -7419,11 +6651,7 @@ const rawColleges: College[] = [
         { name: "Deccan Gymkhana Location", description: "On BMCC Road: FC Road, Shivajinagar, and Deccan cultural hub all within walking distance" },
         { name: "Auditorium", description: "1,200-seat auditorium for annual commerce fest Pragati, cultural events, and convocation" },
       ],
-      alumni: [
-        { name: "Sanjeev Kulkarni", designation: "Partner, Deloitte India", batch: "1995" },
-        { name: "Ruchika Mehra", designation: "CFO, Mahindra Finance", batch: "2002" },
-        { name: "Aakash Shah", designation: "Founder, FinEdge Advisory", batch: "2010" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7466,8 +6694,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Wipro", "Infosys", "HDFC Bank", "Media Houses", "NGOs", "Teaching Institutions"],
     entranceExams: ["SET", "CUET"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 1400,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Symbiosis Group", "Central Pune", "Arts & Commerce", "NAAC A+", "Cultural Hub"],
     description: "Symbiosis College of Arts and Commerce (SCAC) is one of Pune's most lively arts and commerce colleges. Part of the Symbiosis International University family, it offers undergraduate and postgraduate programs in arts, commerce, and social sciences in a culturally rich environment.",
     highlights: ["Symbiosis Group's arts and commerce flagship college", "NAAC A+ accreditation", "Rich cultural and student activity environment", "Central Pune location near Senapati Bapat Road IT corridor", "International student presence from Symbiosis network"],
@@ -7475,11 +6703,7 @@ const rawColleges: College[] = [
     website: "https://www.symbiosiscollege.edu.in",
     phone: "+91-20-25652197",
     email: "info@symbiosiscollege.edu.in",
-    reviews: [
-      { id: 1, studentName: "Tanvi Mehta", course: "BBA", year: 2023, rating: 4, title: "Great environment and Symbiosis brand", body: "SCAC is lively and culturally rich. The Symbiosis brand opens doors, alumni at Wipro, HDFC, and NGOs actively help. The cultural diversity from international Symbiosis students is a unique advantage.", pros: ["Symbiosis brand recognition", "International student community", "Central Senapati Bapat Road location", "NAAC A+"], cons: ["Higher fees than government colleges", "Placement cell less active than engineering colleges", "No dedicated B.Tech: arts/commerce focus"] },
-      { id: 2, studentName: "Ravi Kumar", course: "B.Com.", year: 2022, rating: 4, title: "Best BA/B.Com. under Symbiosis brand", body: "SCAC gives you the Symbiosis International University affiliation for arts/commerce, a big differentiator in the job market. B.Com. here has better brand perception than most SPPU colleges. Annual fest Tarang is one of Pune's biggest cultural events.", pros: ["SIU affiliation for B.Com./BA", "Annual Tarang fest (top cultural event)", "SET entrance gives fair selection", "Strong economics department"], cons: ["SET exam competitive", "Fees higher than BMCC/Garware", "Research focus less than engineering colleges"] },
-      { id: 3, studentName: "Alisha D'Souza", course: "M.A. Psychology", year: 2023, rating: 4, title: "Excellent postgraduate arts program", body: "M.A. Psychology at SCAC is one of Pune's best. Faculty are researchers and counselors. Guest lectures from NIMHANS and Tata Institute of Social Sciences. Good for students aiming at counseling, clinical psychology, or research.", pros: ["Strong PG arts faculty", "Psychology and social science research", "SIU recognition", "Central Pune location"], cons: ["Fees high for arts", "No hostel on SCAC campus", "Psychology career paths limited initially"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (Economics / English / Pol. Sci.)", duration: "3 years", level: "UG", eligibility: "10+2 any stream 45%+; SET entrance", selection: "SET Score + Merit", fees_per_year: 90000, total_fees: 270000, seats: 240 },
@@ -7519,11 +6743,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Arts & Commerce College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Arts Colleges Maharashtra", rank: 5, year: "2024" },
       ],
-      scholarships: [
-        { name: "Symbiosis University Scholarship", eligibility: "Top SET scorers admitted to SCAC", amount: "Up to ₹1,00,000 fee waiver over 3 years", provider: "Symbiosis International University" },
-        { name: "Women Empowerment Scholarship", eligibility: "Female students with economic hardship", amount: "₹25,000 per year", provider: "Symbiosis Foundation" },
-        { name: "SC/ST Fee Concession", eligibility: "SC/ST category students", amount: "₹50,000–₹75,000 fee waiver", provider: "Government / SIU" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Tarang Cultural Centre", description: "Dedicated space for SCAC's annual Tarang festival, one of Pune's largest student cultural events" },
         { name: "Language & Media Lab", description: "Mass communication studio, language laboratory, and psychology practicum room" },
@@ -7531,11 +6751,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "SIU main campus hostel at Lavale available; SCAC-specific hostel near Senapati Bapat Road" },
         { name: "Senapati Bapat Road Location", description: "Adjacent to Pune's IT corridor: Persistent, KPIT, and IBM offices within 2 km" },
       ],
-      alumni: [
-        { name: "Ananya Kulkarni", designation: "Communications Manager, Wipro", batch: "2012" },
-        { name: "Rishab Gupta", designation: "Economist, Ministry of Finance", batch: "2008" },
-        { name: "Pallavi Nair", designation: "Clinical Psychologist, Koregaon Park clinic", batch: "2015" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -7577,8 +6793,8 @@ const rawColleges: College[] = [
     topRecruiters: ["IT Companies", "Banks", "Teaching Institutions", "Research Organizations"],
     entranceExams: ["CUET", "MHT-CET"],
     hostel: false,
-    rating: 4.2,
-    reviewCount: 1600,
+    rating: 0,
+    reviewCount: 0,
     tags: ["90-Year Legacy", "Camp Pune", "NAAC A+", "Autonomous", "Science Excellence"],
     description: "Nowrosjee Wadia College (NWC) is one of Pune's most respected autonomous colleges with a 90-year legacy. Located in Pune Camp, it is renowned for its strong science and arts programs, lively campus life, and exceptional faculty.",
     highlights: ["90+ year legacy: one of Pune's oldest co-educational colleges", "NAAC A+ autonomous institution", "Strong science programs: physics, chemistry, mathematics", "Wadia Trust backing: financially stable institution", "Culturally active with inter-collegiate festivals"],
@@ -7586,11 +6802,7 @@ const rawColleges: College[] = [
     website: "https://www.wadiacollege.edu.in",
     phone: "+91-20-26134305",
     email: "principal@wadiacollege.edu.in",
-    reviews: [
-      { id: 1, studentName: "Ananya Iyer", course: "B.Sc. Mathematics", year: 2022, rating: 4, title: "Excellent science college in Camp Pune", body: "NWC's mathematics and physics departments are outstanding. Faculty include PhD researchers who publish regularly. 90-year Wadia Trust backing means financially stable institution, labs are better maintained than most SPPU colleges. Great for students aiming at M.Sc., NET, or MPSC/UPSC.", pros: ["90-year legacy and stable institution", "Strong science departments (Maths, Physics, Chemistry)", "Central Camp Pune location", "Autonomous curriculum flexibility"], cons: ["No hostel", "Placement support below professional colleges", "Arts programs less active"] },
-      { id: 2, studentName: "Kiran Deshmukh", course: "B.Sc. Chemistry", year: 2023, rating: 4, title: "Great for science and research foundation", body: "NWC Chemistry is one of the best in Maharashtra. Faculty are active researchers, regular CSIR and UGC project holders. Good for students who want to pursue M.Sc. at IIT/IISER/SPPU. The library has an excellent collection of science journals.", pros: ["Research-active chemistry faculty", "CSIR/UGC funded research", "M.Sc. IIT/IISER pathway support", "Central Camp location"], cons: ["No hostel", "Placement cell needs improvement", "IT infrastructure old"] },
-      { id: 3, studentName: "Pooja Bhosale", course: "B.Com.", year: 2022, rating: 4, title: "Good B.Com. college with Wadia legacy", body: "NWC's commerce programs benefit from the Wadia Trust funding. Faculty are experienced. Camp location is excellent for banking internships, several Camp banks hire NWC graduates directly.", pros: ["Wadia Trust financial stability", "Camp Pune banking internships", "Affordable fees (₹12K/year)", "NAAC A+ autonomous"], cons: ["Less commerce focus than BMCC/Ness Wadia", "No hostel", "Older campus infrastructure"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Sc. Mathematics", duration: "3 years", level: "UG", eligibility: "10+2 PCM 45%+; 12th merit", selection: "12th Merit List", fees_per_year: 15000, total_fees: 45000, seats: 120 },
@@ -7632,11 +6844,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Autonomous Arts & Science College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Science Colleges Maharashtra", rank: 8, year: "2024" },
       ],
-      scholarships: [
-        { name: "Government EBC Scholarship", eligibility: "Open category, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students", amount: "Full fees + maintenance allowance", provider: "GOI / Maharashtra" },
-        { name: "Wadia Trust Excellence Award", eligibility: "Top-performing students in each department", amount: "₹5,000–₹15,000 cash award annually", provider: "Wadia Charitable Trust" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Science Laboratories", description: "Well-equipped Physics, Chemistry, Botany, and Zoology labs backed by Wadia Trust funding" },
         { name: "Library", description: "90-year collection: 60,000+ books, science journals, and INFLIBNET N-LIST access" },
@@ -7644,11 +6852,7 @@ const rawColleges: College[] = [
         { name: "Auditorium", description: "800-seat hall for cultural events, Wadia lectures, and convocation" },
         { name: "Camp Pune Location", description: "Historical Camp area: close to Pune Station, Koregaon Park, and the Wadia Trust offices" },
       ],
-      alumni: [
-        { name: "Dr. Sunita Kulkarni", designation: "Professor, SPPU Department of Chemistry", batch: "1992" },
-        { name: "Rahul Joshi", designation: "IAS Officer, Maharashtra Cadre", batch: "2000" },
-        { name: "Neha Deshpande", designation: "Senior Analyst, TCS Research", batch: "2010" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7690,8 +6894,8 @@ const rawColleges: College[] = [
     topRecruiters: ["IT Companies", "Banks", "Media", "NGOs", "Education Sector"],
     entranceExams: ["CUET"],
     hostel: true,
-    rating: 4.3,
-    reviewCount: 1900,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Women's College", "Autonomous", "NAAC A+", "Camp Pune", "Christian College"],
     description: "St. Mira's College for Girls is one of Pune's most prestigious women's autonomous colleges. A Christian minority institution in Camp, it offers a wide range of arts, science, and commerce programs with an emphasis on well-rounded women's education and character development.",
     highlights: ["Pune's top autonomous women's college", "NAAC A+: highest accreditation", "70-year legacy of women's empowerment through education", "Hostel facility for outstation women students", "Lively cultural and social activities throughout the year"],
@@ -7699,11 +6903,7 @@ const rawColleges: College[] = [
     website: "https://www.stmirascollegepune.edu.in",
     phone: "+91-20-26130099",
     email: "principal@stmirascollegepune.edu.in",
-    reviews: [
-      { id: 1, studentName: "Sarah D'Souza", course: "B.A. Psychology", year: 2023, rating: 5, title: "Best women's college in Pune", body: "St. Mira's gave me the best 3 years. Faculty in psychology are researchers and licensed counselors. The campus environment is truly supportive, guest lectures from Dr. Indira Samarasekera and other global figures. Camp location is ideal.", pros: ["Safe supportive environment", "Outstanding psychology faculty", "NAAC A+ autonomous", "Hostel for outstation women students"], cons: ["Women only", "Limited tech/engineering programs", "No MBA"] },
-      { id: 2, studentName: "Fatima Shaikh", course: "B.Com.", year: 2022, rating: 4, title: "Excellent B.Com. with CA preparation support", body: "St. Mira's B.Com. is academically rigorous. Faculty for accounts and taxation are CA-qualified. Many classmates cleared CA Foundation while studying here. Camp location has multiple CA firms nearby for articleship. Christian minority institution: welcoming to all communities.", pros: ["CA-qualified commerce faculty", "Camp CA firm proximity", "Minority institution: strong scholarship support", "Culturally diverse student body"], cons: ["Women only", "Competitive admission (90%+ for B.Com.)", "No hostel for day scholars"] },
-      { id: 3, studentName: "Nikita Singh", course: "BCA", year: 2023, rating: 4, title: "Safe and academically strong BCA in Camp Pune", body: "St. Mira's BCA has good computer science faculty. The all-women environment is a big positive for students from conservative families. Internship placements at IT companies in nearby Kalyani Nagar and Kharadi IT corridors.", pros: ["Safe campus for women", "Good IT faculty", "Kharadi IT corridor access", "Hostel available"], cons: ["Women only limits diversity", "BCA placements below engineering colleges", "Infrastructure older"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. Psychology", duration: "3 years", level: "UG", eligibility: "10+2 any stream 45%+; CUET/12th merit", selection: "12th Merit / CUET", fees_per_year: 20000, total_fees: 60000, seats: 120 },
@@ -7744,12 +6944,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Women's Autonomous College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Women's Colleges India", rank: 15, year: "2024" },
       ],
-      scholarships: [
-        { name: "Christian Minority Scholarship", eligibility: "Christian community students, income criteria", amount: "₹15,000–₹30,000 per year", provider: "Ministry of Minority Affairs (GOI)" },
-        { name: "Government EBC Scholarship", eligibility: "Open category students, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Scholarship", eligibility: "SC/ST category students", amount: "Full fees + maintenance", provider: "GOI" },
-        { name: "St. Mira's Merit Scholarship", eligibility: "Top 5% CGPA students each year", amount: "₹5,000–₹10,000 cash award", provider: "St. Mira's College" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Psychology Counseling Lab", description: "Dedicated counseling lab with assessment tools, therapy rooms, and research instruments" },
         { name: "Women's Empowerment Centre", description: "Regular workshops on leadership, entrepreneurship, and women's rights" },
@@ -7757,11 +6952,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus women's hostel in Camp for 250 outstation students" },
         { name: "Computer Lab", description: "150 workstations for BCA and B.Sc. IT students with internet access" },
       ],
-      alumni: [
-        { name: "Dr. Meena Thomas", designation: "Clinical Psychologist, Jehangir Hospital Pune", batch: "2000" },
-        { name: "Priyanka D'Costa", designation: "Chartered Accountant, Deloitte India", batch: "2010" },
-        { name: "Asha Nair", designation: "Deputy Collector, Maharashtra State", batch: "2005" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 0,
@@ -7803,8 +6994,8 @@ const rawColleges: College[] = [
     topRecruiters: ["HDFC Bank", "ICICI Bank", "TCS", "EY", "Deloitte", "Wipro", "Cognizant"],
     entranceExams: ["CUET", "MHT-CET"],
     hostel: false,
-    rating: 4.1,
-    reviewCount: 1300,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Commerce College", "Camp Pune", "Autonomous", "NAAC A+", "Wadia Group"],
     description: "Ness Wadia College of Commerce is one of Pune's premier autonomous commerce colleges, backed by the Wadia Group. Located in Camp, it offers excellent B.Com., BBA, and BCA programs with a strong focus on accounting, finance, and international business.",
     highlights: ["Wadia Group's backing: financially strong institution", "NAAC A+ autonomous college", "Strong B.Com. and BBA programs in Camp Pune", "Regular CA and CS coaching support for students", "Active commerce and cultural fest"],
@@ -7812,11 +7003,7 @@ const rawColleges: College[] = [
     website: "https://www.nesswadia.edu.in",
     phone: "+91-20-26133598",
     email: "principal@nesswadia.edu.in",
-    reviews: [
-      { id: 1, studentName: "Rutuja Desai", course: "B.Com.", year: 2023, rating: 4, title: "Great commerce college in Camp Pune", body: "Ness Wadia is known for commerce excellence. Faculty for accounts and finance are mostly CA-qualified or PhD holders. Camp location means multiple banks for internships nearby. Wadia Trust backing ensures better infrastructure and scholarships than many SPPU colleges.", pros: ["NAAC A+ autonomous", "CA-qualified commerce faculty", "Wadia Trust financial stability", "Camp banking internships"], cons: ["No hostel", "Competitive admission (89%+ for B.Com.)", "IT exposure below technical colleges"] },
-      { id: 2, studentName: "Ashish Mhatre", course: "BBA (International Business)", year: 2023, rating: 4, title: "Best BBA-IB program in Camp Pune", body: "Ness Wadia's BBA (International Business) is unique in the Camp area. Covers trade finance, Forex, export/import, and EXIM documentation. Placed at a trading company in Pune with ₹5.2 LPA after internship convert. Strong faculty for finance and IB specializations.", pros: ["Unique BBA International Business", "EXIM/trade finance curriculum", "NAAC A+ autonomous", "Affordable ₹15K/year fees"], cons: ["No hostel", "BBA placements below MBA", "Limited IT exposure in BBA-IB"] },
-      { id: 3, studentName: "Sonal Jadhav", course: "M.Com.", year: 2022, rating: 4, title: "Strong M.Com. with research culture", body: "Ness Wadia M.Com. has excellent faculty: several hold PhDs from reputed universities. Good for students planning NET/SET exams or PhD. The 70-year library collection is outstanding for research in commerce and economics.", pros: ["Research-active M.Com. faculty", "Library with 70-year collection", "NET/SET preparation support", "Affordable PG fees (₹15K/year)"], cons: ["No hostel", "PG batch small (60 seats)", "Campus life low for PG students"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Com. (General)", duration: "3 years", level: "UG", eligibility: "10+2 Commerce 45%+; 12th merit / CUET", selection: "12th Merit / CUET", fees_per_year: 15000, total_fees: 45000, seats: 480 },
@@ -7855,11 +7042,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Autonomous Commerce College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Commerce Colleges Maharashtra", rank: 4, year: "2024" },
       ],
-      scholarships: [
-        { name: "Wadia Trust Scholarship", eligibility: "Merit-based, top 5% CGPA students", amount: "₹5,000–₹20,000 cash award per year", provider: "Wadia Charitable Trust" },
-        { name: "Government EBC Scholarship", eligibility: "Open category, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Scholarship", eligibility: "SC/ST category students", amount: "Full fees + maintenance", provider: "GOI / Maharashtra" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Commerce & Finance Lab", description: "Tally ERP, SAP, and financial analysis tools for B.Com. and BBA students" },
         { name: "Library", description: "70,000+ books with 70-year collection; excellent commerce/economics research material" },
@@ -7867,11 +7050,7 @@ const rawColleges: College[] = [
         { name: "Camp Pune Location", description: "Near Pune Station and Camp commercial zone, ideal for banking, finance, and audit internships" },
         { name: "Auditorium", description: "700-seat hall for annual commerce fest and academic events" },
       ],
-      alumni: [
-        { name: "Vivek Mahajan", designation: "Partner, Ernst & Young India", batch: "1999" },
-        { name: "Shilpa Wadia", designation: "VP Finance, HSBC India", batch: "2004" },
-        { name: "Pramod Deshpande", designation: "Chief Accountant, Bajaj Auto", batch: "2001" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -7913,8 +7092,8 @@ const rawColleges: College[] = [
     topRecruiters: ["IT Companies", "Banks", "Teaching Institutions", "UPSC/MPSC", "Research Labs"],
     entranceExams: ["CUET"],
     hostel: false,
-    rating: 4.2,
-    reviewCount: 1700,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Deccan Gymkhana", "Autonomous", "NAAC A+", "Arts & Science", "Affordable"],
     description: "MES Abasaheb Garware College on Karve Road is a prestigious autonomous arts and science college with a 70-year legacy. Known for its strong science and arts departments, it offers affordable quality education under SPPU affiliation.",
     highlights: ["Autonomous college with strong science and arts tradition", "NAAC A+ accreditation", "Prime Karve Road, Deccan Gymkhana location", "Highly affordable fees, accessible to all students", "Strong alumni in civil services, academia, and industry"],
@@ -7922,11 +7101,7 @@ const rawColleges: College[] = [
     website: "https://www.garwarecollege.edu.in",
     phone: "+91-20-25654488",
     email: "principal@garwarecollege.edu.in",
-    reviews: [
-      { id: 1, studentName: "Kedar Joshi", course: "B.Sc. Chemistry", year: 2022, rating: 4, title: "Excellent arts and science college", body: "Garware College has outstanding faculty in chemistry and economics. At ₹12,000/year it's incredible value for NAAC A+. The Karve Road campus is beautiful. MES backing provides financial stability. Good for students aiming at competitive exams (MPSC/UPSC) or M.Sc. at top institutions.", pros: ["NAAC A+ at ₹12K/year", "Excellent chemistry and economics faculty", "Karve Road Deccan location", "Strong competitive exam track record"], cons: ["No hostel", "Old infrastructure in parts", "Placement cell underdeveloped"] },
-      { id: 2, studentName: "Pallavi Gaur", course: "M.A. Economics", year: 2023, rating: 4, title: "Best affordable PG for economics in Pune", body: "Garware's M.A. Economics faculty are PhD researchers with strong econometrics expertise. Many alumni have cleared UPSC, RBI Grade B, and SEBI exams. At ₹20K for a 2-year M.A., this is unbeatable value for economics aspirants.", pros: ["Research-active economics department", "RBI/SEBI exam alumni track", "Affordable PG fees (₹20K/year)", "Karve Road central location"], cons: ["No hostel", "Small PG batch size", "Campus infrastructure ageing"] },
-      { id: 3, studentName: "Suresh Bhosale", course: "B.A. History", year: 2022, rating: 4, title: "Ideal for MPSC/UPSC aspirants in Pune", body: "Garware's arts faculty: especially history, political science, and economics, are strong. Many MPSC toppers from Maharashtra are Garware alumni. The affordable fees mean students can invest in coaching while doing their degree.", pros: ["MPSC/UPSC-aligned arts curriculum", "Affordable fees (₹12K/year)", "Dedicated alumni in civil services", "Deccan Gymkhana cultural hub"], cons: ["No dedicated placement cell for arts", "Infrastructure needs upgrade", "Limited industry connections"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Sc. Chemistry / Physics / Maths / Biology", duration: "3 years", level: "UG", eligibility: "10+2 PCM/PCB 45%+; 12th merit", selection: "12th Merit", fees_per_year: 12000, total_fees: 36000, seats: 600 },
@@ -7966,12 +7141,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Autonomous Arts & Science College", rank: null, grade: "A+", year: "2022" },
         { agency: "India Today", category: "Top Arts Colleges Maharashtra", rank: 6, year: "2024" },
       ],
-      scholarships: [
-        { name: "MES Group Merit Scholarship", eligibility: "Top 5% CGPA in each year", amount: "₹5,000–₹15,000 cash award", provider: "Maharashtra Education Society" },
-        { name: "Government EBC Scholarship", eligibility: "Open category, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Scholarship", eligibility: "SC/ST students", amount: "Full fees + maintenance allowance", provider: "GOI" },
-        { name: "Minority Scholarship", eligibility: "Minority communities per GOI norms", amount: "₹5,000–₹15,000 per year", provider: "Ministry of Minority Affairs" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Science Laboratories", description: "Well-equipped labs for chemistry, physics, botany, and zoology backed by MES funding" },
         { name: "Library", description: "70-year collection: 70,000+ books, academic journals, and INFLIBNET N-LIST access" },
@@ -7979,11 +7149,7 @@ const rawColleges: College[] = [
         { name: "Karve Road Location", description: "Adjacent to Deccan Gymkhana, close to Pune University, law college, and coaching classes" },
         { name: "Research Centre", description: "Active research in chemistry, statistics, and economics. UGC funded projects" },
       ],
-      alumni: [
-        { name: "Dr. Arvind Kulkarni", designation: "Professor, Dept. of Chemistry, SPPU", batch: "1985" },
-        { name: "Sneha Joshi", designation: "IRS Officer, Government of India", batch: "2000" },
-        { name: "Rajan More", designation: "Economist, Reserve Bank of India", batch: "1998" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -8025,8 +7191,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Banks", "IT Companies", "Schools", "Government Services"],
     entranceExams: ["CUET"],
     hostel: false,
-    rating: 4.0,
-    reviewCount: 1100,
+    rating: 0,
+    reviewCount: 0,
     tags: ["80-Year Legacy", "Camp Pune", "Autonomous", "Affordable"],
     description: "Poona College of Arts, Science and Commerce is one of Pune Camp's oldest and most respected autonomous institutions with an 80-year legacy. It offers affordable undergraduate and postgraduate programs in arts, science, and commerce.",
     highlights: ["80+ year legacy in Pune's Camp area", "NAAC A autonomous institution", "Very affordable: open to students from all economic backgrounds", "Strong arts and commerce tradition", "Alumni in government services, banking, and teaching"],
@@ -8034,11 +7200,7 @@ const rawColleges: College[] = [
     website: "https://www.poonacollege.edu.in",
     phone: "+91-20-26130095",
     email: "principal@poonacollege.edu.in",
-    reviews: [
-      { id: 1, studentName: "Vivek Patil", course: "B.Com.", year: 2022, rating: 4, title: "Good traditional college in Camp", body: "Poona College has a great legacy. Faculty is dedicated and fees are minimal, ₹10,000/year for B.Com. Hard to beat the value in Camp Pune. Good for students who want a degree near Pune Station and Camp area.", pros: ["Affordable fees (₹10K/year)", "80-year legacy", "Camp Pune location", "Dedicated faculty"], cons: ["Old campus infrastructure", "No hostel", "Average placement cell"] },
-      { id: 2, studentName: "Aruna More", course: "B.Sc. Mathematics", year: 2023, rating: 4, title: "Solid science programs at budget fees", body: "Poona College science faculty are experienced and academically qualified. For a student with 75–80% in HSC who wants to stay in Camp area, it's a very practical choice. Mathematics department is particularly strong.", pros: ["Strong mathematics department", "Central Camp location", "Very affordable (₹10K/year)", "NAAC A autonomous"], cons: ["Less research output than NWC", "No hostel", "Lab equipment ageing"] },
-      { id: 3, studentName: "Suresh Jadhav", course: "BCA", year: 2022, rating: 3, title: "Affordable BCA in Camp Pune", body: "BCA at Poona College is affordable at ₹35K/year. Good for students from economically weaker backgrounds in the Camp area. IT placements are moderate, nearby Kharadi IT zone helps. Basic but functional computer labs.", pros: ["Affordable BCA", "Kharadi IT access", "NAAC A", "Camp location"], cons: ["Average placement record", "Limited lab resources", "IT faculty mix quality"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Com. (General)", duration: "3 years", level: "UG", eligibility: "10+2 Commerce 40%+; 12th merit", selection: "12th Merit", fees_per_year: 10000, total_fees: 30000, seats: 360 },
@@ -8077,12 +7239,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "Autonomous Arts & Commerce College", rank: null, grade: "A", year: "2021" },
       ],
-      scholarships: [
-        { name: "Government EBC Scholarship", eligibility: "Open category, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Post-Matric Scholarship", eligibility: "SC/ST students", amount: "Full fees + maintenance", provider: "GOI" },
-        { name: "OBC/SBC Scholarship", eligibility: "OBC/SBC category per income norms", amount: "Full tuition + maintenance ₹3,000/year", provider: "Maharashtra MBCDC" },
-        { name: "Poona College Merit Award", eligibility: "Top 5% students by CGPA", amount: "₹2,000–₹5,000 cash award", provider: "Poona College" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Science Laboratories", description: "Functional chemistry, physics, and biology labs for undergraduate science programs" },
         { name: "Library", description: "80-year collection: 40,000+ books; INFLIBNET N-LIST digital journal access" },
@@ -8090,11 +7247,7 @@ const rawColleges: College[] = [
         { name: "Gymkhana & Sports", description: "Sports ground for cricket, football, and indoor sports in Camp area campus" },
         { name: "Camp Pune Location", description: "Walking distance from Pune Station, accessible to Camp, Kalyani Nagar, and Koregaon Park" },
       ],
-      alumni: [
-        { name: "Ajit Pawar", designation: "Deputy Chief Minister, Maharashtra (Alumni. Poona College)", batch: "1975" },
-        { name: "Balasaheb Patil", designation: "Senior IAS Officer, Maharashtra", batch: "1988" },
-        { name: "Smita Kelkar", designation: "Principal, Pune Government School", batch: "2002" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -8136,8 +7289,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Wipro", "Infosys", "HDFC Bank", "Persistent Systems", "Tech Mahindra"],
     entranceExams: ["MHT-CET", "CUET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 780,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Indira Group", "Tathawade", "Near IT Hub", "Affordable", "Commerce & IT"],
     description: "Indira College of Commerce and Science (ICCS) on the Mumbai-Pune highway offers commerce, IT, and science programs. Part of the Indira Group of Institutes, it provides affordable education near Hinjawadi and PCMC industrial area.",
     highlights: ["Indira Group backing: 25+ years in Pune education", "Strategic highway location near Hinjawadi IT park", "Good IT placements for BCA and B.Sc. CS students", "Hostel facility for outstation students", "Affordable fees with industry internship support"],
@@ -8145,11 +7298,7 @@ const rawColleges: College[] = [
     website: "https://www.iccs.ac.in",
     phone: "+91-20-66739500",
     email: "info@iccs.ac.in",
-    reviews: [
-      { id: 1, studentName: "Akash Sonawane", course: "BCA", year: 2023, rating: 3, title: "Good IT college near Hinjawadi", body: "ICCS is decent for IT courses. The Tathawade location on the Mumbai-Pune highway means Hinjawadi is 5 minutes away, great for internships. TCS and Wipro visited our BCA batch. Indira Group campus is clean and hostel is practical for students from outside Pune.", pros: ["Near Hinjawadi IT park", "Affordable fees", "Hostel available", "TCS/Wipro placements"], cons: ["Average infrastructure", "Limited faculty specialization", "NAAC A but not autonomous"] },
-      { id: 2, studentName: "Priya Sawant", course: "B.Com.", year: 2023, rating: 4, title: "Good commerce college in North Pune", body: "ICCS is a good choice for students in Tathawade, Pimple Saudagar, or PCMC area. B.Com. faculty are experienced and NAAC A quality is maintained. Indira Group has 25+ years of education history in Pune, institution is financially stable.", pros: ["NAAC A commerce program", "Indira Group financial stability", "PCMC area access", "Affordable fees (₹40K/year)"], cons: ["Less known than BMCC/Ness Wadia", "Limited PG specializations", "Commerce placements average"] },
-      { id: 3, studentName: "Rohit Kamble", course: "MBA", year: 2022, rating: 3, title: "Decent MBA for PCMC students", body: "ICCS MBA is under SPPU and priced reasonably at ₹1.3L/year. Good for PCMC-area students who don't want to commute far. Placements in banking and IT are average but consistent. Faculty includes some Hinjawadi industry professionals as visiting lecturers.", pros: ["Affordable MBA (₹1.3L/year)", "Hinjawadi visiting faculty", "SPPU recognized", "Hostel available"], cons: ["Average brand", "MBA placements below PIBM/ISB&M", "Infrastructure basic"] }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Com. (General)", duration: "3 years", level: "UG", eligibility: "10+2 Commerce 42%+; 12th merit / CUET", selection: "12th Merit / CUET", fees_per_year: 40000, total_fees: 120000, seats: 240 },
@@ -8188,11 +7337,7 @@ const rawColleges: College[] = [
       rankings: [
         { agency: "NAAC", category: "Commerce & Science College", rank: null, grade: "A", year: "2021" },
       ],
-      scholarships: [
-        { name: "Indira Group Merit Scholarship", eligibility: "Top 10% CGPA students each academic year", amount: "₹10,000–₹20,000 fee concession", provider: "Indira Group of Institutes" },
-        { name: "Government EBC Scholarship", eligibility: "Open category, income below ₹8L/year", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Scholarship", eligibility: "SC/ST students per GOI norms", amount: "Full fees + maintenance", provider: "GOI" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Labs", description: "200+ workstations with Java, Python, SQL, and networking tools for BCA and B.Sc. IT students" },
         { name: "Commerce & Finance Lab", description: "Tally ERP, SAP, and financial accounting software" },
@@ -8200,11 +7345,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "On-campus hostel for 300 students (boys and girls) with mess facility" },
         { name: "Tathawade Highway Location", description: "On Mumbai-Pune highway: 5 minutes from Hinjawadi IT park; ideal for internship access" },
       ],
-      alumni: [
-        { name: "Rahul Patil", designation: "Software Engineer, Persistent Systems Pune", batch: "2016" },
-        { name: "Sneha Bhosale", designation: "Relationship Manager, HDFC Bank", batch: "2018" },
-        { name: "Amol Deshpande", designation: "Business Analyst, Wipro Hinjawadi", batch: "2017" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -8246,8 +7387,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "HDFC Bank", "Wipro", "Schools and Colleges"],
     entranceExams: ["CUET", "MHT-CET"],
     hostel: true,
-    rating: 3.8,
-    reviewCount: 860,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Sinhgad Group", "Erandwane Pune", "Affordable", "Arts & Science"],
     description: "Sinhgad College of Arts, Commerce and Science in Erandwane is the Sinhgad Group's arts and commerce college in central Pune. It offers affordable undergraduate programs across arts, science, commerce, and computer applications.",
     highlights: ["Sinhgad Group brand: known across Maharashtra", "Central Erandwane location", "Very affordable arts, science, and commerce programs", "Active student council and cultural events", "Hostel facility for outstation students"],
@@ -8255,29 +7396,7 @@ const rawColleges: College[] = [
     website: "https://www.sinhgad.edu",
     phone: "+91-20-25467619",
     email: "scaecs@sinhgad.edu",
-    reviews: [
-      {
-        id: 1, studentName: "Shruti Bhosle", course: "B.Com.", year: 2023, rating: 4,
-        title: "Affordable and centrally located: ideal for commerce students",
-        body: "SCACS is one of the best value-for-money colleges in Pune. The location in Erandwane is very convenient. I could commute easily from Deccan and Kothrud. B.Com. faculty is experienced and the subject coverage is thorough. The placement cell helps students get banking and finance internships. The college festival Kalaangan is a highlight every year.",
-        pros: ["Central Erandwane location", "Affordable fees: ₹25,000–₹40,000/year", "Experienced B.Com. faculty", "Good banking and finance internships", "Lively cultural events"],
-        cons: ["College can feel crowded in peak hours", "Infrastructure somewhat dated", "Placement packages are modest for pure commerce"]
-      },
-      {
-        id: 2, studentName: "Rahul Deshmukh", course: "BCA", year: 2022, rating: 4,
-        title: "Good BCA program: Sinhgad quality at low cost",
-        body: "I chose SCACS for BCA because of Sinhgad's reputation and the affordable fees. The computer labs are well-equipped and professors cover the syllabus properly. We had good exposure to Java, Python, and web development. TCS iON and a few IT firms visited for placement. Overall a solid choice for BCA in Pune if budget is a concern.",
-        pros: ["Good computer labs", "BCA syllabus well-taught", "TCS and IT firm recruiters", "Sinhgad group credibility", "Affordable fee structure"],
-        cons: ["Library resources could be updated", "Internship guidance needs improvement", "Campus events sometimes clash with academic schedule"]
-      },
-      {
-        id: 3, studentName: "Pooja Joshi", course: "M.Com.", year: 2023, rating: 3,
-        title: "Decent postgraduate commerce college in central Pune",
-        body: "M.Com. at SCACS is affordable and the faculty is knowledgeable. Research methodology and advanced accounting were taught very well. The college encourages students to attend seminars and paper presentations. However, placement support for PG students is limited, most students find jobs themselves. Still a good option if you want to study further in Pune without spending a lot.",
-        pros: ["Affordable M.Com. fees", "Good research and accounting faculty", "Encourages seminars and paper presentations", "Central Pune location"],
-        cons: ["Limited placement support for PG students", "No dedicated PG block", "Hostel allocation priority goes to UG students"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (Economics / English / History)", duration: "3 years", level: "UG", eligibility: "10+2 (any stream), min 45%", selection: "HSC Merit / CUET", fees_per_year: 22000, total_fees: 66000, seats: 240 },
@@ -8320,12 +7439,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Arts, Commerce & Science College", rank: null, grade: "A", year: "2021" },
         { agency: "Sinhgad Group Internal", category: "Best Performing Arts College. Pune Zone", rank: 1, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "EBC Scholarship (Economically Backward Class)", eligibility: "Family income below ₹1 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Free-ship", eligibility: "SC/ST students: all UG programs", amount: "Full tuition + exam fee", provider: "Government of Maharashtra" },
-        { name: "OBC / VJNT Non-Creamy Layer Scholarship", eligibility: "OBC / VJNT students with income below ₹6 lakh/year", amount: "₹10,000–₹20,000/year", provider: "Government of Maharashtra" },
-        { name: "Sinhgad Merit Scholarship", eligibility: "Students with 85%+ in HSC at time of admission", amount: "20% fee concession in Year 1", provider: "Sinhgad Educational Society" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Laboratory", description: "Two well-equipped computer labs with 100+ terminals, high-speed internet, and licensed software for BCA and B.Sc. CS students." },
         { name: "Library", description: "Library with 40,000+ books, INFLIBNET e-journal access, and reading hall with seating for 200 students." },
@@ -8334,11 +7448,7 @@ const rawColleges: College[] = [
         { name: "Hostel", description: "Separate hostel facilities for boys and girls on Sinhgad campus nearby. Affordable fees with mess and Wi-Fi." },
         { name: "Student Welfare Cell", description: "Dedicated welfare cell for scholarships, grievance redressal, and career counselling sessions." },
       ],
-      alumni: [
-        { name: "Aditi Kulkarni", designation: "Branch Manager, HDFC Bank Pune", batch: "2014" },
-        { name: "Rohan Pawar", designation: "Software Developer, Persistent Systems", batch: "2016" },
-        { name: "Sneha Jadhav", designation: "Chartered Accountant, Deloitte India", batch: "2013" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -8382,8 +7492,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HDFC Bank", "Tech Mahindra"],
     entranceExams: ["CUET", "MHT-CET"],
     hostel: true,
-    rating: 3.7,
-    reviewCount: 580,
+    rating: 0,
+    reviewCount: 0,
     tags: ["MIT Group", "Alandi Pune", "Arts & Commerce", "NAAC A"],
     description: "MIT Arts, Commerce and Science College in Alandi offers undergraduate programs under the MIT Group brand. It is a popular choice for students seeking an MIT Group institution for arts, commerce, and science education at affordable fees.",
     highlights: ["MIT Group's arts and commerce college, established brand", "Co-located with MITAOE on Alandi campus", "Affordable fees with MIT Group quality standards", "Good computer science and IT programs", "Hostel available on campus"],
@@ -8391,29 +7501,7 @@ const rawColleges: College[] = [
     website: "https://www.mitacs.edu.in",
     phone: "+91-2135-225550",
     email: "info@mitacs.edu.in",
-    reviews: [
-      {
-        id: 1, studentName: "Pallavi Patil", course: "B.Sc. CS", year: 2023, rating: 3,
-        title: "Solid B.Sc. CS program under MIT brand: good for tech-inclined students",
-        body: "MIT ACS gave me a good foundation in computer science. Being on the MIT-ADT campus means you share resources with MITAOE, the library, sports facilities, and canteen are all shared. Faculty is experienced and the labs are decent. Placement isn't as strong as MITAOE engineering, but IT companies do visit. The MIT brand definitely helps on your resume.",
-        pros: ["MIT brand recognition", "Shared resources with MITAOE campus", "Good B.Sc. CS faculty", "Hostel on campus", "Active cultural life"],
-        cons: ["Far from Pune city centre, 18 km", "Placement weaker than MITAOE engineering", "BBA program needs more industry exposure"]
-      },
-      {
-        id: 2, studentName: "Sachin More", course: "BCA", year: 2022, rating: 4,
-        title: "Great BCA experience: MIT campus culture is unmatched",
-        body: "Doing BCA at MIT ACS felt like being on a proper university campus. I participated in MIT-ADT hackathons and tech fests alongside engineering students. The BCA syllabus covers full-stack, DBMS, and mobile development. Placement assistance was good. I got placed at Infosys BPM. The campus food and hostel are excellent value.",
-        pros: ["MIT-ADT campus hackathons and events", "Good BCA full-stack curriculum", "Infosys, TCS, Wipro recruiting", "Excellent hostel and mess", "MIT group credibility"],
-        cons: ["Remote location on Alandi Road", "Traffic can be difficult during peak hours", "Some faculty positions remained vacant"]
-      },
-      {
-        id: 3, studentName: "Anjali Wagh", course: "B.Com.", year: 2023, rating: 3,
-        title: "Decent B.Com.: MIT brand compensates for modest resources",
-        body: "B.Com. at MIT ACS is straightforward. The faculty covers the SPPU syllabus thoroughly. As an MIT Group college, we had some guest lectures from industry professionals that engineering colleges normally get. The placement cell is more focused on BCA/BBA students. B.Com. students mainly pursue CA, CS or bank exams after graduation. Overall a decent choice for commerce in Alandi.",
-        pros: ["MIT group brand", "Some industry guest lectures", "Affordable fees", "Good campus life"],
-        cons: ["B.Com. placement support could be stronger", "Location is far for Pune city students", "Labs can be overbooked during exams"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (Economics / English / Sociology)", duration: "3 years", level: "UG", eligibility: "10+2 any stream, min 45%", selection: "HSC Merit / CUET", fees_per_year: 38000, total_fees: 114000, seats: 120 },
@@ -8456,12 +7544,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Arts, Commerce & Science College", rank: null, grade: "A", year: "2022" },
         { agency: "MIT-ADT University", category: "Best Constituent Arts College", rank: 1, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "EBC Scholarship", eligibility: "Family income below ₹1 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Free-ship", eligibility: "SC/ST students: all UG programs", amount: "Full tuition + exam fee", provider: "Government of Maharashtra" },
-        { name: "OBC / VJNT Non-Creamy Layer Scholarship", eligibility: "OBC / VJNT with income below ₹6 lakh/year", amount: "₹10,000–₹18,000/year", provider: "Government of Maharashtra" },
-        { name: "MIT Group Merit Scholarship", eligibility: "85%+ in HSC at admission; applicable for all UG programs", amount: "15% concession in first-year fee", provider: "MIT Group of Institutions" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Shared MIT-ADT Campus", description: "MIT ACS students share the MIT-ADT University campus facilities, library, auditorium, food courts, and sports complex, with MITAOE and other MIT institutions." },
         { name: "Computer Laboratory", description: "Dedicated computer labs with 80 terminals, broadband internet, and programming software for BCA and B.Sc. CS students." },
@@ -8469,11 +7552,7 @@ const rawColleges: College[] = [
         { name: "Library", description: "College library with 35,000+ books, INFLIBNET access, and a reading hall with 150-student capacity." },
         { name: "Cafeteria", description: "Multiple food outlets on the MIT-ADT campus serving South Indian, North Indian, and fast food at subsidized prices." },
       ],
-      alumni: [
-        { name: "Neha Patil", designation: "Senior Analyst, Infosys BPM Pune", batch: "2016" },
-        { name: "Amol Kale", designation: "Branch Manager, ICICI Bank", batch: "2014" },
-        { name: "Ritu Sharma", designation: "Data Analyst, Wipro Technologies", batch: "2018" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -8517,8 +7596,8 @@ const rawColleges: College[] = [
     topRecruiters: ["TCS", "Infosys", "Wipro", "HDFC Bank", "Banks", "Schools"],
     entranceExams: ["CUET"],
     hostel: false,
-    rating: 3.7,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     tags: ["DY Patil Group", "Akurdi PCMC", "Affordable", "Arts & Commerce"],
     description: "D.Y. Patil Arts, Commerce and Science College in Akurdi is the DY Patil Group's arts and commerce college catering to students in the Pimpri-Chinchwad area. It offers affordable undergraduate and postgraduate programs in arts, commerce, and science.",
     highlights: ["DY Patil Group's arts college in PCMC area", "Affordable fees: ideal for PCMC working-class families", "Good commerce and computer science programs", "Active cultural and sports events", "Strong alumni in PCMC's banking and industry sectors"],
@@ -8526,29 +7605,7 @@ const rawColleges: College[] = [
     website: "https://www.dypatil.edu",
     phone: "+91-20-27653300",
     email: "dypacs@dypatil.edu",
-    reviews: [
-      {
-        id: 1, studentName: "Sneha Kadam", course: "B.Com.", year: 2022, rating: 3,
-        title: "Affordable and accessible: best choice for PCMC working-class students",
-        body: "DY Patil ACS Akurdi is very convenient for students from Pimpri, Chinchwad, and Akurdi. The B.Com. faculty is knowledgeable and the syllabus is covered well. Fees are very affordable, some of the lowest in the DY Patil group. Most of my friends went into banking and accounting after graduation. No hostel, but that's fine since it's easily accessible from PCMC.",
-        pros: ["Very affordable fees: ₹18,000–₹30,000/year", "Excellent PCMC location", "DY Patil Group credibility", "Good commerce faculty", "Strong alumni in PCMC industries"],
-        cons: ["No hostel facility on campus", "Brand not as strong as DY Patil Engineering/Medical", "Placement packages are modest"]
-      },
-      {
-        id: 2, studentName: "Aakash Shinde", course: "BCA", year: 2023, rating: 3,
-        title: "Good BCA for PCMC students: solid fundamentals at low cost",
-        body: "I picked DY Patil ACS for BCA because I live in Chinchwad and the fees are very reasonable. The computer lab is decent and faculty explain concepts well. Java, Python, and DBMS are taught well. Placement support could be stronger, most IT placements are in BPO/KPO rather than core IT. But for the price, this college gives good value.",
-        pros: ["Affordable BCA fees", "Close to PCMC area", "Good programming faculty", "DY Patil brand helps in resume", "Active student clubs"],
-        cons: ["IT placements mostly BPO/KPO level", "No hostel", "Library resources need updating"]
-      },
-      {
-        id: 3, studentName: "Priyanka Thorat", course: "M.A. Economics", year: 2023, rating: 4,
-        title: "Underrated PG program: excellent economics faculty",
-        body: "The M.A. Economics program at DY Patil ACS surprised me positively. The faculty has strong academic backgrounds and we had several research-oriented sessions. The college encourages paper presentations and national seminar participation. If you want to pursue civil services or research after graduation, this is a good and affordable option in the PCMC area.",
-        pros: ["Strong economics faculty", "Encourages research and seminars", "Very affordable PG fees", "Good for civil services preparation"],
-        cons: ["No dedicated PG common room", "Campus can feel small for PG students", "Industry connections for economics PG limited"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.A. (Economics / English / Marathi)", duration: "3 years", level: "UG", eligibility: "10+2 any stream, min 45%", selection: "HSC Merit / CUET", fees_per_year: 18000, total_fees: 54000, seats: 240 },
@@ -8592,12 +7649,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Arts, Commerce & Science College", rank: null, grade: "A", year: "2022" },
         { agency: "DY Patil Group", category: "Best Performing Constituent College. PCMC", rank: 1, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "EBC Scholarship (Economically Backward Class)", eligibility: "Family income below ₹1 lakh/year; 60%+ in HSC", amount: "Full tuition fee waiver", provider: "Government of Maharashtra" },
-        { name: "SC/ST Free-ship", eligibility: "SC/ST students: all UG programs", amount: "Full tuition + exam fee", provider: "Government of Maharashtra" },
-        { name: "OBC / VJNT Non-Creamy Layer Scholarship", eligibility: "OBC / VJNT students with income below ₹6 lakh/year", amount: "₹8,000–₹16,000/year", provider: "Government of Maharashtra" },
-        { name: "DY Patil Merit Award", eligibility: "Top 3 students in each program, first-year results", amount: "₹10,000 cash award", provider: "DY Patil Group" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Computer Laboratory", description: "Two computer labs with 80 terminals, internet access, and development software for BCA and B.Sc. CS students." },
         { name: "Library", description: "Library with 38,000+ books, INFLIBNET e-journal subscriptions, and a reading room with 120-student capacity." },
@@ -8605,11 +7657,7 @@ const rawColleges: College[] = [
         { name: "Canteen", description: "Subsidized canteen with affordable vegetarian and non-vegetarian meals and snacks." },
         { name: "Student Activity Centre", description: "Dedicated space for cultural club activities, seminars, and student organisation meetings." },
       ],
-      alumni: [
-        { name: "Vivek Gaikwad", designation: "Credit Officer, Bank of Maharashtra Pune", batch: "2013" },
-        { name: "Manisha Deshpande", designation: "Software Tester, Persistent Systems", batch: "2015" },
-        { name: "Sagar Mane", designation: "Assistant Manager, HDFC Bank Pimpri Branch", batch: "2014" },
-      ],
+      alumni: [],
       hostel_info: {
         available: false,
         boys_hostels: 0,
@@ -8655,8 +7703,8 @@ const rawColleges: College[] = [
     topRecruiters: ["SIU Hospital", "Apollo Hospitals", "Fortis", "Columbia Asia", "Armed Forces Medical"],
     entranceExams: ["NEET"],
     hostel: true,
-    rating: 4.0,
-    reviewCount: 280,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Women's Medical College", "Symbiosis Group", "New Medical College", "NEET"],
     description: "Symbiosis Medical College for Women is a new medical college under Symbiosis International University offering MBBS programs exclusively for women. With a 450-bed teaching hospital and state-of-the-art simulation labs, it provides high-quality medical education on the SIU campus.",
     highlights: ["India's first women-exclusive medical college in a deemed university", "450-bed teaching hospital with modern surgical suites", "State-of-the-art medical simulation lab", "Full residential campus with SIU's international standards", "Strong focus on community medicine and public health"],
@@ -8664,29 +7712,7 @@ const rawColleges: College[] = [
     website: "https://www.smcw.siu.edu.in",
     phone: "+91-20-39116000",
     email: "admissions@smcw.siu.edu.in",
-    reviews: [
-      {
-        id: 1, studentName: "Dr. Priya Nair", course: "MBBS Year 3", year: 2023, rating: 4,
-        title: "First-of-its-kind women's medical college: excellent clinical exposure",
-        body: "Studying MBBS at SMCW is a unique and supportive experience. Being an all-women college means the learning environment is supportive and free from unnecessary distractions. The 450-bed teaching hospital has good patient flow and we get genuine clinical exposure from Year 1. SIU campus life is lively, sports, cultural events, and international exchange programs are all available. The fees are high, but the quality of education justifies it for most students.",
-        pros: ["Women-only supportive environment", "450-bed teaching hospital with real clinical exposure", "SIU campus: excellent infrastructure", "Medical simulation lab is state-of-the-art", "International exchange opportunities"],
-        cons: ["Very high fees, ₹18–22 lakh/year", "College is relatively new (2020), limited senior alumni", "Remote Lavale campus can feel isolated"]
-      },
-      {
-        id: 2, studentName: "Ananya Krishnan", course: "MBBS Year 2", year: 2023, rating: 4,
-        title: "Excellent anatomy labs and faculty: worth every rupee for serious students",
-        body: "The anatomy department at SMCW is world-class. We have plastinated specimens, 3D anatomy models, and digital dissection tables that most government medical colleges can only dream of. Faculty are experienced and approachable. The community medicine fieldwork in nearby villages is a real eye-opener. My only concern is the fees, if your family can afford it, SMCW offers genuinely outstanding medical education.",
-        pros: ["World-class anatomy lab with plastination", "Digital dissection and simulation technology", "Approachable and experienced faculty", "Strong community medicine program", "Safe, fully residential campus"],
-        cons: ["Fees are among the highest for private MBBS", "Alumni network is small being a newer college", "Cafeteria variety can improve"]
-      },
-      {
-        id: 3, studentName: "Rohini Menon", course: "MBBS Year 1", year: 2024, rating: 5,
-        title: "Best decision of my life: world-class medical education in safe environment",
-        body: "Coming from Kerala to study at SMCW was a big decision. But the campus, the greenery, the hospital, the labs, it is absolutely beautiful. The professors come from top medical institutions. We are encouraged to participate in research projects even in the first year. The hostel is excellent. I feel genuinely safe and focused here. If you're serious about becoming a great doctor, SMCW is worth every sacrifice.",
-        pros: ["Beautiful and safe fully residential campus", "Research encouraged from Year 1", "Excellent hostel with all amenities", "Faculty from top medical institutions", "SIU international student community"],
-        cons: ["Very high fees, significant financial planning needed", "Limited exposure to male patient conditions is a trade-off", "Far from Pune city, 20+ km from Shivajinagar"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "MBBS", duration: "5.5 years (4.5 years + 1 year internship)", level: "UG", eligibility: "10+2 PCB, NEET score, min 50% aggregate (Gen)", selection: "NEET Rank: SIU Deemed Quota + NRI Quota", fees_per_year: 1900000, total_fees: 9500000, seats: 100 },
@@ -8721,12 +7747,7 @@ const rawColleges: College[] = [
         { agency: "NAAC", category: "Medical College (Deemed University)", rank: null, grade: "A", year: "2023" },
         { agency: "SIU Internal", category: "Best New Medical College. SIU Constituent", rank: 1, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "SIU Merit Scholarship", eligibility: "Top 5 NEET ranks admitted in each batch at SMCW", amount: "₹2,00,000/year fee concession", provider: "Symbiosis International University" },
-        { name: "SIU SC/ST Scholarship", eligibility: "SC/ST students with NEET score meeting SIU cutoff", amount: "₹1,00,000/year concession", provider: "Symbiosis International University" },
-        { name: "Central Government NEET Merit Scholarship", eligibility: "NEET rank under 1000 (national merit scholarship)", amount: "Up to ₹1,00,000/year", provider: "Central Government of India" },
-        { name: "Women Excellence Award: SIU", eligibility: "Outstanding academic performance in MBBS Year 1 and Year 2", amount: "₹50,000 cash award + certificate", provider: "Symbiosis International University" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "450-Bed Teaching Hospital", description: "Fully operational 450-bed multi-speciality teaching hospital on campus with modern OT suites, ICU, NICU, and outpatient departments for all major specialities." },
         { name: "Medical Simulation Lab", description: "State-of-the-art simulation centre with high-fidelity patient simulators, laparoscopic trainers, and emergency scenario simulators for skill-based training." },
@@ -8735,11 +7756,7 @@ const rawColleges: College[] = [
         { name: "Fully Residential Campus", description: "Residential campus with air-conditioned girls' hostel, international standard mess, 24-hour Wi-Fi, gymnasium, and indoor sports facilities." },
         { name: "Research and Innovation Centre", description: "Dedicated medical research laboratory encouraging undergraduate research projects, case study publications, and conference participation." },
       ],
-      alumni: [
-        { name: "Dr. Akshata Desai", designation: "Resident Doctor, KEM Hospital Mumbai", batch: "2023" },
-        { name: "Dr. Lavanya Iyer", designation: "Junior Resident, AIIMS Delhi", batch: "2023" },
-        { name: "Dr. Preeti Sharma", designation: "Medical Officer, Indian Army", batch: "2024" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 0,
@@ -8783,8 +7800,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Adobe", "Tata Motors Design", "Mahindra Design Studio", "Puma", "Titan", "Myntra", "Dream11"],
     entranceExams: ["UCEED", "NID DAT", "CEED", "MIT-ID Entrance Test"],
     hostel: true,
-    rating: 4.2,
-    reviewCount: 560,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Design College Pune", "MIT-ADT University", "B.Des.", "Animation & VFX", "Product Design"],
     description: "MIT Institute of Design (MIT-ID) is one of Western India's leading design schools, offering full B.Des. and M.Des. programs across multiple design specializations. Its industry-integrated curriculum and active design studio culture produce graduates who are in high demand at leading design firms.",
     highlights: ["Western India's leading multi-disciplinary design school", "Programs in animation, fashion, product, graphic, and interaction design", "Strong industry partnerships with Tata, Mahindra, and Adobe", "Annual design festival: DESIGNOVATION attracts industry leaders", "State-of-the-art design studios and fabrication lab"],
@@ -8792,29 +7809,7 @@ const rawColleges: College[] = [
     website: "https://www.mitid.edu.in",
     phone: "+91-2115-290400",
     email: "info@mitid.edu.in",
-    reviews: [
-      {
-        id: 1, studentName: "Anika Sharma", course: "B.Des. Interaction Design", year: 2023, rating: 4,
-        title: "Best design college in Western India: industry-grade projects and great faculty",
-        body: "MIT-ID transformed my design thinking completely. Faculty are practitioners, they work for Adobe, Mahindra Design, and Godrej in parallel. Projects are real-world: I designed a UI for a startup and a product for a Tata Motors innovation challenge. DESIGNOVATION, the annual design fest, brings the best design talent from across India. Placement was great, I joined a Mumbai UX agency. Location is remote but you forget that once you're inside the studio culture.",
-        pros: ["Faculty are industry-practising designers", "Real industry project exposure", "DESIGNOVATION design fest is world-class", "Multiple B.Des. specializations under one roof", "Strong UX and product design placements"],
-        cons: ["Far from Pune city, 25 km on Pune-Solapur highway", "Fees are high, ₹2.5–4 lakh/year", "Admission test (MIT-ID Entrance) is rigorous"]
-      },
-      {
-        id: 2, studentName: "Karan Mehta", course: "B.Des. Animation & VFX", year: 2022, rating: 5,
-        title: "Animation program is outstanding: industry-standard tools and real projects",
-        body: "The Animation & VFX program at MIT-ID is one of the best in India. We use industry software: Maya, ZBrush, Houdini, and After Effects. The faculty includes animators who've worked on Bollywood VFX projects. Our final year film was selected at an animation festival in Hyderabad. Dream11 and Zynga recruited from our batch. If animation is your passion, MIT-ID is the place to be in Western India.",
-        pros: ["Industry-standard animation software: Maya, ZBrush, Houdini", "Faculty with Bollywood VFX experience", "Animation films entered in festivals", "Gaming and VFX company recruiters", "Excellent studio infrastructure"],
-        cons: ["High fees for animation specialization", "Remote location", "Internship support varies by department"]
-      },
-      {
-        id: 3, studentName: "Riya Patel", course: "B.Des. Fashion Design", year: 2023, rating: 4,
-        title: "Fashion program punches above its weight: good placements at Puma and Myntra",
-        body: "I was initially considering NIFT Pune but chose MIT-ID for fashion because of the integrated design curriculum. You learn not just fashion but also branding, photography, and business aspects of fashion. Our fashion show every year is well-attended by industry buyers. Puma, Myntra, and Tanishq recruited from our batch. The campus has good sewing labs and textile printing facilities. A solid choice if you want fashion design with a broader design education.",
-        pros: ["Integrated design curriculum beyond just fashion", "Puma, Myntra, and Tanishq recruiters", "Annual fashion show with industry buyers", "Good sewing labs and textile printing facilities", "Photography and branding taught alongside fashion"],
-        cons: ["Not as prestigious as NIFT for fashion specifically", "Remote campus location", "Faculty turnover in fashion department occasionally"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Des. (Interaction / UX Design)", duration: "4 years", level: "UG", eligibility: "10+2 any stream, min 50%; MIT-ID Entrance Test", selection: "UCEED / NID DAT / MIT-ID Entrance Test", fees_per_year: 280000, total_fees: 1120000, seats: 60 },
@@ -8859,12 +7854,7 @@ const rawColleges: College[] = [
         { agency: "Outlook-iCare India Rankings", category: "Top Design Colleges India", rank: 8, grade: undefined, year: "2024" },
         { agency: "The Week", category: "Top Design Colleges Western India", rank: 2, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "MIT-ID Design Merit Scholarship", eligibility: "Top 10 UCEED / NID DAT scores among admitted students", amount: "25% fee concession in all 4 years", provider: "MIT Group of Institutions" },
-        { name: "Government of Maharashtra OBC Scholarship", eligibility: "OBC / NT / VJNT students, income < ₹8 lakh/year", amount: "₹15,000–₹25,000/year", provider: "Government of Maharashtra" },
-        { name: "SC/ST Government Scholarship", eligibility: "SC/ST students: all B.Des. programs", amount: "Tuition fee waiver (subject to eligibility)", provider: "Government of Maharashtra" },
-        { name: "AICTE Pragati Scholarship (Girls)", eligibility: "Female students: family income < ₹8 lakh/year", amount: "₹50,000/year", provider: "AICTE (Central Government)" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Design Studios", description: "Dedicated design studios for each specialization. UX lab, product fabrication studio, fashion atelier, animation render farm, and graphic design suites." },
         { name: "Fabrication Lab (FabLab)", description: "3D printers, laser cutters, CNC routers, and woodworking tools for product and industrial design prototyping." },
@@ -8873,11 +7863,7 @@ const rawColleges: College[] = [
         { name: "Exhibition Gallery", description: "On-campus gallery for student work exhibitions, design portfolio shows, and DESIGNOVATION, the annual MIT-ID design festival." },
         { name: "Library and Design Resource Centre", description: "Specialized design library with 15,000+ books, international design journals, and access to Behance Pro, Adobe Creative Cloud, and industry portfolios." },
       ],
-      alumni: [
-        { name: "Varun Kaul", designation: "Senior UX Designer, Adobe India", batch: "2017" },
-        { name: "Meera Joshi", designation: "Head of Design, Dream11 Mumbai", batch: "2015" },
-        { name: "Akshay Rane", designation: "Automotive Designer, Mahindra Design Studio", batch: "2016" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 2,
@@ -8921,8 +7907,8 @@ const rawColleges: College[] = [
     topRecruiters: ["Adobe", "Titan", "Myntra", "Puma", "Godrej", "Wipro Design", "Infosys Design", "McKinsey Design"],
     entranceExams: ["UCEED", "NID DAT", "CEED", "SID Entrance Exam"],
     hostel: true,
-    rating: 4.4,
-    reviewCount: 720,
+    rating: 0,
+    reviewCount: 0,
     tags: ["Top Design College India", "Symbiosis Group", "NAAC A+", "Lavale Campus", "B.Des."],
     description: "Symbiosis Institute of Design (SID) is one of India's most prestigious design schools, consistently ranked among the top design colleges in the country. Set in the beautiful Symbiosis campus at Lavale, SID offers rigorous B.Des. and M.Des. programs across communication, fashion, industrial, and space design.",
     highlights: ["Ranked among India's top 5 design colleges", "NAAC A+ accredited: highest design school in Pune", "Strong placements at Adobe, Titan, McKinsey Design", "Located on SIU's stunning Lavale campus", "International design exchange programs with top global schools"],
@@ -8930,29 +7916,7 @@ const rawColleges: College[] = [
     website: "https://www.sid.edu.in",
     phone: "+91-20-39116600",
     email: "info@sid.edu.in",
-    reviews: [
-      {
-        id: 1, studentName: "Meghna Iyer", course: "B.Des. Communication Design", year: 2023, rating: 5,
-        title: "India's top 5 design school: world-class faculty and transformative education",
-        body: "SID changed how I see the world. Faculty members are literally award-winning designers, some have won Red Dot and iF Design Awards. The communication design program covers brand identity, type design, editorial, and digital UX. We collaborated with McKinsey Design on a live project in Year 3. The SIU Lavale campus is breathtaking, working in that environment inspires creativity. Placement was incredible: I joined Titan Design in Bengaluru at ₹8.5 LPA.",
-        pros: ["Faculty are award-winning practicing designers", "Live projects with McKinsey Design, Adobe, Titan", "SIU Lavale campus is stunning and inspiring", "NAAC A+: highest accreditation among Pune design schools", "International exchange with design schools in Europe and Japan"],
-        cons: ["Very high fees: ₹4–7.5 lakh/year", "Extremely competitive admission: national-level cutthroat competition", "Remote Lavale campus: limited access to Pune city"]
-      },
-      {
-        id: 2, studentName: "Arjun Nambiar", course: "B.Des. Industrial Design", year: 2022, rating: 5,
-        title: "Industrial design program is exceptional: Godrej and Tata Motors came for our batch",
-        body: "The industrial design program at SID is unlike anything you'll find in other design schools. We had access to a fully equipped prototyping lab with 3D printers, CNC machines, and vacuum forming equipment. Industry projects are mandatory, I worked on a product for Godrej in Year 3. Final year placement was fantastic, Godrej Properties, Tata Motors Design, and Asian Paints all recruited from our batch. The fees are high but the career trajectory justifies it completely.",
-        pros: ["Fully equipped prototyping and fabrication lab", "Mandatory industry projects in Year 3", "Godrej, Tata Motors, Asian Paints recruiters", "Strong peer community of creative, driven students", "International material library and design reference collection"],
-        cons: ["Fees are very high even by private design school standards", "Competition within the batch is intense", "Some faculty are adjunct and not always available"]
-      },
-      {
-        id: 3, studentName: "Priya Subramaniam", course: "B.Des. Fashion Design", year: 2023, rating: 4,
-        title: "SID fashion is premium: better than NIFT Pune in terms of curriculum breadth",
-        body: "Choosing SID over NIFT Pune was the right call for me. At SID, fashion design isn't taught in isolation, you understand brand strategy, retail design, and textile science alongside garment construction. We had a runway show at Lakme Fashion Week in Year 4 with two SID student collections shown. Myntra, Puma, and Fabindia recruited from our batch. The only downside is the steep fees. But if your family can afford it, SID fashion opens doors that very few colleges can.",
-        pros: ["Curriculum includes brand strategy and retail design", "Runway show at Lakme Fashion Week", "Myntra, Puma, Fabindia recruiters", "Textile science and sustainable fashion taught", "International exchanges in fashion-forward countries"],
-        cons: ["Very high fees", "Admission requires exceptional portfolio and UCEED/NID scores", "Campus is 25 km from Pune city, social life outside campus is limited"]
-      }
-    ],
+    reviews: [],
     details: {
       courses_fees: [
         { program: "B.Des. Communication Design", duration: "4 years", level: "UG", eligibility: "10+2 any stream, min 50%; UCEED/NID DAT/SID Entrance", selection: "UCEED / NID DAT / SID Entrance + Portfolio + PI", fees_per_year: 580000, total_fees: 2320000, seats: 50 },
@@ -8998,13 +7962,7 @@ const rawColleges: College[] = [
         { agency: "Outlook-iCare India Rankings", category: "Top Design Colleges India", rank: 4, grade: undefined, year: "2024" },
         { agency: "The Week", category: "Top 5 Design Colleges India", rank: 5, grade: undefined, year: "2023" },
       ],
-      scholarships: [
-        { name: "SIU Merit Scholarship", eligibility: "Top 5 UCEED / NID DAT national ranks among admitted students", amount: "50% fee concession in all 4 years", provider: "Symbiosis International University" },
-        { name: "SID Excellence Award", eligibility: "Best portfolio at end of Year 1 and Year 2 (one award per year)", amount: "₹1,00,000 cash + international study trip", provider: "Symbiosis Institute of Design" },
-        { name: "SIU SC/ST Scholarship", eligibility: "SC/ST students with qualifying entrance score", amount: "₹1,50,000/year fee concession", provider: "Symbiosis International University" },
-        { name: "AICTE Pragati Scholarship (Girls)", eligibility: "Female students: family income < ₹8 lakh/year", amount: "₹50,000/year", provider: "AICTE (Central Government)" },
-        { name: "SIU Symbiosis Scholars Award", eligibility: "National / international achievement in design competitions (Red Dot Young Designers, etc.)", amount: "₹75,000/year + mentorship by SID Dean", provider: "Symbiosis International University" },
-      ],
+      scholarships: [],
       facilities: [
         { name: "Design Studios", description: "Six dedicated design studios, communication, industrial, fashion, space, interaction, and textile. Each studio has state-of-the-art equipment and 24-hour access for enrolled students." },
         { name: "Prototyping and Fabrication Lab", description: "Advanced prototyping lab with industrial-grade 3D printers, CNC routers, laser cutters, vacuum forming machines, and a woodworking workshop." },
@@ -9013,11 +7971,7 @@ const rawColleges: College[] = [
         { name: "Material Library", description: "Curated material reference library with 5,000+ material samples, metals, textiles, plastics, wood, and composites, used for industrial and space design projects." },
         { name: "Gallery and Exhibition Space", description: "Professional gallery space for student exhibitions, annual degree shows, and SID's design festival attended by industry leaders and design patrons." },
       ],
-      alumni: [
-        { name: "Devika Mehta", designation: "Principal Designer, Adobe India Design Studio", batch: "2014" },
-        { name: "Sahil Khatri", designation: "Design Director, McKinsey Design Mumbai", batch: "2013" },
-        { name: "Ananya Bhatt", designation: "Head of Product Design, Myntra Bengaluru", batch: "2015" },
-      ],
+      alumni: [],
       hostel_info: {
         available: true,
         boys_hostels: 1,
@@ -9076,54 +8030,9 @@ const rawColleges: College[] = [
     ],
     entranceExams: ["VUSAT", "JEE Main", "CAT", "CMAT", "CUET", "CLAT", "MHT-CET", "GATE"],
     hostel: true,
-    rating: 4.1,
-    reviewCount: 312,
-    reviews: [
-      {
-        id: 10901,
-        studentName: "Arjun Mehta",
-        course: "B.Tech (AI & Data Science)",
-        year: 2025,
-        rating: 4,
-        title: "Genuinely multidisciplinary, strong placements",
-        body: "The multidisciplinary approach is genuinely different. I'm doing B.Tech but have taken design and music electives. Campus in the Western Ghats is stunning and fully residential, which builds great community. Placements for tech roles are solid.",
-        pros: ["Cross-school electives", "Beautiful residential campus", "Good tech placements"],
-        cons: ["Remote location", "Limited nearby city access"],
-      },
-      {
-        id: 10902,
-        studentName: "Priya Nair",
-        course: "MBA (JAGSoM)",
-        year: 2025,
-        rating: 5,
-        title: "AACSB accreditation is a real differentiator",
-        body: "VBU's MBA through JAGSoM is AACSB accredited, one of only 15 in India. The international exposure (exchange programs in France and the US) and live corporate projects set it apart from standard MBA programs. Faculty is highly industry-experienced.",
-        pros: ["AACSB accreditation", "International exposure", "Experienced faculty", "Live projects"],
-        cons: ["Higher fees than average", "Campus is far from metro cities"],
-      },
-      {
-        id: 10903,
-        studentName: "Rohan Kulkarni",
-        course: "B.Tech (CSE)",
-        year: 2026,
-        rating: 4,
-        title: "World-class campus, highly focused environment",
-        body: "The 53-acre residential campus in Karjat is beautiful, recording studios, design labs, moot courts, and a swimming pool. The location is remote (60 km from Mumbai) which means you're fully focused. Internet connectivity has improved a lot.",
-        pros: ["State-of-the-art facilities", "Distraction-free campus", "Great peer community"],
-        cons: ["Connectivity took time to improve", "University is still growing alumni network"],
-      },
-      {
-        id: 10904,
-        studentName: "Sneha Desai",
-        course: "BBA + MBA (Integrated)",
-        year: 2025,
-        rating: 3,
-        title: "Good for interdisciplinary learning, fees are high",
-        body: "Good for interdisciplinary learning, but the university is still young (est. 2019). Industry connections are growing steadily. Fees are on the higher side for a new institution, though scholarships are available. The AACSB accreditation for JAGSoM is a genuine differentiator.",
-        pros: ["Interdisciplinary curriculum", "AACSB-backed MBA", "Scholarships available"],
-        cons: ["High fees for a new university", "Alumni network still building", "NAAC assessment pending"],
-      },
-    ],
+    rating: 0,
+    reviewCount: 0,
+    reviews: [],
     tags: [
       "Liberal Professional University", "AACSB Accredited", "Residential Campus",
       "Multidisciplinary", "Western Ghats", "New-Age University", "Music & Design",
@@ -9339,38 +8248,7 @@ const rawColleges: College[] = [
         { agency: "Bar Council of India", category: "Law School", rank: null, grade: "Approved", year: "2024" },
       ],
 
-      scholarships: [
-        {
-          name: "Merit Excellence Scholarship",
-          amount: "25%–100% tuition fee waiver",
-          eligibility: "10+2 with 85%+ marks or top VUSAT / entrance exam scorers",
-          provider: "Vijaybhoomi University",
-        },
-        {
-          name: "EWS Financial Support Scholarship",
-          amount: "Up to 50% tuition fee waiver",
-          eligibility: "Annual family income below ₹8 lakh; valid EWS certificate required",
-          provider: "Vijaybhoomi University",
-        },
-        {
-          name: "Maharashtra Resident Scholarship",
-          amount: "50% tuition fee waiver",
-          eligibility: "Maharashtra domicile students who clear VUSAT with 70%+ score",
-          provider: "Vijaybhoomi University",
-        },
-        {
-          name: "Armed Forces & Ex-Servicemen Ward Scholarship",
-          amount: "Up to 75% tuition fee waiver",
-          eligibility: "Children of serving or retired Indian Armed Forces personnel",
-          provider: "Vijaybhoomi University",
-        },
-        {
-          name: "Sports Excellence Grant",
-          amount: "25%–50% tuition fee waiver",
-          eligibility: "National / State-level sports achievers with valid certificates",
-          provider: "Vijaybhoomi University",
-        },
-      ],
+      scholarships: [],
 
       facilities: [
         { name: "Recording Studios", description: "Professional music production-grade recording studios with industry-standard equipment for BFA/BPA and Sound Engineering students." },
@@ -9385,23 +8263,7 @@ const rawColleges: College[] = [
         { name: "Transport Service", description: "Regular shuttle service connecting the campus to Karjat railway station and periodic buses to Mumbai and Pune." },
       ],
 
-      alumni: [
-        {
-          name: "Karan Mehta",
-          designation: "Business Analyst, Deloitte Consulting",
-          batch: "MBA 2022",
-        },
-        {
-          name: "Ananya Krishnan",
-          designation: "Senior Product Designer, Godrej Design Lab",
-          batch: "B.Des 2023",
-        },
-        {
-          name: "Vikram Sawant",
-          designation: "Software Engineer, Oracle India",
-          batch: "B.Tech CSE 2024",
-        },
-      ],
+      alumni: [],
 
       hostel_info: {
         available: true,

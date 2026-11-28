@@ -57,6 +57,19 @@ export default function BestMbaPage({ path }: { path: string }) {
   const examsFor = (id?: string) => (id ? byId.get(id)?.examsAccepted ?? [] : [])
   const withExams = rows.filter((r) => examsFor(r.programId).length > 0)
 
+  // A short, page-specific summary computed from the same verified records as the table, so every place gets its own wording.
+  const examCount = new Map<string, number>()
+  for (const r of withExams) for (const e of new Set(examsFor(r.programId).map(examName))) examCount.set(e, (examCount.get(e) ?? 0) + 1)
+  const topExams = [...examCount.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 3)
+  const otherNames = verifiedOther.slice(0, 4).map((p) => INSTITUTE_SHORT[p.id] ?? p.institution)
+  const glance: string[] = []
+  if (rows.length) {
+    const ranks = rows.map((r) => r.rank), scores = rows.map((r) => r.score)
+    glance.push(`${rows.length === 1 ? `${rows[0].name} is the one ${def.place} institute` : `${rows.length} ${def.place} institutes`} in the NIRF 2025 management list, at ${ranks.length > 1 ? `ranks ${Math.min(...ranks)} to ${Math.max(...ranks)}` : `rank ${ranks[0]}`}${scores.length > 1 ? ` with scores from ${Math.min(...scores).toFixed(2)} to ${Math.max(...scores).toFixed(2)}` : ` with a score of ${scores[0].toFixed(2)}`}.`)
+  }
+  if (withExams.length) glance.push(`We have read the admission page for ${withExams.length} of them${topExams.length ? `; ${list(topExams.map(([e, n]) => `${e} is listed by ${n}`))}` : ""}.`)
+  if (otherNames.length) glance.push(`${list(otherNames)} ${otherNames.length === 1 ? "is" : "are"} not in the NIRF top 100 but ${otherNames.length === 1 ? "has" : "have"} admission records we verified${verifiedOther.length > otherNames.length ? `, along with ${verifiedOther.length - otherNames.length} more` : ""}.`)
+
   const faqs = [
     { question: `Which are the best MBA colleges in ${def.place}?`, answer },
     {
@@ -71,7 +84,7 @@ export default function BestMbaPage({ path }: { path: string }) {
     },
     {
       question: "Is an institute missing from the NIRF list a poor choice?",
-      answer: "Not necessarily. NIRF ranks only the institutes that submit data, and it lists 100 in this category. Some well-known schools do not appear in the list. Check the programme's approval, accreditation and placement report instead of relying on a single list.",
+      answer: `Not necessarily. NIRF ranks only the institutes that submit data, and it lists 100 in this category. Some well-known schools do not appear in the list.${otherNames.length ? ` In ${def.place}, ${list(otherNames)} ${otherNames.length === 1 ? "is" : "are"} outside the top 100 but ${otherNames.length === 1 ? "has" : "have"} verified admission records on this site.` : ""} Check the programme's approval, accreditation and placement report instead of relying on a single list.`,
     },
     {
       question: `What are the fees and placements at MBA colleges in ${def.place}?`,
@@ -128,6 +141,13 @@ export default function BestMbaPage({ path }: { path: string }) {
         <div className="min-w-0 space-y-10">
           <FirstScreenLead context={`best:${def.path.slice(1)}`} />
           <AnswerBlock id="best-q" question={`Which are the best MBA colleges in ${def.place}?`} updated={updated}><p>{answer}</p></AnswerBlock>
+
+          {glance.length > 0 && (
+            <section aria-labelledby="glance-h">
+              <h2 id="glance-h" className="text-xl font-extrabold text-[#012858]">{def.place} at a glance</h2>
+              <p className="mt-2 text-sm leading-relaxed text-gray-700">{glance.join(" ")}</p>
+            </section>
+          )}
 
           {rows.length > 0 && (
             <section aria-labelledby="rank-h">

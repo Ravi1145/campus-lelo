@@ -10,7 +10,7 @@ Method: crawled every URL in the live sitemap and compared (a) whole pages, usin
 | Delhi and Delhi NCR "accepting CAT / GMAT / CMAT" and PGDM near-copies | ~11 | Same page, different exam word |
 | Blog "X vs Y admission compared" and "exams accepted" posts | 31 + 9 | One layout filled with different institutes |
 | Exam sub-pages (score-vs-percentile, colleges) | 12 | One layout per exam |
-| Per-college cut-off pages | 7 | One layout per college |
+| Per-college cut-off pages | 7 | Emptied the unsourced lists in `src/data/colleges.ts`: 104 student-review lists, 60 alumni lists, 60 scholarship lists; zeroed 104 invented ratings and review counts. The database has none of the review, alumni or scholarship data; it does hold ratings, review counts and average-placement numbers for most colleges, which the live pages do not show | Code done. Database ratings and placement numbers still to clear (needs your OK) |
 | Best-MBA city pages, city MBA pages, per-college admission pages | 45 | One layout with different verified data (kept, to be enriched) |
 
 **B. Paragraphs repeated across pages (118 blocks on 8+ pages).** Mostly harmless page furniture (lead-form text, the author box on 112 pages, "Fees, placements and cut-offs change every year" on 127). Two were a real quality problem: a block of raw search phrases ("top 10 mba colleges in kanpur placement wise") on 67 pages, linking to pages that were not about that place.
@@ -24,10 +24,10 @@ Method: crawled every URL in the live sitemap and compared (a) whole pages, usin
 | 2 | Remove unsourced salary and placement figures from BSc IT and MBA in Pune pages | Done, live (d97aeee) |
 | 3 | Related-search chips: only phrases about places we cover, 8 per page instead of 12 | Done in code, deploying with this commit |
 | 4 | In each template group keep the pages with the most wording of their own, noindex the rest: 30 blog comparison/exams-accepted posts and 18 exam, Pune and cut-off pages | Done in code, deploying with this commit |
-| 5 | Enrich the 45 kept data pages (best-MBA, city, admission-by-college): add a short written intro per page that is specific to the place or institute, from the verified data | Not started |
-| 6 | Replace the repeated explanatory paragraphs on the 40 MBA pages with page-specific wording | Not started |
+| 5 | Page-specific "at a glance" summary on every best-MBA page, computed from the verified data (number of ranked institutes, rank and score range, exams listed by the institutes we verified, other verified institutes in the place); the "missing from NIRF" FAQ names the place's own institutes | Done in code, deploying with this commit |
+| 6 | Per-college admission pages: the four generic "how to use this page" bullets now use each institute's own exams, intake, cut-off status and neighbouring institutes. (The same paragraphs inside blog posts are covered by step 4: most of those posts are now noindexed.) | Done in code, deploying with this commit |
 | 7 | Delete the hidden, unsourced fields in `src/data/colleges.ts` (reviews, alumni, scholarship amounts, placement tables) so they cannot be switched back on | Not started |
-| 8 | Verify or remove the fee list on /low-fees-mba-colleges-pune and the "1,800-bed" sentence on /colleges/bj-medical-college-pune | Not started |
+| 8 | Bed and patient counts removed from the BJ Medical, D.Y. Patil Medical and Symbiosis Medical descriptions (code and database); the two pages built on unsourced fee, loan-rate and scholarship tables (/low-fees-mba-colleges-pune, /low-fees-engineering-colleges-pune) are noindexed until each figure is sourced | Done |
 | 9 | Search Console: resubmit the sitemap, request indexing for the 5 new best-MBA pages, re-export in 2 to 4 weeks | Owner |
 | 10 | Links from other sites (the main ranking lever); old domain collegepune.com (legal route) | Owner |
 
