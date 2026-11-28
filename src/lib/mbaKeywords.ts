@@ -14,7 +14,7 @@ const CITY = /\b(pune|noida|greater noida|delhi|ncr|gurgaon|gurugram)\b/i
 // page, which reads as keyword stuffing. Keep only phrases with no place, or a place we actually cover.
 const COVERED_PLACE = /^(pune|noida|greater|delhi|ncr|gurgaon|gurugram|ghaziabad|dehradun|uttarakhand|uttar|india|haryana|maharashtra)$/
 const placeOk = (k: string) => {
-  const m = k.toLowerCase().match(/in ([a-z]+)/)
+  const m = k.toLowerCase().match(/\bin ([a-z]+)/)
   return !m || COVERED_PLACE.test(m[1]) || /^(the|your|india)$/.test(m[1])
 }
 export const chipKeywords = (c: { id: string; keywords: string[] }) => generic(c.keywords).filter((k) => placeOk(k) && !(c.id.startsWith("exam:") && CITY.test(k)))
