@@ -8,7 +8,7 @@ import MoreInCluster from "@/components/seo/MoreInCluster"
 // (harvested from autocomplete) and links to the best page for that query.
 function RelatedChips({ path, title = "Related MBA searches", inline = false, requireCluster = false }: { path: string; title?: string; inline?: boolean; requireCluster?: boolean }) {
   if (requireCluster && clustersForPath(path).length === 0) return null
-  const items = relatedSearches(path, 12)
+  const items = relatedSearches(path, 8)
   if (items.length === 0) return null
 
   if (inline) {

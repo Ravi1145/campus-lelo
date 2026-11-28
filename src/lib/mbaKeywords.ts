@@ -10,7 +10,14 @@ export const isBrandQuery = (kw: string) => BRAND.test(kw)
 export const generic = (kws: string[]) => kws.filter((k) => !isBrandQuery(k))
 // Exam clusters point at exam pages, so a chip naming a city would land on the wrong page
 const CITY = /\b(pune|noida|greater noida|delhi|ncr|gurgaon|gurugram)\b/i
-export const chipKeywords = (c: { id: string; keywords: string[] }) => generic(c.keywords).filter((k) => !(c.id.startsWith("exam:") && CITY.test(k)))
+// A chip that names a place we have no page for (for example "...in kanpur placement wise") would link to an unrelated
+// page, which reads as keyword stuffing. Keep only phrases with no place, or a place we actually cover.
+const COVERED_PLACE = /^(pune|noida|greater|delhi|ncr|gurgaon|gurugram|ghaziabad|dehradun|uttarakhand|uttar|india|haryana|maharashtra)$/
+const placeOk = (k: string) => {
+  const m = k.toLowerCase().match(/in ([a-z]+)/)
+  return !m || COVERED_PLACE.test(m[1]) || /^(the|your|india)$/.test(m[1])
+}
+export const chipKeywords = (c: { id: string; keywords: string[] }) => generic(c.keywords).filter((k) => placeOk(k) && !(c.id.startsWith("exam:") && CITY.test(k)))
 
 const norm = (p: string) => p.replace(/\/+$/, "") || "/"
 
