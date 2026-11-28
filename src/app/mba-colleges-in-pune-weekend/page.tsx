@@ -6,8 +6,8 @@ import { safeJsonLd } from "@/lib/jsonld"
 import RelatedMbaSearches from "@/components/mba/RelatedMbaSearches"
 
 export const metadata: Metadata = genMeta({
-  title: "Mba Colleges In Pune Weekend | CampusLelo 2026",
-  description: "Complete guide to Mba Colleges In Pune Weekend in Pune 2026. Fees, cutoffs, placements and admission process for Pune MBA colleges.",
+  title: "Weekend MBA Colleges in Pune 2026: Options & Eligibility",
+  description: "Weekend MBA Colleges in Pune: the colleges we list, the exams they accept, eligibility and how admission works. Confirm fees on each college's official page.",
   path: "/mba-colleges-in-pune-weekend",
   keywords: ["mba colleges in pune weekend", "mba colleges pune 2026", "mba admission pune"],
 })
@@ -22,15 +22,15 @@ export default function Page() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "MBA Colleges in Pune", url: "/mba-colleges-in-pune" },
-    { name: "Mba Colleges In Pune Weekend", url: "/mba-colleges-in-pune-weekend" },
+    { name: "Weekend MBA Colleges in Pune", url: "/mba-colleges-in-pune-weekend" },
   ])
   return (
     <>
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <MBAClusterPage
-        h1="Mba Colleges In Pune Weekend. Pune 2026"
-        subtitle="Complete guide to Mba Colleges In Pune Weekend in Pune. Compare top MBA colleges, fees, cutoffs and placements."
+        h1="Weekend MBA Colleges in Pune 2026"
+        subtitle="Weekend MBA Colleges in Pune: compare colleges by exams accepted, eligibility and the admission process."
         quickAnswer="Top Pune MBA colleges: SIBM, SCMHRD, MIT-SOM. Admission via MAH-CET MBA or SNAP. Classes begin August 2026."
         stats={[
           { value: "120+", label: "MBA Colleges" },
@@ -38,7 +38,7 @@ export default function Page() {
           { value: "MAH-CET", label: "Primary Exam" },
         ]}
         colleges={mbaColleges}
-        introHeading="Mba Colleges In Pune Weekend in Pune. Key Facts"
+        introHeading="Weekend MBA Colleges in Pune: Key Facts"
         introParagraphs={[
           "Pune has 120+ AICTE-approved MBA colleges covering every specialization, fee range, and entrance exam requirement. This page covers the best options for your specific search.",
           "For detailed fee comparison, cutoff predictions, and placement data, explore the related pages below or book a free counselling session.",
