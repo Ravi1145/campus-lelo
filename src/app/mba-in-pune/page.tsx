@@ -92,7 +92,7 @@ const FAQS = [
   },
   {
     question: "Which is better: MBA from SIBM Pune or IIM Indore?",
-    answer: "IIM Indore has stronger national brand and higher average placement (₹35+ LPA). SIBM Pune offers comparable fees (₹8.5L vs ₹22L at IIM Indore) with near-equal placement in Pune-Mumbai corridor. For Pune/Mumbai jobs: SIBM Pune is often preferred by local recruiters. For national/international placements: IIM Indore is better. Budget and target geography should decide.",
+    answer: "IIM Indore and SIBM Pune differ in brand reach, fees and where they recruit, and both publish their own fee and placement details. Compare the fees and placement reports on each institute's official page for the same batch before deciding, and weigh your target city. We do not publish placement figures we cannot source.",
   },
   {
     question: "What is the difference between MBA and PGDM in Pune?",

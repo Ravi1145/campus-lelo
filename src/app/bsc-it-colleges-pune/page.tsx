@@ -205,7 +205,7 @@ export default function BscITCollegesPunePage() {
               { icon: BookOpen, title: "3-Year Programme", desc: "BSc IT/CS is a 3-year degree. Semesters cover programming, databases, networking, and web development." },
               { icon: Award, title: "Pune IT Hub", desc: "Pune has 3,000+ IT companies. TCS, Infosys, Wipro, Persistent. BSc IT graduates are in high demand." },
               { icon: TrendingUp, title: "MCA / MBA Option", desc: "After BSc IT, pursue MCA (3-year PG) or MBA for ₹10 packages. Fergusson & SP alumni consistently top MCA entrances." },
-              { icon: Users, title: "Certifications Boost Pay", desc: "AWS, Google Cloud, Python, Full Stack Development certifications can increase BSc IT salary from ₹5 to ₹12+ LPA." },
+              { icon: Users, title: "Certifications Boost Pay", desc: "AWS, Google Cloud, Python and Full Stack Development certifications add practical skills that employers look for in BSc IT graduates." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl border border-gray-100 p-5">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-3">
